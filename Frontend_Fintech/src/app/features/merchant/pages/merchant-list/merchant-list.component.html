@@ -1,0 +1,203 @@
+<div class="merchant-page">
+  @if (state.pageState() === 'loading' && !state.merchants().length) {
+    <div class="merchant-page__loading">
+      <mat-spinner diameter="48"></mat-spinner>
+      <p>Loading merchants...</p>
+    </div>
+  } @else if (state.pageState() === 'error') {
+    <div class="merchant-page__error">
+      <span class="material-symbols-outlined">error</span>
+      <h3>Unable to load merchants</h3>
+      <p>{{ state.errorMessage() }}</p>
+      <button type="button" class="btn btn--primary" (click)="state.retry()">Retry</button>
+    </div>
+  } @else {
+    <div class="page-header">
+      <div>
+        <nav class="breadcrumb">
+          <a routerLink="/dashboard/executive">Home</a>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <span class="breadcrumb__active">Merchants</span>
+        </nav>
+        <h1>Merchant Management</h1>
+      </div>
+      <div class="page-header__actions">
+        @if (rbac.hasPermission(perms.MERCHANTS_WRITE)) {
+          <a routerLink="/merchants/create" class="btn btn--primary">
+            <span class="material-symbols-outlined">add</span> Add Merchant
+          </a>
+        }
+      </div>
+    </div>
+
+    <div class="filters">
+      <div class="filter-card">
+        <label>Search Records</label>
+        <div class="filter-card__input-wrap">
+          <span class="material-symbols-outlined">search</span>
+          <input
+            type="text"
+            placeholder="MID or Business Name"
+            [(ngModel)]="searchInput"
+            (keyup.enter)="onSearch()"
+          />
+        </div>
+      </div>
+      <div class="filter-card">
+        <label>KYC Status</label>
+        <select [(ngModel)]="kycFilter" (change)="onApplyFilters()">
+          <option value="">All Statuses</option>
+          @for (s of kycStatuses; track s) {
+            <option [value]="s">{{ s | titlecase }}</option>
+          }
+        </select>
+      </div>
+      <div class="filter-card">
+        <label>Risk Profile</label>
+        <select [(ngModel)]="riskFilter" (change)="onApplyFilters()">
+          <option value="">All Risk Levels</option>
+          @for (r of riskLevels; track r) {
+            <option [value]="r">{{ r | titlecase }} Risk</option>
+          }
+        </select>
+      </div>
+      <div class="filter-card">
+        <label>Registration Date</label>
+        <div class="filter-card__dates">
+          <input type="date" [(ngModel)]="dateFrom" (change)="onApplyFilters()" />
+          <input type="date" [(ngModel)]="dateTo" (change)="onApplyFilters()" />
+        </div>
+      </div>
+    </div>
+
+    @if (state.isEmpty()) {
+      <div class="empty-state">
+        <span class="material-symbols-outlined">store</span>
+        <h3>{{ state.hasFilters() ? 'No merchants match your filters' : 'No merchants yet' }}</h3>
+        <p>
+          @if (state.hasFilters()) {
+            Try adjusting your search or filter criteria.
+          } @else {
+            Get started by adding your first merchant.
+          }
+        </p>
+        @if (state.hasFilters()) {
+          <button type="button" class="btn btn--outline" (click)="onClearFilters()">Clear Filters</button>
+        } @else if (rbac.hasPermission(perms.MERCHANTS_WRITE)) {
+          <a routerLink="/merchants/create" class="btn btn--primary">Add Merchant</a>
+        }
+      </div>
+    } @else {
+      <div class="table-card">
+        <div class="table-toolbar">
+          <div class="table-toolbar__left">
+            <label class="checkbox-wrap">
+              <input type="checkbox" [checked]="allSelected" (change)="toggleSelectAll()" />
+              <span>Select All</span>
+            </label>
+          </div>
+          <span class="table-toolbar__count">
+            Showing {{ pageRangeStart() }}-{{ pageRangeEnd() }} of {{ state.totalItems() }} Merchants
+          </span>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th class="col-check"></th>
+                <th>Merchant Name &amp; MID</th>
+                <th>Business Type</th>
+                <th>KYC Status</th>
+                <th>Risk Score</th>
+                <th>Created Date</th>
+                <th class="col-actions">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (m of state.merchants(); track m.id) {
+                <tr>
+                  <td>
+                    <input type="checkbox" [checked]="selectedIds.has(m.id)" (change)="toggleSelect(m.id)" />
+                  </td>
+                  <td>
+                    <a [routerLink]="['/merchants', m.id]" class="merchant-cell">
+                      <div class="merchant-cell__avatar">{{ m.logoInitials || m.displayName[0] }}</div>
+                      <div>
+                        <div class="merchant-cell__name">{{ m.displayName }}</div>
+                        <div class="merchant-cell__mid">MID: {{ m.merchantCode }}</div>
+                      </div>
+                    </a>
+                  </td>
+                  <td><span class="badge">{{ formatBusinessType(m.businessType) }}</span></td>
+                  <td>
+                    <span class="kyc-badge kyc-badge--{{ m.kycStatus }}">
+                      <span class="material-symbols-outlined">{{ kycIcon(m.kycStatus) }}</span>
+                      {{ m.kycStatus | titlecase }}
+                    </span>
+                  </td>
+                  <td>
+                    <span class="risk-dot risk-dot--{{ riskColor(m.riskLevel) }}"></span>
+                    {{ m.riskLevel | titlecase }}
+                  </td>
+                  <td class="text-muted">{{ m.createdAt | date: 'MMM d, y' }}</td>
+                  <td class="col-actions">
+                    <button type="button" class="icon-btn" [matMenuTriggerFor]="menu">
+                      <span class="material-symbols-outlined">more_vert</span>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                      <a mat-menu-item [routerLink]="['/merchants', m.id]">View Details</a>
+                      @if (rbac.hasPermission(perms.MERCHANTS_WRITE)) {
+                        <a mat-menu-item [routerLink]="['/merchants', m.id, 'edit']">Edit</a>
+                      }
+                    </mat-menu>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pagination">
+          <button type="button" class="btn btn--outline btn--sm" [disabled]="state.currentPage() <= 1" (click)="goToPage(state.currentPage() - 1)">
+            Previous
+          </button>
+          <span>Page {{ state.currentPage() }} of {{ state.totalPages() || 1 }}</span>
+          <button
+            type="button"
+            class="btn btn--outline btn--sm"
+            [disabled]="state.currentPage() >= state.totalPages()"
+            (click)="goToPage(state.currentPage() + 1)"
+          >
+            Next
+          </button>
+          <select [ngModel]="state.pageSize()" (ngModelChange)="state.setPageSize($event)">
+            @for (size of pageSizeOptions; track size) {
+              <option [value]="size">{{ size }} per page</option>
+            }
+          </select>
+        </div>
+      </div>
+
+      @if (state.statistics(); as stats) {
+        <div class="stat-cards stat-cards--bottom">
+          <div class="stat-card stat-card--featured">
+            <span class="stat-card__label">Active Merchants</span>
+            <span class="stat-card__value">{{ stats.active }}</span>
+            <small class="stat-card__hint">↗ +12% from last month</small>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__label">Pending Verification</span>
+            <span class="stat-card__value stat-card__value--amber">{{ stats.pendingKyc }}</span>
+            <small class="stat-card__meta stat-card__meta--alert">! {{ stats.pendingKyc > 0 ? stats.pendingKyc : 0 }} critical cases</small>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__label">High Risk Score</span>
+            <span class="stat-card__value stat-card__value--red">{{ stats.highRisk }}</span>
+            <small class="stat-card__meta stat-card__meta--positive">↘ -0.5% this quarter</small>
+          </div>
+        </div>
+      }
+    }
+  }
+</div>

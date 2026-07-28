@@ -1,0 +1,52 @@
+<div class="notif-page">
+  <div class="notif-page__header">
+    <div>
+      <h1 class="notif-page__title">Notification Preferences</h1>
+      <p class="notif-page__subtitle">Choose how you receive alerts across email, push, and SMS channels.</p>
+    </div>
+  </div>
+
+  @if (state.pageState() === 'loading') {
+    <div class="notif-loading"><mat-spinner diameter="40" /><p>Loading preferences...</p></div>
+  } @else if (state.pageState() === 'error') {
+    <div class="notif-error">
+      <span class="material-symbols-outlined">error</span>
+      <p>{{ state.errorMessage() }}</p>
+      <button type="button" class="notif-btn notif-btn--primary" (click)="retry()">Retry</button>
+    </div>
+  } @else {
+    <div class="notif-prefs-card">
+      <table class="notif-prefs-grid">
+        <thead>
+          <tr>
+            <th>Notification Type</th>
+            @for (channel of channels; track channel) {
+              <th>{{ channel | uppercase }}</th>
+            }
+          </tr>
+        </thead>
+        <tbody>
+          @for (type of types; track type.key) {
+            <tr>
+              <td>{{ type.label }}</td>
+              @for (channel of channels; track channel) {
+                <td>
+                  <mat-checkbox
+                    [checked]="isEnabled(type.key, channel)"
+                    (change)="toggle(type.key, channel, $event.checked)"
+                  />
+                </td>
+              }
+            </tr>
+          }
+        </tbody>
+      </table>
+
+      <div class="notif-prefs-actions">
+        <button type="button" class="notif-btn notif-btn--primary" [disabled]="state.pageState() === 'saving'" (click)="save()">
+          @if (state.pageState() === 'saving') { <mat-spinner diameter="18" /> } @else { Save Preferences }
+        </button>
+      </div>
+    </div>
+  }
+</div>

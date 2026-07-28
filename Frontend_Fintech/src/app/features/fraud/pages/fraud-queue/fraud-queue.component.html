@@ -1,0 +1,46 @@
+<div class="page-header">
+  <h1>Fraud Queue</h1>
+  <p class="subtitle">Review fraud scores and cases</p>
+</div>
+
+@if (pageState() === 'loading') {
+  <mat-spinner diameter="40"></mat-spinner>
+} @else {
+  <div class="stats-row">
+    <span>Pending: {{ stats()['pending'] ?? 0 }}</span>
+    <span>Avg Score: {{ stats()['avgScore'] ?? 0 | number:'1.0-1' }}</span>
+  </div>
+
+  <select [(ngModel)]="statusFilter" (change)="load()">
+    <option value="pending">Pending</option>
+    <option value="under_review">Under Review</option>
+    <option value="approved">Approved</option>
+    <option value="rejected">Rejected</option>
+  </select>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Case</th><th>Merchant</th><th>Score</th><th>Status</th><th>Source</th><th>Actions</th></tr>
+    </thead>
+    <tbody>
+      @for (c of items(); track c.id) {
+        <tr>
+          <td>{{ c.caseRef }}</td>
+          <td>{{ c.merchantName ?? '—' }}</td>
+          <td>{{ c.fraudScore }}</td>
+          <td>{{ c.status }}</td>
+          <td>{{ c.source }}</td>
+          <td>
+            @if (rbac.hasPermission(perms.FRAUD_WRITE) && c.status === 'pending') {
+              <button type="button" (click)="approve(c.id)">Approve</button>
+              <button type="button" (click)="reject(c.id)">Reject</button>
+            }
+            @if (rbac.hasPermission(perms.FRAUD_MANAGE) && c.status === 'under_review') {
+              <button type="button" (click)="release(c.id)">Release</button>
+            }
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}

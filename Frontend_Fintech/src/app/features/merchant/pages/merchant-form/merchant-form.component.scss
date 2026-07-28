@@ -1,0 +1,282 @@
+@use '../../../dashboard/styles/dashboard-tokens' as *;
+@use '../../../dashboard/styles/shared-page-ui' as ui;
+
+.merchant-form-page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: 48px;
+
+  &__loading {
+    @include ui.page-loading-error;
+    min-height: 400px;
+  }
+}
+
+.onboard-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0 24px;
+  border-bottom: 1px solid $dash-outline-variant;
+  margin-bottom: 28px;
+
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: $dash-on-surface;
+    font-weight: 700;
+    font-size: 16px;
+
+    .material-symbols-outlined { font-size: 20px; }
+    &:hover { color: $dash-primary-bright; }
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: $dash-outline;
+  }
+
+  &__avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: $dash-primary-bright;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.onboard-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 28px;
+  align-items: start;
+
+  @media (max-width: 900px) { grid-template-columns: 1fr; }
+}
+
+.onboard-sidebar {
+  @include dash-card;
+  padding: 24px;
+  position: sticky;
+  top: 24px;
+
+  h2 { margin: 0 0 8px; font-size: 22px; font-weight: 700; color: $dash-on-surface; }
+  > p { margin: 0 0 24px; font-size: 13px; color: $dash-outline; line-height: 1.5; }
+}
+
+.step-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid transparent;
+    border-radius: $dash-radius-lg;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    transition: background 0.15s, border-color 0.15s;
+
+    strong { display: block; font-size: 14px; color: $dash-on-surface; }
+    small { display: block; font-size: 12px; color: $dash-outline; margin-top: 2px; }
+
+    &:hover { background: $dash-surface-container-low; }
+
+    &--active {
+      background: $dash-primary-bright;
+      border-color: $dash-primary-bright;
+      box-shadow: 0 4px 12px rgba($dash-primary-bright, 0.3);
+
+      strong, small { color: #fff; }
+      .step-nav__icon { background: rgba(255, 255, 255, 0.2); color: #fff; }
+    }
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: $dash-radius-lg;
+    background: $dash-surface-container-low;
+    color: $dash-outline;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 20px;
+  }
+}
+
+.velocity-card {
+  padding: 16px;
+  border-radius: $dash-radius-lg;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba($dash-primary-bright, 0.04),
+    rgba($dash-primary-bright, 0.04) 4px,
+    rgba($dash-primary-bright, 0.08) 4px,
+    rgba($dash-primary-bright, 0.08) 8px
+  );
+  border: 1px dashed rgba($dash-primary-bright, 0.2);
+
+  &__label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: $dash-outline;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  &__bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    height: 48px;
+
+    span {
+      flex: 1;
+      background: $dash-primary-bright;
+      border-radius: 3px 3px 0 0;
+      opacity: 0.7;
+
+      &:nth-child(1) { height: 40%; }
+      &:nth-child(2) { height: 65%; }
+      &:nth-child(3) { height: 50%; }
+      &:nth-child(4) { height: 80%; }
+      &:nth-child(5) { height: 100%; opacity: 1; }
+    }
+  }
+}
+
+.form-card {
+  @include dash-card;
+  padding: 32px;
+  box-shadow: $dash-shadow-elevated;
+
+  &__header {
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $dash-outline-variant;
+
+    h1 { margin: 0 0 6px; font-size: 26px; font-weight: 700; color: $dash-on-surface; }
+    p { margin: 0; font-size: 14px; color: $dash-outline; }
+  }
+}
+
+.form-stepper {
+  background: transparent !important;
+
+  ::ng-deep {
+    .mat-horizontal-stepper-header-container { display: none; }
+    .mat-horizontal-content-container { padding: 0; }
+    .mat-horizontal-stepper-wrapper { background: transparent; }
+  }
+}
+
+.step-form { padding-top: 0; }
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 20px;
+
+  .full-span { grid-column: 1 / -1; }
+
+  @media (max-width: 640px) { grid-template-columns: 1fr; }
+}
+
+.website-field {
+  ::ng-deep .material-symbols-outlined {
+    margin-right: 8px;
+    color: $dash-outline;
+    font-size: 20px;
+  }
+}
+
+.step-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid $dash-outline-variant;
+}
+
+.btn-text {
+  margin-right: auto;
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: $dash-outline;
+  cursor: pointer;
+  &:hover { color: $dash-on-surface; }
+}
+
+.btn-back { color: $dash-outline !important; }
+
+.btn-next {
+  padding: 10px 24px !important;
+  border-radius: $dash-radius-lg !important;
+  font-weight: 600 !important;
+
+  .material-symbols-outlined { font-size: 18px; margin-left: 4px; }
+}
+
+.review-text { color: $dash-outline; font-size: 14px; padding: 8px 0 24px; }
+
+.info-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+
+  @media (max-width: 640px) { grid-template-columns: 1fr; }
+}
+
+.info-box {
+  display: flex;
+  gap: 14px;
+  padding: 18px 20px;
+  border-radius: $dash-radius-xl;
+  background: rgba($dash-primary-bright, 0.06);
+  border: 1px solid rgba($dash-primary-bright, 0.12);
+
+  > .material-symbols-outlined { font-size: 22px; color: $dash-primary-bright; flex-shrink: 0; }
+
+  strong { display: block; font-size: 14px; color: $dash-on-surface; margin-bottom: 4px; }
+  p { margin: 0; font-size: 13px; color: $dash-outline; line-height: 1.5; }
+  a { color: $dash-primary-bright; font-weight: 600; }
+}
+
+.form-error {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: $dash-error-container;
+  color: #93000a;
+  border-radius: $dash-radius-lg;
+  font-size: 14px;
+}
+
+:host ::ng-deep {
+  .mat-mdc-form-field { width: 100%; }
+  .mat-mdc-text-field-wrapper { background: $dash-surface !important; }
+}

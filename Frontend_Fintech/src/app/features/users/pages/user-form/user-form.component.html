@@ -1,0 +1,26 @@
+<div class="usr-form">
+  <div class="page-header">
+    <h1>{{ isEdit ? 'Edit User' : 'Create User' }}</h1>
+    <a routerLink="/users" class="btn btn--outline">Cancel</a>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="submit()" class="form-card">
+    <mat-form-field appearance="outline" class="full"><mat-label>Email</mat-label><input matInput formControlName="email" /></mat-form-field>
+    @if (!isEdit) {
+      <mat-form-field appearance="outline" class="full"><mat-label>Password</mat-label><input matInput type="password" formControlName="password" /></mat-form-field>
+    }
+    <div class="row">
+      <mat-form-field appearance="outline"><mat-label>First Name</mat-label><input matInput formControlName="firstName" /></mat-form-field>
+      <mat-form-field appearance="outline"><mat-label>Last Name</mat-label><input matInput formControlName="lastName" /></mat-form-field>
+    </div>
+    <mat-form-field appearance="outline" class="full"><mat-label>Phone</mat-label><input matInput formControlName="phoneNumber" /></mat-form-field>
+    <mat-form-field appearance="outline"><mat-label>Status</mat-label>
+      <mat-select formControlName="status">@for (s of statuses; track s) { <mat-option [value]="s">{{ s }}</mat-option> }</mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full"><mat-label>Roles</mat-label>
+      <mat-select formControlName="roleIds" multiple>
+        @for (r of roles; track r.id) { <mat-option [value]="r.id">{{ r.name }}</mat-option> }
+      </mat-select>
+    </mat-form-field>
+    <button type="submit" class="btn btn--primary" [disabled]="form.invalid">{{ isEdit ? 'Save Changes' : 'Create User' }}</button>
+  </form>
+</div>

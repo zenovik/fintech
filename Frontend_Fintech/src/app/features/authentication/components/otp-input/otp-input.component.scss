@@ -1,0 +1,51 @@
+@use '../../styles/auth-tokens' as *;
+
+.otp-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+
+  &__cell {
+    width: 48px;
+    height: 56px;
+    text-align: center;
+    font-family: $auth-font-family;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    background: $auth-surface;
+    border: 1px solid $auth-outline-variant;
+    border-radius: $auth-radius-lg;
+    color: $auth-on-surface;
+    transition:
+      border-color 0.2s,
+      box-shadow 0.2s;
+
+    &:focus {
+      outline: none;
+      border-color: $auth-primary;
+      box-shadow: 0 0 0 2px rgba(0, 82, 204, 0.2);
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  &__separator {
+    width: 8px;
+    height: 2px;
+    background: $auth-outline-variant;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .otp-input__cell {
+    width: 40px;
+    height: 48px;
+    font-size: 20px;
+  }
+}

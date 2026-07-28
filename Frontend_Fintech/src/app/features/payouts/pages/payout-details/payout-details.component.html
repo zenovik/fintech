@@ -1,0 +1,67 @@
+@if (pageState() === 'loading') {
+  <div class="po-loading"><mat-spinner diameter="40" /></div>
+} @else if (pageState() === 'error') {
+  <div class="po-error"><p>Payout not found.</p><a routerLink="/payouts" class="po-btn po-btn--primary">Back to Queue</a></div>
+} @else if (payout()) {
+  <div class="po-page">
+    <div class="po-page__header">
+      <div>
+        <a routerLink="/payouts" style="font-size:13px;color:#667085;text-decoration:none">← Payout Queue</a>
+        <h1 class="po-page__title">{{ p.payoutRef }}</h1>
+        <p class="po-page__subtitle">{{ p.payoutType | titlecase }} · {{ p.payoutMethod | titlecase }} · <span [class]="badgeClass(p.status)">{{ p.status }}</span></p>
+      </div>
+      <div style="display:flex;gap:8px">
+        @if ((p.status === 'pending' || p.status === 'scheduled') && rbac.hasPermission(perms.PAYOUTS_APPROVE)) {
+          <button type="button" class="po-btn po-btn--success" [disabled]="saving()" (click)="approve()">Approve</button>
+        }
+        @if (p.status === 'failed' && rbac.hasPermission(perms.PAYOUTS_WRITE)) {
+          <button type="button" class="po-btn po-btn--primary" [disabled]="saving()" (click)="retry()">Retry Payout</button>
+        }
+      </div>
+    </div>
+
+    <div class="po-stats">
+      <div class="po-stats__card"><label>Amount</label><strong>{{ p.amount | currency:p.currency:'symbol':'1.2-2' }}</strong></div>
+      <div class="po-stats__card"><label>Merchant</label><strong><a [routerLink]="['/merchants', p.merchantId]">{{ p.merchantName }}</a></strong></div>
+      <div class="po-stats__card"><label>Settlement</label><strong>@if (p.settlementId) { <a [routerLink]="['/settlements', p.settlementId]">{{ p.settlementRef }}</a> } @else { — }</strong></div>
+      <div class="po-stats__card"><label>Bank</label><strong>{{ p.bankName || '—' }} {{ p.accountMasked || '' }}</strong></div>
+    </div>
+
+    <div class="po-card">
+      <h3>Payout Details</h3>
+      <div class="po-form-grid">
+        <div><label>Transfer Ref</label><p>{{ p.transferRef || '—' }}</p></div>
+        <div><label>Fee</label><p>{{ p.feeAmount | currency:p.currency:'symbol':'1.2-2' }}</p></div>
+        <div><label>Scheduled</label><p>{{ p.scheduledAt ? (p.scheduledAt | date:'medium') : '—' }}</p></div>
+        <div><label>Confirmed</label><p>{{ p.confirmedAt ? (p.confirmedAt | date:'medium') : '—' }}</p></div>
+        <div><label>Created By</label><p>{{ p.createdByName || '—' }}</p></div>
+        <div><label>Approved By</label><p>{{ p.approvedByName || '—' }}</p></div>
+        @if (p.notes) { <div style="grid-column:1/-1"><label>Notes</label><p>{{ p.notes }}</p></div> }
+        @if (p.failureReason) { <div style="grid-column:1/-1"><label>Failure Reason</label><p style="color:#b42318">{{ p.failureReason }}</p></div> }
+      </div>
+    </div>
+
+    @if (p.status === 'pending' && rbac.hasPermission(perms.PAYOUTS_APPROVE)) {
+      <div class="po-card">
+        <h3>Reject Payout</h3>
+        <textarea [(ngModel)]="rejectReason" rows="3" placeholder="Rejection reason (required)"></textarea>
+        <button type="button" class="po-btn po-btn--danger" style="margin-top:12px" [disabled]="saving() || !rejectReason.trim()" (click)="reject()">Reject</button>
+      </div>
+    }
+
+    <div class="po-card">
+      <h3>Status Timeline</h3>
+      @if (!p.history.length) { <p>No history recorded.</p> } @else {
+        <div class="po-timeline">
+          @for (h of p.history; track h.id) {
+            <div class="po-timeline__item">
+              <time>{{ h.createdAt | date:'medium' }}</time>
+              <p><strong>{{ h.fromStatus || 'new' }} → {{ h.toStatus }}</strong>@if (h.changedByName) { by {{ h.changedByName }} }</p>
+              @if (h.reason) { <p>{{ h.reason }}</p> }
+            </div>
+          }
+        </div>
+      }
+    </div>
+  </div>
+}

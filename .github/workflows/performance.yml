@@ -1,0 +1,130 @@
+name: Performance Tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      profile:
+        description: 'Load profile (smoke, load, stress, spike, soak)'
+        required: true
+        default: 'smoke'
+        type: choice
+        options:
+          - smoke
+          - load
+          - stress
+          - spike
+          - soak
+      environment:
+        description: 'Target environment'
+        required: true
+        default: 'local'
+        type: choice
+        options:
+          - local
+          - docker
+          - staging
+          - production
+
+# Optional workflow — does NOT block main CI pipeline
+jobs:
+  k6-performance:
+    name: k6 ${{ inputs.profile }} (${{ inputs.environment }})
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: test_root
+          MYSQL_DATABASE: fintech_db
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -u root -ptest_root"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=10
+    env:
+      PERF_PROFILE: ${{ inputs.profile }}
+      PERF_ENV: ${{ inputs.environment }}
+      BASE_URL: http://localhost:3000/api
+      DB_HOST: 127.0.0.1
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: test_root
+      DB_NAME: fintech_db
+      JWT_SECRET: perf-test-jwt-secret-min-32-characters!!
+      JWT_REFRESH_SECRET: perf-test-refresh-secret-min-32-chars
+      CONFIG_ENCRYPTION_KEY: perf-test-config-key-min-32-chars
+      REDIS_ENABLED: false
+      CSP_ENABLED: false
+      CORS_ORIGIN: http://localhost:4200
+      PERF_SOAK_DURATION: 10m
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          npm ci --workspace=Backend_Fintech
+
+      - name: Install k6
+        run: |
+          sudo gpg -k
+          sudo gpg --no-default-keylist --keyring /usr/share/keyrings/k6-archive-keyring.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C5AD17C747E3415A364B96520D8829A9B6F46065
+          echo "deb [signed-by=/usr/share/keyrings/k6-archive-keyring.gpg] https://dl.k6.io/deb stable main" | sudo tee /etc/apt/sources.list.d/k6.list
+          sudo apt-get update
+          sudo apt-get install -y k6
+
+      - name: Download database artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: master-database-sql
+          path: Database_Fintech/
+        continue-on-error: true
+
+      - name: Build database if artifact missing
+        run: |
+          if [ ! -f Database_Fintech/master_database.sql ]; then
+            pwsh Database_Fintech/scripts/build-master.ps1
+          fi
+
+      - name: Seed database
+        run: npm run db:setup:unix
+        env:
+          MYSQL_HOST: 127.0.0.1
+          MYSQL_PASSWORD: test_root
+
+      - name: Build and start backend
+        run: |
+          npm run build --workspace=Backend_Fintech
+          npm run start --workspace=Backend_Fintech &
+          for i in $(seq 1 60); do
+            curl -sf http://localhost:3000/api/ready && break
+            sleep 2
+          done
+
+      - name: Run k6 performance tests
+        run: node performance/scripts/run.mjs ${{ inputs.profile }}
+
+      - name: Upload performance reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: k6-performance-${{ inputs.profile }}-${{ github.run_id }}
+          path: performance/reports/
+          retention-days: 30
+
+      - name: Upload k6 trend summary
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: k6-trend-${{ inputs.profile }}-${{ github.run_id }}
+          path: performance/reports/*-summary.txt
+          retention-days: 90
+          if-no-files-found: ignore

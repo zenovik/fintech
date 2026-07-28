@@ -1,0 +1,98 @@
+<div class="wh-page">
+  <header>
+    <h1>Webhook Platform</h1>
+    <p>Endpoints, deliveries, replay history, and endpoint health</p>
+  </header>
+
+  <div class="wh-filters">
+    <input type="number" placeholder="Merchant ID" [(ngModel)]="merchantFilter" (keyup.enter)="load()" />
+    <button type="button" (click)="load()">Refresh</button>
+  </div>
+
+  @if (pageState() === 'loading') {
+    <div class="wh-center"><mat-spinner diameter="36" /></div>
+  } @else if (pageState() === 'error') {
+    <p class="wh-error">Failed to load webhooks dashboard.</p>
+  } @else if (dashboard()) {
+    <div class="wh-stats">
+      <div class="wh-stat">
+        <span>Endpoints</span>
+        <strong>{{ statNum('endpoints', 'total') }}</strong>
+        <small>{{ statNum('endpoints', 'active') }} active</small>
+      </div>
+      <div class="wh-stat">
+        <span>Deliveries (24h)</span>
+        <strong>{{ statNum('deliveries', 'total24h') | number }}</strong>
+        <small>{{ statNum('deliveries', 'failed24h') }} failed</small>
+      </div>
+      <div class="wh-stat">
+        <span>Pending</span>
+        <strong>{{ statNum('deliveries', 'pending') }}</strong>
+      </div>
+      <div class="wh-stat">
+        <span>Replays</span>
+        <strong>{{ statNum('replays', 'total') }}</strong>
+      </div>
+    </div>
+
+    <section class="wh-table-wrap">
+      <h2>Endpoints</h2>
+      @if (!endpoints().length) {
+        <p class="wh-empty">No webhook endpoints configured.</p>
+      } @else {
+        <table>
+          <thead>
+            <tr>
+              <th>URL</th>
+              <th>Health</th>
+              <th>Failures</th>
+              <th>Last Delivery</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (ep of endpoints(); track $index) {
+              @let row = $any(ep);
+              <tr>
+                <td class="wh-url">{{ row.url }}</td>
+                <td><span class="wh-health" [class]="healthClass(row.healthStatus ?? 'healthy')">{{ row.healthStatus ?? 'healthy' }}</span></td>
+                <td>{{ row.failureCount ?? 0 }}</td>
+                <td>{{ row.lastDeliveryAt | date:'medium' }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      }
+    </section>
+
+    <section class="wh-table-wrap">
+      <h2>Recent Deliveries</h2>
+      @if (!deliveries().length) {
+        <p class="wh-empty">No deliveries yet.</p>
+      } @else {
+        <table>
+          <thead>
+            <tr>
+              <th>Event</th>
+              <th>Status</th>
+              <th>Attempts</th>
+              <th>Response</th>
+              <th>Created</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (d of deliveries(); track $index) {
+              @let row = $any(d);
+              <tr>
+                <td>{{ row.eventType }}</td>
+                <td>{{ row.status }}</td>
+                <td>{{ row.attemptCount ?? 0 }}</td>
+                <td>{{ row.lastResponseCode ?? '—' }}</td>
+                <td>{{ row.createdAt | date:'medium' }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      }
+    </section>
+  }
+</div>

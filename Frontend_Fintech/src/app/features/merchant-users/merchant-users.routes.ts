@@ -1,0 +1,21 @@
+import { Routes } from '@angular/router';
+import { authGuard } from '../../core/auth/guards/auth.guard';
+import { permissionGuard } from '../../core/auth/guards/permission.guard';
+import { PERMISSIONS } from '../../core/auth/constants/permissions.constants';
+import { DashboardShellComponent } from '../dashboard/layouts/dashboard-shell/dashboard-shell.component';
+
+export const merchantUserRoutes: Routes = [
+  {
+    path: '',
+    component: DashboardShellComponent,
+    canActivate: [authGuard, permissionGuard(PERMISSIONS.MERCHANT_USERS_READ)],
+    children: [
+      {
+        path: '',
+        loadComponent: () =>
+          import('./pages/merchant-user-list/merchant-user-list.component').then((m) => m.MerchantUserListComponent),
+        title: 'Merchant Users | Merchant Pro',
+      },
+    ],
+  },
+];

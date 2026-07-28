@@ -1,0 +1,141 @@
+export const NOTIFICATION_CATEGORIES = ['financial', 'security', 'system', 'support', 'merchant', 'transaction'] as const;
+export type NotificationCategory = (typeof NOTIFICATION_CATEGORIES)[number];
+
+export const NOTIFICATION_STATUSES = ['unread', 'read', 'archived'] as const;
+export type NotificationStatus = (typeof NOTIFICATION_STATUSES)[number];
+
+export const NOTIFICATION_PRIORITIES = ['low', 'normal', 'high', 'urgent'] as const;
+export type NotificationPriority = (typeof NOTIFICATION_PRIORITIES)[number];
+
+export const NOTIFICATION_CHANNELS = ['email', 'push', 'sms', 'in_app'] as const;
+export type NotificationChannel = (typeof NOTIFICATION_CHANNELS)[number];
+
+export const DELIVERY_STATUSES = ['pending', 'sent', 'delivered', 'failed'] as const;
+export type DeliveryStatus = (typeof DELIVERY_STATUSES)[number];
+
+export const NOTIFICATION_EVENT_CODES = [
+  'welcome',
+  'password_changed',
+  'mfa_enabled',
+  'merchant_approved',
+  'merchant_rejected',
+  'merchant_onboarding_submitted',
+  'merchant_onboarding_approved',
+  'merchant_onboarding_rejected',
+  'refund_processed',
+  'settlement_completed',
+  'payment_failed',
+  'broadcast',
+  'system_announcement',
+  'customer_created',
+  'customer_status_changed',
+  'refund_requested',
+  'refund_rejected',
+  'chargeback_opened',
+  'chargeback_resolved',
+  'chargeback_evidence_due',
+  'payout_scheduled',
+  'payout_completed',
+  'payout_failed',
+  'payment_link_created',
+  'payment_link_expired',
+  'payment_received',
+  'invoice_created',
+  'invoice_sent',
+  'invoice_viewed',
+  'invoice_reminder',
+  'invoice_paid',
+  'invoice_overdue',
+  'qr_code_created',
+  'qr_payment_received',
+  'subscription_created',
+  'subscription_renewed',
+  'subscription_cancelled',
+  'subscription_failed',
+] as const;
+export type NotificationEventCode = (typeof NOTIFICATION_EVENT_CODES)[number];
+
+export const EVENT_ICONS: Record<string, string> = {
+  welcome: 'waving_hand',
+  password_changed: 'security',
+  mfa_enabled: 'verified_user',
+  merchant_approved: 'storefront',
+  merchant_rejected: 'block',
+  merchant_onboarding_submitted: 'assignment_turned_in',
+  merchant_onboarding_approved: 'verified',
+  merchant_onboarding_rejected: 'cancel',
+  refund_processed: 'currency_exchange',
+  settlement_completed: 'payments',
+  payment_failed: 'error',
+  broadcast: 'campaign',
+  system_announcement: 'settings_suggest',
+  customer_created: 'person_add',
+  customer_status_changed: 'person',
+  refund_requested: 'currency_exchange',
+  refund_rejected: 'block',
+  chargeback_opened: 'gavel',
+  chargeback_resolved: 'gavel',
+  chargeback_evidence_due: 'schedule',
+  payout_scheduled: 'schedule_send',
+  payout_completed: 'payments',
+  payout_failed: 'error',
+  payment_link_created: 'link',
+  payment_link_expired: 'link_off',
+  payment_received: 'payments',
+  invoice_created: 'receipt_long',
+  invoice_sent: 'send',
+  invoice_viewed: 'visibility',
+  invoice_reminder: 'schedule',
+  invoice_paid: 'payments',
+  invoice_overdue: 'warning',
+  qr_code_created: 'qr_code_2',
+  qr_payment_received: 'payments',
+  subscription_created: 'autorenew',
+  subscription_renewed: 'autorenew',
+  subscription_cancelled: 'cancel',
+  subscription_failed: 'error',
+};
+
+export const EVENT_TITLES: Record<string, string> = {
+  welcome: 'Welcome to Merchant Pro',
+  password_changed: 'Password Changed Successfully',
+  mfa_enabled: 'Multi-Factor Authentication Enabled',
+  merchant_approved: 'Merchant Application Approved',
+  merchant_rejected: 'Merchant Application Rejected',
+  merchant_onboarding_submitted: 'Onboarding Application Submitted',
+  merchant_onboarding_approved: 'Onboarding Application Approved',
+  merchant_onboarding_rejected: 'Onboarding Application Rejected',
+  refund_processed: 'Refund Processed',
+  settlement_completed: 'Settlement Completed',
+  payment_failed: 'Payment Failed',
+  broadcast: 'Announcement',
+  system_announcement: 'System Announcement',
+  customer_created: 'New Customer Registered',
+  customer_status_changed: 'Customer Status Updated',
+  refund_requested: 'Refund Request Submitted',
+  refund_rejected: 'Refund Request Rejected',
+  chargeback_opened: 'Chargeback Opened',
+  chargeback_resolved: 'Chargeback Resolved',
+  chargeback_evidence_due: 'Chargeback Evidence Due',
+  payout_scheduled: 'Payout Scheduled',
+  payout_completed: 'Payout Completed',
+  payout_failed: 'Payout Failed',
+  payment_link_created: 'Payment Link Created',
+  payment_link_expired: 'Payment Link Expired',
+  payment_received: 'Payment Received',
+  invoice_created: 'Invoice Created',
+  invoice_sent: 'Invoice Sent',
+  invoice_viewed: 'Invoice Viewed',
+  invoice_reminder: 'Invoice Reminder',
+  invoice_paid: 'Invoice Paid',
+  invoice_overdue: 'Invoice Overdue',
+  qr_code_created: 'QR Code Created',
+  qr_payment_received: 'QR Payment Received',
+  subscription_created: 'Subscription Created',
+  subscription_renewed: 'Subscription Renewed',
+  subscription_cancelled: 'Subscription Cancelled',
+  subscription_failed: 'Subscription Failed',
+};
+
+export const DEFAULT_PAGE_SIZE = 10;
+export const MAX_PAGE_SIZE = 50;

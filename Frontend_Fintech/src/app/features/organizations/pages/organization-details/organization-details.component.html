@@ -1,0 +1,239 @@
+<div class="org-page">
+  <nav class="org-breadcrumb">
+    <a routerLink="/organizations">Organizations</a>
+    <span class="material-symbols-outlined">chevron_right</span>
+    <span>Details</span>
+  </nav>
+
+  @if (pageState() === 'loading') {
+    <div class="org-loading"><mat-spinner diameter="40" /><p>Loading organization...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="org-error">
+      <span class="material-symbols-outlined">error</span>
+      <p>{{ errorMessage() }}</p>
+      <button type="button" class="org-btn org-btn--primary" (click)="load()">Retry</button>
+    </div>
+  } @else {
+    @if (org(); as o) {
+      <div class="org-page__header">
+        <div style="display:flex;align-items:center;gap:16px;">
+          <span class="org-avatar" style="width:56px;height:56px;font-size:18px;" [style.background]="o.primaryColor || '#003ec7'">
+            {{ o.logoInitials || 'OR' }}
+          </span>
+          <div>
+            <h1 class="org-page__title">{{ o.displayName }}</h1>
+            <p class="org-page__subtitle">{{ o.legalName }} · <code>{{ o.code }}</code>
+              <span class="org-status org-status--{{ o.status }}" style="margin-left:8px;">{{ o.status }}</span>
+            </p>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          @if (rbac.hasPermission(perms.ORGANIZATIONS_WRITE)) {
+            <a [routerLink]="['/organizations', o.id, 'edit']" class="org-btn org-btn--secondary">
+              <span class="material-symbols-outlined">edit</span> Edit
+            </a>
+          }
+          @if (rbac.hasPermission(perms.ORGANIZATIONS_DELETE) && o.status !== 'archived') {
+            <button type="button" class="org-btn org-btn--danger" (click)="archive()">Archive</button>
+          }
+          @if (rbac.hasPermission(perms.ORGANIZATIONS_WRITE) && o.status === 'archived') {
+            <button type="button" class="org-btn org-btn--primary" (click)="restore()">Restore</button>
+          }
+        </div>
+      </div>
+
+      <div class="org-tabs">
+        @for (tab of tabs; track tab.key) {
+          <button type="button" [class.active]="activeTab() === tab.key" (click)="setTab(tab.key)">
+            <span class="material-symbols-outlined">{{ tab.icon }}</span>{{ tab.label }}
+          </button>
+        }
+      </div>
+
+      @if (activeTab() === 'overview') {
+        <div class="org-table-wrap" style="padding:24px;">
+          <div class="org-form-grid">
+            <div><label>Industry</label><div>{{ o.industry || '—' }}</div></div>
+            <div><label>Website</label><div>{{ o.website || '—' }}</div></div>
+            <div><label>Tax ID</label><div>{{ o.taxId || '—' }}</div></div>
+            <div><label>Region</label><div>{{ o.primaryRegion || '—' }}</div></div>
+            <div><label>Currency</label><div>{{ o.baseCurrency }}</div></div>
+            <div><label>Timezone</label><div>{{ o.timezone }}</div></div>
+            <div class="org-form-grid__full"><label>Description</label><div>{{ o.description || '—' }}</div></div>
+          </div>
+          <h3 style="margin:24px 0 12px;">Addresses</h3>
+          @if (!o.addresses.length) { <p style="color:#737685;">No addresses</p> }
+          @for (a of o.addresses; track a.id) {
+            <p>{{ a.line1 }}{{ a.line2 ? ', ' + a.line2 : '' }}, {{ a.city }} {{ a.postalCode }} {{ a.countryCode }}
+              @if (a.isPrimary) { <span class="org-status org-status--active">Primary</span> }
+            </p>
+          }
+          <h3 style="margin:24px 0 12px;">Contacts</h3>
+          @if (!o.contacts.length) { <p style="color:#737685;">No contacts</p> }
+          @for (c of o.contacts; track c.id) {
+            <p>{{ c.firstName }} {{ c.lastName }} · {{ c.email }} · {{ c.phone || '—' }}</p>
+          }
+        </div>
+      }
+
+      @if (activeTab() === 'members') {
+        <div class="org-table-wrap">
+          <table class="org-table">
+            <thead><tr><th>Member</th><th>Role</th><th>Status</th><th>Joined</th><th></th></tr></thead>
+            <tbody>
+              @for (m of o.members; track m.id) {
+                <tr>
+                  <td><strong>{{ m.firstName }} {{ m.lastName }}</strong><div style="font-size:12px;color:#737685;">{{ m.email }}</div></td>
+                  <td>{{ m.roleName }}</td>
+                  <td><span class="org-status org-status--{{ m.status === 'active' ? 'active' : 'pending' }}">{{ m.status }}</span></td>
+                  <td>{{ m.joinedAt ? (m.joinedAt | date:'mediumDate') : '—' }}</td>
+                  <td>
+                    @if (rbac.hasPermission(perms.ORGANIZATIONS_MANAGE)) {
+                      <button type="button" class="org-btn org-btn--ghost" (click)="removeMember(m.id)">Remove</button>
+                    }
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      }
+
+      @if (activeTab() === 'branding') {
+        <div class="org-table-wrap" style="padding:24px;">
+          <div class="org-form-grid">
+            <div><label>Company Name</label><input [(ngModel)]="brandingForm.companyName" /></div>
+            <div><label>Logo Initials</label><input [(ngModel)]="brandingForm.logoInitials" /></div>
+            <div><label>Primary Color</label><input [(ngModel)]="brandingForm.primaryColor" /></div>
+            <div><label>Secondary Color</label><input [(ngModel)]="brandingForm.secondaryColor" /></div>
+            <div><label>Accent Color</label><input [(ngModel)]="brandingForm.accentColor" /></div>
+            <div><label>Logo URL</label><input [(ngModel)]="brandingForm.logoUrl" placeholder="https://... or leave blank" /></div>
+          </div>
+          @if (rbac.hasPermission(perms.ORGANIZATIONS_WRITE)) {
+            <button type="button" class="org-btn org-btn--primary" style="margin-top:16px;" [disabled]="saving()" (click)="saveBranding()">Save Branding</button>
+          }
+        </div>
+      }
+
+      @if (activeTab() === 'domains') {
+        <div class="org-table-wrap" style="padding:24px;">
+          @if (rbac.hasPermission(perms.ORGANIZATIONS_MANAGE)) {
+            <div class="org-filters">
+              <input [(ngModel)]="newDomain" placeholder="example.com" />
+              <button type="button" class="org-btn org-btn--primary" (click)="addDomain()">Add Domain</button>
+            </div>
+          }
+          <table class="org-table">
+            <thead><tr><th>Domain</th><th>Status</th><th>Primary</th><th></th></tr></thead>
+            <tbody>
+              @for (d of o.domains; track d.id) {
+                <tr>
+                  <td>{{ d.domain }}</td>
+                  <td><span class="org-status org-status--{{ d.status === 'verified' ? 'active' : 'pending' }}">{{ d.status }}</span></td>
+                  <td>{{ d.isPrimary ? 'Yes' : 'No' }}</td>
+                  <td>
+                    @if (rbac.hasPermission(perms.ORGANIZATIONS_MANAGE)) {
+                      @if (d.status !== 'verified') {
+                        <button type="button" class="org-btn org-btn--ghost" (click)="verifyDomain(d.id)">Verify</button>
+                      }
+                      <button type="button" class="org-btn org-btn--ghost" (click)="deleteDomain(d.id)">Remove</button>
+                    }
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      }
+
+      @if (activeTab() === 'api-keys') {
+        <div class="org-table-wrap" style="padding:24px;">
+          @if (rbac.hasPermission(perms.ORGANIZATIONS_MANAGE)) {
+            <div class="org-filters">
+              <input [(ngModel)]="newKeyName" placeholder="Key name" />
+              <select [(ngModel)]="newKeyEnv"><option value="test">Test</option><option value="live">Live</option></select>
+              <button type="button" class="org-btn org-btn--primary" (click)="createApiKey()">Create New Key</button>
+            </div>
+          }
+          @for (k of o.apiKeys; track k.id) {
+            <div style="padding:16px;border:1px solid #e2e8f0;border-radius:8px;margin-bottom:12px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <div>
+                  <strong>{{ k.name }}</strong>
+                  <span class="org-status org-status--{{ k.environment === 'live' ? 'active' : 'pending' }}" style="margin-left:8px;">{{ k.environment }}</span>
+                  <span class="org-status org-status--{{ k.status === 'active' ? 'active' : 'archived' }}" style="margin-left:4px;">{{ k.status }}</span>
+                </div>
+                @if (rbac.hasPermission(perms.ORGANIZATIONS_MANAGE) && k.status === 'active') {
+                  <button type="button" class="org-btn org-btn--danger" (click)="revokeApiKey(k.id)">Revoke</button>
+                }
+              </div>
+              <code style="display:block;margin-top:8px;padding:8px;background:#f2f3ff;border-radius:6px;">{{ k.maskedKey }}</code>
+              <div style="font-size:12px;color:#737685;margin-top:6px;">Created {{ k.createdAt | date:'medium' }}</div>
+            </div>
+          }
+        </div>
+      }
+
+      @if (activeTab() === 'preferences') {
+        <div class="org-table-wrap" style="padding:24px;">
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <label style="display:flex;justify-content:space-between;align-items:center;">
+              <span><strong>Automatic Invoicing</strong><br /><small>Generate invoices on payment success</small></span>
+              <input type="checkbox" [(ngModel)]="preferencesForm['automatic_invoicing']" />
+            </label>
+            <label style="display:flex;justify-content:space-between;align-items:center;">
+              <span><strong>Payout Notifications</strong><br /><small>Email alerts for payout events</small></span>
+              <input type="checkbox" [(ngModel)]="preferencesForm['payout_notifications']" />
+            </label>
+            <label style="display:flex;justify-content:space-between;align-items:center;">
+              <span><strong>Public Profile</strong><br /><small>Expose organization profile publicly</small></span>
+              <input type="checkbox" [(ngModel)]="preferencesForm['public_profile']" />
+            </label>
+          </div>
+          @if (rbac.hasPermission(perms.ORGANIZATIONS_WRITE)) {
+            <button type="button" class="org-btn org-btn--primary" style="margin-top:16px;" [disabled]="saving()" (click)="savePreferences()">Save Preferences</button>
+          }
+        </div>
+      }
+
+      @if (activeTab() === 'billing') {
+        <div class="org-table-wrap" style="padding:24px;">
+          @if (o.billing) {
+            <div class="org-stats" style="margin-bottom:24px;">
+              <div class="org-stats__card"><label>Plan</label><strong style="font-size:18px;">{{ o.billing.planName }}</strong></div>
+              <div class="org-stats__card"><label>Amount</label><strong style="font-size:18px;">{{ o.billing.amount | currency:o.billing.currency }}</strong></div>
+              <div class="org-stats__card"><label>Status</label><strong style="font-size:18px;">{{ o.billing.status }}</strong></div>
+              <div class="org-stats__card"><label>Next Bill</label><strong style="font-size:18px;">{{ o.billing.nextBillingAt || '—' }}</strong></div>
+            </div>
+          }
+          <div class="org-form-grid">
+            <div><label>Plan Name</label><input [(ngModel)]="billingForm.planName" /></div>
+            <div><label>Billing Email</label><input [(ngModel)]="billingForm.billingEmail" /></div>
+            <div>
+              <label>Cycle</label>
+              <select [(ngModel)]="billingForm.billingCycle"><option value="monthly">Monthly</option><option value="yearly">Yearly</option></select>
+            </div>
+            <div>
+              <label>Status</label>
+              <select [(ngModel)]="billingForm.status">
+                <option value="active">Active</option>
+                <option value="trialing">Trialing</option>
+                <option value="past_due">Past Due</option>
+                <option value="cancelled">Cancelled</option>
+              </select>
+            </div>
+            <div><label>Amount</label><input type="number" [(ngModel)]="billingForm.amount" /></div>
+            <div><label>Currency</label><input [(ngModel)]="billingForm.currency" maxlength="3" /></div>
+          </div>
+          @if (rbac.hasPermission(perms.ORGANIZATIONS_MANAGE)) {
+            <button type="button" class="org-btn org-btn--primary" style="margin-top:16px;" [disabled]="saving()" (click)="saveBilling()">Save Billing</button>
+          }
+        </div>
+      }
+    }
+  }
+
+  @if (toast()) {
+    <div style="position:fixed;bottom:24px;left:24px;background:#1a1f36;color:#fff;padding:12px 16px;border-radius:8px;z-index:100;">{{ toast() }}</div>
+  }
+</div>

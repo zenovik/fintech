@@ -1,0 +1,114 @@
+@use '../../styles/dashboard-tokens' as *;
+
+.dash-sidenav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: $dash-sidenav-width;
+  height: 100vh;
+  background: $dash-inverse-surface;
+  color: $dash-inverse-on-surface;
+  display: flex;
+  flex-direction: column;
+  z-index: 40;
+  box-shadow: 2px 0 16px rgba(0, 0, 0, 0.12);
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 24px 20px;
+
+    h1 { margin: 0; font-size: 18px; font-weight: 800; color: #fff; line-height: 1.2; letter-spacing: -0.01em; }
+    p { margin: 2px 0 0; font-size: 11px; opacity: 0.65; font-weight: 500; }
+  }
+
+  &__logo {
+    width: 40px;
+    height: 40px;
+    background: $dash-primary-bright;
+    border-radius: $dash-radius-lg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+    .material-symbols-outlined { font-size: 22px; }
+  }
+
+  &__nav {
+    flex: 1;
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    overflow-y: auto;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 14px;
+    border-radius: $dash-radius-lg;
+    color: rgba($dash-inverse-on-surface, 0.85);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: background 0.15s, color 0.15s;
+
+    .material-symbols-outlined { font-size: 20px; opacity: 0.9; }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.06);
+      color: #fff;
+    }
+
+    &--active {
+      background: $dash-primary-bright;
+      color: #fff;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba($dash-primary-bright, 0.35);
+
+      .material-symbols-outlined { opacity: 1; }
+    }
+
+    &--btn { margin-top: 4px; }
+  }
+
+  &__footer {
+    padding: 20px 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__upgrade {
+    width: 100%;
+    padding: 12px;
+    background: $dash-primary-bright;
+    color: #fff;
+    border: none;
+    border-radius: $dash-radius-lg;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    &:hover { background: lighten($dash-primary-bright, 4%); }
+  }
+}
+
+@media (max-width: 767px) {
+  .dash-sidenav { display: none; }
+}

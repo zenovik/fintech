@@ -1,0 +1,22 @@
+<div class="auth-layout" [class.auth-layout--wide]="maxWidth === 'lg'">
+  @if (showDecorations) {
+    <div class="auth-layout__bg" aria-hidden="true">
+      <div class="auth-layout__blob auth-layout__blob--tl"></div>
+      <div class="auth-layout__blob auth-layout__blob--br"></div>
+    </div>
+    <aside class="auth-layout__aside" aria-hidden="true">
+      <div class="auth-layout__frames">
+        <div class="auth-layout__frame auth-layout__frame--1"></div>
+        <div class="auth-layout__frame auth-layout__frame--2"></div>
+        <div class="auth-layout__frame auth-layout__frame--3"></div>
+      </div>
+      <div class="auth-layout__rings">
+        <div class="auth-layout__ring auth-layout__ring--outer"></div>
+        <div class="auth-layout__ring auth-layout__ring--inner"></div>
+      </div>
+    </aside>
+  }
+  <main class="auth-layout__main">
+    <ng-content />
+  </main>
+</div>

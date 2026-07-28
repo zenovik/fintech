@@ -1,0 +1,35 @@
+<div class="sub-page">
+  <div class="sub-page__header">
+    <div>
+      <h1 class="sub-page__title">New Subscription</h1>
+      <p class="sub-page__subtitle">Subscribe a customer to a billing plan.</p>
+    </div>
+    <a routerLink="/subscriptions" class="sub-btn sub-btn--secondary">Back</a>
+  </div>
+
+  @if (error()) { <p style="color:#b42318;margin-bottom:16px">{{ error() }}</p> }
+
+  <div class="sub-card">
+    <form (ngSubmit)="submit()">
+      <div class="sub-form-grid">
+        <div><label>Merchant ID *</label><input type="number" [(ngModel)]="merchantId" name="merchantId" required /></div>
+        <div><label>Customer ID *</label><input type="number" [(ngModel)]="customerId" name="customerId" required /></div>
+        <div><label>Plan *</label>
+          <select [(ngModel)]="planId" name="planId" required>
+            <option value="">Select plan...</option>
+            @for (plan of plans(); track plan.id) {
+              <option [value]="plan.id">{{ plan.name }} — {{ plan.price }} {{ plan.currency }}/{{ plan.billingInterval }}</option>
+            }
+          </select>
+        </div>
+        <div><label>Start Date</label><input type="date" [(ngModel)]="startDate" name="startDate" /></div>
+      </div>
+      <div style="margin-top:20px;display:flex;gap:8px">
+        <button type="submit" class="sub-btn sub-btn--primary" [disabled]="saving()">
+          @if (saving()) { <mat-spinner diameter="20" /> } @else { Create Subscription }
+        </button>
+        <a routerLink="/subscriptions" class="sub-btn sub-btn--secondary">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>

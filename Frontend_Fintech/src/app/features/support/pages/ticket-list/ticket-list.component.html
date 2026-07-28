@@ -1,0 +1,44 @@
+<div class="sup-page">
+  <div class="sup-page__header">
+    <div><h1 class="sup-page__title">Support Tickets</h1><p class="sup-page__subtitle">Manage customer and merchant support requests.</p></div>
+    @if (rbac.hasPermission(perms.SUPPORT_WRITE)) {
+      <a routerLink="/support/create" class="sup-btn sup-btn--primary"><span class="material-symbols-outlined">add</span> New Ticket</a>
+    }
+  </div>
+  <div class="sup-stats">
+    <div class="sup-stats__card"><label>Open</label><strong>{{ stats().open }}</strong></div>
+    <div class="sup-stats__card"><label>Total</label><strong>{{ stats().total }}</strong></div>
+    <div class="sup-stats__card"><label>Resolved</label><strong>{{ stats().resolved }}</strong></div>
+    <div class="sup-stats__card"><label>SLA Breached</label><strong>{{ stats().slaBreached }}</strong></div>
+    <div class="sup-stats__card"><label>Avg Resolution (hrs)</label><strong>{{ stats().avgResolutionHours | number:'1.0-1' }}</strong></div>
+    <div class="sup-stats__card"><label>SLA Compliance</label><strong>{{ stats().slaComplianceRate }}%</strong></div>
+  </div>
+  <div class="sup-filters">
+    <input type="text" placeholder="Search tickets..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+    <select [(ngModel)]="statusFilter" (ngModelChange)="onSearch()">@for (s of statuses; track s.key) { <option [value]="s.key">{{ s.label }}</option> }</select>
+    <select [(ngModel)]="priorityFilter" (ngModelChange)="onSearch()">@for (p of priorities; track p.key) { <option [value]="p.key">{{ p.label }}</option> }</select>
+    <button type="button" class="sup-btn sup-btn--secondary" (click)="onSearch()">Search</button>
+  </div>
+  @if (pageState() === 'loading') { <div class="sup-loading"><mat-spinner diameter="40" /><p>Loading tickets...</p></div> }
+  @else if (pageState() === 'error') { <div class="sup-error"><span class="material-symbols-outlined">error</span><p>Failed to load tickets.</p><button type="button" class="sup-btn sup-btn--primary" (click)="load()">Retry</button></div> }
+  @else if (pageState() === 'empty') { <div class="sup-empty"><span class="material-symbols-outlined">support_agent</span><p>No tickets found</p></div> }
+  @else {
+    <div class="sup-table-wrap">
+      <table class="sup-table">
+        <thead><tr><th>Ref</th><th>Subject</th><th>Priority</th><th>Status</th><th>Assignee</th><th>SLA Due</th></tr></thead>
+        <tbody>@for (t of items(); track t.id) {
+          <tr>
+            <td><a [routerLink]="['/support', t.id]">{{ t.ticketRef }}</a>@if (t.slaBreached) { <span class="sup-badge sup-badge--urgent" style="margin-left:6px">SLA</span> }</td>
+            <td>{{ t.subject }}</td><td><span [class]="badgeClass(t.priority)">{{ t.priority }}</span></td>
+            <td><span [class]="badgeClass(t.status)">{{ t.status }}</span></td>
+            <td>{{ t.assigneeName || '—' }}</td><td>{{ t.slaDueAt ? (t.slaDueAt | date:'short') : '—' }}</td>
+          </tr>
+        }</tbody>
+      </table>
+      <div class="sup-pagination"><span>Page {{ page() }} of {{ totalPages() }} ({{ total() }} total)</span>
+        <div><button type="button" class="sup-btn sup-btn--secondary" [disabled]="page() <= 1" (click)="onPageChange(page()-1)">Previous</button>
+        <button type="button" class="sup-btn sup-btn--secondary" [disabled]="page() >= totalPages()" (click)="onPageChange(page()+1)">Next</button></div>
+      </div>
+    </div>
+  }
+</div>

@@ -1,0 +1,72 @@
+<div class="co-page" [ngStyle]="brandingVars()">
+  <app-checkout-loading-overlay [visible]="paying()" />
+
+  @if (pageState() === 'loading') {
+    <div class="co-page__center">
+      <mat-spinner diameter="44" />
+      <p>Loading secure checkout…</p>
+    </div>
+  } @else if (pageState() === 'error' && !checkout()) {
+    <div class="co-page__center">
+      <app-checkout-status-screen type="error" title="Checkout unavailable" [message]="errorMsg()" />
+    </div>
+  } @else if (checkout()) {
+    @let c = checkout()!;
+    <app-checkout-shell [branding]="c.branding" [merchantName]="c.merchantName" [embed]="embedMode">
+      @if (pageState() === 'checkout') {
+        <div class="co-layout">
+          <section class="co-layout__main">
+            <div class="co-layout__toolbar">
+              <app-checkout-countdown [expiresAt]="c.expiresAt" (expired)="onExpired()" />
+              <button type="button" class="co-link-btn" (click)="cancelCheckout()">Cancel</button>
+            </div>
+
+            @if (errorMsg()) { <p class="co-error" role="alert">{{ errorMsg() }}</p> }
+
+            <app-customer-form [(email)]="customerEmail" [(phone)]="customerPhone" [locale]="c.locale" />
+            <app-address-form
+              [(line1)]="addressLine1" [(city)]="addressCity"
+              [(state)]="addressState" [(pin)]="addressPin" [(country)]="addressCountry" />
+
+            <h2 class="co-section-title">Payment method</h2>
+            <app-payment-method-selector [methods]="c.paymentMethods" [(selected)]="selectedMethod" />
+
+            <button type="button" class="co-pay-btn" [disabled]="paying() || !selectedMethod" (click)="pay()">
+              Pay {{ c.amount | currency:c.currency:'symbol':'1.2-2' }}
+            </button>
+          </section>
+          <app-order-summary
+            [merchantName]="c.merchantName"
+            [intentRef]="c.intentRef"
+            [amount]="c.amount"
+            [currency]="c.currency" />
+        </div>
+      } @else if (pageState() === 'success') {
+        <app-checkout-status-screen
+          type="success"
+          title="Payment successful"
+          [message]="'Reference: ' + (successRef() || c.intentRef)"
+          [showClose]="popupMode"
+          (close)="closePopup()" />
+      } @else if (pageState() === 'failure') {
+        <app-checkout-status-screen
+          type="failure"
+          title="Payment failed"
+          [message]="errorMsg() || c.lastFailureReason || 'Please try another method.'"
+          [showRetry]="c.retryCount < c.maxRetries"
+          (retry)="retryPayment()" />
+      } @else if (pageState() === 'pending') {
+        <app-checkout-status-screen
+          type="pending"
+          title="Payment pending"
+          message="Your payment is being processed. You will be notified shortly." />
+      } @else if (pageState() === 'expired') {
+        <app-checkout-status-screen type="expired" title="Session expired" message="This checkout session has expired. Request a new link from the merchant." />
+      } @else if (pageState() === 'cancelled') {
+        <app-checkout-status-screen type="cancelled" title="Checkout cancelled" message="You cancelled this payment." [showClose]="popupMode" (close)="closePopup()" />
+      } @else if (pageState() === 'error') {
+        <app-checkout-status-screen type="error" title="Checkout unavailable" [message]="errorMsg()" />
+      }
+    </app-checkout-shell>
+  }
+</div>

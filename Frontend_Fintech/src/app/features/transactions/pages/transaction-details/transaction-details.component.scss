@@ -1,0 +1,69 @@
+@use '../../../dashboard/styles/dashboard-tokens' as *;
+@use '../../../dashboard/styles/shared-page-ui' as ui;
+
+.txn-details {
+  @include ui.page-shell;
+  max-width: 1100px;
+  &__loading, &__error { @include ui.page-loading-error; }
+}
+
+.page-header { @include ui.page-header; align-items: flex-start; }
+.breadcrumb { @include ui.breadcrumb; margin-bottom: 12px; }
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.summary-card {
+  @include dash-card;
+  padding: 16px 18px;
+  span { font-size: 12px; color: $dash-outline; display: block; }
+  strong { font-size: 20px; color: $dash-on-surface; }
+}
+
+.tab-content { padding: 24px 0; }
+
+.info-grid {
+  display: grid; grid-template-columns: 160px 1fr; gap: 12px 24px; font-size: 14px;
+  dt { color: $dash-outline; } dd { margin: 0; color: $dash-on-surface; }
+}
+
+.timeline {
+  list-style: none; padding: 0; margin: 0;
+  li { display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid $dash-outline-variant;
+    strong { display: block; } small { color: $dash-outline; font-size: 12px; }
+  }
+  &__dot { width: 10px; height: 10px; border-radius: 50%; background: $dash-primary; margin-top: 6px; flex-shrink: 0; }
+}
+
+.data-table {
+  width: 100%; border-collapse: collapse; font-size: 14px;
+  th, td { padding: 10px 16px; text-align: left; border-bottom: 1px solid $dash-outline-variant; }
+  th { font-size: 11px; text-transform: uppercase; color: $dash-outline; background: #f8fafc; }
+}
+
+.dispute-card {
+  background: #fff; border: 1px solid $dash-outline-variant; border-radius: 12px; padding: 16px; margin-bottom: 12px;
+  p { margin: 8px 0; font-size: 14px; } small { color: $dash-outline; }
+}
+
+.status-badge {
+  display: inline-flex; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600;
+  &--settled { background: #dcfce7; color: #15803d; }
+  &--pending { background: #fef3c7; color: #b45309; }
+  &--failed { background: #fee2e2; color: $dash-error; }
+  &--flagged { background: #fce7f3; color: #9d174d; }
+}
+
+.empty-text { color: $dash-outline; font-size: 14px; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px;
+  border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; border: none; text-decoration: none;
+  &--primary { background: $dash-primary; color: #fff; }
+  &--outline { background: #fff; border: 1px solid $dash-outline-variant; color: $dash-on-surface; }
+  &--danger { background: $dash-error-container; color: #93000a; }
+}

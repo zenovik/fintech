@@ -1,0 +1,75 @@
+<div class="usr-page">
+  @if (state.pageState() === 'loading' && !state.users().length) {
+    <div class="usr-page__loading"><mat-spinner diameter="48"></mat-spinner><p>Loading users...</p></div>
+  } @else if (state.pageState() === 'error') {
+    <div class="usr-page__error">
+      <span class="material-symbols-outlined">error</span>
+      <h3>Unable to load users</h3>
+      <p>{{ state.errorMessage() }}</p>
+      <button type="button" class="btn btn--primary" (click)="state.retry()">Retry</button>
+    </div>
+  } @else {
+    <div class="page-header">
+      <div>
+        <nav class="breadcrumb"><a routerLink="/dashboard/executive">Home</a><span class="material-symbols-outlined">chevron_right</span><span class="breadcrumb__active">Users</span></nav>
+        <h1>User Directory</h1>
+        <p class="page-header__subtitle">Manage system access, roles, and security permissions for your organization.</p>
+      </div>
+      <div class="page-header__actions">
+        <button type="button" class="btn btn--outline">
+          <span class="material-symbols-outlined">download</span> Export
+        </button>
+      @if (rbac.hasPermission(perms.USERS_WRITE)) {
+        <a routerLink="/users/create" class="btn btn--primary"><span class="material-symbols-outlined">person_add</span> Invite User</a>
+      }
+      </div>
+    </div>
+
+    <div class="filters">
+      <div class="filter-card filter-card--search">
+        <span class="material-symbols-outlined">search</span>
+        <input type="text" placeholder="Search by name or email..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+      </div>
+      <div class="filter-card">
+        <label>Status</label>
+        <select [(ngModel)]="statusFilter" (change)="onFilter()">
+          <option value="">All</option>
+          @for (s of statuses; track s) { <option [value]="s">{{ s | titlecase }}</option> }
+        </select>
+      </div>
+      <button type="button" class="icon-btn" (click)="state.loadUsers()"><span class="material-symbols-outlined">refresh</span></button>
+    </div>
+
+    @if (state.isEmpty()) {
+      <div class="empty-state">
+        <span class="material-symbols-outlined">group</span>
+        <h3>{{ state.hasFilters() ? 'No users match your filters' : 'No users found' }}</h3>
+        @if (state.hasFilters()) { <button type="button" class="btn btn--outline" (click)="onClear()">Clear Filters</button> }
+      </div>
+    } @else {
+      <div class="table-card">
+        <div class="table-toolbar">Showing {{ pageStart() }} - {{ pageEnd() }} of {{ state.totalItems() }} users</div>
+        <table>
+          <thead><tr><th>Name &amp; Identification</th><th>Email Address</th><th>Role</th><th>Status</th><th>Last Login</th><th>Actions</th></tr></thead>
+          <tbody>
+            @for (u of state.users(); track u.id) {
+              <tr>
+                <td><a [routerLink]="['/users', u.id]">{{ u.fullName }}</a></td>
+                <td>{{ u.email }}</td>
+                <td>{{ roleNames(u) }}</td>
+                <td><span class="status-badge status-badge--{{ u.status }}">{{ u.status | titlecase }}</span></td>
+                <td>{{ u.lastLoginAt ? (u.lastLoginAt | date: 'short') : '—' }}</td>
+                <td><a [routerLink]="['/users', u.id]" class="link-btn">View</a></td>
+              </tr>
+            }
+          </tbody>
+        </table>
+        <div class="pagination">
+          <button type="button" class="btn btn--outline btn--sm" [disabled]="state.currentPage() <= 1" (click)="goToPage(state.currentPage() - 1)">Previous</button>
+          <span>Page {{ state.currentPage() }} of {{ state.totalPages() || 1 }}</span>
+          <button type="button" class="btn btn--outline btn--sm" [disabled]="state.currentPage() >= state.totalPages()" (click)="goToPage(state.currentPage() + 1)">Next</button>
+        </div>
+      </div>
+    }
+  }
+</div>

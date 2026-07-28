@@ -1,0 +1,18 @@
+@use '../../support/styles/support-shared';
+
+.ops-page { @extend .sup-page; }
+.ops-stats { @extend .sup-stats; }
+.ops-stats__card { @extend .sup-stats__card; }
+.ops-btn { @extend .sup-btn; }
+.ops-table-wrap { @extend .sup-table-wrap; }
+.ops-table { @extend .sup-table; }
+.ops-card { @extend .sup-card; }
+.ops-loading { @extend .sup-loading; }
+.ops-error { @extend .sup-error; }
+.ops-badge {
+  display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 600;
+  &--healthy { background: #ecfdf3; color: #027a48; }
+  &--critical { background: #fef3f2; color: #b42318; }
+  &--warning { background: #fffaeb; color: #b54708; }
+  &--active { background: #eff8ff; color: #175cd3; }
+}

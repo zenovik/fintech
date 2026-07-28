@@ -1,0 +1,6 @@
+@if (open()) {
+  <div class="dash-ai-drawer-backdrop" (click)="closed.emit()" aria-hidden="true"></div>
+  <aside class="dash-ai-drawer" role="dialog" aria-label="Dashboard AI Assistant">
+    <app-dashboard-ai-chat-panel [canChat]="canChat()" />
+  </aside>
+}

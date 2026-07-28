@@ -1,0 +1,151 @@
+<div class="rpt-page">
+  @if (state.pageState() === 'loading' && !state.reports().length) {
+    <div class="rpt-page__loading">
+      <mat-spinner diameter="48"></mat-spinner>
+      <p>Loading reports...</p>
+    </div>
+  } @else if (state.pageState() === 'error') {
+    <div class="rpt-page__error">
+      <span class="material-symbols-outlined">error</span>
+      <h3>Unable to load reports</h3>
+      <p>{{ state.errorMessage() }}</p>
+      <button type="button" class="btn btn--primary" (click)="state.retry()">Retry</button>
+    </div>
+  } @else {
+    <div class="page-header">
+      <div>
+        <nav class="breadcrumb">
+          <a routerLink="/dashboard/executive">Home</a>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <span class="breadcrumb__active">Reports</span>
+        </nav>
+        <h1>Reports Dashboard</h1>
+        <p class="page-header__subtitle">Create, run, and export business intelligence reports.</p>
+      </div>
+      <div class="page-header__actions">
+        <a routerLink="/reports/center" class="btn btn--outline">
+          <span class="material-symbols-outlined">summarize</span> Report Center
+        </a>
+        @if (rbac.hasPermission(perms.ANALYTICS_READ)) {
+          <a routerLink="/reports/analytics" class="btn btn--outline">
+            <span class="material-symbols-outlined">analytics</span> Analytics
+          </a>
+        }
+        <a routerLink="/reports/scheduled" class="btn btn--outline">
+          <span class="material-symbols-outlined">schedule</span> Scheduled
+        </a>
+        <a routerLink="/reports/history" class="btn btn--outline">
+          <span class="material-symbols-outlined">history</span> History
+        </a>
+        @if (rbac.hasPermission(perms.REPORTS_WRITE)) {
+          <a routerLink="/reports/builder" class="btn btn--primary">
+            <span class="material-symbols-outlined">add</span> New Report
+          </a>
+        }
+      </div>
+    </div>
+
+    <div class="stat-cards">
+      <div class="stat-card stat-card--featured">
+        <span class="stat-card__label">Total Reports</span>
+        <span class="stat-card__value">{{ state.totalItems() }}</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__label">Active</span>
+        <span class="stat-card__value stat-card__value--green">{{ state.reports().length }}</span>
+      </div>
+      <a routerLink="/reports/saved" class="stat-card stat-card--link">
+        <span class="stat-card__label">Saved Reports</span>
+        <span class="stat-card__value">View <span class="material-symbols-outlined">arrow_forward</span></span>
+      </a>
+      <a routerLink="/reports/analytics" class="stat-card stat-card--dark stat-card--link">
+        <span class="stat-card__label">Analytics</span>
+        <span class="stat-card__value">Open <span class="material-symbols-outlined">open_in_new</span></span>
+      </a>
+    </div>
+
+    <div class="filters">
+      <div class="filter-card filter-card--search">
+        <span class="material-symbols-outlined">search</span>
+        <input type="text" placeholder="Search reports..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+      </div>
+      <div class="filter-card">
+        <label>Status</label>
+        <select [(ngModel)]="statusFilter" (change)="state.applySearch(searchInput)">
+          <option value="">All Statuses</option>
+          @for (s of statuses; track s) { <option [value]="s">{{ s | titlecase }}</option> }
+        </select>
+      </div>
+      <button type="button" class="icon-btn" (click)="state.loadReports()">
+        <span class="material-symbols-outlined">refresh</span>
+      </button>
+    </div>
+
+    @if (state.isEmpty()) {
+      <div class="empty-state">
+        <span class="material-symbols-outlined">description</span>
+        <h3>No reports found</h3>
+        <p>Create your first report or adjust filters.</p>
+        @if (rbac.hasPermission(perms.REPORTS_WRITE)) {
+          <a routerLink="/reports/builder" class="btn btn--primary">Create Report</a>
+        }
+      </div>
+    } @else {
+      <div class="table-card">
+        <div class="table-toolbar">
+          <span>Showing {{ pageRangeStart() }}-{{ pageRangeEnd() }} of {{ state.totalItems() }}</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Template</th>
+                <th>Status</th>
+                <th>Created</th>
+                <th class="col-actions">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (r of state.reports(); track r.id) {
+                <tr>
+                  <td>
+                    <strong>{{ r.name }}</strong>
+                    @if (r.description) { <small>{{ r.description }}</small> }
+                  </td>
+                  <td>{{ r.categoryName ?? '—' }}</td>
+                  <td>{{ r.templateName ?? 'Custom' }}</td>
+                  <td><span class="status-badge status-badge--{{ r.status }}">{{ r.status | titlecase }}</span></td>
+                  <td>{{ r.createdAt | date: 'mediumDate' }}</td>
+                  <td class="col-actions">
+                    @if (rbac.hasPermission(perms.REPORTS_WRITE)) {
+                      <button type="button" class="icon-btn" title="Run" (click)="onRun(r.id)">
+                        <span class="material-symbols-outlined">play_arrow</span>
+                      </button>
+                    }
+                    @if (rbac.hasPermission(perms.REPORTS_EXPORT)) {
+                      <button type="button" class="icon-btn" title="Export CSV" (click)="onExport('csv', r.id)">
+                        <span class="material-symbols-outlined">download</span>
+                      </button>
+                    }
+                    @if (rbac.hasPermission(perms.REPORTS_WRITE)) {
+                      <a [routerLink]="['/reports/builder', r.id]" class="icon-btn" title="Edit">
+                        <span class="material-symbols-outlined">edit</span>
+                      </a>
+                    }
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <button type="button" [disabled]="state.currentPage() <= 1" (click)="goToPage(state.currentPage() - 1)">Previous</button>
+          <span>Page {{ state.currentPage() }} of {{ state.totalPages() }}</span>
+          <button type="button" [disabled]="state.currentPage() >= state.totalPages()" (click)="goToPage(state.currentPage() + 1)">Next</button>
+        </div>
+      </div>
+    }
+  }
+</div>

@@ -1,0 +1,46 @@
+<div class="page-header">
+  <div>
+    <h1>Compliance Queue</h1>
+    <p>Review and process pending merchant onboarding applications</p>
+  </div>
+</div>
+
+<div class="filters">
+  <select [(ngModel)]="queueFilter" (change)="load()">
+    <option value="pending">Pending</option>
+    <option value="assigned">Assigned</option>
+    <option value="overdue">Overdue</option>
+    <option value="completed">Completed</option>
+  </select>
+  <input type="search" [(ngModel)]="searchInput" placeholder="Search..." (keyup.enter)="load()" />
+  <button type="button" (click)="load()">Search</button>
+</div>
+
+@if (pageState() === 'loading') {
+  <mat-spinner diameter="40"></mat-spinner>
+} @else if (pageState() === 'error') {
+  <p>Failed to load compliance queue.</p>
+} @else {
+  <table class="data-table">
+    <thead>
+      <tr><th>Ref</th><th>Business</th><th>Stage</th><th>Priority</th><th>Status</th><th>SLA</th><th></th></tr>
+    </thead>
+    <tbody>
+      @for (item of items(); track item.id) {
+        <tr [class.overdue]="item.slaBreached">
+          <td><a [routerLink]="['/merchant-onboarding', item.applicationId]">{{ item.applicationRef }}</a></td>
+          <td>{{ item.businessName }}</td>
+          <td>{{ item.stageName }}</td>
+          <td>{{ item.priority }}</td>
+          <td>{{ item.workflowStatus }}</td>
+          <td>{{ item.slaDueAt ?? '—' }}</td>
+          <td>
+            @if (rbac.hasPermission(perms.ONBOARDING_WORKFLOW_APPROVE)) {
+              <button type="button" (click)="approve(item.applicationId)">Approve</button>
+            }
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}

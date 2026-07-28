@@ -1,0 +1,89 @@
+<div class="sessions-page">
+  <header class="sessions-page__header">
+    <div class="sessions-page__brand">
+      <span class="material-symbols-outlined">shield</span>
+      <div>
+        <h1>Active Sessions</h1>
+        <p>Manage your connected devices and sessions</p>
+      </div>
+    </div>
+    <div class="sessions-page__actions">
+      <button mat-stroked-button color="warn" (click)="logout()">Sign Out</button>
+      <button
+        mat-flat-button
+        color="primary"
+        [disabled]="revokingOthers || sessions.length <= 1"
+        (click)="revokeOthers()"
+      >
+        @if (revokingOthers) {
+          <mat-spinner diameter="18" />
+        } @else {
+          Revoke All Others
+        }
+      </button>
+    </div>
+  </header>
+
+  @if (user(); as currentUser) {
+    <div class="sessions-page__user">
+      <span class="material-symbols-outlined">account_circle</span>
+      <span>{{ currentUser.firstName }} {{ currentUser.lastName }} ({{ currentUser.email }})</span>
+    </div>
+  }
+
+  @if (loading) {
+    <div class="sessions-page__loading">
+      <mat-spinner diameter="40" />
+      <span>Loading sessions...</span>
+    </div>
+  } @else if (sessions.length === 0) {
+    <div class="sessions-page__empty">
+      <span class="material-symbols-outlined">devices</span>
+      <p>No active sessions found.</p>
+      <a [routerLink]="loginRoute">Sign in</a>
+    </div>
+  } @else {
+    <div class="sessions-page__list">
+      @for (session of sessions; track session.id) {
+        <article class="session-card" [class.session-card--current]="session.isCurrent">
+          <div class="session-card__icon">
+            <span class="material-symbols-outlined">{{ getDeviceIcon(session) }}</span>
+            @if (session.isCurrent) {
+              <span class="session-card__badge" title="Current session"></span>
+            }
+          </div>
+          <div class="session-card__info">
+            <h3>
+              {{ session.deviceName ?? 'Unknown Device' }}
+              @if (session.isCurrent) {
+                <span class="session-card__current-label">Current</span>
+              }
+            </h3>
+            <p>{{ session.browser }} · {{ session.os }}</p>
+            <p class="session-card__meta">
+              {{ session.ipAddress }}
+              @if (session.location) {
+                · {{ session.location }}
+              }
+            </p>
+            <p class="session-card__meta">Last active: {{ formatDate(session.lastActiveAt) }}</p>
+          </div>
+          @if (!session.isCurrent) {
+            <button
+              mat-stroked-button
+              color="warn"
+              [disabled]="revokingId === session.id"
+              (click)="revokeSession(session)"
+            >
+              @if (revokingId === session.id) {
+                <mat-spinner diameter="16" />
+              } @else {
+                Revoke
+              }
+            </button>
+          }
+        </article>
+      }
+    </div>
+  }
+</div>

@@ -1,0 +1,84 @@
+@use '../../dashboard/styles/dashboard-tokens' as *;
+
+.po-page {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px;
+  &__header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 24px; }
+  &__title { margin: 0 0 4px; font-size: 30px; font-weight: 600; color: $dash-on-surface; }
+  &__subtitle { margin: 0; color: $dash-outline; font-size: 14px; }
+}
+
+.po-stats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 20px;
+  &__card {
+    background: $dash-surface; border: 1px solid $dash-outline-variant; border-radius: 12px; padding: 16px;
+    label { display: block; font-size: 12px; color: $dash-outline; margin-bottom: 4px; }
+    strong { font-size: 24px; color: $dash-on-surface; }
+  }
+}
+
+.po-filters {
+  display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px;
+  input, select { padding: 10px 12px; border: 1px solid $dash-outline-variant; border-radius: 8px; background: $dash-surface; font-size: 14px; }
+  input { min-width: 220px; flex: 1; }
+}
+
+.po-btn {
+  display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; border-radius: 8px; font-weight: 600; font-size: 14px;
+  text-decoration: none; border: none; cursor: pointer;
+  &--primary { background: $dash-primary; color: #fff; }
+  &--secondary { background: $dash-surface-container; color: $dash-on-surface; border: 1px solid $dash-outline-variant; }
+  &--success { background: #ecfdf3; color: #027a48; border: 1px solid #abefc6; }
+  &--danger { background: #fef3f2; color: #b42318; border: 1px solid #fecdca; }
+}
+
+.po-table-wrap { background: $dash-surface; border: 1px solid $dash-outline-variant; border-radius: 12px; overflow: auto; }
+.po-table {
+  width: 100%; border-collapse: collapse;
+  th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid $dash-outline-variant; font-size: 14px; }
+  th { font-size: 12px; text-transform: uppercase; color: $dash-outline; background: $dash-surface-container-low; }
+  tr:hover td { background: $dash-surface-container-low; }
+}
+
+.po-badge {
+  display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 600;
+  &--pending { background: #fffaeb; color: #b54708; }
+  &--scheduled { background: #eff8ff; color: #175cd3; }
+  &--processing { background: #f4f3ff; color: #5925dc; }
+  &--sent { background: #eff8ff; color: #175cd3; }
+  &--confirmed { background: #ecfdf3; color: #027a48; }
+  &--failed { background: #fef3f2; color: #b42318; }
+  &--cancelled { background: #f2f4f7; color: #475467; }
+  &--manual { background: #f2f4f7; color: #475467; }
+  &--bank_transfer { background: #eff8ff; color: #175cd3; }
+}
+
+.po-loading, .po-error, .po-empty { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 48px; text-align: center; color: $dash-outline; }
+.po-card { background: $dash-surface; border: 1px solid $dash-outline-variant; border-radius: 12px; padding: 20px; margin-bottom: 16px; h3 { margin: 0 0 12px; font-size: 16px; } }
+.po-form-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;
+  label { display: block; font-size: 12px; font-weight: 600; color: $dash-outline; margin-bottom: 6px; }
+  input, select, textarea { width: 100%; padding: 10px 12px; border: 1px solid $dash-outline-variant; border-radius: 8px; font-size: 14px; box-sizing: border-box; }
+}
+.po-pagination { display: flex; justify-content: space-between; align-items: center; padding: 16px; font-size: 14px; color: $dash-outline; }
+.po-timeline {
+  border-left: 2px solid $dash-outline-variant; margin-left: 8px; padding-left: 20px;
+  &__item {
+    position: relative; margin-bottom: 16px;
+    &::before { content: ''; position: absolute; left: -27px; top: 4px; width: 10px; height: 10px; border-radius: 50%; background: $dash-primary; }
+    time { font-size: 12px; color: $dash-outline; }
+    p { margin: 4px 0 0; font-size: 14px; }
+  }
+}
+
+.po-bank-list {
+  list-style: none; margin: 0; padding: 0;
+  li { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid $dash-outline-variant; font-size: 14px; &:last-child { border-bottom: none; } }
+}
+
+.po-tabs {
+  display: flex; gap: 8px; margin-bottom: 16px;
+  button { padding: 8px 16px; border: 1px solid $dash-outline-variant; border-radius: 8px; background: $dash-surface; cursor: pointer; font-size: 14px; }
+  button.po-tabs--active { background: $dash-primary; color: #fff; border-color: $dash-primary; }
+}

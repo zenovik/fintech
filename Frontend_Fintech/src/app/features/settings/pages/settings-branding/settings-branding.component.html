@@ -1,0 +1,76 @@
+@if (state.pageState() === 'loading') {
+  <div class="settings-card settings-card--center"><mat-spinner diameter="40" /></div>
+} @else if (state.pageState() === 'error') {
+  <div class="settings-error">
+    <span class="material-symbols-outlined">error</span>
+    <p>{{ state.errorMessage() }}</p>
+    <button type="button" class="btn btn--primary" (click)="retry()">Retry</button>
+  </div>
+} @else {
+  <div class="settings-card">
+    <h1>Branding</h1>
+    <p class="subtitle">Customize company identity, logos, and theme colors.</p>
+
+    <form [formGroup]="form" (ngSubmit)="save()" class="settings-form">
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+          <mat-label>Company Name</mat-label>
+          <input matInput formControlName="companyName" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Logo Initials</mat-label>
+          <input matInput formControlName="logoInitials" maxlength="3" />
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+          <mat-label>Logo URL</mat-label>
+          <input matInput formControlName="logoUrl" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Favicon URL</mat-label>
+          <input matInput formControlName="faviconUrl" />
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <div class="color-field">
+          <label>Primary Color</label>
+          <div class="color-picker-row">
+            <input type="color" formControlName="primaryColor" />
+            <mat-form-field appearance="outline">
+              <mat-label>Hex</mat-label>
+              <input matInput formControlName="primaryColor" />
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="color-field">
+          <label>Secondary Color</label>
+          <div class="color-picker-row">
+            <input type="color" formControlName="secondaryColor" />
+            <mat-form-field appearance="outline">
+              <mat-label>Hex</mat-label>
+              <input matInput formControlName="secondaryColor" />
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="color-field">
+          <label>Accent Color</label>
+          <div class="color-picker-row">
+            <input type="color" formControlName="accentColor" />
+            <mat-form-field appearance="outline">
+              <mat-label>Hex</mat-label>
+              <input matInput formControlName="accentColor" />
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="settings-actions">
+        @if (rbac.hasPermission(perms.SETTINGS_WRITE)) {
+          <button type="submit" class="btn btn--primary" [disabled]="form.invalid || state.pageState() === 'saving'">
+            @if (state.pageState() === 'saving') { <mat-spinner diameter="18" /> } @else { Save Changes }
+          </button>
+        }
+      </div>
+    </form>
+  </div>
+}

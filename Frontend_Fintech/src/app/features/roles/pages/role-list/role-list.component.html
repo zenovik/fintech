@@ -1,0 +1,43 @@
+<div class="role-page">
+  @if (state.pageState() === 'loading') {
+    <mat-spinner diameter="48"></mat-spinner>
+  } @else if (state.pageState() === 'error') {
+    <p>{{ state.errorMessage() }}</p>
+    <button type="button" (click)="state.loadRoles()">Retry</button>
+  } @else {
+    <div class="page-header">
+      <div>
+        <nav class="breadcrumb"><a routerLink="/dashboard/executive">Home</a><span class="material-symbols-outlined">chevron_right</span><span class="breadcrumb__active">Roles</span></nav>
+        <h1>Role Management</h1>
+        <p class="page-header__subtitle">Configure precise access levels for each role in your organization.</p>
+      </div>
+      @if (rbac.hasPermission(perms.ROLES_WRITE)) {
+        <a routerLink="/roles/create" class="btn btn--primary"><span class="material-symbols-outlined">add</span> Create New Role</a>
+      }
+    </div>
+    @if (!state.roles().length) {
+      <div class="empty-state"><span class="material-symbols-outlined">shield</span><h3>No roles found</h3></div>
+    } @else {
+      <table class="table-card">
+        <thead><tr><th>Role</th><th>Code</th><th>Users</th><th>Permissions</th><th>System</th><th></th></tr></thead>
+        <tbody>
+          @for (r of state.roles(); track r.id) {
+            <tr>
+              <td><strong>{{ r.name }}</strong><br><small>{{ r.description }}</small></td>
+              <td>{{ r.code }}</td>
+              <td>{{ r.userCount }}</td>
+              <td>{{ r.permissionCount }}</td>
+              <td>{{ r.isSystem ? 'Yes' : 'No' }}</td>
+              <td>
+                <a [routerLink]="['/roles', r.id, 'permissions']" class="link-btn">Permissions</a>
+                @if (rbac.hasPermission(perms.ROLES_WRITE)) {
+                  <a [routerLink]="['/roles', r.id, 'edit']" class="link-btn">Edit</a>
+                }
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+  }
+</div>

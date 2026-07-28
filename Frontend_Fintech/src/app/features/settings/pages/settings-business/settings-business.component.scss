@@ -1,0 +1,14 @@
+@use '../../styles/settings-shared';
+
+.toggle-hint {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: inherit;
+  opacity: 0.7;
+}
+
+mat-form-field { width: 100%; }
+
+.settings-actions mat-spinner {
+  display: inline-block;
+}

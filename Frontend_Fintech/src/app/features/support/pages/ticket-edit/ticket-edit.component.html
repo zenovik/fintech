@@ -1,0 +1,14 @@
+<div class="sup-page">
+  <div class="sup-page__header"><div><h1 class="sup-page__title">Edit Ticket</h1></div><a [routerLink]="['/support', id]" class="sup-btn sup-btn--secondary">Back</a></div>
+  @if (error()) { <p style="color:#b42318">{{ error() }}</p> }
+  <div class="sup-card"><form (ngSubmit)="submit()">
+    <div class="sup-form-grid">
+      <div><label>Subject</label><input type="text" [(ngModel)]="subject" name="subject" /></div>
+      <div><label>Priority</label><select [(ngModel)]="priority" name="priority">@for (p of priorities; track p.key) { <option [value]="p.key">{{ p.label }}</option> }</select></div>
+      <div><label>Status</label><select [(ngModel)]="status" name="status">@for (s of statuses; track s.key) { <option [value]="s.key">{{ s.label }}</option> }</select></div>
+      <div><label>Category</label><input type="text" [(ngModel)]="category" name="category" /></div>
+      <div style="grid-column:1/-1"><label>Description</label><textarea rows="5" [(ngModel)]="description" name="description"></textarea></div>
+    </div>
+    <div style="margin-top:20px"><button type="submit" class="sup-btn sup-btn--primary" [disabled]="saving()">Save Changes</button></div>
+  </form></div>
+</div>

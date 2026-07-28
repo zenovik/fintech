@@ -1,0 +1,27 @@
+<div class="rpt-page">
+  <div class="page-header">
+    <div>
+      <nav class="breadcrumb"><a routerLink="/reports">Reports</a><span class="material-symbols-outlined">chevron_right</span><span class="breadcrumb__active">Saved</span></nav>
+      <h1>Saved Reports</h1>
+      <p class="page-header__subtitle">Your bookmarked and favorite reports.</p>
+    </div>
+  </div>
+  @if (state.pageState() === 'loading') {
+    <div class="rpt-page__loading"><mat-spinner diameter="48"></mat-spinner></div>
+  } @else if (!state.reports().length) {
+    <div class="empty-state"><span class="material-symbols-outlined">bookmark</span><h3>No saved reports</h3><a routerLink="/reports" class="btn btn--primary">Browse Reports</a></div>
+  } @else {
+    <div class="saved-grid">
+      @for (r of state.reports(); track r.id) {
+        <div class="saved-card">
+          <h3>{{ r.name }}</h3>
+          <p>{{ r.description ?? r.categoryName ?? 'Report' }}</p>
+          <div class="saved-card__actions">
+            <button type="button" class="btn btn--outline" (click)="state.runReport(r.id)">Run</button>
+            <button type="button" class="btn btn--primary" (click)="state.exportReport(r.id, 'csv')">Export</button>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>

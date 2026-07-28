@@ -1,0 +1,77 @@
+<div class="ref-page">
+  <div class="ref-page__header">
+    <div>
+      <h1 class="ref-page__title">Refund Queue</h1>
+      <p class="ref-page__subtitle">Review, approve, and track refund requests across transactions.</p>
+    </div>
+    @if (rbac.hasPermission(perms.REFUNDS_WRITE)) {
+      <a routerLink="/refunds/request" class="ref-btn ref-btn--primary">
+        <span class="material-symbols-outlined">add</span> New Refund Request
+      </a>
+    }
+  </div>
+
+  <div class="ref-stats">
+    <div class="ref-stats__card"><label>Pending</label><strong>{{ stats().pending }}</strong></div>
+    <div class="ref-stats__card"><label>Processed</label><strong>{{ stats().processed }}</strong></div>
+    <div class="ref-stats__card"><label>Rejected</label><strong>{{ stats().rejected }}</strong></div>
+    <div class="ref-stats__card"><label>Pending Amount</label><strong>{{ stats().pendingAmount | currency:'USD':'symbol':'1.0-0' }}</strong></div>
+  </div>
+
+  <div class="ref-filters">
+    <input type="text" placeholder="Search refunds..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+    <select [(ngModel)]="statusFilter" (ngModelChange)="onSearch()">
+      @for (s of statuses; track s.key) { <option [value]="s.key">{{ s.label }}</option> }
+    </select>
+    <select [(ngModel)]="typeFilter" (ngModelChange)="onSearch()">
+      @for (t of types; track t.key) { <option [value]="t.key">{{ t.label }}</option> }
+    </select>
+    <button type="button" class="ref-btn ref-btn--secondary" (click)="onSearch()">Search</button>
+  </div>
+
+  @if (pageState() === 'loading') {
+    <div class="ref-loading"><mat-spinner diameter="40" /><p>Loading refunds...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="ref-error"><span class="material-symbols-outlined">error</span><p>Failed to load refunds.</p><button type="button" class="ref-btn ref-btn--primary" (click)="load()">Retry</button></div>
+  } @else if (pageState() === 'empty') {
+    <div class="ref-empty"><span class="material-symbols-outlined">currency_exchange</span><p>No refunds found</p></div>
+  } @else {
+    <div class="ref-table-wrap">
+      <table class="ref-table">
+        <thead>
+          <tr>
+            <th>Refund Ref</th>
+            <th>Transaction</th>
+            <th>Merchant</th>
+            <th>Customer</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Requested</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (r of items(); track r.id) {
+            <tr>
+              <td><a [routerLink]="['/refunds', r.id]">{{ r.refundRef }}</a></td>
+              <td><a [routerLink]="['/transactions', r.transactionId]">{{ r.transactionRef }}</a></td>
+              <td>{{ r.merchantName || '—' }}</td>
+              <td>{{ r.customerName || '—' }}</td>
+              <td><span [class]="badgeClass(r.refundType)">{{ r.refundType }}</span></td>
+              <td>{{ r.amount | currency:r.currency:'symbol':'1.2-2' }}</td>
+              <td><span [class]="badgeClass(r.status)">{{ r.status }}</span></td>
+              <td>{{ r.createdAt | date:'mediumDate' }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+      <div class="ref-pagination">
+        <span>Page {{ page() }} of {{ totalPages() }} ({{ total() }} total)</span>
+        <div>
+          <button type="button" class="ref-btn ref-btn--secondary" [disabled]="page() <= 1" (click)="onPageChange(page() - 1)">Previous</button>
+          <button type="button" class="ref-btn ref-btn--secondary" [disabled]="page() >= totalPages()" (click)="onPageChange(page() + 1)">Next</button>
+        </div>
+      </div>
+    </div>
+  }
+</div>

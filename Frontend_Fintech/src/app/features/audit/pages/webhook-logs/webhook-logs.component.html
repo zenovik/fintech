@@ -1,0 +1,98 @@
+<div class="audit-page">
+  <div class="audit-page__header">
+    <div>
+      <h1 class="audit-page__title">Webhook Logs</h1>
+      <p class="audit-page__subtitle">
+        <span class="api-live-dot"></span> Delivery status and event tracking
+      </p>
+    </div>
+    <button type="button" class="audit-btn audit-btn--secondary" (click)="load()">
+      <span class="material-symbols-outlined">refresh</span> Refresh
+    </button>
+  </div>
+
+  <div class="audit-filters">
+    <input class="api-search" type="text" placeholder="Search events or URLs..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+    <label class="audit-filters__chip">
+      <select [(ngModel)]="statusFilter" (ngModelChange)="onSearch()">
+        @for (s of statuses; track s.key) {
+          <option [value]="s.key">{{ s.label }}</option>
+        }
+      </select>
+    </label>
+    <label class="audit-filters__chip">
+      <select [(ngModel)]="dateRange" (ngModelChange)="onSearch()">
+        @for (d of dateRanges; track d.key) {
+          <option [value]="d.key">{{ d.label }}</option>
+        }
+      </select>
+    </label>
+  </div>
+
+  @if (pageState() === 'loading') {
+    <div class="audit-loading"><mat-spinner diameter="40" /><p>Loading webhook logs...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="audit-error">
+      <span class="material-symbols-outlined">error</span>
+      <p>{{ errorMessage() }}</p>
+      <button type="button" class="audit-btn audit-btn--primary" (click)="load()">Retry</button>
+    </div>
+  } @else if (pageState() === 'empty') {
+    <div class="audit-empty">
+      <span class="material-symbols-outlined">webhook</span>
+      <p>No webhook logs found</p>
+    </div>
+  } @else {
+    <div class="api-layout">
+      <div class="api-logs-list">
+        <div class="api-logs-list__header">
+          <span>Delivery Stream</span>
+          <span class="api-logs-list__count">{{ total() }} events</span>
+        </div>
+        <div class="webhook-grid webhook-grid--head">
+          <span>Event</span><span>Status</span><span>URL</span><span>Attempts</span><span>Time</span>
+        </div>
+        @for (log of logs(); track log.id) {
+          <div class="webhook-grid webhook-row" [class.webhook-row--active]="selected()?.id === log.id" (click)="selectLog(log)">
+            <span class="webhook-event">{{ log.eventType }}</span>
+            <span class="webhook-status" [ngClass]="getStatusClass(log.status)">{{ log.status }}</span>
+            <span class="webhook-url">{{ log.url }}</span>
+            <span>{{ log.attemptCount }}</span>
+            <span class="api-time">{{ log.createdAt | date:'HH:mm:ss' }}</span>
+          </div>
+        }
+        <div class="audit-pagination">
+          <span>Page {{ page() }} of {{ totalPages() }}</span>
+          <div class="audit-pagination__pages">
+            <button type="button" [disabled]="page() <= 1" (click)="goToPage(page() - 1)">
+              <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <button type="button" [disabled]="page() >= totalPages()" (click)="goToPage(page() + 1)">
+              <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      @if (selected(); as s) {
+        <aside class="api-inspector">
+          <div class="api-inspector__header"><h3>Inspector</h3></div>
+          <div class="api-inspector__body">
+            <p class="api-inspector__section">Webhook Details</p>
+            <dl class="audit-meta-list">
+              <dt>Event ID</dt><dd class="audit-detail__mono">{{ s.uuid }}</dd>
+              <dt>Correlation ID</dt><dd class="audit-detail__mono">{{ s.correlationId ?? '—' }}</dd>
+              <dt>Event Type</dt><dd>{{ s.eventType }}</dd>
+              <dt>URL</dt><dd class="audit-detail__mono">{{ s.url }}</dd>
+              <dt>Status</dt><dd><span class="webhook-status" [ngClass]="getStatusClass(s.status)">{{ s.status }}</span></dd>
+              <dt>HTTP Status</dt><dd>{{ s.statusCode ?? '—' }}</dd>
+              <dt>Attempts</dt><dd>{{ s.attemptCount }}</dd>
+              <dt>Delivered At</dt><dd>{{ s.deliveredAt ? (s.deliveredAt | date:'medium') : 'Pending' }}</dd>
+              <dt>Created At</dt><dd>{{ s.createdAt | date:'medium' }}</dd>
+            </dl>
+          </div>
+        </aside>
+      }
+    </div>
+  }
+</div>

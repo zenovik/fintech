@@ -1,0 +1,284 @@
+{
+  "timestamp": "2026-07-25T20:54:40.125Z",
+  "screens": {
+    "login": {
+      "loaded": true,
+      "url": "http://localhost:4200/dashboard/executive",
+      "screenshot": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\validation-scripts\\screenshots\\01-post-login-dashboard.png"
+    },
+    "dashboardBell": {
+      "bellExists": true,
+      "bellVisible": true,
+      "badgeExists": true,
+      "badgeText": "5",
+      "badgeVisible": true,
+      "screenshot": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\validation-scripts\\screenshots\\02-dashboard-bell.png"
+    },
+    "03-notification-center": {
+      "url": "http://localhost:4200/notifications",
+      "loaded": true,
+      "screenshot": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\validation-scripts\\screenshots\\03-notification-center.png",
+      "observations": {},
+      "checks": {
+        "hasTitle": {
+          "pass": false
+        },
+        "hasMarkAsRead": {
+          "pass": true
+        },
+        "hasArchiveAll": {
+          "pass": true
+        },
+        "hasSearch": {
+          "pass": true
+        },
+        "hasSidebarView": {
+          "pass": true
+        },
+        "hasCategories": {
+          "pass": true
+        },
+        "hasNotificationItems": {
+          "pass": 7,
+          "count": 7
+        },
+        "hasAllNotificationsFilter": {
+          "pass": true
+        },
+        "hasUnreadFilter": {
+          "pass": true
+        },
+        "hasArchivedFilter": {
+          "pass": true
+        },
+        "shellNav": {
+          "center": 3,
+          "preferences": 1,
+          "broadcasts": 1,
+          "templates": 1
+        },
+        "pageState": {
+          "loading": 0,
+          "error": 0,
+          "empty": 0,
+          "cards": 7
+        }
+      },
+      "errors": [],
+      "title": "Notification Center | Merchant Pro",
+      "headings": [
+        "Merchant Pro",
+        "Notification Center",
+        "View",
+        "Categories",
+        "Welcome to Merchant Pro",
+        "Password Changed Successfully",
+        "Payment Failed",
+        "Refund Processed",
+        "Monthly Payout Successfully Processed",
+        "System Maintenance Scheduled",
+        "Merchant Application Approved"
+      ],
+      "buttons": [
+        "Upgrade Plan",
+        "logoutSign Out",
+        "help",
+        "done_all Mark as Read",
+        "archive Archive All",
+        "Search",
+        "inboxAll Notifications7",
+        "mark_email_unreadUnread5",
+        "draftsRead",
+        "archiveArchived",
+        "done",
+        "delete",
+        "done",
+        "delete",
+        "done",
+        "delete",
+        "done",
+        "delete",
+        "done",
+        "delete",
+        "delete",
+        "delete",
+        "Previous",
+        "Next"
+      ],
+      "bodyPreview": "account_balance\nMerchant Pro\n\nEnterprise Tier\n\ndashboard\nDashboard\npayments\nTransactions\naccount_balance\nSettlements\ngroup\nCustomers\nassessment\nReports\nmanage_accounts\nUsers\nadmin_panel_settings\nRoles\nsettings\nSettings\nforum\nCommunications\ncode\nDevelopers\nUpgrade Plan\ncontact_support\nSupport\nlogout\nSign Out\nsearch\nnotifications\n5\nhelp\nsettings\n\nAlex Rivera\n\nSuper Admin\n\nA\ninbox\nNotification Center\ntune\nPreferences\ncampaign\nBroadcasts\ndescription\nTemplates\nNotification Center\n\nManage your system "
+    },
+    "04-notification-details": {
+      "url": "http://localhost:4200/notifications/7",
+      "loaded": true,
+      "screenshot": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\validation-scripts\\screenshots\\04-notification-details.png",
+      "observations": {},
+      "checks": {
+        "isDetailsRoute": {
+          "pass": true
+        },
+        "hasBackLink": {
+          "pass": true
+        },
+        "hasContent": {
+          "pass": true
+        }
+      },
+      "errors": [],
+      "title": "Notification Details | Merchant Pro",
+      "headings": [
+        "Merchant Pro",
+        "Welcome to Merchant Pro",
+        "Delivery History"
+      ],
+      "buttons": [
+        "Upgrade Plan",
+        "logoutSign Out",
+        "help",
+        "Go to Dashboard",
+        "archive Archive",
+        "delete Delete"
+      ],
+      "bodyPreview": "account_balance\nMerchant Pro\n\nEnterprise Tier\n\ndashboard\nDashboard\npayments\nTransactions\naccount_balance\nSettlements\ngroup\nCustomers\nassessment\nReports\nmanage_accounts\nUsers\nadmin_panel_settings\nRoles\nsettings\nSettings\nforum\nCommunications\ncode\nDevelopers\nUpgrade Plan\ncontact_support\nSupport\nlogout\nSign Out\nsearch\nnotifications\n4\nhelp\nsettings\n\nAlex Rivera\n\nSuper Admin\n\nA\ninbox\nNotification Center\ntune\nPreferences\ncampaign\nBroadcasts\ndescription\nTemplates\narrow_back\nBack to Notification Center\nw"
+    },
+    "05-preferences": {
+      "url": "http://localhost:4200/notifications/preferences",
+      "loaded": true,
+      "screenshot": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\validation-scripts\\screenshots\\05-preferences.png",
+      "observations": {},
+      "checks": {
+        "hasPreferencesContent": {
+          "pass": false,
+          "title": "Merchant Pro"
+        },
+        "hasMatrix": {
+          "table": 0,
+          "toggles": 0,
+          "rows": 0
+        }
+      },
+      "errors": [],
+      "title": "Notification Preferences | Merchant Pro",
+      "headings": [
+        "Merchant Pro",
+        "Notification Preferences"
+      ],
+      "buttons": [
+        "Upgrade Plan",
+        "logoutSign Out",
+        "help",
+        "Retry"
+      ],
+      "bodyPreview": "account_balance\nMerchant Pro\n\nEnterprise Tier\n\ndashboard\nDashboard\npayments\nTransactions\naccount_balance\nSettlements\ngroup\nCustomers\nassessment\nReports\nmanage_accounts\nUsers\nadmin_panel_settings\nRoles\nsettings\nSettings\nforum\nCommunications\ncode\nDevelopers\nUpgrade Plan\ncontact_support\nSupport\nlogout\nSign Out\nsearch\nnotifications\n4\nhelp\nsettings\n\nAlex Rivera\n\nSuper Admin\n\nA\ninbox\nNotification Center\ntune\nPreferences\ncampaign\nBroadcasts\ndescription\nTemplates\nNotification Preferences\n\nChoose how you"
+    },
+    "06-broadcasts": {
+      "url": "http://localhost:4200/notifications/broadcasts",
+      "loaded": true,
+      "screenshot": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\validation-scripts\\screenshots\\06-broadcasts.png",
+      "observations": {},
+      "checks": {
+        "hasBroadcastContent": {
+          "title": "Merchant Pro",
+          "pass": true
+        },
+        "hasCreateOrList": {
+          "buttons": [
+            "Upgrade Plan",
+            "logoutSign Out",
+            "help",
+            "campaign New Broadcast ",
+            "Search"
+          ],
+          "cards": 0
+        }
+      },
+      "errors": [],
+      "title": "Broadcasts | Merchant Pro",
+      "headings": [
+        "Merchant Pro",
+        "Broadcasts & Announcements"
+      ],
+      "buttons": [
+        "Upgrade Plan",
+        "logoutSign Out",
+        "help",
+        "campaign New Broadcast",
+        "Search"
+      ],
+      "bodyPreview": "account_balance\nMerchant Pro\n\nEnterprise Tier\n\ndashboard\nDashboard\npayments\nTransactions\naccount_balance\nSettlements\ngroup\nCustomers\nassessment\nReports\nmanage_accounts\nUsers\nadmin_panel_settings\nRoles\nsettings\nSettings\nforum\nCommunications\ncode\nDevelopers\nUpgrade Plan\ncontact_support\nSupport\nlogout\nSign Out\nsearch\nnotifications\n4\nhelp\nsettings\n\nAlex Rivera\n\nSuper Admin\n\nA\ninbox\nNotification Center\ntune\nPreferences\ncampaign\nBroadcasts\ndescription\nTemplates\nBroadcasts & Announcements\n\nSend system-"
+    },
+    "07-templates": {
+      "url": "http://localhost:4200/notifications/templates",
+      "loaded": true,
+      "screenshot": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\validation-scripts\\screenshots\\07-templates.png",
+      "observations": {},
+      "checks": {
+        "hasTemplatesContent": {
+          "title": "Merchant Pro",
+          "pass": true
+        },
+        "hasTable": {
+          "table": 1,
+          "rows": 11,
+          "headers": [
+            "Name",
+            "Code",
+            "Event",
+            "Channel",
+            "Status",
+            "Actions"
+          ]
+        }
+      },
+      "errors": [],
+      "title": "Templates | Merchant Pro",
+      "headings": [
+        "Merchant Pro",
+        "Communication Templates"
+      ],
+      "buttons": [
+        "Upgrade Plan",
+        "logoutSign Out",
+        "help",
+        "add New Template",
+        "Search",
+        "Edit",
+        "Delete",
+        "Edit",
+        "Delete",
+        "Edit",
+        "Delete",
+        "Edit",
+        "Delete",
+        "Edit",
+        "Delete",
+        "Edit",
+        "Delete",
+        "Edit",
+        "Delete",
+        "Edit",
+        "Delete",
+        "Edit",
+        "Delete",
+        "Edit",
+        "Delete"
+      ],
+      "bodyPreview": "account_balance\nMerchant Pro\n\nEnterprise Tier\n\ndashboard\nDashboard\npayments\nTransactions\naccount_balance\nSettlements\ngroup\nCustomers\nassessment\nReports\nmanage_accounts\nUsers\nadmin_panel_settings\nRoles\nsettings\nSettings\nforum\nCommunications\ncode\nDevelopers\nUpgrade Plan\ncontact_support\nSupport\nlogout\nSign Out\nsearch\nnotifications\n4\nhelp\nsettings\n\nAlex Rivera\n\nSuper Admin\n\nA\ninbox\nNotification Center\ntune\nPreferences\ncampaign\nBroadcasts\ndescription\nTemplates\nCommunication Templates\n\nManage reusable"
+    }
+  },
+  "errors": [],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+}

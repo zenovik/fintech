@@ -1,0 +1,12 @@
+@use '../../styles/settings-shared';
+
+mat-form-field { width: 100%; }
+
+.settings-card--note h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.settings-actions mat-spinner {
+  display: inline-block;
+}

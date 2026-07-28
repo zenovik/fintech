@@ -1,0 +1,80 @@
+<div class="notif-page">
+  <div class="notif-page__header">
+    <div>
+      <h1 class="notif-page__title">Broadcast Center</h1>
+      <p class="notif-page__subtitle">Compose and send announcements to targeted user groups.</p>
+    </div>
+    <div class="notif-page__actions">
+      <button type="button" class="notif-btn notif-btn--secondary" (click)="load()">View Logs</button>
+      <button type="button" class="notif-btn notif-btn--primary" (click)="showForm.set(!showForm())">
+        <span class="material-symbols-outlined">campaign</span>
+        Send Now
+      </button>
+    </div>
+  </div>
+
+  @if (showForm()) {
+    <div class="notif-broadcast-form">
+      <h3>Create Broadcast</h3>
+      <label>
+        <span>Title</span>
+        <input type="text" [(ngModel)]="title" placeholder="Announcement title" />
+      </label>
+      <label>
+        <span>Message</span>
+        <textarea [(ngModel)]="message" rows="4" placeholder="Your announcement message..."></textarea>
+      </label>
+      <label>
+        <span>Audience</span>
+        <select [(ngModel)]="groupCode">
+          @for (g of groups; track g.code) {
+            <option [value]="g.code">{{ g.label }}</option>
+          }
+        </select>
+      </label>
+      <div class="notif-broadcast-form__actions">
+        <button type="button" class="notif-btn notif-btn--secondary" (click)="showForm.set(false)">Cancel</button>
+        <button type="button" class="notif-btn notif-btn--primary" [disabled]="pageState() === 'sending'" (click)="send()">
+          @if (pageState() === 'sending') { <mat-spinner diameter="18" /> } @else { Send Broadcast }
+        </button>
+      </div>
+    </div>
+  }
+
+  <div class="notif-broadcast-search">
+    <input type="text" placeholder="Search broadcasts..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+    <button type="button" class="notif-btn notif-btn--secondary" (click)="onSearch()">Search</button>
+  </div>
+
+  @if (pageState() === 'loading') {
+    <div class="notif-loading"><mat-spinner diameter="40" /></div>
+  } @else if (pageState() === 'error') {
+    <div class="notif-error">
+      <span class="material-symbols-outlined">error</span>
+      <p>{{ errorMessage() }}</p>
+      <button type="button" class="notif-btn notif-btn--primary" (click)="load()">Retry</button>
+    </div>
+  } @else if (pageState() === 'empty') {
+    <div class="notif-empty">
+      <span class="material-symbols-outlined">campaign</span>
+      <p>No broadcasts sent yet</p>
+    </div>
+  } @else {
+    <div class="notif-broadcast-list">
+      @for (b of broadcasts(); track b.broadcastId) {
+        <article class="notif-broadcast-item">
+          <div class="notif-broadcast-item__icon">
+            <span class="material-symbols-outlined">campaign</span>
+          </div>
+          <div>
+            <h4>{{ b.title }}</h4>
+            <p>{{ b.body }}</p>
+            <span class="notif-broadcast-item__meta">
+              {{ b.recipientCount }} recipients · {{ b.createdAt | date:'medium' }}
+            </span>
+          </div>
+        </article>
+      }
+    </div>
+  }
+</div>

@@ -1,0 +1,32 @@
+<div class="ac-page">
+  <header><h1>Payment Acceptance Analytics</h1><p>QR, payment links, and collection performance</p></header>
+  <div class="ac-filters">
+    <input type="number" [(ngModel)]="days" min="7" max="365" placeholder="Days" />
+    <input type="number" placeholder="Merchant ID" [(ngModel)]="merchantFilter" />
+    <button type="button" (click)="load()">Refresh</button>
+  </div>
+  @if (pageState() === 'loading') { <div class="ac-center"><mat-spinner diameter="36" /></div> }
+  @else if (pageState() === 'error') { <p class="ac-error">Failed to load analytics.</p> }
+  @else if (analytics()) {
+    <div class="ac-stats">
+      <div class="ac-stat"><span>QR Scans</span><strong>{{ totals('qrScans') | number }}</strong></div>
+      <div class="ac-stat"><span>QR Payments</span><strong>{{ totals('qrPayments') | number }}</strong></div>
+      <div class="ac-stat"><span>Link Visits</span><strong>{{ totals('linkVisits') | number }}</strong></div>
+      <div class="ac-stat"><span>Link Payments</span><strong>{{ totals('linkPayments') | number }}</strong></div>
+      <div class="ac-stat"><span>Conversion</span><strong>{{ conversionRate() | number:'1.1-1' }}%</strong></div>
+      <div class="ac-stat"><span>Collections</span><strong>{{ totals('collectionsAmount') | currency:'INR':'symbol':'1.0-0' }}</strong></div>
+    </div>
+    <div class="ac-grid">
+      <section><h2>Top Merchants</h2>
+        <ul>@for (m of topMerchants(); track $index) { @let row = $any(m);
+          <li><span>{{ row.merchantName }}</span><strong>{{ row.totalAmount | currency:'USD':'symbol':'1.0-0' }}</strong></li>
+        }</ul>
+      </section>
+      <section><h2>Failure Reasons</h2>
+        <ul>@for (f of failures(); track $index) { @let row = $any(f);
+          <li><span>{{ row.reason }}</span><strong>{{ row.cnt }}</strong></li>
+        }</ul>
+      </section>
+    </div>
+  }
+</div>

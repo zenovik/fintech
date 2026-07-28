@@ -1,0 +1,26 @@
+.mob-page { padding: 24px; }
+.mob-page__header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; gap: 16px; flex-wrap: wrap; }
+.mob-page__header h1 { margin: 8px 0 4px; font-size: 1.75rem; }
+.mob-page__header p { color: #64748b; margin: 0; }
+.breadcrumb { display: flex; align-items: center; gap: 4px; font-size: 0.85rem; color: #64748b; }
+.breadcrumb__active { color: #003d9b; font-weight: 600; }
+.mob-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.mob-stat { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; }
+.mob-stat span { display: block; font-size: 0.8rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; }
+.mob-stat strong { font-size: 1.5rem; color: #0f172a; }
+.mob-filters { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+.mob-filters input, .mob-filters select { padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; min-width: 200px; }
+.mob-table-wrap { overflow-x: auto; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 14px 16px; text-align: left; border-bottom: 1px solid #f1f5f9; }
+th { font-size: 0.75rem; text-transform: uppercase; color: #64748b; background: #f8fafc; }
+td a { color: #003d9b; margin-right: 12px; text-decoration: none; font-weight: 500; }
+.mob-status { padding: 4px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; }
+.mob-status--draft { background: #f1f5f9; color: #475569; }
+.mob-status--submitted, .mob-status--kyc_pending, .mob-status--under_review { background: #fef3c7; color: #92400e; }
+.mob-status--approved { background: #dcfce7; color: #166534; }
+.mob-status--rejected { background: #fee2e2; color: #991b1b; }
+.mob-status--go_live { background: #dbeafe; color: #1e40af; }
+.mob-status--suspended, .mob-status--inactive { background: #f3f4f6; color: #374151; }
+.mob-loading, .mob-empty { padding: 48px; text-align: center; color: #64748b; }
+.mob-pagination { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 16px; }

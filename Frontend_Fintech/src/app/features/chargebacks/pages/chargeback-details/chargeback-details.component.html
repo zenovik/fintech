@@ -1,0 +1,133 @@
+@if (pageState() === 'loading') {
+  <div class="cb-loading"><mat-spinner diameter="40" /></div>
+} @else if (pageState() === 'error') {
+  <div class="cb-error"><p>Chargeback not found.</p><a routerLink="/chargebacks" class="cb-btn cb-btn--primary">Back to Queue</a></div>
+} @else if (chargeback()) {
+  <div class="cb-page">
+    <div class="cb-page__header">
+      <div>
+        <a routerLink="/chargebacks" style="font-size:13px;color:#667085;text-decoration:none">← Chargeback Queue</a>
+        <h1 class="cb-page__title">{{ c.disputeRef }}</h1>
+        <p class="cb-page__subtitle">
+          {{ c.reasonCode | titlecase }} · {{ c.cardNetwork | titlecase }} ·
+          <span [class]="badgeClass(c.status)">{{ c.status }}</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="cb-stats">
+      <div class="cb-stats__card"><label>Amount</label><strong>{{ c.amount | currency:c.currency:'symbol':'1.2-2' }}</strong></div>
+      <div class="cb-stats__card"><label>Transaction</label><strong><a [routerLink]="['/transactions', c.transactionId]">{{ c.transactionRef }}</a></strong></div>
+      <div class="cb-stats__card"><label>Merchant</label><strong><a [routerLink]="['/merchants', c.merchantId]">{{ c.merchantName }}</a></strong></div>
+      <div class="cb-stats__card"><label>Evidence Due</label><strong>{{ c.evidenceDueAt ? (c.evidenceDueAt | date:'mediumDate') : '—' }}</strong></div>
+    </div>
+
+    <div class="cb-tabs">
+      <button type="button" [class.cb-tabs--active]="activeTab() === 'overview'" (click)="setTab('overview')">Overview</button>
+      <button type="button" [class.cb-tabs--active]="activeTab() === 'evidence'" (click)="setTab('evidence')">Evidence ({{ c.evidence.length }})</button>
+      <button type="button" [class.cb-tabs--active]="activeTab() === 'timeline'" (click)="setTab('timeline')">Timeline</button>
+    </div>
+
+    @if (activeTab() === 'overview') {
+      <div class="cb-card">
+        <h3>Chargeback Details</h3>
+        <div class="cb-form-grid">
+          <div><label>Reason</label><p>{{ c.reason }}</p></div>
+          <div><label>Customer</label><p>@if (c.customerId) { <a [routerLink]="['/customers', c.customerId]">{{ c.customerName }}</a> } @else { — }</p></div>
+          <div><label>Opened</label><p>{{ c.createdAt | date:'medium' }}</p></div>
+          <div><label>Opened By</label><p>{{ c.createdByName || '—' }}</p></div>
+          @if (c.representmentSubmittedAt) {
+            <div><label>Representment</label><p>{{ c.representmentSubmittedAt | date:'medium' }} by {{ c.representmentSubmittedByName || '—' }}</p></div>
+            <div style="grid-column:1/-1"><label>Representment Notes</label><p>{{ c.representmentNotes }}</p></div>
+          }
+          @if (c.resolvedAt) {
+            <div><label>Resolved</label><p>{{ c.resolvedAt | date:'medium' }} — {{ c.status | titlecase }} by {{ c.resolvedByName || '—' }}</p></div>
+            @if (c.resolutionNotes) {
+              <div style="grid-column:1/-1"><label>Resolution Notes</label><p>{{ c.resolutionNotes }}</p></div>
+            }
+          }
+        </div>
+      </div>
+
+      @if (canRepresent() && rbac.hasPermission(perms.CHARGEBACKS_WRITE)) {
+        <div class="cb-card">
+          <h3>Submit Representment</h3>
+          <textarea [(ngModel)]="representmentNotes" rows="4" placeholder="Representment notes for the issuer"></textarea>
+          <button type="button" class="cb-btn cb-btn--primary" style="margin-top:12px" [disabled]="saving() || !representmentNotes.trim()" (click)="submitRepresentment()">Submit Representment</button>
+        </div>
+      }
+
+      @if (!isResolved() && rbac.hasPermission(perms.CHARGEBACKS_RESOLVE)) {
+        <div class="cb-card">
+          <h3>Resolve Chargeback</h3>
+          <div class="cb-form-grid">
+            <div>
+              <label>Outcome</label>
+              <select [(ngModel)]="resolveOutcome">
+                @for (o of resolutionOptions; track o.key) { <option [value]="o.key">{{ o.label }}</option> }
+              </select>
+            </div>
+            <div style="grid-column:1/-1">
+              <label>Notes</label>
+              <textarea [(ngModel)]="resolveNotes" rows="3" placeholder="Resolution notes (optional)"></textarea>
+            </div>
+          </div>
+          <button type="button" class="cb-btn cb-btn--success" style="margin-top:12px" [disabled]="saving()" (click)="resolve()">Record Outcome</button>
+        </div>
+      }
+    }
+
+    @if (activeTab() === 'evidence') {
+      <div class="cb-card">
+        <h3>Evidence Files</h3>
+        @if (!c.evidence.length) {
+          <p>No evidence uploaded yet.</p>
+        } @else {
+          <ul class="cb-evidence-list">
+            @for (e of c.evidence; track e.id) {
+              <li>
+                <div>
+                  <strong>{{ e.fileName }}</strong>
+                  @if (e.description) { <p style="margin:4px 0 0;font-size:13px;color:#667085">{{ e.description }}</p> }
+                  <p style="margin:4px 0 0;font-size:12px;color:#98a2b3">{{ e.createdAt | date:'medium' }} · {{ e.uploadedByName || 'System' }}</p>
+                </div>
+                <a [href]="e.fileUrl" target="_blank" rel="noopener" class="cb-btn cb-btn--secondary">View</a>
+              </li>
+            }
+          </ul>
+        }
+      </div>
+
+      @if (!isResolved() && rbac.hasPermission(perms.CHARGEBACKS_WRITE)) {
+        <div class="cb-card">
+          <h3>Add Evidence</h3>
+          <div class="cb-form-grid">
+            <div><label>File Name</label><input [(ngModel)]="evidenceFileName" placeholder="receipt.pdf" /></div>
+            <div><label>File URL</label><input [(ngModel)]="evidenceFileUrl" placeholder="/uploads/chargebacks/..." /></div>
+            <div style="grid-column:1/-1"><label>Description</label><input [(ngModel)]="evidenceDescription" placeholder="Optional description" /></div>
+          </div>
+          <button type="button" class="cb-btn cb-btn--primary" style="margin-top:12px" [disabled]="saving() || !evidenceFileName.trim() || !evidenceFileUrl.trim()" (click)="addEvidence()">Upload Evidence</button>
+        </div>
+      }
+    }
+
+    @if (activeTab() === 'timeline') {
+      <div class="cb-card">
+        <h3>Status Timeline</h3>
+        @if (!c.history.length) {
+          <p>No timeline events recorded.</p>
+        } @else {
+          <div class="cb-timeline">
+            @for (h of c.history; track h.id) {
+              <div class="cb-timeline__item">
+                <time>{{ h.createdAt | date:'medium' }}</time>
+                <p><strong>{{ h.fromStatus || 'new' }} → {{ h.toStatus }}</strong>@if (h.changedByName) { by {{ h.changedByName }} }</p>
+                @if (h.reason) { <p>{{ h.reason }}</p> }
+              </div>
+            }
+          </div>
+        }
+      </div>
+    }
+  </div>
+}

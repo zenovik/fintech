@@ -1,0 +1,71 @@
+@use '../../../dashboard/styles/dashboard-tokens' as *;
+@use '../../../dashboard/styles/shared-page-ui' as ui;
+
+.stl-details {
+  @include ui.page-shell;
+  max-width: 1200px;
+  &__loading, &__error { @include ui.page-loading-error; }
+}
+
+.page-header { @include ui.page-header; align-items: flex-start; }
+.breadcrumb { @include ui.breadcrumb; }
+
+.summary-cards {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 24px;
+}
+
+.summary-card {
+  @include dash-card;
+  padding: 16px 18px;
+  span { font-size: 12px; color: $dash-outline; display: block; margin-bottom: 4px; }
+  strong { font-size: 18px; color: $dash-on-surface; }
+}
+
+.status-badge {
+  display: inline-flex; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600;
+  &--processed { background: #dcfce7; color: #15803d; }
+  &--pending { background: #fef3c7; color: #b45309; }
+  &--processing { background: #dbeafe; color: #1d4ed8; }
+  &--failed { background: #fee2e2; color: $dash-error; }
+  &--reversed { background: #fce7f3; color: #9d174d; }
+}
+
+.tab-content { padding: 24px 0; }
+.empty-text { color: $dash-outline; font-style: italic; }
+.info-grid {
+  display: grid; grid-template-columns: 180px 1fr; gap: 12px 24px; font-size: 14px;
+  dt { color: $dash-outline; font-weight: 500; }
+  dd { margin: 0; color: $dash-on-surface; a { color: $dash-primary; } }
+}
+
+.data-table {
+  width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 24px;
+  th { text-align: left; padding: 10px 12px; font-size: 11px; text-transform: uppercase; color: $dash-outline; border-bottom: 1px solid $dash-outline-variant; }
+  td { padding: 12px; border-bottom: 1px solid rgba($dash-outline-variant, 0.3); }
+  a { color: $dash-primary; text-decoration: none; &:hover { text-decoration: underline; } }
+}
+
+.timeline {
+  list-style: none; padding: 0; margin: 0;
+  li { display: flex; gap: 16px; padding-bottom: 20px; position: relative;
+    &:not(:last-child)::before { content: ''; position: absolute; left: 7px; top: 20px; bottom: 0; width: 2px; background: $dash-outline-variant; }
+  }
+  &__dot { width: 16px; height: 16px; border-radius: 50%; background: $dash-primary; flex-shrink: 0; margin-top: 4px; }
+  p { margin: 4px 0; color: $dash-outline; }
+  small { color: $dash-outline; font-size: 12px; }
+}
+
+.note-card {
+  background: $dash-surface-container-low; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px;
+  p { margin: 0 0 4px; } small { color: $dash-outline; font-size: 12px; }
+}
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px;
+  border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; border: none; text-decoration: none;
+  &--primary { background: $dash-primary; color: #fff; }
+  &--outline { background: #fff; border: 1px solid $dash-outline-variant; color: $dash-on-surface; }
+  &--danger { background: $dash-error; color: #fff; }
+}
+
+h4 { margin: 16px 0 8px; font-size: 14px; color: $dash-on-surface; }

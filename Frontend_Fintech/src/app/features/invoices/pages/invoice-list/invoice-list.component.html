@@ -1,0 +1,64 @@
+<div class="inv-page">
+  <div class="inv-page__header">
+    <div>
+      <h1 class="inv-page__title">Invoices</h1>
+      <p class="inv-page__subtitle">Create, send, and track customer invoices.</p>
+    </div>
+    @if (rbac.hasPermission(perms.INVOICES_WRITE)) {
+      <a routerLink="/invoices/create" class="inv-btn inv-btn--primary"><span class="material-symbols-outlined">add</span> New Invoice</a>
+    }
+  </div>
+
+  <div class="inv-stats">
+    <div class="inv-stats__card"><label>Total</label><strong>{{ stats().total }}</strong></div>
+    <div class="inv-stats__card"><label>Draft</label><strong>{{ stats().draft }}</strong></div>
+    <div class="inv-stats__card"><label>Sent</label><strong>{{ stats().sent }}</strong></div>
+    <div class="inv-stats__card"><label>Paid</label><strong>{{ stats().paid }}</strong></div>
+    <div class="inv-stats__card"><label>Overdue</label><strong>{{ stats().overdue }}</strong></div>
+    <div class="inv-stats__card"><label>Outstanding</label><strong>{{ stats().outstandingAmount | currency:'USD':'symbol':'1.0-0' }}</strong></div>
+    <div class="inv-stats__card"><label>Collection</label><strong>{{ stats().collectionRate / 100 | percent:'1.0-1' }}</strong></div>
+  </div>
+
+  <div class="inv-filters">
+    <input type="text" placeholder="Search invoices..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+    <select [(ngModel)]="statusFilter" (ngModelChange)="onSearch()">
+      @for (s of statuses; track s.key) { <option [value]="s.key">{{ s.label }}</option> }
+    </select>
+    <button type="button" class="inv-btn inv-btn--secondary" (click)="onSearch()">Search</button>
+  </div>
+
+  @if (pageState() === 'loading') {
+    <div class="inv-loading"><mat-spinner diameter="40" /><p>Loading invoices...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="inv-error"><span class="material-symbols-outlined">error</span><p>Failed to load invoices.</p><button type="button" class="inv-btn inv-btn--primary" (click)="load()">Retry</button></div>
+  } @else if (pageState() === 'empty') {
+    <div class="inv-empty"><span class="material-symbols-outlined">receipt_long</span><p>No invoices found</p></div>
+  } @else {
+    <div class="inv-table-wrap">
+      <table class="inv-table">
+        <thead><tr><th>Number</th><th>Customer</th><th>Merchant</th><th>Issue</th><th>Due</th><th>Total</th><th>Balance</th><th>Status</th></tr></thead>
+        <tbody>
+          @for (inv of items(); track inv.id) {
+            <tr>
+              <td><a [routerLink]="['/invoices', inv.id]">{{ inv.invoiceNumber }}</a></td>
+              <td><a [routerLink]="['/customers', inv.customerId]">{{ inv.customerName }}</a></td>
+              <td><a [routerLink]="['/merchants', inv.merchantId]">{{ inv.merchantName }}</a></td>
+              <td>{{ inv.issueDate | date:'mediumDate' }}</td>
+              <td>{{ inv.dueDate | date:'mediumDate' }}</td>
+              <td>{{ inv.total | currency:inv.currency:'symbol':'1.2-2' }}</td>
+              <td>{{ inv.balanceDue | currency:inv.currency:'symbol':'1.2-2' }}</td>
+              <td><span [class]="badgeClass(inv.status)">{{ inv.status }}</span></td>
+            </tr>
+          }
+        </tbody>
+      </table>
+      <div class="inv-pagination">
+        <span>Page {{ page() }} of {{ totalPages() }} ({{ total() }} total)</span>
+        <div>
+          <button type="button" class="inv-btn inv-btn--secondary" [disabled]="page() <= 1" (click)="onPageChange(page() - 1)">Previous</button>
+          <button type="button" class="inv-btn inv-btn--secondary" [disabled]="page() >= totalPages()" (click)="onPageChange(page() + 1)">Next</button>
+        </div>
+      </div>
+    </div>
+  }
+</div>

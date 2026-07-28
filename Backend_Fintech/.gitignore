@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build
+dist/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+
+# Uploads
+uploads/*
+!uploads/.gitkeep
+
+# Testing
+coverage/
+
+# IDE
+.vscode/
+.idea/

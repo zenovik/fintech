@@ -1,0 +1,48 @@
+@if (state.pageState() === 'loading') {
+  <div class="settings-card" style="text-align:center"><mat-spinner diameter="40" /></div>
+} @else if (state.pageState() === 'error') {
+  <div class="settings-error">
+    <span class="material-symbols-outlined">error</span>
+    <p>{{ state.errorMessage() }}</p>
+    <button type="button" class="btn btn--primary" (click)="retry()">Retry</button>
+  </div>
+} @else {
+  <div class="settings-card">
+    <h1>General Settings</h1>
+    <p class="subtitle">Manage organization configuration, security, and platform preferences.</p>
+    <div class="overview-grid">
+      @if (rbac.hasPermission(perms.SETTINGS_READ)) {
+        <a [routerLink]="routes.BUSINESS" class="overview-card">
+          <span class="material-symbols-outlined">business</span>
+          <strong>Business</strong>
+          <span>{{ state.overview()?.organization?.legalName || '—' }}</span>
+        </a>
+        <a [routerLink]="routes.BRANDING" class="overview-card">
+          <span class="material-symbols-outlined">palette</span>
+          <strong>Branding</strong>
+          <span>{{ state.overview()?.branding?.companyName || '—' }}</span>
+        </a>
+        <a [routerLink]="routes.SECURITY" class="overview-card">
+          <span class="material-symbols-outlined">shield</span>
+          <strong>Security</strong>
+          <span>MFA {{ state.overview()?.security?.mfaEnforced ? 'Enforced' : 'Optional' }}</span>
+        </a>
+        <a [routerLink]="routes.FEATURE_FLAGS" class="overview-card">
+          <span class="material-symbols-outlined">flag</span>
+          <strong>Feature Flags</strong>
+          <span>{{ state.overview()?.featureFlags?.length || 0 }} enabled</span>
+        </a>
+      }
+      <a [routerLink]="routes.ACCOUNT" class="overview-card">
+        <span class="material-symbols-outlined">lock</span>
+        <strong>Account Security</strong>
+        <span>Password & MFA</span>
+      </a>
+      <a [routerLink]="routes.NOTIFICATIONS" class="overview-card">
+        <span class="material-symbols-outlined">notifications</span>
+        <strong>Notifications</strong>
+        <span>Channel preferences</span>
+      </a>
+    </div>
+  </div>
+}

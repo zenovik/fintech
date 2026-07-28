@@ -1,0 +1,106 @@
+<div class="rc-page">
+  @if (pageState() === 'loading') {
+    <div class="rc-loading"><mat-spinner diameter="48" /><p>Loading report center...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="rc-error"><p>Failed to load report center.</p><button type="button" class="rc-btn rc-btn--primary" (click)="load()">Retry</button></div>
+  } @else {
+    <div class="rc-header">
+      <div>
+        <nav class="rc-breadcrumb"><a routerLink="/reports">Reports</a><span class="material-symbols-outlined">chevron_right</span><span>Report Center</span></nav>
+        <h1>Report Center</h1>
+        <p>Generate, filter, export, and schedule enterprise reports across all modules.</p>
+      </div>
+      <a routerLink="/reports/scheduled" class="rc-btn rc-btn--outline"><span class="material-symbols-outlined">schedule</span> Scheduled Reports</a>
+    </div>
+
+    <div class="rc-layout">
+      <aside class="rc-sidebar">
+        <label>Category</label>
+        <select [(ngModel)]="categoryFilter">
+          <option value="">All categories</option>
+          @for (cat of categories(); track cat) { <option [value]="cat">{{ cat | titlecase }}</option> }
+        </select>
+        <ul class="rc-catalog">
+          @for (item of filteredCatalog(); track item.code) {
+            <li [class.rc-catalog__active]="selectedReport() === item.code">
+              <button type="button" (click)="onSelectReport(item.code)">
+                <strong>{{ item.name }}</strong>
+                <small>{{ item.category | titlecase }}</small>
+              </button>
+            </li>
+          }
+        </ul>
+      </aside>
+
+      <main class="rc-main">
+        @if (selectedReportItem(); as report) {
+            <div class="rc-panel">
+              <h2>{{ report.name }}</h2>
+              <p>{{ report.description }}</p>
+              <div class="rc-actions">
+                <button type="button" class="rc-btn rc-btn--primary" [disabled]="generating()" (click)="generate()">
+                  @if (generating()) { <mat-spinner diameter="18" /> } @else { Generate Preview }
+                </button>
+                @if (rbac.hasPermission(perms.REPORTS_EXPORT)) {
+                  @for (fmt of report.exportFormats; track fmt) {
+                    <button type="button" class="rc-btn rc-btn--outline" [disabled]="exporting()" (click)="export(fmt)">Export {{ fmt | uppercase }}</button>
+                  }
+                }
+              </div>
+            </div>
+
+            <div class="rc-panel">
+              <h3>Saved Filters</h3>
+              @if (rbac.hasPermission(perms.REPORTS_WRITE)) {
+                <div class="rc-filter-save">
+                  <input type="text" [(ngModel)]="newFilterName" placeholder="Filter name" />
+                  <button type="button" class="rc-btn" (click)="saveFilter()">Save</button>
+                </div>
+              }
+              <ul class="rc-filters">
+                @for (f of savedFilters(); track f.id) {
+                  <li>{{ f.filterName }} <small>({{ f.reportType }})</small></li>
+                } @empty { <li class="rc-muted">No saved filters</li> }
+              </ul>
+            </div>
+
+            @if (preview(); as p) {
+              <div class="rc-panel">
+                <h3>Preview ({{ p.rowCount }} rows)</h3>
+                <div class="rc-table-wrap">
+                  <table>
+                    <thead><tr>@for (h of p.headers; track h) { <th>{{ h }}</th> }</tr></thead>
+                    <tbody>
+                      @for (row of p.rows; track $index) {
+                        <tr>@for (h of p.headers; track h) { <td>{{ row[h] }}</td> }</tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            }
+
+            <div class="rc-panel">
+              <h3>Export History</h3>
+              <div class="rc-table-wrap">
+                <table>
+                  <thead><tr><th>Report</th><th>Format</th><th>Rows</th><th>Date</th><th></th></tr></thead>
+                  <tbody>
+                    @for (e of exportHistory(); track e.id) {
+                      <tr>
+                        <td>{{ e.reportType }}</td><td>{{ e.format | uppercase }}</td><td>{{ e.rowCount }}</td>
+                        <td>{{ e.createdAt | date:'short' }}</td>
+                        <td>@if (e.downloadUrl) { <a [href]="e.downloadUrl" target="_blank">Download</a> }</td>
+                      </tr>
+                    } @empty { <tr><td colspan="5" class="rc-muted">No exports yet</td></tr> }
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        } @else {
+          <p class="rc-muted">Select a report from the catalog.</p>
+        }
+      </main>
+    </div>
+  }
+</div>

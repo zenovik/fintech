@@ -1,0 +1,102 @@
+@if (state.pageState() === 'loading' && !state.featureFlags().length) {
+  <div class="settings-card settings-card--center"><mat-spinner diameter="40" /></div>
+} @else if (state.pageState() === 'error') {
+  <div class="settings-error">
+    <span class="material-symbols-outlined">error</span>
+    <p>{{ state.errorMessage() }}</p>
+    <button type="button" class="btn btn--primary" (click)="retry()">Retry</button>
+  </div>
+} @else {
+  <div class="settings-card">
+    <div class="page-header">
+      <div>
+        <h1>Feature Flags</h1>
+        <p class="subtitle">Manage rollout toggles and beta features across the platform.</p>
+      </div>
+      @if (rbac.hasPermission(perms.SETTINGS_WRITE)) {
+        <button type="button" class="btn btn--primary" (click)="startCreate()">
+          <span class="material-symbols-outlined">add</span> New Flag
+        </button>
+      }
+    </div>
+
+  @if (editingId !== null) {
+    <form [formGroup]="flagForm" (ngSubmit)="saveFlag()" class="flag-form settings-form">
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+          <mat-label>Code</mat-label>
+          <input matInput formControlName="code" [readonly]="editingId !== 'new'" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" />
+        </mat-form-field>
+      </div>
+      <mat-form-field appearance="outline" class="full">
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description" />
+      </mat-form-field>
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+          <mat-label>Rollout %</mat-label>
+          <input matInput type="number" formControlName="rolloutPercentage" min="0" max="100" />
+        </mat-form-field>
+        <div class="toggle-row">
+          <strong>Enabled</strong>
+          <mat-slide-toggle formControlName="isEnabled" color="primary" />
+        </div>
+        <div class="toggle-row">
+          <strong>Beta</strong>
+          <mat-slide-toggle formControlName="isBeta" color="primary" />
+        </div>
+      </div>
+      <div class="settings-actions">
+        <button type="submit" class="btn btn--primary" [disabled]="flagForm.invalid || state.pageState() === 'saving'">Save</button>
+        <button type="button" class="btn btn--outline" (click)="cancelEdit()">Cancel</button>
+      </div>
+    </form>
+  }
+
+    <div class="filters">
+      <div class="filter-card filter-card--search">
+        <span class="material-symbols-outlined">search</span>
+        <input type="text" placeholder="Search flags..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+      </div>
+      <button type="button" class="icon-btn" (click)="onSearch()"><span class="material-symbols-outlined">search</span></button>
+    </div>
+
+    @if (state.pageState() === 'empty') {
+      <div class="settings-empty">
+        <span class="material-symbols-outlined">flag</span>
+        <p>No feature flags found</p>
+      </div>
+    } @else {
+      @for (flag of state.featureFlags(); track flag.id) {
+        <div class="flag-card">
+          <div>
+            <strong>{{ flag.name }}</strong>
+            <p class="flag-code">{{ flag.code }}</p>
+            @if (flag.description) { <p class="flag-desc">{{ flag.description }}</p> }
+            <div class="flag-meta">
+              <span class="badge" [class.badge--on]="flag.isEnabled">{{ flag.isEnabled ? 'Enabled' : 'Disabled' }}</span>
+              @if (flag.isBeta) { <span class="badge badge--beta">Beta</span> }
+              <span class="flag-rollout">{{ flag.rolloutPercentage }}% rollout</span>
+            </div>
+          </div>
+          @if (rbac.hasPermission(perms.SETTINGS_WRITE)) {
+            <div class="flag-actions">
+              <button type="button" class="btn btn--outline btn--sm" (click)="startEdit(flag)">Edit</button>
+              <button type="button" class="btn btn--danger btn--sm" (click)="deleteFlag(flag.id)">Delete</button>
+            </div>
+          }
+        </div>
+      }
+
+      <div class="pagination">
+        <button type="button" class="btn btn--outline btn--sm" [disabled]="state.currentPage() <= 1" (click)="goToPage(state.currentPage() - 1)">Previous</button>
+        <span>Showing {{ pageStart() }}–{{ pageEnd() }} of {{ state.totalItems() }}</span>
+        <button type="button" class="btn btn--outline btn--sm" [disabled]="state.currentPage() >= state.totalPages()" (click)="goToPage(state.currentPage() + 1)">Next</button>
+      </div>
+    }
+  </div>
+}

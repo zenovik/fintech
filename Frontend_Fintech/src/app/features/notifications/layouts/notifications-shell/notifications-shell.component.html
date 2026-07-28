@@ -1,0 +1,27 @@
+<div class="notif-shell">
+  <nav class="notif-shell__nav">
+    <a class="notif-shell__link" routerLink="/notifications" routerLinkActive="notif-shell__link--active" [routerLinkActiveOptions]="{ exact: true }">
+      <span class="material-symbols-outlined">inbox</span>
+      <span>Notification Center</span>
+    </a>
+    <a class="notif-shell__link" routerLink="/notifications/preferences" routerLinkActive="notif-shell__link--active">
+      <span class="material-symbols-outlined">tune</span>
+      <span>Preferences</span>
+    </a>
+    @if (rbac.hasPermission(perms.NOTIFICATIONS_BROADCAST)) {
+      <a class="notif-shell__link" routerLink="/notifications/broadcasts" routerLinkActive="notif-shell__link--active">
+        <span class="material-symbols-outlined">campaign</span>
+        <span>Broadcasts</span>
+      </a>
+    }
+    @if (rbac.hasPermission(perms.NOTIFICATIONS_MANAGE)) {
+      <a class="notif-shell__link" routerLink="/notifications/templates" routerLinkActive="notif-shell__link--active">
+        <span class="material-symbols-outlined">description</span>
+        <span>Templates</span>
+      </a>
+    }
+  </nav>
+  <div class="notif-shell__content">
+    <router-outlet />
+  </div>
+</div>

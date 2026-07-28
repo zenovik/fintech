@@ -1,0 +1,108 @@
+name: Security Scan
+
+on:
+  workflow_dispatch:
+    inputs:
+      scan_mode:
+        description: 'ZAP scan mode (baseline, full, all)'
+        required: true
+        default: 'baseline'
+        type: choice
+        options:
+          - baseline
+          - full
+          - all
+
+# Optional workflow — does NOT block main CI pipeline
+jobs:
+  security:
+    name: OWASP ZAP + npm audit
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: test_root
+          MYSQL_DATABASE: fintech_db
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -u root -ptest_root"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=10
+    env:
+      NODE_ENV: development
+      DB_HOST: 127.0.0.1
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: test_root
+      DB_NAME: fintech_db
+      JWT_SECRET: security-test-jwt-secret-min-32-characters!!
+      JWT_REFRESH_SECRET: security-test-refresh-secret-min-32-chars
+      CONFIG_ENCRYPTION_KEY: security-test-config-key-min-32-chars
+      REDIS_ENABLED: false
+      CSP_ENABLED: false
+      CORS_ORIGIN: http://localhost:4200
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          npm ci --workspace=Backend_Fintech
+
+      - name: Download database artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: master-database-sql
+          path: Database_Fintech/
+        continue-on-error: true
+
+      - name: Build database if artifact missing
+        run: |
+          if [ ! -f Database_Fintech/master_database.sql ]; then
+            pwsh Database_Fintech/scripts/build-master.ps1
+          fi
+
+      - name: Seed database
+        run: npm run db:setup:unix
+        env:
+          MYSQL_HOST: 127.0.0.1
+          MYSQL_PASSWORD: test_root
+
+      - name: Build and start backend
+        run: |
+          npm run build --workspace=Backend_Fintech
+          npm run start --workspace=Backend_Fintech &
+          for i in $(seq 1 60); do
+            curl -sf http://localhost:3000/api/ready && break
+            sleep 2
+          done
+
+      - name: Run security unit tests
+        run: npm run test:unit --workspace=Backend_Fintech
+
+      - name: Dependency audit
+        run: node security/scripts/audit-deps.mjs
+
+      - name: OWASP ZAP scan
+        run: node security/scripts/run-zap.mjs ${{ inputs.scan_mode }}
+
+      - name: Generate risk summary
+        if: always()
+        run: node security/scripts/generate-summary.mjs
+
+      - name: Upload security reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-reports-${{ github.run_id }}
+          path: security/reports/
+          retention-days: 30

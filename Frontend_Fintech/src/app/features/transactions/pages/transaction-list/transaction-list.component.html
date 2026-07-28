@@ -1,0 +1,153 @@
+<div class="txn-page">
+  @if (state.pageState() === 'loading' && !state.transactions().length) {
+    <app-loading-state message="Loading transactions…" ariaLabel="Loading transaction list"></app-loading-state>
+  } @else if (state.pageState() === 'error') {
+    <div class="txn-page__error" role="alert">
+      <span class="material-symbols-outlined">error</span>
+      <h3>Unable to load transactions</h3>
+      <p>{{ state.errorMessage() }}</p>
+      <button type="button" class="btn btn--primary" (click)="state.retry()">Retry</button>
+    </div>
+  } @else {
+    <div class="page-header">
+      <div>
+        <nav class="breadcrumb">
+          <a routerLink="/dashboard/executive">Home</a>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <span class="breadcrumb__active">Transactions</span>
+        </nav>
+        <h1>Transaction History</h1>
+        <p class="page-header__subtitle">Review and manage your global payment operations.</p>
+      </div>
+      <div class="page-header__actions">
+        @if (rbac.hasPermission(perms.TRANSACTIONS_EXPORT)) {
+          <div class="export-wrap">
+            <button type="button" class="btn btn--dark" (click)="showExportMenu = !showExportMenu">
+              <span class="material-symbols-outlined">download</span> Export
+            </button>
+            @if (showExportMenu) {
+              <div class="export-menu">
+                <button type="button" (click)="onExport('csv')">Export as CSV</button>
+              </div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+
+    @if (state.statistics(); as stats) {
+      <div class="stat-cards">
+        <div class="stat-card"><span class="stat-card__label">Total</span><span class="stat-card__value">{{ stats.total }}</span></div>
+        <div class="stat-card"><span class="stat-card__label">Volume</span><span class="stat-card__value">{{ stats.totalVolume | currency: 'USD' : 'symbol' : '1.0-0' }}</span></div>
+        <div class="stat-card"><span class="stat-card__label">Settled</span><span class="stat-card__value stat-card__value--green">{{ stats.settled }}</span></div>
+        <div class="stat-card"><span class="stat-card__label">Pending</span><span class="stat-card__value stat-card__value--amber">{{ stats.pending }}</span></div>
+        <div class="stat-card"><span class="stat-card__label">Disputes</span><span class="stat-card__value stat-card__value--red">{{ stats.disputes }}</span></div>
+      </div>
+    }
+
+    <div class="filters">
+      <div class="filter-card filter-card--search">
+        <span class="material-symbols-outlined">search</span>
+        <input type="text" placeholder="Search by Transaction ID, Merchant, or Customer..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+      </div>
+      <div class="filter-card">
+        <label>Status</label>
+        <select [(ngModel)]="statusFilter" (change)="onApplyFilters()">
+          <option value="">All Statuses</option>
+          @for (s of statuses; track s) {
+            <option [value]="s">{{ s | titlecase }}</option>
+          }
+        </select>
+      </div>
+      <div class="filter-card">
+        <label>Date From</label>
+        <input type="date" [(ngModel)]="dateFrom" (change)="onApplyFilters()" />
+      </div>
+      <div class="filter-card">
+        <label>Date To</label>
+        <input type="date" [(ngModel)]="dateTo" (change)="onApplyFilters()" />
+      </div>
+      <div class="filter-card">
+        <label>Min Amount</label>
+        <input type="number" [(ngModel)]="minAmount" (change)="onApplyFilters()" />
+      </div>
+      <button type="button" class="icon-btn" title="Refresh" (click)="state.loadTransactions()">
+        <span class="material-symbols-outlined">refresh</span>
+      </button>
+    </div>
+
+    @if (state.isEmpty()) {
+      <div class="empty-state">
+        <span class="material-symbols-outlined">receipt_long</span>
+        <h3>{{ state.hasFilters() ? 'No transactions match your filters' : 'No transactions yet' }}</h3>
+        <p>Try adjusting your search or filter criteria.</p>
+        @if (state.hasFilters()) {
+          <button type="button" class="btn btn--outline" (click)="onClearFilters()">Clear Filters</button>
+        }
+      </div>
+    } @else {
+      <div class="table-card">
+        <div class="table-toolbar">
+          <span>Showing {{ pageRangeStart() }}-{{ pageRangeEnd() }} of {{ state.totalItems() }} transactions</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Transaction ID</th>
+                <th>Date/Time</th>
+                <th>Merchant</th>
+                <th>Customer</th>
+                <th>Method</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th class="col-actions">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (t of state.transactions(); track t.id) {
+                <tr>
+                  <td><a [routerLink]="['/transactions', t.id]" class="txn-ref">{{ t.transactionRef }}</a></td>
+                  <td>
+                    <div class="date-cell">
+                      <span>{{ t.processedAt | date: 'MMM d, y' }}</span>
+                      <small>{{ t.processedAt | date: 'HH:mm:ss' }}</small>
+                    </div>
+                  </td>
+                  <td>{{ t.merchant.name }}</td>
+                  <td>
+                    <div class="customer-cell">
+                      <div class="customer-cell__avatar">{{ customerInitials(t.customerName) }}</div>
+                      <span>{{ t.customerName || '—' }}</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="method-cell">
+                      <span class="material-symbols-outlined">credit_card</span>
+                      {{ t.paymentMethod.detail }}
+                    </div>
+                  </td>
+                  <td class="amount">{{ t.formattedAmount }}</td>
+                  <td><span class="status-badge status-badge--{{ statusClass(t.status.code) }}">{{ t.status.label }}</span></td>
+                  <td class="col-actions">
+                    <a [routerLink]="['/transactions', t.id]" class="link-btn">View Details</a>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <button type="button" class="btn btn--outline btn--sm" [disabled]="state.currentPage() <= 1" (click)="goToPage(state.currentPage() - 1)">Previous</button>
+          <span>Page {{ state.currentPage() }} of {{ state.totalPages() || 1 }}</span>
+          <button type="button" class="btn btn--outline btn--sm" [disabled]="state.currentPage() >= state.totalPages()" (click)="goToPage(state.currentPage() + 1)">Next</button>
+          <select [ngModel]="state.pageSize()" (ngModelChange)="state.setPageSize($event)">
+            @for (size of pageSizeOptions; track size) {
+              <option [value]="size">{{ size }} per page</option>
+            }
+          </select>
+        </div>
+      </div>
+    }
+  }
+</div>

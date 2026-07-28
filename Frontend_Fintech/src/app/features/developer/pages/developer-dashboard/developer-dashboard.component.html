@@ -1,0 +1,107 @@
+<div class="dev-page">
+  <header>
+    <h1>Developer Portal</h1>
+    <p>API keys, OAuth applications, usage metrics, and playground links</p>
+  </header>
+
+  <div class="dev-filters">
+    <input type="number" placeholder="Merchant ID" [(ngModel)]="merchantFilter" (keyup.enter)="load()" />
+    <button type="button" (click)="load()">Refresh</button>
+  </div>
+
+  @if (pageState() === 'loading') {
+    <div class="dev-center"><mat-spinner diameter="36" /></div>
+  } @else if (pageState() === 'error') {
+    <p class="dev-error">Failed to load developer dashboard.</p>
+  } @else if (dashboard()) {
+    <div class="dev-stats">
+      <div class="dev-stat">
+        <span>API Keys</span>
+        <strong>{{ statNum('apiKeys', 'total') }}</strong>
+        <small>{{ statNum('apiKeys', 'active') }} active</small>
+      </div>
+      <div class="dev-stat">
+        <span>OAuth Apps</span>
+        <strong>{{ statNum('oauthApps', 'total') }}</strong>
+        <small>{{ statNum('oauthApps', 'active') }} active</small>
+      </div>
+      <div class="dev-stat">
+        <span>Requests (24h)</span>
+        <strong>{{ statNum('usage', 'requests24h') | number }}</strong>
+      </div>
+      <div class="dev-stat">
+        <span>Avg Latency</span>
+        <strong>{{ statNum('usage', 'avgLatencyMs') | number:'1.0-0' }} ms</strong>
+      </div>
+    </div>
+
+    @if (playgroundLinks().length) {
+      <section class="dev-links">
+        <h2>Playground Links</h2>
+        <div class="dev-link-grid">
+          @for (link of playgroundLinks(); track link.url) {
+            <a [href]="link.url" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+          }
+        </div>
+      </section>
+    }
+
+    <section class="dev-table-wrap">
+      <h2>API Keys</h2>
+      @if (!apiKeys().length) {
+        <p class="dev-empty">No API keys yet.</p>
+      } @else {
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Prefix</th>
+              <th>Environment</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (k of apiKeys(); track $index) {
+              @let row = $any(k);
+              <tr>
+                <td>{{ row.name ?? row.keyName }}</td>
+                <td><code>{{ row.keyPrefix ?? row.apiKeyPrefix }}</code></td>
+                <td>{{ row.environment ?? 'live' }}</td>
+                <td>{{ row.status ?? (row.isActive ? 'active' : 'revoked') }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      }
+    </section>
+
+    <section class="dev-table-wrap">
+      <h2>OAuth Applications</h2>
+      @if (!oauthApps().length) {
+        <p class="dev-empty">No OAuth apps configured.</p>
+      } @else {
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Client ID</th>
+              <th>Environment</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (app of oauthApps(); track $index) {
+              @let row = $any(app);
+              <tr>
+                <td>{{ row.name }}</td>
+                <td><code>{{ row.clientId }}</code></td>
+                <td>{{ row.environment }}</td>
+                <td>{{ row.status }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      }
+    </section>
+  }
+</div>

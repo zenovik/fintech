@@ -1,0 +1,83 @@
+<div class="cb-page">
+  <div class="cb-page__header">
+    <div>
+      <h1 class="cb-page__title">Chargeback Queue</h1>
+      <p class="cb-page__subtitle">Manage disputes, evidence, representment, and win/loss outcomes.</p>
+    </div>
+    @if (rbac.hasPermission(perms.CHARGEBACKS_WRITE)) {
+      <a routerLink="/chargebacks/create" class="cb-btn cb-btn--primary">
+        <span class="material-symbols-outlined">add</span> Open Chargeback
+      </a>
+    }
+  </div>
+
+  <div class="cb-stats">
+    <div class="cb-stats__card"><label>Open</label><strong>{{ stats().open + stats().evidenceRequired + stats().underReview + stats().representmentSubmitted }}</strong></div>
+    <div class="cb-stats__card"><label>Evidence Due</label><strong>{{ stats().evidenceRequired }}</strong></div>
+    <div class="cb-stats__card"><label>Won</label><strong>{{ stats().won }}</strong></div>
+    <div class="cb-stats__card"><label>Lost</label><strong>{{ stats().lost }}</strong></div>
+    <div class="cb-stats__card"><label>At Risk</label><strong>{{ stats().openAmount | currency:'USD':'symbol':'1.0-0' }}</strong></div>
+  </div>
+
+  <div class="cb-filters">
+    <input type="text" placeholder="Search chargebacks..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+    <select [(ngModel)]="statusFilter" (ngModelChange)="onSearch()">
+      @for (s of statuses; track s.key) { <option [value]="s.key">{{ s.label }}</option> }
+    </select>
+    <select [(ngModel)]="reasonFilter" (ngModelChange)="onSearch()">
+      @for (r of reasons; track r.key) { <option [value]="r.key">{{ r.label }}</option> }
+    </select>
+    <select [(ngModel)]="networkFilter" (ngModelChange)="onSearch()">
+      @for (n of networks; track n.key) { <option [value]="n.key">{{ n.label }}</option> }
+    </select>
+    <button type="button" class="cb-btn cb-btn--secondary" (click)="onSearch()">Search</button>
+  </div>
+
+  @if (pageState() === 'loading') {
+    <div class="cb-loading"><mat-spinner diameter="40" /><p>Loading chargebacks...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="cb-error"><span class="material-symbols-outlined">error</span><p>Failed to load chargebacks.</p><button type="button" class="cb-btn cb-btn--primary" (click)="load()">Retry</button></div>
+  } @else if (pageState() === 'empty') {
+    <div class="cb-empty"><span class="material-symbols-outlined">gavel</span><p>No chargebacks found</p></div>
+  } @else {
+    <div class="cb-table-wrap">
+      <table class="cb-table">
+        <thead>
+          <tr>
+            <th>Ref</th>
+            <th>Transaction</th>
+            <th>Merchant</th>
+            <th>Customer</th>
+            <th>Reason</th>
+            <th>Network</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Evidence Due</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (c of items(); track c.id) {
+            <tr>
+              <td><a [routerLink]="['/chargebacks', c.id]">{{ c.disputeRef }}</a></td>
+              <td><a [routerLink]="['/transactions', c.transactionId]">{{ c.transactionRef }}</a></td>
+              <td><a [routerLink]="['/merchants', c.merchantId]">{{ c.merchantName || '—' }}</a></td>
+              <td>@if (c.customerId) { <a [routerLink]="['/customers', c.customerId]">{{ c.customerName }}</a> } @else { — }</td>
+              <td><span [class]="badgeClass(c.reasonCode)">{{ c.reasonCode }}</span></td>
+              <td>{{ c.cardNetwork || '—' }}</td>
+              <td>{{ c.amount | currency:c.currency:'symbol':'1.2-2' }}</td>
+              <td><span [class]="badgeClass(c.status)">{{ c.status }}</span></td>
+              <td>{{ c.evidenceDueAt ? (c.evidenceDueAt | date:'mediumDate') : '—' }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+      <div class="cb-pagination">
+        <span>Page {{ page() }} of {{ totalPages() }} ({{ total() }} total)</span>
+        <div>
+          <button type="button" class="cb-btn cb-btn--secondary" [disabled]="page() <= 1" (click)="onPageChange(page() - 1)">Previous</button>
+          <button type="button" class="cb-btn cb-btn--secondary" [disabled]="page() >= totalPages()" (click)="onPageChange(page() + 1)">Next</button>
+        </div>
+      </div>
+    </div>
+  }
+</div>

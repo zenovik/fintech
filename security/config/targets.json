@@ -1,0 +1,22 @@
+{
+  "frontend": {
+    "url": "http://localhost:4200",
+    "includePaths": ["/", "/auth/login", "/auth/forgot-password"]
+  },
+  "backend": {
+    "url": "http://localhost:3000",
+    "openapi": "http://localhost:3000/api/docs/swagger.json",
+    "includePaths": [
+      "/api/auth/login",
+      "/api/auth/csrf-token",
+      "/api/auth/forgot-password",
+      "/api/v1/public/checkout",
+      "/api/v1/public/payment-links",
+      "/api/v1/public/qr-payments",
+      "/api/v1/developer",
+      "/api/v1/webhooks",
+      "/api/v1/sandbox",
+      "/api/docs"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+<div class="sup-page">
+  <div class="sup-page__header"><div><h1 class="sup-page__title">New Support Ticket</h1></div><a routerLink="/support" class="sup-btn sup-btn--secondary">Back</a></div>
+  @if (error()) { <p style="color:#b42318;margin-bottom:16px">{{ error() }}</p> }
+  <div class="sup-card"><form (ngSubmit)="submit()">
+    <div class="sup-form-grid">
+      <div><label>Subject *</label><input type="text" [(ngModel)]="subject" name="subject" required /></div>
+      <div><label>Priority</label><select [(ngModel)]="priority" name="priority">@for (p of priorities; track p.key) { <option [value]="p.key">{{ p.label }}</option> }</select></div>
+      <div><label>Merchant ID</label><input type="number" [(ngModel)]="merchantId" name="merchantId" /></div>
+      <div><label>Customer ID</label><input type="number" [(ngModel)]="customerId" name="customerId" /></div>
+      <div><label>Category</label><input type="text" [(ngModel)]="category" name="category" /></div>
+      <div><label>Related Entity Type</label><input type="text" [(ngModel)]="relatedEntityType" name="relatedEntityType" placeholder="transaction, invoice..." /></div>
+      <div><label>Related Entity ID</label><input type="text" [(ngModel)]="relatedEntityId" name="relatedEntityId" /></div>
+      <div style="grid-column:1/-1"><label>Description *</label><textarea rows="5" [(ngModel)]="description" name="description" required></textarea></div>
+    </div>
+    <div style="margin-top:20px"><button type="submit" class="sup-btn sup-btn--primary" [disabled]="saving()">Create Ticket</button></div>
+  </form></div>
+</div>

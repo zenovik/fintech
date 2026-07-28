@@ -1,0 +1,82 @@
+@use '../../../dashboard/styles/dashboard-tokens' as *;
+@use '../../styles/notifications-shared' as *;
+
+.notif-broadcast-form {
+  @include notif-surface;
+  margin-bottom: 24px;
+
+  h3 { margin: 0 0 16px; font-size: 18px; }
+
+  label {
+    display: block;
+    margin-bottom: 16px;
+
+    span {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: $dash-outline;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid $dash-outline-variant;
+      border-radius: 8px;
+      font-size: 14px;
+      box-sizing: border-box;
+      background: $dash-surface-container-low;
+
+      &:focus { outline: none; border-color: $dash-primary; }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+}
+
+.notif-broadcast-search {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+
+  input {
+    flex: 1;
+    max-width: 400px;
+    padding: 8px 16px;
+    border: 1px solid $dash-outline-variant;
+    border-radius: 999px;
+    font-size: 14px;
+  }
+}
+
+.notif-broadcast-list { display: flex; flex-direction: column; gap: 8px; }
+
+.notif-broadcast-item {
+  @include notif-surface;
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background: rgba($dash-primary, 0.1);
+    color: $dash-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  h4 { margin: 0 0 4px; font-size: 16px; font-weight: 700; }
+  p { margin: 0 0 8px; font-size: 14px; color: $dash-outline; }
+
+  &__meta { font-size: 12px; color: $dash-outline; }
+}

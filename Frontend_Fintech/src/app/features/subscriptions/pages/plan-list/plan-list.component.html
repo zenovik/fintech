@@ -1,0 +1,56 @@
+<div class="sub-page">
+  <div class="sub-page__header">
+    <div>
+      <h1 class="sub-page__title">Subscription Plans</h1>
+      <p class="sub-page__subtitle">Define pricing and billing intervals for recurring subscriptions.</p>
+    </div>
+    @if (rbac.hasPermission(perms.SUBSCRIPTIONS_WRITE)) {
+      <a routerLink="/subscriptions/plans/create" class="sub-btn sub-btn--primary">New Plan</a>
+    }
+  </div>
+
+  <div class="sub-tabs">
+    <a routerLink="/subscriptions" routerLinkActive="active">Dashboard</a>
+    <a routerLink="/subscriptions/plans" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Plans</a>
+  </div>
+
+  <div class="sub-filters">
+    <input type="text" placeholder="Search plans..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+    <input type="number" placeholder="Merchant ID" [(ngModel)]="merchantFilter" (keyup.enter)="onSearch()" />
+    <button type="button" class="sub-btn sub-btn--secondary" (click)="onSearch()">Search</button>
+  </div>
+
+  @if (pageState() === 'loading') {
+    <div class="sub-loading"><mat-spinner diameter="40" /><p>Loading plans...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="sub-error"><span class="material-symbols-outlined">error</span><p>Failed to load plans.</p><button type="button" class="sub-btn sub-btn--primary" (click)="load()">Retry</button></div>
+  } @else if (pageState() === 'empty') {
+    <div class="sub-empty"><span class="material-symbols-outlined">sell</span><p>No plans found</p></div>
+  } @else {
+    <div class="sub-table-wrap">
+      <table class="sub-table">
+        <thead><tr><th>Code</th><th>Name</th><th>Merchant</th><th>Price</th><th>Interval</th><th>Trial</th><th>Status</th></tr></thead>
+        <tbody>
+          @for (plan of items(); track plan.id) {
+            <tr>
+              <td>{{ plan.planCode }}</td>
+              <td>{{ plan.name }}</td>
+              <td><a [routerLink]="['/merchants', plan.merchantId]">{{ plan.merchantName }}</a></td>
+              <td>{{ plan.price | currency:plan.currency:'symbol':'1.2-2' }}</td>
+              <td>{{ plan.billingInterval }}</td>
+              <td>{{ plan.trialDays }} days</td>
+              <td>{{ plan.status }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+      <div class="sub-pagination">
+        <span>Page {{ page() }} of {{ totalPages() }} ({{ total() }} total)</span>
+        <div>
+          <button type="button" class="sub-btn sub-btn--secondary" [disabled]="page() <= 1" (click)="onPageChange(page() - 1)">Previous</button>
+          <button type="button" class="sub-btn sub-btn--secondary" [disabled]="page() >= totalPages()" (click)="onPageChange(page() + 1)">Next</button>
+        </div>
+      </div>
+    </div>
+  }
+</div>

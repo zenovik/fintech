@@ -1,0 +1,40 @@
+<div class="rpt-page">
+  @if (loading) {
+    <div class="rpt-page__loading"><mat-spinner diameter="48"></mat-spinner></div>
+  } @else {
+    <div class="page-header">
+      <div>
+        <nav class="breadcrumb"><a routerLink="/reports">Reports</a><span class="material-symbols-outlined">chevron_right</span><span class="breadcrumb__active">{{ editId ? 'Edit' : 'New' }} Report</span></nav>
+        <h1>Report Builder</h1>
+      </div>
+    </div>
+    <div class="form-card">
+      <div class="form-group"><label>Name</label><input type="text" [(ngModel)]="name" placeholder="Report name" /></div>
+      <div class="form-group"><label>Description</label><textarea [(ngModel)]="description" rows="3" placeholder="Optional description"></textarea></div>
+      <div class="form-row">
+        <div class="form-group"><label>Template</label>
+          <select [(ngModel)]="templateId"><option [ngValue]="null">Custom</option>
+            @for (t of templates; track t.id) { <option [ngValue]="t.id">{{ t.name }}</option> }
+          </select>
+        </div>
+        <div class="form-group"><label>Category</label>
+          <select [(ngModel)]="categoryId"><option [ngValue]="null">None</option>
+            @for (c of categories; track c.id) { <option [ngValue]="c.id">{{ c.name }}</option> }
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Status</label>
+          <select [(ngModel)]="status">@for (s of statuses; track s) { <option [value]="s">{{ s }}</option> }</select>
+        </div>
+        <div class="form-group"><label>Default Period</label>
+          <select [(ngModel)]="period">@for (p of periods; track p) { <option [value]="p">{{ p }}</option> }</select>
+        </div>
+      </div>
+      <div class="form-actions">
+        <a routerLink="/reports" class="btn btn--outline">Cancel</a>
+        <button type="button" class="btn btn--primary" [disabled]="saving" (click)="onSave()">{{ saving ? 'Saving...' : 'Save Report' }}</button>
+      </div>
+    </div>
+  }
+</div>

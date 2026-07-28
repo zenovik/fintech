@@ -1,0 +1,65 @@
+@if (pageState() === 'loading') {
+  <div class="ref-loading"><mat-spinner diameter="40" /></div>
+} @else if (pageState() === 'error') {
+  <div class="ref-error"><p>Refund not found.</p><a routerLink="/refunds" class="ref-btn ref-btn--primary">Back to Queue</a></div>
+} @else if (refund()) {
+  <div class="ref-page">
+    <div class="ref-page__header">
+      <div>
+        <a routerLink="/refunds" style="font-size:13px;color:#667085;text-decoration:none">← Refund Queue</a>
+        <h1 class="ref-page__title">{{ r.refundRef }}</h1>
+        <p class="ref-page__subtitle">{{ r.refundType | titlecase }} refund · <span [class]="badgeClass(r.status)">{{ r.status }}</span></p>
+      </div>
+      @if (r.status === 'pending' && rbac.hasPermission(perms.REFUNDS_APPROVE)) {
+        <div style="display:flex;gap:8px">
+          <button type="button" class="ref-btn ref-btn--success" [disabled]="saving()" (click)="approve()">Approve</button>
+        </div>
+      }
+    </div>
+
+    <div class="ref-stats">
+      <div class="ref-stats__card"><label>Amount</label><strong>{{ r.amount | currency:r.currency:'symbol':'1.2-2' }}</strong></div>
+      <div class="ref-stats__card"><label>Transaction</label><strong><a [routerLink]="['/transactions', r.transactionId]">{{ r.transactionRef }}</a></strong></div>
+      <div class="ref-stats__card"><label>Merchant</label><strong>{{ r.merchantName || '—' }}</strong></div>
+      <div class="ref-stats__card"><label>Customer</label><strong>@if (r.customerId) { <a [routerLink]="['/customers', r.customerId]">{{ r.customerName }}</a> } @else { — }</strong></div>
+    </div>
+
+    <div class="ref-card">
+      <h3>Refund Details</h3>
+      <div class="ref-form-grid">
+        <div><label>Reason</label><p>{{ r.reason || '—' }}</p></div>
+        <div><label>Requested By</label><p>{{ r.requestedByName || '—' }}</p></div>
+        <div><label>Created</label><p>{{ r.createdAt | date:'medium' }}</p></div>
+        <div><label>Processed</label><p>{{ r.processedAt ? (r.processedAt | date:'medium') : '—' }}</p></div>
+        @if (r.rejectionReason) {
+          <div style="grid-column:1/-1"><label>Rejection Reason</label><p>{{ r.rejectionReason }}</p></div>
+        }
+      </div>
+    </div>
+
+    @if (r.status === 'pending' && rbac.hasPermission(perms.REFUNDS_APPROVE)) {
+      <div class="ref-card">
+        <h3>Reject Refund</h3>
+        <textarea [(ngModel)]="rejectReason" rows="3" placeholder="Rejection reason (required)"></textarea>
+        <button type="button" class="ref-btn ref-btn--danger" style="margin-top:12px" [disabled]="saving() || !rejectReason.trim()" (click)="reject()">Reject</button>
+      </div>
+    }
+
+    <div class="ref-card">
+      <h3>Refund History</h3>
+      @if (!r.history.length) {
+        <p>No history recorded.</p>
+      } @else {
+        <div class="ref-timeline">
+          @for (h of r.history; track h.id) {
+            <div class="ref-timeline__item">
+              <time>{{ h.createdAt | date:'medium' }}</time>
+              <p><strong>{{ h.fromStatus || 'new' }} → {{ h.toStatus }}</strong>@if (h.changedByName) { by {{ h.changedByName }} }</p>
+              @if (h.reason) { <p>{{ h.reason }}</p> }
+            </div>
+          }
+        </div>
+      }
+    </div>
+  </div>
+}

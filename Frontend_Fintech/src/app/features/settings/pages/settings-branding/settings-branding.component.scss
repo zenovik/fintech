@@ -1,0 +1,17 @@
+@use '../../styles/settings-shared';
+
+mat-form-field { width: 100%; }
+
+.color-field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: inherit;
+  opacity: 0.7;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.settings-actions mat-spinner {
+  display: inline-block;
+}

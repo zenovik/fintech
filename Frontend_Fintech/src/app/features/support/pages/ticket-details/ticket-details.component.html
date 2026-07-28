@@ -1,0 +1,61 @@
+<div class="sup-page">
+  @if (pageState() === 'loading') { <div class="sup-loading"><mat-spinner diameter="40" /></div> }
+  @else if (pageState() === 'error') { <div class="sup-error"><p>Failed to load ticket.</p><button type="button" class="sup-btn sup-btn--primary" (click)="load()">Retry</button></div> }
+  @else {
+    <div class="sup-page__header">
+      <div><h1 class="sup-page__title">{{ t.subject }}</h1>
+        <p class="sup-page__subtitle">{{ t.ticketRef }} · <span [class]="badgeClass(t.status)">{{ t.status }}</span> · <span [class]="badgeClass(t.priority)">{{ t.priority }}</span></p></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        @if (rbac.hasPermission(perms.SUPPORT_WRITE)) { <a [routerLink]="['/support', t.id, 'edit']" class="sup-btn sup-btn--secondary">Edit</a> }
+        @if (rbac.hasPermission(perms.SUPPORT_MANAGE)) {
+          @if (t.status !== 'closed') { <button type="button" class="sup-btn sup-btn--danger" [disabled]="saving()" (click)="close()">Close</button> }
+          @if (t.status === 'closed') { <button type="button" class="sup-btn sup-btn--success" [disabled]="saving()" (click)="reopen()">Reopen</button> }
+        }
+        <a routerLink="/support" class="sup-btn sup-btn--secondary">Back</a>
+      </div>
+    </div>
+    <div class="sup-card"><h3>Details</h3>
+      <dl class="sup-detail-grid">
+        <div><dt>Merchant</dt><dd>@if (t.merchantId) { <a [routerLink]="['/merchants', t.merchantId]">{{ t.merchantName }}</a> } @else { — }</dd></div>
+        <div><dt>Customer</dt><dd>@if (t.customerId) { <a [routerLink]="['/customers', t.customerId]">{{ t.customerName }}</a> } @else { — }</dd></div>
+        <div><dt>Assignee</dt><dd>{{ t.assigneeName || 'Unassigned' }}</dd></div>
+        <div><dt>SLA Due</dt><dd>{{ t.slaDueAt ? (t.slaDueAt | date:'medium') : '—' }} @if (t.slaBreached) { (Breached) }</dd></div>
+        <div><dt>Related</dt><dd>@if (t.relatedEntityType) { {{ t.relatedEntityType }} #{{ t.relatedEntityId }} } @else { — }</dd></div>
+        <div><dt>Created</dt><dd>{{ t.createdAt | date:'medium' }}</dd></div>
+      </dl>
+      <p style="margin-top:12px;font-size:14px">{{ t.description }}</p>
+    </div>
+    @if (rbac.hasPermission(perms.SUPPORT_MANAGE)) {
+      <div class="sup-card"><h3>Actions</h3>
+        <div class="sup-form-grid">
+          <div><label>Assignee User ID</label><input type="number" [(ngModel)]="assigneeId" /></div>
+          <div style="display:flex;align-items:flex-end;gap:8px"><button type="button" class="sup-btn sup-btn--secondary" [disabled]="saving()" (click)="assign()">Assign</button>
+          <button type="button" class="sup-btn sup-btn--secondary" [disabled]="saving()" (click)="escalate()">Escalate</button></div>
+          <div style="grid-column:1/-1"><label>Escalation Reason</label><input type="text" [(ngModel)]="escalateReason" /></div>
+        </div>
+      </div>
+    }
+    <div class="sup-card"><h3>Internal Notes</h3>
+      @if (rbac.hasPermission(perms.SUPPORT_WRITE)) {
+        <div style="display:flex;gap:8px;margin-bottom:12px"><input type="text" style="flex:1" [(ngModel)]="noteBody" placeholder="Add internal note..." />
+        <button type="button" class="sup-btn sup-btn--primary" [disabled]="saving()" (click)="addNote()">Add</button></div>
+      }
+      @for (n of t.notes; track n.id) {
+        <div style="padding:10px 0;border-bottom:1px solid #e2e8f0;font-size:14px">
+          <strong>{{ n.authorName || 'System' }}</strong> @if (n.isInternal) { <span class="sup-badge sup-badge--assigned">Internal</span> }
+          <p style="margin:6px 0 0">{{ n.body }}</p><time style="font-size:12px;color:#64748b">{{ n.createdAt | date:'medium' }}</time>
+        </div>
+      }
+    </div>
+    @if (t.attachments.length) {
+      <div class="sup-card"><h3>Attachments</h3>
+        <ul>@for (a of t.attachments; track a.id) { <li>{{ a.fileName }} ({{ a.mimeType }}, {{ a.fileSize }} bytes)</li> }</ul>
+      </div>
+    }
+    <div class="sup-card"><h3>Activity Timeline</h3>
+      <ul class="sup-timeline">@for (a of t.activities; track a.id) {
+        <li><strong>{{ a.summary }}</strong> · {{ a.actorName || 'System' }}<time>{{ a.createdAt | date:'medium' }}</time></li>
+      }</ul>
+    </div>
+  }
+</div>

@@ -1,0 +1,164 @@
+<div class="stl-page">
+  @if (state.pageState() === 'loading' && !state.settlements().length) {
+    <div class="stl-page__loading">
+      <mat-spinner diameter="48"></mat-spinner>
+      <p>Loading settlements...</p>
+    </div>
+  } @else if (state.pageState() === 'error') {
+    <div class="stl-page__error">
+      <span class="material-symbols-outlined">error</span>
+      <h3>Unable to load settlements</h3>
+      <p>{{ state.errorMessage() }}</p>
+      <button type="button" class="btn btn--primary" (click)="state.retry()">Retry</button>
+    </div>
+  } @else {
+    <div class="page-header">
+      <div>
+        <nav class="breadcrumb">
+          <a routerLink="/dashboard/executive">Home</a>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <span class="breadcrumb__active">Settlements</span>
+        </nav>
+        <h1>Settlement Dashboard</h1>
+        <p class="page-header__subtitle">Real-time overview of fund settlements and payout statuses.</p>
+      </div>
+      <div class="page-header__actions">
+        <a routerLink="/settlements/batches" class="btn btn--outline">
+          <span class="material-symbols-outlined">layers</span> Batches
+        </a>
+        @if (rbac.hasPermission(perms.SETTLEMENTS_EXPORT)) {
+          <div class="export-wrap">
+            <button type="button" class="btn btn--outline" (click)="showExportMenu = !showExportMenu">
+              <span class="material-symbols-outlined">download</span> Export Report
+            </button>
+            @if (showExportMenu) {
+              <div class="export-menu">
+                <button type="button" (click)="onExport('csv')">Export as CSV</button>
+              </div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+
+    @if (state.statistics(); as stats) {
+      <div class="stat-cards">
+        <div class="stat-card stat-card--featured">
+          <span class="stat-card__label">Total Volume</span>
+          <span class="stat-card__value">{{ stats.totalVolume | currency: 'USD' : 'symbol' : '1.0-0' }}</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__label">Pending Settlements</span>
+          <span class="stat-card__value stat-card__value--amber">{{ stats.pending }}</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__label">Processed</span>
+          <span class="stat-card__value stat-card__value--green">{{ stats.processed }}</span>
+        </div>
+        <div class="stat-card stat-card--dark">
+          <span class="stat-card__label">Total Settlements</span>
+          <span class="stat-card__value">{{ stats.total }}</span>
+        </div>
+      </div>
+    }
+
+    <div class="filters">
+      <div class="filter-card filter-card--search">
+        <span class="material-symbols-outlined">search</span>
+        <input type="text" placeholder="Search by settlement ref, merchant..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+      </div>
+      <div class="filter-card">
+        <label>Status</label>
+        <select [(ngModel)]="statusFilter" (change)="onApplyFilters()">
+          <option value="">All Statuses</option>
+          @for (s of statuses; track s) {
+            <option [value]="s">{{ s | titlecase }}</option>
+          }
+        </select>
+      </div>
+      <div class="filter-card">
+        <label>Date From</label>
+        <input type="date" [(ngModel)]="dateFrom" (change)="onApplyFilters()" />
+      </div>
+      <div class="filter-card">
+        <label>Date To</label>
+        <input type="date" [(ngModel)]="dateTo" (change)="onApplyFilters()" />
+      </div>
+      <button type="button" class="icon-btn" title="Refresh" (click)="state.loadSettlements()">
+        <span class="material-symbols-outlined">refresh</span>
+      </button>
+    </div>
+
+    @if (state.isEmpty()) {
+      <div class="empty-state">
+        <span class="material-symbols-outlined">account_balance</span>
+        <h3>{{ state.hasFilters() ? 'No settlements match your filters' : 'No settlements yet' }}</h3>
+        <p>Try adjusting your search or filter criteria.</p>
+        @if (state.hasFilters()) {
+          <button type="button" class="btn btn--outline" (click)="onClearFilters()">Clear Filters</button>
+        }
+      </div>
+    } @else {
+      <div class="table-card">
+        <div class="table-toolbar">
+          <span>Showing {{ pageRangeStart() }}-{{ pageRangeEnd() }} of {{ state.totalItems() }} settlements</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Settlement Ref</th>
+                <th>Merchant</th>
+                <th>Batch</th>
+                <th>Gross</th>
+                <th>Fees</th>
+                <th>Net Amount</th>
+                <th>Status</th>
+                <th>Processed</th>
+                <th class="col-actions">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (s of state.settlements(); track s.id) {
+                <tr>
+                  <td><a [routerLink]="['/settlements', s.id]" class="stl-ref">{{ s.settlementRef }}</a></td>
+                  <td>{{ s.merchant.name }}</td>
+                  <td>
+                    @if (s.batch) {
+                      <a [routerLink]="['/settlements/batches', s.batch.id]">{{ s.batch.batchRef }}</a>
+                    } @else { — }
+                  </td>
+                  <td>{{ s.grossAmount | currency: s.currency }}</td>
+                  <td>{{ s.feeAmount | currency: s.currency }}</td>
+                  <td class="amount">{{ s.formattedAmount }}</td>
+                  <td><span class="status-badge status-badge--{{ statusClass(s.status) }}">{{ s.status | titlecase }}</span></td>
+                  <td>
+                    @if (s.processedAt) {
+                      <div class="date-cell">
+                        <span>{{ s.processedAt | date: 'MMM d, y' }}</span>
+                        <small>{{ s.processedAt | date: 'HH:mm' }}</small>
+                      </div>
+                    } @else { — }
+                  </td>
+                  <td class="col-actions">
+                    <a [routerLink]="['/settlements', s.id]" class="link-btn">View Details</a>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <button type="button" class="btn btn--outline btn--sm" [disabled]="state.currentPage() <= 1" (click)="goToPage(state.currentPage() - 1)">Previous</button>
+          <span>Page {{ state.currentPage() }} of {{ state.totalPages() || 1 }}</span>
+          <button type="button" class="btn btn--outline btn--sm" [disabled]="state.currentPage() >= state.totalPages()" (click)="goToPage(state.currentPage() + 1)">Next</button>
+          <select [ngModel]="state.pageSize()" (ngModelChange)="state.setPageSize($event)">
+            @for (size of pageSizeOptions; track size) {
+              <option [value]="size">{{ size }} per page</option>
+            }
+          </select>
+        </div>
+      </div>
+    }
+  }
+</div>

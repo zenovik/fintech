@@ -1,0 +1,7 @@
+@use '../../styles/chargebacks-shared';
+
+.cb-tabs button.cb-tabs--active {
+  background: var(--dash-primary, #2563eb);
+  color: #fff;
+  border-color: var(--dash-primary, #2563eb);
+}

@@ -1,0 +1,143 @@
+<div class="rpt-page">
+  @if (state.pageState() === 'loading') {
+    <div class="rpt-page__loading"><mat-spinner diameter="48"></mat-spinner><p>Loading analytics...</p></div>
+  } @else if (state.pageState() === 'error') {
+    <div class="rpt-page__error">
+      <span class="material-symbols-outlined">error</span>
+      <h3>Unable to load analytics</h3>
+      <p>{{ state.errorMessage() }}</p>
+      <button type="button" class="btn btn--primary" (click)="state.retryAnalytics()">Retry</button>
+    </div>
+  } @else {
+    <div class="page-header">
+      <div>
+        <nav class="breadcrumb">
+          <a routerLink="/dashboard/executive">Home</a>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <a routerLink="/reports">Reports</a>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <span class="breadcrumb__active">Analytics</span>
+        </nav>
+        <h1>Analytics Dashboard</h1>
+        <p class="page-header__subtitle">Revenue, transactions, settlements, and merchant insights.</p>
+      </div>
+      <div class="page-header__actions">
+        <div class="period-tabs">
+          @for (p of periods; track p) {
+            <button type="button" class="period-tab" [class.period-tab--active]="state.period() === p" (click)="onPeriodChange(p)">{{ p | titlecase }}</button>
+          }
+        </div>
+        @if (rbac.hasPermission(perms.ANALYTICS_EXPORT)) {
+          <div class="export-wrap">
+            <button type="button" class="btn btn--outline" (click)="showExportMenu = !showExportMenu">
+              <span class="material-symbols-outlined">download</span> Export
+            </button>
+            @if (showExportMenu) {
+              <div class="export-menu">
+                <button type="button" (click)="onExport('csv')">CSV</button>
+                <button type="button" (click)="onExport('xlsx')">Excel</button>
+                <button type="button" (click)="onExport('pdf')">PDF</button>
+              </div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+
+    @if (state.overview(); as ov) {
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <span class="kpi-card__label">Total Revenue</span>
+          <span class="kpi-card__value">{{ ov.kpis.totalRevenue.value | number:'1.0-0' }}</span>
+          <span class="kpi-card__change" [class.positive]="ov.kpis.totalRevenue.changePct >= 0">{{ ov.kpis.totalRevenue.changePct }}%</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-card__label">Transactions</span>
+          <span class="kpi-card__value">{{ ov.kpis.totalTransactions.value | number }}</span>
+          <span class="kpi-card__change">{{ ov.kpis.totalTransactions.changePct }}%</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-card__label">Active Merchants</span>
+          <span class="kpi-card__value">{{ ov.kpis.activeMerchants.value | number }}</span>
+          <span class="kpi-card__sub">+{{ ov.kpis.activeMerchants.new30d }} new</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-card__label">Success Rate</span>
+          <span class="kpi-card__value">{{ ov.kpis.successRate.value }}%</span>
+        </div>
+      </div>
+    }
+
+    <div class="charts-grid">
+      <div class="chart-card chart-card--large">
+        <h3>Revenue Trend</h3>
+        @if (state.revenueChart(); as chart) {
+          <svg viewBox="0 0 600 200" class="area-chart">
+            <path [attr.d]="revenuePath()" fill="url(#revenueGrad)" opacity="0.3"></path>
+            <polyline [attr.points]="revenueLinePoints()" fill="none" stroke="#3b5bdb" stroke-width="2"></polyline>
+            <defs><linearGradient id="revenueGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3b5bdb"/><stop offset="100%" stop-color="#3b5bdb" stop-opacity="0"/></linearGradient></defs>
+          </svg>
+          <div class="chart-labels">@for (l of chart.labels; track l) { <span>{{ l }}</span> }</div>
+        }
+      </div>
+
+      <div class="chart-card">
+        <h3>Payment Methods</h3>
+        <div class="donut-wrap">
+          <svg viewBox="0 0 100 100" class="donut-chart">
+            @for (seg of donutSegments(); track $index) {
+              <circle cx="50" cy="50" r="40" fill="none" [attr.stroke]="seg.color" stroke-width="12"
+                [attr.stroke-dasharray]="seg.dash + ' 251.2'" [attr.stroke-dashoffset]="-seg.offset"></circle>
+            }
+          </svg>
+          <ul class="donut-legend">
+            @for (s of state.paymentMethods(); track s.code) {
+              <li><span>{{ s.name }}</span><strong>{{ s.percentage }}%</strong></li>
+            }
+          </ul>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <h3>Regional Analytics</h3>
+        @for (r of state.regionalData(); track r.code) {
+          <div class="region-bar">
+            <div class="region-bar__header"><span>{{ r.name }}</span><strong>{{ r.percentage }}%</strong></div>
+            <div class="region-bar__track"><div class="region-bar__fill" [style.width.%]="r.percentage"></div></div>
+          </div>
+        }
+      </div>
+
+      <div class="chart-card">
+        <h3>Top Merchants</h3>
+        <table class="mini-table">
+          <thead><tr><th>Merchant</th><th>Volume</th></tr></thead>
+          <tbody>
+            @for (m of state.topMerchants(); track m.id) {
+              <tr><td>{{ m.name }}</td><td>{{ m.totalVolume | number:'1.0-0' }}</td></tr>
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <div class="chart-card">
+        <h3>Settlement Trend</h3>
+        @if (state.settlementData(); as sd) {
+          @for (s of sd.byStatus; track s.status) {
+            <div class="settlement-stat"><span>{{ s.status | titlecase }}</span><strong>{{ s.count }} ({{ s.volume | number:'1.0-0' }})</strong></div>
+          }
+        }
+      </div>
+
+      <div class="chart-card">
+        <h3>Customer Analytics</h3>
+        @if (state.customerStats(); as cs) {
+          <div class="customer-stats">
+            <div><span>Unique Customers</span><strong>{{ cs.uniqueCustomers | number }}</strong></div>
+            <div><span>Total Transactions</span><strong>{{ cs.totalTransactions | number }}</strong></div>
+          </div>
+        }
+      </div>
+    </div>
+  }
+</div>

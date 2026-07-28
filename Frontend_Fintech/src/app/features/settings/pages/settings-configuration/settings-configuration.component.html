@@ -1,0 +1,40 @@
+<div class="cfg-page">
+  <h2>Configuration Center</h2>
+  <p>Manage settlement cycles, risk thresholds, pricing defaults, workflow stages, and merchant code patterns.</p>
+
+  @if (pageState() === 'loading') {
+    <div class="cfg-loading"><mat-spinner diameter="40" /></div>
+  } @else if (pageState() === 'error') {
+    <div class="cfg-error"><p>Failed to load configuration.</p><button type="button" (click)="load()">Retry</button></div>
+  } @else {
+    <div class="cfg-filter">
+      <select [(ngModel)]="groupFilter" (ngModelChange)="load()">
+        <option value="">All groups</option>
+        <option value="settlement">Settlement</option>
+        <option value="risk">Risk</option>
+        <option value="pricing">Pricing</option>
+        <option value="merchant">Merchant</option>
+        <option value="workflow">Workflow</option>
+      </select>
+    </div>
+
+    @for (item of items(); track item.key) {
+      <article class="cfg-card">
+        <header>
+          <div>
+            <h3>{{ item.key }}</h3>
+            <span class="cfg-group">{{ item.group | titlecase }}</span>
+          </div>
+          <time>{{ item.updatedAt | date:'medium' }}</time>
+        </header>
+        @if (item.description) { <p class="cfg-desc">{{ item.description }}</p> }
+        <textarea rows="4" [(ngModel)]="editValues[item.key]" [readonly]="!rbac.hasPermission(perms.PLATFORM_CONFIG_WRITE)"></textarea>
+        @if (rbac.hasPermission(perms.PLATFORM_CONFIG_WRITE)) {
+          <button type="button" class="cfg-save" [disabled]="saving()" (click)="save(item)">Save</button>
+        }
+      </article>
+    } @empty {
+      <p class="cfg-empty">No configuration entries found.</p>
+    }
+  }
+</div>

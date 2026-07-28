@@ -1,0 +1,25 @@
+@use '../../styles/settings-shared';
+@use '../../../dashboard/styles/dashboard-tokens' as *;
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.overview-card {
+  background: $dash-surface;
+  border: 1px solid $dash-outline-variant;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .material-symbols-outlined { color: #003ec7; }
+  strong { font-size: 15px; }
+  span:last-child { font-size: 13px; color: $dash-outline; }
+}

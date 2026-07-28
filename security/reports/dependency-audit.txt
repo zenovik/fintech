@@ -1,0 +1,6 @@
+Dependency Audit Summary
+========================
+
+.: critical=1 high=47 moderate=12 low=3
+Backend_Fintech: critical=0 high=6 moderate=1 low=1
+Frontend_Fintech: critical=1 high=41 moderate=12 low=3

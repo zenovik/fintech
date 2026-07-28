@@ -1,0 +1,109 @@
+<div class="inv-page">
+  @if (pageState() === 'loading') {
+    <div class="inv-loading"><mat-spinner diameter="40" /><p>Loading invoice...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="inv-error"><span class="material-symbols-outlined">error</span><p>Failed to load invoice.</p><button type="button" class="inv-btn inv-btn--primary" (click)="load()">Retry</button></div>
+  } @else {
+    <div class="inv-page__header">
+      <div>
+        <h1 class="inv-page__title">{{ inv.invoiceNumber }}</h1>
+        <p class="inv-page__subtitle"><span [class]="badgeClass(inv.status)">{{ inv.status }}</span> · Due {{ inv.dueDate | date:'mediumDate' }}</p>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        @if (rbac.hasPermission(perms.INVOICES_WRITE) && inv.status === 'draft') {
+          <a [routerLink]="['/invoices', inv.id, 'edit']" class="inv-btn inv-btn--secondary">Edit</a>
+        }
+        @if (rbac.hasPermission(perms.INVOICES_MANAGE)) {
+          @if (inv.status === 'draft') { <button type="button" class="inv-btn inv-btn--primary" [disabled]="saving()" (click)="send()">Mark Sent</button> }
+          @if (['sent','viewed','partially_paid','overdue'].includes(inv.status)) {
+            <button type="button" class="inv-btn inv-btn--success" [disabled]="saving()" (click)="markPaid()">Mark Paid</button>
+            <button type="button" class="inv-btn inv-btn--secondary" [disabled]="saving()" (click)="markOverdue()">Mark Overdue</button>
+          }
+          <button type="button" class="inv-btn inv-btn--secondary" [disabled]="saving()" (click)="email()">Email</button>
+          <button type="button" class="inv-btn inv-btn--secondary" (click)="downloadPdf()">Download PDF</button>
+          <button type="button" class="inv-btn inv-btn--secondary" [disabled]="saving()" (click)="duplicate()">Duplicate</button>
+          @if (!['voided','cancelled','paid'].includes(inv.status)) {
+            <button type="button" class="inv-btn inv-btn--danger" [disabled]="saving()" (click)="cancel()">Cancel</button>
+            <button type="button" class="inv-btn inv-btn--danger" [disabled]="saving()" (click)="voidInv()">Void</button>
+          }
+        }
+        <a routerLink="/invoices" class="inv-btn inv-btn--secondary">Back</a>
+      </div>
+    </div>
+    @if (msg()) { <div class="inv-card" style="color:#027a48">{{ msg() }}</div> }
+
+    <div class="inv-card">
+      <h3>Summary</h3>
+      <dl class="inv-detail-grid">
+        <div><dt>Customer</dt><dd><a [routerLink]="['/customers', inv.customerId]">{{ inv.customerName }}</a></dd></div>
+        <div><dt>Merchant</dt><dd><a [routerLink]="['/merchants', inv.merchantId]">{{ inv.merchantName }}</a></dd></div>
+        <div><dt>Reference</dt><dd>{{ inv.referenceNumber || '—' }}</dd></div>
+        <div><dt>Issue Date</dt><dd>{{ inv.issueDate | date:'mediumDate' }}</dd></div>
+        <div><dt>Subtotal</dt><dd>{{ inv.subtotal | currency:inv.currency:'symbol':'1.2-2' }}</dd></div>
+        <div><dt>Tax</dt><dd>{{ inv.taxAmount | currency:inv.currency:'symbol':'1.2-2' }}</dd></div>
+        <div><dt>Discount</dt><dd>{{ inv.discountAmount | currency:inv.currency:'symbol':'1.2-2' }}</dd></div>
+        <div><dt>Total</dt><dd><strong>{{ inv.total | currency:inv.currency:'symbol':'1.2-2' }}</strong></dd></div>
+        <div><dt>Paid</dt><dd>{{ inv.amountPaid | currency:inv.currency:'symbol':'1.2-2' }}</dd></div>
+        <div><dt>Balance Due</dt><dd><strong>{{ inv.balanceDue | currency:inv.currency:'symbol':'1.2-2' }}</strong></dd></div>
+      </dl>
+      @if (inv.notes) { <p style="margin-top:12px;font-size:14px">{{ inv.notes }}</p> }
+    </div>
+
+    <div class="inv-card">
+      <h3>Line Items</h3>
+      <table class="inv-line-items">
+        <thead><tr><th>Description</th><th>Qty</th><th>Unit</th><th>Tax</th><th>Disc</th><th>Total</th></tr></thead>
+        <tbody>
+          @for (li of inv.lineItems; track li.id ?? li.description) {
+            <tr>
+              <td>{{ li.description }}</td>
+              <td>{{ li.quantity }}</td>
+              <td>{{ li.unitPrice | currency:inv.currency:'symbol':'1.2-2' }}</td>
+              <td>{{ li.tax | currency:inv.currency:'symbol':'1.2-2' }}</td>
+              <td>{{ li.discount | currency:inv.currency:'symbol':'1.2-2' }}</td>
+              <td>{{ li.lineTotal | currency:inv.currency:'symbol':'1.2-2' }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <div class="inv-card">
+      <h3>Payment Link</h3>
+      @if (inv.paymentLink) {
+        <p style="font-size:14px">{{ inv.paymentLink.linkRef }} · <span [class]="badgeClass(inv.paymentLink.status ?? '')">{{ inv.paymentLink.status }}</span></p>
+        @if (inv.paymentLink.publicUrl) {
+          <div style="display:flex;gap:8px;margin:8px 0">
+            <input readonly [value]="inv.paymentLink.publicUrl" style="flex:1;padding:8px;font-family:monospace;font-size:13px" />
+            <button type="button" class="inv-btn inv-btn--secondary" (click)="copyLink()">Copy</button>
+          </div>
+        }
+        @if (rbac.hasPermission(perms.INVOICES_MANAGE)) {
+          <button type="button" class="inv-btn inv-btn--secondary" [disabled]="saving()" (click)="regenLink()">Regenerate</button>
+          <button type="button" class="inv-btn inv-btn--danger" [disabled]="saving()" (click)="disableLink()">Disable Link</button>
+        }
+      } @else if (rbac.hasPermission(perms.INVOICES_WRITE) && inv.balanceDue > 0) {
+        <button type="button" class="inv-btn inv-btn--primary" [disabled]="saving()" (click)="genLink()">Generate Payment Link</button>
+      } @else { <p style="color:#64748b">No payment link</p> }
+    </div>
+
+    @if (inv.payments.length) {
+      <div class="inv-card">
+        <h3>Payments</h3>
+        <table class="inv-line-items">
+          <thead><tr><th>Transaction</th><th>Amount</th><th>Method</th><th>Date</th></tr></thead>
+          <tbody>
+            @for (p of inv.payments; track p.id) {
+              <tr>
+                <td>@if (p.transactionId) { <a [routerLink]="['/transactions', p.transactionId]">{{ p.transactionRef }}</a> } @else { — }</td>
+                <td>{{ p.amount | currency:inv.currency:'symbol':'1.2-2' }}</td>
+                <td>{{ p.paymentMethod || '—' }}</td>
+                <td>{{ p.createdAt | date:'medium' }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    }
+  }
+</div>

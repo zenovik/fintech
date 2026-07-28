@@ -1,0 +1,142 @@
+@use '../../dashboard/styles/shared-page-ui' as ui;
+@use '../../dashboard/styles/dashboard-tokens' as *;
+
+@mixin settings-surface {
+  background: $dash-surface;
+  border: 1px solid $dash-outline-variant;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.settings-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 24px;
+  min-height: calc(100vh - 120px);
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.settings-nav {
+  @include settings-surface;
+  padding: 16px;
+  height: fit-content;
+  position: sticky;
+  top: 88px;
+
+  h2 {
+    margin: 0 0 12px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: $dash-outline;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: $dash-on-surface;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 4px;
+
+    &:hover { background: $dash-surface-container; }
+    &.settings-nav__link--active { background: rgba($dash-primary, 0.1); color: $dash-primary; font-weight: 600; }
+  }
+}
+
+.settings-content {
+  min-width: 0;
+}
+
+.settings-card {
+  @include settings-surface;
+  padding: 24px;
+  margin-bottom: 20px;
+
+  h1 { margin: 0 0 4px; font-size: 24px; }
+  .subtitle { margin: 0 0 20px; color: $dash-outline; font-size: 14px; }
+}
+
+.settings-form {
+  display: grid;
+  gap: 16px;
+
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+
+  label { display: block; font-size: 12px; font-weight: 600; color: $dash-outline; margin-bottom: 6px; text-transform: uppercase; }
+  input, select, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid $dash-outline-variant;
+    border-radius: 8px;
+    font-size: 14px;
+    background: $dash-surface;
+  }
+  textarea { min-height: 80px; resize: vertical; }
+}
+
+.settings-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.settings-error, .settings-empty {
+  @include settings-surface;
+  padding: 48px 24px;
+  text-align: center;
+  color: $dash-outline;
+
+  .material-symbols-outlined { font-size: 48px; opacity: 0.4; margin-bottom: 12px; }
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid $dash-outline-variant;
+}
+
+.notif-grid {
+  width: 100%;
+  border-collapse: collapse;
+  th, td { padding: 12px; border-bottom: 1px solid $dash-outline-variant; text-align: center; }
+  th:first-child, td:first-child { text-align: left; }
+}
+
+.flag-card {
+  @include settings-surface;
+  padding: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.btn {
+  &--primary { @include ui.btn-primary; }
+  &--outline { @include ui.btn-outline; }
+  &--sm { padding: 6px 14px; font-size: 13px; }
+  &--danger { @include ui.btn-outline; color: $dash-error; border-color: $dash-error; }
+}
+
+.settings-card--center { text-align: center; padding: 48px 24px; }
+.settings-card--note { background: $dash-surface-container; }
+.color-picker-row { display: flex; align-items: center; gap: 12px; input[type='color'] { width: 48px; height: 36px; padding: 2px; border: 1px solid $dash-outline-variant; border-radius: 8px; cursor: pointer; } }
+.flag-form { @include settings-surface; padding: 16px; margin-bottom: 16px; }
+.filters { display: grid; grid-template-columns: 1fr auto; gap: 12px; margin-bottom: 16px; align-items: end; }
+.filter-card { @include ui.filter-card; }
+.icon-btn { @include ui.icon-btn; }
+.pagination { @include ui.pagination; }

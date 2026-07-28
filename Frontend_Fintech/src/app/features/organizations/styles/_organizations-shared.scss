@@ -1,0 +1,257 @@
+@use '../../dashboard/styles/dashboard-tokens' as *;
+
+@mixin org-surface {
+  background: $dash-surface;
+  border: 1px solid $dash-outline-variant;
+  border-radius: 12px;
+}
+
+.org-page {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px;
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    margin: 0 0 4px;
+    font-size: 30px;
+    font-weight: 600;
+    color: $dash-on-surface;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: 14px;
+    color: $dash-outline;
+  }
+}
+
+.org-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+
+  .material-symbols-outlined { font-size: 18px; }
+
+  &--primary { background: $dash-primary; color: #fff; &:hover { opacity: 0.9; } }
+  &--secondary {
+    background: $dash-surface; color: $dash-on-surface; border-color: $dash-outline-variant;
+    &:hover { background: $dash-surface-container-low; }
+  }
+  &--danger { background: $dash-error-container; color: $dash-error; }
+  &--ghost { background: transparent; color: $dash-primary; border: none; }
+}
+
+.org-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+
+  @media (max-width: 900px) { grid-template-columns: repeat(2, 1fr); }
+
+  &__card {
+    @include org-surface;
+    padding: 16px 20px;
+
+    label {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $dash-outline;
+      margin-bottom: 8px;
+    }
+
+    strong {
+      font-size: 28px;
+      font-weight: 700;
+      color: $dash-on-surface;
+    }
+  }
+}
+
+.org-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+
+  input, select {
+    padding: 8px 12px;
+    border: 1px solid $dash-outline-variant;
+    border-radius: 8px;
+    background: $dash-surface-container-low;
+    font-size: 14px;
+    outline: none;
+    &:focus { border-color: $dash-primary; }
+  }
+
+  input { flex: 1; min-width: 220px; }
+}
+
+.org-table-wrap {
+  @include org-surface;
+  overflow: hidden;
+}
+
+.org-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    background: $dash-surface-container-low;
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $dash-outline;
+    border-bottom: 1px solid $dash-outline-variant;
+  }
+
+  td {
+    padding: 14px 16px;
+    border-bottom: 1px solid $dash-outline-variant;
+    font-size: 14px;
+  }
+
+  tbody tr {
+    cursor: pointer;
+    &:hover { background: $dash-surface-container-low; }
+  }
+}
+
+.org-status {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &--active { background: $dash-success-container; color: $dash-success; }
+  &--pending { background: $dash-warning-container; color: $dash-warning; }
+  &--inactive { background: $dash-surface-container; color: $dash-outline; }
+  &--archived { background: $dash-error-container; color: $dash-error; }
+}
+
+.org-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background: $dash-primary;
+}
+
+.org-loading, .org-error, .org-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 48px;
+  color: $dash-outline;
+  text-align: center;
+
+  .material-symbols-outlined { font-size: 48px; }
+}
+
+.org-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-top: 1px solid $dash-outline-variant;
+  font-size: 13px;
+  color: $dash-outline;
+}
+
+.org-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  color: $dash-outline;
+  margin-bottom: 16px;
+
+  a { color: $dash-primary; text-decoration: none; }
+  .material-symbols-outlined { font-size: 16px; }
+}
+
+.org-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+
+  @media (max-width: 700px) { grid-template-columns: 1fr; }
+
+  &__full { grid-column: 1 / -1; }
+
+  label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: $dash-outline;
+    margin-bottom: 6px;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid $dash-outline-variant;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    &:focus { border-color: $dash-primary; }
+  }
+}
+
+.org-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  border-bottom: 1px solid $dash-outline-variant;
+  margin-bottom: 24px;
+
+  button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 16px;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid transparent;
+    font-size: 12px;
+    font-weight: 600;
+    color: $dash-outline;
+    cursor: pointer;
+
+    &.active {
+      color: $dash-primary;
+      border-bottom-color: $dash-primary;
+    }
+
+    .material-symbols-outlined { font-size: 18px; }
+  }
+}

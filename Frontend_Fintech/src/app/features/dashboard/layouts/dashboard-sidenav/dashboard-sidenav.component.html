@@ -1,0 +1,27 @@
+<aside class="dash-sidenav">
+  <div class="dash-sidenav__brand">
+    <div class="dash-sidenav__logo">
+      <span class="material-symbols-outlined">account_balance</span>
+    </div>
+    <div>
+      <h1>{{ branding.branding().companyName }}</h1>
+      <p>Enterprise Tier</p>
+    </div>
+  </div>
+
+  <nav class="dash-sidenav__nav">
+    @for (item of nav.visibleItems(); track item.route) {
+      <a class="dash-sidenav__link" [routerLink]="item.route" routerLinkActive="dash-sidenav__link--active">
+        <span class="material-symbols-outlined">{{ item.icon }}</span>
+        <span>{{ item.label }}</span>
+      </a>
+    }
+  </nav>
+
+  <div class="dash-sidenav__footer">
+    <button type="button" class="dash-sidenav__upgrade">Upgrade Plan</button>
+    <button type="button" class="dash-sidenav__link dash-sidenav__link--btn" (click)="signOut()">
+      <span class="material-symbols-outlined">logout</span><span>Sign Out</span>
+    </button>
+  </div>
+</aside>

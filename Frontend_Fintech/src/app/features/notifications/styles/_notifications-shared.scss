@@ -1,0 +1,396 @@
+@use '../../dashboard/styles/dashboard-tokens' as *;
+
+@mixin notif-surface {
+  background: $dash-surface;
+  border: 1px solid $dash-outline-variant;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.notif-page {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px;
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    margin: 0 0 4px;
+    font-size: 30px;
+    font-weight: 600;
+    color: $dash-on-surface;
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: 14px;
+    color: $dash-outline;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+.notif-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: opacity 0.15s, background 0.15s;
+
+  .material-symbols-outlined { font-size: 18px; }
+
+  &--primary {
+    background: $dash-primary;
+    color: #fff;
+    &:hover { opacity: 0.9; }
+    &:disabled { opacity: 0.5; cursor: not-allowed; }
+  }
+
+  &--secondary {
+    background: $dash-surface;
+    color: $dash-on-surface;
+    border-color: $dash-outline-variant;
+    &:hover { background: $dash-surface-container-low; }
+  }
+
+  &--ghost {
+    background: transparent;
+    color: $dash-primary;
+    border: none;
+    padding: 4px 8px;
+    &:hover { text-decoration: underline; }
+  }
+}
+
+.notif-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 280px 1fr;
+  }
+}
+
+.notif-sidebar {
+  @include notif-surface;
+  padding: 16px;
+
+  &__heading {
+    margin: 0 0 12px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: $dash-outline;
+  }
+
+  &__list { display: flex; flex-direction: column; gap: 4px; }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: $dash-outline;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.15s;
+
+    &:hover { background: $dash-surface-container-low; }
+
+    &--active {
+      background: rgba($dash-primary, 0.08);
+      color: $dash-primary;
+      font-weight: 700;
+    }
+
+    &-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+
+  &__badge {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: $dash-surface-container;
+    font-weight: 600;
+  }
+
+  &__item--active &__badge {
+    background: rgba($dash-primary, 0.1);
+    color: $dash-primary;
+  }
+
+  &__checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: $dash-on-surface;
+      cursor: pointer;
+    }
+  }
+}
+
+.notif-card {
+  @include notif-surface;
+  position: relative;
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  margin-bottom: 8px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $dash-primary;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+
+    .notif-card__hover-actions { opacity: 1; }
+  }
+
+  &--unread::before {
+    content: '';
+    position: absolute;
+    left: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 32px;
+    background: $dash-primary;
+    border-radius: 4px;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--security { background: rgba($dash-error, 0.12); color: $dash-error; }
+    &--financial { background: rgba($dash-primary, 0.1); color: $dash-primary; }
+    &--system { background: rgba($dash-outline, 0.12); color: $dash-outline; }
+    &--merchant { background: rgba($dash-primary, 0.1); color: $dash-primary; }
+    &--transaction { background: rgba($dash-error, 0.12); color: $dash-error; }
+    &--support { background: rgba($dash-outline, 0.12); color: $dash-outline; }
+  }
+
+  &__body { flex: 1; min-width: 0; }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: $dash-on-surface;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__time {
+    font-size: 12px;
+    color: $dash-outline;
+    flex-shrink: 0;
+  }
+
+  &__message {
+    margin: 0;
+    font-size: 14px;
+    color: $dash-outline;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__links {
+    display: flex;
+    gap: 16px;
+    margin-top: 12px;
+  }
+
+  &__link {
+    font-size: 12px;
+    font-weight: 700;
+    color: $dash-primary;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+
+    &--muted { color: $dash-outline; font-weight: 500; }
+    &:hover { text-decoration: underline; }
+  }
+
+  &__hover-actions {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 4px;
+    opacity: 0;
+    transition: opacity 0.15s;
+  }
+
+  &__action-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: $dash-surface-container;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $dash-on-surface;
+
+    &:hover { background: $dash-primary-container; color: #fff; }
+    &--danger:hover { background: rgba($dash-error, 0.15); color: $dash-error; }
+  }
+}
+
+.notif-empty, .notif-error, .notif-loading {
+  @include notif-surface;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 48px 24px;
+  text-align: center;
+  color: $dash-outline;
+
+  .material-symbols-outlined { font-size: 48px; opacity: 0.5; }
+}
+
+.notif-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+  font-size: 14px;
+  color: $dash-outline;
+
+  &__controls { display: flex; gap: 4px; }
+
+  &__btn {
+    padding: 6px 12px;
+    border: 1px solid $dash-outline-variant;
+    border-radius: 6px;
+    background: $dash-surface;
+    cursor: pointer;
+    font-size: 13px;
+
+    &:disabled { opacity: 0.4; cursor: not-allowed; }
+    &:not(:disabled):hover { background: $dash-surface-container-low; }
+  }
+}
+
+.notif-shell {
+  display: flex;
+  min-height: calc(100vh - 64px);
+
+  &__nav {
+    width: 220px;
+    flex-shrink: 0;
+    border-right: 1px solid $dash-outline-variant;
+    background: $dash-surface;
+    padding: 16px 8px;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: $dash-outline;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    transition: background 0.15s;
+
+    &:hover { background: $dash-surface-container-low; }
+
+    &--active {
+      background: rgba($dash-primary, 0.08);
+      color: $dash-primary;
+      font-weight: 700;
+      border-left: 4px solid $dash-primary;
+    }
+  }
+
+  &__content { flex: 1; min-width: 0; }
+}
+
+.notif-fab {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: $dash-primary;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 61, 155, 0.35);
+  z-index: 20;
+
+  &:hover { opacity: 0.9; }
+}

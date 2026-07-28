@@ -1,0 +1,129 @@
+<div class="stl-history-page">
+  @if (state.batchPageState() === 'loading' && !state.batches().length) {
+    <div class="stl-history-page__loading">
+      <mat-spinner diameter="48"></mat-spinner>
+      <p>Loading settlement batches...</p>
+    </div>
+  } @else if (state.batchPageState() === 'error') {
+    <div class="stl-history-page__error">
+      <span class="material-symbols-outlined">error</span>
+      <h3>Unable to load settlement batches</h3>
+      <p>{{ state.errorMessage() }}</p>
+      <button type="button" class="btn btn--primary" (click)="state.retry()">Retry</button>
+    </div>
+  } @else {
+    <div class="page-header">
+      <div>
+        <nav class="breadcrumb">
+          <a routerLink="/dashboard/executive">Home</a>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <a routerLink="/settlements">Settlements</a>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <span class="breadcrumb__active">Settlement Batches</span>
+        </nav>
+        <h1>Settlement Batches</h1>
+        <p class="page-header__subtitle">Review grouped payout batches and their processing status.</p>
+      </div>
+      <div class="page-header__actions">
+        @if (rbac.hasPermission(perms.SETTLEMENTS_EXPORT)) {
+          <button type="button" class="btn btn--dark" (click)="onExport()">
+            <span class="material-symbols-outlined">download</span> Export Reports
+          </button>
+        }
+      </div>
+    </div>
+
+    <div class="filter-bar">
+      <div class="filter-bar__status">
+        <button type="button" class="status-chip" [class.status-chip--active]="!activeStatus" (click)="filterStatus('')">All</button>
+        <button type="button" class="status-chip" [class.status-chip--active]="activeStatus === 'completed'" (click)="filterStatus('completed')">Completed</button>
+        <button type="button" class="status-chip" [class.status-chip--active]="activeStatus === 'processing'" (click)="filterStatus('processing')">Processing</button>
+        <button type="button" class="status-chip" [class.status-chip--active]="activeStatus === 'pending'" (click)="filterStatus('pending')">Pending</button>
+        <button type="button" class="status-chip" [class.status-chip--active]="activeStatus === 'failed'" (click)="filterStatus('failed')">Failed</button>
+      </div>
+    </div>
+
+    @if (state.isBatchEmpty()) {
+      <div class="empty-state">
+        <span class="material-symbols-outlined">layers</span>
+        <h3>No settlement batches found</h3>
+        <p>Settlement batches will appear here once created.</p>
+      </div>
+    } @else {
+      <div class="table-card">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Batch ID</th>
+                <th>Status</th>
+                <th>Settlements</th>
+                <th>Total Amount</th>
+                <th>Scheduled At</th>
+                <th>Processed At</th>
+                <th class="col-actions">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (batch of state.paginatedBatches(); track batch.id) {
+                <tr>
+                  <td>
+                    <a [routerLink]="['/settlements/batches', batch.id]" class="stl-ref">{{ batch.batchRef }}</a>
+                  </td>
+                  <td>
+                    <span class="status-badge status-badge--{{ statusClass(batch.status) }}">
+                      <span class="material-symbols-outlined">{{ statusIcon(batch.status) }}</span>
+                      {{ batch.status | titlecase }}
+                    </span>
+                  </td>
+                  <td>{{ batch.settlementCount }}</td>
+                  <td class="amount">{{ batch.totalAmount | currency: batch.currency }}</td>
+                  <td>
+                    @if (batch.scheduledAt) {
+                      <div class="date-cell">
+                        <span>{{ batch.scheduledAt | date: 'MMM d, y' }}</span>
+                        <small>{{ batch.scheduledAt | date: 'hh:mm a' }}</small>
+                      </div>
+                    } @else {
+                      —
+                    }
+                  </td>
+                  <td>
+                    @if (batch.processedAt) {
+                      <div class="date-cell">
+                        <span>{{ batch.processedAt | date: 'MMM d, y' }}</span>
+                        <small>{{ batch.processedAt | date: 'hh:mm a' }}</small>
+                      </div>
+                    } @else {
+                      —
+                    }
+                  </td>
+                  <td class="col-actions">
+                    <a [routerLink]="['/settlements/batches', batch.id]" class="link-btn">View</a>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <span>Showing {{ pageStart() }} to {{ pageEnd() }} of {{ state.batchTotalItems() }} batches</span>
+          <div class="pagination__controls">
+            <button type="button" class="btn btn--outline btn--sm" [disabled]="state.batchCurrentPage() <= 1" (click)="goToPage(state.batchCurrentPage() - 1)">
+              <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <span class="pagination__current">{{ state.batchCurrentPage() }}</span>
+            <button type="button" class="btn btn--outline btn--sm" [disabled]="state.batchCurrentPage() >= state.batchTotalPages()" (click)="goToPage(state.batchCurrentPage() + 1)">
+              <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+          </div>
+          <select [ngModel]="state.batchPageSize()" (ngModelChange)="state.setBatchPageSize($event)">
+            @for (size of pageSizeOptions; track size) {
+              <option [value]="size">Items per page: {{ size }}</option>
+            }
+          </select>
+        </div>
+      </div>
+    }
+  }
+</div>

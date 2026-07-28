@@ -1,0 +1,174 @@
+<div class="mob-detail">
+  @if (loading()) {
+    <div class="mob-detail__loading"><mat-spinner diameter="40"></mat-spinner></div>
+  } @else {
+    @if (detail(); as d) {
+    <div class="mob-detail__header">
+      <div>
+        <a routerLink="/merchant-onboarding" class="back-link"><span class="material-symbols-outlined">arrow_back</span> Back</a>
+        <h1>{{ d.businessName || d.applicationRef }}</h1>
+        <p>{{ d.applicationRef }} · <span [class]="statusClass(d.status)">{{ statusLabels[d.status] }}</span></p>
+      </div>
+      <div class="mob-detail__actions">
+        @if (d.status === 'draft' || d.status === 'rejected') {
+          <a mat-stroked-button [routerLink]="['/merchant-onboarding', d.id, 'wizard']">Edit Application</a>
+        }
+        @if (rbac.hasPermission(perms.MERCHANT_ONBOARDING_APPROVE) && ['submitted','kyc_pending','under_review'].includes(d.status)) {
+          <button mat-flat-button color="primary" (click)="approve()">Approve</button>
+        }
+        @if (rbac.hasPermission(perms.MERCHANT_ONBOARDING_APPROVE) && d.status === 'approved') {
+          <button mat-flat-button color="primary" (click)="goLive()">Go Live</button>
+        }
+        @if (rbac.hasPermission(perms.MERCHANT_ONBOARDING_SUSPEND) && d.status === 'go_live') {
+          <button mat-stroked-button color="warn" (click)="suspend()">Suspend</button>
+        }
+      </div>
+    </div>
+
+    @if (rbac.hasPermission(perms.MERCHANT_ONBOARDING_REJECT) && ['submitted','kyc_pending','under_review'].includes(d.status)) {
+      <div class="mob-reject-box">
+        <input type="text" placeholder="Rejection reason..." [(ngModel)]="rejectReason" />
+        <button mat-stroked-button color="warn" (click)="reject()">Reject</button>
+      </div>
+    }
+
+    <mat-tab-group animationDuration="200ms">
+      <mat-tab label="Overview">
+        <ng-template matTabContent>
+          <div class="mob-tab-content">
+            <dl class="mob-dl">
+              <dt>Organization</dt><dd>{{ d.organizationName || d.organizationId }}</dd>
+              <dt>Current Step</dt><dd>{{ d.currentStep }} / 8</dd>
+              <dt>Submitted</dt><dd>{{ d.submittedAt ? (d.submittedAt | date:'medium') : '—' }}</dd>
+              <dt>Merchant ID</dt><dd>{{ d.merchantId || '—' }}</dd>
+              @if (d.rejectionReason) { <dt>Rejection Reason</dt><dd>{{ d.rejectionReason }}</dd> }
+            </dl>
+          </div>
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="Business">
+        <ng-template matTabContent>
+          <div class="mob-tab-content">
+            @if (d.business; as b) {
+              <dl class="mob-dl">
+                <dt>Business Name</dt><dd>{{ b.businessName }}</dd>
+                <dt>Legal Name</dt><dd>{{ b.legalName }}</dd>
+                <dt>Category</dt><dd>{{ b.merchantCategory || '—' }}</dd>
+                <dt>Industry</dt><dd>{{ b.industry || '—' }}</dd>
+                <dt>Email</dt><dd>{{ b.email }}</dd>
+                <dt>Phone</dt><dd>{{ b.phone || '—' }}</dd>
+                <dt>GST</dt><dd>{{ b.gstNumber || '—' }}</dd>
+                <dt>PAN</dt><dd>{{ b.panNumber || '—' }}</dd>
+                <dt>CIN</dt><dd>{{ b.cinNumber || '—' }}</dd>
+                <dt>Business Type</dt><dd>{{ b.businessType || '—' }}</dd>
+              </dl>
+            } @else { <p class="mob-empty-tab">No business information yet.</p> }
+          </div>
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="KYC">
+        <ng-template matTabContent>
+          <div class="mob-tab-content">
+            @if (d.kycDocuments.length) {
+              <ul class="mob-doc-list">@for (doc of d.kycDocuments; track doc.uuid) {
+                <li><strong>{{ kycDocLabels[doc.documentType] || doc.documentType }}</strong> — {{ doc.fileName }}</li>
+              }</ul>
+            } @else { <p class="mob-empty-tab">No KYC documents uploaded.</p> }
+          </div>
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="Bank">
+        <ng-template matTabContent>
+          <div class="mob-tab-content">
+            @if (d.bank; as b) {
+              <dl class="mob-dl">
+                <dt>Account Holder</dt><dd>{{ b.accountHolder }}</dd>
+                <dt>Account</dt><dd>{{ b.accountNumberMasked }}</dd>
+                <dt>IFSC</dt><dd>{{ b.ifsc }}</dd>
+                <dt>Bank</dt><dd>{{ b.bankName }}</dd>
+                <dt>Branch</dt><dd>{{ b.branch || '—' }}</dd>
+                <dt>Verification</dt><dd>{{ b.verificationStatus }}</dd>
+              </dl>
+            } @else { <p class="mob-empty-tab">No bank details yet.</p> }
+          </div>
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="Settlement">
+        <ng-template matTabContent>
+          <div class="mob-tab-content">
+            @if (d.settlement; as s) {
+              <dl class="mob-dl">
+                <dt>Cycle</dt><dd>{{ s.settlementCycle | uppercase }}</dd>
+                <dt>Currency</dt><dd>{{ s.settlementCurrency }}</dd>
+                <dt>Method</dt><dd>{{ s.settlementMethod }}</dd>
+                <dt>Min Amount</dt><dd>{{ s.minSettlementAmount }}</dd>
+                <dt>Reserve %</dt><dd>{{ s.reservePct }}%</dd>
+                <dt>Rolling Reserve %</dt><dd>{{ s.rollingReservePct }}%</dd>
+              </dl>
+            } @else { <p class="mob-empty-tab">No settlement config yet.</p> }
+          </div>
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="Payment Config">
+        <ng-template matTabContent>
+          <div class="mob-tab-content">
+            @if (d.payment; as p) {
+              <ul class="mob-check-list">
+                @if (p.enableCards) { <li>Cards</li> }
+                @if (p.enableUpi) { <li>UPI</li> }
+                @if (p.enableNetBanking) { <li>Net Banking</li> }
+                @if (p.enableWallet) { <li>Wallet</li> }
+                @if (p.enableEmi) { <li>EMI</li> }
+                @if (p.enableBnpl) { <li>BNPL</li> }
+                @if (p.enableQr) { <li>QR</li> }
+                @if (p.enablePaymentLinks) { <li>Payment Links</li> }
+                @if (p.enableSubscriptions) { <li>Subscriptions</li> }
+              </ul>
+            } @else { <p class="mob-empty-tab">No payment config yet.</p> }
+          </div>
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="Timeline">
+        <ng-template matTabContent>
+          <div class="mob-tab-content">
+            <ul class="mob-timeline">
+              @for (ev of d.timeline; track ev.uuid) {
+                <li>
+                  <strong>{{ ev.eventType }}</strong>
+                  <p>{{ ev.summary }}</p>
+                  <span>{{ ev.actorName || 'System' }} · {{ ev.createdAt | date:'medium' }}</span>
+                </li>
+              } @empty { <p class="mob-empty-tab">No timeline events.</p> }
+            </ul>
+          </div>
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="Documents">
+        <ng-template matTabContent>
+          <div class="mob-tab-content">
+            @if (d.kycDocuments.length) {
+              <table class="mob-doc-table">
+                <thead><tr><th>Type</th><th>File</th><th>Path</th></tr></thead>
+                <tbody>@for (doc of d.kycDocuments; track doc.uuid) {
+                  <tr><td>{{ kycDocLabels[doc.documentType] }}</td><td>{{ doc.fileName }}</td><td>{{ doc.storagePath || '—' }}</td></tr>
+                }</tbody>
+              </table>
+            } @else { <p class="mob-empty-tab">No documents.</p> }
+          </div>
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="Activity">
+        <ng-template matTabContent>
+          <div class="mob-tab-content">
+            <ul class="mob-timeline">
+              @for (ev of d.timeline; track ev.uuid) {
+                <li><strong>{{ ev.summary }}</strong><span>{{ ev.createdAt | date:'medium' }}</span></li>
+              }
+            </ul>
+          </div>
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+    }
+  }
+</div>

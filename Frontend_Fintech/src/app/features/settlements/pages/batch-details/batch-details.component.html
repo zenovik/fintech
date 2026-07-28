@@ -1,0 +1,72 @@
+@if (state.pageState() === 'loading') {
+  <div class="stl-details__loading">
+    <mat-spinner diameter="48"></mat-spinner>
+    <p>Loading batch...</p>
+  </div>
+} @else if (state.pageState() === 'error') {
+  <div class="stl-details__error">
+    <span class="material-symbols-outlined">error</span>
+    <h3>{{ state.errorMessage() }}</h3>
+    <button type="button" class="btn btn--primary" (click)="state.retry()">Retry</button>
+    <a routerLink="/settlements/batches" class="btn btn--outline">Back to Batches</a>
+  </div>
+} @else {
+  @if (state.selectedBatch(); as b) {
+    <div class="stl-details">
+      <div class="page-header">
+        <div>
+          <nav class="breadcrumb">
+            <a routerLink="/dashboard/executive">Home</a>
+            <span class="material-symbols-outlined">chevron_right</span>
+            <a routerLink="/settlements">Settlements</a>
+            <span class="material-symbols-outlined">chevron_right</span>
+            <a routerLink="/settlements/batches">Batches</a>
+            <span class="material-symbols-outlined">chevron_right</span>
+            <span class="breadcrumb__active">{{ b.batchRef }}</span>
+          </nav>
+          <h1>{{ b.batchRef }}</h1>
+          <span class="status-badge status-badge--{{ statusClass(b.status) }}">{{ b.status | titlecase }}</span>
+        </div>
+      </div>
+
+      <div class="summary-cards">
+        <div class="summary-card"><span>Settlements</span><strong>{{ b.settlementCount }}</strong></div>
+        <div class="summary-card"><span>Total Amount</span><strong>{{ b.totalAmount | currency: b.currency }}</strong></div>
+        <div class="summary-card"><span>Scheduled</span><strong>{{ b.scheduledAt ? (b.scheduledAt | date: 'mediumDate') : '—' }}</strong></div>
+        <div class="summary-card"><span>Processed</span><strong>{{ b.processedAt ? (b.processedAt | date: 'mediumDate') : '—' }}</strong></div>
+      </div>
+
+      <h3>Settlements in Batch</h3>
+      @if (!b.settlements.length) {
+        <p class="empty-text">No settlements in this batch.</p>
+      } @else {
+        <div class="table-card">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Settlement Ref</th>
+                  <th>Merchant</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                @for (s of b.settlements; track s.id) {
+                  <tr>
+                    <td><a [routerLink]="['/settlements', s.id]">{{ s.settlementRef }}</a></td>
+                    <td>{{ s.merchant.name }}</td>
+                    <td>{{ s.formattedAmount }}</td>
+                    <td>{{ s.status | titlecase }}</td>
+                    <td><a [routerLink]="['/settlements', s.id]" class="link-btn">View</a></td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+      }
+    </div>
+  }
+}

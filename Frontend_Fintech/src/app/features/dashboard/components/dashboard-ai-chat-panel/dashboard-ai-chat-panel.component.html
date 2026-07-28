@@ -1,0 +1,72 @@
+<header class="dash-ai-panel__header">
+  <div>
+    <h2>Dashboard AI</h2>
+    <p>Answers grounded in live dashboard analytics</p>
+  </div>
+  <div class="dash-ai-panel__actions">
+    @if (session.hasMessages()) {
+      <button type="button" class="dash-ai-panel__icon-btn" (click)="onClear()" [disabled]="session.loading()" aria-label="Clear conversation">
+        <span class="material-symbols-outlined">delete_sweep</span>
+      </button>
+    }
+    <button type="button" class="dash-ai-panel__icon-btn" (click)="close()" aria-label="Close AI Assistant">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+  </div>
+</header>
+
+<div class="dash-ai-panel__body" #bodyEl (scroll)="onBodyScroll()">
+  <app-dashboard-ai-quick-actions
+    [disabled]="!canChat() || session.loading()"
+    (quickAction)="onQuickAction($event.action, $event.label)"
+    (suggestedQuestion)="onSuggestedQuestion($event)"
+  />
+
+  @if (!session.messages().length && !session.loading()) {
+    <div class="dash-ai-empty">
+      <span class="material-symbols-outlined">insights</span>
+      <p>Select a quick action or ask a dashboard question.</p>
+    </div>
+  }
+
+  @for (message of session.messages(); track message.id) {
+    <article class="dash-ai-message" [class.dash-ai-message--user]="message.role === 'user'" [class.dash-ai-message--error]="message.error">
+      <div class="dash-ai-message__bubble">
+        <p>{{ message.content }}</p>
+        <time>{{ message.createdAt | date:'short' }}</time>
+        @if (message.role === 'assistant' && !message.error) {
+          <button type="button" class="dash-ai-message__copy" (click)="onCopy(message.content)" aria-label="Copy response">
+            <span class="material-symbols-outlined">content_copy</span>
+          </button>
+        }
+      </div>
+    </article>
+  }
+
+  @if (session.loading()) {
+    <article class="dash-ai-message dash-ai-message--assistant">
+      <div class="dash-ai-message__bubble dash-ai-message__bubble--loading">
+        <span class="dash-ai-loading__ring"></span>
+        <div>
+          <strong>Analyzing dashboard data</strong>
+          <span>Fetching analytics and generating a response...</span>
+        </div>
+      </div>
+    </article>
+  }
+
+  @if (session.lastFailedPayload()) {
+    <button type="button" class="dash-ai-panel__retry" (click)="onRetry()" [disabled]="session.loading()">
+      <span class="material-symbols-outlined">refresh</span>
+      Retry
+    </button>
+  }
+
+  <div #scrollAnchor></div>
+</div>
+
+<app-ai-chat-input
+  [disabled]="!canChat()"
+  [loading]="session.loading()"
+  (sendMessage)="onSend($event)"
+/>

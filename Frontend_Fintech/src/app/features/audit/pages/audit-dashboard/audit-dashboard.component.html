@@ -1,0 +1,169 @@
+<div class="audit-page">
+  <div class="audit-page__header">
+    <div>
+      <h1 class="audit-page__title">Audit &amp; Activity Log</h1>
+      <p class="audit-page__subtitle">Real-time oversight of all system events and security operations.</p>
+    </div>
+    <div class="audit-risk-score">
+      <div class="audit-risk-score__label">
+        <span class="material-symbols-outlined" style="color: #22c55e; font-size: 14px;">verified_user</span>
+        Overall Risk Score
+      </div>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <div class="audit-risk-score__value">
+          <strong>{{ state.stats().riskScore }}</strong>
+          <span>/ 100</span>
+        </div>
+        <div class="audit-risk-score__ring">
+          <span class="material-symbols-outlined">security</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="audit-filters">
+    <label class="audit-filters__chip">
+      <span class="material-symbols-outlined" style="font-size: 18px;">calendar_today</span>
+      <select [ngModel]="state.dateRange()" (ngModelChange)="onDateRangeChange($event)">
+        @for (d of dateRanges; track d.key) {
+          <option [value]="d.key">{{ d.label }}</option>
+        }
+      </select>
+    </label>
+    <label class="audit-filters__chip">
+      <span class="material-symbols-outlined" style="font-size: 18px;">category</span>
+      <select [ngModel]="state.moduleFilter()" (ngModelChange)="onModuleChange($event)">
+        @for (m of modules; track m.key) {
+          <option [value]="m.key">{{ m.label }}</option>
+        }
+      </select>
+    </label>
+    <label class="audit-filters__chip">
+      <span class="material-symbols-outlined" style="font-size: 18px;">priority_high</span>
+      <select [ngModel]="state.riskFilter()" (ngModelChange)="onRiskChange($event)">
+        @for (r of risks; track r.key) {
+          <option [value]="r.key">{{ r.label }}</option>
+        }
+      </select>
+    </label>
+    <div class="audit-filters__divider"></div>
+    <button type="button" class="audit-btn audit-btn--ghost" (click)="resetFilters()">Reset Filters</button>
+    <div class="audit-filters__actions">
+      @if (rbac.hasPermission(perms.AUDIT_EXPORT)) {
+        <button type="button" class="audit-btn audit-btn--secondary" (click)="exportCsv()">
+          <span class="material-symbols-outlined">download</span> Export CSV
+        </button>
+      }
+      <button type="button" class="audit-btn audit-btn--primary" [class.audit-btn--active]="state.liveRefresh()" (click)="toggleRefresh()">
+        <span class="material-symbols-outlined">refresh</span>
+        {{ state.liveRefresh() ? 'Live On' : 'Live Refresh' }}
+      </button>
+    </div>
+  </div>
+
+  <div class="audit-layout">
+    <div class="audit-layout__main">
+      @if (state.pageState() === 'loading') {
+        <div class="audit-loading"><mat-spinner diameter="40" /><p>Loading audit logs...</p></div>
+      } @else if (state.pageState() === 'error') {
+        <div class="audit-error">
+          <span class="material-symbols-outlined">error</span>
+          <p>{{ state.errorMessage() }}</p>
+          <button type="button" class="audit-btn audit-btn--primary" (click)="state.loadLogs()">Retry</button>
+        </div>
+      } @else if (state.pageState() === 'empty') {
+        <div class="audit-empty">
+          <span class="material-symbols-outlined">history</span>
+          <p>No audit logs found</p>
+          <button type="button" class="audit-btn audit-btn--secondary" (click)="resetFilters()">Reset Filters</button>
+        </div>
+      } @else {
+        <div class="audit-table-wrap">
+          <div class="audit-table-scroll">
+            <table class="audit-table">
+              <thead>
+                <tr>
+                  <th>Timestamp</th>
+                  <th>User / Entity</th>
+                  <th>Action Type</th>
+                  <th>Description</th>
+                  <th>IP Address</th>
+                  <th>Risk</th>
+                </tr>
+              </thead>
+              <tbody>
+                @for (log of state.logs(); track log.id) {
+                  <tr [class.audit-table__row--critical]="log.riskLevel === 'critical'" (click)="openLog(log)">
+                    <td class="audit-table__mono">{{ log.createdAt | date:'yyyy-MM-dd HH:mm:ss' }}</td>
+                    <td>
+                      <div class="audit-actor">
+                        <span class="audit-actor__avatar">{{ getInitials(log.actorName) }}</span>
+                        <span>{{ log.actorName ?? 'System' }}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="audit-badge" [ngClass]="getBadgeClass(log.module)">{{ log.actionCode | titlecase }}</span>
+                    </td>
+                    <td>{{ log.description }}</td>
+                    <td class="audit-table__mono">{{ log.ipAddress ?? '—' }}</td>
+                    <td>
+                      <span class="audit-risk" [ngClass]="getRiskClass(log.riskLevel)">
+                        <span class="audit-risk__dot"></span>
+                        {{ log.riskLevel }}
+                      </span>
+                    </td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+          <div class="audit-pagination">
+            <span>Showing {{ (state.page() - 1) * state.pageSize() + 1 }} to {{ Math.min(state.page() * state.pageSize(), state.total()) }} of {{ state.total() }} entries</span>
+            <div class="audit-pagination__pages">
+              <button type="button" [disabled]="state.page() <= 1" (click)="state.goToPage(state.page() - 1)">
+                <span class="material-symbols-outlined">chevron_left</span>
+              </button>
+              @for (p of pageNumbers(); track p) {
+                <button type="button" [class.audit-pagination__pages--active]="p === state.page()" (click)="state.goToPage(p)">{{ p }}</button>
+              }
+              <button type="button" [disabled]="state.page() >= state.totalPages()" (click)="state.goToPage(state.page() + 1)">
+                <span class="material-symbols-outlined">chevron_right</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+
+    <aside class="audit-sidebar">
+      <div class="audit-sidebar__card">
+        <h3 class="audit-sidebar__title">
+          <span class="audit-sidebar__pulse"></span> Security Alerts
+        </h3>
+        @if (criticalAlerts().length === 0) {
+          <p class="audit-sidebar__empty">No active security alerts</p>
+        } @else {
+          @for (alert of criticalAlerts(); track alert.id) {
+            <div class="audit-alert" (click)="openLog(alert)">
+              <p class="audit-alert__title">{{ alert.actionCode | titlecase }}</p>
+              <p class="audit-alert__desc">{{ alert.description }}</p>
+            </div>
+          }
+        }
+      </div>
+
+      <div class="audit-sidebar__card">
+        <h3 class="audit-sidebar__title">Risk Severity</h3>
+        @for (item of riskBreakdown(); track item.level) {
+          <div class="audit-risk-bar">
+            <span class="audit-risk-bar__label">{{ item.level | uppercase }}</span>
+            <div class="audit-risk-bar__track">
+              <div class="audit-risk-bar__fill audit-risk-bar__fill--{{ item.level }}" [style.width.%]="item.pct"></div>
+            </div>
+            <span class="audit-risk-bar__count">{{ item.count }}</span>
+          </div>
+        }
+      </div>
+    </aside>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+@use '../../../dashboard/styles/dashboard-tokens' as *;
+@use '../../styles/notifications-shared' as *;
+
+.notif-prefs-card {
+  @include notif-surface;
+}
+
+.notif-prefs-grid {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+
+  th, td {
+    padding: 12px 16px;
+    text-align: center;
+    border-bottom: 1px solid $dash-outline-variant;
+  }
+
+  th:first-child, td:first-child { text-align: left; }
+
+  th {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $dash-outline;
+  }
+}
+
+.notif-prefs-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}

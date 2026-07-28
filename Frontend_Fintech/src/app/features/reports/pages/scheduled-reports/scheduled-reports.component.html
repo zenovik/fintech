@@ -1,0 +1,36 @@
+<div class="rpt-page">
+  @if (state.pageState() === 'loading') {
+    <div class="rpt-page__loading"><mat-spinner diameter="48"></mat-spinner></div>
+  } @else if (state.pageState() === 'error') {
+    <div class="rpt-page__error"><p>{{ state.errorMessage() }}</p><button class="btn btn--primary" (click)="state.loadScheduled()">Retry</button></div>
+  } @else {
+    <div class="page-header">
+      <div>
+        <nav class="breadcrumb"><a routerLink="/reports">Reports</a><span class="material-symbols-outlined">chevron_right</span><span class="breadcrumb__active">Scheduled</span></nav>
+        <h1>Scheduled Reports</h1>
+        <p class="page-header__subtitle">Automated report delivery schedules.</p>
+      </div>
+    </div>
+    @if (!state.scheduledReports().length) {
+      <div class="empty-state"><span class="material-symbols-outlined">schedule</span><h3>No scheduled reports</h3></div>
+    } @else {
+      <div class="table-card">
+        <table>
+          <thead><tr><th>Name</th><th>Report</th><th>Schedule</th><th>Format</th><th>Status</th><th>Next Run</th></tr></thead>
+          <tbody>
+            @for (s of state.scheduledReports(); track s.id) {
+              <tr>
+                <td><strong>{{ s.name }}</strong></td>
+                <td>{{ s.reportName }}</td>
+                <td><code>{{ s.cronExpression }}</code></td>
+                <td>{{ s.format | uppercase }}</td>
+                <td>{{ s.isActive ? 'Active' : 'Paused' }}</td>
+                <td>{{ s.nextRunAt ? (s.nextRunAt | date:'medium') : '—' }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    }
+  }
+</div>

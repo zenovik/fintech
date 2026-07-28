@@ -1,0 +1,26 @@
+<div class="mp-page">
+  <header><h1>Merchant Payment Portal</h1><p>Unified view of merchant payment acceptance channels</p></header>
+  <div class="mp-filters">
+    <input type="number" placeholder="Merchant ID" [(ngModel)]="merchantId" (keyup.enter)="load()" />
+    <button type="button" (click)="load()">Load</button>
+  </div>
+  @if (pageState() === 'loading') { <div class="mp-center"><mat-spinner diameter="36" /></div> }
+  @else if (pageState() === 'error') { <p class="mp-error">Merchant not found.</p> }
+  @else if (portal()) {
+    @let m = $any(portal()!['merchant']);
+    <h2 class="mp-merchant">{{ m.name }} <small>({{ m.code }})</small></h2>
+    <div class="mp-stats">
+      <a routerLink="/qr-payments" class="mp-card"><span>QR Codes</span><strong>{{ stat('qrCodes', 'active') }}/{{ stat('qrCodes', 'total') }}</strong><small>{{ stat('qrCodes', 'scans') }} scans</small></a>
+      <a routerLink="/payment-links" class="mp-card"><span>Payment Links</span><strong>{{ stat('paymentLinks', 'active') }}/{{ stat('paymentLinks', 'total') }}</strong><small>{{ stat('paymentLinks', 'visits') }} visits</small></a>
+      <a routerLink="/smart-collect" class="mp-card"><span>Collections</span><strong>{{ stat('collections', 'matched') }}/{{ stat('collections', 'total') }}</strong><small>{{ stat('collections', 'amount') | currency:'INR':'symbol':'1.0-0' }}</small></a>
+      <a routerLink="/customers" class="mp-card"><span>Customers</span><strong>{{ $any(portal()!['stats']).customers }}</strong></a>
+    </div>
+    <div class="mp-links">
+      <a routerLink="/checkout/branding">Checkout Branding</a>
+      <a routerLink="/acceptance/analytics">Acceptance Analytics</a>
+      <a routerLink="/reports">Reports</a>
+    </div>
+  } @else {
+    <p class="mp-empty">Enter a merchant ID to load the portal.</p>
+  }
+</div>

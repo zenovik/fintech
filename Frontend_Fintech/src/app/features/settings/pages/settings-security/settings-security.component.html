@@ -1,0 +1,59 @@
+@if (state.pageState() === 'loading') {
+  <div class="settings-card settings-card--center"><mat-spinner diameter="40" /></div>
+} @else if (state.pageState() === 'error') {
+  <div class="settings-error">
+    <span class="material-symbols-outlined">error</span>
+    <p>{{ state.errorMessage() }}</p>
+    <button type="button" class="btn btn--primary" (click)="retry()">Retry</button>
+  </div>
+} @else {
+  <div class="settings-card">
+    <h1>Security</h1>
+    <p class="subtitle">MFA enforcement and IP access controls for your organization.</p>
+
+    <form [formGroup]="form" (ngSubmit)="save()" class="settings-form">
+      <div class="toggle-row">
+        <div>
+          <strong>Enforce MFA</strong>
+          <p class="toggle-hint">Require multi-factor authentication for all users</p>
+        </div>
+        <mat-slide-toggle formControlName="mfaEnforced" color="primary" />
+      </div>
+
+      <div class="mfa-methods">
+        <label>Allowed MFA Methods</label>
+        <div class="mfa-methods__grid">
+          @for (method of mfaMethods; track method) {
+            <mat-checkbox
+              [checked]="isMethodAllowed(method)"
+              (change)="toggleMethod(method, $event.checked)"
+            >
+              {{ method | uppercase }}
+            </mat-checkbox>
+          }
+        </div>
+      </div>
+
+      <div class="toggle-row">
+        <div>
+          <strong>IP Whitelist</strong>
+          <p class="toggle-hint">Restrict access to approved IP addresses only</p>
+        </div>
+        <mat-slide-toggle formControlName="ipWhitelistEnabled" color="primary" />
+      </div>
+
+      <div>
+        <label for="ipWhitelist">Whitelisted IPs (one per line)</label>
+        <textarea id="ipWhitelist" formControlName="ipWhitelistText" rows="6" placeholder="192.168.1.1&#10;10.0.0.0/24"></textarea>
+      </div>
+
+      <div class="settings-actions">
+        @if (rbac.hasPermission(perms.SETTINGS_WRITE)) {
+          <button type="submit" class="btn btn--primary" [disabled]="state.pageState() === 'saving'">
+            @if (state.pageState() === 'saving') { <mat-spinner diameter="18" /> } @else { Save Changes }
+          </button>
+        }
+      </div>
+    </form>
+  </div>
+}

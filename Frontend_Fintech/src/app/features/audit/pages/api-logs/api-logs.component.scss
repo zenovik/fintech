@@ -1,0 +1,159 @@
+@use '../../../dashboard/styles/dashboard-tokens' as *;
+@use '../../styles/audit-shared' as *;
+
+.api-live-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  margin-right: 6px;
+  animation: pulse 2s infinite;
+}
+
+.api-search {
+  flex: 1;
+  min-width: 200px;
+  padding: 8px 12px;
+  border: 1px solid $dash-outline-variant;
+  border-radius: 8px;
+  background: $dash-surface-container-low;
+  font-size: 14px;
+  outline: none;
+
+  &:focus {
+    border-color: $dash-primary;
+    box-shadow: 0 0 0 2px rgba($dash-primary, 0.15);
+  }
+}
+
+.api-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
+  min-height: 500px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.api-logs-list {
+  @include audit-surface;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: 1px solid $dash-outline-variant;
+    font-weight: 600;
+  }
+
+  &__count {
+    font-size: 12px;
+    color: $dash-outline;
+    font-weight: 400;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 80px 70px 1fr 80px 100px;
+    gap: 12px;
+    padding: 12px 16px;
+    align-items: center;
+    font-size: 13px;
+
+    &--head {
+      background: $dash-surface-container-low;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $dash-outline;
+      border-bottom: 1px solid $dash-outline-variant;
+      position: sticky;
+      top: 0;
+    }
+  }
+
+  &__row {
+    border-bottom: 1px solid $dash-outline-variant;
+    cursor: pointer;
+    transition: background 0.15s;
+
+    &:hover { background: $dash-surface-container-low; }
+    &--active { background: $dash-surface-container-low; border-left: 3px solid $dash-primary; }
+  }
+}
+
+.api-method {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+
+  &--get { background: #dbeafe; color: #1e40af; }
+  &--post { background: #dcfce7; color: #166534; }
+  &--put { background: #f3e8ff; color: #6b21a8; }
+  &--patch { background: #fef3c7; color: #92400e; }
+  &--delete { background: #fee2e2; color: #991b1b; }
+}
+
+.api-status {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+
+  &--ok { color: #16a34a; }
+  &--warn { color: #ca8a04; }
+  &--error { color: $dash-error; }
+}
+
+.api-path {
+  font-family: 'JetBrains Mono', monospace;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.api-latency, .api-time {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: $dash-outline;
+  text-align: right;
+}
+
+.api-inspector {
+  @include audit-surface;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    padding: 16px;
+    border-bottom: 1px solid $dash-outline-variant;
+    background: $dash-surface-container-low;
+
+    h3 { margin: 0; font-size: 16px; font-weight: 600; }
+  }
+
+  &__body {
+    padding: 16px;
+    overflow-y: auto;
+  }
+
+  &__section {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $dash-outline;
+    margin: 0 0 12px;
+  }
+}
+
+.audit-detail__mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  word-break: break-all;
+}

@@ -1,0 +1,91 @@
+<div class="ops-page">
+  <div class="ops-page__header">
+    <div><h1 class="ops-page__title">Operations</h1><p class="ops-page__subtitle">Incidents, alerts, failed operations, and system health.</p></div>
+    <button type="button" class="ops-btn ops-btn--secondary" (click)="load()">Refresh</button>
+  </div>
+
+  @if (pageState() === 'loading') { <div class="ops-loading"><mat-spinner diameter="40" /><p>Loading operations data...</p></div> }
+  @else if (pageState() === 'error') { <div class="ops-error"><p>Failed to load operations dashboard.</p><button type="button" class="ops-btn ops-btn--primary" (click)="load()">Retry</button></div> }
+  @else {
+    <div class="ops-stats">
+      <div class="ops-stats__card ops-stats__card--featured"><label>Total Pending</label><strong>{{ pendingTasks()['totalPending'] ?? 0 }}</strong></div>
+      <div class="ops-stats__card"><label>Failed Settlements</label><strong>{{ pendingTasks()['failedSettlements'] ?? 0 }}</strong></div>
+      <div class="ops-stats__card"><label>Failed Devices</label><strong>{{ pendingTasks()['failedDevices'] ?? 0 }}</strong></div>
+      <div class="ops-stats__card"><label>Sync Errors</label><strong>{{ pendingTasks()['syncErrors'] ?? 0 }}</strong></div>
+      <div class="ops-stats__card"><label>Pending Go Live</label><strong>{{ pendingTasks()['pendingGoLive'] ?? 0 }}</strong></div>
+      <div class="ops-stats__card"><label>Pending KYC</label><strong>{{ pendingTasks()['pendingKyc'] ?? 0 }}</strong></div>
+      <div class="ops-stats__card"><label>Pending Compliance</label><strong>{{ pendingTasks()['pendingCompliance'] ?? 0 }}</strong></div>
+      <div class="ops-stats__card"><label>Pending Risk</label><strong>{{ pendingTasks()['pendingRisk'] ?? 0 }}</strong></div>
+      <div class="ops-stats__card"><label>Pending Approvals</label><strong>{{ pendingTasks()['pendingApprovals'] ?? 0 }}</strong></div>
+      <div class="ops-stats__card"><label>Retry Queue</label><strong>{{ pendingTasks()['retryQueue'] ?? 0 }}</strong></div>
+      <div class="ops-stats__card"><label>Open Tickets</label><strong>{{ dashboard()['openTickets'] ?? 0 }}</strong></div>
+      <div class="ops-stats__card"><label>Active Alerts</label><strong>{{ dashboard()['activeAlerts'] ?? 0 }}</strong></div>
+      <div class="ops-stats__card"><label>Open Incidents</label><strong>{{ dashboard()['openIncidents'] ?? 0 }}</strong></div>
+      <div class="ops-stats__card"><label>Pending Retries</label><strong>{{ dashboard()['pendingRetries'] ?? 0 }}</strong></div>
+      <div class="ops-stats__card"><label>Running Jobs</label><strong>{{ dashboard()['runningJobs'] ?? 0 }}</strong></div>
+      <div class="ops-stats__card"><label>Failed Payments</label><strong>{{ dashboard()['failedPayments'] ?? 0 }}</strong></div>
+      <div class="ops-stats__card"><label>Failed Payouts</label><strong>{{ dashboard()['failedPayouts'] ?? 0 }}</strong></div>
+      <div class="ops-stats__card"><label>Failed Webhooks</label><strong>{{ dashboard()['failedWebhooks'] ?? 0 }}</strong></div>
+    </div>
+
+    <div class="ops-card"><h3>Health Dashboard</h3>
+      <p>API: <span class="ops-badge ops-badge--healthy">{{ health().api }}</span>
+         Database: <span [class]="'ops-badge ops-badge--' + (health().database === 'healthy' ? 'healthy' : 'critical')">{{ health().database }}</span></p>
+    </div>
+
+    <div class="ops-card"><h3>System Alerts</h3>
+      <div class="ops-table-wrap"><table class="ops-table"><thead><tr><th>Title</th><th>Severity</th><th>Status</th><th>Source</th></tr></thead>
+        <tbody>@for (a of alerts(); track a['id']) {
+          <tr><td>{{ a['title'] }}</td><td>{{ a['severity'] }}</td><td>{{ a['status'] }}</td><td>{{ a['source'] }}</td></tr>
+        }</tbody></table></div>
+    </div>
+
+    <div class="ops-card"><h3>Incidents</h3>
+      <div class="ops-table-wrap"><table class="ops-table"><thead><tr><th>Ref</th><th>Title</th><th>Severity</th><th>Status</th></tr></thead>
+        <tbody>@for (i of incidents(); track i['id']) {
+          <tr><td>{{ i['incidentRef'] }}</td><td>{{ i['title'] }}</td><td>{{ i['severity'] }}</td><td>{{ i['status'] }}</td></tr>
+        }</tbody></table></div>
+    </div>
+
+    <div class="ops-card"><h3>Retry Queue</h3>
+      <div class="ops-table-wrap"><table class="ops-table"><thead><tr><th>Entity</th><th>Operation</th><th>Status</th><th>Attempts</th><th></th></tr></thead>
+        <tbody>@for (r of retryQueue(); track r['id']) {
+          <tr><td>{{ r['entityType'] }} #{{ r['entityId'] }}</td><td>{{ r['operation'] }}</td><td>{{ r['status'] }}</td><td>{{ r['attemptCount'] }}/{{ r['maxAttempts'] }}</td>
+            <td>@if (rbac.hasPermission(perms.OPERATIONS_MANAGE) && r['status'] !== 'completed') {
+              <button type="button" class="ops-btn ops-btn--secondary" [disabled]="saving()" (click)="retryQueueItem(+$any(r['id']))">Retry</button>
+            }</td></tr>
+        }</tbody></table></div>
+    </div>
+
+    <div class="ops-card"><h3>Background Jobs</h3>
+      <div class="ops-table-wrap"><table class="ops-table"><thead><tr><th>Type</th><th>Status</th><th>Started</th><th></th></tr></thead>
+        <tbody>@for (j of jobs(); track j['id']) {
+          <tr><td>{{ j['jobType'] }}</td><td>{{ j['status'] }}</td><td>{{ j['startedAt'] ? ($any(j['startedAt']) | date:'short') : '—' }}</td>
+            <td>@if (rbac.hasPermission(perms.OPERATIONS_MANAGE) && j['status'] === 'failed') {
+              <button type="button" class="ops-btn ops-btn--secondary" [disabled]="saving()" (click)="retryJob(+$any(j['id']))">Retry</button>
+            }</td></tr>
+        }</tbody></table></div>
+    </div>
+
+    <div class="ops-card"><h3>Failed Payments</h3>
+      <div class="ops-table-wrap"><table class="ops-table"><thead><tr><th>Ref</th><th>Merchant</th><th>Amount</th><th>Date</th></tr></thead>
+        <tbody>@for (p of failedPayments(); track p['id']) {
+          <tr><td>{{ p['transactionRef'] }}</td><td>{{ p['merchantName'] }}</td><td>{{ $any(p['amount']) | currency:$any(p['currency']):'symbol':'1.2-2' }}</td><td>{{ $any(p['createdAt']) | date:'short' }}</td></tr>
+        }</tbody></table></div>
+    </div>
+
+    <div class="ops-card"><h3>Failed Payouts</h3>
+      <div class="ops-table-wrap"><table class="ops-table"><thead><tr><th>Ref</th><th>Merchant</th><th>Amount</th><th>Date</th></tr></thead>
+        <tbody>@for (p of failedPayouts(); track p['id']) {
+          <tr><td>{{ p['payoutRef'] }}</td><td>{{ p['merchantName'] }}</td><td>{{ $any(p['amount']) | currency:$any(p['currency']):'symbol':'1.2-2' }}</td><td>{{ $any(p['createdAt']) | date:'short' }}</td></tr>
+        }</tbody></table></div>
+    </div>
+
+    <div class="ops-card"><h3>Failed Webhooks</h3>
+      <div class="ops-table-wrap"><table class="ops-table"><thead><tr><th>Event</th><th>URL</th><th>Attempts</th><th>Date</th></tr></thead>
+        <tbody>@for (w of failedWebhooks(); track w['id']) {
+          <tr><td>{{ w['eventType'] }}</td><td style="max-width:200px;overflow:hidden;text-overflow:ellipsis">{{ w['url'] }}</td><td>{{ w['attemptCount'] }}</td><td>{{ $any(w['createdAt']) | date:'short' }}</td></tr>
+        }</tbody></table></div>
+    </div>
+  }
+</div>

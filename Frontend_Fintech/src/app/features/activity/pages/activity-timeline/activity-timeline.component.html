@@ -1,0 +1,46 @@
+<div class="act-page">
+  <div class="act-page__header">
+    <div>
+      <h1>Activity Center</h1>
+      <p>Unified timeline across audit, notifications, workflow, devices, settlements, and risk events.</p>
+    </div>
+    <div class="act-page__filters">
+      <select [(ngModel)]="sourceFilter" (ngModelChange)="onFilterChange()" aria-label="Filter by source">
+        <option value="">All sources</option>
+        @for (s of sourceOptions.slice(1); track s) {
+          <option [value]="s">{{ s | titlecase }}</option>
+        }
+      </select>
+      <button type="button" class="act-btn" (click)="load()">Refresh</button>
+    </div>
+  </div>
+
+  @if (pageState() === 'loading') {
+    <div class="act-loading"><mat-spinner diameter="40" /><p>Loading activity...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="act-error"><p>Failed to load activity timeline.</p><button type="button" class="act-btn act-btn--primary" (click)="load()">Retry</button></div>
+  } @else {
+    <div class="act-timeline">
+      @for (item of items(); track item.id + item.source) {
+        <article class="act-item">
+          <div class="act-item__icon"><span class="material-symbols-outlined">{{ sourceIcon(item.source) }}</span></div>
+          <div class="act-item__body">
+            <div class="act-item__meta">
+              <span class="act-item__source">{{ item.source | titlecase }}</span>
+              <time>{{ item.occurredAt | date:'medium' }}</time>
+            </div>
+            <h3>{{ item.title }}</h3>
+            @if (item.description) { <p>{{ item.description }}</p> }
+            <div class="act-item__footer">
+              @if (item.actorName) { <span>By {{ item.actorName }}</span> }
+              @if (item.entityType) { <span>{{ item.entityType }} #{{ item.entityId }}</span> }
+            </div>
+          </div>
+        </article>
+      } @empty {
+        <p class="act-empty">No activity events found.</p>
+      }
+    </div>
+    <p class="act-count">{{ total() }} events total</p>
+  }
+</div>

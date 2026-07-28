@@ -1,0 +1,23 @@
+<div class="audit-shell">
+  <nav class="audit-shell__nav">
+    <a class="audit-shell__link" routerLink="/audit" routerLinkActive="audit-shell__link--active" [routerLinkActiveOptions]="{ exact: true }">
+      <span class="material-symbols-outlined">shield</span>
+      <span>Audit Dashboard</span>
+    </a>
+    <a class="audit-shell__link" routerLink="/audit/timeline" routerLinkActive="audit-shell__link--active">
+      <span class="material-symbols-outlined">timeline</span>
+      <span>Activity Timeline</span>
+    </a>
+    <a class="audit-shell__link" routerLink="/audit/api-logs" routerLinkActive="audit-shell__link--active">
+      <span class="material-symbols-outlined">terminal</span>
+      <span>API Logs</span>
+    </a>
+    <a class="audit-shell__link" routerLink="/audit/webhook-logs" routerLinkActive="audit-shell__link--active">
+      <span class="material-symbols-outlined">webhook</span>
+      <span>Webhook Logs</span>
+    </a>
+  </nav>
+  <div class="audit-shell__content">
+    <router-outlet />
+  </div>
+</div>

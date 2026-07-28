@@ -1,0 +1,16 @@
+<div class="settings-layout">
+  <nav class="settings-nav" aria-label="Settings navigation">
+    <h2>Settings</h2>
+    @for (item of navItems; track item.path) {
+      @if (canView(item)) {
+        <a [routerLink]="item.path" routerLinkActive="settings-nav__link--active" [routerLinkActiveOptions]="{ exact: true }" class="settings-nav__link">
+          <span class="material-symbols-outlined">{{ item.icon }}</span>
+          {{ item.label }}
+        </a>
+      }
+    }
+  </nav>
+  <div class="settings-content">
+    <router-outlet />
+  </div>
+</div>

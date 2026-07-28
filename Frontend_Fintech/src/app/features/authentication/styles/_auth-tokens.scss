@@ -1,0 +1,118 @@
+// Figma design tokens — login_desktop.png
+$auth-primary: #0052cc;
+$auth-primary-container: #0052cc;
+$auth-secondary: #0050cc;
+$auth-secondary-container: #0266ff;
+$auth-on-primary: #ffffff;
+$auth-on-primary-container: #c4d2ff;
+$auth-background: #f8f9fb;
+$auth-surface: #f8f9fb;
+$auth-surface-container-lowest: #ffffff;
+$auth-surface-container-low: #f8f9fb;
+$auth-surface-container: #eaedff;
+$auth-surface-container-high: #e2e7ff;
+$auth-surface-container-highest: #dae2fd;
+$auth-surface-variant: #dae2fd;
+$auth-on-background: #131b2e;
+$auth-on-surface: #131b2e;
+$auth-on-surface-variant: #5c6370;
+$auth-outline: #8b92a5;
+$auth-outline-variant: #d8dce8;
+$auth-error: #ba1a1a;
+$auth-error-container: #ffdad6;
+$auth-on-error-container: #93000a;
+$auth-success: #15803d;
+
+$auth-radius-lg: 8px;
+$auth-radius-xl: 12px;
+$auth-card-width: 480px;
+$auth-input-height: 48px;
+$auth-shadow-card:
+  0 4px 6px -1px rgba(15, 23, 42, 0.06),
+  0 10px 24px -4px rgba(15, 23, 42, 0.08);
+$auth-font-family: 'Inter', Roboto, 'Helvetica Neue', sans-serif;
+
+@mixin auth-glass-card {
+  background: $auth-surface-container-lowest;
+  border: 1px solid $auth-outline-variant;
+  border-radius: $auth-radius-xl;
+  box-shadow: $auth-shadow-card;
+}
+
+@mixin auth-page-background {
+  background-color: $auth-background;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+@mixin auth-input {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: $auth-input-height;
+  padding: 0 44px 0 44px;
+  box-sizing: border-box;
+  background: $auth-surface-container-lowest;
+  border: 1px solid $auth-outline-variant;
+  border-radius: $auth-radius-lg;
+  font-family: $auth-font-family;
+  font-size: 14px;
+  line-height: $auth-input-height;
+  color: $auth-on-surface;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+
+  &::placeholder {
+    color: rgba($auth-outline, 0.55);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $auth-primary;
+    box-shadow: 0 0 0 3px rgba(0, 82, 204, 0.12);
+  }
+
+  &.invalid {
+    border-color: $auth-error;
+  }
+}
+
+@mixin auth-btn-primary {
+  width: 100%;
+  height: 48px;
+  padding: 0 24px;
+  box-sizing: border-box;
+  background: $auth-primary-container;
+  color: $auth-on-primary;
+  border: none;
+  border-radius: $auth-radius-lg;
+  font-family: $auth-font-family;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 1px 2px rgba(0, 82, 204, 0.2);
+  transition:
+    background 0.2s,
+    transform 0.1s,
+    opacity 0.2s;
+
+  &:hover:not(:disabled) {
+    background: $auth-secondary-container;
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.99);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

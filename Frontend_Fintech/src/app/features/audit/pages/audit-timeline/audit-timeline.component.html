@@ -1,0 +1,52 @@
+<div class="audit-page">
+  <div class="audit-page__header">
+    <div>
+      <h1 class="audit-page__title">Activity Timeline</h1>
+      <p class="audit-page__subtitle">Chronological view of system activity over the last 7 days.</p>
+    </div>
+    <button type="button" class="audit-btn audit-btn--secondary" (click)="load()">
+      <span class="material-symbols-outlined">refresh</span> Refresh
+    </button>
+  </div>
+
+  @if (pageState() === 'loading') {
+    <div class="audit-loading"><mat-spinner diameter="40" /><p>Loading timeline...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="audit-error">
+      <span class="material-symbols-outlined">error</span>
+      <p>{{ errorMessage() }}</p>
+      <button type="button" class="audit-btn audit-btn--primary" (click)="load()">Retry</button>
+    </div>
+  } @else if (pageState() === 'empty') {
+    <div class="audit-empty">
+      <span class="material-symbols-outlined">timeline</span>
+      <p>No activity recorded</p>
+    </div>
+  } @else {
+    <div class="audit-timeline">
+      @for (log of logs(); track log.id) {
+        <div class="audit-timeline__item" (click)="openLog(log.id)">
+          <div class="audit-timeline__marker audit-timeline__marker--{{ log.riskLevel }}">
+            <span class="material-symbols-outlined">{{ getIcon(log.module) }}</span>
+          </div>
+          <div class="audit-timeline__content">
+            <div class="audit-timeline__header">
+              <strong>{{ log.actorName ?? 'System' }}</strong>
+              <span class="audit-timeline__time">{{ log.createdAt | date:'medium' }}</span>
+            </div>
+            <p class="audit-timeline__desc">{{ log.description }}</p>
+            <div class="audit-timeline__meta">
+              <span class="audit-badge audit-badge--default">{{ log.module }}</span>
+              <span class="audit-risk audit-risk--{{ log.riskLevel }}">
+                <span class="audit-risk__dot"></span>{{ log.riskLevel }}
+              </span>
+              @if (log.ipAddress) {
+                <span class="audit-timeline__ip">{{ log.ipAddress }}</span>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>

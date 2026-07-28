@@ -1,0 +1,102 @@
+<div class="recon-page">
+  <header>
+    <h1>Reconciliation</h1>
+    <p>Imports, matched records, and unmatched exceptions</p>
+  </header>
+
+  <div class="recon-filters">
+    <input type="number" placeholder="Merchant ID" [(ngModel)]="merchantFilter" (keyup.enter)="load()" />
+    <button type="button" (click)="load()">Refresh</button>
+  </div>
+
+  @if (pageState() === 'loading') {
+    <div class="recon-center"><mat-spinner diameter="36" /></div>
+  } @else if (pageState() === 'error') {
+    <p class="recon-error">Failed to load reconciliation dashboard.</p>
+  } @else if (dashboard()) {
+    <div class="recon-stats">
+      <div class="recon-stat">
+        <span>Imports</span>
+        <strong>{{ statNum('imports', 'total') }}</strong>
+        <small>{{ statNum('imports', 'completed') }} completed</small>
+      </div>
+      <div class="recon-stat">
+        <span>Records</span>
+        <strong>{{ statNum('records', 'total') | number }}</strong>
+        <small>{{ statNum('records', 'matched') | number }} matched</small>
+      </div>
+      <div class="recon-stat">
+        <span>Unmatched</span>
+        <strong>{{ statNum('records', 'unmatched') | number }}</strong>
+      </div>
+      <div class="recon-stat">
+        <span>Exceptions</span>
+        <strong>{{ statNum('records', 'exceptions') | number }}</strong>
+      </div>
+    </div>
+
+    <section class="recon-table-wrap">
+      <h2>Recent Imports</h2>
+      @if (!imports().length) {
+        <p class="recon-empty">No imports yet.</p>
+      } @else {
+        <table>
+          <thead>
+            <tr>
+              <th>Reference</th>
+              <th>Source</th>
+              <th>Status</th>
+              <th>Matched</th>
+              <th>Unmatched</th>
+              <th>Completed</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (imp of imports(); track $index) {
+              @let row = $any(imp);
+              <tr>
+                <td>{{ row.importRef }}</td>
+                <td>{{ row.sourceType }}</td>
+                <td>{{ row.status }}</td>
+                <td>{{ row.matchedRows | number }}</td>
+                <td>{{ row.unmatchedRows | number }}</td>
+                <td>{{ row.completedAt | date:'medium' }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      }
+    </section>
+
+    <section class="recon-table-wrap">
+      <h2>Unmatched Records</h2>
+      @if (!unmatched().length) {
+        <p class="recon-empty">No unmatched records.</p>
+      } @else {
+        <table>
+          <thead>
+            <tr>
+              <th>External Ref</th>
+              <th>Amount</th>
+              <th>Type</th>
+              <th>Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (rec of unmatched(); track $index) {
+              @let row = $any(rec);
+              <tr>
+                <td>{{ row.externalRef }}</td>
+                <td>{{ row.amount | currency:row.currency:'symbol':'1.2-2' }}</td>
+                <td>{{ row.recordType }}</td>
+                <td>{{ row.recordDate | date:'mediumDate' }}</td>
+                <td>{{ row.matchStatus }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      }
+    </section>
+  }
+</div>

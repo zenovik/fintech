@@ -1,0 +1,80 @@
+<div class="pl-page">
+  @if (pageState() === 'loading') {
+    <div class="pl-loading"><mat-spinner diameter="40" /><p>Loading payment link...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="pl-error"><span class="material-symbols-outlined">error</span><p>Failed to load payment link.</p><button type="button" class="pl-btn pl-btn--primary" (click)="load()">Retry</button></div>
+  } @else {
+    <div class="pl-page__header">
+      <div>
+        <h1 class="pl-page__title">{{ l.title }}</h1>
+        <p class="pl-page__subtitle">{{ l.linkRef }} · <span [class]="badgeClass(l.status)">{{ l.status }}</span></p>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        @if (rbac.hasPermission(perms.PAYMENT_LINKS_WRITE)) {
+          <a [routerLink]="['/payment-links', l.id, 'edit']" class="pl-btn pl-btn--secondary">Edit</a>
+        }
+        @if (rbac.hasPermission(perms.PAYMENT_LINKS_MANAGE)) {
+          @if (l.status !== 'active') { <button type="button" class="pl-btn pl-btn--success" [disabled]="saving()" (click)="enable()">Enable</button> }
+          @if (l.status === 'active') { <button type="button" class="pl-btn pl-btn--danger" [disabled]="saving()" (click)="disable()">Disable</button> }
+          @if (l.status !== 'expired') { <button type="button" class="pl-btn pl-btn--secondary" [disabled]="saving()" (click)="expire()">Expire</button> }
+          <button type="button" class="pl-btn pl-btn--secondary" [disabled]="saving()" (click)="regenerate()">Regenerate Token</button>
+        }
+        <a routerLink="/payment-links" class="pl-btn pl-btn--secondary">Back</a>
+      </div>
+    </div>
+
+    <div class="pl-card">
+      <h3>Share Link</h3>
+      <div class="pl-link-box">
+        <input type="text" readonly [value]="l.publicUrl" />
+        <button type="button" class="pl-btn pl-btn--primary" (click)="copyLink()">
+          <span class="material-symbols-outlined">content_copy</span> {{ copyMsg() || 'Copy' }}
+        </button>
+      </div>
+      @if (qrDataUrl()) {
+        <div class="pl-qr" style="margin-top:16px">
+          <img [src]="qrDataUrl()" alt="Payment link QR code" />
+          <p style="font-size:12px;color:#64748b;margin-top:8px">Scan to pay</p>
+        </div>
+      }
+    </div>
+
+    <div class="pl-card">
+      <h3>Details</h3>
+      <dl class="pl-detail-grid">
+        <div><dt>Organization</dt><dd>{{ l.organizationName }}</dd></div>
+        <div><dt>Merchant</dt><dd><a [routerLink]="['/merchants', l.merchantId]">{{ l.merchantName }}</a></dd></div>
+        <div><dt>Customer</dt><dd>@if (l.customerId) { <a [routerLink]="['/customers', l.customerId]">{{ l.customerName }}</a> } @else { — }</dd></div>
+        <div><dt>Amount</dt><dd>@if (l.allowCustomAmount) { Custom amount } @else { {{ l.amount | currency:l.currency:'symbol':'1.2-2' }} }</dd></div>
+        <div><dt>Usage</dt><dd>{{ l.currentUsage }}@if (l.maxUsage) { /{{ l.maxUsage }} }</dd></div>
+        <div><dt>Total Collected</dt><dd>{{ l.totalCollected | currency:l.currency:'symbol':'1.2-2' }}</dd></div>
+        <div><dt>Expires</dt><dd>{{ l.expiresAt ? (l.expiresAt | date:'medium') : 'Never' }}</dd></div>
+        <div><dt>Created By</dt><dd>{{ l.createdByName || '—' }}</dd></div>
+        <div><dt>Created</dt><dd>{{ l.createdAt | date:'medium' }}</dd></div>
+        <div><dt>Updated</dt><dd>{{ l.updatedAt | date:'medium' }}</dd></div>
+      </dl>
+      @if (l.description) { <p style="margin-top:12px;font-size:14px">{{ l.description }}</p> }
+    </div>
+
+    @if (l.payments.length) {
+      <div class="pl-card">
+        <h3>Payments ({{ l.payments.length }})</h3>
+        <div class="pl-table-wrap">
+          <table class="pl-table">
+            <thead><tr><th>Transaction</th><th>Amount</th><th>Status</th><th>Date</th></tr></thead>
+            <tbody>
+              @for (p of l.payments; track p.id) {
+                <tr>
+                  <td><a [routerLink]="['/transactions', p.transactionId]">{{ p.transactionRef }}</a></td>
+                  <td>{{ p.paidAmount | currency:l.currency:'symbol':'1.2-2' }}</td>
+                  <td>{{ p.transactionStatus }}</td>
+                  <td>{{ p.createdAt | date:'medium' }}</td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    }
+  }
+</div>

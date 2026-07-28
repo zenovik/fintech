@@ -1,0 +1,222 @@
+@if (state.pageState() === 'loading') {
+  <div class="usr-details__loading"><mat-spinner diameter="48"></mat-spinner><p>Loading user profile...</p></div>
+} @else if (state.pageState() === 'error') {
+  <div class="usr-details__error">
+    <span class="material-symbols-outlined">error</span>
+    <h3>{{ state.errorMessage() }}</h3>
+    <button type="button" class="btn btn--primary" (click)="state.retry()">Retry</button>
+    <a routerLink="/users" class="btn btn--outline">Back to Directory</a>
+  </div>
+} @else {
+  @if (state.selectedUser(); as u) {
+    <div class="usr-details">
+      <div class="page-header">
+        <div>
+          <nav class="breadcrumb">
+            <a routerLink="/users">Users</a>
+            <span class="material-symbols-outlined">chevron_right</span>
+            <span class="breadcrumb__active">Account Settings</span>
+          </nav>
+          <h1>Account Settings</h1>
+          <p class="page-header__subtitle">Manage user profile, preferences, and enterprise security settings.</p>
+        </div>
+        <div class="page-header__actions">
+          <a routerLink="/users" class="btn btn--outline">Discard Changes</a>
+          @if (rbac.hasPermission(perms.USERS_WRITE)) {
+            <a [routerLink]="['/users', u.id, 'edit']" class="btn btn--primary">
+              <span class="material-symbols-outlined">save</span> Save All Changes
+            </a>
+          }
+        </div>
+      </div>
+
+      <div class="usr-details__grid">
+        <aside class="usr-details__sidebar">
+          <div class="profile-card">
+            <div class="profile-card__avatar-wrap">
+              <div class="profile-card__avatar">{{ initials(u) }}</div>
+              @if (rbac.hasPermission(perms.USERS_WRITE)) {
+                <a [routerLink]="['/users', u.id, 'edit']" class="profile-card__edit" aria-label="Edit profile">
+                  <span class="material-symbols-outlined">edit</span>
+                </a>
+              }
+            </div>
+            <h2 class="profile-card__name">{{ u.fullName }}</h2>
+            <span class="profile-card__role">{{ primaryRole(u) }}</span>
+            <ul class="profile-card__meta">
+              <li><span class="material-symbols-outlined">mail</span> {{ u.email }}</li>
+              <li><span class="material-symbols-outlined">call</span> {{ u.phoneNumber || '—' }}</li>
+              <li><span class="material-symbols-outlined">schedule</span> Member since {{ u.createdAt | date: 'MMM y' }}</li>
+            </ul>
+          </div>
+
+          <div class="health-card">
+            <h3>Account Health</h3>
+            <div class="health-card__progress">
+              <div class="health-card__progress-head">
+                <span>Security Completion</span>
+                <strong>{{ securityScore(u) }}%</strong>
+              </div>
+              <div class="health-card__bar"><div class="health-card__bar-fill" [style.width.%]="securityScore(u)"></div></div>
+            </div>
+            <div class="health-card__item">
+              <span class="material-symbols-outlined">verified_user</span>
+              <div>
+                <strong>{{ u.mfaEnabled ? '2FA Enabled' : '2FA Disabled' }}</strong>
+                <small>{{ u.mfaEnabled ? 'Multi-factor authentication active' : 'Enable MFA for stronger security' }}</small>
+              </div>
+            </div>
+            <div class="health-card__item health-card__item--muted">
+              <span class="material-symbols-outlined">badge</span>
+              <div>
+                <strong>Status: {{ u.status | titlecase }}</strong>
+                <small>Last login {{ u.lastLoginAt ? (u.lastLoginAt | date: 'medium') : 'never' }}</small>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <main class="usr-details__main">
+          <mat-tab-group [(selectedIndex)]="activeTab" class="usr-tabs">
+            <mat-tab label="Personal Information">
+              <div class="info-card">
+                <div class="info-card__header">
+                  <h3>Personal Information</h3>
+                  @if (rbac.hasPermission(perms.USERS_WRITE)) {
+                    <a [routerLink]="['/users', u.id, 'edit']" class="info-card__link">Edit Details</a>
+                  }
+                </div>
+                <div class="info-card__grid">
+                  <div class="field-display">
+                    <label>First Name</label>
+                    <div class="field-display__value">{{ u.firstName }}</div>
+                  </div>
+                  <div class="field-display">
+                    <label>Last Name</label>
+                    <div class="field-display__value">{{ u.lastName }}</div>
+                  </div>
+                  <div class="field-display">
+                    <label>Work Email</label>
+                    <div class="field-display__value">{{ u.email }}</div>
+                  </div>
+                  <div class="field-display">
+                    <label>Phone Number</label>
+                    <div class="field-display__value">{{ u.phoneNumber || '—' }}</div>
+                  </div>
+                  <div class="field-display field-display--full">
+                    <label>Assigned Roles</label>
+                    <div class="field-display__value">{{ roleNames(u) }}</div>
+                  </div>
+                  <div class="field-display field-display--full">
+                    <label>Permissions</label>
+                    <div class="field-display__value">{{ u.permissions.includes('*') ? 'All permissions (Super Admin)' : u.permissions.length + ' permissions granted' }}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="prefs-card">
+                <h3>System Preferences</h3>
+                <div class="prefs-row">
+                  <span class="material-symbols-outlined">notifications</span>
+                  <div class="prefs-row__text">
+                    <strong>Push Notifications</strong>
+                    <p>Receive alerts for account activity and security events.</p>
+                  </div>
+                  <span class="toggle-pill toggle-pill--on">On</span>
+                </div>
+                <div class="prefs-row">
+                  <span class="material-symbols-outlined">dark_mode</span>
+                  <div class="prefs-row__text">
+                    <strong>Automatic Dark Mode</strong>
+                    <p>Sync with your system display preferences.</p>
+                  </div>
+                  <span class="toggle-pill">Off</span>
+                </div>
+                <div class="prefs-row">
+                  <span class="material-symbols-outlined">language</span>
+                  <div class="prefs-row__text">
+                    <strong>Default Language</strong>
+                    <p>Interface language for this account.</p>
+                  </div>
+                  <span class="prefs-row__select">English (US)</span>
+                </div>
+              </div>
+            </mat-tab>
+
+            <mat-tab label="Activity">
+              <div class="info-card">
+                <div class="info-card__header"><h3>Recent Activity</h3></div>
+                @if (!u.activity.length) {
+                  <p class="empty-text">No activity recorded for this user.</p>
+                } @else {
+                  <table class="data-table">
+                    <thead><tr><th>Action</th><th>Resource</th><th>IP Address</th><th>Date</th></tr></thead>
+                    <tbody>
+                      @for (a of u.activity; track a.uuid) {
+                        <tr>
+                          <td>{{ a.action }}</td>
+                          <td>{{ a.resourceType || '—' }}</td>
+                          <td>{{ a.ipAddress || '—' }}</td>
+                          <td>{{ a.createdAt | date: 'medium' }}</td>
+                        </tr>
+                      }
+                    </tbody>
+                  </table>
+                }
+              </div>
+            </mat-tab>
+
+            <mat-tab label="Login History">
+              <div class="info-card">
+                <div class="info-card__header"><h3>Login History</h3></div>
+                @if (!u.loginHistory.length) {
+                  <p class="empty-text">No login history available.</p>
+                } @else {
+                  <table class="data-table">
+                    <thead><tr><th>Email</th><th>IP</th><th>Success</th><th>Reason</th><th>Date</th></tr></thead>
+                    <tbody>
+                      @for (l of u.loginHistory; track l.createdAt) {
+                        <tr>
+                          <td>{{ l.email }}</td>
+                          <td>{{ l.ipAddress || '—' }}</td>
+                          <td><span class="status-badge status-badge--{{ l.success ? 'active' : 'locked' }}">{{ l.success ? 'Yes' : 'No' }}</span></td>
+                          <td>{{ l.failureReason || '—' }}</td>
+                          <td>{{ l.createdAt | date: 'short' }}</td>
+                        </tr>
+                      }
+                    </tbody>
+                  </table>
+                }
+              </div>
+            </mat-tab>
+          </mat-tab-group>
+
+          @if (rbac.hasPermission(perms.USERS_WRITE)) {
+            <div class="danger-zone">
+              <div class="danger-zone__header">
+                <span class="material-symbols-outlined">warning</span>
+                <h3>Danger Zone</h3>
+              </div>
+              <div class="danger-zone__body">
+                <div>
+                  <strong>Manage Roles</strong>
+                  <p>Assign or revoke roles for this user account.</p>
+                </div>
+                <button type="button" class="btn btn--outline" (click)="openAssignRoles()">Assign Roles</button>
+              </div>
+              @if (rbac.hasPermission(perms.USERS_DELETE)) {
+                <div class="danger-zone__body danger-zone__body--destructive">
+                  <div>
+                    <strong>Deactivate Account</strong>
+                    <p>Permanently remove access to this merchant portal. This action is irreversible.</p>
+                  </div>
+                  <button type="button" class="btn btn--danger" (click)="confirmDelete()">Deactivate</button>
+                </div>
+              }
+            </div>
+          }
+        </main>
+      </div>
+    </div>
+  }
+}

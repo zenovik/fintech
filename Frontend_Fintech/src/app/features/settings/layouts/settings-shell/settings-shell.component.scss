@@ -1,0 +1,11 @@
+@use '../../styles/settings-shared';
+
+:host { display: block; }
+
+.settings-nav a.settings-nav {
+  &--active, &.settings-nav a--active {
+    background: rgba(0, 62, 199, 0.1);
+    color: #003ec7;
+    font-weight: 600;
+  }
+}

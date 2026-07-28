@@ -1,0 +1,19 @@
+.mob-wizard { padding: 24px; max-width: 960px; margin: 0 auto; }
+.mob-wizard__header { margin-bottom: 24px; }
+.mob-wizard__header h1 { margin: 8px 0 4px; }
+.mob-wizard__header p { color: #64748b; margin: 0; }
+.back-link { display: inline-flex; align-items: center; gap: 4px; color: #003d9b; text-decoration: none; font-size: 0.9rem; }
+.mob-wizard__loading { padding: 48px; text-align: center; }
+.mob-form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px 16px; margin: 16px 0; }
+.mob-form-grid .full { grid-column: 1 / -1; }
+.mob-wizard__actions { display: flex; gap: 12px; margin-top: 24px; }
+.mob-kyc-grid { display: grid; gap: 16px; margin: 16px 0; }
+.mob-kyc-item label { display: block; font-weight: 600; margin-bottom: 8px; }
+.mob-kyc-file { display: block; font-size: 0.85rem; color: #166534; margin-top: 4px; }
+.mob-payment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 16px 0; }
+.mob-review section { display: flex; align-items: center; justify-content: space-between; padding: 16px; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 12px; }
+.mob-review h4 { margin: 0 0 4px; }
+.mob-review p { margin: 0; color: #64748b; font-size: 0.9rem; }
+.mob-submit { text-align: center; padding: 32px; }
+.mob-submit .material-symbols-outlined { font-size: 48px; color: #003d9b; }
+@media (max-width: 768px) { .mob-stepper { ::ng-deep .mat-horizontal-stepper-header-container { overflow-x: auto; } } }

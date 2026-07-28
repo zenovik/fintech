@@ -1,0 +1,98 @@
+<div class="cust-page">
+  <div class="cust-page__header">
+    <div>
+      <h1 class="cust-page__title">Customers</h1>
+      <p class="cust-page__subtitle">Manage customer profiles, activity, and merchant relationships.</p>
+    </div>
+    @if (rbac.hasPermission(perms.CUSTOMERS_WRITE)) {
+      <a routerLink="/customers/create" class="cust-btn cust-btn--primary">
+        <span class="material-symbols-outlined">person_add</span> Add Customer
+      </a>
+    }
+  </div>
+
+  <div class="cust-stats">
+    <div class="cust-stats__card"><label>Total</label><strong>{{ stats().total }}</strong></div>
+    <div class="cust-stats__card"><label>Active</label><strong>{{ stats().active }}</strong></div>
+    <div class="cust-stats__card"><label>Blocked</label><strong>{{ stats().blocked }}</strong></div>
+    <div class="cust-stats__card"><label>High Risk</label><strong>{{ stats().highRisk }}</strong></div>
+  </div>
+
+  <div class="cust-filters">
+    <input type="text" placeholder="Search customers..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+    <select [(ngModel)]="statusFilter" (ngModelChange)="onSearch()">
+      @for (s of statuses; track s.key) { <option [value]="s.key">{{ s.label }}</option> }
+    </select>
+    <select [(ngModel)]="kycFilter" (ngModelChange)="onSearch()">
+      @for (s of kycOptions; track s.key) { <option [value]="s.key">{{ s.label }}</option> }
+    </select>
+    <select [(ngModel)]="riskFilter" (ngModelChange)="onSearch()">
+      @for (s of riskOptions; track s.key) { <option [value]="s.key">{{ s.label }}</option> }
+    </select>
+    <select [(ngModel)]="typeFilter" (ngModelChange)="onSearch()">
+      @for (s of typeOptions; track s.key) { <option [value]="s.key">{{ s.label }}</option> }
+    </select>
+    <button type="button" class="cust-btn cust-btn--secondary" (click)="onSearch()">
+      <span class="material-symbols-outlined">search</span> Search
+    </button>
+  </div>
+
+  @if (pageState() === 'loading') {
+    <div class="cust-loading"><mat-spinner diameter="40" /><p>Loading customers...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="cust-error">
+      <span class="material-symbols-outlined">error</span>
+      <p>{{ errorMessage() }}</p>
+      <button type="button" class="cust-btn cust-btn--primary" (click)="load()">Retry</button>
+    </div>
+  } @else if (pageState() === 'empty') {
+    <div class="cust-empty">
+      <span class="material-symbols-outlined">group</span>
+      <p>No customers found</p>
+      @if (rbac.hasPermission(perms.CUSTOMERS_WRITE)) {
+        <a routerLink="/customers/create" class="cust-btn cust-btn--primary">Add Customer</a>
+      }
+    </div>
+  } @else {
+    <div class="cust-table-wrap">
+      <table class="cust-table">
+        <thead>
+          <tr>
+            <th>Customer</th>
+            <th>Code</th>
+            <th>Status</th>
+            <th>KYC</th>
+            <th>Risk</th>
+            <th>Transactions</th>
+            <th>Total Spent</th>
+            <th>Last Activity</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (c of items(); track c.id) {
+            <tr>
+              <td>
+                <a [routerLink]="['/customers', c.id]">{{ c.displayName }}</a>
+                <div style="font-size:12px;color:#667085">{{ c.email || '—' }}</div>
+              </td>
+              <td>{{ c.customerCode }}</td>
+              <td><span [class]="badgeClass(c.status)">{{ c.status }}</span></td>
+              <td><span [class]="badgeClass(c.kycStatus)">{{ c.kycStatus }}</span></td>
+              <td><span [class]="badgeClass(c.riskLevel)">{{ c.riskLevel }}</span></td>
+              <td>{{ c.transactionCount }}</td>
+              <td>{{ c.totalSpent | currency:'USD':'symbol':'1.0-2' }}</td>
+              <td>{{ c.lastTransactionAt ? (c.lastTransactionAt | date:'mediumDate') : '—' }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+      <div class="cust-pagination">
+        <span>Page {{ page() }} of {{ totalPages() }} ({{ total() }} total)</span>
+        <div>
+          <button type="button" class="cust-btn cust-btn--secondary" [disabled]="page() <= 1" (click)="onPageChange(page() - 1)">Previous</button>
+          <button type="button" class="cust-btn cust-btn--secondary" [disabled]="page() >= totalPages()" (click)="onPageChange(page() + 1)">Next</button>
+        </div>
+      </div>
+    </div>
+  }
+</div>

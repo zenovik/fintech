@@ -1,0 +1,133 @@
+<div class="matrix-page">
+  @if (loading || state.pageState() === 'loading') {
+    <div class="matrix-page__loading"><mat-spinner diameter="48"></mat-spinner><p>Loading permissions...</p></div>
+  } @else {
+    @if (state.selectedRole(); as role) {
+    <div class="page-header">
+      <div>
+        <nav class="breadcrumb">
+          <a routerLink="/users">Users</a>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <span class="breadcrumb__active">Roles &amp; Permissions</span>
+        </nav>
+        <h1>Role Management</h1>
+      </div>
+      @if (rbac.hasPermission(perms.ROLES_WRITE)) {
+        <a routerLink="/roles/create" class="btn btn--primary">
+          <span class="material-symbols-outlined">add</span> Create New Role
+        </a>
+      }
+    </div>
+
+    <div class="matrix-layout">
+      <aside class="matrix-sidebar">
+        <h3>Existing System Roles</h3>
+        <div class="role-list">
+          @for (r of state.roles(); track r.id) {
+            <a [routerLink]="['/roles', r.id, 'permissions']" class="role-card" [class.role-card--active]="r.id === roleId">
+              <div class="role-card__head">
+                <strong>{{ r.name }}</strong>
+                @if (r.isSystem) { <span class="role-card__badge">System</span> }
+              </div>
+              <p>{{ r.description || 'No description' }}</p>
+              <div class="role-card__footer">
+                <span class="role-card__count">{{ r.userCount }} assigned</span>
+                <span class="material-symbols-outlined">chevron_right</span>
+              </div>
+            </a>
+          }
+        </div>
+
+        <div class="hierarchy-card">
+          <h4>Role Hierarchy</h4>
+          <div class="hierarchy-tree">
+            @for (r of state.roles().slice(0, 3); track r.id; let i = $index) {
+              <div class="hierarchy-tree__node" [style.margin-left.px]="i * 16">
+                <span class="material-symbols-outlined">{{ hierarchyIcon(i) }}</span>
+                <span>{{ r.name }}</span>
+              </div>
+            }
+          </div>
+        </div>
+      </aside>
+
+      <div class="matrix-main">
+        <div class="matrix-main__header">
+          <div>
+            <h2>Permission Matrix: <span>{{ role.name }}</span></h2>
+            <p>Configure precise access levels for this role.</p>
+          </div>
+          <div class="matrix-main__actions">
+            <a routerLink="/roles" class="btn btn--text">Discard</a>
+            @if (rbac.hasPermission(perms.PERMISSIONS_MANAGE)) {
+              <button type="button" class="btn btn--primary" (click)="save()">Save Changes</button>
+            }
+          </div>
+        </div>
+
+        <div class="matrix-table-wrap">
+          <table class="matrix-table">
+            <thead>
+              <tr>
+                <th>Module / Action</th>
+                <th>View</th>
+                <th>Create</th>
+                <th>Edit</th>
+                <th>Delete</th>
+                <th>Approve</th>
+              </tr>
+            </thead>
+            @for (module of byModule() | keyvalue; track module.key) {
+              <tbody>
+                <tr class="matrix-section">
+                  <td colspan="6">{{ module.key | titlecase }}</td>
+                </tr>
+                @for (p of module.value; track p.id) {
+                  <tr>
+                    <td class="matrix-action">{{ p.name }}</td>
+                    <td>@if (actionColumn(p.code) === 'view') {
+                      <mat-checkbox [checked]="isChecked(p.id)" (change)="toggle(p.id)" [disabled]="!rbac.hasPermission(perms.PERMISSIONS_MANAGE)"></mat-checkbox>
+                    }</td>
+                    <td>@if (actionColumn(p.code) === 'create') {
+                      <mat-checkbox [checked]="isChecked(p.id)" (change)="toggle(p.id)" [disabled]="!rbac.hasPermission(perms.PERMISSIONS_MANAGE)"></mat-checkbox>
+                    }</td>
+                    <td>@if (actionColumn(p.code) === 'edit') {
+                      <mat-checkbox [checked]="isChecked(p.id)" (change)="toggle(p.id)" [disabled]="!rbac.hasPermission(perms.PERMISSIONS_MANAGE)"></mat-checkbox>
+                    }</td>
+                    <td>@if (actionColumn(p.code) === 'delete') {
+                      <mat-checkbox [checked]="isChecked(p.id)" (change)="toggle(p.id)" [disabled]="!rbac.hasPermission(perms.PERMISSIONS_MANAGE)"></mat-checkbox>
+                    }</td>
+                    <td>@if (actionColumn(p.code) === 'approve') {
+                      <mat-checkbox [checked]="isChecked(p.id)" (change)="toggle(p.id)" [disabled]="!rbac.hasPermission(perms.PERMISSIONS_MANAGE)"></mat-checkbox>
+                    }</td>
+                  </tr>
+                }
+              </tbody>
+            }
+          </table>
+        </div>
+
+        <div class="dual-approval">
+          <div class="dual-approval__icon">
+            <span class="material-symbols-outlined">gpp_maybe</span>
+          </div>
+          <div class="dual-approval__content">
+            <h4>Dual-Approval Configuration</h4>
+            <p>Require a second authorizer for sensitive settlement and system configuration actions.</p>
+            <div class="dual-approval__options">
+              <label class="dual-approval__option">
+                <mat-checkbox disabled></mat-checkbox>
+                <span>Settlement Payouts &gt; $50,000</span>
+              </label>
+              <label class="dual-approval__option dual-approval__option--checked">
+                <mat-checkbox [checked]="true" disabled></mat-checkbox>
+                <span>Merchant Offboarding (Closing Account)</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+  }
+</div>

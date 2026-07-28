@@ -1,0 +1,65 @@
+<div class="po-page">
+  <div class="po-page__header">
+    <div>
+      <h1 class="po-page__title">Payout Queue</h1>
+      <p class="po-page__subtitle">Manage manual and scheduled merchant disbursements.</p>
+    </div>
+    <div style="display:flex;gap:8px">
+      @if (rbac.hasPermission(perms.PAYOUTS_WRITE)) {
+        <a routerLink="/payouts/create" class="po-btn po-btn--primary"><span class="material-symbols-outlined">add</span> New Payout</a>
+        <a routerLink="/payouts/bank-accounts" class="po-btn po-btn--secondary"><span class="material-symbols-outlined">account_balance</span> Bank Accounts</a>
+      }
+    </div>
+  </div>
+
+  <div class="po-stats">
+    <div class="po-stats__card"><label>Pending</label><strong>{{ stats().pending }}</strong></div>
+    <div class="po-stats__card"><label>Scheduled</label><strong>{{ stats().scheduled }}</strong></div>
+    <div class="po-stats__card"><label>Confirmed</label><strong>{{ stats().confirmed }}</strong></div>
+    <div class="po-stats__card"><label>Failed</label><strong>{{ stats().failed }}</strong></div>
+    <div class="po-stats__card"><label>In Flight</label><strong>{{ stats().pendingAmount | currency:'USD':'symbol':'1.0-0' }}</strong></div>
+  </div>
+
+  <div class="po-filters">
+    <input type="text" placeholder="Search payouts..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+    <select [(ngModel)]="statusFilter" (ngModelChange)="onSearch()">@for (s of statuses; track s.key) { <option [value]="s.key">{{ s.label }}</option> }</select>
+    <select [(ngModel)]="typeFilter" (ngModelChange)="onSearch()">@for (t of types; track t.key) { <option [value]="t.key">{{ t.label }}</option> }</select>
+    <select [(ngModel)]="methodFilter" (ngModelChange)="onSearch()">@for (m of methods; track m.key) { <option [value]="m.key">{{ m.label }}</option> }</select>
+    <button type="button" class="po-btn po-btn--secondary" (click)="onSearch()">Search</button>
+  </div>
+
+  @if (pageState() === 'loading') {
+    <div class="po-loading"><mat-spinner diameter="40" /><p>Loading payouts...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="po-error"><span class="material-symbols-outlined">error</span><p>Failed to load payouts.</p><button type="button" class="po-btn po-btn--primary" (click)="load()">Retry</button></div>
+  } @else if (pageState() === 'empty') {
+    <div class="po-empty"><span class="material-symbols-outlined">payments</span><p>No payouts found</p></div>
+  } @else {
+    <div class="po-table-wrap">
+      <table class="po-table">
+        <thead><tr><th>Ref</th><th>Merchant</th><th>Settlement</th><th>Bank</th><th>Type</th><th>Amount</th><th>Status</th><th>Scheduled</th></tr></thead>
+        <tbody>
+          @for (p of items(); track p.id) {
+            <tr>
+              <td><a [routerLink]="['/payouts', p.id]">{{ p.payoutRef }}</a></td>
+              <td><a [routerLink]="['/merchants', p.merchantId]">{{ p.merchantName }}</a></td>
+              <td>@if (p.settlementId) { <a [routerLink]="['/settlements', p.settlementId]">{{ p.settlementRef }}</a> } @else { — }</td>
+              <td>{{ p.bankName || '—' }} {{ p.accountMasked || '' }}</td>
+              <td><span [class]="badgeClass(p.payoutType)">{{ p.payoutType }}</span></td>
+              <td>{{ p.amount | currency:p.currency:'symbol':'1.2-2' }}</td>
+              <td><span [class]="badgeClass(p.status)">{{ p.status }}</span></td>
+              <td>{{ p.scheduledAt ? (p.scheduledAt | date:'mediumDate') : '—' }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+      <div class="po-pagination">
+        <span>Page {{ page() }} of {{ totalPages() }} ({{ total() }} total)</span>
+        <div>
+          <button type="button" class="po-btn po-btn--secondary" [disabled]="page() <= 1" (click)="onPageChange(page() - 1)">Previous</button>
+          <button type="button" class="po-btn po-btn--secondary" [disabled]="page() >= totalPages()" (click)="onPageChange(page() + 1)">Next</button>
+        </div>
+      </div>
+    </div>
+  }
+</div>

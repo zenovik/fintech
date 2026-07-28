@@ -1,0 +1,19 @@
+.sc-page { padding: 24px; }
+header h1 { margin: 0 0 4px; font-size: 24px; }
+header p { margin: 0; color: #64748b; font-size: 14px; }
+.sc-filters { display: flex; gap: 12px; margin: 20px 0; }
+.sc-filters input { padding: 10px 12px; border: 1px solid #e2e8f0; border-radius: 8px; }
+.sc-filters button { padding: 10px 16px; background: #4f46e5; color: #fff; border: none; border-radius: 8px; cursor: pointer; }
+.sc-center { padding: 48px; text-align: center; }
+.sc-error { color: #b42318; }
+.sc-stats { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); margin-bottom: 24px; }
+.sc-stat { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; }
+.sc-stat span { display: block; font-size: 12px; color: #64748b; }
+.sc-stat strong { font-size: 24px; display: block; margin: 8px 0 4px; }
+.sc-stat small { color: #94a3b8; font-size: 12px; }
+.sc-table-wrap { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; }
+.sc-table-wrap h2 { margin: 0 0 16px; font-size: 16px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #f1f5f9; }
+th { font-size: 12px; text-transform: uppercase; color: #64748b; }
+.sc-empty { color: #64748b; text-align: center; padding: 24px; }

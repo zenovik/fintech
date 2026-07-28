@@ -1,0 +1,110 @@
+<app-auth-layout [maxWidth]="'lg'" [showDecorations]="false">
+  <form class="verify" [formGroup]="form" (ngSubmit)="verify()">
+    <div class="verify__brand">
+      <div class="verify__brand-icon">
+        <span class="material-symbols-outlined">shield_person</span>
+      </div>
+      <h1 class="verify__title">
+        @if (isTotpMode) {
+          Authenticator App
+        } @else {
+          Verification Required
+        }
+      </h1>
+      <p class="verify__subtitle">
+        @if (isTotpMode) {
+          Enter the 6-digit code from your authentication app to continue.
+        } @else {
+          We've sent a 6-digit code to <strong>{{ maskedDestination }}</strong>
+        }
+      </p>
+    </div>
+
+    <div class="verify__card">
+      @if (isTotpMode) {
+        <app-otp-input
+          formControlName="otp"
+          [autoFocus]="true"
+          (completed)="onOtpCompleted($event)"
+        />
+
+        <button class="auth-btn" type="submit" [disabled]="loading">
+          @if (loading) {
+            <mat-spinner diameter="20" />
+            <span>Verifying...</span>
+          } @else {
+            <span>Verify Code</span>
+            <span class="material-symbols-outlined">arrow_forward</span>
+          }
+        </button>
+
+        <div class="verify__divider"><span>OR USE ALTERNATIVE</span></div>
+
+        <button type="button" class="verify__alt-btn" (click)="switchToSms()">
+          <div class="verify__alt-icon"><span class="material-symbols-outlined">sms</span></div>
+          <div class="verify__alt-text">
+            <p>Text Message (SMS)</p>
+            <span>Sent to {{ challenge?.maskedDestination ?? '•••• ••58' }}</span>
+          </div>
+          <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+      } @else {
+        @if (challenge?.nextStep === 'totp') {
+          <button type="button" class="verify__back-btn" (click)="switchToTotp()">
+            <span class="material-symbols-outlined">arrow_back</span>
+            Back to Authenticator
+          </button>
+        }
+
+        <app-otp-input
+          formControlName="otp"
+          [autoFocus]="true"
+          (completed)="onOtpCompleted($event)"
+        />
+
+        <div class="verify__resend">
+          <span>Didn't receive the code?</span>
+          <button
+            type="button"
+            class="verify__resend-btn"
+            [disabled]="resendSeconds > 0 || resendLoading"
+            (click)="resendOtp()"
+          >
+            @if (resendLoading) {
+              <mat-spinner diameter="16" />
+            } @else {
+              {{ resendLabel }}
+            }
+          </button>
+        </div>
+
+        <button class="auth-btn" type="submit" [disabled]="loading">
+          @if (loading) {
+            <mat-spinner diameter="20" />
+            <span>Verifying...</span>
+          } @else {
+            <span>Verify Identity</span>
+            <span class="material-symbols-outlined">arrow_forward</span>
+          }
+        </button>
+      }
+    </div>
+
+    <div class="verify__trust">
+      <mat-slide-toggle formControlName="trustDevice" color="primary">
+        Trust this device for 30 days
+      </mat-slide-toggle>
+    </div>
+
+    <div class="verify__footer">
+      <div class="verify__secure">
+        <span class="material-symbols-outlined">lock</span>
+        End-to-end encrypted verification
+      </div>
+      <a class="verify__back-link" [routerLink]="loginRoute">
+        <span class="material-symbols-outlined">arrow_back</span>
+        Back to login
+      </a>
+    </div>
+  </form>
+</app-auth-layout>

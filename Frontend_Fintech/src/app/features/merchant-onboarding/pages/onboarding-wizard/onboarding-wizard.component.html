@@ -1,0 +1,145 @@
+<div class="mob-wizard">
+  <div class="mob-wizard__header">
+    <a routerLink="/merchant-onboarding" class="back-link"><span class="material-symbols-outlined">arrow_back</span> Back to Dashboard</a>
+    <h1>Merchant Onboarding Wizard</h1>
+    @if (detail(); as d) {
+      <p>{{ d.applicationRef }} · {{ statusLabels[d.status] || d.status }}</p>
+    }
+  </div>
+
+  @if (loading()) {
+    <div class="mob-wizard__loading"><mat-spinner diameter="40"></mat-spinner></div>
+  } @else {
+    <mat-stepper linear #stepper orientation="horizontal" class="mob-stepper">
+      <!-- Step 1: Business -->
+      <mat-step [stepControl]="businessForm" label="Business">
+        <form [formGroup]="businessForm" class="mob-form-grid">
+          <mat-form-field><mat-label>Business Name</mat-label><input matInput formControlName="businessName" /></mat-form-field>
+          <mat-form-field><mat-label>Legal Name</mat-label><input matInput formControlName="legalName" /></mat-form-field>
+          <mat-form-field><mat-label>Merchant Category</mat-label><input matInput formControlName="merchantCategory" /></mat-form-field>
+          <mat-form-field><mat-label>Industry</mat-label><input matInput formControlName="industry" /></mat-form-field>
+          <mat-form-field><mat-label>Website</mat-label><input matInput formControlName="website" /></mat-form-field>
+          <mat-form-field><mat-label>Email</mat-label><input matInput type="email" formControlName="email" /></mat-form-field>
+          <mat-form-field><mat-label>Phone</mat-label><input matInput formControlName="phone" /></mat-form-field>
+          <mat-form-field><mat-label>GST Number</mat-label><input matInput formControlName="gstNumber" /></mat-form-field>
+          <mat-form-field><mat-label>PAN Number</mat-label><input matInput formControlName="panNumber" /></mat-form-field>
+          <mat-form-field><mat-label>CIN (optional)</mat-label><input matInput formControlName="cinNumber" /></mat-form-field>
+          <mat-form-field><mat-label>Business Type</mat-label>
+            <mat-select formControlName="businessType"><mat-option value="">—</mat-option>@for (t of businessTypes; track t) { <mat-option [value]="t">{{ t }}</mat-option> }</mat-select>
+          </mat-form-field>
+        </form>
+        <div class="mob-wizard__actions"><button mat-flat-button color="primary" (click)="saveBusiness()" [disabled]="saving()">Save & Continue</button></div>
+      </mat-step>
+
+      <!-- Step 2: Address -->
+      <mat-step label="Address">
+        <h3>Registered Address</h3>
+        <form [formGroup]="registeredAddressForm" class="mob-form-grid">
+          <mat-form-field class="full"><mat-label>Address Line 1</mat-label><input matInput formControlName="line1" /></mat-form-field>
+          <mat-form-field class="full"><mat-label>Address Line 2</mat-label><input matInput formControlName="line2" /></mat-form-field>
+          <mat-form-field><mat-label>Country</mat-label><input matInput formControlName="country" /></mat-form-field>
+          <mat-form-field><mat-label>State</mat-label><input matInput formControlName="state" /></mat-form-field>
+          <mat-form-field><mat-label>City</mat-label><input matInput formControlName="city" /></mat-form-field>
+          <mat-form-field><mat-label>Pincode</mat-label><input matInput formControlName="pincode" /></mat-form-field>
+          <mat-form-field><mat-label>Latitude</mat-label><input matInput type="number" formControlName="latitude" /></mat-form-field>
+          <mat-form-field><mat-label>Longitude</mat-label><input matInput type="number" formControlName="longitude" /></mat-form-field>
+        </form>
+        <h3>Operating Address</h3>
+        <form [formGroup]="operatingAddressForm" class="mob-form-grid">
+          <mat-form-field class="full"><mat-label>Address Line 1</mat-label><input matInput formControlName="line1" /></mat-form-field>
+          <mat-form-field><mat-label>City</mat-label><input matInput formControlName="city" /></mat-form-field>
+          <mat-form-field><mat-label>State</mat-label><input matInput formControlName="state" /></mat-form-field>
+          <mat-form-field><mat-label>Pincode</mat-label><input matInput formControlName="pincode" /></mat-form-field>
+        </form>
+        <div class="mob-wizard__actions"><button mat-stroked-button (click)="goToStep(0)">Back</button><button mat-flat-button color="primary" (click)="saveAddresses()" [disabled]="saving()">Save & Continue</button></div>
+      </mat-step>
+
+      <!-- Step 3: KYC -->
+      <mat-step label="KYC">
+        <div class="mob-kyc-grid">
+          @for (docType of kycDocTypes; track docType) {
+            <div class="mob-kyc-item">
+              <label>{{ kycDocLabels[docType] }}</label>
+              <input type="file" (change)="onKycFileChange(docType, $event)" />
+              @if (kycFiles[docType]) { <span class="mob-kyc-file">{{ kycFiles[docType].fileName }}</span> }
+            </div>
+          }
+        </div>
+        <div class="mob-wizard__actions"><button mat-stroked-button (click)="goToStep(1)">Back</button><button mat-flat-button color="primary" (click)="saveKyc()" [disabled]="saving()">Save & Continue</button></div>
+      </mat-step>
+
+      <!-- Step 4: Bank -->
+      <mat-step [stepControl]="bankForm" label="Bank">
+        <form [formGroup]="bankForm" class="mob-form-grid">
+          <mat-form-field><mat-label>Account Holder</mat-label><input matInput formControlName="accountHolder" /></mat-form-field>
+          <mat-form-field><mat-label>Account Number</mat-label><input matInput formControlName="accountNumber" /></mat-form-field>
+          <mat-form-field><mat-label>IFSC</mat-label><input matInput formControlName="ifsc" /></mat-form-field>
+          <mat-form-field><mat-label>Bank Name</mat-label><input matInput formControlName="bankName" /></mat-form-field>
+          <mat-form-field><mat-label>Branch</mat-label><input matInput formControlName="branch" /></mat-form-field>
+          <mat-form-field><mat-label>Account Type</mat-label>
+            <mat-select formControlName="accountType"><mat-option value="savings">Savings</mat-option><mat-option value="current">Current</mat-option></mat-select>
+          </mat-form-field>
+        </form>
+        <div class="mob-wizard__actions"><button mat-stroked-button (click)="goToStep(2)">Back</button><button mat-flat-button color="primary" (click)="saveBank()" [disabled]="saving()">Save & Continue</button></div>
+      </mat-step>
+
+      <!-- Step 5: Settlement -->
+      <mat-step label="Settlement">
+        <form [formGroup]="settlementForm" class="mob-form-grid">
+          <mat-form-field><mat-label>Settlement Cycle</mat-label>
+            <mat-select formControlName="settlementCycle">@for (c of settlementCycles; track c) { <mat-option [value]="c">{{ c | uppercase }}</mat-option> }</mat-select>
+          </mat-form-field>
+          <mat-form-field><mat-label>Currency</mat-label><input matInput formControlName="settlementCurrency" /></mat-form-field>
+          <mat-form-field><mat-label>Settlement Method</mat-label>
+            <mat-select formControlName="settlementMethod">@for (m of settlementMethods; track m) { <mat-option [value]="m">{{ m }}</mat-option> }</mat-select>
+          </mat-form-field>
+          <mat-form-field><mat-label>Minimum Settlement Amount</mat-label><input matInput type="number" formControlName="minSettlementAmount" /></mat-form-field>
+          <mat-form-field><mat-label>Reserve %</mat-label><input matInput type="number" formControlName="reservePct" /></mat-form-field>
+          <mat-form-field><mat-label>Rolling Reserve %</mat-label><input matInput type="number" formControlName="rollingReservePct" /></mat-form-field>
+        </form>
+        <div class="mob-wizard__actions"><button mat-stroked-button (click)="goToStep(3)">Back</button><button mat-flat-button color="primary" (click)="saveSettlement()" [disabled]="saving()">Save & Continue</button></div>
+      </mat-step>
+
+      <!-- Step 6: Payment -->
+      <mat-step label="Payment">
+        <form [formGroup]="paymentForm" class="mob-payment-grid">
+          <mat-checkbox formControlName="enableCards">Cards</mat-checkbox>
+          <mat-checkbox formControlName="enableUpi">UPI</mat-checkbox>
+          <mat-checkbox formControlName="enableNetBanking">Net Banking</mat-checkbox>
+          <mat-checkbox formControlName="enableWallet">Wallet</mat-checkbox>
+          <mat-checkbox formControlName="enableEmi">EMI</mat-checkbox>
+          <mat-checkbox formControlName="enableBnpl">BNPL</mat-checkbox>
+          <mat-checkbox formControlName="enableQr">QR</mat-checkbox>
+          <mat-checkbox formControlName="enablePaymentLinks">Payment Links</mat-checkbox>
+          <mat-checkbox formControlName="enableSubscriptions">Subscriptions</mat-checkbox>
+        </form>
+        <div class="mob-wizard__actions"><button mat-stroked-button (click)="goToStep(4)">Back</button><button mat-flat-button color="primary" (click)="savePayment()" [disabled]="saving()">Save & Continue</button></div>
+      </mat-step>
+
+      <!-- Step 7: Review -->
+      <mat-step label="Review">
+        @if (detail(); as d) {
+          <div class="mob-review">
+            <section><h4>Business</h4><p>{{ d.business?.businessName }} · {{ d.business?.email }}</p><button mat-stroked-button (click)="goToStep(0)">Edit</button></section>
+            <section><h4>Addresses</h4><p>{{ d.addresses.length }} address(es) on file</p><button mat-stroked-button (click)="goToStep(1)">Edit</button></section>
+            <section><h4>KYC</h4><p>{{ d.kycDocuments.length }} document(s) uploaded</p><button mat-stroked-button (click)="goToStep(2)">Edit</button></section>
+            <section><h4>Bank</h4><p>{{ d.bank?.bankName || 'Not configured' }}</p><button mat-stroked-button (click)="goToStep(3)">Edit</button></section>
+            <section><h4>Settlement</h4><p>{{ d.settlement?.settlementCycle || 'Not configured' | uppercase }}</p><button mat-stroked-button (click)="goToStep(4)">Edit</button></section>
+            <section><h4>Payment Methods</h4><p>Configuration saved</p><button mat-stroked-button (click)="goToStep(5)">Edit</button></section>
+          </div>
+        }
+        <div class="mob-wizard__actions"><button mat-stroked-button (click)="goToStep(5)">Back</button><button mat-flat-button color="primary" (click)="goToStep(7)">Proceed to Submit</button></div>
+      </mat-step>
+
+      <!-- Step 8: Submit -->
+      <mat-step label="Submit">
+        <div class="mob-submit">
+          <span class="material-symbols-outlined">assignment_turned_in</span>
+          <h3>Ready to Submit</h3>
+          <p>Your application will be sent for review. You won't be able to edit after submission.</p>
+        </div>
+        <div class="mob-wizard__actions"><button mat-stroked-button (click)="goToStep(6)">Back</button><button mat-flat-button color="primary" (click)="submitApplication()" [disabled]="saving()">Submit Application</button></div>
+      </mat-step>
+    </mat-stepper>
+  }
+</div>

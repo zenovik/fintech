@@ -1,0 +1,73 @@
+<div class="sub-page">
+  <div class="sub-page__header">
+    <div>
+      <h1 class="sub-page__title">Subscriptions</h1>
+      <p class="sub-page__subtitle">Manage recurring billing plans and customer subscriptions.</p>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      @if (rbac.hasPermission(perms.SUBSCRIPTIONS_WRITE)) {
+        <a routerLink="/subscriptions/plans/create" class="sub-btn sub-btn--secondary">New Plan</a>
+        <a routerLink="/subscriptions/create" class="sub-btn sub-btn--primary">
+          <span class="material-symbols-outlined">add</span> New Subscription
+        </a>
+      }
+    </div>
+  </div>
+
+  <div class="sub-tabs">
+    <a routerLink="/subscriptions" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Dashboard</a>
+    <a routerLink="/subscriptions/plans" routerLinkActive="active">Plans</a>
+  </div>
+
+  <div class="sub-stats">
+    <div class="sub-stats__card"><label>Total</label><strong>{{ stats().total }}</strong></div>
+    <div class="sub-stats__card"><label>Active</label><strong>{{ stats().active }}</strong></div>
+    <div class="sub-stats__card"><label>Paused</label><strong>{{ stats().paused }}</strong></div>
+    <div class="sub-stats__card"><label>Cancelled</label><strong>{{ stats().cancelled }}</strong></div>
+    <div class="sub-stats__card"><label>Failed</label><strong>{{ stats().failed }}</strong></div>
+    <div class="sub-stats__card"><label>MRR Est.</label><strong>{{ stats().mrrEstimate | currency:'USD':'symbol':'1.0-0' }}</strong></div>
+  </div>
+
+  <div class="sub-filters">
+    <input type="text" placeholder="Search subscriptions..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+    <select [(ngModel)]="statusFilter" (ngModelChange)="onSearch()">
+      @for (s of statuses; track s.key) { <option [value]="s.key">{{ s.label }}</option> }
+    </select>
+    <input type="number" placeholder="Merchant ID" [(ngModel)]="merchantFilter" (keyup.enter)="onSearch()" />
+    <button type="button" class="sub-btn sub-btn--secondary" (click)="onSearch()">Search</button>
+  </div>
+
+  @if (pageState() === 'loading') {
+    <div class="sub-loading"><mat-spinner diameter="40" /><p>Loading subscriptions...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="sub-error"><span class="material-symbols-outlined">error</span><p>Failed to load subscriptions.</p><button type="button" class="sub-btn sub-btn--primary" (click)="load()">Retry</button></div>
+  } @else if (pageState() === 'empty') {
+    <div class="sub-empty"><span class="material-symbols-outlined">autorenew</span><p>No subscriptions found</p></div>
+  } @else {
+    <div class="sub-table-wrap">
+      <table class="sub-table">
+        <thead><tr><th>Ref</th><th>Customer</th><th>Plan</th><th>Merchant</th><th>Price</th><th>Status</th><th>Next Billing</th></tr></thead>
+        <tbody>
+          @for (sub of items(); track sub.id) {
+            <tr>
+              <td><a [routerLink]="['/subscriptions', sub.id]">{{ sub.subscriptionRef }}</a></td>
+              <td><a [routerLink]="['/customers', sub.customerId]">{{ sub.customerName }}</a></td>
+              <td>{{ sub.planName }}</td>
+              <td><a [routerLink]="['/merchants', sub.merchantId]">{{ sub.merchantName }}</a></td>
+              <td>{{ sub.planPrice | currency:sub.currency:'symbol':'1.2-2' }}/{{ sub.billingInterval }}</td>
+              <td><span [class]="badgeClass(sub.status)">{{ sub.status }}</span></td>
+              <td>{{ sub.nextBillingDate ? (sub.nextBillingDate | date:'mediumDate') : '—' }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+      <div class="sub-pagination">
+        <span>Page {{ page() }} of {{ totalPages() }} ({{ total() }} total)</span>
+        <div>
+          <button type="button" class="sub-btn sub-btn--secondary" [disabled]="page() <= 1" (click)="onPageChange(page() - 1)">Previous</button>
+          <button type="button" class="sub-btn sub-btn--secondary" [disabled]="page() >= totalPages()" (click)="onPageChange(page() + 1)">Next</button>
+        </div>
+      </div>
+    </div>
+  }
+</div>

@@ -1,0 +1,2081 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\playwright.config.ts",
+    "rootDir": "C:/Users/danis/OneDrive/Desktop/fintech_application/e2e/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\e2e\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "playwright-report"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/danis/OneDrive/Desktop/fintech_application/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/danis/OneDrive/Desktop/fintech_application/e2e/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/auth\\.setup\\.ts/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/danis/OneDrive/Desktop/fintech_application/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "desktop-chrome",
+        "name": "desktop-chrome",
+        "testDir": "C:/Users/danis/OneDrive/Desktop/fintech_application/e2e/tests",
+        "testIgnore": [
+          "/auth\\.setup\\.ts/",
+          "/responsive\\.spec\\.ts/"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/danis/OneDrive/Desktop/fintech_application/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "tablet",
+        "name": "tablet",
+        "testDir": "C:/Users/danis/OneDrive/Desktop/fintech_application/e2e/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/responsive\\.spec\\.ts/"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.51.0",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "auth.setup.ts",
+      "file": "auth.setup.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "authenticate admin",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setup",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2241,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-28T19:44:14.292Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "17e3fe6f4d9d8bd79c6b-a04d83a028572a7e3261",
+          "file": "auth.setup.ts",
+          "line": 9,
+          "column": 8
+        },
+        {
+          "title": "authenticate merchantAdmin",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setup",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "timedOut",
+                  "duration": 30110,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\e2e\\helpers\\auth.helper.ts",
+                        "column": 14,
+                        "line": 11
+                      },
+                      "message": "Error: page.waitForURL: Test timeout of 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n\n   at ..\\helpers\\auth.helper.ts:11\n\n   9 |   await page.locator('button.auth-btn[type=\"submit\"]').click();\n  10 |\n> 11 |   await page.waitForURL(/\\/(dashboard|select-organization)/, { timeout: 30_000 });\n     |              ^\n  12 |\n  13 |   if (page.url().includes('/select-organization')) {\n  14 |     await page.locator('.select-org__item').first().click();\n    at loginViaUi (C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\e2e\\helpers\\auth.helper.ts:11:14)\n    at C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\e2e\\tests\\auth.setup.ts:10:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-28T19:44:14.299Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\test-results\\auth.setup.ts-authenticate-merchantAdmin-setup\\test-failed-1.png"
+                    },
+                    {
+                      "name": "_prompt-1",
+                      "contentType": "text/markdown",
+                      "body": "IyBJbnN0cnVjdGlvbnMKCi0gRm9sbG93aW5nIFBsYXl3cmlnaHQgdGVzdCBmYWlsZWQuCi0gRXhwbGFpbiB3aHksIGJlIGNvbmNpc2UsIHJlc3BlY3QgUGxheXdyaWdodCBiZXN0IHByYWN0aWNlcy4KLSBQcm92aWRlIGEgc25pcHBldCBvZiBjb2RlIHdpdGggdGhlIGZpeCwgaWYgcG9zc2libGUuCgojIFRlc3QgaW5mbwoKLSBOYW1lOiBhdXRoZW50aWNhdGUgbWVyY2hhbnRBZG1pbgotIExvY2F0aW9uOiBDOlxVc2Vyc1xkYW5pc1xPbmVEcml2ZVxEZXNrdG9wXGZpbnRlY2hfYXBwbGljYXRpb25cZTJlXHRlc3RzXGF1dGguc2V0dXAudHM6OTo4CgojIEVycm9yIGRldGFpbHMKCmBgYApFcnJvcjogcGFnZS53YWl0Rm9yVVJMOiBUZXN0IHRpbWVvdXQgb2YgMzAwMDBtcyBleGNlZWRlZC4KPT09PT09PT09PT09PT09PT09PT09PT09PT09IGxvZ3MgPT09PT09PT09PT09PT09PT09PT09PT09PT09CndhaXRpbmcgZm9yIG5hdmlnYXRpb24gdW50aWwgImxvYWQiCj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICAgYXQgbG9naW5WaWFVaSAoQzpcVXNlcnNcZGFuaXNcT25lRHJpdmVcRGVza3RvcFxmaW50ZWNoX2FwcGxpY2F0aW9uXGUyZVxoZWxwZXJzXGF1dGguaGVscGVyLnRzOjExOjE0KQogICAgYXQgQzpcVXNlcnNcZGFuaXNcT25lRHJpdmVcRGVza3RvcFxmaW50ZWNoX2FwcGxpY2F0aW9uXGUyZVx0ZXN0c1xhdXRoLnNldHVwLnRzOjEwOjUKYGBgCgojIFBhZ2Ugc25hcHNob3QKCmBgYHlhbWwKLSBtYWluOgogIC0gdGV4dDogcGF5bWVudHMKICAtIGhlYWRpbmcgIk1lcmNoYW50IFBybyIgW2xldmVsPTFdCiAgLSBwYXJhZ3JhcGg6IEVudGVycHJpc2UgTWVyY2hhbnQgUG9ydGFsCiAgLSBoZWFkaW5nICJTaWduIEluIiBbbGV2ZWw9Ml0KICAtIHBhcmFncmFwaDogRW50ZXIgeW91ciBjcmVkZW50aWFscyB0byBtYW5hZ2UgeW91ciBidXNpbmVzcy4KICAtIGFsZXJ0OiBlcnJvciBJbnZhbGlkIGVtYWlsIG9yIHBhc3N3b3JkCiAgLSB0ZXh0OiBFbWFpbCBBZGRyZXNzIG1haWwKICAtIHRleHRib3ggIkVtYWlsIEFkZHJlc3MiOiBtZXJjaGFudC5tZ3JAbWVyY2hhbnRwcm8uY29tCiAgLSB0ZXh0OiBQYXNzd29yZAogIC0gbGluayAiRm9yZ290IFBhc3N3b3JkPyIKICAtIHRleHQ6IGxvY2sKICAtIHRleHRib3ggIlBhc3N3b3JkIjogUGFzc3dvcmQxMjMhCiAgLSBidXR0b24gIlNob3cgcGFzc3dvcmQiOiB2aXNpYmlsaXR5CiAgLSBjaGVja2JveCAiUmVtZW1iZXIgdGhpcyBkZXZpY2UiCiAgLSB0ZXh0OiBSZW1lbWJlciB0aGlzIGRldmljZQogIC0gYnV0dG9uICJTaWduIEluIGFycm93X2ZvcndhcmQiCiAgLSB0ZXh0OiBPciBjb250aW51ZSB3aXRoCiAgLSBidXR0b24gIlNpZ24gaW4gd2l0aCBHb29nbGUgKGNvbWluZyBzb29uKSIgW2Rpc2FibGVkXTogR29vZ2xlCiAgLSBidXR0b24gIlNpZ24gaW4gd2l0aCBHaXRIdWIgKGNvbWluZyBzb29uKSIgW2Rpc2FibGVkXTogR2l0SHViCiAgLSBwYXJhZ3JhcGg6CiAgICAtIHRleHQ6IE5ldyB0byB0aGUgcGxhdGZvcm0/CiAgICAtIGxpbmsgIlNpZ24gdXAgYXMgTWVyY2hhbnQiCiAgLSB0ZXh0OiBTeXN0ZW1zIE9wZXJhdGlvbmFsCiAgLSBsaW5rICJTZWN1cml0eSBPdmVydmlldyIKYGBgCgojIFRlc3Qgc291cmNlCgpgYGB0cwogICAxIHwgaW1wb3J0IHR5cGUgeyBQYWdlIH0gZnJvbSAnQHBsYXl3cmlnaHQvdGVzdCc7CiAgIDIgfCBpbXBvcnQgdHlwZSB7IFRlc3RVc2VyIH0gZnJvbSAnLi4vZGF0YS91c2Vycyc7CiAgIDMgfCBpbXBvcnQgeyBST1VURVMgfSBmcm9tICcuLi9kYXRhL2NvbnN0YW50cyc7CiAgIDQgfAogICA1IHwgZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGxvZ2luVmlhVWkocGFnZTogUGFnZSwgdXNlcjogVGVzdFVzZXIpOiBQcm9taXNlPHZvaWQ+IHsKICAgNiB8ICAgYXdhaXQgcGFnZS5nb3RvKFJPVVRFUy5sb2dpbik7CiAgIDcgfCAgIGF3YWl0IHBhZ2UubG9jYXRvcignI2VtYWlsJykuZmlsbCh1c2VyLmVtYWlsKTsKICAgOCB8ICAgYXdhaXQgcGFnZS5sb2NhdG9yKCcjcGFzc3dvcmQnKS5maWxsKHVzZXIucGFzc3dvcmQpOwogICA5IHwgICBhd2FpdCBwYWdlLmxvY2F0b3IoJ2J1dHRvbi5hdXRoLWJ0blt0eXBlPSJzdWJtaXQiXScpLmNsaWNrKCk7CiAgMTAgfAo+IDExIHwgICBhd2FpdCBwYWdlLndhaXRGb3JVUkwoL1wvKGRhc2hib2FyZHxzZWxlY3Qtb3JnYW5pemF0aW9uKS8sIHsgdGltZW91dDogMzBfMDAwIH0pOwogICAgIHwgICAgICAgICAgICAgIF4gRXJyb3I6IHBhZ2Uud2FpdEZvclVSTDogVGVzdCB0aW1lb3V0IG9mIDMwMDAwbXMgZXhjZWVkZWQuCiAgMTIgfAogIDEzIHwgICBpZiAocGFnZS51cmwoKS5pbmNsdWRlcygnL3NlbGVjdC1vcmdhbml6YXRpb24nKSkgewogIDE0IHwgICAgIGF3YWl0IHBhZ2UubG9jYXRvcignLnNlbGVjdC1vcmdfX2l0ZW0nKS5maXJzdCgpLmNsaWNrKCk7CiAgMTUgfCAgICAgYXdhaXQgcGFnZS53YWl0Rm9yVVJMKC9cL2Rhc2hib2FyZC8sIHsgdGltZW91dDogMTVfMDAwIH0pOwogIDE2IHwgICB9CiAgMTcgfCB9CiAgMTggfAogIDE5IHwgZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGxvZ291dFZpYVVpKHBhZ2U6IFBhZ2UpOiBQcm9taXNlPHZvaWQ+IHsKICAyMCB8ICAgY29uc3QgcHJvZmlsZUJ0biA9IHBhZ2UubG9jYXRvcignLnRvcG5hdl9fcHJvZmlsZSwgLmRhc2gtdG9wbmF2X19wcm9maWxlLCBbYXJpYS1sYWJlbD0iVXNlciBtZW51Il0nKS5maXJzdCgpOwogIDIxIHwgICBpZiAoYXdhaXQgcHJvZmlsZUJ0bi5pc1Zpc2libGUoKS5jYXRjaCgoKSA9PiBmYWxzZSkpIHsKICAyMiB8ICAgICBhd2FpdCBwcm9maWxlQnRuLmNsaWNrKCk7CiAgMjMgfCAgICAgY29uc3QgbG9nb3V0ID0gcGFnZS5nZXRCeVJvbGUoJ21lbnVpdGVtJywgeyBuYW1lOiAvbG9nIG91dHxzaWduIG91dC9pIH0pOwogIDI0IHwgICAgIGlmIChhd2FpdCBsb2dvdXQuaXNWaXNpYmxlKCkuY2F0Y2goKCkgPT4gZmFsc2UpKSB7CiAgMjUgfCAgICAgICBhd2FpdCBsb2dvdXQuY2xpY2soKTsKICAyNiB8ICAgICB9CiAgMjcgfCAgIH0KICAyOCB8ICAgYXdhaXQgcGFnZS5nb3RvKFJPVVRFUy5sb2dpbik7CiAgMjkgfCB9CiAgMzAgfAogIDMxIHwgZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIHNldEF1dGhTdG9yYWdlKHBhZ2U6IFBhZ2UsIGFjY2Vzc1Rva2VuOiBzdHJpbmcsIHVzZXJFbWFpbDogc3RyaW5nKTogUHJvbWlzZTx2b2lkPiB7CiAgMzIgfCAgIGF3YWl0IHBhZ2UuYWRkSW5pdFNjcmlwdCgKICAzMyB8ICAgICAoeyB0b2tlbiwgZW1haWwgfSkgPT4gewogIDM0IHwgICAgICAgbG9jYWxTdG9yYWdlLnNldEl0ZW0oJ2ZpbnRlY2hfYWNjZXNzX3Rva2VuJywgdG9rZW4pOwogIDM1IHwgICAgICAgbG9jYWxTdG9yYWdlLnNldEl0ZW0oJ2ZpbnRlY2hfdXNlcicsIEpTT04uc3RyaW5naWZ5KHsgZW1haWwgfSkpOwogIDM2IHwgICAgIH0sCiAgMzcgfCAgICAgeyB0b2tlbjogYWNjZXNzVG9rZW4sIGVtYWlsOiB1c2VyRW1haWwgfSwKICAzOCB8ICAgKTsKICAzOSB8IH0KICA0MCB8CiAgNDEgfCBleHBvcnQgYXN5bmMgZnVuY3Rpb24gY2xlYXJBdXRoU3RvcmFnZShwYWdlOiBQYWdlKTogUHJvbWlzZTx2b2lkPiB7CiAgNDIgfCAgIGF3YWl0IHBhZ2UuZXZhbHVhdGUoKCkgPT4gewogIDQzIHwgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCdmaW50ZWNoX2FjY2Vzc190b2tlbicpOwogIDQ0IHwgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCdmaW50ZWNoX3VzZXInKTsKICA0NSB8ICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgnZmludGVjaF9yZWZyZXNoX3Rva2VuJyk7CiAgNDYgfCAgIH0pOwogIDQ3IHwgfQogIDQ4IHwKYGBg"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "17e3fe6f4d9d8bd79c6b-945568f0b5461a03a890",
+          "file": "auth.setup.ts",
+          "line": 9,
+          "column": 8
+        },
+        {
+          "title": "authenticate operator",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setup",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "timedOut",
+                  "duration": 30093,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\e2e\\helpers\\auth.helper.ts",
+                        "column": 14,
+                        "line": 11
+                      },
+                      "message": "Error: page.waitForURL: Test timeout of 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n\n   at ..\\helpers\\auth.helper.ts:11\n\n   9 |   await page.locator('button.auth-btn[type=\"submit\"]').click();\n  10 |\n> 11 |   await page.waitForURL(/\\/(dashboard|select-organization)/, { timeout: 30_000 });\n     |              ^\n  12 |\n  13 |   if (page.url().includes('/select-organization')) {\n  14 |     await page.locator('.select-org__item').first().click();\n    at loginViaUi (C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\e2e\\helpers\\auth.helper.ts:11:14)\n    at C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\e2e\\tests\\auth.setup.ts:10:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-28T19:44:14.271Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\test-results\\auth.setup.ts-authenticate-operator-setup\\test-failed-1.png"
+                    },
+                    {
+                      "name": "_prompt-1",
+                      "contentType": "text/markdown",
+                      "body": "IyBJbnN0cnVjdGlvbnMKCi0gRm9sbG93aW5nIFBsYXl3cmlnaHQgdGVzdCBmYWlsZWQuCi0gRXhwbGFpbiB3aHksIGJlIGNvbmNpc2UsIHJlc3BlY3QgUGxheXdyaWdodCBiZXN0IHByYWN0aWNlcy4KLSBQcm92aWRlIGEgc25pcHBldCBvZiBjb2RlIHdpdGggdGhlIGZpeCwgaWYgcG9zc2libGUuCgojIFRlc3QgaW5mbwoKLSBOYW1lOiBhdXRoZW50aWNhdGUgb3BlcmF0b3IKLSBMb2NhdGlvbjogQzpcVXNlcnNcZGFuaXNcT25lRHJpdmVcRGVza3RvcFxmaW50ZWNoX2FwcGxpY2F0aW9uXGUyZVx0ZXN0c1xhdXRoLnNldHVwLnRzOjk6OAoKIyBFcnJvciBkZXRhaWxzCgpgYGAKRXJyb3I6IHBhZ2Uud2FpdEZvclVSTDogVGVzdCB0aW1lb3V0IG9mIDMwMDAwbXMgZXhjZWVkZWQuCj09PT09PT09PT09PT09PT09PT09PT09PT09PSBsb2dzID09PT09PT09PT09PT09PT09PT09PT09PT09PQp3YWl0aW5nIGZvciBuYXZpZ2F0aW9uIHVudGlsICJsb2FkIgo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KICAgIGF0IGxvZ2luVmlhVWkgKEM6XFVzZXJzXGRhbmlzXE9uZURyaXZlXERlc2t0b3BcZmludGVjaF9hcHBsaWNhdGlvblxlMmVcaGVscGVyc1xhdXRoLmhlbHBlci50czoxMToxNCkKICAgIGF0IEM6XFVzZXJzXGRhbmlzXE9uZURyaXZlXERlc2t0b3BcZmludGVjaF9hcHBsaWNhdGlvblxlMmVcdGVzdHNcYXV0aC5zZXR1cC50czoxMDo1CmBgYAoKIyBQYWdlIHNuYXBzaG90CgpgYGB5YW1sCi0gbWFpbjoKICAtIHRleHQ6IHBheW1lbnRzCiAgLSBoZWFkaW5nICJNZXJjaGFudCBQcm8iIFtsZXZlbD0xXQogIC0gcGFyYWdyYXBoOiBFbnRlcnByaXNlIE1lcmNoYW50IFBvcnRhbAogIC0gaGVhZGluZyAiU2lnbiBJbiIgW2xldmVsPTJdCiAgLSBwYXJhZ3JhcGg6IEVudGVyIHlvdXIgY3JlZGVudGlhbHMgdG8gbWFuYWdlIHlvdXIgYnVzaW5lc3MuCiAgLSBhbGVydDogZXJyb3IgSW52YWxpZCBlbWFpbCBvciBwYXNzd29yZAogIC0gdGV4dDogRW1haWwgQWRkcmVzcyBtYWlsCiAgLSB0ZXh0Ym94ICJFbWFpbCBBZGRyZXNzIjogb3BlcmF0aW9uc0BtZXJjaGFudHByby5jb20KICAtIHRleHQ6IFBhc3N3b3JkCiAgLSBsaW5rICJGb3Jnb3QgUGFzc3dvcmQ/IgogIC0gdGV4dDogbG9jawogIC0gdGV4dGJveCAiUGFzc3dvcmQiOiBQYXNzd29yZDEyMyEKICAtIGJ1dHRvbiAiU2hvdyBwYXNzd29yZCI6IHZpc2liaWxpdHkKICAtIGNoZWNrYm94ICJSZW1lbWJlciB0aGlzIGRldmljZSIKICAtIHRleHQ6IFJlbWVtYmVyIHRoaXMgZGV2aWNlCiAgLSBidXR0b24gIlNpZ24gSW4gYXJyb3dfZm9yd2FyZCIKICAtIHRleHQ6IE9yIGNvbnRpbnVlIHdpdGgKICAtIGJ1dHRvbiAiU2lnbiBpbiB3aXRoIEdvb2dsZSAoY29taW5nIHNvb24pIiBbZGlzYWJsZWRdOiBHb29nbGUKICAtIGJ1dHRvbiAiU2lnbiBpbiB3aXRoIEdpdEh1YiAoY29taW5nIHNvb24pIiBbZGlzYWJsZWRdOiBHaXRIdWIKICAtIHBhcmFncmFwaDoKICAgIC0gdGV4dDogTmV3IHRvIHRoZSBwbGF0Zm9ybT8KICAgIC0gbGluayAiU2lnbiB1cCBhcyBNZXJjaGFudCIKICAtIHRleHQ6IFN5c3RlbXMgT3BlcmF0aW9uYWwKICAtIGxpbmsgIlNlY3VyaXR5IE92ZXJ2aWV3IgpgYGAKCiMgVGVzdCBzb3VyY2UKCmBgYHRzCiAgIDEgfCBpbXBvcnQgdHlwZSB7IFBhZ2UgfSBmcm9tICdAcGxheXdyaWdodC90ZXN0JzsKICAgMiB8IGltcG9ydCB0eXBlIHsgVGVzdFVzZXIgfSBmcm9tICcuLi9kYXRhL3VzZXJzJzsKICAgMyB8IGltcG9ydCB7IFJPVVRFUyB9IGZyb20gJy4uL2RhdGEvY29uc3RhbnRzJzsKICAgNCB8CiAgIDUgfCBleHBvcnQgYXN5bmMgZnVuY3Rpb24gbG9naW5WaWFVaShwYWdlOiBQYWdlLCB1c2VyOiBUZXN0VXNlcik6IFByb21pc2U8dm9pZD4gewogICA2IHwgICBhd2FpdCBwYWdlLmdvdG8oUk9VVEVTLmxvZ2luKTsKICAgNyB8ICAgYXdhaXQgcGFnZS5sb2NhdG9yKCcjZW1haWwnKS5maWxsKHVzZXIuZW1haWwpOwogICA4IHwgICBhd2FpdCBwYWdlLmxvY2F0b3IoJyNwYXNzd29yZCcpLmZpbGwodXNlci5wYXNzd29yZCk7CiAgIDkgfCAgIGF3YWl0IHBhZ2UubG9jYXRvcignYnV0dG9uLmF1dGgtYnRuW3R5cGU9InN1Ym1pdCJdJykuY2xpY2soKTsKICAxMCB8Cj4gMTEgfCAgIGF3YWl0IHBhZ2Uud2FpdEZvclVSTCgvXC8oZGFzaGJvYXJkfHNlbGVjdC1vcmdhbml6YXRpb24pLywgeyB0aW1lb3V0OiAzMF8wMDAgfSk7CiAgICAgfCAgICAgICAgICAgICAgXiBFcnJvcjogcGFnZS53YWl0Rm9yVVJMOiBUZXN0IHRpbWVvdXQgb2YgMzAwMDBtcyBleGNlZWRlZC4KICAxMiB8CiAgMTMgfCAgIGlmIChwYWdlLnVybCgpLmluY2x1ZGVzKCcvc2VsZWN0LW9yZ2FuaXphdGlvbicpKSB7CiAgMTQgfCAgICAgYXdhaXQgcGFnZS5sb2NhdG9yKCcuc2VsZWN0LW9yZ19faXRlbScpLmZpcnN0KCkuY2xpY2soKTsKICAxNSB8ICAgICBhd2FpdCBwYWdlLndhaXRGb3JVUkwoL1wvZGFzaGJvYXJkLywgeyB0aW1lb3V0OiAxNV8wMDAgfSk7CiAgMTYgfCAgIH0KICAxNyB8IH0KICAxOCB8CiAgMTkgfCBleHBvcnQgYXN5bmMgZnVuY3Rpb24gbG9nb3V0VmlhVWkocGFnZTogUGFnZSk6IFByb21pc2U8dm9pZD4gewogIDIwIHwgICBjb25zdCBwcm9maWxlQnRuID0gcGFnZS5sb2NhdG9yKCcudG9wbmF2X19wcm9maWxlLCAuZGFzaC10b3BuYXZfX3Byb2ZpbGUsIFthcmlhLWxhYmVsPSJVc2VyIG1lbnUiXScpLmZpcnN0KCk7CiAgMjEgfCAgIGlmIChhd2FpdCBwcm9maWxlQnRuLmlzVmlzaWJsZSgpLmNhdGNoKCgpID0+IGZhbHNlKSkgewogIDIyIHwgICAgIGF3YWl0IHByb2ZpbGVCdG4uY2xpY2soKTsKICAyMyB8ICAgICBjb25zdCBsb2dvdXQgPSBwYWdlLmdldEJ5Um9sZSgnbWVudWl0ZW0nLCB7IG5hbWU6IC9sb2cgb3V0fHNpZ24gb3V0L2kgfSk7CiAgMjQgfCAgICAgaWYgKGF3YWl0IGxvZ291dC5pc1Zpc2libGUoKS5jYXRjaCgoKSA9PiBmYWxzZSkpIHsKICAyNSB8ICAgICAgIGF3YWl0IGxvZ291dC5jbGljaygpOwogIDI2IHwgICAgIH0KICAyNyB8ICAgfQogIDI4IHwgICBhd2FpdCBwYWdlLmdvdG8oUk9VVEVTLmxvZ2luKTsKICAyOSB8IH0KICAzMCB8CiAgMzEgfCBleHBvcnQgYXN5bmMgZnVuY3Rpb24gc2V0QXV0aFN0b3JhZ2UocGFnZTogUGFnZSwgYWNjZXNzVG9rZW46IHN0cmluZywgdXNlckVtYWlsOiBzdHJpbmcpOiBQcm9taXNlPHZvaWQ+IHsKICAzMiB8ICAgYXdhaXQgcGFnZS5hZGRJbml0U2NyaXB0KAogIDMzIHwgICAgICh7IHRva2VuLCBlbWFpbCB9KSA9PiB7CiAgMzQgfCAgICAgICBsb2NhbFN0b3JhZ2Uuc2V0SXRlbSgnZmludGVjaF9hY2Nlc3NfdG9rZW4nLCB0b2tlbik7CiAgMzUgfCAgICAgICBsb2NhbFN0b3JhZ2Uuc2V0SXRlbSgnZmludGVjaF91c2VyJywgSlNPTi5zdHJpbmdpZnkoeyBlbWFpbCB9KSk7CiAgMzYgfCAgICAgfSwKICAzNyB8ICAgICB7IHRva2VuOiBhY2Nlc3NUb2tlbiwgZW1haWw6IHVzZXJFbWFpbCB9LAogIDM4IHwgICApOwogIDM5IHwgfQogIDQwIHwKICA0MSB8IGV4cG9ydCBhc3luYyBmdW5jdGlvbiBjbGVhckF1dGhTdG9yYWdlKHBhZ2U6IFBhZ2UpOiBQcm9taXNlPHZvaWQ+IHsKICA0MiB8ICAgYXdhaXQgcGFnZS5ldmFsdWF0ZSgoKSA9PiB7CiAgNDMgfCAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ2ZpbnRlY2hfYWNjZXNzX3Rva2VuJyk7CiAgNDQgfCAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ2ZpbnRlY2hfdXNlcicpOwogIDQ1IHwgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCdmaW50ZWNoX3JlZnJlc2hfdG9rZW4nKTsKICA0NiB8ICAgfSk7CiAgNDcgfCB9CiAgNDggfApgYGA="
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "17e3fe6f4d9d8bd79c6b-7798340082dfc99331df",
+          "file": "auth.setup.ts",
+          "line": 9,
+          "column": 8
+        },
+        {
+          "title": "authenticate support",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setup",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "timedOut",
+                  "duration": 30089,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\e2e\\helpers\\auth.helper.ts",
+                        "column": 14,
+                        "line": 11
+                      },
+                      "message": "Error: page.waitForURL: Test timeout of 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n\n   at ..\\helpers\\auth.helper.ts:11\n\n   9 |   await page.locator('button.auth-btn[type=\"submit\"]').click();\n  10 |\n> 11 |   await page.waitForURL(/\\/(dashboard|select-organization)/, { timeout: 30_000 });\n     |              ^\n  12 |\n  13 |   if (page.url().includes('/select-organization')) {\n  14 |     await page.locator('.select-org__item').first().click();\n    at loginViaUi (C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\e2e\\helpers\\auth.helper.ts:11:14)\n    at C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\e2e\\tests\\auth.setup.ts:10:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-28T19:44:14.281Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\test-results\\auth.setup.ts-authenticate-support-setup\\test-failed-1.png"
+                    },
+                    {
+                      "name": "_prompt-1",
+                      "contentType": "text/markdown",
+                      "body": "IyBJbnN0cnVjdGlvbnMKCi0gRm9sbG93aW5nIFBsYXl3cmlnaHQgdGVzdCBmYWlsZWQuCi0gRXhwbGFpbiB3aHksIGJlIGNvbmNpc2UsIHJlc3BlY3QgUGxheXdyaWdodCBiZXN0IHByYWN0aWNlcy4KLSBQcm92aWRlIGEgc25pcHBldCBvZiBjb2RlIHdpdGggdGhlIGZpeCwgaWYgcG9zc2libGUuCgojIFRlc3QgaW5mbwoKLSBOYW1lOiBhdXRoZW50aWNhdGUgc3VwcG9ydAotIExvY2F0aW9uOiBDOlxVc2Vyc1xkYW5pc1xPbmVEcml2ZVxEZXNrdG9wXGZpbnRlY2hfYXBwbGljYXRpb25cZTJlXHRlc3RzXGF1dGguc2V0dXAudHM6OTo4CgojIEVycm9yIGRldGFpbHMKCmBgYApFcnJvcjogcGFnZS53YWl0Rm9yVVJMOiBUZXN0IHRpbWVvdXQgb2YgMzAwMDBtcyBleGNlZWRlZC4KPT09PT09PT09PT09PT09PT09PT09PT09PT09IGxvZ3MgPT09PT09PT09PT09PT09PT09PT09PT09PT09CndhaXRpbmcgZm9yIG5hdmlnYXRpb24gdW50aWwgImxvYWQiCj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQogICAgYXQgbG9naW5WaWFVaSAoQzpcVXNlcnNcZGFuaXNcT25lRHJpdmVcRGVza3RvcFxmaW50ZWNoX2FwcGxpY2F0aW9uXGUyZVxoZWxwZXJzXGF1dGguaGVscGVyLnRzOjExOjE0KQogICAgYXQgQzpcVXNlcnNcZGFuaXNcT25lRHJpdmVcRGVza3RvcFxmaW50ZWNoX2FwcGxpY2F0aW9uXGUyZVx0ZXN0c1xhdXRoLnNldHVwLnRzOjEwOjUKYGBgCgojIFBhZ2Ugc25hcHNob3QKCmBgYHlhbWwKLSBtYWluOgogIC0gdGV4dDogcGF5bWVudHMKICAtIGhlYWRpbmcgIk1lcmNoYW50IFBybyIgW2xldmVsPTFdCiAgLSBwYXJhZ3JhcGg6IEVudGVycHJpc2UgTWVyY2hhbnQgUG9ydGFsCiAgLSBoZWFkaW5nICJTaWduIEluIiBbbGV2ZWw9Ml0KICAtIHBhcmFncmFwaDogRW50ZXIgeW91ciBjcmVkZW50aWFscyB0byBtYW5hZ2UgeW91ciBidXNpbmVzcy4KICAtIGFsZXJ0OiBlcnJvciBJbnZhbGlkIGVtYWlsIG9yIHBhc3N3b3JkCiAgLSB0ZXh0OiBFbWFpbCBBZGRyZXNzIG1haWwKICAtIHRleHRib3ggIkVtYWlsIEFkZHJlc3MiOiBzdXBwb3J0QG1lcmNoYW50cHJvLmNvbQogIC0gdGV4dDogUGFzc3dvcmQKICAtIGxpbmsgIkZvcmdvdCBQYXNzd29yZD8iCiAgLSB0ZXh0OiBsb2NrCiAgLSB0ZXh0Ym94ICJQYXNzd29yZCI6IFBhc3N3b3JkMTIzIQogIC0gYnV0dG9uICJTaG93IHBhc3N3b3JkIjogdmlzaWJpbGl0eQogIC0gY2hlY2tib3ggIlJlbWVtYmVyIHRoaXMgZGV2aWNlIgogIC0gdGV4dDogUmVtZW1iZXIgdGhpcyBkZXZpY2UKICAtIGJ1dHRvbiAiU2lnbiBJbiBhcnJvd19mb3J3YXJkIgogIC0gdGV4dDogT3IgY29udGludWUgd2l0aAogIC0gYnV0dG9uICJTaWduIGluIHdpdGggR29vZ2xlIChjb21pbmcgc29vbikiIFtkaXNhYmxlZF06IEdvb2dsZQogIC0gYnV0dG9uICJTaWduIGluIHdpdGggR2l0SHViIChjb21pbmcgc29vbikiIFtkaXNhYmxlZF06IEdpdEh1YgogIC0gcGFyYWdyYXBoOgogICAgLSB0ZXh0OiBOZXcgdG8gdGhlIHBsYXRmb3JtPwogICAgLSBsaW5rICJTaWduIHVwIGFzIE1lcmNoYW50IgogIC0gdGV4dDogU3lzdGVtcyBPcGVyYXRpb25hbAogIC0gbGluayAiU2VjdXJpdHkgT3ZlcnZpZXciCmBgYAoKIyBUZXN0IHNvdXJjZQoKYGBgdHMKICAgMSB8IGltcG9ydCB0eXBlIHsgUGFnZSB9IGZyb20gJ0BwbGF5d3JpZ2h0L3Rlc3QnOwogICAyIHwgaW1wb3J0IHR5cGUgeyBUZXN0VXNlciB9IGZyb20gJy4uL2RhdGEvdXNlcnMnOwogICAzIHwgaW1wb3J0IHsgUk9VVEVTIH0gZnJvbSAnLi4vZGF0YS9jb25zdGFudHMnOwogICA0IHwKICAgNSB8IGV4cG9ydCBhc3luYyBmdW5jdGlvbiBsb2dpblZpYVVpKHBhZ2U6IFBhZ2UsIHVzZXI6IFRlc3RVc2VyKTogUHJvbWlzZTx2b2lkPiB7CiAgIDYgfCAgIGF3YWl0IHBhZ2UuZ290byhST1VURVMubG9naW4pOwogICA3IHwgICBhd2FpdCBwYWdlLmxvY2F0b3IoJyNlbWFpbCcpLmZpbGwodXNlci5lbWFpbCk7CiAgIDggfCAgIGF3YWl0IHBhZ2UubG9jYXRvcignI3Bhc3N3b3JkJykuZmlsbCh1c2VyLnBhc3N3b3JkKTsKICAgOSB8ICAgYXdhaXQgcGFnZS5sb2NhdG9yKCdidXR0b24uYXV0aC1idG5bdHlwZT0ic3VibWl0Il0nKS5jbGljaygpOwogIDEwIHwKPiAxMSB8ICAgYXdhaXQgcGFnZS53YWl0Rm9yVVJMKC9cLyhkYXNoYm9hcmR8c2VsZWN0LW9yZ2FuaXphdGlvbikvLCB7IHRpbWVvdXQ6IDMwXzAwMCB9KTsKICAgICB8ICAgICAgICAgICAgICBeIEVycm9yOiBwYWdlLndhaXRGb3JVUkw6IFRlc3QgdGltZW91dCBvZiAzMDAwMG1zIGV4Y2VlZGVkLgogIDEyIHwKICAxMyB8ICAgaWYgKHBhZ2UudXJsKCkuaW5jbHVkZXMoJy9zZWxlY3Qtb3JnYW5pemF0aW9uJykpIHsKICAxNCB8ICAgICBhd2FpdCBwYWdlLmxvY2F0b3IoJy5zZWxlY3Qtb3JnX19pdGVtJykuZmlyc3QoKS5jbGljaygpOwogIDE1IHwgICAgIGF3YWl0IHBhZ2Uud2FpdEZvclVSTCgvXC9kYXNoYm9hcmQvLCB7IHRpbWVvdXQ6IDE1XzAwMCB9KTsKICAxNiB8ICAgfQogIDE3IHwgfQogIDE4IHwKICAxOSB8IGV4cG9ydCBhc3luYyBmdW5jdGlvbiBsb2dvdXRWaWFVaShwYWdlOiBQYWdlKTogUHJvbWlzZTx2b2lkPiB7CiAgMjAgfCAgIGNvbnN0IHByb2ZpbGVCdG4gPSBwYWdlLmxvY2F0b3IoJy50b3BuYXZfX3Byb2ZpbGUsIC5kYXNoLXRvcG5hdl9fcHJvZmlsZSwgW2FyaWEtbGFiZWw9IlVzZXIgbWVudSJdJykuZmlyc3QoKTsKICAyMSB8ICAgaWYgKGF3YWl0IHByb2ZpbGVCdG4uaXNWaXNpYmxlKCkuY2F0Y2goKCkgPT4gZmFsc2UpKSB7CiAgMjIgfCAgICAgYXdhaXQgcHJvZmlsZUJ0bi5jbGljaygpOwogIDIzIHwgICAgIGNvbnN0IGxvZ291dCA9IHBhZ2UuZ2V0QnlSb2xlKCdtZW51aXRlbScsIHsgbmFtZTogL2xvZyBvdXR8c2lnbiBvdXQvaSB9KTsKICAyNCB8ICAgICBpZiAoYXdhaXQgbG9nb3V0LmlzVmlzaWJsZSgpLmNhdGNoKCgpID0+IGZhbHNlKSkgewogIDI1IHwgICAgICAgYXdhaXQgbG9nb3V0LmNsaWNrKCk7CiAgMjYgfCAgICAgfQogIDI3IHwgICB9CiAgMjggfCAgIGF3YWl0IHBhZ2UuZ290byhST1VURVMubG9naW4pOwogIDI5IHwgfQogIDMwIHwKICAzMSB8IGV4cG9ydCBhc3luYyBmdW5jdGlvbiBzZXRBdXRoU3RvcmFnZShwYWdlOiBQYWdlLCBhY2Nlc3NUb2tlbjogc3RyaW5nLCB1c2VyRW1haWw6IHN0cmluZyk6IFByb21pc2U8dm9pZD4gewogIDMyIHwgICBhd2FpdCBwYWdlLmFkZEluaXRTY3JpcHQoCiAgMzMgfCAgICAgKHsgdG9rZW4sIGVtYWlsIH0pID0+IHsKICAzNCB8ICAgICAgIGxvY2FsU3RvcmFnZS5zZXRJdGVtKCdmaW50ZWNoX2FjY2Vzc190b2tlbicsIHRva2VuKTsKICAzNSB8ICAgICAgIGxvY2FsU3RvcmFnZS5zZXRJdGVtKCdmaW50ZWNoX3VzZXInLCBKU09OLnN0cmluZ2lmeSh7IGVtYWlsIH0pKTsKICAzNiB8ICAgICB9LAogIDM3IHwgICAgIHsgdG9rZW46IGFjY2Vzc1Rva2VuLCBlbWFpbDogdXNlckVtYWlsIH0sCiAgMzggfCAgICk7CiAgMzkgfCB9CiAgNDAgfAogIDQxIHwgZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGNsZWFyQXV0aFN0b3JhZ2UocGFnZTogUGFnZSk6IFByb21pc2U8dm9pZD4gewogIDQyIHwgICBhd2FpdCBwYWdlLmV2YWx1YXRlKCgpID0+IHsKICA0MyB8ICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgnZmludGVjaF9hY2Nlc3NfdG9rZW4nKTsKICA0NCB8ICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgnZmludGVjaF91c2VyJyk7CiAgNDUgfCAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ2ZpbnRlY2hfcmVmcmVzaF90b2tlbicpOwogIDQ2IHwgICB9KTsKICA0NyB8IH0KICA0OCB8CmBgYA=="
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "17e3fe6f4d9d8bd79c6b-89d01ebbe155aab11c6a",
+          "file": "auth.setup.ts",
+          "line": 9,
+          "column": 8
+        },
+        {
+          "title": "authenticate readonly",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setup",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30080,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\e2e\\helpers\\auth.helper.ts",
+                        "column": 14,
+                        "line": 11
+                      },
+                      "message": "Error: page.waitForURL: Test timeout of 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n\n   at ..\\helpers\\auth.helper.ts:11\n\n   9 |   await page.locator('button.auth-btn[type=\"submit\"]').click();\n  10 |\n> 11 |   await page.waitForURL(/\\/(dashboard|select-organization)/, { timeout: 30_000 });\n     |              ^\n  12 |\n  13 |   if (page.url().includes('/select-organization')) {\n  14 |     await page.locator('.select-org__item').first().click();\n    at loginViaUi (C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\e2e\\helpers\\auth.helper.ts:11:14)\n    at C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\e2e\\tests\\auth.setup.ts:10:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-28T19:44:16.702Z",
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\test-results\\auth.setup.ts-authenticate-readonly-setup\\test-failed-1.png"
+                    },
+                    {
+                      "name": "_prompt-1",
+                      "contentType": "text/markdown",
+                      "body": "IyBJbnN0cnVjdGlvbnMKCi0gRm9sbG93aW5nIFBsYXl3cmlnaHQgdGVzdCBmYWlsZWQuCi0gRXhwbGFpbiB3aHksIGJlIGNvbmNpc2UsIHJlc3BlY3QgUGxheXdyaWdodCBiZXN0IHByYWN0aWNlcy4KLSBQcm92aWRlIGEgc25pcHBldCBvZiBjb2RlIHdpdGggdGhlIGZpeCwgaWYgcG9zc2libGUuCgojIFRlc3QgaW5mbwoKLSBOYW1lOiBhdXRoZW50aWNhdGUgcmVhZG9ubHkKLSBMb2NhdGlvbjogQzpcVXNlcnNcZGFuaXNcT25lRHJpdmVcRGVza3RvcFxmaW50ZWNoX2FwcGxpY2F0aW9uXGUyZVx0ZXN0c1xhdXRoLnNldHVwLnRzOjk6OAoKIyBFcnJvciBkZXRhaWxzCgpgYGAKRXJyb3I6IHBhZ2Uud2FpdEZvclVSTDogVGVzdCB0aW1lb3V0IG9mIDMwMDAwbXMgZXhjZWVkZWQuCj09PT09PT09PT09PT09PT09PT09PT09PT09PSBsb2dzID09PT09PT09PT09PT09PT09PT09PT09PT09PQp3YWl0aW5nIGZvciBuYXZpZ2F0aW9uIHVudGlsICJsb2FkIgo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0KICAgIGF0IGxvZ2luVmlhVWkgKEM6XFVzZXJzXGRhbmlzXE9uZURyaXZlXERlc2t0b3BcZmludGVjaF9hcHBsaWNhdGlvblxlMmVcaGVscGVyc1xhdXRoLmhlbHBlci50czoxMToxNCkKICAgIGF0IEM6XFVzZXJzXGRhbmlzXE9uZURyaXZlXERlc2t0b3BcZmludGVjaF9hcHBsaWNhdGlvblxlMmVcdGVzdHNcYXV0aC5zZXR1cC50czoxMDo1CmBgYAoKIyBQYWdlIHNuYXBzaG90CgpgYGB5YW1sCi0gbWFpbjoKICAtIHRleHQ6IHBheW1lbnRzCiAgLSBoZWFkaW5nICJNZXJjaGFudCBQcm8iIFtsZXZlbD0xXQogIC0gcGFyYWdyYXBoOiBFbnRlcnByaXNlIE1lcmNoYW50IFBvcnRhbAogIC0gaGVhZGluZyAiU2lnbiBJbiIgW2xldmVsPTJdCiAgLSBwYXJhZ3JhcGg6IEVudGVyIHlvdXIgY3JlZGVudGlhbHMgdG8gbWFuYWdlIHlvdXIgYnVzaW5lc3MuCiAgLSBhbGVydDogZXJyb3IgQWNjb3VudCBpcyBub3QgYWN0aXZlCiAgLSB0ZXh0OiBFbWFpbCBBZGRyZXNzIG1haWwKICAtIHRleHRib3ggIkVtYWlsIEFkZHJlc3MiOiByZWFkb25seUBtZXJjaGFudHByby5jb20KICAtIHRleHQ6IFBhc3N3b3JkCiAgLSBsaW5rICJGb3Jnb3QgUGFzc3dvcmQ/IgogIC0gdGV4dDogbG9jawogIC0gdGV4dGJveCAiUGFzc3dvcmQiOiBQYXNzd29yZDEyMyEKICAtIGJ1dHRvbiAiU2hvdyBwYXNzd29yZCI6IHZpc2liaWxpdHkKICAtIGNoZWNrYm94ICJSZW1lbWJlciB0aGlzIGRldmljZSIKICAtIHRleHQ6IFJlbWVtYmVyIHRoaXMgZGV2aWNlCiAgLSBidXR0b24gIlNpZ24gSW4gYXJyb3dfZm9yd2FyZCIKICAtIHRleHQ6IE9yIGNvbnRpbnVlIHdpdGgKICAtIGJ1dHRvbiAiU2lnbiBpbiB3aXRoIEdvb2dsZSAoY29taW5nIHNvb24pIiBbZGlzYWJsZWRdOiBHb29nbGUKICAtIGJ1dHRvbiAiU2lnbiBpbiB3aXRoIEdpdEh1YiAoY29taW5nIHNvb24pIiBbZGlzYWJsZWRdOiBHaXRIdWIKICAtIHBhcmFncmFwaDoKICAgIC0gdGV4dDogTmV3IHRvIHRoZSBwbGF0Zm9ybT8KICAgIC0gbGluayAiU2lnbiB1cCBhcyBNZXJjaGFudCIKICAtIHRleHQ6IFN5c3RlbXMgT3BlcmF0aW9uYWwKICAtIGxpbmsgIlNlY3VyaXR5IE92ZXJ2aWV3IgpgYGAKCiMgVGVzdCBzb3VyY2UKCmBgYHRzCiAgIDEgfCBpbXBvcnQgdHlwZSB7IFBhZ2UgfSBmcm9tICdAcGxheXdyaWdodC90ZXN0JzsKICAgMiB8IGltcG9ydCB0eXBlIHsgVGVzdFVzZXIgfSBmcm9tICcuLi9kYXRhL3VzZXJzJzsKICAgMyB8IGltcG9ydCB7IFJPVVRFUyB9IGZyb20gJy4uL2RhdGEvY29uc3RhbnRzJzsKICAgNCB8CiAgIDUgfCBleHBvcnQgYXN5bmMgZnVuY3Rpb24gbG9naW5WaWFVaShwYWdlOiBQYWdlLCB1c2VyOiBUZXN0VXNlcik6IFByb21pc2U8dm9pZD4gewogICA2IHwgICBhd2FpdCBwYWdlLmdvdG8oUk9VVEVTLmxvZ2luKTsKICAgNyB8ICAgYXdhaXQgcGFnZS5sb2NhdG9yKCcjZW1haWwnKS5maWxsKHVzZXIuZW1haWwpOwogICA4IHwgICBhd2FpdCBwYWdlLmxvY2F0b3IoJyNwYXNzd29yZCcpLmZpbGwodXNlci5wYXNzd29yZCk7CiAgIDkgfCAgIGF3YWl0IHBhZ2UubG9jYXRvcignYnV0dG9uLmF1dGgtYnRuW3R5cGU9InN1Ym1pdCJdJykuY2xpY2soKTsKICAxMCB8Cj4gMTEgfCAgIGF3YWl0IHBhZ2Uud2FpdEZvclVSTCgvXC8oZGFzaGJvYXJkfHNlbGVjdC1vcmdhbml6YXRpb24pLywgeyB0aW1lb3V0OiAzMF8wMDAgfSk7CiAgICAgfCAgICAgICAgICAgICAgXiBFcnJvcjogcGFnZS53YWl0Rm9yVVJMOiBUZXN0IHRpbWVvdXQgb2YgMzAwMDBtcyBleGNlZWRlZC4KICAxMiB8CiAgMTMgfCAgIGlmIChwYWdlLnVybCgpLmluY2x1ZGVzKCcvc2VsZWN0LW9yZ2FuaXphdGlvbicpKSB7CiAgMTQgfCAgICAgYXdhaXQgcGFnZS5sb2NhdG9yKCcuc2VsZWN0LW9yZ19faXRlbScpLmZpcnN0KCkuY2xpY2soKTsKICAxNSB8ICAgICBhd2FpdCBwYWdlLndhaXRGb3JVUkwoL1wvZGFzaGJvYXJkLywgeyB0aW1lb3V0OiAxNV8wMDAgfSk7CiAgMTYgfCAgIH0KICAxNyB8IH0KICAxOCB8CiAgMTkgfCBleHBvcnQgYXN5bmMgZnVuY3Rpb24gbG9nb3V0VmlhVWkocGFnZTogUGFnZSk6IFByb21pc2U8dm9pZD4gewogIDIwIHwgICBjb25zdCBwcm9maWxlQnRuID0gcGFnZS5sb2NhdG9yKCcudG9wbmF2X19wcm9maWxlLCAuZGFzaC10b3BuYXZfX3Byb2ZpbGUsIFthcmlhLWxhYmVsPSJVc2VyIG1lbnUiXScpLmZpcnN0KCk7CiAgMjEgfCAgIGlmIChhd2FpdCBwcm9maWxlQnRuLmlzVmlzaWJsZSgpLmNhdGNoKCgpID0+IGZhbHNlKSkgewogIDIyIHwgICAgIGF3YWl0IHByb2ZpbGVCdG4uY2xpY2soKTsKICAyMyB8ICAgICBjb25zdCBsb2dvdXQgPSBwYWdlLmdldEJ5Um9sZSgnbWVudWl0ZW0nLCB7IG5hbWU6IC9sb2cgb3V0fHNpZ24gb3V0L2kgfSk7CiAgMjQgfCAgICAgaWYgKGF3YWl0IGxvZ291dC5pc1Zpc2libGUoKS5jYXRjaCgoKSA9PiBmYWxzZSkpIHsKICAyNSB8ICAgICAgIGF3YWl0IGxvZ291dC5jbGljaygpOwogIDI2IHwgICAgIH0KICAyNyB8ICAgfQogIDI4IHwgICBhd2FpdCBwYWdlLmdvdG8oUk9VVEVTLmxvZ2luKTsKICAyOSB8IH0KICAzMCB8CiAgMzEgfCBleHBvcnQgYXN5bmMgZnVuY3Rpb24gc2V0QXV0aFN0b3JhZ2UocGFnZTogUGFnZSwgYWNjZXNzVG9rZW46IHN0cmluZywgdXNlckVtYWlsOiBzdHJpbmcpOiBQcm9taXNlPHZvaWQ+IHsKICAzMiB8ICAgYXdhaXQgcGFnZS5hZGRJbml0U2NyaXB0KAogIDMzIHwgICAgICh7IHRva2VuLCBlbWFpbCB9KSA9PiB7CiAgMzQgfCAgICAgICBsb2NhbFN0b3JhZ2Uuc2V0SXRlbSgnZmludGVjaF9hY2Nlc3NfdG9rZW4nLCB0b2tlbik7CiAgMzUgfCAgICAgICBsb2NhbFN0b3JhZ2Uuc2V0SXRlbSgnZmludGVjaF91c2VyJywgSlNPTi5zdHJpbmdpZnkoeyBlbWFpbCB9KSk7CiAgMzYgfCAgICAgfSwKICAzNyB8ICAgICB7IHRva2VuOiBhY2Nlc3NUb2tlbiwgZW1haWw6IHVzZXJFbWFpbCB9LAogIDM4IHwgICApOwogIDM5IHwgfQogIDQwIHwKICA0MSB8IGV4cG9ydCBhc3luYyBmdW5jdGlvbiBjbGVhckF1dGhTdG9yYWdlKHBhZ2U6IFBhZ2UpOiBQcm9taXNlPHZvaWQ+IHsKICA0MiB8ICAgYXdhaXQgcGFnZS5ldmFsdWF0ZSgoKSA9PiB7CiAgNDMgfCAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ2ZpbnRlY2hfYWNjZXNzX3Rva2VuJyk7CiAgNDQgfCAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ2ZpbnRlY2hfdXNlcicpOwogIDQ1IHwgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCdmaW50ZWNoX3JlZnJlc2hfdG9rZW4nKTsKICA0NiB8ICAgfSk7CiAgNDcgfCB9CiAgNDggfApgYGA="
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "17e3fe6f4d9d8bd79c6b-714f91554adb6f8eb3d4",
+          "file": "auth.setup.ts",
+          "line": 9,
+          "column": 8
+        }
+      ]
+    },
+    {
+      "title": "audit.spec.ts",
+      "file": "audit.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Audit",
+          "file": "audit.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "audit dashboard reflects history",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "45efdff6a4d2e1f7e786-507baa8604e2e01ca00b",
+              "file": "audit.spec.ts",
+              "line": 9,
+              "column": 7
+            },
+            {
+              "title": "audit timeline page loads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "45efdff6a4d2e1f7e786-bbac3c003ea07cb58bcc",
+              "file": "audit.spec.ts",
+              "line": 16,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "auth.spec.ts",
+      "file": "auth.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Authentication",
+          "file": "auth.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "login with valid credentials redirects to dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d748ac400d08b85935ef-be53d0b9c15377a05a26",
+              "file": "auth.spec.ts",
+              "line": 7,
+              "column": 7
+            },
+            {
+              "title": "logout returns to login screen",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d748ac400d08b85935ef-92a8bd309cb21ebbdd32",
+              "file": "auth.spec.ts",
+              "line": 14,
+              "column": 7
+            },
+            {
+              "title": "refresh token endpoint returns new access token",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d748ac400d08b85935ef-fbe831724513ac28b302",
+              "file": "auth.spec.ts",
+              "line": 25,
+              "column": 7
+            },
+            {
+              "title": "forgot password accepts valid email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d748ac400d08b85935ef-01a5d85e12b6cd522d27",
+              "file": "auth.spec.ts",
+              "line": 40,
+              "column": 7
+            },
+            {
+              "title": "reset password page renders with token query param",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d748ac400d08b85935ef-4181ecd2375f8b9415e7",
+              "file": "auth.spec.ts",
+              "line": 46,
+              "column": 7
+            },
+            {
+              "title": "login rejects invalid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d748ac400d08b85935ef-f85ce6d688456c3f5139",
+              "file": "auth.spec.ts",
+              "line": 51,
+              "column": 7
+            },
+            {
+              "title": "session expired page is accessible",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d748ac400d08b85935ef-1cc65fdf3fc09a7c7f2a",
+              "file": "auth.spec.ts",
+              "line": 57,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "chargebacks.spec.ts",
+      "file": "chargebacks.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Chargebacks",
+          "file": "chargebacks.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "chargebacks list loads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c24cf4311e5a40489bdb-2cf05f31301147700ad7",
+              "file": "chargebacks.spec.ts",
+              "line": 11,
+              "column": 7
+            },
+            {
+              "title": "open chargeback via API lifecycle",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c24cf4311e5a40489bdb-fea643e434c91f458739",
+              "file": "chargebacks.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "chargeback create form opens",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "c24cf4311e5a40489bdb-1947e6aee88f813ef23d",
+              "file": "chargebacks.spec.ts",
+              "line": 45,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "checkout.spec.ts",
+      "file": "checkout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Checkout",
+          "file": "checkout.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "checkout sessions list loads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "25ab1bfc84c57e3e3a45-e15d18bf3d2672f55349",
+              "file": "checkout.spec.ts",
+              "line": 10,
+              "column": 7
+            },
+            {
+              "title": "public checkout payment succeeds",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "25ab1bfc84c57e3e3a45-c99c2686c31fcbe09f23",
+              "file": "checkout.spec.ts",
+              "line": 15,
+              "column": 7
+            },
+            {
+              "title": "expired checkout rejects payment",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "25ab1bfc84c57e3e3a45-65e9fdc214817703af95",
+              "file": "checkout.spec.ts",
+              "line": 30,
+              "column": 7
+            },
+            {
+              "title": "invalid checkout reference returns error",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "25ab1bfc84c57e3e3a45-e9854df4d97265ee7930",
+              "file": "checkout.spec.ts",
+              "line": 47,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "developer-settings.spec.ts",
+      "file": "developer-settings.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Developer & Sandbox",
+          "file": "developer-settings.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "developer portal loads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "21e5a31ff055afc0ad4c-7c781563546c45f61fe8",
+              "file": "developer-settings.spec.ts",
+              "line": 9,
+              "column": 7
+            },
+            {
+              "title": "sandbox dashboard loads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "21e5a31ff055afc0ad4c-b496fe1b1072d4468465",
+              "file": "developer-settings.spec.ts",
+              "line": 13,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Profile & Settings",
+          "file": "developer-settings.spec.ts",
+          "line": 19,
+          "column": 6,
+          "specs": [
+            {
+              "title": "settings page loads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "21e5a31ff055afc0ad4c-4c727900a0189f2383b0",
+              "file": "developer-settings.spec.ts",
+              "line": 24,
+              "column": 7
+            },
+            {
+              "title": "profile account page loads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "21e5a31ff055afc0ad4c-3a913c7f159502e91f74",
+              "file": "developer-settings.spec.ts",
+              "line": 29,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "errors.spec.ts",
+      "file": "errors.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Error handling",
+          "file": "errors.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "network error shows connection message on login",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "2c69674198c4542748c6-171c0fd7100901a925c2",
+              "file": "errors.spec.ts",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "expired session redirects to login",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "2c69674198c4542748c6-e5aba129da55cd7f3d0d",
+              "file": "errors.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "validation errors on empty login submit",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "2c69674198c4542748c6-9bedad9b6e6150a98061",
+              "file": "errors.spec.ts",
+              "line": 18,
+              "column": 7
+            },
+            {
+              "title": "server error page on unknown route",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "2c69674198c4542748c6-ae9607b643e78bf23cdd",
+              "file": "errors.spec.ts",
+              "line": 24,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "merchants.spec.ts",
+      "file": "merchants.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Merchants",
+          "file": "merchants.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "merchant list loads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "66e72282288cef1232d8-1417a73935fdf72a2df0",
+              "file": "merchants.spec.ts",
+              "line": 12,
+              "column": 7
+            },
+            {
+              "title": "merchant create form opens",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "66e72282288cef1232d8-3154d120412c67db0676",
+              "file": "merchants.spec.ts",
+              "line": 17,
+              "column": 7
+            },
+            {
+              "title": "merchant search filters results",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "66e72282288cef1232d8-0ab3cd185265c2742234",
+              "file": "merchants.spec.ts",
+              "line": 22,
+              "column": 7
+            },
+            {
+              "title": "merchant edit page opens from list",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "66e72282288cef1232d8-f341d6ee8c59c4aae0c2",
+              "file": "merchants.spec.ts",
+              "line": 28,
+              "column": 7
+            },
+            {
+              "title": "organization isolation hides cross-org merchant",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "66e72282288cef1232d8-e5bb798571b4bf87dd37",
+              "file": "merchants.spec.ts",
+              "line": 35,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Merchant API create",
+          "file": "merchants.spec.ts",
+          "line": 48,
+          "column": 6,
+          "specs": [
+            {
+              "title": "create merchant via API and verify in UI list",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "66e72282288cef1232d8-c522f4abd349b6643979",
+              "file": "merchants.spec.ts",
+              "line": 49,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "payment-links.spec.ts",
+      "file": "payment-links.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Payment Links",
+          "file": "payment-links.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "payment links list loads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "96885949c3e2b398cf4e-d07a52cac4b2440aa738",
+              "file": "payment-links.spec.ts",
+              "line": 10,
+              "column": 7
+            },
+            {
+              "title": "create payment link via API",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "96885949c3e2b398cf4e-6268285707d0b40d9043",
+              "file": "payment-links.spec.ts",
+              "line": 15,
+              "column": 7
+            },
+            {
+              "title": "open public payment link page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "96885949c3e2b398cf4e-377ca3ea0f3fa03ddd07",
+              "file": "payment-links.spec.ts",
+              "line": 22,
+              "column": 7
+            },
+            {
+              "title": "expire payment link via API",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "96885949c3e2b398cf4e-b0376813707c0d355832",
+              "file": "payment-links.spec.ts",
+              "line": 33,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "payments.spec.ts",
+      "file": "payments.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Payments lifecycle",
+          "file": "payments.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "transactions list loads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bd51122182d9e4115608-8dca5ff73cebd7a84231",
+              "file": "payments.spec.ts",
+              "line": 12,
+              "column": 7
+            },
+            {
+              "title": "create payment via API and view in transactions UI",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bd51122182d9e4115608-49454e7f40c1b58d7efe",
+              "file": "payments.spec.ts",
+              "line": 17,
+              "column": 7
+            },
+            {
+              "title": "authorize payment via API",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bd51122182d9e4115608-7d4e668079b8a52e762d",
+              "file": "payments.spec.ts",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "capture payment via API",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bd51122182d9e4115608-60e7fe151454b358f897",
+              "file": "payments.spec.ts",
+              "line": 43,
+              "column": 7
+            },
+            {
+              "title": "partial capture via API",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bd51122182d9e4115608-688a409e4322b395df86",
+              "file": "payments.spec.ts",
+              "line": 55,
+              "column": 7
+            },
+            {
+              "title": "cancel pending payment via API",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bd51122182d9e4115608-0b90ea291b6f155ddc3c",
+              "file": "payments.spec.ts",
+              "line": 67,
+              "column": 7
+            },
+            {
+              "title": "full refund via API",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bd51122182d9e4115608-a349833ceafbdd72050f",
+              "file": "payments.spec.ts",
+              "line": 77,
+              "column": 7
+            },
+            {
+              "title": "partial refund via API",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bd51122182d9e4115608-8e5e1dcff4e07ed214ce",
+              "file": "payments.spec.ts",
+              "line": 89,
+              "column": 7
+            },
+            {
+              "title": "idempotency key prevents duplicate payment",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bd51122182d9e4115608-2df8413e0b5246b01cd2",
+              "file": "payments.spec.ts",
+              "line": 101,
+              "column": 7
+            },
+            {
+              "title": "payment timeline visible in transaction details",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bd51122182d9e4115608-e3c0f7e0ffacf6b31e2b",
+              "file": "payments.spec.ts",
+              "line": 113,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "qr-payments.spec.ts",
+      "file": "qr-payments.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "QR Payments",
+          "file": "qr-payments.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "create QR payment list loads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "2811c440a2d2b3fac7a8-cdad88f2c1ab36b1bfa8",
+              "file": "qr-payments.spec.ts",
+              "line": 10,
+              "column": 7
+            },
+            {
+              "title": "create QR via API and open public pay page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "2811c440a2d2b3fac7a8-2844bb42a0cbf952e6b0",
+              "file": "qr-payments.spec.ts",
+              "line": 15,
+              "column": 7
+            },
+            {
+              "title": "disable QR marks expired",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "2811c440a2d2b3fac7a8-bafb38aa0c220094e204",
+              "file": "qr-payments.spec.ts",
+              "line": 27,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "rbac.spec.ts",
+      "file": "rbac.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "RBAC",
+          "file": "rbac.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "readonly user can view dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f2d4bd4479eae63a7f57-db8759e9a11a5d63891f",
+              "file": "rbac.spec.ts",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "readonly user cannot create merchant",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f2d4bd4479eae63a7f57-ba0e0e1867fd98ad79c5",
+              "file": "rbac.spec.ts",
+              "line": 11,
+              "column": 7
+            },
+            {
+              "title": "readonly user cannot create refund request",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f2d4bd4479eae63a7f57-60651182b733a15e4282",
+              "file": "rbac.spec.ts",
+              "line": 17,
+              "column": 7
+            },
+            {
+              "title": "support user can view transactions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f2d4bd4479eae63a7f57-a75d70a0a41b5f718523",
+              "file": "rbac.spec.ts",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "merchant admin can view merchant users",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "f2d4bd4479eae63a7f57-4d08b77675663a87166b",
+              "file": "rbac.spec.ts",
+              "line": 29,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "reports.spec.ts",
+      "file": "reports.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Reports",
+          "file": "reports.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "report center loads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d2ea609703bae19dcdce-e6e45da2213a826f84f9",
+              "file": "reports.spec.ts",
+              "line": 10,
+              "column": 7
+            },
+            {
+              "title": "report history page loads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d2ea609703bae19dcdce-609d9a77f20d4ab6bbcb",
+              "file": "reports.spec.ts",
+              "line": 15,
+              "column": 7
+            },
+            {
+              "title": "organization isolation on reports API",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d2ea609703bae19dcdce-259aeaaf897128d836d8",
+              "file": "reports.spec.ts",
+              "line": 20,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "subscriptions.spec.ts",
+      "file": "subscriptions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Subscriptions",
+          "file": "subscriptions.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "subscriptions list loads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3dff583044165241f1bb-a867f6a9fc58f6851825",
+              "file": "subscriptions.spec.ts",
+              "line": 12,
+              "column": 7
+            },
+            {
+              "title": "create subscription via API",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3dff583044165241f1bb-cc76025cd73dff6b9cf0",
+              "file": "subscriptions.spec.ts",
+              "line": 17,
+              "column": 7
+            },
+            {
+              "title": "subscription plans page loads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3dff583044165241f1bb-db5146fe079d3a64cdd6",
+              "file": "subscriptions.spec.ts",
+              "line": 37,
+              "column": 7
+            },
+            {
+              "title": "invoices list accessible from subscriptions area",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3dff583044165241f1bb-6a3708a3d875123629a6",
+              "file": "subscriptions.spec.ts",
+              "line": 42,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "users.spec.ts",
+      "file": "users.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "User Management",
+          "file": "users.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "users list loads for admin",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "7d08affc2ce055c80dfd-b7241bdd642f4cbad93c",
+              "file": "users.spec.ts",
+              "line": 10,
+              "column": 7
+            },
+            {
+              "title": "invite user form opens",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "7d08affc2ce055c80dfd-36f7b665b86bcd131eb5",
+              "file": "users.spec.ts",
+              "line": 15,
+              "column": 7
+            },
+            {
+              "title": "role management page accessible",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "7d08affc2ce055c80dfd-b7380a9327d108a722a2",
+              "file": "users.spec.ts",
+              "line": 20,
+              "column": 7
+            },
+            {
+              "title": "readonly user cannot access user create",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "7d08affc2ce055c80dfd-92ae5bae6d681706162d",
+              "file": "users.spec.ts",
+              "line": 25,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "webhooks.spec.ts",
+      "file": "webhooks.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Webhooks",
+          "file": "webhooks.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "webhooks dashboard loads with delivery stats",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9cc65da5bbcc3bc8422c-46ba09d163ccf49a6233",
+              "file": "webhooks.spec.ts",
+              "line": 9,
+              "column": 7
+            },
+            {
+              "title": "refresh reloads webhook dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9cc65da5bbcc3bc8422c-87bc7fbab2c518c8c221",
+              "file": "webhooks.spec.ts",
+              "line": 14,
+              "column": 7
+            },
+            {
+              "title": "webhook replay history section visible",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "desktop-chrome",
+                  "projectName": "desktop-chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "9cc65da5bbcc3bc8422c-8cbcac431961f78a008f",
+              "file": "webhooks.spec.ts",
+              "line": 20,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "responsive.spec.ts",
+      "file": "responsive.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Responsive layouts",
+          "file": "responsive.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "dashboard renders on desktop",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet",
+                  "projectName": "tablet",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e0223b006feb3d306446-7302d45734f1541c2de2",
+              "file": "responsive.spec.ts",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "dashboard renders on tablet",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet",
+                  "projectName": "tablet",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e0223b006feb3d306446-b47cbab5f6a94c7b4f8e",
+              "file": "responsive.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "login form renders on tablet",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet",
+                  "projectName": "tablet",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e0223b006feb3d306446-ed7f2921d7baacaadf53",
+              "file": "responsive.spec.ts",
+              "line": 21,
+              "column": 7
+            },
+            {
+              "title": "merchants list renders on tablet",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet",
+                  "projectName": "tablet",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e0223b006feb3d306446-9096765fc3d9f3f44545",
+              "file": "responsive.spec.ts",
+              "line": 27,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-07-28T19:44:13.007Z",
+    "duration": 33834.952,
+    "expected": 1,
+    "skipped": 70,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,8 @@
+@use '../../../dashboard/styles/shared-page-ui' as ui;
+.rpt-page { @include ui.page-shell; &__loading, &__error { @include ui.page-loading-error; } }
+.page-header { @include ui.page-header; }
+.breadcrumb { @include ui.breadcrumb; }
+.empty-state { @include ui.empty-state; }
+.table-card { @include ui.data-table; }
+.btn { @include ui.btn-primary; }
+.status { font-weight: 600; color: #16a34a; &--failed { color: #dc2626; } }

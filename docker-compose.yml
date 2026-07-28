@@ -1,0 +1,165 @@
+# Docker Compose - Merchant Management Portal (Production / UAT)
+# Copy .env.example to .env and set secrets before starting.
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: fintech-mysql
+    restart: unless-stopped
+    ports:
+      - '${MYSQL_PORT:-3306}:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?MYSQL_ROOT_PASSWORD is required}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-fintech_db}
+      MYSQL_USER: ${MYSQL_USER:-fintech_user}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?MYSQL_PASSWORD is required}
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./Database_Fintech/master_database.sql:/docker-entrypoint-initdb.d/01-master_database.sql:ro
+    networks:
+      - fintech-network
+    healthcheck:
+      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost']
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 40s
+
+  redis:
+    image: redis:7-alpine
+    container_name: fintech-redis
+    restart: unless-stopped
+    ports:
+      - '${REDIS_PORT:-6379}:6379'
+    networks:
+      - fintech-network
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./Backend_Fintech
+      dockerfile: Dockerfile
+    container_name: fintech-backend
+    restart: unless-stopped
+    init: true
+    ports:
+      - '${BACKEND_PORT:-3000}:3000'
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_NAME: ${MYSQL_DATABASE:-fintech_db}
+      DB_USER: ${MYSQL_USER:-fintech_user}
+      DB_PASSWORD: ${MYSQL_PASSWORD:?MYSQL_PASSWORD is required}
+      JWT_SECRET: ${JWT_SECRET:?JWT_SECRET is required}
+      JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET:?JWT_REFRESH_SECRET is required}
+      CONFIG_ENCRYPTION_KEY: ${CONFIG_ENCRYPTION_KEY:?CONFIG_ENCRYPTION_KEY is required}
+      REDIS_URL: redis://redis:6379
+      REDIS_ENABLED: 'true'
+      CORS_ORIGIN: ${CORS_ORIGIN:?CORS_ORIGIN is required}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      APP_BUILD: ${APP_BUILD:-docker}
+      APP_COMMIT: ${APP_COMMIT:-unknown}
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - backend_uploads:/app/uploads
+      - backend_logs:/app/logs
+    networks:
+      - fintech-network
+    healthcheck:
+      test:
+        [
+          'CMD',
+          'node',
+          '-e',
+          "fetch('http://127.0.0.1:3000/api/ready').then((r)=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  worker:
+    build:
+      context: ./Backend_Fintech
+      dockerfile: Dockerfile
+    container_name: fintech-worker
+    restart: unless-stopped
+    init: true
+    command: ['node', 'dist/worker.js']
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_NAME: ${MYSQL_DATABASE:-fintech_db}
+      DB_USER: ${MYSQL_USER:-fintech_user}
+      DB_PASSWORD: ${MYSQL_PASSWORD:?MYSQL_PASSWORD is required}
+      JWT_SECRET: ${JWT_SECRET:?JWT_SECRET is required}
+      JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET:?JWT_REFRESH_SECRET is required}
+      CONFIG_ENCRYPTION_KEY: ${CONFIG_ENCRYPTION_KEY:?CONFIG_ENCRYPTION_KEY is required}
+      REDIS_URL: redis://redis:6379
+      REDIS_ENABLED: 'true'
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      backend:
+        condition: service_healthy
+    volumes:
+      - backend_uploads:/app/uploads
+      - backend_logs:/app/logs
+    networks:
+      - fintech-network
+    healthcheck:
+      test: ['CMD', 'node', 'scripts/worker-healthcheck.js']
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 45s
+
+  frontend:
+    build:
+      context: ./Frontend_Fintech
+      dockerfile: Dockerfile
+    container_name: fintech-frontend
+    restart: unless-stopped
+    ports:
+      - '${FRONTEND_PORT:-4200}:80'
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - fintech-network
+    healthcheck:
+      test: ['CMD', 'wget', '-qO-', 'http://localhost:80/']
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+volumes:
+  mysql_data:
+    driver: local
+  backend_uploads:
+    driver: local
+  backend_logs:
+    driver: local
+
+networks:
+  fintech-network:
+    driver: bridge

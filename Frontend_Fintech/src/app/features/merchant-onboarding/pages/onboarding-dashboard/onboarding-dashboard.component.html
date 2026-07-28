@@ -1,0 +1,82 @@
+<div class="mob-page">
+  <div class="mob-page__header">
+    <div>
+      <nav class="breadcrumb"><span>Merchants</span><span class="material-symbols-outlined">chevron_right</span><span class="breadcrumb__active">Onboarding</span></nav>
+      <h1>Merchant Onboarding</h1>
+      <p>Manage merchant onboarding applications across your organization</p>
+    </div>
+    @if (rbac.hasPermission(perms.MERCHANT_ONBOARDING_WRITE)) {
+      <button mat-flat-button color="primary" (click)="createNew()">
+        <span class="material-symbols-outlined">add</span> New Application
+      </button>
+    }
+  </div>
+
+  @if (stats(); as s) {
+    <div class="mob-stats">
+      <div class="mob-stat"><span>Pending</span><strong>{{ s.pendingOnboarding }}</strong></div>
+      <div class="mob-stat"><span>Approved</span><strong>{{ s.approved }}</strong></div>
+      <div class="mob-stat"><span>Rejected</span><strong>{{ s.rejected }}</strong></div>
+      <div class="mob-stat"><span>Go Live</span><strong>{{ s.goLive }}</strong></div>
+      <div class="mob-stat"><span>Draft</span><strong>{{ s.draft }}</strong></div>
+    </div>
+  }
+
+  <div class="mob-filters">
+    <input type="text" placeholder="Search applications..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+    <select [(ngModel)]="statusFilter" (change)="onSearch()">
+      <option value="">All Statuses</option>
+      @for (st of statuses; track st) {
+        <option [value]="st">{{ statusLabels[st] }}</option>
+      }
+    </select>
+    <button mat-stroked-button (click)="onSearch()">Search</button>
+  </div>
+
+  @if (pageState() === 'loading') {
+    <div class="mob-loading"><mat-spinner diameter="40"></mat-spinner></div>
+  } @else if (pageState() === 'error') {
+    <div class="mob-empty">Unable to load onboarding applications.</div>
+  } @else {
+    <div class="mob-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Reference</th>
+            <th>Business</th>
+            <th>Industry</th>
+            <th>Status</th>
+            <th>Submitted</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of items(); track item.id) {
+            <tr>
+              <td><strong>{{ item.applicationRef }}</strong></td>
+              <td>{{ item.businessName || item.legalName || '—' }}</td>
+              <td>{{ item.industry || '—' }}</td>
+              <td><span [class]="statusClass(item.status)">{{ statusLabels[item.status] || item.status }}</span></td>
+              <td>{{ item.submittedAt ? (item.submittedAt | date:'MMM d, y') : '—' }}</td>
+              <td>
+                <a [routerLink]="['/merchant-onboarding', item.id]">View</a>
+                @if (item.status === 'draft' || item.status === 'rejected') {
+                  <a [routerLink]="['/merchant-onboarding', item.id, 'wizard']">Edit</a>
+                }
+              </td>
+            </tr>
+          } @empty {
+            <tr><td colspan="6" class="mob-empty">No onboarding applications found.</td></tr>
+          }
+        </tbody>
+      </table>
+    </div>
+    @if (totalPages() > 1) {
+      <div class="mob-pagination">
+        <button mat-stroked-button [disabled]="page() <= 1" (click)="onPageChange(page() - 1)">Previous</button>
+        <span>Page {{ page() }} of {{ totalPages() }}</span>
+        <button mat-stroked-button [disabled]="page() >= totalPages()" (click)="onPageChange(page() + 1)">Next</button>
+      </div>
+    }
+  }
+</div>

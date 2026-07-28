@@ -1,0 +1,28 @@
+<div class="sc-page">
+  <header><h1>Smart Collect</h1><p>Virtual accounts, collections, and auto-matching</p></header>
+  <div class="sc-filters">
+    <input type="number" placeholder="Merchant ID" [(ngModel)]="merchantFilter" (keyup.enter)="load()" />
+    <button type="button" (click)="load()">Refresh</button>
+  </div>
+  @if (pageState() === 'loading') { <div class="sc-center"><mat-spinner diameter="36" /></div> }
+  @else if (pageState() === 'error') { <p class="sc-error">Failed to load dashboard.</p> }
+  @else if (dashboard()) {
+    <div class="sc-stats">
+      <div class="sc-stat"><span>Virtual Accounts</span><strong>{{ statNum('virtualAccounts', 'total') }}</strong><small>{{ statNum('virtualAccounts', 'active') }} active</small></div>
+      <div class="sc-stat"><span>Collections</span><strong>{{ statNum('collections', 'total') }}</strong><small>{{ statNum('collections', 'matched') }} matched</small></div>
+      <div class="sc-stat"><span>Pending</span><strong>{{ statNum('collections', 'pending') }}</strong></div>
+      <div class="sc-stat"><span>Total Collected</span><strong>{{ statNum('collections', 'totalAmount') | currency:'INR':'symbol':'1.0-0' }}</strong></div>
+    </div>
+    <section class="sc-table-wrap">
+      <h2>Recent Collections</h2>
+      @if (!collections().length) { <p class="sc-empty">No collections yet.</p> }
+      @else {
+        <table><thead><tr><th>Reference</th><th>Amount</th><th>Status</th><th>Received</th></tr></thead>
+          <tbody>@for (c of collections(); track $index) {
+            @let row = $any(c);
+            <tr><td>{{ row.collectionRef }}</td><td>{{ row.amount | currency:row.currency:'symbol':'1.2-2' }}</td><td>{{ row.status }}</td><td>{{ row.receivedAt | date:'medium' }}</td></tr>
+          }</tbody></table>
+      }
+    </section>
+  }
+</div>

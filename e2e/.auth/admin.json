@@ -1,0 +1,49 @@
+{
+  "cookies": [
+    {
+      "name": "refreshToken",
+      "value": "ee5794082dabbfdc79a0a2acff7b405e7ea3dc9df9818732f7b7474a864336b8e7488742f3a825812d7962b1ea1cd7e5",
+      "domain": "localhost",
+      "path": "/api/auth",
+      "expires": 1785872656.087145,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "csrfToken",
+      "value": "0fcdbebbb1f6cb4ad789cfedc830fd9732d935c1922e89e569ce26b9b037aa4c",
+      "domain": "localhost",
+      "path": "/api",
+      "expires": 1785354255.635532,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "accessToken",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInV1aWQiOiJhMTAwMDAwMS0wMDAwLTQwMDAtODAwMC0wMDAwMDAwMDAwMDEiLCJlbWFpbCI6ImFkbWluQG1lcmNoYW50cHJvLmNvbSIsInNlc3Npb25JZCI6MjI3Mywic2Vzc2lvblV1aWQiOiIzYThkOWNjYy1lZjY0LTQwMDEtYmMzZS0wMmIxMDBmMTA5MTUiLCJwZXJtaXNzaW9ucyI6WyIqIl0sImlhdCI6MTc4NTI2Nzg1NiwiZXhwIjoxNzg1MjY4NzU2fQ.RUWaRIvae7nTLURwzdrxDl0aBdF8Sby6rORzo_WpUIE",
+      "domain": "localhost",
+      "path": "/api",
+      "expires": 1785268756.086868,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Strict"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "http://localhost:4200",
+      "localStorage": [
+        {
+          "name": "fintech_user",
+          "value": "{\"uuid\":\"a1000001-0000-4000-8000-000000000001\",\"email\":\"admin@merchantpro.com\",\"firstName\":\"Alex\",\"lastName\":\"Rivera\",\"mfaEnabled\":false,\"roles\":[{\"id\":1,\"uuid\":\"r1000001-0000-4000-8000-000000000001\",\"code\":\"super_admin\",\"name\":\"Super Admin\"}],\"permissions\":[\"*\"]}"
+        },
+        {
+          "name": "mp_current_organization_id",
+          "value": "1"
+        }
+      ]
+    }
+  ]
+}

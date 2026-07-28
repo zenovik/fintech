@@ -1,0 +1,96 @@
+@use '../../../dashboard/styles/dashboard-tokens' as *;
+@use '../../../dashboard/styles/shared-page-ui' as ui;
+
+.stl-page {
+  @include ui.page-shell;
+  &__loading, &__error { @include ui.page-loading-error; }
+}
+
+.page-header { @include ui.page-header; }
+.breadcrumb { @include ui.breadcrumb; }
+
+.stat-cards {
+  @include ui.stat-cards;
+  grid-template-columns: repeat(4, 1fr);
+  @media (max-width: 1100px) { grid-template-columns: repeat(2, 1fr); }
+}
+
+.stat-card {
+  @include ui.stat-card;
+
+  &--dark {
+    background: linear-gradient(135deg, $dash-inverse-surface 0%, lighten($dash-inverse-surface, 8%) 100%);
+    border-color: transparent;
+    .stat-card__label { color: rgba(255, 255, 255, 0.7); }
+    .stat-card__value { color: #fff; }
+  }
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr) auto;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: end;
+  @media (max-width: 900px) { grid-template-columns: 1fr 1fr; }
+}
+
+.filter-card { @include ui.filter-card; }
+
+.export-wrap { position: relative; }
+.export-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 4px;
+  background: $dash-surface;
+  border: 1px solid $dash-outline-variant;
+  border-radius: $dash-radius-lg;
+  box-shadow: $dash-shadow-elevated;
+  z-index: 10;
+  min-width: 160px;
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    font-family: $dash-font;
+    &:hover { background: $dash-surface-container-low; }
+  }
+}
+
+.btn {
+  &--primary { @include ui.btn-primary; }
+  &--outline { @include ui.btn-outline; }
+  &--sm { padding: 6px 14px; font-size: 13px; }
+}
+
+.empty-state { @include ui.empty-state; }
+.table-card { @include ui.table-card; }
+.table-toolbar { @include ui.table-toolbar; }
+.table-wrap { overflow-x: auto; }
+table { @include ui.data-table; min-width: 900px; }
+
+.stl-ref { color: $dash-primary-bright; font-weight: 600; text-decoration: none; &:hover { text-decoration: underline; } }
+.date-cell { display: flex; flex-direction: column; small { color: $dash-outline; font-size: 11px; } }
+.amount { font-weight: 700; }
+.col-actions { text-align: right; }
+.link-btn { color: $dash-primary-bright; font-weight: 600; text-decoration: none; font-size: 13px; &:hover { text-decoration: underline; } }
+
+.status-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: $dash-radius-pill;
+  &--processed { @include ui.status-badge($dash-success-container, $dash-success); }
+  &--pending { @include ui.status-badge($dash-warning-container, $dash-warning); }
+  &--processing { @include ui.status-badge(#dbeafe, #1d4ed8); }
+  &--failed { @include ui.status-badge($dash-error-container, $dash-error); }
+  &--reversed { @include ui.status-badge(#fce7f3, #9d174d); }
+}
+
+.icon-btn { @include ui.icon-btn; }
+.pagination { @include ui.pagination; }

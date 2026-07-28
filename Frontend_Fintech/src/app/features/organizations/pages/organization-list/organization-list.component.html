@@ -1,0 +1,92 @@
+<div class="org-page">
+  <div class="org-page__header">
+    <div>
+      <h1 class="org-page__title">Organizations</h1>
+      <p class="org-page__subtitle">Manage multi-tenant organizations, membership, branding, and billing.</p>
+    </div>
+    @if (rbac.hasPermission(perms.ORGANIZATIONS_WRITE)) {
+      <a routerLink="/organizations/create" class="org-btn org-btn--primary">
+        <span class="material-symbols-outlined">add</span> Create Organization
+      </a>
+    }
+  </div>
+
+  <div class="org-stats">
+    <div class="org-stats__card"><label>Total</label><strong>{{ stats().total }}</strong></div>
+    <div class="org-stats__card"><label>Active</label><strong>{{ stats().active }}</strong></div>
+    <div class="org-stats__card"><label>Pending</label><strong>{{ stats().pending }}</strong></div>
+    <div class="org-stats__card"><label>Archived</label><strong>{{ stats().archived }}</strong></div>
+  </div>
+
+  <div class="org-filters">
+    <input type="text" placeholder="Search organizations..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+    <select [(ngModel)]="statusFilter" (ngModelChange)="onSearch()">
+      @for (s of statuses; track s.key) {
+        <option [value]="s.key">{{ s.label }}</option>
+      }
+    </select>
+    <button type="button" class="org-btn org-btn--secondary" (click)="onSearch()">
+      <span class="material-symbols-outlined">search</span> Search
+    </button>
+  </div>
+
+  @if (pageState() === 'loading') {
+    <div class="org-loading"><mat-spinner diameter="40" /><p>Loading organizations...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="org-error">
+      <span class="material-symbols-outlined">error</span>
+      <p>{{ errorMessage() }}</p>
+      <button type="button" class="org-btn org-btn--primary" (click)="load()">Retry</button>
+    </div>
+  } @else if (pageState() === 'empty') {
+    <div class="org-empty">
+      <span class="material-symbols-outlined">corporate_fare</span>
+      <p>No organizations found</p>
+      @if (rbac.hasPermission(perms.ORGANIZATIONS_WRITE)) {
+        <a routerLink="/organizations/create" class="org-btn org-btn--primary">Create Organization</a>
+      }
+    </div>
+  } @else {
+    <div class="org-table-wrap">
+      <table class="org-table">
+        <thead>
+          <tr>
+            <th>Organization</th>
+            <th>Code</th>
+            <th>Status</th>
+            <th>Members</th>
+            <th>Region</th>
+            <th>Created</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (org of items(); track org.id) {
+            <tr (click)="open(org)">
+              <td>
+                <div style="display:flex;align-items:center;gap:12px;">
+                  <span class="org-avatar" [style.background]="org.primaryColor || '#003ec7'">{{ org.logoInitials || 'OR' }}</span>
+                  <div>
+                    <strong>{{ org.displayName }}</strong>
+                    <div style="font-size:12px;color:#737685;">{{ org.legalName }}</div>
+                  </div>
+                </div>
+              </td>
+              <td><code>{{ org.code }}</code></td>
+              <td><span class="org-status org-status--{{ org.status }}">{{ org.status }}</span></td>
+              <td>{{ org.memberCount ?? 0 }}</td>
+              <td>{{ org.primaryRegion || '—' }}</td>
+              <td>{{ org.createdAt | date:'mediumDate' }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+      <div class="org-pagination">
+        <span>Showing {{ (page() - 1) * pageSize() + 1 }}–{{ Math.min(page() * pageSize(), total()) }} of {{ total() }}</span>
+        <div>
+          <button type="button" class="org-btn org-btn--ghost" [disabled]="page() <= 1" (click)="goToPage(page() - 1)">Prev</button>
+          <button type="button" class="org-btn org-btn--ghost" [disabled]="page() >= totalPages()" (click)="goToPage(page() + 1)">Next</button>
+        </div>
+      </div>
+    </div>
+  }
+</div>

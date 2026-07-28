@@ -1,0 +1,44 @@
+<div class="pl-page">
+  <div class="pl-page__header">
+    <div>
+      <h1 class="pl-page__title">Create Payment Link</h1>
+      <p class="pl-page__subtitle">Configure a shareable link for customer payments.</p>
+    </div>
+    <a routerLink="/payment-links" class="pl-btn pl-btn--secondary">Back to List</a>
+  </div>
+
+  @if (error()) {
+    <div class="pl-card" style="color:#b42318">{{ error() }}</div>
+  }
+
+  <div class="pl-card">
+    <form (ngSubmit)="submit()">
+      <div class="pl-form-grid">
+        <div><label>Merchant ID *</label><input type="number" [(ngModel)]="merchantId" name="merchantId" required /></div>
+        <div><label>Customer ID</label><input type="number" [(ngModel)]="customerId" name="customerId" /></div>
+        <div><label>Title *</label><input type="text" [(ngModel)]="title" name="title" required /></div>
+        <div><label>Currency</label>
+          <select [(ngModel)]="currency" name="currency">
+            @for (c of currencies; track c.key) { <option [value]="c.key">{{ c.label }}</option> }
+          </select>
+        </div>
+        <div><label>Amount</label><input type="number" step="0.01" [(ngModel)]="amount" name="amount" [disabled]="allowCustomAmount" /></div>
+        <div style="display:flex;align-items:flex-end;gap:8px">
+          <label><input type="checkbox" [(ngModel)]="allowCustomAmount" name="allowCustomAmount" /> Allow custom amount</label>
+        </div>
+        <div><label>Expires At</label><input type="datetime-local" [(ngModel)]="expiresAt" name="expiresAt" /></div>
+        <div><label>Max Usage</label><input type="number" [(ngModel)]="maxUsage" name="maxUsage" /></div>
+        <div style="grid-column:1/-1"><label>Description</label><textarea rows="3" [(ngModel)]="description" name="description"></textarea></div>
+        <div><label>Redirect URL</label><input type="url" [(ngModel)]="redirectUrl" name="redirectUrl" /></div>
+        <div><label>Success URL</label><input type="url" [(ngModel)]="successUrl" name="successUrl" /></div>
+        <div><label>Cancel URL</label><input type="url" [(ngModel)]="cancelUrl" name="cancelUrl" /></div>
+      </div>
+      <div style="margin-top:20px;display:flex;gap:8px">
+        <button type="submit" class="pl-btn pl-btn--primary" [disabled]="saving()">
+          @if (saving()) { <mat-spinner diameter="20" /> } @else { Create Link }
+        </button>
+        <a routerLink="/payment-links" class="pl-btn pl-btn--secondary">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>

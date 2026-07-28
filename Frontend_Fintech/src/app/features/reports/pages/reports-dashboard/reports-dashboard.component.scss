@@ -1,0 +1,26 @@
+@use '../../../dashboard/styles/dashboard-tokens' as *;
+@use '../../../dashboard/styles/shared-page-ui' as ui;
+
+.rpt-page {
+  @include ui.page-shell;
+  &__loading, &__error { @include ui.page-loading-error; }
+}
+
+.page-header { @include ui.page-header; }
+.breadcrumb { @include ui.breadcrumb; }
+.stat-cards { @include ui.stat-cards; grid-template-columns: repeat(4, 1fr); @media (max-width: 1100px) { grid-template-columns: repeat(2, 1fr); } }
+.stat-card { @include ui.stat-card; &--link { text-decoration: none; color: inherit; cursor: pointer; &:hover { border-color: $dash-primary; } } }
+.filters { @include ui.filters-row; }
+.filter-card { @include ui.filter-card; }
+.icon-btn { @include ui.icon-btn; }
+.empty-state { @include ui.empty-state; }
+.table-card { @include ui.data-table; }
+.pagination { @include ui.pagination; }
+.btn { @include ui.btn-primary; &--outline { @include ui.btn-outline; } &--primary { @include ui.btn-primary; } }
+.status-badge {
+  @include ui.status-badge($dash-surface-container-low, $dash-on-surface-variant);
+  &--active { @include ui.status-badge($dash-success-container, $dash-success); }
+  &--draft { @include ui.status-badge($dash-warning-container, $dash-warning); }
+  &--archived { @include ui.status-badge($dash-surface-container-low, $dash-on-surface-variant); }
+}
+.col-actions { text-align: right; white-space: nowrap; }

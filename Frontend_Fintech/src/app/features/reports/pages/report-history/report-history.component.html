@@ -1,0 +1,37 @@
+<div class="rpt-page">
+  @if (state.pageState() === 'loading') {
+    <div class="rpt-page__loading"><mat-spinner diameter="48"></mat-spinner></div>
+  } @else if (state.pageState() === 'error') {
+    <div class="rpt-page__error"><p>{{ state.errorMessage() }}</p><button class="btn btn--primary" (click)="state.loadHistory()">Retry</button></div>
+  } @else {
+    <div class="page-header">
+      <div>
+        <nav class="breadcrumb"><a routerLink="/reports">Reports</a><span class="material-symbols-outlined">chevron_right</span><span class="breadcrumb__active">History</span></nav>
+        <h1>Report History</h1>
+        <p class="page-header__subtitle">Execution logs and download history.</p>
+      </div>
+    </div>
+    @if (!state.executionHistory().length) {
+      <div class="empty-state"><span class="material-symbols-outlined">history</span><h3>No execution history</h3></div>
+    } @else {
+      <div class="table-card">
+        <table>
+          <thead><tr><th>Report</th><th>User</th><th>Type</th><th>Status</th><th>Rows</th><th>Duration</th><th>Started</th></tr></thead>
+          <tbody>
+            @for (h of state.executionHistory(); track h.id) {
+              <tr>
+                <td>{{ h.reportName ?? '—' }}</td>
+                <td>{{ h.userName ?? '—' }}</td>
+                <td>{{ h.executionType | titlecase }}</td>
+                <td><span class="status" [class.status--failed]="h.status === 'failed'">{{ h.status | titlecase }}</span></td>
+                <td>{{ h.rowsReturned ?? '—' }}</td>
+                <td>{{ h.durationMs ? h.durationMs + 'ms' : '—' }}</td>
+                <td>{{ h.startedAt | date:'medium' }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    }
+  }
+</div>

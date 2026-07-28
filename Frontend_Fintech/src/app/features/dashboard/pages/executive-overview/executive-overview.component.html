@@ -1,0 +1,378 @@
+<!-- Fraud Alerts Ticker -->
+@if (state.fraudAlerts().length > 0 && state.pageState() !== 'error') {
+  <div class="fraud-ticker" role="alert">
+    <div class="fraud-ticker__label">
+      <span class="material-symbols-outlined">warning</span>
+      <span>FRAUD ALERTS</span>
+    </div>
+    <div class="fraud-ticker__track">
+      @for (alert of state.fraudAlerts(); track alert.uuid) {
+        <span class="fraud-ticker__item">• {{ alert.message }}</span>
+      }
+    </div>
+  </div>
+}
+
+<!-- Error State -->
+@if (state.pageState() === 'error') {
+  <div class="dash-error">
+    <div class="dash-error__icon">
+      <span class="material-symbols-outlined">signal_disconnected</span>
+    </div>
+    <h2>Unable to load dashboard data</h2>
+    <p>{{ state.errorMessage() }}</p>
+    <div class="dash-error__actions">
+      <button type="button" class="btn-primary" (click)="onRetry()">
+        <span class="material-symbols-outlined">refresh</span> Retry Connection
+      </button>
+    </div>
+  </div>
+} @else {
+  <!-- Page Header -->
+  <div class="page-header">
+    <div>
+      <nav class="breadcrumb">
+        <span>Analytics</span>
+        <span class="material-symbols-outlined">chevron_right</span>
+        <span class="breadcrumb__active">Executive Overview</span>
+      </nav>
+      <h1>Executive Overview</h1>
+    </div>
+    <div class="page-header__actions">
+      <div class="period-filter">
+        @for (p of periods; track p.value) {
+          <button
+            type="button"
+            class="period-filter__btn"
+            [class.period-filter__btn--active]="state.period() === p.value"
+            (click)="onPeriodChange(p.value)"
+          >
+            {{ p.label }}
+          </button>
+        }
+      </div>
+      @if (rbac.hasPermission(perms.DASHBOARD_EXPORT)) {
+        <button type="button" class="btn-primary" (click)="onExport()" [disabled]="state.pageState() === 'loading'">
+          <span class="material-symbols-outlined">ios_share</span> Export Report
+        </button>
+      }
+      @if (canUseDashboardAi()) {
+        <button type="button" class="btn-secondary" (click)="openDashboardAi()">
+          <span class="material-symbols-outlined">smart_toy</span> Ask AI
+        </button>
+      }
+    </div>
+  </div>
+
+  <!-- Loading Skeleton -->
+  @if (state.pageState() === 'loading') {
+    <div class="kpi-grid">
+      @for (i of [1, 2, 3, 4]; track i) {
+        <div class="kpi-card skeleton-card"><div class="skeleton-block h-4 w-2/3"></div><div class="skeleton-block h-8 w-1/2 mt-4"></div></div>
+      }
+    </div>
+    <div class="charts-row mt-6">
+      <div class="chart-card skeleton-card chart-card--large"><div class="skeleton-block h-full"></div></div>
+      <div class="chart-card skeleton-card"><div class="skeleton-block h-full"></div></div>
+    </div>
+  } @else {
+    <!-- KPI Cards -->
+    @if (state.summary(); as summary) {
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-card__header">
+          <span class="kpi-card__label">TOTAL REVENUE</span>
+          <div class="kpi-card__icon"><span class="material-symbols-outlined">payments</span></div>
+        </div>
+        <p class="kpi-card__value">{{ summary.kpis.totalRevenue.formatted }}</p>
+        @if (summary.kpis.totalRevenue.changePct !== null) {
+          <div class="kpi-card__trend kpi-card__trend--up">
+            <span class="material-symbols-outlined">trending_up</span>
+            +{{ summary.kpis.totalRevenue.changePct }}%
+            <span class="kpi-card__trend-label">vs last month</span>
+          </div>
+        }
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-card__header">
+          <span class="kpi-card__label">TOTAL TRANSACTIONS</span>
+          <div class="kpi-card__icon"><span class="material-symbols-outlined">swap_horiz</span></div>
+        </div>
+        <p class="kpi-card__value">{{ summary.kpis.totalTransactions.value | number }}</p>
+        @if (summary.kpis.totalTransactions.changePct !== null) {
+          <div class="kpi-card__trend kpi-card__trend--up">
+            <span class="material-symbols-outlined">trending_up</span>
+            +{{ summary.kpis.totalTransactions.changePct }}%
+            <span class="kpi-card__trend-label">active volume</span>
+          </div>
+        }
+      </div>
+      @if (showPlatformMerchantsKpi()) {
+      <div class="kpi-card">
+        <div class="kpi-card__header">
+          <span class="kpi-card__label">TOTAL MERCHANTS</span>
+          <div class="kpi-card__icon"><span class="material-symbols-outlined">storefront</span></div>
+        </div>
+        <p class="kpi-card__value">{{ summary.kpis.totalMerchants.value | number }}</p>
+        @if (summary.kpis.totalMerchants.changePct !== null) {
+          <div class="kpi-card__trend kpi-card__trend--up">
+            <span class="material-symbols-outlined">trending_up</span>
+            +{{ summary.kpis.totalMerchants.changePct }}%
+            <span class="kpi-card__trend-label">new onboarding</span>
+          </div>
+        }
+      </div>
+      }
+      <div class="kpi-card">
+        <div class="kpi-card__header">
+          <span class="kpi-card__label">SUCCESS RATE</span>
+          <div class="kpi-card__icon kpi-card__icon--success"><span class="material-symbols-outlined">check_circle</span></div>
+        </div>
+        <p class="kpi-card__value">{{ summary.kpis.successRate.value }}%</p>
+        <div class="kpi-card__trend">
+          <span class="badge-optimal">Optimal</span>
+          <span class="kpi-card__trend-label">{{ summary.kpis.successRate.target }}% target</span>
+        </div>
+      </div>
+    </div>
+    }
+
+    <!-- Charts Row -->
+    <div class="charts-row">
+      <div class="chart-card chart-card--large">
+        <div class="chart-card__header">
+          <div>
+            <h3>Revenue Performance</h3>
+            <p>Monthly processed volume vs forecast line</p>
+          </div>
+          <div class="chart-legend">
+            <span><i class="dot dot--actual"></i> Actual</span>
+            <span><i class="dot dot--forecast"></i> Forecast</span>
+          </div>
+        </div>
+        @if (state.revenueChart()?.actual?.length) {
+          <div class="area-chart">
+            <svg viewBox="0 0 600 220" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="rgba(0,61,155,0.2)" />
+                  <stop offset="100%" stop-color="rgba(0,61,155,0)" />
+                </linearGradient>
+              </defs>
+              <path [attr.d]="revenuePath()" fill="url(#areaGrad)" />
+              <polyline [attr.points]="revenueLinePoints()" fill="none" stroke="#003d9b" stroke-width="3" />
+            </svg>
+            <div class="area-chart__labels">
+              @for (label of state.revenueChart()?.labels; track label) {
+                <span>{{ label }}</span>
+              }
+            </div>
+          </div>
+        } @else {
+          <div class="chart-empty"><span class="material-symbols-outlined">bar_chart</span><p>No data to display</p></div>
+        }
+      </div>
+
+      <div class="chart-card">
+        <h3>Payment Methods</h3>
+        @if (state.paymentMethods()?.segments?.length) {
+          <div class="donut-chart">
+            <svg viewBox="0 0 100 100" class="donut-chart__svg">
+              <circle cx="50" cy="50" r="40" fill="none" stroke="#eaedff" stroke-width="12" />
+              @for (seg of donutSegments(); track $index) {
+                <circle
+                  cx="50" cy="50" r="40" fill="none"
+                  [attr.stroke]="seg.color"
+                  stroke-width="12"
+                  stroke-dasharray="251.2"
+                  [attr.stroke-dashoffset]="251.2 - seg.dash"
+                  [attr.transform]="'rotate(' + (seg.offset / 251.2 * 360 - 90) + ' 50 50)'"
+                />
+              }
+            </svg>
+            <div class="donut-chart__center">
+              <strong>{{ state.paymentMethods()!.segments[0].percentage }}%</strong>
+              <span>{{ state.paymentMethods()!.dominantLabel }}</span>
+            </div>
+          </div>
+          <div class="donut-legend">
+            @for (seg of state.paymentMethods()!.segments; track seg.code) {
+              <div class="donut-legend__item">
+                <span class="donut-legend__dot" [style.background]="$index === 0 ? '#003d9b' : $index === 1 ? '#b2c5ff' : '#dae2fd'"></span>
+                <span>{{ seg.name }}</span>
+                <strong>{{ seg.percentage }}%</strong>
+              </div>
+            }
+          </div>
+        } @else {
+          <div class="chart-empty"><span class="material-symbols-outlined">pie_chart</span><p>No payment data</p></div>
+        }
+      </div>
+    </div>
+
+    @if (showOperationsWidget()) {
+      <div class="pending-work-card">
+        <div class="pending-work-card__header">
+          <h3>Pending Work</h3>
+          <a routerLink="/operations" class="link-btn">Operations Center</a>
+        </div>
+        <div class="pending-work-grid">
+          <div><label>Total</label><strong>{{ state.operationsStats()['totalPending'] ?? 0 }}</strong></div>
+          <div><label>Failed Settlements</label><strong>{{ state.operationsStats()['failedSettlements'] ?? 0 }}</strong></div>
+          <div><label>Pending KYC</label><strong>{{ state.operationsStats()['pendingKyc'] ?? 0 }}</strong></div>
+          <div><label>Pending Approvals</label><strong>{{ state.operationsStats()['pendingApprovals'] ?? 0 }}</strong></div>
+          <div><label>Retry Queue</label><strong>{{ state.operationsStats()['retryQueue'] ?? 0 }}</strong></div>
+        </div>
+      </div>
+    }
+
+    <!-- Map + Activity -->
+    <div class="distribution-row">
+      <div class="map-card">
+        <h3>Global Distribution</h3>
+        <p>Real-time transaction density across key regions</p>
+        <div class="map-card__regions">
+          @for (region of state.regionalData()?.regions ?? []; track region.code) {
+            <div class="region-stat">
+              <span class="region-stat__code">{{ region.name }}</span>
+              <strong>{{ region.formatted }}</strong>
+              <div class="region-stat__bar"><div [style.width.%]="region.progressPct"></div></div>
+            </div>
+          }
+        </div>
+      </div>
+      <div class="activity-card">
+        <div class="activity-card__header">
+          <h3>Recent Activities</h3>
+          <a routerLink="/activity" class="link-btn">View All</a>
+        </div>
+        <div class="activity-list">
+          @for (item of state.activities(); track item.uuid) {
+            <div class="activity-item">
+              <div class="activity-item__icon" [class]="'activity-item__icon--' + item.colorToken">
+                <span class="material-symbols-outlined">{{ item.iconKey }}</span>
+              </div>
+              <div>
+                <p>{{ item.description }}</p>
+                <span class="activity-item__time">{{ item.relativeTime }}</span>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- High Value Transactions Table -->
+    <div class="table-card">
+      <div class="table-card__header">
+        <div>
+          <h3>Recent High-Value Transactions</h3>
+          <p>Transactions exceeding the $50k threshold</p>
+        </div>
+        <div class="table-card__actions">
+          <div class="search-box">
+            <span class="material-symbols-outlined">search</span>
+            <input type="text" placeholder="Search..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+          </div>
+          <button type="button" class="btn-outline" (click)="onSearch()">
+            <span class="material-symbols-outlined">search</span> Search
+          </button>
+        </div>
+      </div>
+      @if (state.transactions()?.items?.length) {
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Merchant</th>
+                <th>Amount</th>
+                <th>Date/Time</th>
+                <th>Method</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (txn of state.transactions()!.items; track txn.uuid) {
+                <tr>
+                  <td>
+                    <div class="merchant-cell">
+                      <div class="merchant-avatar">{{ txn.merchant.initials }}</div>
+                      <div>
+                        <strong>{{ txn.merchant.name }}</strong>
+                        <span>ID: {{ txn.merchant.code }}</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <strong>{{ txn.formattedAmount }}</strong>
+                    <span>{{ txn.currency }}</span>
+                  </td>
+                  <td>
+                    {{ txn.processedAt | date: 'MMM d, y' }}
+                    <span>{{ txn.processedAt | date: 'HH:mm:ss' }} UTC</span>
+                  </td>
+                  <td>
+                    <span class="material-symbols-outlined">credit_card</span>
+                    {{ txn.paymentMethod.label }}
+                  </td>
+                  <td>
+                    <span class="status-badge" [class]="getStatusClass(txn.status.badgeColor)">
+                      {{ txn.status.label }}
+                    </span>
+                  </td>
+                  <td>
+                    <button type="button" class="icon-btn" aria-label="Actions">
+                      <span class="material-symbols-outlined">more_vert</span>
+                    </button>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+        <div class="table-footer">
+          <span>Showing {{ (state.transactions()!.pagination.page - 1) * state.transactions()!.pagination.pageSize + 1 }}-{{ state.transactions()!.pagination.page * state.transactions()!.pagination.pageSize }} of {{ state.transactions()!.pagination.total }} results</span>
+          <select (change)="state.setPageSize(+$any($event.target).value)">
+            @for (size of pageSizeOptions; track size) {
+              <option [value]="size" [selected]="state.pageSize() === size">{{ size }} per page</option>
+            }
+          </select>
+          <div class="pagination">
+            <button type="button" [disabled]="state.currentPage() <= 1" (click)="state.setPage(state.currentPage() - 1)">
+              <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <span class="pagination__current">{{ state.currentPage() }}</span>
+            <button type="button" [disabled]="state.currentPage() >= state.transactions()!.pagination.totalPages" (click)="state.setPage(state.currentPage() + 1)">
+              <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+          </div>
+        </div>
+      } @else if (state.pageState() === 'empty') {
+        <div class="table-empty">
+          <span class="material-symbols-outlined">receipt_long</span>
+          <h3>No Transactions Found</h3>
+          <p>Start processing payments by connecting your first merchant account.</p>
+        </div>
+      }
+    </div>
+  }
+}
+
+<!-- FAB -->
+@if (state.pageState() !== 'error') {
+  <div class="fab-wrap">
+    @if (showFabMenu) {
+      <div class="fab-menu">
+        <button type="button">Create Payment Link</button>
+        <a routerLink="/merchants/create" class="fab-menu__link">Add Merchant</a>
+        <button type="button" (click)="onExport()">Generate Report</button>
+      </div>
+    }
+    <button type="button" class="fab" (click)="toggleFabMenu()" aria-label="Quick actions">
+      <span class="material-symbols-outlined">add</span>
+    </button>
+  </div>
+}
+
+<app-dashboard-ai-widget />

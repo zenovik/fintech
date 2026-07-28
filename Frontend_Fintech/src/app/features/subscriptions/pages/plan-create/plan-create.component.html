@@ -1,0 +1,39 @@
+<div class="sub-page">
+  <div class="sub-page__header">
+    <div>
+      <h1 class="sub-page__title">New Subscription Plan</h1>
+      <p class="sub-page__subtitle">Define pricing and billing interval.</p>
+    </div>
+    <a routerLink="/subscriptions/plans" class="sub-btn sub-btn--secondary">Back</a>
+  </div>
+
+  @if (error()) { <p style="color:#b42318;margin-bottom:16px">{{ error() }}</p> }
+
+  <div class="sub-card">
+    <form (ngSubmit)="submit()">
+      <div class="sub-form-grid">
+        <div><label>Merchant ID *</label><input type="number" [(ngModel)]="merchantId" name="merchantId" required /></div>
+        <div><label>Plan Name *</label><input type="text" [(ngModel)]="name" name="name" required /></div>
+        <div><label>Price *</label><input type="number" step="0.01" [(ngModel)]="price" name="price" required /></div>
+        <div><label>Currency</label>
+          <select [(ngModel)]="currency" name="currency">
+            @for (c of currencies; track c.key) { <option [value]="c.key">{{ c.label }}</option> }
+          </select>
+        </div>
+        <div><label>Billing Interval</label>
+          <select [(ngModel)]="billingInterval" name="billingInterval">
+            @for (i of intervals; track i.key) { <option [value]="i.key">{{ i.label }}</option> }
+          </select>
+        </div>
+        <div><label>Trial Days</label><input type="number" [(ngModel)]="trialDays" name="trialDays" /></div>
+        <div style="grid-column:1/-1"><label>Description</label><textarea rows="3" [(ngModel)]="description" name="description"></textarea></div>
+      </div>
+      <div style="margin-top:20px;display:flex;gap:8px">
+        <button type="submit" class="sub-btn sub-btn--primary" [disabled]="saving()">
+          @if (saving()) { <mat-spinner diameter="20" /> } @else { Create Plan }
+        </button>
+        <a routerLink="/subscriptions/plans" class="sub-btn sub-btn--secondary">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>

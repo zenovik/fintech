@@ -1,0 +1,11 @@
+.cfg-page { h2 { margin: 0 0 4px; } > p { color: #64748b; margin: 0 0 24px; } }
+.cfg-filter select { padding: 8px 12px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 16px; }
+.cfg-card {
+  background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 12px;
+  header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; h3 { margin: 0; font-size: 15px; font-family: monospace; } time { font-size: 12px; color: #94a3b8; } }
+}
+.cfg-group { font-size: 11px; background: #eef2ff; color: #003d9b; padding: 2px 8px; border-radius: 999px; }
+.cfg-desc { font-size: 13px; color: #64748b; margin: 0 0 8px; }
+textarea { width: 100%; font-family: monospace; font-size: 13px; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; box-sizing: border-box; }
+.cfg-save { margin-top: 8px; padding: 8px 16px; background: #003d9b; color: #fff; border: none; border-radius: 8px; cursor: pointer; &:disabled { opacity: 0.6; } }
+.cfg-loading, .cfg-error, .cfg-empty { text-align: center; padding: 24px; color: #64748b; }

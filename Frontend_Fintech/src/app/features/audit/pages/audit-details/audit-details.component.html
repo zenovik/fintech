@@ -1,0 +1,112 @@
+<div class="audit-page">
+  <nav class="audit-breadcrumb" aria-label="Breadcrumb">
+    <a routerLink="/audit">Audit</a>
+    <span class="material-symbols-outlined">chevron_right</span>
+    <span>Details</span>
+  </nav>
+
+  @if (pageState() === 'loading') {
+    <div class="audit-loading"><mat-spinner diameter="40" /><p>Loading audit details...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="audit-error">
+      <span class="material-symbols-outlined">error</span>
+      <p>{{ errorMessage() }}</p>
+      <a routerLink="/audit" class="audit-btn audit-btn--primary">Return to Dashboard</a>
+    </div>
+  } @else {
+    @if (log(); as l) {
+      <div class="audit-detail-layout">
+        <div class="audit-detail">
+          <div class="audit-detail__header">
+            <div>
+              <h1 class="audit-page__title">{{ l.actionCode | titlecase }}</h1>
+              <p class="audit-page__subtitle">{{ l.description }}</p>
+            </div>
+            <span class="audit-risk audit-risk--{{ l.riskLevel }}">
+              <span class="audit-risk__dot"></span>{{ l.riskLevel }}
+            </span>
+          </div>
+
+          <div class="audit-detail__grid">
+            <div class="audit-detail__field">
+              <label>Actor</label>
+              <span>{{ l.actorName ?? 'System' }}</span>
+            </div>
+            <div class="audit-detail__field">
+              <label>Module</label>
+              <span>{{ l.module }}</span>
+            </div>
+            <div class="audit-detail__field">
+              <label>Timestamp</label>
+              <span>{{ l.createdAt | date:'medium' }}</span>
+            </div>
+            <div class="audit-detail__field">
+              <label>IP Address</label>
+              <span class="audit-detail__mono">{{ l.ipAddress ?? '—' }}</span>
+            </div>
+            <div class="audit-detail__field">
+              <label>Entity</label>
+              <span>{{ l.entityType ? l.entityType + ':' + l.entityId : '—' }}</span>
+            </div>
+            <div class="audit-detail__field">
+              <label>Correlation ID</label>
+              <span class="audit-detail__mono">{{ l.correlationId }}</span>
+            </div>
+          </div>
+
+          @if (hasDiff()) {
+            <div class="audit-detail__diff">
+              <h3>Change Summary</h3>
+              <table class="audit-diff-table">
+                <thead>
+                  <tr><th>Field</th><th>Before</th><th>After</th></tr>
+                </thead>
+                <tbody>
+                  @for (key of diffKeys(); track key) {
+                    <tr>
+                      <td>{{ key }}</td>
+                      <td><pre>{{ l.beforeValues[key] | json }}</pre></td>
+                      <td><pre>{{ l.afterValues[key] | json }}</pre></td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            </div>
+          }
+
+          @if (l.userAgent) {
+            <div class="audit-detail__ua">
+              <label>User Agent</label>
+              <p>{{ l.userAgent }}</p>
+            </div>
+          }
+        </div>
+
+        <aside class="audit-sidebar">
+          <div class="audit-sidebar__card">
+            <h3 class="audit-sidebar__title">Metadata</h3>
+            @if (l.metadata.length === 0) {
+              <p class="audit-sidebar__empty">No additional metadata</p>
+            } @else {
+              <dl class="audit-meta-list">
+                @for (m of l.metadata; track m.key) {
+                  <dt>{{ m.key }}</dt>
+                  <dd>{{ m.value }}</dd>
+                }
+              </dl>
+            }
+          </div>
+          <div class="audit-sidebar__card">
+            <h3 class="audit-sidebar__title">Identifiers</h3>
+            <dl class="audit-meta-list">
+              <dt>Log ID</dt><dd>{{ l.id }}</dd>
+              <dt>UUID</dt><dd class="audit-detail__mono">{{ l.uuid }}</dd>
+              <dt>Category</dt><dd>{{ l.categoryCode }}</dd>
+              <dt>Action</dt><dd>{{ l.actionCode }}</dd>
+            </dl>
+          </div>
+        </aside>
+      </div>
+    }
+  }
+</div>

@@ -1,0 +1,45 @@
+@if (state.pageState() === 'loading') {
+  <div class="settings-card settings-card--center"><mat-spinner diameter="40" /></div>
+} @else if (state.pageState() === 'error') {
+  <div class="settings-error">
+    <span class="material-symbols-outlined">error</span>
+    <p>{{ state.errorMessage() }}</p>
+    <button type="button" class="btn btn--primary" (click)="retry()">Retry</button>
+  </div>
+} @else {
+  <div class="settings-card">
+    <h1>Session Management</h1>
+    <p class="subtitle">Configure idle timeouts, session duration, and device trust.</p>
+
+    <form [formGroup]="form" (ngSubmit)="save()" class="settings-form">
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+          <mat-label>Idle Timeout (minutes)</mat-label>
+          <input matInput type="number" formControlName="idleTimeoutMinutes" min="1" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Max Session Duration (minutes)</mat-label>
+          <input matInput type="number" formControlName="maxSessionDurationMinutes" min="1" />
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+          <mat-label>Max Concurrent Sessions</mat-label>
+          <input matInput type="number" formControlName="maxConcurrentSessions" min="1" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Remember Device (days)</mat-label>
+          <input matInput type="number" formControlName="rememberDeviceDays" min="0" />
+        </mat-form-field>
+      </div>
+
+      <div class="settings-actions">
+        @if (rbac.hasPermission(perms.SETTINGS_WRITE)) {
+          <button type="submit" class="btn btn--primary" [disabled]="form.invalid || state.pageState() === 'saving'">
+            @if (state.pageState() === 'saving') { <mat-spinner diameter="18" /> } @else { Save Changes }
+          </button>
+        }
+      </div>
+    </form>
+  </div>
+}

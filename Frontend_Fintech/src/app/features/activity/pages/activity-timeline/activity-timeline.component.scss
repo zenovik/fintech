@@ -1,0 +1,18 @@
+.act-page {
+  padding: 24px;
+  &__header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; h1 { margin: 0 0 4px; } p { margin: 0; color: #64748b; } }
+  &__filters { display: flex; gap: 8px; select { padding: 8px 12px; border-radius: 8px; border: 1px solid #e2e8f0; } }
+}
+.act-btn { padding: 8px 16px; border-radius: 8px; border: 1px solid #e2e8f0; background: #fff; cursor: pointer; &--primary { background: #003d9b; color: #fff; border-color: #003d9b; } }
+.act-loading, .act-error { text-align: center; padding: 48px; }
+.act-timeline { display: flex; flex-direction: column; gap: 12px; }
+.act-item {
+  display: flex; gap: 16px; padding: 16px; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px;
+  &__icon { width: 40px; height: 40px; border-radius: 50%; background: #eef2ff; display: flex; align-items: center; justify-content: center; color: #003d9b; }
+  &__meta { display: flex; gap: 12px; font-size: 12px; color: #64748b; margin-bottom: 4px; }
+  &__source { font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+  h3 { margin: 0 0 4px; font-size: 15px; }
+  p { margin: 0 0 8px; color: #475569; font-size: 14px; }
+  &__footer { display: flex; gap: 16px; font-size: 12px; color: #94a3b8; }
+}
+.act-empty, .act-count { color: #64748b; text-align: center; }

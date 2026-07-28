@@ -1,0 +1,90 @@
+@use '../../../dashboard/styles/dashboard-tokens' as *;
+@use '../../styles/audit-shared' as *;
+
+.audit-timeline {
+  @include audit-surface;
+  padding: 24px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 44px;
+    top: 24px;
+    bottom: 24px;
+    width: 2px;
+    background: $dash-outline-variant;
+  }
+
+  &__item {
+    display: flex;
+    gap: 16px;
+    padding: 16px 0;
+    cursor: pointer;
+    position: relative;
+
+    &:hover .audit-timeline__content {
+      background: $dash-surface-container-low;
+    }
+  }
+
+  &__marker {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $dash-surface-container;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 1;
+    color: $dash-primary;
+
+    &--critical, &--high {
+      background: $dash-error-container;
+      color: $dash-error;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: background 0.15s;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 4px;
+
+    strong { font-size: 14px; color: $dash-on-surface; }
+  }
+
+  &__time {
+    font-size: 12px;
+    color: $dash-outline;
+    white-space: nowrap;
+  }
+
+  &__desc {
+    margin: 0 0 8px;
+    font-size: 14px;
+    color: $dash-outline;
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__ip {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: $dash-outline;
+  }
+}

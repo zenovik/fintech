@@ -1,0 +1,31 @@
+<div class="ai-input">
+  <div class="ai-input__editor">
+    <textarea
+      [(ngModel)]="draft"
+      [disabled]="disabled()"
+      [attr.maxlength]="maxLength"
+      rows="3"
+      placeholder="Ask the assistant... (Enter to send, Shift+Enter for new line)"
+      (keydown)="onKeydown($event)"
+      (input)="onInput()"
+    ></textarea>
+    <div class="ai-input__meta">
+      <span class="ai-input__counter" [class.ai-input__counter--warn]="nearLimit" [class.ai-input__counter--limit]="atLimit">
+        {{ charCount }} / {{ maxLength }}
+      </span>
+    </div>
+  </div>
+  <button
+    type="button"
+    class="ai-input__send"
+    (click)="submit()"
+    [disabled]="disabled() || loading() || !draft.trim()"
+    aria-label="Send message"
+  >
+    @if (loading()) {
+      <span class="ai-input__spinner" aria-hidden="true"></span>
+    } @else {
+      <span class="material-symbols-outlined">send</span>
+    }
+  </button>
+</div>

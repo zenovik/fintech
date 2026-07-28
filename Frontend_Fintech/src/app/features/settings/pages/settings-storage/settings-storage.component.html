@@ -1,0 +1,53 @@
+@if (state.pageState() === 'loading') {
+  <div class="settings-card settings-card--center"><mat-spinner diameter="40" /></div>
+} @else if (state.pageState() === 'error') {
+  <div class="settings-error">
+    <span class="material-symbols-outlined">error</span>
+    <p>{{ state.errorMessage() }}</p>
+    <button type="button" class="btn btn--primary" (click)="retry()">Retry</button>
+  </div>
+} @else {
+  <div class="settings-card">
+    <h1>Storage</h1>
+    <p class="subtitle">File upload provider, limits, and allowed extensions.</p>
+
+    <form [formGroup]="form" (ngSubmit)="save()" class="settings-form">
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+          <mat-label>Provider</mat-label>
+          <mat-select formControlName="provider">
+            @for (p of providers; track p) {
+              <mat-option [value]="p">{{ p | uppercase }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Bucket Name</mat-label>
+          <input matInput formControlName="bucketName" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Region</mat-label>
+          <input matInput formControlName="region" />
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+          <mat-label>Max Upload (MB)</mat-label>
+          <input matInput type="number" formControlName="maxUploadMb" min="1" />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="full">
+          <mat-label>Allowed Extensions (comma-separated)</mat-label>
+          <input matInput formControlName="allowedExtensionsText" placeholder="pdf, png, jpg" />
+        </mat-form-field>
+      </div>
+
+      <div class="settings-actions">
+        @if (rbac.hasPermission(perms.SETTINGS_WRITE)) {
+          <button type="submit" class="btn btn--primary" [disabled]="form.invalid || state.pageState() === 'saving'">
+            @if (state.pageState() === 'saving') { <mat-spinner diameter="18" /> } @else { Save Changes }
+          </button>
+        }
+      </div>
+    </form>
+  </div>
+}

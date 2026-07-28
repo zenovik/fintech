@@ -1,0 +1,54 @@
+// Figma-aligned design tokens — Executive Dashboard PNG (primary reference)
+$dash-primary: #003d9b;
+$dash-primary-container: #0052cc;
+$dash-primary-bright: #2563eb;
+$dash-secondary: #0050cc;
+$dash-secondary-container: #0266ff;
+$dash-background: #f8f9fd;
+$dash-surface: #ffffff;
+$dash-on-surface: #131b2e;
+$dash-on-surface-variant: #434654;
+$dash-outline: #737685;
+$dash-outline-variant: #e2e8f0;
+$dash-inverse-surface: #1a1f36;
+$dash-inverse-on-surface: #dae2fd;
+$dash-error: #ba1a1a;
+$dash-error-container: #fde8e8;
+$dash-success: #15803d;
+$dash-success-container: #dcfce7;
+$dash-warning: #b45309;
+$dash-warning-container: #fef3c7;
+$dash-surface-container-low: #f2f3ff;
+$dash-surface-container: #eaedff;
+$dash-table-header-bg: #f1f5f9;
+$dash-sidenav-width: 260px;
+$dash-radius-xl: 12px;
+$dash-radius-lg: 8px;
+$dash-radius-pill: 999px;
+$dash-font: 'Inter', Roboto, 'Helvetica Neue', sans-serif;
+$dash-shadow-card: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+$dash-shadow-elevated: 0 4px 12px rgba(15, 23, 42, 0.08);
+
+@mixin dash-card {
+  background: $dash-surface;
+  border: 1px solid $dash-outline-variant;
+  border-radius: $dash-radius-xl;
+  box-shadow: $dash-shadow-card;
+}
+
+@mixin dash-skeleton {
+  background: linear-gradient(90deg, #e2e8f0 0%, #f1f5f9 50%, #e2e8f0 100%);
+  background-size: 200% 100%;
+  animation: dash-shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes dash-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes dash-marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}

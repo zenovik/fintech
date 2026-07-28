@@ -1,0 +1,117 @@
+@use '../../styles/settings-shared';
+@use '../../../dashboard/styles/dashboard-tokens' as *;
+
+.settings-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.settings-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 240px;
+  color: $dash-outline;
+}
+
+.system-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.system-card {
+  background: $dash-surface;
+  border: 1px solid $dash-outline-variant;
+  border-radius: 14px;
+  padding: 16px;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+
+    h2 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 700;
+      color: $dash-on-surface;
+    }
+  }
+
+  &__value {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: $dash-on-surface;
+  }
+
+  &__meta {
+    margin: 6px 0 0;
+    font-size: 12px;
+    color: $dash-outline;
+  }
+}
+
+.system-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+
+  &--green { background: #16a34a; }
+  &--yellow { background: #d97706; }
+  &--red { background: #dc2626; }
+}
+
+.system-readiness {
+  background: $dash-surface;
+  border: 1px solid $dash-outline-variant;
+  border-radius: 14px;
+  padding: 20px;
+
+  h2 {
+    margin: 0 0 16px;
+    font-size: 16px;
+    color: $dash-on-surface;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    align-items: center;
+    padding: 12px;
+    border-radius: 10px;
+    background: $dash-surface-container;
+    font-size: 14px;
+    color: $dash-on-surface;
+  }
+
+  &__summary {
+    margin: 16px 0 0;
+    font-size: 13px;
+    color: $dash-outline;
+  }
+}
+
+.text-green { color: #16a34a; }
+.text-red { color: #dc2626; }
+
+@media (max-width: 960px) {
+  .system-grid { grid-template-columns: 1fr; }
+  .system-readiness__grid { grid-template-columns: 1fr; }
+}

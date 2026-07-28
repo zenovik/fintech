@@ -1,0 +1,113 @@
+@use '../../../../features/dashboard/styles/dashboard-tokens' as *;
+
+:host {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.ai-input {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    'editor send'
+    'meta send';
+  column-gap: 12px;
+  row-gap: 6px;
+  align-items: end;
+  padding: 16px 20px max(20px, env(safe-area-inset-bottom));
+  border-top: 1px solid $dash-outline-variant;
+  background: $dash-surface;
+}
+
+.ai-input__editor {
+  grid-area: editor;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+
+  textarea {
+    width: 100%;
+    min-height: 72px;
+    max-height: 160px;
+    resize: none;
+    border: 1px solid $dash-outline-variant;
+    border-radius: 12px;
+    padding: 10px 12px;
+    font: inherit;
+    font-size: 14px;
+    color: $dash-on-surface;
+    background: $dash-surface-container;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+      border-color: $dash-primary;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.ai-input__meta {
+  grid-area: meta;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ai-input__counter {
+  font-size: 12px;
+  color: $dash-outline;
+
+  &--warn { color: #b76e00; }
+  &--limit { color: #b42318; font-weight: 600; }
+}
+
+.ai-input__send {
+  grid-area: send;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 12px;
+  background: $dash-primary;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.ai-input__spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: ai-spin 0.8s linear infinite;
+}
+
+@keyframes ai-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 767px) {
+  .ai-input {
+    padding-inline: 16px;
+    column-gap: 10px;
+  }
+
+  .ai-input__send {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,65 @@
+@if (pageState() === 'loading') {
+  <div class="settings-card settings-card--center"><mat-spinner diameter="40" /></div>
+} @else if (pageState() === 'error') {
+  <div class="settings-error">
+    <span class="material-symbols-outlined">error</span>
+    <p>{{ errorMessage() }}</p>
+    <button type="button" class="btn btn--primary" (click)="retry()">Retry</button>
+  </div>
+} @else {
+  <div class="settings-card">
+    <h1>Account Security</h1>
+    <p class="subtitle">Manage your password and multi-factor authentication.</p>
+
+    <div class="account-info">
+      <span class="material-symbols-outlined">person</span>
+      <div>
+        <strong>{{ userName }}</strong>
+        <span>{{ userEmail }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="settings-card">
+    <h2>Change Password</h2>
+    <form [formGroup]="passwordForm" (ngSubmit)="changePassword()" class="settings-form">
+      <mat-form-field appearance="outline" class="full">
+        <mat-label>Current Password</mat-label>
+        <input matInput type="password" formControlName="currentPassword" autocomplete="current-password" />
+      </mat-form-field>
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+          <mat-label>New Password</mat-label>
+          <input matInput type="password" formControlName="newPassword" autocomplete="new-password" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Confirm Password</mat-label>
+          <input matInput type="password" formControlName="confirmPassword" autocomplete="new-password" />
+        </mat-form-field>
+      </div>
+      @if (passwordForm.hasError('passwordMismatch') && passwordForm.get('confirmPassword')?.touched) {
+        <p class="form-error">Passwords do not match</p>
+      }
+      <div class="settings-actions">
+        <button type="submit" class="btn btn--primary" [disabled]="passwordForm.invalid || pageState() === 'saving'">
+          @if (pageState() === 'saving') { <mat-spinner diameter="18" /> } @else { Update Password }
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="settings-card">
+    <div class="toggle-row">
+      <div>
+        <h2>Multi-Factor Authentication</h2>
+        <p class="toggle-hint">Add an extra layer of security to your account</p>
+      </div>
+      <mat-slide-toggle
+        [checked]="mfaEnabled"
+        [disabled]="mfaSaving"
+        (change)="toggleMfa($event.checked)"
+        color="primary"
+      />
+    </div>
+  </div>
+}

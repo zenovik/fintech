@@ -1,0 +1,37 @@
+<header class="ai-panel__header">
+  <div>
+    <h2>AI Assistant</h2>
+    <p>Ask questions about your FinTech workspace</p>
+  </div>
+  <div class="ai-panel__actions">
+    @if (session.hasMessages()) {
+      <button type="button" class="ai-panel__icon-btn" (click)="onClear()" [disabled]="session.loading()" aria-label="Clear conversation">
+        <span class="material-symbols-outlined">delete_sweep</span>
+      </button>
+    }
+    <button type="button" class="ai-panel__icon-btn" (click)="closePanel.emit()" aria-label="Close AI Assistant">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+  </div>
+</header>
+
+<div class="ai-panel__body" #bodyEl (scroll)="onBodyScroll()">
+  <app-ai-message-list
+    [messages]="session.messages()"
+    [loading]="session.loading()"
+    (copyMessage)="onCopy($event)"
+  />
+  @if (session.lastFailedMessage()) {
+    <button type="button" class="ai-panel__retry" (click)="onRetry()" [disabled]="session.loading()">
+      <span class="material-symbols-outlined">refresh</span>
+      Retry last message
+    </button>
+  }
+  <div #scrollAnchor></div>
+</div>
+
+<app-ai-chat-input
+  [disabled]="!canChat()"
+  [loading]="session.loading()"
+  (sendMessage)="onSend($event)"
+/>

@@ -1,0 +1,151 @@
+@if (pageState() === 'loading') {
+  <div class="cust-loading"><mat-spinner diameter="40" /><p>Loading customer...</p></div>
+} @else if (pageState() === 'error') {
+  <div class="cust-error">
+    <span class="material-symbols-outlined">error</span>
+    <p>{{ errorMessage() }}</p>
+    <a routerLink="/customers" class="cust-btn cust-btn--primary">Back to Customers</a>
+  </div>
+} @else if (customer()) {
+  <div class="cust-page">
+    <div class="cust-page__header">
+      <div>
+        <a routerLink="/customers" style="font-size:13px;color:#667085;text-decoration:none">← Customers</a>
+        <h1 class="cust-page__title">{{ c.displayName }}</h1>
+        <p class="cust-page__subtitle">{{ c.customerCode }} · {{ c.customerType }} · {{ c.organizationName || 'Organization' }}</p>
+      </div>
+      <div style="display:flex;gap:8px">
+        @if (rbac.hasPermission(perms.CUSTOMERS_WRITE)) {
+          <a [routerLink]="['/customers', c.id, 'edit']" class="cust-btn cust-btn--secondary">Edit</a>
+        }
+        @if (rbac.hasPermission(perms.CUSTOMERS_DELETE)) {
+          <button type="button" class="cust-btn cust-btn--danger" (click)="deleteCustomer()">Delete</button>
+        }
+      </div>
+    </div>
+
+    <div class="cust-stats">
+      <div class="cust-stats__card"><label>Status</label><strong><span [class]="badgeClass(c.status)">{{ c.status }}</span></strong></div>
+      <div class="cust-stats__card"><label>Transactions</label><strong>{{ c.transactionCount }}</strong></div>
+      <div class="cust-stats__card"><label>Total Spent</label><strong>{{ c.totalSpent | currency:'USD':'symbol':'1.0-2' }}</strong></div>
+      <div class="cust-stats__card"><label>Risk</label><strong><span [class]="badgeClass(c.riskLevel)">{{ c.riskLevel }}</span></strong></div>
+    </div>
+
+    <div class="cust-tabs">
+      @for (t of tabs; track t.key) {
+        <button type="button" class="cust-tabs__btn" [class.cust-tabs__btn--active]="activeTab() === t.key" (click)="setTab(t.key)">
+          <span class="material-symbols-outlined">{{ t.icon }}</span> {{ t.label }}
+        </button>
+      }
+    </div>
+
+    @if (activeTab() === 'overview') {
+      <div class="cust-card">
+        <h3>Profile</h3>
+        <div class="cust-form-grid">
+          <div><label>Email</label><p>{{ c.email || '—' }}</p></div>
+          <div><label>Phone</label><p>{{ c.phone || '—' }}</p></div>
+          <div><label>Company</label><p>{{ c.companyName || '—' }}</p></div>
+          <div><label>Primary Merchant</label><p>{{ c.merchantName || '—' }}</p></div>
+          <div><label>KYC</label><p><span [class]="badgeClass(c.kycStatus)">{{ c.kycStatus }}</span></p></div>
+          <div><label>Created</label><p>{{ c.createdAt | date:'medium' }}</p></div>
+        </div>
+        @if (c.notes) { <p style="margin-top:12px"><strong>Notes:</strong> {{ c.notes }}</p> }
+      </div>
+      @if (rbac.hasPermission(perms.CUSTOMERS_WRITE)) {
+        <div class="cust-card">
+          <h3>Update Status</h3>
+          <div class="cust-form-grid">
+            <div>
+              <label>Status</label>
+              <select [(ngModel)]="statusForm.status">
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+                <option value="blocked">Blocked</option>
+                <option value="pending">Pending</option>
+              </select>
+            </div>
+            <div>
+              <label>Reason</label>
+              <input type="text" [(ngModel)]="statusForm.reason" placeholder="Optional reason" />
+            </div>
+          </div>
+          <button type="button" class="cust-btn cust-btn--primary" style="margin-top:12px" [disabled]="saving()" (click)="updateStatus()">
+            {{ saving() ? 'Saving...' : 'Update Status' }}
+          </button>
+        </div>
+      }
+    }
+
+    @if (activeTab() === 'transactions') {
+      <div class="cust-card">
+        <h3>Transactions</h3>
+        @if (txLoading()) {
+          <mat-spinner diameter="32" />
+        } @else if (!transactions().length) {
+          <p>No transactions linked to this customer.</p>
+        } @else {
+          <div class="cust-table-wrap">
+            <table class="cust-table">
+              <thead><tr><th>Ref</th><th>Merchant</th><th>Amount</th><th>Status</th><th>Date</th></tr></thead>
+              <tbody>
+                @for (t of transactions(); track t.id) {
+                  <tr>
+                    <td><a [routerLink]="['/transactions', t.id]">{{ t.transactionRef }}</a></td>
+                    <td>{{ t.merchantName || '—' }}</td>
+                    <td>{{ t.amount | currency:t.currency:'symbol':'1.2-2' }}</td>
+                    <td>{{ t.status.label }}</td>
+                    <td>{{ t.processedAt | date:'medium' }}</td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        }
+      </div>
+    }
+
+    @if (activeTab() === 'merchants') {
+      <div class="cust-card">
+        <h3>Linked Merchants</h3>
+        @if (!c.merchants.length) {
+          <p>No merchant relationships recorded.</p>
+        } @else {
+          <div class="cust-table-wrap">
+            <table class="cust-table">
+              <thead><tr><th>Merchant</th><th>Transactions</th><th>Total Spent</th><th>Last Activity</th></tr></thead>
+              <tbody>
+                @for (m of c.merchants; track m.id) {
+                  <tr>
+                    <td><a [routerLink]="['/merchants', m.merchantId]">{{ m.displayName }}</a></td>
+                    <td>{{ m.transactionCount }}</td>
+                    <td>{{ m.totalSpent | currency:'USD':'symbol':'1.0-2' }}</td>
+                    <td>{{ m.lastTransactionAt ? (m.lastTransactionAt | date:'mediumDate') : '—' }}</td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        }
+      </div>
+    }
+
+    @if (activeTab() === 'addresses') {
+      <div class="cust-card">
+        <h3>Addresses</h3>
+        @if (!c.addresses.length) {
+          <p>No addresses on file.</p>
+        } @else {
+          @for (a of c.addresses; track a.id) {
+            <div style="margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid #eaecf0">
+              <strong>{{ a.addressType }}</strong>
+              @if (a.isPrimary) { <span class="cust-badge cust-badge--active">Primary</span> }
+              <p>{{ a.line1 }}@if (a.line2) {, {{ a.line2 }} }</p>
+              <p>{{ a.city }}@if (a.stateProvince) {, {{ a.stateProvince }} } {{ a.postalCode }} · {{ a.countryCode }}</p>
+            </div>
+          }
+        }
+      </div>
+    }
+  </div>
+}

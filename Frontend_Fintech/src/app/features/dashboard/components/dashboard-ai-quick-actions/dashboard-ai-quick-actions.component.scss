@@ -1,0 +1,80 @@
+@use '../../styles/dashboard-tokens' as *;
+
+.dash-ai-quick {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  h3 {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $dash-outline;
+  }
+}
+
+.dash-ai-quick__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.dash-ai-quick__card {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid $dash-outline-variant;
+  border-radius: 12px;
+  background: $dash-surface;
+  color: $dash-on-surface;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+
+  .material-symbols-outlined {
+    font-size: 18px;
+    color: $dash-primary;
+    flex-shrink: 0;
+  }
+
+  &:hover:not(:disabled) {
+    border-color: $dash-primary;
+    background: $dash-surface-container;
+  }
+
+  &:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+}
+
+.dash-ai-quick__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dash-ai-quick__chip {
+  border: 1px solid $dash-outline-variant;
+  border-radius: 999px;
+  background: $dash-surface-container;
+  color: $dash-on-surface;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    border-color: $dash-primary;
+    color: $dash-primary;
+  }
+
+  &:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+}

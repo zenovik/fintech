@@ -1,0 +1,116 @@
+<div class="settings-card">
+  <div class="settings-card__header">
+    <div>
+      <h1>System Status</h1>
+      <p class="subtitle">Platform health, readiness, and deployment metadata.</p>
+    </div>
+    <button type="button" class="btn btn--secondary" (click)="load()" [disabled]="loading()">
+      <span class="material-symbols-outlined">refresh</span>
+      Refresh
+    </button>
+  </div>
+
+  @if (loading()) {
+    <div class="settings-loading">
+      <mat-spinner diameter="36" />
+      <span>Loading system status...</span>
+    </div>
+  } @else if (error()) {
+    <div class="settings-error">
+      <span class="material-symbols-outlined">error</span>
+      <p>{{ error() }}</p>
+      <button type="button" class="btn btn--primary" (click)="load()">Retry</button>
+    </div>
+  } @else {
+    @if (health(); as h) {
+      <section class="system-grid">
+        <article class="system-card">
+          <div class="system-card__head">
+            <span class="system-indicator system-indicator--{{ mapComponentState(h.application) }}"></span>
+            <h2>API</h2>
+          </div>
+          <p class="system-card__value">{{ h.application | titlecase }}</p>
+          <p class="system-card__meta">Overall: {{ h.status | titlecase }}</p>
+        </article>
+
+        <article class="system-card">
+          <div class="system-card__head">
+            <span class="system-indicator system-indicator--{{ mapComponentState(h.database) }}"></span>
+            <h2>Database</h2>
+          </div>
+          <p class="system-card__value">{{ h.database | titlecase }}</p>
+          <p class="system-card__meta">Checked {{ h.timestamp | date:'medium' }}</p>
+        </article>
+
+        <article class="system-card">
+          <div class="system-card__head">
+            <span class="system-indicator system-indicator--{{ mapComponentState(h.aiProvider) }}"></span>
+            <h2>AI</h2>
+          </div>
+          <p class="system-card__value">{{ h.aiProvider | titlecase }}</p>
+          <p class="system-card__meta">Provider readiness from backend config</p>
+        </article>
+
+        <article class="system-card">
+          <div class="system-card__head">
+            <span class="system-indicator system-indicator--green"></span>
+            <h2>Version</h2>
+          </div>
+          <p class="system-card__value">{{ version()?.version ?? h.version }}</p>
+          <p class="system-card__meta">Build {{ version()?.build ?? 'local' }}</p>
+        </article>
+
+        <article class="system-card">
+          <div class="system-card__head">
+            <span class="system-indicator system-indicator--green"></span>
+            <h2>Environment</h2>
+          </div>
+          <p class="system-card__value">{{ version()?.environment ?? h.environment }}</p>
+          <p class="system-card__meta">Commit {{ version()?.commit ?? 'unknown' }}</p>
+        </article>
+
+        <article class="system-card">
+          <div class="system-card__head">
+            <span class="system-indicator system-indicator--green"></span>
+            <h2>Uptime</h2>
+          </div>
+          <p class="system-card__value">{{ formatUptime(h.uptimeSeconds) }}</p>
+          <p class="system-card__meta">{{ h.uptimeSeconds }} seconds</p>
+        </article>
+      </section>
+    }
+
+    @if (readiness(); as r) {
+      <section class="system-readiness">
+        <h2>Readiness Checks</h2>
+        <div class="system-readiness__grid">
+          <div class="system-readiness__item">
+            <span class="system-indicator system-indicator--{{ mapBooleanReady(r.database) }}"></span>
+            <span>Database ready</span>
+            <strong>{{ r.database ? 'Yes' : 'No' }}</strong>
+          </div>
+          <div class="system-readiness__item">
+            <span class="system-indicator system-indicator--{{ mapBooleanReady(r.ai) }}"></span>
+            <span>AI ready</span>
+            <strong>{{ r.ai ? 'Yes' : 'No' }}</strong>
+          </div>
+          <div class="system-readiness__item">
+            <span class="system-indicator system-indicator--{{ mapBooleanReady(r.storage) }}"></span>
+            <span>Storage ready</span>
+            <strong>{{ r.storage ? 'Yes' : 'No' }}</strong>
+          </div>
+          <div class="system-readiness__item">
+            <span class="system-indicator system-indicator--{{ mapBooleanReady(r.queues) }}"></span>
+            <span>Queues ready</span>
+            <strong>{{ r.queues ? 'Yes' : 'No' }}</strong>
+          </div>
+        </div>
+        <p class="system-readiness__summary">
+          Platform ready:
+          <strong [class.text-green]="r.ready" [class.text-red]="!r.ready">{{ r.ready ? 'Yes' : 'No' }}</strong>
+          · Updated {{ r.timestamp | date:'medium' }}
+        </p>
+      </section>
+    }
+  }
+</div>

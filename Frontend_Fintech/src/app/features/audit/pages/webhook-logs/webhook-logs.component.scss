@@ -1,0 +1,59 @@
+@use '../../../dashboard/styles/dashboard-tokens' as *;
+@use '../../styles/audit-shared' as *;
+@use '../api-logs/api-logs.component.scss';
+
+.webhook-grid {
+  display: grid;
+  grid-template-columns: 1fr 90px 1fr 70px 80px;
+  gap: 12px;
+  padding: 12px 16px;
+  align-items: center;
+  font-size: 13px;
+
+  &--head {
+    background: $dash-surface-container-low;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $dash-outline;
+    border-bottom: 1px solid $dash-outline-variant;
+  }
+}
+
+.webhook-row {
+  border-bottom: 1px solid $dash-outline-variant;
+  cursor: pointer;
+  transition: background 0.15s;
+
+  &:hover { background: $dash-surface-container-low; }
+  &--active { background: $dash-surface-container-low; border-left: 3px solid $dash-primary; }
+}
+
+.webhook-event {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.webhook-url {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: $dash-outline;
+}
+
+.webhook-status {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 4px;
+
+  &--success { background: #dcfce7; color: #166534; }
+  &--failed { background: $dash-error-container; color: $dash-error; }
+  &--pending { background: #fef3c7; color: #92400e; }
+  &--retrying { background: #dbeafe; color: #1e40af; }
+}

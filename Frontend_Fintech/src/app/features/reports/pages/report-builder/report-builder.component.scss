@@ -1,0 +1,10 @@
+@use '../../../dashboard/styles/dashboard-tokens' as *;
+@use '../../../dashboard/styles/shared-page-ui' as ui;
+.rpt-page { @include ui.page-shell; &__loading { @include ui.page-loading-error; } }
+.page-header { @include ui.page-header; }
+.breadcrumb { @include ui.breadcrumb; }
+.form-card { @include dash-card; padding: 24px; max-width: 720px; }
+.form-group { margin-bottom: 16px; label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; } input, textarea, select { width: 100%; padding: 10px 12px; border: 1px solid $dash-outline-variant; border-radius: 8px; font-size: 14px; box-sizing: border-box; } }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; @media (max-width: 600px) { grid-template-columns: 1fr; } }
+.form-actions { display: flex; gap: 12px; justify-content: flex-end; margin-top: 24px; }
+.btn { @include ui.btn-primary; &--outline { @include ui.btn-outline; } }

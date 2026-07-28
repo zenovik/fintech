@@ -1,0 +1,19 @@
+.mp-page { padding: 24px; }
+header h1 { margin: 0 0 4px; font-size: 24px; }
+header p { margin: 0; color: #64748b; }
+.mp-filters { display: flex; gap: 12px; margin: 20px 0; }
+.mp-filters input { padding: 10px 12px; border: 1px solid #e2e8f0; border-radius: 8px; }
+.mp-filters button { padding: 10px 16px; background: #4f46e5; color: #fff; border: none; border-radius: 8px; cursor: pointer; }
+.mp-merchant { margin: 0 0 20px; }
+.mp-merchant small { color: #64748b; font-weight: 400; }
+.mp-stats { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); margin-bottom: 24px; }
+.mp-card { display: block; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: border-color .15s; }
+.mp-card:hover { border-color: #4f46e5; }
+.mp-card span { display: block; font-size: 12px; color: #64748b; }
+.mp-card strong { display: block; font-size: 28px; margin: 8px 0 4px; color: #0f172a; }
+.mp-card small { color: #94a3b8; font-size: 12px; }
+.mp-links { display: flex; gap: 16px; flex-wrap: wrap; }
+.mp-links a { color: #4f46e5; font-size: 14px; }
+.mp-center { padding: 48px; text-align: center; }
+.mp-error { color: #b42318; }
+.mp-empty { color: #64748b; }

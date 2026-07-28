@@ -1,0 +1,33 @@
+@if (!messages().length && !loading()) {
+  <div class="ai-empty">
+    <span class="material-symbols-outlined">forum</span>
+    <p>Start a conversation with the AI assistant.</p>
+  </div>
+}
+
+@for (message of messages(); track message.id) {
+  <article class="ai-message" [class.ai-message--user]="message.role === 'user'" [class.ai-message--error]="message.error">
+    <div class="ai-message__bubble">
+      <p>{{ message.content }}</p>
+      @if (message.role === 'assistant' && !message.error) {
+        <button type="button" class="ai-message__copy" (click)="copyMessage.emit(message.content)" aria-label="Copy response">
+          <span class="material-symbols-outlined">content_copy</span>
+        </button>
+      }
+    </div>
+  </article>
+}
+
+@if (loading()) {
+  <div class="ai-message ai-message--assistant">
+    <div class="ai-message__bubble ai-message__bubble--loading">
+      <div class="ai-loading">
+        <span class="ai-loading__ring" aria-hidden="true"></span>
+        <div>
+          <strong>Assistant is thinking</strong>
+          <span>This usually takes a few seconds</span>
+        </div>
+      </div>
+    </div>
+  </div>
+}

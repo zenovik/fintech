@@ -1,0 +1,9 @@
+<div class="auth-brand">
+  <div class="auth-brand__icon" [class.auth-brand__icon--filled]="filledIcon">
+    <span class="material-symbols-outlined">{{ icon }}</span>
+  </div>
+  <h1 class="auth-brand__title">{{ title }}</h1>
+  @if (subtitle) {
+    <p class="auth-brand__subtitle">{{ subtitle }}</p>
+  }
+</div>

@@ -1,0 +1,37 @@
+@use '../../../../features/dashboard/styles/dashboard-tokens' as *;
+
+.ai-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1190;
+}
+
+.ai-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(420px, 100vw);
+  height: 100dvh;
+  max-height: 100vh;
+  background: $dash-surface;
+  border-left: 1px solid $dash-outline-variant;
+  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.12);
+  z-index: 1195;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  app-ai-chat-panel {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  .ai-drawer {
+    width: 100vw;
+  }
+}

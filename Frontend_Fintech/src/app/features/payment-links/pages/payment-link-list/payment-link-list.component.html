@@ -1,0 +1,67 @@
+<div class="pl-page">
+  <div class="pl-page__header">
+    <div>
+      <h1 class="pl-page__title">Payment Links</h1>
+      <p class="pl-page__subtitle">Create shareable links to collect payments from customers.</p>
+    </div>
+    @if (rbac.hasPermission(perms.PAYMENT_LINKS_WRITE)) {
+      <a routerLink="/payment-links/create" class="pl-btn pl-btn--primary">
+        <span class="material-symbols-outlined">add_link</span> New Payment Link
+      </a>
+    }
+  </div>
+
+  <div class="pl-stats">
+    <div class="pl-stats__card"><label>Total Links</label><strong>{{ stats().total }}</strong></div>
+    <div class="pl-stats__card"><label>Active</label><strong>{{ stats().active }}</strong></div>
+    <div class="pl-stats__card"><label>Expired</label><strong>{{ stats().expired }}</strong></div>
+    <div class="pl-stats__card"><label>Disabled</label><strong>{{ stats().disabled }}</strong></div>
+    <div class="pl-stats__card"><label>Total Collected</label><strong>{{ stats().totalCollected | currency:'USD':'symbol':'1.0-0' }}</strong></div>
+    <div class="pl-stats__card"><label>Conversion</label><strong>{{ stats().conversionRate / 100 | percent:'1.0-1' }}</strong></div>
+  </div>
+
+  <div class="pl-filters">
+    <input type="text" placeholder="Search links..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+    <select [(ngModel)]="statusFilter" (ngModelChange)="onSearch()">
+      @for (s of statuses; track s.key) { <option [value]="s.key">{{ s.label }}</option> }
+    </select>
+    <input type="number" placeholder="Merchant ID" [(ngModel)]="merchantFilter" (keyup.enter)="onSearch()" />
+    <button type="button" class="pl-btn pl-btn--secondary" (click)="onSearch()">Search</button>
+  </div>
+
+  @if (pageState() === 'loading') {
+    <div class="pl-loading"><mat-spinner diameter="40" /><p>Loading payment links...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="pl-error"><span class="material-symbols-outlined">error</span><p>Failed to load payment links.</p><button type="button" class="pl-btn pl-btn--primary" (click)="load()">Retry</button></div>
+  } @else if (pageState() === 'empty') {
+    <div class="pl-empty"><span class="material-symbols-outlined">link</span><p>No payment links found</p></div>
+  } @else {
+    <div class="pl-table-wrap">
+      <table class="pl-table">
+        <thead><tr><th>Ref</th><th>Title</th><th>Merchant</th><th>Amount</th><th>Usage</th><th>Status</th><th>Expires</th></tr></thead>
+        <tbody>
+          @for (link of items(); track link.id) {
+            <tr>
+              <td><a [routerLink]="['/payment-links', link.id]">{{ link.linkRef }}</a></td>
+              <td>{{ link.title }}</td>
+              <td><a [routerLink]="['/merchants', link.merchantId]">{{ link.merchantName }}</a></td>
+              <td>
+                @if (link.allowCustomAmount) { Custom } @else { {{ link.amount | currency:link.currency:'symbol':'1.2-2' }} }
+              </td>
+              <td>{{ link.currentUsage }}@if (link.maxUsage) { /{{ link.maxUsage }} }</td>
+              <td><span [class]="badgeClass(link.status)">{{ link.status }}</span></td>
+              <td>{{ link.expiresAt ? (link.expiresAt | date:'mediumDate') : '—' }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+      <div class="pl-pagination">
+        <span>Page {{ page() }} of {{ totalPages() }} ({{ total() }} total)</span>
+        <div>
+          <button type="button" class="pl-btn pl-btn--secondary" [disabled]="page() <= 1" (click)="onPageChange(page() - 1)">Previous</button>
+          <button type="button" class="pl-btn pl-btn--secondary" [disabled]="page() >= totalPages()" (click)="onPageChange(page() + 1)">Next</button>
+        </div>
+      </div>
+    </div>
+  }
+</div>

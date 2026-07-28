@@ -1,0 +1,9 @@
+<button
+  type="button"
+  class="ai-fab"
+  [class.ai-fab--open]="open()"
+  (click)="toggled.emit()"
+  aria-label="Open AI Assistant"
+>
+  <span class="material-symbols-outlined">{{ open() ? 'close' : 'smart_toy' }}</span>
+</button>

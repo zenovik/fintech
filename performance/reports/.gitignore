@@ -1,0 +1,5 @@
+# k6 performance reports (generated)
+*.json
+*.html
+*.txt
+!.gitkeep

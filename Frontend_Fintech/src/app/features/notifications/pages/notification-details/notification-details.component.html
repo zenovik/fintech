@@ -1,0 +1,97 @@
+<div class="notif-page">
+  <nav class="notif-breadcrumb" aria-label="Breadcrumb">
+    <a routerLink="/notifications">Communications</a>
+    <span class="material-symbols-outlined">chevron_right</span>
+    <a routerLink="/notifications">Notifications</a>
+    <span class="material-symbols-outlined">chevron_right</span>
+    <span>Details</span>
+  </nav>
+
+  @if (pageState() === 'loading') {
+    <div class="notif-loading"><mat-spinner diameter="40" /><p>Loading notification...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="notif-error">
+      <span class="material-symbols-outlined">error</span>
+      <p>{{ errorMessage() }}</p>
+      <a routerLink="/notifications" class="notif-btn notif-btn--primary">Return to Center</a>
+    </div>
+  } @else {
+    @if (notification(); as n) {
+    <div class="notif-detail-layout">
+    <div class="notif-detail">
+      <div class="notif-detail__header">
+        <div class="notif-detail__icon notif-detail__icon--{{ n.category }}">
+          <span class="material-symbols-outlined">{{ getIcon(n.category, n.icon) }}</span>
+        </div>
+        <div>
+          <h1 class="notif-detail__title">{{ n.title }}</h1>
+          <p class="notif-detail__meta">
+            <span class="notif-detail__badge notif-detail__badge--{{ n.category }}">{{ n.category }}</span>
+            <span class="notif-detail__priority">Priority: {{ n.priority }}</span>
+            <span>{{ n.createdAt | date:'medium' }}</span>
+            <span class="notif-detail__status">{{ n.status }}</span>
+          </p>
+        </div>
+        @if (rbac.hasPermission(perms.NOTIFICATIONS_WRITE)) {
+          <div class="notif-detail__header-actions">
+            @if (n.status !== 'archived') {
+              <button type="button" class="notif-btn notif-btn--secondary" (click)="archive()">Archive</button>
+            }
+          </div>
+        }
+      </div>
+
+      <div class="notif-detail__body">
+        <p>{{ n.body }}</p>
+      </div>
+
+      @if (n.actionUrl) {
+        <a [routerLink]="n.actionUrl" class="notif-btn notif-btn--primary">
+          {{ n.actionLabel ?? 'View Details' }}
+        </a>
+      }
+
+      @if (n.deliveries.length) {
+        <div class="notif-detail__deliveries">
+          <h3>Delivery History</h3>
+          <div class="notif-detail__timeline">
+            @for (d of n.deliveries; track d.id) {
+              <div class="notif-detail__timeline-item">
+                <span class="material-symbols-outlined">mark_email_read</span>
+                <div>
+                  <strong>{{ d.status | titlecase }}</strong> via {{ d.channel }}
+                  <span class="notif-detail__timeline-time">{{ d.deliveredAt ? (d.deliveredAt | date:'short') : 'Pending' }}</span>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+      }
+
+      @if (rbac.hasPermission(perms.NOTIFICATIONS_WRITE)) {
+        <div class="notif-detail__actions">
+          <button type="button" class="notif-btn notif-btn--secondary" (click)="deleteNotification()">
+            <span class="material-symbols-outlined">delete</span> Delete
+          </button>
+        </div>
+      }
+    </div>
+
+    <aside class="notif-detail-sidebar">
+      <div class="notif-detail-sidebar__card">
+        <h3>Notification Metadata</h3>
+        <dl>
+          <dt>Category</dt><dd>{{ n.category }}</dd>
+          <dt>Event</dt><dd>{{ n.eventCode }}</dd>
+          <dt>Priority</dt><dd>{{ n.priority }}</dd>
+          <dt>Status</dt><dd>{{ n.status }}</dd>
+          @if (n.relatedEntityType) {
+            <dt>Related</dt><dd>{{ n.relatedEntityType }} #{{ n.relatedEntityId }}</dd>
+          }
+        </dl>
+      </div>
+    </aside>
+    </div>
+    }
+  }
+</div>

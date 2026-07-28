@@ -1,0 +1,62 @@
+@use '../../../dashboard/styles/dashboard-tokens' as *;
+@use '../../../dashboard/styles/shared-page-ui' as ui;
+
+.usr-page {
+  @include ui.page-shell;
+  &__loading, &__error { @include ui.page-loading-error; }
+}
+
+.page-header { @include ui.page-header; }
+.breadcrumb { @include ui.breadcrumb; }
+
+.filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr auto;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: end;
+}
+
+.filter-card { @include ui.filter-card; }
+
+.btn {
+  &--primary { @include ui.btn-primary; }
+  &--outline { @include ui.btn-outline; }
+  &--sm { padding: 6px 14px; font-size: 13px; }
+}
+
+.empty-state { @include ui.empty-state; }
+.table-card { @include ui.table-card; }
+.table-toolbar { @include ui.table-toolbar; }
+
+table {
+  @include ui.data-table;
+  min-width: 800px;
+  th { background: $dash-table-header-bg; }
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: $dash-radius-pill;
+  font-size: 12px;
+  font-weight: 600;
+
+  &::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+
+  &--active { background: $dash-success-container; color: $dash-success; &::before { background: $dash-success; } }
+  &--locked { background: $dash-error-container; color: $dash-error; &::before { background: $dash-error; } }
+  &--pending { background: $dash-warning-container; color: $dash-warning; &::before { background: $dash-warning; } }
+  &--inactive { background: #f3f4f6; color: $dash-outline; &::before { background: $dash-outline; } }
+}
+
+.link-btn { color: $dash-primary-bright; font-weight: 600; text-decoration: none; &:hover { text-decoration: underline; } }
+.icon-btn { @include ui.icon-btn; }
+.pagination { @include ui.pagination; }

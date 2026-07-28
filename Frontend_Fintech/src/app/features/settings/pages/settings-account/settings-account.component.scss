@@ -1,0 +1,41 @@
+@use '../../styles/settings-shared';
+
+h2 {
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+
+mat-form-field { width: 100%; }
+
+.account-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 8px;
+  background: rgba(0, 62, 199, 0.05);
+
+  .material-symbols-outlined {
+    font-size: 32px;
+    color: #003ec7;
+  }
+
+  strong { display: block; font-size: 15px; }
+  span { font-size: 13px; opacity: 0.7; }
+}
+
+.toggle-hint {
+  margin: 4px 0 0;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.form-error {
+  margin: 0;
+  font-size: 13px;
+  color: #dc2626;
+}
+
+.settings-actions mat-spinner {
+  display: inline-block;
+}

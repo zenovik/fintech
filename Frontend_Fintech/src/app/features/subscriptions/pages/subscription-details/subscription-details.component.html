@@ -1,0 +1,55 @@
+<div class="sub-page">
+  @if (pageState() === 'loading') {
+    <div class="sub-loading"><mat-spinner diameter="40" /><p>Loading subscription...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="sub-error"><span class="material-symbols-outlined">error</span><p>Failed to load subscription.</p><button type="button" class="sub-btn sub-btn--primary" (click)="load()">Retry</button></div>
+  } @else {
+    <div class="sub-page__header">
+      <div>
+        <h1 class="sub-page__title">{{ s.planName }}</h1>
+        <p class="sub-page__subtitle">{{ s.subscriptionRef }} · <span [class]="badgeClass(s.status)">{{ s.status }}</span></p>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        @if (rbac.hasPermission(perms.SUBSCRIPTIONS_MANAGE)) {
+          @if (s.status === 'active') { <button type="button" class="sub-btn sub-btn--secondary" [disabled]="saving()" (click)="pause()">Pause</button> }
+          @if (s.status === 'paused') { <button type="button" class="sub-btn sub-btn--success" [disabled]="saving()" (click)="renew()">Resume / Renew</button> }
+          @if (s.status !== 'cancelled') { <button type="button" class="sub-btn sub-btn--danger" [disabled]="saving()" (click)="cancel()">Cancel</button> }
+          <button type="button" class="sub-btn sub-btn--secondary" [disabled]="saving()" (click)="markFailed()">Mark Failed</button>
+        }
+        <a routerLink="/subscriptions" class="sub-btn sub-btn--secondary">Back</a>
+      </div>
+    </div>
+
+    @if (s.paymentLink?.publicUrl) {
+      <div class="sub-card">
+        <h3>Payment Link</h3>
+        <div style="display:flex;gap:8px;align-items:center">
+          <input type="text" readonly [value]="s.paymentLink!.publicUrl" style="flex:1;font-family:monospace;font-size:13px;padding:10px;border:1px solid #e2e8f0;border-radius:8px" />
+          <button type="button" class="sub-btn sub-btn--primary" (click)="copyPayLink()">{{ copyMsg() || 'Copy' }}</button>
+        </div>
+      </div>
+    }
+
+    <div class="sub-card">
+      <h3>Details</h3>
+      <dl class="sub-detail-grid">
+        <div><dt>Merchant</dt><dd><a [routerLink]="['/merchants', s.merchantId]">{{ s.merchantName }}</a></dd></div>
+        <div><dt>Customer</dt><dd><a [routerLink]="['/customers', s.customerId]">{{ s.customerName }}</a></dd></div>
+        <div><dt>Email</dt><dd>{{ s.customerEmail || '—' }}</dd></div>
+        <div><dt>Price</dt><dd>{{ s.planPrice | currency:s.currency:'symbol':'1.2-2' }}/{{ s.billingInterval }}</dd></div>
+        <div><dt>Start Date</dt><dd>{{ s.startDate | date:'mediumDate' }}</dd></div>
+        <div><dt>End Date</dt><dd>{{ s.endDate ? (s.endDate | date:'mediumDate') : '—' }}</dd></div>
+        <div><dt>Trial End</dt><dd>{{ s.trialEndDate ? (s.trialEndDate | date:'mediumDate') : '—' }}</dd></div>
+        <div><dt>Next Billing</dt><dd>{{ s.nextBillingDate ? (s.nextBillingDate | date:'mediumDate') : '—' }}</dd></div>
+        <div><dt>Current Period</dt><dd>
+          @if (s.currentPeriodStart && s.currentPeriodEnd) {
+            {{ s.currentPeriodStart | date:'mediumDate' }} – {{ s.currentPeriodEnd | date:'mediumDate' }}
+          } @else { — }
+        </dd></div>
+        <div><dt>Renewals</dt><dd>{{ s.renewalCount }}</dd></div>
+        <div><dt>Created</dt><dd>{{ s.createdAt | date:'medium' }}</dd></div>
+        <div><dt>Updated</dt><dd>{{ s.updatedAt | date:'medium' }}</dd></div>
+      </dl>
+    </div>
+  }
+</div>

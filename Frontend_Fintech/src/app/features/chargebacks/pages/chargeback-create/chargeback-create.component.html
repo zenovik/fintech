@@ -1,0 +1,39 @@
+<div class="cb-page">
+  <div class="cb-page__header">
+    <div>
+      <a routerLink="/chargebacks" style="font-size:13px;color:#667085;text-decoration:none">← Chargeback Queue</a>
+      <h1 class="cb-page__title">Open Chargeback</h1>
+      <p class="cb-page__subtitle">Record a new chargeback against a transaction.</p>
+    </div>
+  </div>
+
+  <div class="cb-card" style="max-width:640px">
+    @if (error()) { <p style="color:#b42318;margin-bottom:12px">{{ error() }}</p> }
+    <div class="cb-form-grid">
+      <div><label>Transaction ID</label><input [(ngModel)]="transactionId" type="number" placeholder="e.g. 3" /></div>
+      <div><label>Amount (optional)</label><input [(ngModel)]="amount" type="number" placeholder="Defaults to transaction amount" /></div>
+      <div>
+        <label>Reason Code</label>
+        <select [(ngModel)]="reasonCode">
+          @for (r of reasons; track r.key) { <option [value]="r.key">{{ r.label }}</option> }
+        </select>
+      </div>
+      <div>
+        <label>Card Network</label>
+        <select [(ngModel)]="cardNetwork">
+          @for (n of networks; track n.key) { <option [value]="n.key">{{ n.label }}</option> }
+        </select>
+      </div>
+      <div style="grid-column:1/-1">
+        <label>Reason</label>
+        <textarea [(ngModel)]="reason" rows="4" placeholder="Describe the chargeback reason"></textarea>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;margin-top:16px">
+      <button type="button" class="cb-btn cb-btn--primary" [disabled]="saving()" (click)="submit()">
+        @if (saving()) { <mat-spinner diameter="18" /> } @else { Open Chargeback }
+      </button>
+      <a routerLink="/chargebacks" class="cb-btn cb-btn--secondary">Cancel</a>
+    </div>
+  </div>
+</div>

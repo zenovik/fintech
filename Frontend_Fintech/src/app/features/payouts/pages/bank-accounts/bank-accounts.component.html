@@ -1,0 +1,57 @@
+<div class="po-page">
+  <div class="po-page__header">
+    <div>
+      <a routerLink="/payouts" style="font-size:13px;color:#667085;text-decoration:none">← Payout Queue</a>
+      <h1 class="po-page__title">Bank Accounts</h1>
+      <p class="po-page__subtitle">Manage merchant payout bank accounts.</p>
+    </div>
+  </div>
+
+  <div class="po-filters">
+    <input type="number" placeholder="Filter by Merchant ID" [(ngModel)]="merchantFilter" (keyup.enter)="load()" />
+    <button type="button" class="po-btn po-btn--secondary" (click)="load()">Filter</button>
+  </div>
+
+  @if (pageState() === 'loading') {
+    <div class="po-loading"><mat-spinner diameter="40" /></div>
+  } @else if (pageState() === 'error') {
+    <div class="po-error"><p>Failed to load bank accounts.</p><button type="button" class="po-btn po-btn--primary" (click)="load()">Retry</button></div>
+  } @else {
+    <div class="po-card">
+      <h3>Registered Accounts ({{ accounts().length }})</h3>
+      @if (!accounts().length) { <p>No bank accounts found.</p> } @else {
+        <ul class="po-bank-list">
+          @for (a of accounts(); track a.id) {
+            <li>
+              <div>
+                <strong>{{ a.accountHolder }}</strong> — {{ a.bankName || 'Bank' }} {{ a.accountNumberMasked }}
+                @if (a.isPrimary) { <span class="po-badge po-badge--confirmed" style="margin-left:8px">Primary</span> }
+                <p style="margin:4px 0 0;font-size:12px;color:#98a2b3">
+                  <a [routerLink]="['/merchants', a.merchantId]">{{ a.merchantName }}</a> · {{ a.currency }} · Added {{ a.createdAt | date:'mediumDate' }}
+                </p>
+              </div>
+              @if (!a.isPrimary && rbac.hasPermission(perms.PAYOUTS_WRITE)) {
+                <button type="button" class="po-btn po-btn--secondary" [disabled]="saving()" (click)="setPrimary(a.id)">Set Primary</button>
+              }
+            </li>
+          }
+        </ul>
+      }
+    </div>
+
+    @if (rbac.hasPermission(perms.PAYOUTS_WRITE)) {
+      <div class="po-card">
+        <h3>Add Bank Account</h3>
+        <div class="po-form-grid">
+          <div><label>Merchant ID</label><input [(ngModel)]="merchantFilter" type="number" /></div>
+          <div><label>Account Holder</label><input [(ngModel)]="accountHolder" /></div>
+          <div><label>Bank Name</label><input [(ngModel)]="bankName" /></div>
+          <div><label>Account (masked)</label><input [(ngModel)]="accountMasked" placeholder="****1234" /></div>
+          <div><label>IBAN</label><input [(ngModel)]="iban" /></div>
+          <div><label>Currency</label><input [(ngModel)]="currency" maxlength="3" /></div>
+        </div>
+        <button type="button" class="po-btn po-btn--primary" style="margin-top:12px" [disabled]="saving()" (click)="addAccount()">Add Account</button>
+      </div>
+    }
+  }
+</div>

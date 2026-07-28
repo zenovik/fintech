@@ -1,0 +1,31 @@
+@use '../../../dashboard/styles/dashboard-tokens' as *;
+@use '../../styles/notifications-shared' as *;
+
+.notif-center-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 480px;
+  margin-bottom: 24px;
+  position: relative;
+
+  .material-symbols-outlined {
+    position: absolute;
+    left: 12px;
+    color: $dash-outline;
+    font-size: 20px;
+    pointer-events: none;
+  }
+
+  input {
+    flex: 1;
+    padding: 8px 16px 8px 40px;
+    border: 1px solid $dash-outline-variant;
+    border-radius: 999px;
+    background: $dash-surface-container-low;
+    font-size: 14px;
+    outline: none;
+
+    &:focus { border-color: $dash-primary; }
+  }
+}

@@ -1,0 +1,114 @@
+@use '../../styles/auth-tokens' as *;
+
+.auth-layout {
+  @include auth-page-background;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &__blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+
+    &--tl {
+      top: -10%;
+      left: -10%;
+      width: 40%;
+      height: 40%;
+      background: rgba($auth-primary, 0.05);
+    }
+
+    &--br {
+      bottom: -10%;
+      right: -10%;
+      width: 40%;
+      height: 40%;
+      background: rgba($auth-secondary, 0.05);
+    }
+  }
+
+  &__aside {
+    display: none;
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+    width: 256px;
+    height: 256px;
+    opacity: 0.2;
+    pointer-events: none;
+
+    @media (min-width: 1024px) {
+      display: block;
+    }
+  }
+
+  &__frames {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__frame {
+    position: absolute;
+    border-radius: 24px;
+  }
+
+  &__rings {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid $auth-primary;
+    border-radius: 50%;
+
+    &--outer {
+      width: 192px;
+      height: 192px;
+      animation: spin 10s linear infinite;
+    }
+
+    &--inner {
+      width: 128px;
+      height: 128px;
+      border-color: rgba($auth-primary, 0.4);
+      animation: spin 15s linear infinite reverse;
+    }
+  }
+
+  &__main {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 480px;
+    box-sizing: border-box;
+
+    .auth-layout--wide & {
+      max-width: 520px;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

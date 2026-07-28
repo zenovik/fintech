@@ -1,0 +1,27 @@
+.rc-page { padding: 24px; }
+.rc-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; flex-wrap: wrap; gap: 16px; h1 { margin: 8px 0 4px; } p { margin: 0; color: #64748b; } }
+.rc-breadcrumb { display: flex; align-items: center; gap: 4px; font-size: 13px; color: #64748b; a { color: #003d9b; text-decoration: none; } }
+.rc-layout { display: grid; grid-template-columns: 280px 1fr; gap: 24px; @media (max-width: 900px) { grid-template-columns: 1fr; } }
+.rc-sidebar {
+  select { width: 100%; padding: 8px; margin: 8px 0 16px; border-radius: 8px; border: 1px solid #e2e8f0; }
+  label { font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase; }
+}
+.rc-catalog { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px;
+  button { width: 100%; text-align: left; padding: 10px 12px; border: 1px solid transparent; border-radius: 8px; background: #f8fafc; cursor: pointer;
+    strong { display: block; font-size: 14px; } small { color: #64748b; }
+    &:hover { border-color: #c4d2ff; }
+  }
+  &__active button { background: #eef2ff; border-color: #003d9b; }
+}
+.rc-panel { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 16px; h2, h3 { margin: 0 0 8px; } p { color: #64748b; margin: 0 0 16px; } }
+.rc-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.rc-btn { padding: 8px 16px; border-radius: 8px; border: 1px solid #e2e8f0; background: #fff; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
+  &--primary { background: #003d9b; color: #fff; border-color: #003d9b; }
+  &--outline { background: #fff; color: #003d9b; border-color: #003d9b; }
+  &:disabled { opacity: 0.6; cursor: not-allowed; }
+}
+.rc-filter-save { display: flex; gap: 8px; margin-bottom: 12px; input { flex: 1; padding: 8px; border-radius: 8px; border: 1px solid #e2e8f0; } }
+.rc-filters { list-style: none; margin: 0; padding: 0; li { padding: 6px 0; border-bottom: 1px solid #f1f5f9; small { color: #94a3b8; } } }
+.rc-table-wrap { overflow-x: auto; table { width: 100%; border-collapse: collapse; th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid #f1f5f9; font-size: 13px; } th { font-weight: 600; color: #64748b; } } }
+.rc-muted { color: #94a3b8; }
+.rc-loading, .rc-error { text-align: center; padding: 48px; }

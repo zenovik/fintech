@@ -1,0 +1,98 @@
+@use '../../../../features/dashboard/styles/dashboard-tokens' as *;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.ai-panel__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid $dash-outline-variant;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 3;
+  background: $dash-surface;
+
+  h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: $dash-on-surface;
+  }
+
+  p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: $dash-outline;
+  }
+}
+
+.ai-panel__actions {
+  display: flex;
+  gap: 4px;
+}
+
+.ai-panel__icon-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: $dash-outline;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover:not(:disabled) {
+    background: $dash-surface-container;
+    color: $dash-on-surface;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.ai-panel__body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ai-panel__retry {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid $dash-outline-variant;
+  background: $dash-surface-container;
+  color: $dash-on-surface;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    border-color: $dash-primary;
+    color: $dash-primary;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}

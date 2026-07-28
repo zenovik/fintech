@@ -1,0 +1,214 @@
+@if (state.pageState() === 'loading') {
+  <div class="stl-details__loading">
+    <mat-spinner diameter="48"></mat-spinner>
+    <p>Loading settlement...</p>
+  </div>
+} @else if (state.pageState() === 'error') {
+  <div class="stl-details__error">
+    <span class="material-symbols-outlined">error</span>
+    <h3>{{ state.errorMessage() }}</h3>
+    <button type="button" class="btn btn--primary" (click)="state.retry()">Retry</button>
+    <a routerLink="/settlements" class="btn btn--outline">Back to List</a>
+  </div>
+} @else {
+  @if (state.selectedSettlement(); as s) {
+    <div class="stl-details">
+      <div class="page-header">
+        <div>
+          <nav class="breadcrumb">
+            <a routerLink="/dashboard/executive">Home</a>
+            <span class="material-symbols-outlined">chevron_right</span>
+            <a routerLink="/settlements">Settlements</a>
+            <span class="material-symbols-outlined">chevron_right</span>
+            <span class="breadcrumb__active">{{ s.settlementRef }}</span>
+          </nav>
+          <h1>{{ s.settlementRef }}</h1>
+          <span class="status-badge status-badge--{{ statusClass(s.status) }}">{{ s.status | titlecase }}</span>
+        </div>
+        <div class="page-header__actions">
+          @if (s.status === 'processed' && rbac.hasPermission(perms.SETTLEMENTS_WRITE)) {
+            <button type="button" class="btn btn--danger" (click)="openReversalDialog()">Process Reversal</button>
+          }
+        </div>
+      </div>
+
+      <div class="summary-cards">
+        <div class="summary-card"><span>Gross</span><strong>{{ s.grossAmount | currency: s.currency }}</strong></div>
+        <div class="summary-card"><span>Fees</span><strong>{{ s.feeAmount | currency: s.currency }}</strong></div>
+        <div class="summary-card"><span>Adjustments</span><strong>{{ s.adjustmentAmount | currency: s.currency }}</strong></div>
+        <div class="summary-card"><span>Net Payout</span><strong>{{ s.amount | currency: s.currency }}</strong></div>
+        <div class="summary-card"><span>Merchant</span><strong>{{ s.merchant.name }}</strong></div>
+      </div>
+
+      <mat-tab-group [(selectedIndex)]="activeTab">
+        <mat-tab label="Overview">
+          <div class="tab-content">
+            <dl class="info-grid">
+              <dt>Settlement Cycle</dt><dd>{{ s.settlementCycle || '—' }}</dd>
+              <dt>Batch</dt>
+              <dd>
+                @if (s.batch) {
+                  <a [routerLink]="['/settlements/batches', s.batch.id]">{{ s.batch.batchRef }}</a>
+                } @else { — }
+              </dd>
+              <dt>Bank Transfer Ref</dt><dd>{{ s.bankTransferRef || '—' }}</dd>
+              <dt>Scheduled</dt><dd>{{ s.scheduledAt ? (s.scheduledAt | date: 'medium') : '—' }}</dd>
+              <dt>Processed</dt><dd>{{ s.processedAt ? (s.processedAt | date: 'medium') : '—' }}</dd>
+              <dt>Created</dt><dd>{{ s.createdAt | date: 'medium' }}</dd>
+            </dl>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Transactions">
+          <div class="tab-content">
+            @if (!s.transactions.length) {
+              <p class="empty-text">No linked transactions.</p>
+            } @else {
+              <table class="data-table">
+                <thead><tr><th>Reference</th><th>Amount</th><th>Method</th><th>Date</th><th></th></tr></thead>
+                <tbody>
+                  @for (t of s.transactions; track t.id) {
+                    <tr>
+                      <td>{{ t.transactionRef }}</td>
+                      <td>{{ t.amount | currency: t.currency }}</td>
+                      <td>{{ t.paymentMethodDetail }}</td>
+                      <td>{{ t.processedAt | date: 'short' }}</td>
+                      <td><a [routerLink]="['/transactions', t.transactionId]">View</a></td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            }
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Timeline">
+          <div class="tab-content">
+            @if (!s.statusHistory.length) {
+              <p class="empty-text">No status history.</p>
+            } @else {
+              <ul class="timeline">
+                @for (h of s.statusHistory; track h.id) {
+                  <li>
+                    <span class="timeline__dot"></span>
+                    <div>
+                      <strong>
+                        @if (h.fromStatus) {
+                          {{ h.fromStatus | titlecase }} → {{ h.toStatus | titlecase }}
+                        } @else {
+                          {{ h.toStatus | titlecase }}
+                        }
+                      </strong>
+                      @if (h.reason) { <p>{{ h.reason }}</p> }
+                      <small>{{ h.createdAt | date: 'medium' }}</small>
+                    </div>
+                  </li>
+                }
+              </ul>
+            }
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Fees & Adjustments">
+          <div class="tab-content">
+            <h4>Fees</h4>
+            @if (!s.fees.length) {
+              <p class="empty-text">No fees recorded.</p>
+            } @else {
+              <table class="data-table">
+                <thead><tr><th>Type</th><th>Description</th><th>Amount</th></tr></thead>
+                <tbody>
+                  @for (f of s.fees; track f.id) {
+                    <tr>
+                      <td>{{ f.feeType | titlecase }}</td>
+                      <td>{{ f.description || '—' }}</td>
+                      <td>{{ f.amount | currency: f.currency }}</td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            }
+            <h4>Adjustments</h4>
+            @if (!s.adjustments.length) {
+              <p class="empty-text">No adjustments.</p>
+            } @else {
+              <table class="data-table">
+                <thead><tr><th>Type</th><th>Reason</th><th>Amount</th></tr></thead>
+                <tbody>
+                  @for (a of s.adjustments; track a.id) {
+                    <tr>
+                      <td>{{ a.adjustmentType | titlecase }}</td>
+                      <td>{{ a.reason || '—' }}</td>
+                      <td>{{ a.amount | currency: a.currency }}</td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            }
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Bank Transfers">
+          <div class="tab-content">
+            @if (!s.bankTransfers.length) {
+              <p class="empty-text">No bank transfers recorded.</p>
+            } @else {
+              <table class="data-table">
+                <thead><tr><th>Bank</th><th>Account</th><th>Transfer Ref</th><th>Amount</th><th>Status</th></tr></thead>
+                <tbody>
+                  @for (bt of s.bankTransfers; track bt.id) {
+                    <tr>
+                      <td>{{ bt.bankName || '—' }}</td>
+                      <td>{{ bt.accountMasked }}</td>
+                      <td>{{ bt.transferRef || '—' }}</td>
+                      <td>{{ bt.amount | currency: s.currency }}</td>
+                      <td>{{ bt.status | titlecase }}</td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            }
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Reversals">
+          <div class="tab-content">
+            @if (!s.reversals.length) {
+              <p class="empty-text">No reversals on this settlement.</p>
+            } @else {
+              <table class="data-table">
+                <thead><tr><th>Reference</th><th>Amount</th><th>Reason</th><th>Status</th><th>Date</th></tr></thead>
+                <tbody>
+                  @for (r of s.reversals; track r.id) {
+                    <tr>
+                      <td>{{ r.reversalRef }}</td>
+                      <td>{{ r.amount | currency: r.currency }}</td>
+                      <td>{{ r.reason }}</td>
+                      <td>{{ r.status | titlecase }}</td>
+                      <td>{{ r.processedAt ? (r.processedAt | date: 'short') : '—' }}</td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            }
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Notes">
+          <div class="tab-content">
+            @if (!s.notes.length) {
+              <p class="empty-text">No notes.</p>
+            } @else {
+              @for (n of s.notes; track n.id) {
+                <div class="note-card">
+                  <p>{{ n.noteText }}</p>
+                  <small>{{ n.createdAt | date: 'medium' }} @if (n.isInternal) { · Internal }</small>
+                </div>
+              }
+            }
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  }
+}

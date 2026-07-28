@@ -1,0 +1,52 @@
+<div class="page-header">
+  <div>
+    <h1>Outlets</h1>
+    <p>Manage merchant branches and store locations</p>
+  </div>
+  @if (rbac.hasPermission(perms.OUTLETS_WRITE)) {
+    <a routerLink="create" class="btn-primary">Add Outlet</a>
+  }
+</div>
+
+<div class="filters">
+  <input type="search" [(ngModel)]="searchInput" placeholder="Search outlets..." (keyup.enter)="onSearch()" />
+  <select [(ngModel)]="statusFilter" (change)="onSearch()">
+    <option value="">All statuses</option>
+    <option value="active">Active</option>
+    <option value="inactive">Inactive</option>
+    <option value="pending">Pending</option>
+  </select>
+  <input type="number" [(ngModel)]="merchantFilter" placeholder="Merchant ID" (change)="onSearch()" />
+  <button type="button" (click)="onSearch()">Search</button>
+</div>
+
+@if (pageState() === 'loading') {
+  <mat-spinner diameter="40"></mat-spinner>
+} @else if (pageState() === 'error') {
+  <p>Failed to load outlets.</p>
+} @else {
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Code</th><th>Name</th><th>Merchant</th><th>City</th><th>Status</th><th>Primary</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (item of items(); track item.id) {
+        <tr>
+          <td><a [routerLink]="[item.id]">{{ item.outletCode }}</a></td>
+          <td>{{ item.outletName }}</td>
+          <td>{{ item.merchantName }}</td>
+          <td>{{ item.city }}</td>
+          <td>{{ item.status }}</td>
+          <td>{{ item.isPrimary ? 'Yes' : 'No' }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+  <div class="pagination">
+    <button type="button" [disabled]="page() <= 1" (click)="onPageChange(page() - 1)">Prev</button>
+    <span>Page {{ page() }} / {{ totalPages() }}</span>
+    <button type="button" [disabled]="page() >= totalPages()" (click)="onPageChange(page() + 1)">Next</button>
+  </div>
+}

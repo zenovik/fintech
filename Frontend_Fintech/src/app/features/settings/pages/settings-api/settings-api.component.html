@@ -1,0 +1,51 @@
+@if (state.pageState() === 'loading') {
+  <div class="settings-card settings-card--center"><mat-spinner diameter="40" /></div>
+} @else if (state.pageState() === 'error') {
+  <div class="settings-error">
+    <span class="material-symbols-outlined">error</span>
+    <p>{{ state.errorMessage() }}</p>
+    <button type="button" class="btn btn--primary" (click)="retry()">Retry</button>
+  </div>
+} @else {
+  <div class="settings-card">
+    <h1>API / Developer</h1>
+    <p class="subtitle">Webhook delivery, rate limits, and API endpoint configuration.</p>
+
+    <form [formGroup]="form" (ngSubmit)="save()" class="settings-form">
+      <mat-form-field appearance="outline" class="full">
+        <mat-label>API Base URL</mat-label>
+        <input matInput formControlName="apiBaseUrl" placeholder="https://api.example.com" />
+      </mat-form-field>
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+          <mat-label>Webhook Retry Count</mat-label>
+          <input matInput type="number" formControlName="webhookRetryCount" min="0" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Webhook Timeout (seconds)</mat-label>
+          <input matInput type="number" formControlName="webhookTimeoutSeconds" min="1" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Rate Limit (per minute)</mat-label>
+          <input matInput type="number" formControlName="rateLimitPerMinute" min="1" />
+        </mat-form-field>
+      </div>
+
+      <div class="settings-actions">
+        @if (rbac.hasPermission(perms.SETTINGS_WRITE)) {
+          <button type="submit" class="btn btn--primary" [disabled]="form.invalid || state.pageState() === 'saving'">
+            @if (state.pageState() === 'saving') { <mat-spinner diameter="18" /> } @else { Save Changes }
+          </button>
+        }
+      </div>
+    </form>
+  </div>
+
+  <div class="settings-card settings-card--note">
+    <h2>SMTP Configuration</h2>
+    <p class="subtitle">
+      Outbound email delivery is configured separately via the SMTP settings endpoint.
+      Contact your platform administrator to update mail server credentials.
+    </p>
+  </div>
+}

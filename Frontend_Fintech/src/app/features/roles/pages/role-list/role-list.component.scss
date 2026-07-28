@@ -1,0 +1,51 @@
+@use '../../../dashboard/styles/dashboard-tokens' as *;
+@use '../../../dashboard/styles/shared-page-ui' as ui;
+
+.role-page {
+  @include ui.page-shell;
+  padding-bottom: 32px;
+}
+
+.page-header { @include ui.page-header; }
+.breadcrumb { @include ui.breadcrumb; }
+
+.table-card {
+  @include ui.table-card;
+  width: 100%;
+  border-collapse: collapse;
+
+  th, td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba($dash-outline-variant, 0.6);
+    vertical-align: middle;
+  }
+
+  th {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: $dash-outline;
+    background: $dash-table-header-bg;
+  }
+
+  small { color: $dash-outline; font-size: 12px; }
+}
+
+.btn {
+  &--primary { @include ui.btn-primary; }
+}
+
+.link-btn {
+  color: $dash-primary-bright;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 12px;
+  &:hover { text-decoration: underline; }
+}
+
+.empty-state {
+  @include ui.empty-state;
+  .material-symbols-outlined { font-size: 48px; }
+}

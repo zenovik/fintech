@@ -1,0 +1,204 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+    branches: [main, master, develop]
+
+jobs:
+  backend:
+    name: Backend Build & Lint
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Backend_Fintech
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: Backend_Fintech/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run test:unit
+      - run: npm run lint
+      - run: npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: backend-dist
+          path: Backend_Fintech/dist
+          if-no-files-found: error
+
+  integration:
+    name: Integration Tests
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: test_root
+          MYSQL_DATABASE: fintech_db_test
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -u root -ptest_root"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=10
+    defaults:
+      run:
+        working-directory: Backend_Fintech
+    env:
+      NODE_ENV: test
+      DB_HOST: 127.0.0.1
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: test_root
+      DB_NAME: fintech_db_test
+      JWT_SECRET: integration-test-jwt-secret-min-32-chars!!
+      JWT_REFRESH_SECRET: integration-test-refresh-secret-min-32-chars
+      CONFIG_ENCRYPTION_KEY: integration-test-config-key-min-32-chars
+      REDIS_ENABLED: false
+      CSP_ENABLED: false
+      CORS_ORIGIN: http://localhost:4200
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: Backend_Fintech/package-lock.json
+      - run: npm ci
+      - name: Install MySQL client
+        run: sudo apt-get update && sudo apt-get install -y default-mysql-client
+      - name: Import database schema and seed
+        run: |
+          {
+            echo "SET FOREIGN_KEY_CHECKS=0;"
+            sed 's/fintech_db/fintech_db_test/g' ../Database_Fintech/master_database.sql
+            echo "SET FOREIGN_KEY_CHECKS=1;"
+          } | mysql -h 127.0.0.1 -u root -ptest_root fintech_db_test
+        timeout-minutes: 20
+      - name: Run integration tests (fail on skip)
+        run: npm run test:integration
+
+  frontend:
+    name: Frontend Build & Lint
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Frontend_Fintech
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: Frontend_Fintech/package-lock.json
+      - run: npm ci
+      - run: npm run lint --if-present
+      - run: npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: frontend-dist
+          path: Frontend_Fintech/dist
+          if-no-files-found: error
+
+  database:
+    name: Database Validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate SQL build script
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          ./Database_Fintech/scripts/build-master.ps1
+          if (-not (Test-Path './Database_Fintech/master_database.sql')) {
+            throw 'master_database.sql was not generated'
+          }
+          $size = (Get-Item './Database_Fintech/master_database.sql').Length
+          if ($size -lt 1000) {
+            throw 'master_database.sql appears invalid'
+          }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: master-database-sql
+          path: Database_Fintech/master_database.sql
+
+  e2e:
+    name: Playwright E2E
+    runs-on: ubuntu-latest
+    needs: [backend, frontend, database]
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: test_root
+          MYSQL_DATABASE: fintech_db
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -u root -ptest_root"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=10
+    env:
+      DB_HOST: 127.0.0.1
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: test_root
+      DB_NAME: fintech_db
+      JWT_SECRET: e2e-test-jwt-secret-min-32-characters!!
+      JWT_REFRESH_SECRET: e2e-test-refresh-secret-min-32-chars
+      CONFIG_ENCRYPTION_KEY: e2e-test-config-key-min-32-chars
+      REDIS_ENABLED: false
+      CSP_ENABLED: false
+      CORS_ORIGIN: http://localhost:4200
+      PLAYWRIGHT_BASE_URL: http://localhost:4200
+      PLAYWRIGHT_API_URL: http://localhost:3000/api
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - run: npm ci
+      - run: npm ci --workspace=Frontend_Fintech
+      - run: npm ci --workspace=Backend_Fintech
+      - name: Install MySQL client
+        run: sudo apt-get update && sudo apt-get install -y default-mysql-client
+      - uses: actions/download-artifact@v4
+        with:
+          name: master-database-sql
+          path: Database_Fintech/
+      - name: Import database schema and seed
+        run: npm run db:setup:unix
+        env:
+          MYSQL_HOST: 127.0.0.1
+          MYSQL_PORT: 3306
+          MYSQL_USER: root
+          MYSQL_PASSWORD: test_root
+        timeout-minutes: 20
+      - name: Build backend
+        run: npm run build --workspace=Backend_Fintech
+      - name: Build frontend
+        run: npm run build --workspace=Frontend_Fintech
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+      - name: Run Playwright E2E tests
+        run: npm run test:e2e
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 14
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-test-results
+          path: test-results/
+          retention-days: 14

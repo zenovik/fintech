@@ -1,0 +1,31 @@
+<div class="po-page">
+  <div class="po-page__header">
+    <div>
+      <a routerLink="/payouts" style="font-size:13px;color:#667085;text-decoration:none">← Payout Queue</a>
+      <h1 class="po-page__title">New Payout</h1>
+      <p class="po-page__subtitle">Create a manual or scheduled merchant payout.</p>
+    </div>
+  </div>
+
+  <div class="po-card" style="max-width:640px">
+    @if (error()) { <p style="color:#b42318;margin-bottom:12px">{{ error() }}</p> }
+    <div class="po-form-grid">
+      <div><label>Merchant ID</label><input [(ngModel)]="merchantId" type="number" placeholder="e.g. 9" /></div>
+      <div><label>Amount</label><input [(ngModel)]="amount" type="number" placeholder="e.g. 50000" /></div>
+      <div><label>Settlement ID (optional)</label><input [(ngModel)]="settlementId" type="number" placeholder="Link to settlement" /></div>
+      <div><label>Bank Account ID (optional)</label><input [(ngModel)]="bankAccountId" type="number" placeholder="Defaults to primary" /></div>
+      <div><label>Payout Type</label><select [(ngModel)]="payoutType">@for (t of types; track t.key) { <option [value]="t.key">{{ t.label }}</option> }</select></div>
+      <div><label>Method</label><select [(ngModel)]="payoutMethod">@for (m of methods; track m.key) { <option [value]="m.key">{{ m.label }}</option> }</select></div>
+      @if (payoutType === 'scheduled') {
+        <div style="grid-column:1/-1"><label>Scheduled At</label><input [(ngModel)]="scheduledAt" type="datetime-local" /></div>
+      }
+      <div style="grid-column:1/-1"><label>Notes</label><textarea [(ngModel)]="notes" rows="3" placeholder="Optional notes"></textarea></div>
+    </div>
+    <div style="display:flex;gap:8px;margin-top:16px">
+      <button type="button" class="po-btn po-btn--primary" [disabled]="saving()" (click)="submit()">
+        @if (saving()) { <mat-spinner diameter="18" /> } @else { Create Payout }
+      </button>
+      <a routerLink="/payouts" class="po-btn po-btn--secondary">Cancel</a>
+    </div>
+  </div>
+</div>

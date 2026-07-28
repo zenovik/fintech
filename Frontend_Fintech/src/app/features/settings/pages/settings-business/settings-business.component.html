@@ -1,0 +1,96 @@
+@if (state.pageState() === 'loading') {
+  <div class="settings-card settings-card--center"><mat-spinner diameter="40" /></div>
+} @else if (state.pageState() === 'error') {
+  <div class="settings-error">
+    <span class="material-symbols-outlined">error</span>
+    <p>{{ state.errorMessage() }}</p>
+    <button type="button" class="btn btn--primary" (click)="retry()">Retry</button>
+  </div>
+} @else {
+  <div class="settings-card">
+    <h1>Business Settings</h1>
+    <p class="subtitle">Organization profile, address, and regional configuration.</p>
+
+    <form [formGroup]="form" (ngSubmit)="save()" class="settings-form">
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+          <mat-label>Legal Name</mat-label>
+          <input matInput formControlName="legalName" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>DBA Name</mat-label>
+          <input matInput formControlName="dbaName" />
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+          <mat-label>Tax ID</mat-label>
+          <input matInput formControlName="taxId" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Primary Region</mat-label>
+          <input matInput formControlName="primaryRegion" />
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="full">
+          <mat-label>Address Line 1</mat-label>
+          <input matInput formControlName="addressLine1" />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="full">
+          <mat-label>Address Line 2</mat-label>
+          <input matInput formControlName="addressLine2" />
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+          <mat-label>City</mat-label>
+          <input matInput formControlName="city" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>State / Province</mat-label>
+          <input matInput formControlName="state" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Postal Code</mat-label>
+          <input matInput formControlName="postalCode" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Country</mat-label>
+          <input matInput formControlName="country" />
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field appearance="outline">
+          <mat-label>Base Currency</mat-label>
+          <input matInput formControlName="baseCurrency" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Timezone</mat-label>
+          <input matInput formControlName="timezone" />
+        </mat-form-field>
+      </div>
+      <div class="toggle-row">
+        <div>
+          <strong>Public Profile</strong>
+          <p class="toggle-hint">Allow public-facing organization profile</p>
+        </div>
+        <mat-slide-toggle formControlName="publicProfileEnabled" color="primary" />
+      </div>
+      <div class="toggle-row">
+        <div>
+          <strong>Payout Notifications</strong>
+          <p class="toggle-hint">Send notifications for payout events</p>
+        </div>
+        <mat-slide-toggle formControlName="payoutNotificationsEnabled" color="primary" />
+      </div>
+      <div class="settings-actions">
+        @if (rbac.hasPermission(perms.SETTINGS_WRITE)) {
+          <button type="submit" class="btn btn--primary" [disabled]="form.invalid || state.pageState() === 'saving'">
+            @if (state.pageState() === 'saving') { <mat-spinner diameter="18" /> } @else { Save Changes }
+          </button>
+        }
+      </div>
+    </form>
+  </div>
+}

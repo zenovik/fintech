@@ -1,0 +1,40 @@
+<div class="inv-page">
+  <div class="inv-page__header">
+    <div><h1 class="inv-page__title">Edit Invoice</h1></div>
+    <a [routerLink]="['/invoices', invoiceId]" class="inv-btn inv-btn--secondary">Back</a>
+  </div>
+  @if (pageState() === 'loading') { <div class="inv-loading"><mat-spinner diameter="40" /></div> }
+  @else if (pageState() === 'error') { <div class="inv-error"><p>{{ error() || 'Cannot edit this invoice.' }}</p></div> }
+  @else {
+    @if (error()) { <div class="inv-card" style="color:#b42318">{{ error() }}</div> }
+    <div class="inv-card">
+      <form (ngSubmit)="submit()">
+        <div class="inv-form-grid">
+          <div><label>Merchant ID</label><input type="number" [(ngModel)]="merchantId" name="merchantId" /></div>
+          <div><label>Customer ID</label><input type="number" [(ngModel)]="customerId" name="customerId" /></div>
+          <div><label>Due Date</label><input type="date" [(ngModel)]="dueDate" name="dueDate" /></div>
+          <div><label>Header Tax</label><input type="number" step="0.01" [(ngModel)]="taxAmount" name="taxAmount" /></div>
+          <div><label>Header Discount</label><input type="number" step="0.01" [(ngModel)]="discountAmount" name="discountAmount" /></div>
+        </div>
+        <h3 style="margin:16px 0">Line Items</h3>
+        <table class="inv-line-items">
+          <thead><tr><th>Description</th><th>Qty</th><th>Price</th><th>Tax</th><th>Disc</th><th></th></tr></thead>
+          <tbody>
+            @for (li of lineItems; track $index; let i = $index) {
+              <tr>
+                <td><input [(ngModel)]="li.description" [name]="'d'+i" style="width:100%" /></td>
+                <td><input type="number" [(ngModel)]="li.quantity" [name]="'q'+i" style="width:60px" /></td>
+                <td><input type="number" [(ngModel)]="li.unitPrice" [name]="'p'+i" style="width:80px" /></td>
+                <td><input type="number" [(ngModel)]="li.tax" [name]="'t'+i" style="width:60px" /></td>
+                <td><input type="number" [(ngModel)]="li.discount" [name]="'di'+i" style="width:60px" /></td>
+                <td><button type="button" (click)="removeLine(i)">×</button></td>
+              </tr>
+            }
+          </tbody>
+        </table>
+        <button type="button" class="inv-btn inv-btn--secondary" style="margin-top:8px" (click)="addLine()">Add Line</button>
+        <div style="margin-top:16px"><button type="submit" class="inv-btn inv-btn--primary" [disabled]="saving()">Save</button></div>
+      </form>
+    </div>
+  }
+</div>

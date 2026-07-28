@@ -1,0 +1,59 @@
+<div class="qr-page">
+  @if (pageState() === 'loading') {
+    <div class="qr-loading"><mat-spinner diameter="40" /><p>Loading QR code...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="qr-error"><span class="material-symbols-outlined">error</span><p>Failed to load QR code.</p><button type="button" class="qr-btn qr-btn--primary" (click)="load()">Retry</button></div>
+  } @else {
+    <div class="qr-page__header">
+      <div>
+        <h1 class="qr-page__title">{{ q.title }}</h1>
+        <p class="qr-page__subtitle">{{ q.qrRef }} · {{ q.qrType }} · <span [class]="badgeClass(q.status)">{{ q.status }}</span></p>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        @if (rbac.hasPermission(perms.QR_PAYMENTS_MANAGE)) {
+          @if (q.status !== 'active') { <button type="button" class="qr-btn qr-btn--success" [disabled]="saving()" (click)="enable()">Enable</button> }
+          @if (q.status === 'active') { <button type="button" class="qr-btn qr-btn--danger" [disabled]="saving()" (click)="disable()">Disable</button> }
+          <button type="button" class="qr-btn qr-btn--secondary" [disabled]="saving()" (click)="regenerate()">Regenerate</button>
+        }
+        @if (qrDataUrl()) {
+          <button type="button" class="qr-btn qr-btn--secondary" (click)="downloadQr()">Download QR</button>
+        }
+        <a routerLink="/qr-payments" class="qr-btn qr-btn--secondary">Back</a>
+      </div>
+    </div>
+
+    <div class="qr-card">
+      <h3>Pay URL</h3>
+      <div class="qr-link-box">
+        <input type="text" readonly [value]="q.payUrl" />
+        <button type="button" class="qr-btn qr-btn--primary" (click)="copyLink()">
+          <span class="material-symbols-outlined">content_copy</span> {{ copyMsg() || 'Copy' }}
+        </button>
+      </div>
+      @if (qrDataUrl()) {
+        <div class="qr-image" style="margin-top:16px">
+          <img [src]="qrDataUrl()" alt="QR code" />
+          <p style="font-size:12px;color:#64748b;margin-top:8px">Scan to pay</p>
+        </div>
+      }
+    </div>
+
+    <div class="qr-card">
+      <h3>Details</h3>
+      <dl class="qr-detail-grid">
+        <div><dt>Organization</dt><dd>{{ q.organizationName }}</dd></div>
+        <div><dt>Merchant</dt><dd><a [routerLink]="['/merchants', q.merchantId]">{{ q.merchantName }}</a></dd></div>
+        <div><dt>Customer</dt><dd>@if (q.customerId) { <a [routerLink]="['/customers', q.customerId]">{{ q.customerName }}</a> } @else { — }</dd></div>
+        <div><dt>Type</dt><dd>{{ q.qrType }}</dd></div>
+        <div><dt>Amount</dt><dd>@if (q.allowCustomAmount) { Custom amount } @else { {{ q.amount | currency:q.currency:'symbol':'1.2-2' }} }</dd></div>
+        <div><dt>Scans</dt><dd>{{ q.scanCount }}</dd></div>
+        <div><dt>Total Collected</dt><dd>{{ q.totalCollected | currency:q.currency:'symbol':'1.2-2' }}</dd></div>
+        <div><dt>Expires</dt><dd>{{ q.expiresAt ? (q.expiresAt | date:'medium') : 'Never' }}</dd></div>
+        <div><dt>Created By</dt><dd>{{ q.createdByName || '—' }}</dd></div>
+        <div><dt>Created</dt><dd>{{ q.createdAt | date:'medium' }}</dd></div>
+        <div><dt>Updated</dt><dd>{{ q.updatedAt | date:'medium' }}</dd></div>
+      </dl>
+      @if (q.description) { <p style="margin-top:12px;font-size:14px">{{ q.description }}</p> }
+    </div>
+  }
+</div>

@@ -1,0 +1,15 @@
+.co-admin-page { padding: 24px; }
+.co-back { display: inline-block; margin-bottom: 16px; color: #4f46e5; text-decoration: none; font-size: 14px; }
+.co-admin-page__header h1 { margin: 0 0 4px; font-family: monospace; }
+.co-admin-page__center { padding: 48px; text-align: center; }
+.co-admin-page__error { color: #b42318; }
+.co-detail-grid { display: grid; gap: 20px; }
+@media (min-width: 900px) { .co-detail-grid { grid-template-columns: 1fr 1fr; } }
+.co-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; }
+.co-card h2 { margin: 0 0 16px; font-size: 16px; }
+.co-card dl { display: grid; grid-template-columns: 120px 1fr; gap: 8px 16px; margin: 0; font-size: 14px; }
+.co-card dt { color: #64748b; }
+.co-muted { color: #64748b; font-size: 14px; }
+.co-timeline { list-style: none; padding: 0; margin: 0; }
+.co-timeline li { padding: 10px 0; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
+.co-timeline time { display: block; font-size: 12px; color: #94a3b8; margin-top: 4px; }

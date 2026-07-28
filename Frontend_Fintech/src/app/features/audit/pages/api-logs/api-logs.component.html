@@ -1,0 +1,101 @@
+<div class="audit-page">
+  <div class="audit-page__header">
+    <div>
+      <h1 class="audit-page__title">API Logs</h1>
+      <p class="audit-page__subtitle">
+        <span class="api-live-dot"></span> Live request stream and inspector
+      </p>
+    </div>
+    <button type="button" class="audit-btn audit-btn--secondary" (click)="load()">
+      <span class="material-symbols-outlined">refresh</span> Refresh
+    </button>
+  </div>
+
+  <div class="audit-filters">
+    <input class="api-search" type="text" placeholder="Search paths or IPs..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+    <label class="audit-filters__chip">
+      <select [(ngModel)]="methodFilter" (ngModelChange)="onSearch()">
+        <option value="">All Methods</option>
+        @for (m of methods; track m) {
+          <option [value]="m">{{ m }}</option>
+        }
+      </select>
+    </label>
+    <label class="audit-filters__chip">
+      <select [(ngModel)]="dateRange" (ngModelChange)="onSearch()">
+        @for (d of dateRanges; track d.key) {
+          <option [value]="d.key">{{ d.label }}</option>
+        }
+      </select>
+    </label>
+  </div>
+
+  @if (pageState() === 'loading') {
+    <div class="audit-loading"><mat-spinner diameter="40" /><p>Loading API logs...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="audit-error">
+      <span class="material-symbols-outlined">error</span>
+      <p>{{ errorMessage() }}</p>
+      <button type="button" class="audit-btn audit-btn--primary" (click)="load()">Retry</button>
+    </div>
+  } @else if (pageState() === 'empty') {
+    <div class="audit-empty">
+      <span class="material-symbols-outlined">terminal</span>
+      <p>No API logs found</p>
+    </div>
+  } @else {
+    <div class="api-layout">
+      <div class="api-logs-list">
+        <div class="api-logs-list__header">
+          <span>Live Stream</span>
+          <span class="api-logs-list__count">{{ total() }} requests</span>
+        </div>
+        <div class="api-logs-list__grid api-logs-list__grid--head">
+          <span>Method</span><span>Status</span><span>Path</span><span>Latency</span><span>Time</span>
+        </div>
+        @for (log of logs(); track log.id) {
+          <div class="api-logs-list__grid api-logs-list__row" [class.api-logs-list__row--active]="selected()?.id === log.id" (click)="selectLog(log)">
+            <span><span class="api-method" [ngClass]="getMethodClass(log.method)">{{ log.method }}</span></span>
+            <span class="api-status" [ngClass]="getStatusClass(log.statusCode)">{{ log.statusCode }}</span>
+            <span class="api-path">{{ log.path }}</span>
+            <span class="api-latency">{{ log.responseTimeMs ?? '—' }}ms</span>
+            <span class="api-time">{{ log.createdAt | date:'HH:mm:ss.SSS' }}</span>
+          </div>
+        }
+        <div class="audit-pagination">
+          <span>Page {{ page() }} of {{ totalPages() }}</span>
+          <div class="audit-pagination__pages">
+            <button type="button" [disabled]="page() <= 1" (click)="goToPage(page() - 1)">
+              <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <button type="button" [disabled]="page() >= totalPages()" (click)="goToPage(page() + 1)">
+              <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      @if (selected(); as s) {
+        <aside class="api-inspector">
+          <div class="api-inspector__header">
+            <h3>Inspector</h3>
+          </div>
+          <div class="api-inspector__body">
+            <p class="api-inspector__section">Request Identification</p>
+            <dl class="audit-meta-list">
+              <dt>Request ID</dt><dd class="audit-detail__mono">{{ s.uuid }}</dd>
+              <dt>Correlation ID</dt><dd class="audit-detail__mono">{{ s.correlationId ?? '—' }}</dd>
+              <dt>IP Address</dt><dd>{{ s.ipAddress ?? '—' }}</dd>
+              <dt>User ID</dt><dd>{{ s.userId ?? '—' }}</dd>
+              <dt>Method</dt><dd>{{ s.method }}</dd>
+              <dt>Path</dt><dd class="audit-detail__mono">{{ s.path }}</dd>
+              <dt>Status</dt><dd>{{ s.statusCode }}</dd>
+              <dt>Response Time</dt><dd>{{ s.responseTimeMs ?? '—' }}ms</dd>
+              <dt>Timestamp</dt><dd>{{ s.createdAt | date:'medium' }}</dd>
+            </dl>
+          </div>
+        </aside>
+      }
+    </div>
+  }
+</div>

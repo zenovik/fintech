@@ -1,0 +1,48 @@
+<div class="co-admin-page">
+  <a routerLink="/checkout/sessions" class="co-back">← Back to sessions</a>
+
+  @if (pageState() === 'loading') {
+    <div class="co-admin-page__center"><mat-spinner diameter="36" /></div>
+  } @else if (pageState() === 'error') {
+    <p class="co-admin-page__error">Session not found.</p>
+  } @else if (detail()) {
+    @let d = detail()!;
+    <header class="co-admin-page__header">
+      <h1>{{ d.session.checkoutRef }}</h1>
+      <p>Status: <strong>{{ d.session.status }}</strong> · Intent: {{ d.session.intentRef }}</p>
+    </header>
+
+    <div class="co-detail-grid">
+      <section class="co-card">
+        <h2>Session</h2>
+        <dl>
+          <dt>Amount</dt><dd>{{ d.session.amount | currency:d.session.currency:'symbol':'1.2-2' }}</dd>
+          <dt>Mode</dt><dd>{{ d.session.mode }}</dd>
+          <dt>Retries</dt><dd>{{ d.session.retryCount }}</dd>
+          <dt>Created</dt><dd>{{ d.session.createdAt | date:'medium' }}</dd>
+          <dt>Expires</dt><dd>{{ d.session.expiresAt | date:'medium' }}</dd>
+          @if (d.session.completedAt) {
+            <dt>Completed</dt><dd>{{ d.session.completedAt | date:'medium' }}</dd>
+          }
+        </dl>
+      </section>
+
+      <section class="co-card">
+        <h2>Event timeline</h2>
+        @if (!d.events.length) {
+          <p class="co-muted">No events recorded.</p>
+        } @else {
+          <ul class="co-timeline">
+            @for (e of d.events; track e.id) {
+              <li>
+                <strong>{{ e.event_type }}</strong>
+                @if (e.payment_method_code) { <span> · {{ e.payment_method_code }}</span> }
+                <time>{{ e.created_at | date:'medium' }}</time>
+              </li>
+            }
+          </ul>
+        }
+      </section>
+    </div>
+  }
+</div>

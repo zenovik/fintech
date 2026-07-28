@@ -1,0 +1,150 @@
+@if (state.pageState() === 'loading') {
+  <div class="txn-details__loading">
+    <mat-spinner diameter="48"></mat-spinner>
+    <p>Loading transaction...</p>
+  </div>
+} @else if (state.pageState() === 'error') {
+  <div class="txn-details__error">
+    <span class="material-symbols-outlined">error</span>
+    <h3>{{ state.errorMessage() }}</h3>
+    <button type="button" class="btn btn--primary" (click)="state.retry()">Retry</button>
+    <a routerLink="/transactions" class="btn btn--outline">Back to List</a>
+  </div>
+} @else {
+  @if (state.selectedTransaction(); as tx) {
+    <div class="txn-details">
+      <div class="page-header">
+        <div>
+          <nav class="breadcrumb">
+            <a routerLink="/dashboard/executive">Home</a>
+            <span class="material-symbols-outlined">chevron_right</span>
+            <a routerLink="/transactions">Transactions</a>
+            <span class="material-symbols-outlined">chevron_right</span>
+            <span class="breadcrumb__active">{{ tx.transactionRef }}</span>
+          </nav>
+          <h1>{{ tx.transactionRef }}</h1>
+          <span class="status-badge status-badge--{{ statusClass(tx.status.code) }}">{{ tx.status.label }}</span>
+        </div>
+        <div class="page-header__actions">
+          @if (rbac.hasPermission(perms.TRANSACTIONS_WRITE)) {
+            <button type="button" class="btn btn--outline" (click)="openRefundDialog()">Refund</button>
+            <button type="button" class="btn btn--danger" (click)="openDisputeDialog()">Open Dispute</button>
+          }
+        </div>
+      </div>
+
+      <div class="summary-cards">
+        <div class="summary-card"><span>Amount</span><strong>{{ tx.amount | currency: tx.currency }}</strong></div>
+        <div class="summary-card"><span>Fee</span><strong>{{ tx.feeAmount | currency: tx.currency }}</strong></div>
+        <div class="summary-card"><span>Net</span><strong>{{ tx.netAmount | currency: tx.currency }}</strong></div>
+        <div class="summary-card"><span>Merchant</span><strong>{{ tx.merchant.name }}</strong></div>
+      </div>
+
+      <mat-tab-group [(selectedIndex)]="activeTab">
+        <mat-tab label="Overview">
+          <div class="tab-content">
+            <dl class="info-grid">
+              <dt>Customer</dt>
+              <dd>
+                @if (tx.customerId) {
+                  <a [routerLink]="['/customers', tx.customerId]">{{ tx.customerName || 'View profile' }}</a>
+                } @else {
+                  {{ tx.customerName || '—' }}
+                }
+              </dd>
+              <dt>Email</dt><dd>{{ tx.customerEmail || '—' }}</dd>
+              <dt>Payment Method</dt><dd>{{ tx.paymentMethod.detail }}</dd>
+              <dt>Processed</dt><dd>{{ tx.processedAt | date: 'medium' }}</dd>
+              <dt>Settled</dt><dd>{{ tx.settledAt ? (tx.settledAt | date: 'medium') : '—' }}</dd>
+              <dt>Linked Settlement</dt>
+              <dd>
+                @if (tx.settlement) {
+                  <a [routerLink]="['/settlements', tx.settlement.id]">{{ tx.settlement.settlementRef }}</a>
+                  · {{ tx.settlement.amount | currency: tx.settlement.currency }}
+                  · {{ tx.settlement.status | titlecase }}
+                } @else { — }
+              </dd>
+              <dt>Description</dt><dd>{{ tx.description || '—' }}</dd>
+            </dl>
+          </div>
+        </mat-tab>
+        <mat-tab label="Timeline">
+          <div class="tab-content">
+            @if (!tx.events.length) {
+              <p class="empty-text">No events recorded.</p>
+            } @else {
+              <ul class="timeline">
+                @for (e of tx.events; track e.id) {
+                  <li>
+                    <span class="timeline__dot"></span>
+                    <div>
+                      <strong>{{ e.eventType | titlecase }}</strong>
+                      <small>{{ e.createdAt | date: 'medium' }}</small>
+                    </div>
+                  </li>
+                }
+              </ul>
+            }
+          </div>
+        </mat-tab>
+        <mat-tab label="Refunds">
+          <div class="tab-content">
+            @if (!tx.refunds.length) {
+              <p class="empty-text">No refunds processed.</p>
+            } @else {
+              <table class="data-table">
+                <thead><tr><th>Reference</th><th>Amount</th><th>Status</th><th>Date</th></tr></thead>
+                <tbody>
+                  @for (r of tx.refunds; track r.id) {
+                    <tr>
+                      <td>{{ r.refundRef }}</td>
+                      <td>{{ r.amount | currency: r.currency }}</td>
+                      <td>{{ r.status | titlecase }}</td>
+                      <td>{{ r.processedAt | date: 'short' }}</td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            }
+          </div>
+        </mat-tab>
+        <mat-tab label="Disputes">
+          <div class="tab-content">
+            @if (!tx.disputes.length) {
+              <p class="empty-text">No disputes on this transaction.</p>
+            } @else {
+              @for (d of tx.disputes; track d.id) {
+                <div class="dispute-card">
+                  <strong>{{ d.disputeRef }}</strong>
+                  <span class="status-badge status-badge--flagged">{{ d.status | titlecase }}</span>
+                  <p>{{ d.reason }}</p>
+                  <small>{{ d.amount | currency: d.currency }}</small>
+                </div>
+              }
+            }
+          </div>
+        </mat-tab>
+        <mat-tab label="Fees">
+          <div class="tab-content">
+            @if (!tx.fees.length) {
+              <p class="empty-text">No fee breakdown available.</p>
+            } @else {
+              <table class="data-table">
+                <thead><tr><th>Type</th><th>Description</th><th>Amount</th></tr></thead>
+                <tbody>
+                  @for (f of tx.fees; track f.id) {
+                    <tr>
+                      <td>{{ f.feeType | titlecase }}</td>
+                      <td>{{ f.description || '—' }}</td>
+                      <td>{{ f.amount | currency: f.currency }}</td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            }
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  }
+}

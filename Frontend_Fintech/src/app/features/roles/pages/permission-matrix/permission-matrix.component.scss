@@ -1,0 +1,267 @@
+@use '../../../dashboard/styles/dashboard-tokens' as *;
+@use '../../../dashboard/styles/shared-page-ui' as ui;
+
+.matrix-page {
+  @include ui.page-shell;
+  max-width: 1320px;
+
+  &__loading { @include ui.page-loading-error; min-height: 400px; }
+}
+
+.page-header { @include ui.page-header; }
+.breadcrumb { @include ui.breadcrumb; }
+
+.matrix-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 24px;
+  align-items: start;
+
+  @media (max-width: 1024px) { grid-template-columns: 1fr; }
+}
+
+.matrix-sidebar {
+  h3 {
+    margin: 0 0 12px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: $dash-outline;
+  }
+}
+
+.role-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.role-card {
+  @include dash-card;
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+
+  &:hover { border-color: rgba($dash-primary-bright, 0.4); }
+
+  &--active {
+    border-color: $dash-primary-bright;
+    box-shadow: 0 0 0 1px $dash-primary-bright, $dash-shadow-elevated;
+    background: rgba($dash-primary-bright, 0.03);
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+
+    strong { font-size: 15px; color: $dash-on-surface; }
+  }
+
+  &__badge {
+    padding: 2px 8px;
+    border-radius: $dash-radius-pill;
+    background: rgba($dash-primary-bright, 0.1);
+    color: $dash-primary-bright;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  p { margin: 0 0 12px; font-size: 13px; color: $dash-outline; line-height: 1.4; }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: $dash-outline;
+
+    .material-symbols-outlined { font-size: 18px; color: $dash-primary-bright; }
+  }
+
+  &__count { font-weight: 600; }
+}
+
+.hierarchy-card {
+  @include dash-card;
+  padding: 16px;
+
+  h4 { margin: 0 0 16px; font-size: 13px; font-weight: 700; color: $dash-on-surface; }
+}
+
+.hierarchy-tree {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__node {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background: $dash-surface-container-low;
+    border-radius: $dash-radius-lg;
+    font-size: 13px;
+    font-weight: 600;
+    color: $dash-on-surface;
+    border-left: 3px solid $dash-primary-bright;
+
+    .material-symbols-outlined { font-size: 18px; color: $dash-primary-bright; }
+  }
+}
+
+.matrix-main {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+
+    h2 {
+      margin: 0 0 4px;
+      font-size: 20px;
+      font-weight: 700;
+      color: $dash-on-surface;
+
+      span { color: $dash-primary-bright; }
+    }
+
+    p { margin: 0; font-size: 14px; color: $dash-outline; }
+  }
+
+  &__actions { display: flex; align-items: center; gap: 12px; }
+}
+
+.matrix-table-wrap {
+  @include dash-card;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    padding: 12px 16px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: $dash-outline;
+    background: $dash-table-header-bg;
+    border-bottom: 1px solid $dash-outline-variant;
+
+    &:first-child { text-align: left; width: 40%; }
+  }
+
+  td {
+    padding: 12px 16px;
+    text-align: center;
+    border-bottom: 1px solid rgba($dash-outline-variant, 0.5);
+    vertical-align: middle;
+  }
+
+  .matrix-action {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    color: $dash-on-surface;
+  }
+
+  .matrix-section td {
+    background: rgba($dash-primary-bright, 0.04);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: $dash-primary-bright;
+    text-align: left;
+    padding: 10px 16px;
+  }
+}
+
+.dual-approval {
+  @include dash-card;
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background: rgba($dash-warning, 0.04);
+  border-color: rgba($dash-warning, 0.2);
+
+  &__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: $dash-radius-lg;
+    background: rgba($dash-warning, 0.12);
+    color: $dash-warning;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    .material-symbols-outlined { font-size: 24px; }
+  }
+
+  &__content {
+    flex: 1;
+
+    h4 { margin: 0 0 6px; font-size: 15px; font-weight: 700; color: $dash-on-surface; }
+    p { margin: 0 0 16px; font-size: 13px; color: $dash-outline; }
+  }
+
+  &__options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+
+    @media (max-width: 640px) { grid-template-columns: 1fr; }
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    border: 1px solid $dash-outline-variant;
+    border-radius: $dash-radius-lg;
+    background: $dash-surface;
+    font-size: 13px;
+    font-weight: 500;
+    color: $dash-on-surface;
+    cursor: default;
+
+    &--checked {
+      border-color: $dash-primary-bright;
+      background: rgba($dash-primary-bright, 0.04);
+    }
+  }
+}
+
+.btn {
+  &--primary { @include ui.btn-primary; }
+  &--text {
+    background: none;
+    border: none;
+    color: $dash-outline;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px 16px;
+    &:hover { color: $dash-on-surface; }
+  }
+}
+
+:host ::ng-deep .mat-mdc-checkbox .mdc-checkbox__background {
+  border-radius: 4px;
+}

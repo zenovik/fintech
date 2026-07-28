@@ -1,0 +1,25 @@
+.co-admin-page { padding: 24px; }
+.co-admin-page__header h1 { margin: 0 0 4px; font-size: 24px; }
+.co-admin-page__header p { margin: 0; color: #64748b; font-size: 14px; }
+.co-admin-page__filters { display: flex; gap: 12px; margin: 20px 0; flex-wrap: wrap; }
+.co-admin-page__filters input, .co-brand-form input, .co-brand-form select, .co-brand-form textarea {
+  padding: 10px 12px; border: 1px solid #e2e8f0; border-radius: 8px; width: 100%; box-sizing: border-box;
+}
+.co-admin-page__filters button, .co-save {
+  padding: 10px 16px; background: #4f46e5; color: #fff; border: none; border-radius: 8px; cursor: pointer;
+}
+.co-brand-form { display: grid; gap: 14px; max-width: 520px; }
+.co-brand-form label { display: block; font-size: 12px; font-weight: 600; color: #475569; }
+.co-color-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.co-check { display: flex !important; align-items: center; gap: 8px; font-weight: 500 !important; }
+.co-preview {
+  margin-top: 20px; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; background: #f8fafc;
+}
+.co-preview__header { font-weight: 700; color: var(--co-primary); margin-bottom: 12px; }
+.co-preview__btn {
+  width: 100%; padding: 12px; border: none; border-radius: 8px;
+  background: var(--co-accent); color: #fff; font-weight: 600;
+}
+.co-muted { color: #64748b; }
+.co-admin-page__center { padding: 48px; text-align: center; }
+.co-admin-page__error { color: #b42318; }

@@ -1,0 +1,134 @@
+<div class="notif-page">
+  <div class="notif-page__header">
+    <div>
+      <h1 class="notif-page__title">Notification Center</h1>
+      <p class="notif-page__subtitle">Manage your system alerts, security updates, and financial logs.</p>
+    </div>
+    @if (rbac.hasPermission(perms.NOTIFICATIONS_WRITE)) {
+      <div class="notif-page__actions">
+        <button type="button" class="notif-btn notif-btn--primary" (click)="markAllRead()">
+          <span class="material-symbols-outlined">done_all</span>
+          Mark as Read
+        </button>
+        <button type="button" class="notif-btn notif-btn--secondary" (click)="archiveAll()">
+          <span class="material-symbols-outlined">archive</span>
+          Archive All
+        </button>
+      </div>
+    }
+  </div>
+
+  <div class="notif-center-search">
+    <span class="material-symbols-outlined">search</span>
+    <input type="text" placeholder="Search notifications..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+    <button type="button" class="notif-btn notif-btn--secondary" (click)="onSearch()">Search</button>
+  </div>
+
+  <div class="notif-layout">
+    <aside class="notif-sidebar">
+      <h3 class="notif-sidebar__heading">View</h3>
+      <div class="notif-sidebar__list">
+        @for (s of statuses; track s.key) {
+          <button
+            type="button"
+            class="notif-sidebar__item"
+            [class.notif-sidebar__item--active]="state.statusFilter() === s.key"
+            (click)="onStatusFilter(s.key)"
+          >
+            <span class="notif-sidebar__item-left">
+              <span class="material-symbols-outlined">{{ s.icon }}</span>
+              <span>{{ s.label }}</span>
+            </span>
+            @if (s.key === '') {
+              <span class="notif-sidebar__badge">{{ state.counts().all }}</span>
+            } @else if (s.key === 'unread') {
+              <span class="notif-sidebar__badge">{{ state.counts().unread }}</span>
+            }
+          </button>
+        }
+      </div>
+
+      <h3 class="notif-sidebar__heading" style="margin-top: 24px">Categories</h3>
+      <div class="notif-sidebar__checkboxes">
+        @for (cat of categories; track cat.key) {
+          <label>
+            <input type="checkbox" [checked]="isCategorySelected(cat.key)" (change)="onToggleCategory(cat.key)" />
+            <span>{{ cat.label }}</span>
+          </label>
+        }
+      </div>
+    </aside>
+
+    <section>
+      @if (state.pageState() === 'loading' || state.pageState() === 'saving') {
+        <div class="notif-loading"><mat-spinner diameter="40" /><p>Loading notifications...</p></div>
+      } @else if (state.pageState() === 'error') {
+        <div class="notif-error">
+          <span class="material-symbols-outlined">error</span>
+          <p>{{ state.errorMessage() }}</p>
+          <button type="button" class="notif-btn notif-btn--primary" (click)="retry()">Retry</button>
+        </div>
+      } @else if (state.pageState() === 'empty') {
+        <div class="notif-empty">
+          <span class="material-symbols-outlined">notifications_off</span>
+          <p>No notifications found</p>
+          <button type="button" class="notif-btn notif-btn--secondary" (click)="onStatusFilter('')">Clear filters</button>
+        </div>
+      } @else {
+        @for (n of state.notifications(); track n.id) {
+          <article
+            class="notif-card"
+            [class.notif-card--unread]="n.status === 'unread'"
+            (click)="openNotification(n.id)"
+            (keyup.enter)="openNotification(n.id)"
+            tabindex="0"
+            role="button"
+          >
+            <div class="notif-card__icon" [ngClass]="getIconClass(n.category)">
+              <span class="material-symbols-outlined">{{ getIcon(n.category, n.icon) }}</span>
+            </div>
+            <div class="notif-card__body">
+              <div class="notif-card__top">
+                <h4 class="notif-card__title">{{ n.title }}</h4>
+                <span class="notif-card__time">{{ relativeTime(n.createdAt) }}</span>
+              </div>
+              <p class="notif-card__message">{{ n.body }}</p>
+              @if (n.actionUrl) {
+                <div class="notif-card__links">
+                  <a class="notif-card__link" [routerLink]="n.actionUrl" (click)="$event.stopPropagation()">{{ n.actionLabel ?? 'View Details' }}</a>
+                  <button type="button" class="notif-card__link notif-card__link--muted" (click)="markRead($event, n.id)">Dismiss</button>
+                </div>
+              }
+            </div>
+            @if (rbac.hasPermission(perms.NOTIFICATIONS_WRITE)) {
+              <div class="notif-card__hover-actions">
+                @if (n.status === 'unread') {
+                  <button type="button" class="notif-card__action-btn" aria-label="Mark read" (click)="markRead($event, n.id)">
+                    <span class="material-symbols-outlined">done</span>
+                  </button>
+                }
+                <button type="button" class="notif-card__action-btn notif-card__action-btn--danger" aria-label="Delete" (click)="deleteNotification($event, n.id)">
+                  <span class="material-symbols-outlined">delete</span>
+                </button>
+              </div>
+            }
+          </article>
+        }
+
+        <div class="notif-pagination">
+          <span>Page {{ state.page() }} of {{ state.totalPages() }} ({{ state.total() }} total)</span>
+          <div class="notif-pagination__controls">
+            <button type="button" class="notif-pagination__btn" [disabled]="state.page() <= 1" (click)="state.goToPage(state.page() - 1)">Previous</button>
+            <button type="button" class="notif-pagination__btn" [disabled]="state.page() >= state.totalPages()" (click)="state.goToPage(state.page() + 1)">Next</button>
+          </div>
+        </div>
+      }
+    </section>
+
+    @if (rbac.hasPermission(perms.NOTIFICATIONS_WRITE) && state.counts().unread > 0) {
+      <button type="button" class="notif-fab" aria-label="Mark all as read" (click)="markAllRead()">
+        <span class="material-symbols-outlined">done_all</span>
+      </button>
+    }
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<app-dashboard-sidenav />
+<main class="dash-main">
+  <app-dashboard-topnav />
+  <div class="dash-content">
+    <router-outlet />
+  </div>
+</main>
+
+@if (showGlobalAi()) {
+  <app-ai-assistant />
+}
+
+<!-- Mobile bottom nav -->
+<nav class="dash-mobile-nav" aria-label="Mobile navigation">
+  <a class="dash-mobile-nav__item dash-mobile-nav__item--active" routerLink="/dashboard/executive">
+    <span class="material-symbols-outlined">dashboard</span>
+    <span>Dash</span>
+  </a>
+  <a class="dash-mobile-nav__item" href="#">
+    <span class="material-symbols-outlined">payments</span>
+    <span>Trans</span>
+  </a>
+  <a class="dash-mobile-nav__item" href="#">
+    <span class="material-symbols-outlined">group</span>
+    <span>Cust</span>
+  </a>
+  <a class="dash-mobile-nav__item" routerLink="/settings" routerLinkActive="dash-mobile-nav__item--active">
+    <span class="material-symbols-outlined">settings</span>
+    <span>Settings</span>
+  </a>
+</nav>

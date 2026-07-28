@@ -1,0 +1,89 @@
+<div class="notif-page">
+  <div class="notif-page__header">
+    <div>
+      <h1 class="notif-page__title">Communication Templates</h1>
+      <p class="notif-page__subtitle">Manage reusable notification templates for events and channels.</p>
+    </div>
+    <button type="button" class="notif-btn notif-btn--primary" (click)="openCreate()">
+      <span class="material-symbols-outlined">add</span>
+      Create New Template
+    </button>
+  </div>
+
+  @if (showForm()) {
+    <div class="notif-template-form">
+      <h3>{{ editingId() ? 'Edit Template' : 'Create Template' }}</h3>
+      @if (!editingId()) {
+        <label><span>Code</span><input type="text" [(ngModel)]="form.code" placeholder="template_code" /></label>
+      }
+      <label><span>Name</span><input type="text" [(ngModel)]="form.name" /></label>
+      <label><span>Event Code</span><input type="text" [(ngModel)]="form.eventCode" /></label>
+      <label><span>Channel</span>
+        <select [(ngModel)]="form.channel">
+          <option value="in_app">In-App</option>
+          <option value="email">Email</option>
+          <option value="push">Push</option>
+          <option value="sms">SMS</option>
+        </select>
+      </label>
+      <label><span>Subject</span><input type="text" [(ngModel)]="form.subject" /></label>
+      <label><span>Body Template</span><textarea [(ngModel)]="form.bodyTemplate" rows="4"></textarea></label>
+      <label class="notif-template-form__checkbox">
+        <input type="checkbox" [(ngModel)]="form.isActive" /> Active
+      </label>
+      <div class="notif-template-form__actions">
+        <button type="button" class="notif-btn notif-btn--secondary" (click)="showForm.set(false)">Cancel</button>
+        <button type="button" class="notif-btn notif-btn--primary" [disabled]="pageState() === 'saving'" (click)="save()">Save</button>
+      </div>
+    </div>
+  }
+
+  <div class="notif-broadcast-search">
+    <input type="text" placeholder="Search templates..." [(ngModel)]="searchInput" (keyup.enter)="onSearch()" />
+    <button type="button" class="notif-btn notif-btn--secondary" (click)="onSearch()">Search</button>
+  </div>
+
+  @if (pageState() === 'loading') {
+    <div class="notif-loading"><mat-spinner diameter="40" /></div>
+  } @else if (pageState() === 'error') {
+    <div class="notif-error">
+      <p>{{ errorMessage() }}</p>
+      <button type="button" class="notif-btn notif-btn--primary" (click)="load()">Retry</button>
+    </div>
+  } @else if (pageState() === 'empty') {
+    <div class="notif-empty">
+      <span class="material-symbols-outlined">description</span>
+      <p>No templates found</p>
+    </div>
+  } @else {
+    <div class="notif-template-table-wrap">
+      <table class="notif-template-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Code</th>
+            <th>Event</th>
+            <th>Channel</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (t of templates(); track t.id) {
+            <tr>
+              <td>{{ t.name }}</td>
+              <td><code>{{ t.code }}</code></td>
+              <td>{{ t.eventCode }}</td>
+              <td>{{ t.channel }}</td>
+              <td><span class="notif-template-status" [class.notif-template-status--active]="t.isActive">{{ t.isActive ? 'Active' : 'Inactive' }}</span></td>
+              <td>
+                <button type="button" class="notif-btn notif-btn--ghost" (click)="openEdit(t)">Edit</button>
+                <button type="button" class="notif-btn notif-btn--ghost" (click)="deleteTemplate(t.id)">Delete</button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

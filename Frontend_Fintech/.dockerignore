@@ -1,0 +1,15 @@
+node_modules
+dist
+.angular
+coverage
+.env
+.env.*
+!.env.example
+*.log
+.git
+.gitignore
+README.md
+Dockerfile
+.dockerignore
+**/*.spec.ts
+**/*.test.ts

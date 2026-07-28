@@ -1,0 +1,142 @@
+<div class="org-page">
+  <nav class="org-breadcrumb">
+    <a routerLink="/organizations">Organizations</a>
+    <span class="material-symbols-outlined">chevron_right</span>
+    <span>{{ isEdit() ? 'Edit' : 'Create' }}</span>
+  </nav>
+
+  <div class="org-page__header">
+    <div>
+      <h1 class="org-page__title">{{ isEdit() ? 'Edit Organization' : 'Create Organization' }}</h1>
+      <p class="org-page__subtitle">Configure company profile, localization, and primary contacts.</p>
+    </div>
+    <div style="display:flex;gap:8px;">
+      <a routerLink="/organizations" class="org-btn org-btn--secondary">Discard</a>
+      <button type="button" class="org-btn org-btn--primary" [disabled]="pageState() === 'saving'" (click)="save()">
+        <span class="material-symbols-outlined">save</span>
+        {{ pageState() === 'saving' ? 'Saving...' : 'Save Configuration' }}
+      </button>
+    </div>
+  </div>
+
+  @if (pageState() === 'loading') {
+    <div class="org-loading"><mat-spinner diameter="40" /><p>Loading...</p></div>
+  } @else if (pageState() === 'error') {
+    <div class="org-error">
+      <span class="material-symbols-outlined">error</span>
+      <p>{{ errorMessage() }}</p>
+      <a routerLink="/organizations" class="org-btn org-btn--primary">Back</a>
+    </div>
+  } @else {
+    @if (errorMessage()) {
+      <div class="org-error" style="padding:16px;margin-bottom:16px;"><p>{{ errorMessage() }}</p></div>
+    }
+    <div class="org-table-wrap" style="padding:24px;">
+      <h3 style="margin:0 0 16px;">Company Profile</h3>
+      <div class="org-form-grid">
+        @if (!isEdit()) {
+          <div>
+            <label>Organization Code</label>
+            <input [(ngModel)]="model.code" placeholder="acme-financial" />
+          </div>
+        }
+        <div>
+          <label>Legal Business Name</label>
+          <input [(ngModel)]="model.legalName" />
+        </div>
+        <div>
+          <label>Display Name</label>
+          <input [(ngModel)]="model.displayName" />
+        </div>
+        <div>
+          <label>DBA (Doing Business As)</label>
+          <input [(ngModel)]="model.dbaName" />
+        </div>
+        <div>
+          <label>Tax ID / VAT</label>
+          <input [(ngModel)]="model.taxId" />
+        </div>
+        <div>
+          <label>Industry</label>
+          <select [(ngModel)]="model.industry">
+            <option>Financial Services</option>
+            <option>E-commerce</option>
+            <option>Software as a Service</option>
+            <option>Professional Services</option>
+          </select>
+        </div>
+        <div>
+          <label>Website</label>
+          <input [(ngModel)]="model.website" placeholder="https://" />
+        </div>
+        <div>
+          <label>Status</label>
+          <select [(ngModel)]="model.status">
+            <option value="pending">Pending</option>
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
+          </select>
+        </div>
+        <div class="org-form-grid__full">
+          <label>Description</label>
+          <textarea rows="3" [(ngModel)]="model.description"></textarea>
+        </div>
+      </div>
+
+      <h3 style="margin:32px 0 16px;">Localization</h3>
+      <div class="org-form-grid">
+        <div>
+          <label>Base Currency</label>
+          <select [(ngModel)]="model.baseCurrency">
+            <option value="USD">USD</option>
+            <option value="GBP">GBP</option>
+            <option value="EUR">EUR</option>
+            <option value="SGD">SGD</option>
+          </select>
+        </div>
+        <div>
+          <label>Timezone</label>
+          <input [(ngModel)]="model.timezone" />
+        </div>
+        <div>
+          <label>Locale</label>
+          <input [(ngModel)]="model.locale" />
+        </div>
+        <div>
+          <label>Primary Region</label>
+          <input [(ngModel)]="model.primaryRegion" />
+        </div>
+        <div>
+          <label>Logo Initials</label>
+          <input [(ngModel)]="model.logoInitials" maxlength="8" />
+        </div>
+        <div>
+          <label>Primary Color</label>
+          <input [(ngModel)]="model.primaryColor" />
+        </div>
+      </div>
+
+      @if (!isEdit()) {
+        <h3 style="margin:32px 0 16px;">Primary Address</h3>
+        <div class="org-form-grid">
+          <div class="org-form-grid__full">
+            <label>Address Line</label>
+            <input [(ngModel)]="model.addressLine1" />
+          </div>
+          <div><label>City</label><input [(ngModel)]="model.city" /></div>
+          <div><label>State / Province</label><input [(ngModel)]="model.stateProvince" /></div>
+          <div><label>Postal Code</label><input [(ngModel)]="model.postalCode" /></div>
+          <div><label>Country</label><input [(ngModel)]="model.countryCode" maxlength="2" /></div>
+        </div>
+
+        <h3 style="margin:32px 0 16px;">Primary Contact</h3>
+        <div class="org-form-grid">
+          <div><label>First Name</label><input [(ngModel)]="model.contactFirstName" /></div>
+          <div><label>Last Name</label><input [(ngModel)]="model.contactLastName" /></div>
+          <div><label>Email</label><input type="email" [(ngModel)]="model.contactEmail" /></div>
+          <div><label>Phone</label><input [(ngModel)]="model.contactPhone" /></div>
+        </div>
+      }
+    </div>
+  }
+</div>

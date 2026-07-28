@@ -1,0 +1,61 @@
+@use '../../styles/dashboard-tokens' as *;
+
+:host {
+  display: flex;
+  min-height: 100vh;
+  background: $dash-background;
+  font-family: $dash-font;
+}
+
+.dash-main {
+  flex: 1;
+  margin-left: $dash-sidenav-width;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100vh;
+}
+
+.dash-content {
+  flex: 1;
+  padding: 24px;
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.dash-mobile-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: $dash-surface;
+  border-top: 1px solid $dash-outline-variant;
+  z-index: 50;
+  justify-content: space-around;
+  align-items: center;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    text-decoration: none;
+    color: $dash-outline;
+    font-size: 10px;
+    font-weight: 600;
+
+    .material-symbols-outlined { font-size: 22px; }
+
+    &--active { color: $dash-primary; }
+  }
+}
+
+@media (max-width: 767px) {
+  .dash-main { margin-left: 0; padding-bottom: 64px; }
+  .dash-mobile-nav { display: flex; }
+  .dash-content { padding: 16px; }
+}

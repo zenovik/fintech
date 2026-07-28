@@ -1,0 +1,47 @@
+<div class="session-expired">
+  <div class="session-expired__backdrop" aria-hidden="true"></div>
+
+  <div class="session-expired__modal" role="dialog" aria-labelledby="session-expired-title">
+    <div class="session-expired__header">
+      <div class="session-expired__pattern" aria-hidden="true"></div>
+      <div class="session-expired__icon">
+        <span class="material-symbols-outlined">timer_off</span>
+      </div>
+    </div>
+
+    <div class="session-expired__body">
+      <h1 id="session-expired-title" class="session-expired__title">Session Expired</h1>
+      <p class="session-expired__text">
+        For your security, you've been logged out due to 15 minutes of inactivity. Please sign in
+        again to continue managing your portal.
+      </p>
+
+      <div class="session-expired__reason">
+        <div class="session-expired__reason-icon">
+          <span class="material-symbols-outlined">lock_clock</span>
+        </div>
+        <div>
+          <div class="session-expired__reason-label">Reason</div>
+          <div class="session-expired__reason-value">Inactivity Timeout</div>
+        </div>
+      </div>
+
+      <div class="session-expired__actions">
+        <a class="auth-btn" [routerLink]="loginRoute">
+          Login Again
+          <span class="material-symbols-outlined">login</span>
+        </a>
+        <button type="button" class="session-expired__secondary" (click)="goHome()">
+          Go to Homepage
+        </button>
+      </div>
+    </div>
+
+    <footer class="session-expired__footer">
+      <a href="#">
+        <span class="material-symbols-outlined">contact_support</span>
+        Contact Security Support
+      </a>
+    </footer>
+  </div>
+</div>

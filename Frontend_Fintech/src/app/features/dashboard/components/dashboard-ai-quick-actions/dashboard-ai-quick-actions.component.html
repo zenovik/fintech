@@ -1,0 +1,30 @@
+<section class="dash-ai-quick">
+  <h3>Quick actions</h3>
+  <div class="dash-ai-quick__grid">
+    @for (action of quickActions; track action.id) {
+      <button
+        type="button"
+        class="dash-ai-quick__card"
+        [disabled]="disabled()"
+        (click)="quickAction.emit({ action: action.id, label: action.label })"
+      >
+        <span class="material-symbols-outlined">bolt</span>
+        <span>{{ action.label }}</span>
+      </button>
+    }
+  </div>
+
+  <h3>Suggested questions</h3>
+  <div class="dash-ai-quick__chips">
+    @for (question of suggestedQuestions; track question) {
+      <button
+        type="button"
+        class="dash-ai-quick__chip"
+        [disabled]="disabled()"
+        (click)="suggestedQuestion.emit(question)"
+      >
+        {{ question }}
+      </button>
+    }
+  </div>
+</section>

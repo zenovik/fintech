@@ -1,0 +1,220 @@
+@if (state.pageState() === 'loading') {
+  <div class="merchant-details__loading">
+    <mat-spinner diameter="48"></mat-spinner>
+    <p>Loading merchant details...</p>
+  </div>
+} @else if (state.pageState() === 'error') {
+  <div class="merchant-details__error">
+    <span class="material-symbols-outlined">error</span>
+    <h3>{{ state.errorMessage() }}</h3>
+    <button type="button" class="btn btn--primary" (click)="state.retry()">Retry</button>
+    <a routerLink="/merchants" class="btn btn--outline">Back to List</a>
+  </div>
+} @else {
+  @if (state.selectedMerchant(); as m) {
+  <div class="merchant-details">
+    <div class="page-header">
+      <div>
+        <nav class="breadcrumb">
+          <a routerLink="/dashboard/executive">Home</a>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <a routerLink="/merchants">Merchants</a>
+          <span class="material-symbols-outlined">chevron_right</span>
+          <span class="breadcrumb__active">{{ m.displayName }}</span>
+        </nav>
+        <div class="merchant-header">
+          <div class="merchant-header__avatar">{{ m.logoInitials || m.displayName[0] }}</div>
+          <div>
+            <h1>{{ m.displayName }}</h1>
+            <p>MID: {{ m.merchantCode }} · {{ m.status | titlecase }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="page-header__actions">
+        @if (rbac.hasPermission(perms.MERCHANTS_WRITE)) {
+          <button type="button" class="btn btn--outline" (click)="openStatusDialog()">Change Status</button>
+          <a [routerLink]="['/merchants', m.id, 'edit']" class="btn btn--primary">Edit Merchant</a>
+        }
+        @if (rbac.hasPermission(perms.MERCHANTS_DELETE)) {
+          <button type="button" class="btn btn--danger" (click)="confirmDelete()">Delete</button>
+        }
+      </div>
+    </div>
+
+    <div class="summary-cards">
+      <div class="summary-card">
+        <span class="summary-card__label">Daily Volume</span>
+        <span class="summary-card__value">{{ m.dailyVolume | currency: 'USD' : 'symbol' : '1.0-0' }}</span>
+      </div>
+      <div class="summary-card">
+        <span class="summary-card__label">Wallet Balance</span>
+        <span class="summary-card__value">{{ m.walletBalance | currency: 'USD' : 'symbol' : '1.0-0' }}</span>
+      </div>
+      <div class="summary-card">
+        <span class="summary-card__label">KYC Status</span>
+        <span class="summary-card__value kyc--{{ m.kycStatus }}">{{ m.kycStatus | titlecase }}</span>
+      </div>
+      <div class="summary-card">
+        <span class="summary-card__label">Risk Level</span>
+        <span class="summary-card__value">{{ m.riskLevel | titlecase }}</span>
+      </div>
+    </div>
+
+    <mat-tab-group [(selectedIndex)]="activeTab" class="detail-tabs">
+      <mat-tab label="Profile">
+        <div class="tab-content">
+          <div class="info-grid">
+            <div class="info-block">
+              <h3>Business Information</h3>
+              <dl>
+                <dt>Legal Name</dt><dd>{{ m.legalName }}</dd>
+                <dt>Entity Type</dt><dd>{{ m.entityType || '—' }}</dd>
+                <dt>Registration Number</dt><dd>{{ m.registrationNumber || '—' }}</dd>
+                <dt>Business Type</dt><dd>{{ m.businessType || '—' | titlecase }}</dd>
+                <dt>Website</dt>
+                <dd>
+                  @if (m.website) {
+                    <a [href]="m.website" target="_blank" rel="noopener">{{ m.website }}</a>
+                  } @else { — }
+                </dd>
+                <dt>Monthly TPV Estimate</dt>
+                <dd>{{ m.monthlyTpvEstimate ? (m.monthlyTpvEstimate | currency: 'USD') : '—' }}</dd>
+              </dl>
+            </div>
+            <div class="info-block">
+              <h3>Address</h3>
+              <p>{{ primaryAddress() }}</p>
+              <h3>Region</h3>
+              <p>{{ m.region.name || m.region.code || '—' }}</p>
+              <h3>Onboarded</h3>
+              <p>{{ m.onboardedAt ? (m.onboardedAt | date: 'medium') : 'Not yet onboarded' }}</p>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Contacts">
+        <div class="tab-content">
+          @if (!m.contacts.length) {
+            <p class="empty-text">No contacts on file.</p>
+          } @else {
+            <div class="contact-list">
+              @for (c of m.contacts; track c.id) {
+                <div class="contact-card">
+                  <div class="contact-card__header">
+                    <strong>{{ c.firstName }} {{ c.lastName }}</strong>
+                    @if (c.isPrimary) { <span class="badge badge--primary">Primary</span> }
+                  </div>
+                  <p>{{ c.jobTitle || c.contactType | titlecase }}</p>
+                  <p><span class="material-symbols-outlined">mail</span> {{ c.email }}</p>
+                  @if (c.phone) {
+                    <p><span class="material-symbols-outlined">phone</span> {{ c.phone }}</p>
+                  }
+                </div>
+              }
+            </div>
+          }
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Documents">
+        <div class="tab-content">
+          @if (!m.documents.length) {
+            <p class="empty-text">No documents uploaded.</p>
+          } @else {
+            <table class="doc-table">
+              <thead>
+                <tr><th>Document</th><th>Type</th><th>Status</th><th>Uploaded</th></tr>
+              </thead>
+              <tbody>
+                @for (d of m.documents; track d.id) {
+                  <tr>
+                    <td>{{ d.fileName }}</td>
+                    <td>{{ d.documentType | titlecase }}</td>
+                    <td><span class="doc-status doc-status--{{ d.status }}">{{ d.status | titlecase }}</span></td>
+                    <td>{{ d.createdAt | date: 'mediumDate' }}</td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          }
+        </div>
+      </mat-tab>
+
+      <mat-tab label="API Keys">
+        <div class="tab-content">
+          @if (!m.apiKeys.length) {
+            <p class="empty-text">No API keys configured.</p>
+          } @else {
+            <div class="api-key-list">
+              @for (k of m.apiKeys; track k.id) {
+                <div class="api-key-card">
+                  <div class="api-key-card__header">
+                    <strong>{{ k.keyName }}</strong>
+                    <span class="badge" [class.badge--active]="k.isActive">{{ k.isActive ? 'Active' : 'Inactive' }}</span>
+                  </div>
+                  <p>{{ k.apiKeyPrefix }}••••••••</p>
+                  <p class="text-muted">{{ k.environment | titlecase }} · Last used {{ k.lastUsedAt ? (k.lastUsedAt | date: 'short') : 'Never' }}</p>
+                </div>
+              }
+            </div>
+          }
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Transactions">
+        <div class="tab-content">
+          @if (txnLoading()) {
+            <mat-spinner diameter="32"></mat-spinner>
+          } @else if (!merchantTransactions().length) {
+            <p class="empty-text">No recent transactions.</p>
+          } @else {
+            <table class="doc-table">
+              <thead>
+                <tr><th>Reference</th><th>Amount</th><th>Method</th><th>Status</th><th>Date</th></tr>
+              </thead>
+              <tbody>
+                @for (t of merchantTransactions(); track t.id) {
+                  <tr>
+                    <td><a [routerLink]="['/transactions', t.id]">{{ t.transactionRef }}</a></td>
+                    <td>{{ t.amount | currency: t.currency }}</td>
+                    <td>{{ t.paymentMethod.detail }}</td>
+                    <td>{{ t.status.label }}</td>
+                    <td>{{ t.processedAt | date: 'short' }}</td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          }
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Settlements">
+        <div class="tab-content">
+          @if (stlLoading()) {
+            <mat-spinner diameter="32"></mat-spinner>
+          } @else if (!merchantSettlements().length) {
+            <p class="empty-text">No settlements for this merchant.</p>
+          } @else {
+            <table class="doc-table">
+              <thead>
+                <tr><th>Reference</th><th>Amount</th><th>Status</th><th>Processed</th></tr>
+              </thead>
+              <tbody>
+                @for (s of merchantSettlements(); track s.id) {
+                  <tr>
+                    <td><a [routerLink]="['/settlements', s.id]">{{ s.settlementRef }}</a></td>
+                    <td>{{ s.formattedAmount }}</td>
+                    <td>{{ s.status | titlecase }}</td>
+                    <td>{{ s.processedAt ? (s.processedAt | date: 'short') : '—' }}</td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          }
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+  }
+}

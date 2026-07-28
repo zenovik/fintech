@@ -1,0 +1,28 @@
+<div class="co-admin-page">
+  <header class="co-admin-page__header">
+    <h1>Checkout Themes</h1>
+    <p>Platform-wide theme presets for hosted checkout</p>
+  </header>
+
+  @if (pageState() === 'loading') {
+    <div class="co-admin-page__center"><mat-spinner diameter="36" /></div>
+  } @else if (pageState() === 'error') {
+    <p class="co-admin-page__error">Failed to load themes.</p>
+  } @else {
+    <div class="co-theme-grid">
+      @for (t of themes(); track t.id) {
+        <article class="co-theme-card" [style.--co-primary]="t.primaryColor" [style.--co-accent]="t.accentColor">
+          <h2>{{ t.name }}</h2>
+          <p><code>{{ t.code }}</code></p>
+          <div class="co-theme-card__swatches">
+            <span [style.background]="t.primaryColor" title="Primary"></span>
+            <span [style.background]="t.secondaryColor" title="Secondary"></span>
+            <span [style.background]="t.accentColor" title="Accent"></span>
+          </div>
+          <p class="co-theme-card__meta">{{ t.fontFamily }} · {{ t.buttonStyle }} · {{ t.borderRadius }}</p>
+          <button type="button" class="co-theme-card__btn">Sample button</button>
+        </article>
+      }
+    </div>
+  }
+</div>

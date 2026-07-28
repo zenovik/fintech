@@ -1,0 +1,360 @@
+@use '../../styles/auth-tokens' as *;
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+.auth-card {
+  @include auth-glass-card;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 32px 36px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  &__header {
+    margin: 0 0 24px;
+  }
+
+  &__title {
+    font-family: $auth-font-family;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: $auth-on-surface;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    line-height: 1.45;
+    color: $auth-on-surface-variant;
+    margin: 0;
+  }
+}
+
+.auth-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  background: $auth-error-container;
+  color: $auth-on-error-container;
+  border-radius: $auth-radius-lg;
+  font-size: 14px;
+  box-sizing: border-box;
+
+  .material-symbols-outlined {
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+
+  &__label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+  }
+
+  &__label {
+    font-size: 13px;
+    font-weight: 500;
+    color: $auth-on-surface-variant;
+    margin: 0;
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: $auth-outline;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  &__input {
+    @include auth-input;
+
+    &--email {
+      padding-right: 14px;
+    }
+  }
+
+  &__toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: $auth-outline;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+    .material-symbols-outlined { font-size: 20px; }
+
+    &:hover {
+      color: $auth-on-surface;
+    }
+  }
+
+  &__error {
+    font-size: 12px;
+    color: $auth-error;
+    margin: 0;
+  }
+}
+
+.auth-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: $auth-primary;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &--bold {
+    font-weight: 600;
+    font-size: 14px;
+    color: $auth-primary;
+  }
+}
+
+.auth-remember {
+  margin: 2px 0 6px;
+}
+
+.auth-btn {
+  @include auth-btn-primary;
+  margin-top: 4px;
+
+  .material-symbols-outlined {
+    font-size: 18px;
+  }
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: $auth-outline-variant;
+  }
+
+  span {
+    font-size: 12px;
+    font-weight: 500;
+    color: $auth-outline;
+    white-space: nowrap;
+  }
+}
+
+.auth-sso {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 44px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    background: $auth-surface-container-lowest;
+    border: 1px solid $auth-outline-variant;
+    border-radius: $auth-radius-lg;
+    font-family: $auth-font-family;
+    font-size: 14px;
+    font-weight: 500;
+    color: $auth-on-surface-variant;
+    cursor: not-allowed;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.auth-footer {
+  margin-top: 28px;
+  text-align: center;
+  font-size: 14px;
+  color: $auth-on-surface-variant;
+  line-height: 1.5;
+
+  p { margin: 0; }
+}
+
+.auth-status {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 12px;
+  color: $auth-outline;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #22c55e;
+  }
+
+  &__sep {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: $auth-outline-variant;
+  }
+
+  &__link {
+    color: $auth-outline;
+    text-decoration: none;
+    &:hover {
+      color: $auth-on-surface-variant;
+    }
+  }
+}
+
+// Login-page layout overrides (scoped via class on app-auth-layout)
+:host ::ng-deep app-auth-layout.login-page {
+  .auth-layout__main {
+    max-width: $auth-card-width;
+    width: 100%;
+  }
+
+  .auth-layout__blob--tl {
+    display: none;
+  }
+
+  .auth-layout__blob--br {
+    bottom: -20%;
+    right: -15%;
+    width: 50%;
+    height: 50%;
+    background: rgba($auth-primary, 0.04);
+  }
+
+  .auth-layout__rings {
+    display: none;
+  }
+
+  .auth-layout__frames {
+    display: block;
+    position: relative;
+    width: 220px;
+    height: 220px;
+  }
+
+  .auth-layout__frame {
+    position: absolute;
+    border: 1px solid rgba($auth-primary, 0.12);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 40px rgba($auth-primary, 0.06);
+
+    &--1 {
+      width: 200px;
+      height: 200px;
+      bottom: 0;
+      right: 0;
+    }
+
+    &--2 {
+      width: 150px;
+      height: 150px;
+      bottom: 28px;
+      right: 28px;
+      border-color: rgba($auth-primary, 0.18);
+    }
+
+    &--3 {
+      width: 100px;
+      height: 100px;
+      bottom: 52px;
+      right: 52px;
+      border-color: rgba($auth-primary, 0.22);
+    }
+  }
+
+  .auth-layout__aside {
+    right: 8%;
+    bottom: 8%;
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+  }
+}
+
+:host ::ng-deep app-auth-layout.login-page + .auth-brand,
+:host ::ng-deep app-auth-layout.login-page ~ * .auth-brand {
+  margin-bottom: 28px;
+}
+
+:host ::ng-deep .mat-mdc-checkbox {
+  --mdc-checkbox-state-layer-size: 36px;
+
+  .mdc-label {
+    font-size: 14px;
+    font-weight: 400;
+    color: $auth-on-surface-variant;
+    padding-left: 4px;
+  }
+}
