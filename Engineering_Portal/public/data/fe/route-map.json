@@ -1,0 +1,5610 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T18:43:41.784Z",
+    "generatorVersion": "2.0.0-ast"
+  },
+  "routes": [
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 14
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 15
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 16
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 17
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 18
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 19
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 20
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 21
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 22
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 23
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 24
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 25
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 26
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 27
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 28
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 29
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 30
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 31
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 32
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 33
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 34
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 35
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 36
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 37
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 38
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 39
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 40
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 41
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 42
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 43
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 44
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 45
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 46
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 47
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 48
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 49
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 50
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.config.ts",
+        "line": 51
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.ACCEPTANCE_ANALYTICS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/acceptance/acceptance.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/analytics",
+      "component": "AcceptanceAnalyticsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/acceptance-analytics/acceptance-analytics.component",
+        "exportName": "AcceptanceAnalyticsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/acceptance/acceptance.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/acceptance/acceptance.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.ACTIVITY_CENTER_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/activity/activity.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "ActivityTimelineComponent",
+      "lazyComponent": {
+        "importPath": "./pages/activity-timeline/activity-timeline.component",
+        "exportName": "ActivityTimelineComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/activity/activity.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 9
+      }
+    },
+    {
+      "path": "/",
+      "component": "AuditShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "path": "/",
+      "component": "AuditDashboardComponent",
+      "lazyComponent": {
+        "importPath": "./pages/audit-dashboard/audit-dashboard.component",
+        "exportName": "AuditDashboardComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.AUDIT_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "path": "/timeline",
+      "component": "AuditTimelineComponent",
+      "lazyComponent": {
+        "importPath": "./pages/audit-timeline/audit-timeline.component",
+        "exportName": "AuditTimelineComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.AUDIT_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "path": "/api-logs",
+      "component": "ApiLogsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/api-logs/api-logs.component",
+        "exportName": "ApiLogsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.AUDIT_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "path": "/webhook-logs",
+      "component": "WebhookLogsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/webhook-logs/webhook-logs.component",
+        "exportName": "WebhookLogsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.AUDIT_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 39
+      }
+    },
+    {
+      "path": "/:id",
+      "component": "AuditDetailsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/audit-details/audit-details.component",
+        "exportName": "AuditDetailsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.AUDIT_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 46
+      }
+    },
+    {
+      "path": "/",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts",
+        "line": 6
+      }
+    },
+    {
+      "path": "/login",
+      "component": "LoginComponent",
+      "lazyComponent": {
+        "importPath": "./pages/login/login.component",
+        "exportName": "LoginComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "guestGuard"
+      ],
+      "title": "Sign In | Merchant Pro",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts",
+        "line": 11
+      }
+    },
+    {
+      "path": "/forgot-password",
+      "component": "ForgotPasswordComponent",
+      "lazyComponent": {
+        "importPath": "./pages/forgot-password/forgot-password.component",
+        "exportName": "ForgotPasswordComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "guestGuard"
+      ],
+      "title": "Forgot Password | Merchant Pro",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "path": "/reset-password",
+      "component": "ResetPasswordComponent",
+      "lazyComponent": {
+        "importPath": "./pages/reset-password/reset-password.component",
+        "exportName": "ResetPasswordComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "guestGuard"
+      ],
+      "title": "Reset Password | Merchant Pro",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "path": "/verify-otp",
+      "component": "VerifyOtpComponent",
+      "lazyComponent": {
+        "importPath": "./pages/verify-otp/verify-otp.component",
+        "exportName": "VerifyOtpComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "guestGuard"
+      ],
+      "title": "Verify Identity | Merchant Pro",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "path": "/session-expired",
+      "component": "SessionExpiredComponent",
+      "lazyComponent": {
+        "importPath": "./pages/session-expired/session-expired.component",
+        "exportName": "SessionExpiredComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": "Session Expired | Merchant Pro",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts",
+        "line": 42
+      }
+    },
+    {
+      "path": "/access-denied",
+      "component": "AccessDeniedComponent",
+      "lazyComponent": {
+        "importPath": "./pages/access-denied/access-denied.component",
+        "exportName": "AccessDeniedComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": "Access Denied | Merchant Pro",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts",
+        "line": 50
+      }
+    },
+    {
+      "path": "/sessions",
+      "component": "ActiveSessionsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/active-sessions/active-sessions.component",
+        "exportName": "ActiveSessionsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "authGuard"
+      ],
+      "title": "Active Sessions | Merchant Pro",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts",
+        "line": 56
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.CHARGEBACKS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/chargebacks/chargebacks.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "ChargebackListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/chargeback-list/chargeback-list.component",
+        "exportName": "ChargebackListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/chargebacks/chargebacks.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/create",
+      "component": "ChargebackCreateComponent",
+      "lazyComponent": {
+        "importPath": "./pages/chargeback-create/chargeback-create.component",
+        "exportName": "ChargebackCreateComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.CHARGEBACKS_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/chargebacks/chargebacks.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "path": "/:id",
+      "component": "ChargebackDetailsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/chargeback-details/chargeback-details.component",
+        "exportName": "ChargebackDetailsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/chargebacks/chargebacks.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout/constants/checkout.constants.ts",
+        "line": 9
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout/constants/checkout.constants.ts",
+        "line": 10
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout/constants/checkout.constants.ts",
+        "line": 11
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout/constants/checkout.constants.ts",
+        "line": 12
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout/constants/checkout.constants.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout/constants/checkout.constants.ts",
+        "line": 14
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout/constants/checkout.constants.ts",
+        "line": 15
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.CHECKOUT_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout-admin/checkout-admin.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/sessions",
+      "component": "CheckoutSessionListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/checkout-session-list/checkout-session-list.component",
+        "exportName": "CheckoutSessionListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout-admin/checkout-admin.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/sessions/:id",
+      "component": "CheckoutSessionDetailComponent",
+      "lazyComponent": {
+        "importPath": "./pages/checkout-session-detail/checkout-session-detail.component",
+        "exportName": "CheckoutSessionDetailComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout-admin/checkout-admin.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "path": "/analytics",
+      "component": "CheckoutAnalyticsDashboardComponent",
+      "lazyComponent": {
+        "importPath": "./pages/checkout-analytics-dashboard/checkout-analytics-dashboard.component",
+        "exportName": "CheckoutAnalyticsDashboardComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.CHECKOUT_ANALYTICS)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout-admin/checkout-admin.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "path": "/branding",
+      "component": "CheckoutBrandingManagerComponent",
+      "lazyComponent": {
+        "importPath": "./pages/checkout-branding-manager/checkout-branding-manager.component",
+        "exportName": "CheckoutBrandingManagerComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.CHECKOUT_BRANDING)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout-admin/checkout-admin.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "path": "/themes",
+      "component": "CheckoutThemeListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/checkout-theme-list/checkout-theme-list.component",
+        "exportName": "CheckoutThemeListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout-admin/checkout-admin.routes.ts",
+        "line": 39
+      }
+    },
+    {
+      "path": "/",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout-admin/checkout-admin.routes.ts",
+        "line": 45
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.CUSTOMERS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/customers/customers.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "CustomerListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/customer-list/customer-list.component",
+        "exportName": "CustomerListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/customers/customers.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/create",
+      "component": "CustomerFormComponent",
+      "lazyComponent": {
+        "importPath": "./pages/customer-form/customer-form.component",
+        "exportName": "CustomerFormComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.CUSTOMERS_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/customers/customers.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "path": "/:id",
+      "component": "CustomerDetailsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/customer-details/customer-details.component",
+        "exportName": "CustomerDetailsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/customers/customers.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "path": "/:id/edit",
+      "component": "CustomerFormComponent",
+      "lazyComponent": {
+        "importPath": "./pages/customer-form/customer-form.component",
+        "exportName": "CustomerFormComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.CUSTOMERS_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/customers/customers.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/dashboard/constants/dashboard-ai.constants.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/dashboard/constants/dashboard-ai.constants.ts",
+        "line": 9
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/dashboard/constants/dashboard-ai.constants.ts",
+        "line": 10
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/dashboard/constants/dashboard-ai.constants.ts",
+        "line": 11
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/dashboard/constants/dashboard-ai.constants.ts",
+        "line": 12
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/dashboard/constants/dashboard-ai.constants.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/dashboard/constants/dashboard-ai.constants.ts",
+        "line": 14
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/dashboard/constants/dashboard-ai.constants.ts",
+        "line": 15
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/dashboard/constants/dashboard-ai.constants.ts",
+        "line": 16
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/dashboard/constants/dashboard.constants.ts",
+        "line": 22
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/dashboard/constants/dashboard.constants.ts",
+        "line": 23
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/dashboard/constants/dashboard.constants.ts",
+        "line": 24
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.DASHBOARD_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/dashboard/dashboard.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/dashboard/dashboard.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/executive",
+      "component": "ExecutiveOverviewComponent",
+      "lazyComponent": {
+        "importPath": "./pages/executive-overview/executive-overview.component",
+        "exportName": "ExecutiveOverviewComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/dashboard/dashboard.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.DEVELOPER_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/developer/developer.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "DeveloperDashboardComponent",
+      "lazyComponent": {
+        "importPath": "./pages/developer-dashboard/developer-dashboard.component",
+        "exportName": "DeveloperDashboardComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/developer/developer.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.DEVICES_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/devices/devices.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "DevicesListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/devices-list/devices-list.component",
+        "exportName": "DevicesListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/devices/devices.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.FRAUD_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/fraud/fraud.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "FraudQueueComponent",
+      "lazyComponent": {
+        "importPath": "./pages/fraud-queue/fraud-queue.component",
+        "exportName": "FraudQueueComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/fraud/fraud.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.INVOICES_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/invoices/invoices.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "InvoiceListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/invoice-list/invoice-list.component",
+        "exportName": "InvoiceListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/invoices/invoices.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/create",
+      "component": "InvoiceCreateComponent",
+      "lazyComponent": {
+        "importPath": "./pages/invoice-create/invoice-create.component",
+        "exportName": "InvoiceCreateComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.INVOICES_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/invoices/invoices.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "path": "/:id/edit",
+      "component": "InvoiceEditComponent",
+      "lazyComponent": {
+        "importPath": "./pages/invoice-edit/invoice-edit.component",
+        "exportName": "InvoiceEditComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.INVOICES_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/invoices/invoices.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "path": "/:id",
+      "component": "InvoiceDetailsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/invoice-details/invoice-details.component",
+        "exportName": "InvoiceDetailsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/invoices/invoices.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.MERCHANTS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant/merchant.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "MerchantListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/merchant-list/merchant-list.component",
+        "exportName": "MerchantListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant/merchant.routes.ts",
+        "line": 12
+      }
+    },
+    {
+      "path": "/create",
+      "component": "MerchantFormComponent",
+      "lazyComponent": {
+        "importPath": "./pages/merchant-form/merchant-form.component",
+        "exportName": "MerchantFormComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.MERCHANTS_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant/merchant.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "path": "/:id",
+      "component": "MerchantDetailsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/merchant-details/merchant-details.component",
+        "exportName": "MerchantDetailsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant/merchant.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "path": "/:id/edit",
+      "component": "MerchantFormComponent",
+      "lazyComponent": {
+        "importPath": "./pages/merchant-form/merchant-form.component",
+        "exportName": "MerchantFormComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.MERCHANTS_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant/merchant.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.MERCHANT_ONBOARDING_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-onboarding/merchant-onboarding.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "OnboardingDashboardComponent",
+      "lazyComponent": {
+        "importPath": "./pages/onboarding-dashboard/onboarding-dashboard.component",
+        "exportName": "OnboardingDashboardComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-onboarding/merchant-onboarding.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/create",
+      "component": "OnboardingWizardComponent",
+      "lazyComponent": {
+        "importPath": "./pages/onboarding-wizard/onboarding-wizard.component",
+        "exportName": "OnboardingWizardComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.MERCHANT_ONBOARDING_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-onboarding/merchant-onboarding.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "path": "/:id/wizard",
+      "component": "OnboardingWizardComponent",
+      "lazyComponent": {
+        "importPath": "./pages/onboarding-wizard/onboarding-wizard.component",
+        "exportName": "OnboardingWizardComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.MERCHANT_ONBOARDING_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-onboarding/merchant-onboarding.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "path": "/:id",
+      "component": "OnboardingDetailComponent",
+      "lazyComponent": {
+        "importPath": "./pages/onboarding-detail/onboarding-detail.component",
+        "exportName": "OnboardingDetailComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-onboarding/merchant-onboarding.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-onboarding/pages/onboarding-wizard/onboarding-wizard.component.ts",
+        "line": 137
+      }
+    },
+    {
+      "path": "",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-onboarding/pages/onboarding-wizard/onboarding-wizard.component.ts",
+        "line": 138
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.MERCHANT_PORTAL_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-portal/merchant-portal.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "MerchantPaymentPortalComponent",
+      "lazyComponent": {
+        "importPath": "./pages/merchant-payment-portal/merchant-payment-portal.component",
+        "exportName": "MerchantPaymentPortalComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-portal/merchant-portal.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.MERCHANT_USERS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-users/merchant-users.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "MerchantUserListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/merchant-user-list/merchant-user-list.component",
+        "exportName": "MerchantUserListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-users/merchant-users.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+        "line": 9
+      }
+    },
+    {
+      "path": "/",
+      "component": "NotificationsShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "path": "/",
+      "component": "NotificationCenterComponent",
+      "lazyComponent": {
+        "importPath": "./pages/notification-center/notification-center.component",
+        "exportName": "NotificationCenterComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.NOTIFICATIONS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "path": "/preferences",
+      "component": "NotificationPreferencesComponent",
+      "lazyComponent": {
+        "importPath": "./pages/notification-preferences/notification-preferences.component",
+        "exportName": "NotificationPreferencesComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "path": "/broadcasts",
+      "component": "NotificationBroadcastsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/notification-broadcasts/notification-broadcasts.component",
+        "exportName": "NotificationBroadcastsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.NOTIFICATIONS_BROADCAST)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "path": "/templates",
+      "component": "NotificationTemplatesComponent",
+      "lazyComponent": {
+        "importPath": "./pages/notification-templates/notification-templates.component",
+        "exportName": "NotificationTemplatesComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.NOTIFICATIONS_MANAGE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+        "line": 38
+      }
+    },
+    {
+      "path": "/:id",
+      "component": "NotificationDetailsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/notification-details/notification-details.component",
+        "exportName": "NotificationDetailsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.NOTIFICATIONS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+        "line": 45
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.COMPLIANCE_QUEUE_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/onboarding-approval/onboarding-approval.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/compliance",
+      "component": "ComplianceQueueComponent",
+      "lazyComponent": {
+        "importPath": "./pages/compliance-queue/compliance-queue.component",
+        "exportName": "ComplianceQueueComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/onboarding-approval/onboarding-approval.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.OPERATIONS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/operations/operations.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "OperationsDashboardComponent",
+      "lazyComponent": {
+        "importPath": "./pages/operations-dashboard/operations-dashboard.component",
+        "exportName": "OperationsDashboardComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/operations/operations.routes.ts",
+        "line": 12
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/organizations/organizations.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "OrganizationListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/organization-list/organization-list.component",
+        "exportName": "OrganizationListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.ORGANIZATIONS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/organizations/organizations.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/create",
+      "component": "OrganizationFormComponent",
+      "lazyComponent": {
+        "importPath": "./pages/organization-form/organization-form.component",
+        "exportName": "OrganizationFormComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.ORGANIZATIONS_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/organizations/organizations.routes.ts",
+        "line": 20
+      }
+    },
+    {
+      "path": "/:id",
+      "component": "OrganizationDetailsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/organization-details/organization-details.component",
+        "exportName": "OrganizationDetailsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.ORGANIZATIONS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/organizations/organizations.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "path": "/:id/edit",
+      "component": "OrganizationFormComponent",
+      "lazyComponent": {
+        "importPath": "./pages/organization-form/organization-form.component",
+        "exportName": "OrganizationFormComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.ORGANIZATIONS_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/organizations/organizations.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.OUTLETS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/outlets/outlets.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "OutletListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/outlet-list/outlet-list.component",
+        "exportName": "OutletListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/outlets/outlets.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.PAYMENT_LINKS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payment-links/payment-links.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "PaymentLinkListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/payment-link-list/payment-link-list.component",
+        "exportName": "PaymentLinkListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payment-links/payment-links.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/create",
+      "component": "PaymentLinkCreateComponent",
+      "lazyComponent": {
+        "importPath": "./pages/payment-link-create/payment-link-create.component",
+        "exportName": "PaymentLinkCreateComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.PAYMENT_LINKS_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payment-links/payment-links.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "path": "/:id/edit",
+      "component": "PaymentLinkEditComponent",
+      "lazyComponent": {
+        "importPath": "./pages/payment-link-edit/payment-link-edit.component",
+        "exportName": "PaymentLinkEditComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.PAYMENT_LINKS_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payment-links/payment-links.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "path": "/:id",
+      "component": "PaymentLinkDetailsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/payment-link-details/payment-link-details.component",
+        "exportName": "PaymentLinkDetailsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payment-links/payment-links.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.PAYOUTS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payouts/payouts.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "PayoutListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/payout-list/payout-list.component",
+        "exportName": "PayoutListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payouts/payouts.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/create",
+      "component": "PayoutCreateComponent",
+      "lazyComponent": {
+        "importPath": "./pages/payout-create/payout-create.component",
+        "exportName": "PayoutCreateComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.PAYOUTS_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payouts/payouts.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "path": "/bank-accounts",
+      "component": "BankAccountsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/bank-accounts/bank-accounts.component",
+        "exportName": "BankAccountsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.PAYOUTS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payouts/payouts.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "path": "/:id",
+      "component": "PayoutDetailsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/payout-details/payout-details.component",
+        "exportName": "PayoutDetailsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payouts/payouts.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.QR_PAYMENTS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/qr-payments/qr-payments.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "path": "/",
+      "component": "QrListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/qr-list/qr-list.component",
+        "exportName": "QrListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/qr-payments/qr-payments.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "path": "/create",
+      "component": "QrCreateComponent",
+      "lazyComponent": {
+        "importPath": "./pages/qr-create/qr-create.component",
+        "exportName": "QrCreateComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.QR_PAYMENTS_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/qr-payments/qr-payments.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "path": "/:id",
+      "component": "QrDetailsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/qr-details/qr-details.component",
+        "exportName": "QrDetailsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/qr-payments/qr-payments.routes.ts",
+        "line": 47
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.RECONCILIATION_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reconciliation/reconciliation.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "ReconciliationDashboardComponent",
+      "lazyComponent": {
+        "importPath": "./pages/reconciliation-dashboard/reconciliation-dashboard.component",
+        "exportName": "ReconciliationDashboardComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reconciliation/reconciliation.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.REFUNDS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/refunds/refunds.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "RefundListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/refund-list/refund-list.component",
+        "exportName": "RefundListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/refunds/refunds.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/request",
+      "component": "RefundRequestComponent",
+      "lazyComponent": {
+        "importPath": "./pages/refund-request/refund-request.component",
+        "exportName": "RefundRequestComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.REFUNDS_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/refunds/refunds.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "path": "/:id",
+      "component": "RefundDetailsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/refund-details/refund-details.component",
+        "exportName": "RefundDetailsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/refunds/refunds.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.REPORTS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "ReportsDashboardComponent",
+      "lazyComponent": {
+        "importPath": "./pages/reports-dashboard/reports-dashboard.component",
+        "exportName": "ReportsDashboardComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/center",
+      "component": "ReportCenterComponent",
+      "lazyComponent": {
+        "importPath": "./pages/report-center/report-center.component",
+        "exportName": "ReportCenterComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "path": "/analytics",
+      "component": "AnalyticsDashboardComponent",
+      "lazyComponent": {
+        "importPath": "./pages/analytics-dashboard/analytics-dashboard.component",
+        "exportName": "AnalyticsDashboardComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.ANALYTICS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "path": "/saved",
+      "component": "SavedReportsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/saved-reports/saved-reports.component",
+        "exportName": "SavedReportsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "path": "/builder",
+      "component": "ReportBuilderComponent",
+      "lazyComponent": {
+        "importPath": "./pages/report-builder/report-builder.component",
+        "exportName": "ReportBuilderComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.REPORTS_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "path": "/builder/:id",
+      "component": "ReportBuilderComponent",
+      "lazyComponent": {
+        "importPath": "./pages/report-builder/report-builder.component",
+        "exportName": "ReportBuilderComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.REPORTS_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 40
+      }
+    },
+    {
+      "path": "/history",
+      "component": "ReportHistoryComponent",
+      "lazyComponent": {
+        "importPath": "./pages/report-history/report-history.component",
+        "exportName": "ReportHistoryComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 46
+      }
+    },
+    {
+      "path": "/scheduled",
+      "component": "ScheduledReportsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/scheduled-reports/scheduled-reports.component",
+        "exportName": "ScheduledReportsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 51
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.RISK_RULES_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/risk-rules/risk-rules.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "RiskRulesListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/risk-rules-list/risk-rules-list.component",
+        "exportName": "RiskRulesListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/risk-rules/risk-rules.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.ROLES_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/roles/roles.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "RoleListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/role-list/role-list.component",
+        "exportName": "RoleListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/roles/roles.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/create",
+      "component": "RoleFormComponent",
+      "lazyComponent": {
+        "importPath": "./pages/role-form/role-form.component",
+        "exportName": "RoleFormComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.ROLES_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/roles/roles.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "path": "/:id/edit",
+      "component": "RoleFormComponent",
+      "lazyComponent": {
+        "importPath": "./pages/role-form/role-form.component",
+        "exportName": "RoleFormComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.ROLES_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/roles/roles.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "path": "/:id/permissions",
+      "component": "PermissionMatrixComponent",
+      "lazyComponent": {
+        "importPath": "./pages/permission-matrix/permission-matrix.component",
+        "exportName": "PermissionMatrixComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.PERMISSIONS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/roles/roles.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.SANDBOX_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/sandbox/sandbox.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "SandboxDashboardComponent",
+      "lazyComponent": {
+        "importPath": "./pages/sandbox-dashboard/sandbox-dashboard.component",
+        "exportName": "SandboxDashboardComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/sandbox/sandbox.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 10
+      }
+    },
+    {
+      "path": "/",
+      "component": "SettingsShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "path": "/",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "path": "/general",
+      "component": "SettingsGeneralComponent",
+      "lazyComponent": {
+        "importPath": "./pages/settings-general/settings-general.component",
+        "exportName": "SettingsGeneralComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 20
+      }
+    },
+    {
+      "path": "/business",
+      "component": "SettingsBusinessComponent",
+      "lazyComponent": {
+        "importPath": "./pages/settings-business/settings-business.component",
+        "exportName": "SettingsBusinessComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.SETTINGS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "path": "/branding",
+      "component": "SettingsBrandingComponent",
+      "lazyComponent": {
+        "importPath": "./pages/settings-branding/settings-branding.component",
+        "exportName": "SettingsBrandingComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.SETTINGS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "path": "/security",
+      "component": "SettingsSecurityComponent",
+      "lazyComponent": {
+        "importPath": "./pages/settings-security/settings-security.component",
+        "exportName": "SettingsSecurityComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.SETTINGS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 40
+      }
+    },
+    {
+      "path": "/password-policy",
+      "component": "SettingsPasswordPolicyComponent",
+      "lazyComponent": {
+        "importPath": "./pages/settings-password-policy/settings-password-policy.component",
+        "exportName": "SettingsPasswordPolicyComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.SETTINGS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 47
+      }
+    },
+    {
+      "path": "/session",
+      "component": "SettingsSessionComponent",
+      "lazyComponent": {
+        "importPath": "./pages/settings-session/settings-session.component",
+        "exportName": "SettingsSessionComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.SETTINGS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 54
+      }
+    },
+    {
+      "path": "/notifications",
+      "component": "SettingsNotificationsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/settings-notifications/settings-notifications.component",
+        "exportName": "SettingsNotificationsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 61
+      }
+    },
+    {
+      "path": "/api",
+      "component": "SettingsApiComponent",
+      "lazyComponent": {
+        "importPath": "./pages/settings-api/settings-api.component",
+        "exportName": "SettingsApiComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.SETTINGS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 67
+      }
+    },
+    {
+      "path": "/feature-flags",
+      "component": "SettingsFeatureFlagsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/settings-feature-flags/settings-feature-flags.component",
+        "exportName": "SettingsFeatureFlagsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.SETTINGS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 74
+      }
+    },
+    {
+      "path": "/configuration",
+      "component": "SettingsConfigurationComponent",
+      "lazyComponent": {
+        "importPath": "./pages/settings-configuration/settings-configuration.component",
+        "exportName": "SettingsConfigurationComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.PLATFORM_CONFIG_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 81
+      }
+    },
+    {
+      "path": "/storage",
+      "component": "SettingsStorageComponent",
+      "lazyComponent": {
+        "importPath": "./pages/settings-storage/settings-storage.component",
+        "exportName": "SettingsStorageComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.SETTINGS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 88
+      }
+    },
+    {
+      "path": "/account",
+      "component": "SettingsAccountComponent",
+      "lazyComponent": {
+        "importPath": "./pages/settings-account/settings-account.component",
+        "exportName": "SettingsAccountComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 95
+      }
+    },
+    {
+      "path": "/system-status",
+      "component": "SettingsSystemStatusComponent",
+      "lazyComponent": {
+        "importPath": "./pages/settings-system-status/settings-system-status.component",
+        "exportName": "SettingsSystemStatusComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.SYSTEM_VIEW)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 101
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.SETTLEMENTS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settlements/settlements.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "SettlementListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/settlement-list/settlement-list.component",
+        "exportName": "SettlementListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settlements/settlements.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/batches",
+      "component": "BatchListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/batch-list/batch-list.component",
+        "exportName": "BatchListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settlements/settlements.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "path": "/batches/:id",
+      "component": "BatchDetailsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/batch-details/batch-details.component",
+        "exportName": "BatchDetailsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settlements/settlements.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "path": "/:id",
+      "component": "SettlementDetailsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/settlement-details/settlement-details.component",
+        "exportName": "SettlementDetailsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settlements/settlements.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.SMART_COLLECT_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/smart-collect/smart-collect.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "SmartCollectDashboardComponent",
+      "lazyComponent": {
+        "importPath": "./pages/smart-collect-dashboard/smart-collect-dashboard.component",
+        "exportName": "SmartCollectDashboardComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/smart-collect/smart-collect.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.SUBSCRIPTIONS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/subscriptions/subscriptions.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "path": "/",
+      "component": "SubscriptionDashboardComponent",
+      "lazyComponent": {
+        "importPath": "./pages/subscription-dashboard/subscription-dashboard.component",
+        "exportName": "SubscriptionDashboardComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/subscriptions/subscriptions.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "path": "/plans",
+      "component": "PlanListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/plan-list/plan-list.component",
+        "exportName": "PlanListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/subscriptions/subscriptions.routes.ts",
+        "line": 37
+      }
+    },
+    {
+      "path": "/plans/create",
+      "component": "PlanCreateComponent",
+      "lazyComponent": {
+        "importPath": "./pages/plan-create/plan-create.component",
+        "exportName": "PlanCreateComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.SUBSCRIPTIONS_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/subscriptions/subscriptions.routes.ts",
+        "line": 47
+      }
+    },
+    {
+      "path": "/create",
+      "component": "SubscriptionCreateComponent",
+      "lazyComponent": {
+        "importPath": "./pages/subscription-create/subscription-create.component",
+        "exportName": "SubscriptionCreateComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.SUBSCRIPTIONS_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/subscriptions/subscriptions.routes.ts",
+        "line": 59
+      }
+    },
+    {
+      "path": "/:id",
+      "component": "SubscriptionDetailsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/subscription-details/subscription-details.component",
+        "exportName": "SubscriptionDetailsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/subscriptions/subscriptions.routes.ts",
+        "line": 73
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.SUPPORT_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/support/support.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "TicketListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/ticket-list/ticket-list.component",
+        "exportName": "TicketListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/support/support.routes.ts",
+        "line": 12
+      }
+    },
+    {
+      "path": "/create",
+      "component": "TicketCreateComponent",
+      "lazyComponent": {
+        "importPath": "./pages/ticket-create/ticket-create.component",
+        "exportName": "TicketCreateComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.SUPPORT_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/support/support.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/:id/edit",
+      "component": "TicketEditComponent",
+      "lazyComponent": {
+        "importPath": "./pages/ticket-edit/ticket-edit.component",
+        "exportName": "TicketEditComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.SUPPORT_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/support/support.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "path": "/:id",
+      "component": "TicketDetailsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/ticket-details/ticket-details.component",
+        "exportName": "TicketDetailsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/support/support.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.TRANSACTIONS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/transactions/transactions.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "TransactionListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/transaction-list/transaction-list.component",
+        "exportName": "TransactionListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/transactions/transactions.routes.ts",
+        "line": 12
+      }
+    },
+    {
+      "path": "/:id",
+      "component": "TransactionDetailsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/transaction-details/transaction-details.component",
+        "exportName": "TransactionDetailsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/transactions/transactions.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.USERS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/users/users.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "UserListComponent",
+      "lazyComponent": {
+        "importPath": "./pages/user-list/user-list.component",
+        "exportName": "UserListComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/users/users.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/create",
+      "component": "UserFormComponent",
+      "lazyComponent": {
+        "importPath": "./pages/user-form/user-form.component",
+        "exportName": "UserFormComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.USERS_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/users/users.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "path": "/:id/edit",
+      "component": "UserFormComponent",
+      "lazyComponent": {
+        "importPath": "./pages/user-form/user-form.component",
+        "exportName": "UserFormComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "permissionGuard(PERMISSIONS.USERS_WRITE)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/users/users.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "path": "/:id",
+      "component": "UserDetailsComponent",
+      "lazyComponent": {
+        "importPath": "./pages/user-details/user-details.component",
+        "exportName": "UserDetailsComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/users/users.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "path": "/",
+      "component": "DashboardShellComponent",
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [
+        "authGuard",
+        "permissionGuard(PERMISSIONS.WEBHOOKS_READ)"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/webhooks/webhooks.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "path": "/",
+      "component": "WebhooksDashboardComponent",
+      "lazyComponent": {
+        "importPath": "./pages/webhooks-dashboard/webhooks-dashboard.component",
+        "exportName": "WebhooksDashboardComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/webhooks/webhooks.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 6
+      }
+    },
+    {
+      "path": "/auth",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/authentication/authentication.routes",
+        "exportName": "authenticationRoutes"
+      },
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 11
+      }
+    },
+    {
+      "path": "/dashboard",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/dashboard/dashboard.routes",
+        "exportName": "dashboardRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "path": "/merchants",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/merchant/merchant.routes",
+        "exportName": "merchantRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "path": "/merchant-onboarding",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/merchant-onboarding/merchant-onboarding.routes",
+        "exportName": "merchantOnboardingRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "path": "/outlets",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/outlets/outlets.routes",
+        "exportName": "outletRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 36
+      }
+    },
+    {
+      "path": "/onboarding-approval",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/onboarding-approval/onboarding-approval.routes",
+        "exportName": "onboardingApprovalRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 42
+      }
+    },
+    {
+      "path": "/merchant-users",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/merchant-users/merchant-users.routes",
+        "exportName": "merchantUserRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 48
+      }
+    },
+    {
+      "path": "/devices",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/devices/devices.routes",
+        "exportName": "deviceRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 54
+      }
+    },
+    {
+      "path": "/fraud",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/fraud/fraud.routes",
+        "exportName": "fraudRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 60
+      }
+    },
+    {
+      "path": "/risk-rules",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/risk-rules/risk-rules.routes",
+        "exportName": "riskRuleRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 66
+      }
+    },
+    {
+      "path": "/transactions",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/transactions/transactions.routes",
+        "exportName": "transactionRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 72
+      }
+    },
+    {
+      "path": "/settlements",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/settlements/settlements.routes",
+        "exportName": "settlementRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 78
+      }
+    },
+    {
+      "path": "/users",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/users/users.routes",
+        "exportName": "userRoutes"
+      },
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 84
+      }
+    },
+    {
+      "path": "/roles",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/roles/roles.routes",
+        "exportName": "roleRoutes"
+      },
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 89
+      }
+    },
+    {
+      "path": "/reports",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/reports/reports.routes",
+        "exportName": "reportsRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 94
+      }
+    },
+    {
+      "path": "/settings",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/settings/settings.routes",
+        "exportName": "settingsRoutes"
+      },
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 100
+      }
+    },
+    {
+      "path": "/notifications",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/notifications/notifications.routes",
+        "exportName": "notificationsRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 105
+      }
+    },
+    {
+      "path": "/audit",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/audit/audit.routes",
+        "exportName": "auditRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 111
+      }
+    },
+    {
+      "path": "/refunds",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/refunds/refunds.routes",
+        "exportName": "refundRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 117
+      }
+    },
+    {
+      "path": "/chargebacks",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/chargebacks/chargebacks.routes",
+        "exportName": "chargebackRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 123
+      }
+    },
+    {
+      "path": "/payouts",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/payouts/payouts.routes",
+        "exportName": "payoutRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 129
+      }
+    },
+    {
+      "path": "/payment-links",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/payment-links/payment-links.routes",
+        "exportName": "paymentLinkRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 135
+      }
+    },
+    {
+      "path": "/invoices",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/invoices/invoices.routes",
+        "exportName": "invoiceRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 141
+      }
+    },
+    {
+      "path": "/qr-payments",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/qr-payments/qr-payments.routes",
+        "exportName": "qrPaymentRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 147
+      }
+    },
+    {
+      "path": "/subscriptions",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/subscriptions/subscriptions.routes",
+        "exportName": "subscriptionRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 153
+      }
+    },
+    {
+      "path": "/support",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/support/support.routes",
+        "exportName": "supportRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 159
+      }
+    },
+    {
+      "path": "/operations",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/operations/operations.routes",
+        "exportName": "operationsRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 165
+      }
+    },
+    {
+      "path": "/activity",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/activity/activity.routes",
+        "exportName": "activityRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 171
+      }
+    },
+    {
+      "path": "/checkout",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/checkout-admin/checkout-admin.routes",
+        "exportName": "checkoutAdminRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 177
+      }
+    },
+    {
+      "path": "/pay/checkout/:ref",
+      "component": "HostedCheckoutComponent",
+      "lazyComponent": {
+        "importPath": "../features/checkout/pages/hosted-checkout/hosted-checkout.component",
+        "exportName": "HostedCheckoutComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": "Checkout | Merchant Pro",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 183
+      }
+    },
+    {
+      "path": "/pay/:token",
+      "component": "PublicPayComponent",
+      "lazyComponent": {
+        "importPath": "../features/payment-links/pages/public-pay/public-pay.component",
+        "exportName": "PublicPayComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": "Pay | Merchant Pro",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 189
+      }
+    },
+    {
+      "path": "/qr/:token",
+      "component": "PublicQrPayComponent",
+      "lazyComponent": {
+        "importPath": "../features/qr-payments/pages/public-qr-pay/public-qr-pay.component",
+        "exportName": "PublicQrPayComponent"
+      },
+      "lazyChildren": null,
+      "guards": [],
+      "title": "QR Pay | Merchant Pro",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 195
+      }
+    },
+    {
+      "path": "/smart-collect",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/smart-collect/smart-collect.routes",
+        "exportName": "smartCollectRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 201
+      }
+    },
+    {
+      "path": "/acceptance",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/acceptance/acceptance.routes",
+        "exportName": "acceptanceRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 207
+      }
+    },
+    {
+      "path": "/merchant-portal",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/merchant-portal/merchant-portal.routes",
+        "exportName": "merchantPortalRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 213
+      }
+    },
+    {
+      "path": "/developer",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/developer/developer.routes",
+        "exportName": "developerRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 219
+      }
+    },
+    {
+      "path": "/webhooks",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/webhooks/webhooks.routes",
+        "exportName": "webhooksRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 225
+      }
+    },
+    {
+      "path": "/reconciliation",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/reconciliation/reconciliation.routes",
+        "exportName": "reconciliationRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 231
+      }
+    },
+    {
+      "path": "/sandbox",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/sandbox/sandbox.routes",
+        "exportName": "sandboxRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 237
+      }
+    },
+    {
+      "path": "/customers",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/customers/customers.routes",
+        "exportName": "customerRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 243
+      }
+    },
+    {
+      "path": "/organizations",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": {
+        "importPath": "../features/organizations/organizations.routes",
+        "exportName": "organizationRoutes"
+      },
+      "guards": [
+        "authGuard"
+      ],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 249
+      }
+    },
+    {
+      "path": "/select-organization",
+      "component": "SelectOrganizationComponent",
+      "lazyComponent": {
+        "importPath": "../features/organizations/pages/select-organization/select-organization.component",
+        "exportName": "SelectOrganizationComponent"
+      },
+      "lazyChildren": null,
+      "guards": [
+        "authGuard"
+      ],
+      "title": "Select Organization | Merchant Pro",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 255
+      }
+    },
+    {
+      "path": "/**",
+      "component": null,
+      "lazyComponent": null,
+      "lazyChildren": null,
+      "guards": [],
+      "title": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 264
+      }
+    }
+  ],
+  "lazyRoutes": [
+    {
+      "path": "/analytics",
+      "type": "loadComponent",
+      "importPath": "./pages/acceptance-analytics/acceptance-analytics.component",
+      "exportName": "AcceptanceAnalyticsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/acceptance/acceptance.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/activity-timeline/activity-timeline.component",
+      "exportName": "ActivityTimelineComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/activity/activity.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/audit-dashboard/audit-dashboard.component",
+      "exportName": "AuditDashboardComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "path": "/timeline",
+      "type": "loadComponent",
+      "importPath": "./pages/audit-timeline/audit-timeline.component",
+      "exportName": "AuditTimelineComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "path": "/api-logs",
+      "type": "loadComponent",
+      "importPath": "./pages/api-logs/api-logs.component",
+      "exportName": "ApiLogsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "path": "/webhook-logs",
+      "type": "loadComponent",
+      "importPath": "./pages/webhook-logs/webhook-logs.component",
+      "exportName": "WebhookLogsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 39
+      }
+    },
+    {
+      "path": "/:id",
+      "type": "loadComponent",
+      "importPath": "./pages/audit-details/audit-details.component",
+      "exportName": "AuditDetailsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 46
+      }
+    },
+    {
+      "path": "/login",
+      "type": "loadComponent",
+      "importPath": "./pages/login/login.component",
+      "exportName": "LoginComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts",
+        "line": 11
+      }
+    },
+    {
+      "path": "/forgot-password",
+      "type": "loadComponent",
+      "importPath": "./pages/forgot-password/forgot-password.component",
+      "exportName": "ForgotPasswordComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "path": "/reset-password",
+      "type": "loadComponent",
+      "importPath": "./pages/reset-password/reset-password.component",
+      "exportName": "ResetPasswordComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "path": "/verify-otp",
+      "type": "loadComponent",
+      "importPath": "./pages/verify-otp/verify-otp.component",
+      "exportName": "VerifyOtpComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "path": "/session-expired",
+      "type": "loadComponent",
+      "importPath": "./pages/session-expired/session-expired.component",
+      "exportName": "SessionExpiredComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts",
+        "line": 42
+      }
+    },
+    {
+      "path": "/access-denied",
+      "type": "loadComponent",
+      "importPath": "./pages/access-denied/access-denied.component",
+      "exportName": "AccessDeniedComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts",
+        "line": 50
+      }
+    },
+    {
+      "path": "/sessions",
+      "type": "loadComponent",
+      "importPath": "./pages/active-sessions/active-sessions.component",
+      "exportName": "ActiveSessionsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts",
+        "line": 56
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/chargeback-list/chargeback-list.component",
+      "exportName": "ChargebackListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/chargebacks/chargebacks.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/create",
+      "type": "loadComponent",
+      "importPath": "./pages/chargeback-create/chargeback-create.component",
+      "exportName": "ChargebackCreateComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/chargebacks/chargebacks.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "path": "/:id",
+      "type": "loadComponent",
+      "importPath": "./pages/chargeback-details/chargeback-details.component",
+      "exportName": "ChargebackDetailsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/chargebacks/chargebacks.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "path": "/sessions",
+      "type": "loadComponent",
+      "importPath": "./pages/checkout-session-list/checkout-session-list.component",
+      "exportName": "CheckoutSessionListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout-admin/checkout-admin.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/sessions/:id",
+      "type": "loadComponent",
+      "importPath": "./pages/checkout-session-detail/checkout-session-detail.component",
+      "exportName": "CheckoutSessionDetailComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout-admin/checkout-admin.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "path": "/analytics",
+      "type": "loadComponent",
+      "importPath": "./pages/checkout-analytics-dashboard/checkout-analytics-dashboard.component",
+      "exportName": "CheckoutAnalyticsDashboardComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout-admin/checkout-admin.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "path": "/branding",
+      "type": "loadComponent",
+      "importPath": "./pages/checkout-branding-manager/checkout-branding-manager.component",
+      "exportName": "CheckoutBrandingManagerComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout-admin/checkout-admin.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "path": "/themes",
+      "type": "loadComponent",
+      "importPath": "./pages/checkout-theme-list/checkout-theme-list.component",
+      "exportName": "CheckoutThemeListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout-admin/checkout-admin.routes.ts",
+        "line": 39
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/customer-list/customer-list.component",
+      "exportName": "CustomerListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/customers/customers.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/create",
+      "type": "loadComponent",
+      "importPath": "./pages/customer-form/customer-form.component",
+      "exportName": "CustomerFormComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/customers/customers.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "path": "/:id",
+      "type": "loadComponent",
+      "importPath": "./pages/customer-details/customer-details.component",
+      "exportName": "CustomerDetailsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/customers/customers.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "path": "/:id/edit",
+      "type": "loadComponent",
+      "importPath": "./pages/customer-form/customer-form.component",
+      "exportName": "CustomerFormComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/customers/customers.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "path": "/executive",
+      "type": "loadComponent",
+      "importPath": "./pages/executive-overview/executive-overview.component",
+      "exportName": "ExecutiveOverviewComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/dashboard/dashboard.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/developer-dashboard/developer-dashboard.component",
+      "exportName": "DeveloperDashboardComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/developer/developer.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/devices-list/devices-list.component",
+      "exportName": "DevicesListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/devices/devices.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/fraud-queue/fraud-queue.component",
+      "exportName": "FraudQueueComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/fraud/fraud.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/invoice-list/invoice-list.component",
+      "exportName": "InvoiceListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/invoices/invoices.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/create",
+      "type": "loadComponent",
+      "importPath": "./pages/invoice-create/invoice-create.component",
+      "exportName": "InvoiceCreateComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/invoices/invoices.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "path": "/:id/edit",
+      "type": "loadComponent",
+      "importPath": "./pages/invoice-edit/invoice-edit.component",
+      "exportName": "InvoiceEditComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/invoices/invoices.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "path": "/:id",
+      "type": "loadComponent",
+      "importPath": "./pages/invoice-details/invoice-details.component",
+      "exportName": "InvoiceDetailsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/invoices/invoices.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/merchant-list/merchant-list.component",
+      "exportName": "MerchantListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant/merchant.routes.ts",
+        "line": 12
+      }
+    },
+    {
+      "path": "/create",
+      "type": "loadComponent",
+      "importPath": "./pages/merchant-form/merchant-form.component",
+      "exportName": "MerchantFormComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant/merchant.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "path": "/:id",
+      "type": "loadComponent",
+      "importPath": "./pages/merchant-details/merchant-details.component",
+      "exportName": "MerchantDetailsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant/merchant.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "path": "/:id/edit",
+      "type": "loadComponent",
+      "importPath": "./pages/merchant-form/merchant-form.component",
+      "exportName": "MerchantFormComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant/merchant.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/onboarding-dashboard/onboarding-dashboard.component",
+      "exportName": "OnboardingDashboardComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-onboarding/merchant-onboarding.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/create",
+      "type": "loadComponent",
+      "importPath": "./pages/onboarding-wizard/onboarding-wizard.component",
+      "exportName": "OnboardingWizardComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-onboarding/merchant-onboarding.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "path": "/:id/wizard",
+      "type": "loadComponent",
+      "importPath": "./pages/onboarding-wizard/onboarding-wizard.component",
+      "exportName": "OnboardingWizardComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-onboarding/merchant-onboarding.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "path": "/:id",
+      "type": "loadComponent",
+      "importPath": "./pages/onboarding-detail/onboarding-detail.component",
+      "exportName": "OnboardingDetailComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-onboarding/merchant-onboarding.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/merchant-payment-portal/merchant-payment-portal.component",
+      "exportName": "MerchantPaymentPortalComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-portal/merchant-portal.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/merchant-user-list/merchant-user-list.component",
+      "exportName": "MerchantUserListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-users/merchant-users.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/notification-center/notification-center.component",
+      "exportName": "NotificationCenterComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "path": "/preferences",
+      "type": "loadComponent",
+      "importPath": "./pages/notification-preferences/notification-preferences.component",
+      "exportName": "NotificationPreferencesComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "path": "/broadcasts",
+      "type": "loadComponent",
+      "importPath": "./pages/notification-broadcasts/notification-broadcasts.component",
+      "exportName": "NotificationBroadcastsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "path": "/templates",
+      "type": "loadComponent",
+      "importPath": "./pages/notification-templates/notification-templates.component",
+      "exportName": "NotificationTemplatesComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+        "line": 38
+      }
+    },
+    {
+      "path": "/:id",
+      "type": "loadComponent",
+      "importPath": "./pages/notification-details/notification-details.component",
+      "exportName": "NotificationDetailsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+        "line": 45
+      }
+    },
+    {
+      "path": "/compliance",
+      "type": "loadComponent",
+      "importPath": "./pages/compliance-queue/compliance-queue.component",
+      "exportName": "ComplianceQueueComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/onboarding-approval/onboarding-approval.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/operations-dashboard/operations-dashboard.component",
+      "exportName": "OperationsDashboardComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/operations/operations.routes.ts",
+        "line": 12
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/organization-list/organization-list.component",
+      "exportName": "OrganizationListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/organizations/organizations.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/create",
+      "type": "loadComponent",
+      "importPath": "./pages/organization-form/organization-form.component",
+      "exportName": "OrganizationFormComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/organizations/organizations.routes.ts",
+        "line": 20
+      }
+    },
+    {
+      "path": "/:id",
+      "type": "loadComponent",
+      "importPath": "./pages/organization-details/organization-details.component",
+      "exportName": "OrganizationDetailsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/organizations/organizations.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "path": "/:id/edit",
+      "type": "loadComponent",
+      "importPath": "./pages/organization-form/organization-form.component",
+      "exportName": "OrganizationFormComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/organizations/organizations.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/outlet-list/outlet-list.component",
+      "exportName": "OutletListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/outlets/outlets.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/payment-link-list/payment-link-list.component",
+      "exportName": "PaymentLinkListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payment-links/payment-links.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/create",
+      "type": "loadComponent",
+      "importPath": "./pages/payment-link-create/payment-link-create.component",
+      "exportName": "PaymentLinkCreateComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payment-links/payment-links.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "path": "/:id/edit",
+      "type": "loadComponent",
+      "importPath": "./pages/payment-link-edit/payment-link-edit.component",
+      "exportName": "PaymentLinkEditComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payment-links/payment-links.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "path": "/:id",
+      "type": "loadComponent",
+      "importPath": "./pages/payment-link-details/payment-link-details.component",
+      "exportName": "PaymentLinkDetailsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payment-links/payment-links.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/payout-list/payout-list.component",
+      "exportName": "PayoutListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payouts/payouts.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/create",
+      "type": "loadComponent",
+      "importPath": "./pages/payout-create/payout-create.component",
+      "exportName": "PayoutCreateComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payouts/payouts.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "path": "/bank-accounts",
+      "type": "loadComponent",
+      "importPath": "./pages/bank-accounts/bank-accounts.component",
+      "exportName": "BankAccountsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payouts/payouts.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "path": "/:id",
+      "type": "loadComponent",
+      "importPath": "./pages/payout-details/payout-details.component",
+      "exportName": "PayoutDetailsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payouts/payouts.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/qr-list/qr-list.component",
+      "exportName": "QrListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/qr-payments/qr-payments.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "path": "/create",
+      "type": "loadComponent",
+      "importPath": "./pages/qr-create/qr-create.component",
+      "exportName": "QrCreateComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/qr-payments/qr-payments.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "path": "/:id",
+      "type": "loadComponent",
+      "importPath": "./pages/qr-details/qr-details.component",
+      "exportName": "QrDetailsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/qr-payments/qr-payments.routes.ts",
+        "line": 47
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/reconciliation-dashboard/reconciliation-dashboard.component",
+      "exportName": "ReconciliationDashboardComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reconciliation/reconciliation.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/refund-list/refund-list.component",
+      "exportName": "RefundListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/refunds/refunds.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/request",
+      "type": "loadComponent",
+      "importPath": "./pages/refund-request/refund-request.component",
+      "exportName": "RefundRequestComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/refunds/refunds.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "path": "/:id",
+      "type": "loadComponent",
+      "importPath": "./pages/refund-details/refund-details.component",
+      "exportName": "RefundDetailsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/refunds/refunds.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/reports-dashboard/reports-dashboard.component",
+      "exportName": "ReportsDashboardComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/center",
+      "type": "loadComponent",
+      "importPath": "./pages/report-center/report-center.component",
+      "exportName": "ReportCenterComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "path": "/analytics",
+      "type": "loadComponent",
+      "importPath": "./pages/analytics-dashboard/analytics-dashboard.component",
+      "exportName": "AnalyticsDashboardComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "path": "/saved",
+      "type": "loadComponent",
+      "importPath": "./pages/saved-reports/saved-reports.component",
+      "exportName": "SavedReportsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "path": "/builder",
+      "type": "loadComponent",
+      "importPath": "./pages/report-builder/report-builder.component",
+      "exportName": "ReportBuilderComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "path": "/builder/:id",
+      "type": "loadComponent",
+      "importPath": "./pages/report-builder/report-builder.component",
+      "exportName": "ReportBuilderComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 40
+      }
+    },
+    {
+      "path": "/history",
+      "type": "loadComponent",
+      "importPath": "./pages/report-history/report-history.component",
+      "exportName": "ReportHistoryComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 46
+      }
+    },
+    {
+      "path": "/scheduled",
+      "type": "loadComponent",
+      "importPath": "./pages/scheduled-reports/scheduled-reports.component",
+      "exportName": "ScheduledReportsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 51
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/risk-rules-list/risk-rules-list.component",
+      "exportName": "RiskRulesListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/risk-rules/risk-rules.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/role-list/role-list.component",
+      "exportName": "RoleListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/roles/roles.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/create",
+      "type": "loadComponent",
+      "importPath": "./pages/role-form/role-form.component",
+      "exportName": "RoleFormComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/roles/roles.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "path": "/:id/edit",
+      "type": "loadComponent",
+      "importPath": "./pages/role-form/role-form.component",
+      "exportName": "RoleFormComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/roles/roles.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "path": "/:id/permissions",
+      "type": "loadComponent",
+      "importPath": "./pages/permission-matrix/permission-matrix.component",
+      "exportName": "PermissionMatrixComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/roles/roles.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/sandbox-dashboard/sandbox-dashboard.component",
+      "exportName": "SandboxDashboardComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/sandbox/sandbox.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/general",
+      "type": "loadComponent",
+      "importPath": "./pages/settings-general/settings-general.component",
+      "exportName": "SettingsGeneralComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 20
+      }
+    },
+    {
+      "path": "/business",
+      "type": "loadComponent",
+      "importPath": "./pages/settings-business/settings-business.component",
+      "exportName": "SettingsBusinessComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "path": "/branding",
+      "type": "loadComponent",
+      "importPath": "./pages/settings-branding/settings-branding.component",
+      "exportName": "SettingsBrandingComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "path": "/security",
+      "type": "loadComponent",
+      "importPath": "./pages/settings-security/settings-security.component",
+      "exportName": "SettingsSecurityComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 40
+      }
+    },
+    {
+      "path": "/password-policy",
+      "type": "loadComponent",
+      "importPath": "./pages/settings-password-policy/settings-password-policy.component",
+      "exportName": "SettingsPasswordPolicyComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 47
+      }
+    },
+    {
+      "path": "/session",
+      "type": "loadComponent",
+      "importPath": "./pages/settings-session/settings-session.component",
+      "exportName": "SettingsSessionComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 54
+      }
+    },
+    {
+      "path": "/notifications",
+      "type": "loadComponent",
+      "importPath": "./pages/settings-notifications/settings-notifications.component",
+      "exportName": "SettingsNotificationsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 61
+      }
+    },
+    {
+      "path": "/api",
+      "type": "loadComponent",
+      "importPath": "./pages/settings-api/settings-api.component",
+      "exportName": "SettingsApiComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 67
+      }
+    },
+    {
+      "path": "/feature-flags",
+      "type": "loadComponent",
+      "importPath": "./pages/settings-feature-flags/settings-feature-flags.component",
+      "exportName": "SettingsFeatureFlagsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 74
+      }
+    },
+    {
+      "path": "/configuration",
+      "type": "loadComponent",
+      "importPath": "./pages/settings-configuration/settings-configuration.component",
+      "exportName": "SettingsConfigurationComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 81
+      }
+    },
+    {
+      "path": "/storage",
+      "type": "loadComponent",
+      "importPath": "./pages/settings-storage/settings-storage.component",
+      "exportName": "SettingsStorageComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 88
+      }
+    },
+    {
+      "path": "/account",
+      "type": "loadComponent",
+      "importPath": "./pages/settings-account/settings-account.component",
+      "exportName": "SettingsAccountComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 95
+      }
+    },
+    {
+      "path": "/system-status",
+      "type": "loadComponent",
+      "importPath": "./pages/settings-system-status/settings-system-status.component",
+      "exportName": "SettingsSystemStatusComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 101
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/settlement-list/settlement-list.component",
+      "exportName": "SettlementListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settlements/settlements.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/batches",
+      "type": "loadComponent",
+      "importPath": "./pages/batch-list/batch-list.component",
+      "exportName": "BatchListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settlements/settlements.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "path": "/batches/:id",
+      "type": "loadComponent",
+      "importPath": "./pages/batch-details/batch-details.component",
+      "exportName": "BatchDetailsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settlements/settlements.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "path": "/:id",
+      "type": "loadComponent",
+      "importPath": "./pages/settlement-details/settlement-details.component",
+      "exportName": "SettlementDetailsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settlements/settlements.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/smart-collect-dashboard/smart-collect-dashboard.component",
+      "exportName": "SmartCollectDashboardComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/smart-collect/smart-collect.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/subscription-dashboard/subscription-dashboard.component",
+      "exportName": "SubscriptionDashboardComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/subscriptions/subscriptions.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "path": "/plans",
+      "type": "loadComponent",
+      "importPath": "./pages/plan-list/plan-list.component",
+      "exportName": "PlanListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/subscriptions/subscriptions.routes.ts",
+        "line": 37
+      }
+    },
+    {
+      "path": "/plans/create",
+      "type": "loadComponent",
+      "importPath": "./pages/plan-create/plan-create.component",
+      "exportName": "PlanCreateComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/subscriptions/subscriptions.routes.ts",
+        "line": 47
+      }
+    },
+    {
+      "path": "/create",
+      "type": "loadComponent",
+      "importPath": "./pages/subscription-create/subscription-create.component",
+      "exportName": "SubscriptionCreateComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/subscriptions/subscriptions.routes.ts",
+        "line": 59
+      }
+    },
+    {
+      "path": "/:id",
+      "type": "loadComponent",
+      "importPath": "./pages/subscription-details/subscription-details.component",
+      "exportName": "SubscriptionDetailsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/subscriptions/subscriptions.routes.ts",
+        "line": 73
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/ticket-list/ticket-list.component",
+      "exportName": "TicketListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/support/support.routes.ts",
+        "line": 12
+      }
+    },
+    {
+      "path": "/create",
+      "type": "loadComponent",
+      "importPath": "./pages/ticket-create/ticket-create.component",
+      "exportName": "TicketCreateComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/support/support.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/:id/edit",
+      "type": "loadComponent",
+      "importPath": "./pages/ticket-edit/ticket-edit.component",
+      "exportName": "TicketEditComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/support/support.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "path": "/:id",
+      "type": "loadComponent",
+      "importPath": "./pages/ticket-details/ticket-details.component",
+      "exportName": "TicketDetailsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/support/support.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/transaction-list/transaction-list.component",
+      "exportName": "TransactionListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/transactions/transactions.routes.ts",
+        "line": 12
+      }
+    },
+    {
+      "path": "/:id",
+      "type": "loadComponent",
+      "importPath": "./pages/transaction-details/transaction-details.component",
+      "exportName": "TransactionDetailsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/transactions/transactions.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/user-list/user-list.component",
+      "exportName": "UserListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/users/users.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/create",
+      "type": "loadComponent",
+      "importPath": "./pages/user-form/user-form.component",
+      "exportName": "UserFormComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/users/users.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "path": "/:id/edit",
+      "type": "loadComponent",
+      "importPath": "./pages/user-form/user-form.component",
+      "exportName": "UserFormComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/users/users.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "path": "/:id",
+      "type": "loadComponent",
+      "importPath": "./pages/user-details/user-details.component",
+      "exportName": "UserDetailsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/users/users.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "path": "/",
+      "type": "loadComponent",
+      "importPath": "./pages/webhooks-dashboard/webhooks-dashboard.component",
+      "exportName": "WebhooksDashboardComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/webhooks/webhooks.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "path": "/auth",
+      "type": "loadChildren",
+      "importPath": "../features/authentication/authentication.routes",
+      "exportName": "authenticationRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 11
+      }
+    },
+    {
+      "path": "/dashboard",
+      "type": "loadChildren",
+      "importPath": "../features/dashboard/dashboard.routes",
+      "exportName": "dashboardRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "path": "/merchants",
+      "type": "loadChildren",
+      "importPath": "../features/merchant/merchant.routes",
+      "exportName": "merchantRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "path": "/merchant-onboarding",
+      "type": "loadChildren",
+      "importPath": "../features/merchant-onboarding/merchant-onboarding.routes",
+      "exportName": "merchantOnboardingRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "path": "/outlets",
+      "type": "loadChildren",
+      "importPath": "../features/outlets/outlets.routes",
+      "exportName": "outletRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 36
+      }
+    },
+    {
+      "path": "/onboarding-approval",
+      "type": "loadChildren",
+      "importPath": "../features/onboarding-approval/onboarding-approval.routes",
+      "exportName": "onboardingApprovalRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 42
+      }
+    },
+    {
+      "path": "/merchant-users",
+      "type": "loadChildren",
+      "importPath": "../features/merchant-users/merchant-users.routes",
+      "exportName": "merchantUserRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 48
+      }
+    },
+    {
+      "path": "/devices",
+      "type": "loadChildren",
+      "importPath": "../features/devices/devices.routes",
+      "exportName": "deviceRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 54
+      }
+    },
+    {
+      "path": "/fraud",
+      "type": "loadChildren",
+      "importPath": "../features/fraud/fraud.routes",
+      "exportName": "fraudRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 60
+      }
+    },
+    {
+      "path": "/risk-rules",
+      "type": "loadChildren",
+      "importPath": "../features/risk-rules/risk-rules.routes",
+      "exportName": "riskRuleRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 66
+      }
+    },
+    {
+      "path": "/transactions",
+      "type": "loadChildren",
+      "importPath": "../features/transactions/transactions.routes",
+      "exportName": "transactionRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 72
+      }
+    },
+    {
+      "path": "/settlements",
+      "type": "loadChildren",
+      "importPath": "../features/settlements/settlements.routes",
+      "exportName": "settlementRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 78
+      }
+    },
+    {
+      "path": "/users",
+      "type": "loadChildren",
+      "importPath": "../features/users/users.routes",
+      "exportName": "userRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 84
+      }
+    },
+    {
+      "path": "/roles",
+      "type": "loadChildren",
+      "importPath": "../features/roles/roles.routes",
+      "exportName": "roleRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 89
+      }
+    },
+    {
+      "path": "/reports",
+      "type": "loadChildren",
+      "importPath": "../features/reports/reports.routes",
+      "exportName": "reportsRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 94
+      }
+    },
+    {
+      "path": "/settings",
+      "type": "loadChildren",
+      "importPath": "../features/settings/settings.routes",
+      "exportName": "settingsRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 100
+      }
+    },
+    {
+      "path": "/notifications",
+      "type": "loadChildren",
+      "importPath": "../features/notifications/notifications.routes",
+      "exportName": "notificationsRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 105
+      }
+    },
+    {
+      "path": "/audit",
+      "type": "loadChildren",
+      "importPath": "../features/audit/audit.routes",
+      "exportName": "auditRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 111
+      }
+    },
+    {
+      "path": "/refunds",
+      "type": "loadChildren",
+      "importPath": "../features/refunds/refunds.routes",
+      "exportName": "refundRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 117
+      }
+    },
+    {
+      "path": "/chargebacks",
+      "type": "loadChildren",
+      "importPath": "../features/chargebacks/chargebacks.routes",
+      "exportName": "chargebackRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 123
+      }
+    },
+    {
+      "path": "/payouts",
+      "type": "loadChildren",
+      "importPath": "../features/payouts/payouts.routes",
+      "exportName": "payoutRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 129
+      }
+    },
+    {
+      "path": "/payment-links",
+      "type": "loadChildren",
+      "importPath": "../features/payment-links/payment-links.routes",
+      "exportName": "paymentLinkRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 135
+      }
+    },
+    {
+      "path": "/invoices",
+      "type": "loadChildren",
+      "importPath": "../features/invoices/invoices.routes",
+      "exportName": "invoiceRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 141
+      }
+    },
+    {
+      "path": "/qr-payments",
+      "type": "loadChildren",
+      "importPath": "../features/qr-payments/qr-payments.routes",
+      "exportName": "qrPaymentRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 147
+      }
+    },
+    {
+      "path": "/subscriptions",
+      "type": "loadChildren",
+      "importPath": "../features/subscriptions/subscriptions.routes",
+      "exportName": "subscriptionRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 153
+      }
+    },
+    {
+      "path": "/support",
+      "type": "loadChildren",
+      "importPath": "../features/support/support.routes",
+      "exportName": "supportRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 159
+      }
+    },
+    {
+      "path": "/operations",
+      "type": "loadChildren",
+      "importPath": "../features/operations/operations.routes",
+      "exportName": "operationsRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 165
+      }
+    },
+    {
+      "path": "/activity",
+      "type": "loadChildren",
+      "importPath": "../features/activity/activity.routes",
+      "exportName": "activityRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 171
+      }
+    },
+    {
+      "path": "/checkout",
+      "type": "loadChildren",
+      "importPath": "../features/checkout-admin/checkout-admin.routes",
+      "exportName": "checkoutAdminRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 177
+      }
+    },
+    {
+      "path": "/pay/checkout/:ref",
+      "type": "loadComponent",
+      "importPath": "../features/checkout/pages/hosted-checkout/hosted-checkout.component",
+      "exportName": "HostedCheckoutComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 183
+      }
+    },
+    {
+      "path": "/pay/:token",
+      "type": "loadComponent",
+      "importPath": "../features/payment-links/pages/public-pay/public-pay.component",
+      "exportName": "PublicPayComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 189
+      }
+    },
+    {
+      "path": "/qr/:token",
+      "type": "loadComponent",
+      "importPath": "../features/qr-payments/pages/public-qr-pay/public-qr-pay.component",
+      "exportName": "PublicQrPayComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 195
+      }
+    },
+    {
+      "path": "/smart-collect",
+      "type": "loadChildren",
+      "importPath": "../features/smart-collect/smart-collect.routes",
+      "exportName": "smartCollectRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 201
+      }
+    },
+    {
+      "path": "/acceptance",
+      "type": "loadChildren",
+      "importPath": "../features/acceptance/acceptance.routes",
+      "exportName": "acceptanceRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 207
+      }
+    },
+    {
+      "path": "/merchant-portal",
+      "type": "loadChildren",
+      "importPath": "../features/merchant-portal/merchant-portal.routes",
+      "exportName": "merchantPortalRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 213
+      }
+    },
+    {
+      "path": "/developer",
+      "type": "loadChildren",
+      "importPath": "../features/developer/developer.routes",
+      "exportName": "developerRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 219
+      }
+    },
+    {
+      "path": "/webhooks",
+      "type": "loadChildren",
+      "importPath": "../features/webhooks/webhooks.routes",
+      "exportName": "webhooksRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 225
+      }
+    },
+    {
+      "path": "/reconciliation",
+      "type": "loadChildren",
+      "importPath": "../features/reconciliation/reconciliation.routes",
+      "exportName": "reconciliationRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 231
+      }
+    },
+    {
+      "path": "/sandbox",
+      "type": "loadChildren",
+      "importPath": "../features/sandbox/sandbox.routes",
+      "exportName": "sandboxRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 237
+      }
+    },
+    {
+      "path": "/customers",
+      "type": "loadChildren",
+      "importPath": "../features/customers/customers.routes",
+      "exportName": "customerRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 243
+      }
+    },
+    {
+      "path": "/organizations",
+      "type": "loadChildren",
+      "importPath": "../features/organizations/organizations.routes",
+      "exportName": "organizationRoutes",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 249
+      }
+    },
+    {
+      "path": "/select-organization",
+      "type": "loadComponent",
+      "importPath": "../features/organizations/pages/select-organization/select-organization.component",
+      "exportName": "SelectOrganizationComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 255
+      }
+    }
+  ]
+}

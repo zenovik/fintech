@@ -1,0 +1,6835 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T18:43:41.784Z",
+    "generatorVersion": "2.0.0-ast"
+  },
+  "usage": [
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "callers": [
+        {
+          "service": "AuthService",
+          "method": "login",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/core/auth/services/auth.service.ts",
+            "line": 30
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "ForgotPasswordComponent",
+        "LoginComponent",
+        "ResetPasswordComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/verify-otp",
+      "callers": [
+        {
+          "service": "AuthService",
+          "method": "verifyOtp",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/core/auth/services/auth.service.ts",
+            "line": 48
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "ForgotPasswordComponent",
+        "LoginComponent",
+        "ResetPasswordComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/resend-otp",
+      "callers": [
+        {
+          "service": "AuthService",
+          "method": "resendOtp",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/core/auth/services/auth.service.ts",
+            "line": 59
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "ForgotPasswordComponent",
+        "LoginComponent",
+        "ResetPasswordComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/forgot-password",
+      "callers": [
+        {
+          "service": "AuthService",
+          "method": "forgotPassword",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/core/auth/services/auth.service.ts",
+            "line": 74
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "ForgotPasswordComponent",
+        "LoginComponent",
+        "ResetPasswordComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/reset-password",
+      "callers": [
+        {
+          "service": "AuthService",
+          "method": "resetPassword",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/core/auth/services/auth.service.ts",
+            "line": 85
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "ForgotPasswordComponent",
+        "LoginComponent",
+        "ResetPasswordComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/refresh-token",
+      "callers": [
+        {
+          "service": "AuthService",
+          "method": "refreshToken",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/core/auth/services/auth.service.ts",
+            "line": 92
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "ForgotPasswordComponent",
+        "LoginComponent",
+        "ResetPasswordComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/logout",
+      "callers": [
+        {
+          "service": "AuthService",
+          "method": "logout",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/core/auth/services/auth.service.ts",
+            "line": 107
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "ForgotPasswordComponent",
+        "LoginComponent",
+        "ResetPasswordComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/me",
+      "callers": [
+        {
+          "service": "AuthService",
+          "method": "getMe",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/core/auth/services/auth.service.ts",
+            "line": 118
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "ForgotPasswordComponent",
+        "LoginComponent",
+        "ResetPasswordComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/select-organization",
+      "callers": [
+        {
+          "service": "AuthService",
+          "method": "selectOrganization",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/core/auth/services/auth.service.ts",
+            "line": 127
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "ForgotPasswordComponent",
+        "LoginComponent",
+        "ResetPasswordComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/sessions",
+      "callers": [
+        {
+          "service": "AuthService",
+          "method": "getSessions",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/core/auth/services/auth.service.ts",
+            "line": 140
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "ForgotPasswordComponent",
+        "LoginComponent",
+        "ResetPasswordComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/auth/session/:id",
+      "callers": [
+        {
+          "service": "AuthService",
+          "method": "revokeSession",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/core/auth/services/auth.service.ts",
+            "line": 149
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "ForgotPasswordComponent",
+        "LoginComponent",
+        "ResetPasswordComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/auth/sessions/others",
+      "callers": [
+        {
+          "service": "AuthService",
+          "method": "revokeOtherSessions",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/core/auth/services/auth.service.ts",
+            "line": 158
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "ForgotPasswordComponent",
+        "LoginComponent",
+        "ResetPasswordComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/csrf-token",
+      "callers": [
+        {
+          "service": "CsrfService",
+          "method": "getToken",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/core/auth/services/csrf.service.ts",
+            "line": 23
+          }
+        }
+      ],
+      "components": []
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/search",
+      "callers": [
+        {
+          "service": "SearchApiService",
+          "method": "search",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/core/search/services/search-api.service.ts",
+            "line": 28
+          }
+        }
+      ],
+      "components": [
+        "DashboardTopnavComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/acceptance/analytics",
+      "callers": [
+        {
+          "service": "AcceptanceApiService",
+          "method": "analytics",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/acceptance/services/acceptance-api.service.ts",
+            "line": 17
+          }
+        }
+      ],
+      "components": [
+        "AcceptanceAnalyticsComponent",
+        "MerchantPaymentPortalComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/acceptance/top-merchants",
+      "callers": [
+        {
+          "service": "AcceptanceApiService",
+          "method": "topMerchants",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/acceptance/services/acceptance-api.service.ts",
+            "line": 23
+          }
+        }
+      ],
+      "components": [
+        "AcceptanceAnalyticsComponent",
+        "MerchantPaymentPortalComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/acceptance/failure-insights",
+      "callers": [
+        {
+          "service": "AcceptanceApiService",
+          "method": "failureInsights",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/acceptance/services/acceptance-api.service.ts",
+            "line": 29
+          }
+        }
+      ],
+      "components": [
+        "AcceptanceAnalyticsComponent",
+        "MerchantPaymentPortalComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/acceptance/merchant-portal/:merchantId",
+      "callers": [
+        {
+          "service": "AcceptanceApiService",
+          "method": "merchantPortal",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/acceptance/services/acceptance-api.service.ts",
+            "line": 33
+          }
+        }
+      ],
+      "components": [
+        "AcceptanceAnalyticsComponent",
+        "MerchantPaymentPortalComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/activity/timeline",
+      "callers": [
+        {
+          "service": "ActivityApiService",
+          "method": "getTimeline",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/activity/services/activity-api.service.ts",
+            "line": 31
+          }
+        }
+      ],
+      "components": [
+        "ActivityTimelineComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/audit",
+      "callers": [
+        {
+          "service": "AuditApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/audit/services/audit-api.service.ts",
+            "line": 57
+          }
+        }
+      ],
+      "components": [
+        "ApiLogsComponent",
+        "AuditDashboardComponent",
+        "AuditDetailsComponent",
+        "AuditTimelineComponent",
+        "WebhookLogsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/audit/",
+      "callers": [
+        {
+          "service": "AuditApiService",
+          "method": "getById",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/audit/services/audit-api.service.ts",
+            "line": 63
+          }
+        }
+      ],
+      "components": [
+        "ApiLogsComponent",
+        "AuditDashboardComponent",
+        "AuditDetailsComponent",
+        "AuditTimelineComponent",
+        "WebhookLogsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/audit/categories",
+      "callers": [
+        {
+          "service": "AuditApiService",
+          "method": "getCategories",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/audit/services/audit-api.service.ts",
+            "line": 69
+          }
+        }
+      ],
+      "components": [
+        "ApiLogsComponent",
+        "AuditDashboardComponent",
+        "AuditDetailsComponent",
+        "AuditTimelineComponent",
+        "WebhookLogsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/audit/actions",
+      "callers": [
+        {
+          "service": "AuditApiService",
+          "method": "getActions",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/audit/services/audit-api.service.ts",
+            "line": 77
+          }
+        }
+      ],
+      "components": [
+        "ApiLogsComponent",
+        "AuditDashboardComponent",
+        "AuditDetailsComponent",
+        "AuditTimelineComponent",
+        "WebhookLogsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/audit/export",
+      "callers": [
+        {
+          "service": "AuditApiService",
+          "method": "export",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/audit/services/audit-api.service.ts",
+            "line": 87
+          }
+        }
+      ],
+      "components": [
+        "ApiLogsComponent",
+        "AuditDashboardComponent",
+        "AuditDetailsComponent",
+        "AuditTimelineComponent",
+        "WebhookLogsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/audit/api-logs",
+      "callers": [
+        {
+          "service": "AuditApiService",
+          "method": "listApiLogs",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/audit/services/audit-api.service.ts",
+            "line": 114
+          }
+        }
+      ],
+      "components": [
+        "ApiLogsComponent",
+        "AuditDashboardComponent",
+        "AuditDetailsComponent",
+        "AuditTimelineComponent",
+        "WebhookLogsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/audit/webhook-logs",
+      "callers": [
+        {
+          "service": "AuditApiService",
+          "method": "listWebhookLogs",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/audit/services/audit-api.service.ts",
+            "line": 139
+          }
+        }
+      ],
+      "components": [
+        "ApiLogsComponent",
+        "AuditDashboardComponent",
+        "AuditDetailsComponent",
+        "AuditTimelineComponent",
+        "WebhookLogsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/chargebacks",
+      "callers": [
+        {
+          "service": "ChargebacksApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/chargebacks/services/chargebacks-api.service.ts",
+            "line": 39
+          }
+        },
+        {
+          "service": "ChargebacksApiService",
+          "method": "create",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/chargebacks/services/chargebacks-api.service.ts",
+            "line": 49
+          }
+        }
+      ],
+      "components": [
+        "ChargebackCreateComponent",
+        "ChargebackDetailsComponent",
+        "ChargebackListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/chargebacks/statistics",
+      "callers": [
+        {
+          "service": "ChargebacksApiService",
+          "method": "getById",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/chargebacks/services/chargebacks-api.service.ts",
+            "line": 45
+          }
+        }
+      ],
+      "components": [
+        "ChargebackCreateComponent",
+        "ChargebackDetailsComponent",
+        "ChargebackListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/chargebacks/:id/evidence",
+      "callers": [
+        {
+          "service": "ChargebacksApiService",
+          "method": "addEvidence",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/chargebacks/services/chargebacks-api.service.ts",
+            "line": 53
+          }
+        }
+      ],
+      "components": [
+        "ChargebackCreateComponent",
+        "ChargebackDetailsComponent",
+        "ChargebackListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/chargebacks/:id/representment",
+      "callers": [
+        {
+          "service": "ChargebacksApiService",
+          "method": "submitRepresentment",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/chargebacks/services/chargebacks-api.service.ts",
+            "line": 59
+          }
+        }
+      ],
+      "components": [
+        "ChargebackCreateComponent",
+        "ChargebackDetailsComponent",
+        "ChargebackListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/chargebacks/:id/resolve",
+      "callers": [
+        {
+          "service": "ChargebacksApiService",
+          "method": "resolve",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/chargebacks/services/chargebacks-api.service.ts",
+            "line": 65
+          }
+        }
+      ],
+      "components": [
+        "ChargebackCreateComponent",
+        "ChargebackDetailsComponent",
+        "ChargebackListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/checkout/sessions",
+      "callers": [
+        {
+          "service": "CheckoutApiService",
+          "method": "listSessions",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/checkout/services/checkout-api.service.ts",
+            "line": 35
+          }
+        },
+        {
+          "service": "CheckoutApiService",
+          "method": "createSession",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/checkout/services/checkout-api.service.ts",
+            "line": 47
+          }
+        }
+      ],
+      "components": [
+        "HostedCheckoutComponent",
+        "CheckoutAnalyticsDashboardComponent",
+        "CheckoutBrandingManagerComponent",
+        "CheckoutSessionDetailComponent",
+        "CheckoutSessionListComponent",
+        "CheckoutThemeListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/checkout/sessions/:id",
+      "callers": [
+        {
+          "service": "CheckoutApiService",
+          "method": "getSession",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/checkout/services/checkout-api.service.ts",
+            "line": 41
+          }
+        }
+      ],
+      "components": [
+        "HostedCheckoutComponent",
+        "CheckoutAnalyticsDashboardComponent",
+        "CheckoutBrandingManagerComponent",
+        "CheckoutSessionDetailComponent",
+        "CheckoutSessionListComponent",
+        "CheckoutThemeListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/checkout/analytics",
+      "callers": [
+        {
+          "service": "CheckoutApiService",
+          "method": "getAnalytics",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/checkout/services/checkout-api.service.ts",
+            "line": 56
+          }
+        }
+      ],
+      "components": [
+        "HostedCheckoutComponent",
+        "CheckoutAnalyticsDashboardComponent",
+        "CheckoutBrandingManagerComponent",
+        "CheckoutSessionDetailComponent",
+        "CheckoutSessionListComponent",
+        "CheckoutThemeListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/checkout/themes",
+      "callers": [
+        {
+          "service": "CheckoutApiService",
+          "method": "listThemes",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/checkout/services/checkout-api.service.ts",
+            "line": 62
+          }
+        }
+      ],
+      "components": [
+        "HostedCheckoutComponent",
+        "CheckoutAnalyticsDashboardComponent",
+        "CheckoutBrandingManagerComponent",
+        "CheckoutSessionDetailComponent",
+        "CheckoutSessionListComponent",
+        "CheckoutThemeListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/checkout/branding/:merchantId",
+      "callers": [
+        {
+          "service": "CheckoutApiService",
+          "method": "getBranding",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/checkout/services/checkout-api.service.ts",
+            "line": 68
+          }
+        },
+        {
+          "service": "CheckoutApiService",
+          "method": "updateBranding",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/checkout/services/checkout-api.service.ts",
+            "line": 74
+          }
+        }
+      ],
+      "components": [
+        "HostedCheckoutComponent",
+        "CheckoutAnalyticsDashboardComponent",
+        "CheckoutBrandingManagerComponent",
+        "CheckoutSessionDetailComponent",
+        "CheckoutSessionListComponent",
+        "CheckoutThemeListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/public/checkout/:param",
+      "callers": [
+        {
+          "service": "CheckoutApiService",
+          "method": "getPublicCheckout",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/checkout/services/checkout-api.service.ts",
+            "line": 81
+          }
+        }
+      ],
+      "components": [
+        "HostedCheckoutComponent",
+        "CheckoutAnalyticsDashboardComponent",
+        "CheckoutBrandingManagerComponent",
+        "CheckoutSessionDetailComponent",
+        "CheckoutSessionListComponent",
+        "CheckoutThemeListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/public/checkout/:param/pay",
+      "callers": [
+        {
+          "service": "CheckoutApiService",
+          "method": "pay",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/checkout/services/checkout-api.service.ts",
+            "line": 88
+          }
+        }
+      ],
+      "components": [
+        "HostedCheckoutComponent",
+        "CheckoutAnalyticsDashboardComponent",
+        "CheckoutBrandingManagerComponent",
+        "CheckoutSessionDetailComponent",
+        "CheckoutSessionListComponent",
+        "CheckoutThemeListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/public/checkout/:param/retry",
+      "callers": [
+        {
+          "service": "CheckoutApiService",
+          "method": "retry",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/checkout/services/checkout-api.service.ts",
+            "line": 95
+          }
+        }
+      ],
+      "components": [
+        "HostedCheckoutComponent",
+        "CheckoutAnalyticsDashboardComponent",
+        "CheckoutBrandingManagerComponent",
+        "CheckoutSessionDetailComponent",
+        "CheckoutSessionListComponent",
+        "CheckoutThemeListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/public/checkout/:param/cancel",
+      "callers": [
+        {
+          "service": "CheckoutApiService",
+          "method": "cancel",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/checkout/services/checkout-api.service.ts",
+            "line": 102
+          }
+        }
+      ],
+      "components": [
+        "HostedCheckoutComponent",
+        "CheckoutAnalyticsDashboardComponent",
+        "CheckoutBrandingManagerComponent",
+        "CheckoutSessionDetailComponent",
+        "CheckoutSessionListComponent",
+        "CheckoutThemeListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/public/checkout/recover/:param",
+      "callers": [
+        {
+          "service": "CheckoutApiService",
+          "method": "recover",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/checkout/services/checkout-api.service.ts",
+            "line": 108
+          }
+        }
+      ],
+      "components": [
+        "HostedCheckoutComponent",
+        "CheckoutAnalyticsDashboardComponent",
+        "CheckoutBrandingManagerComponent",
+        "CheckoutSessionDetailComponent",
+        "CheckoutSessionListComponent",
+        "CheckoutThemeListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/customers",
+      "callers": [
+        {
+          "service": "CustomersApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/customers/services/customers-api.service.ts",
+            "line": 41
+          }
+        },
+        {
+          "service": "CustomersApiService",
+          "method": "create",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/customers/services/customers-api.service.ts",
+            "line": 53
+          }
+        }
+      ],
+      "components": [
+        "CustomerFormComponent",
+        "CustomerDetailsComponent",
+        "CustomerListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/customers/search",
+      "callers": [
+        {
+          "service": "CustomersApiService",
+          "method": "getById",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/customers/services/customers-api.service.ts",
+            "line": 47
+          }
+        }
+      ],
+      "components": [
+        "CustomerFormComponent",
+        "CustomerDetailsComponent",
+        "CustomerListComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/customers/:id",
+      "callers": [
+        {
+          "service": "CustomersApiService",
+          "method": "update",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/customers/services/customers-api.service.ts",
+            "line": 59
+          }
+        },
+        {
+          "service": "CustomersApiService",
+          "method": "delete",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/customers/services/customers-api.service.ts",
+            "line": 71
+          }
+        }
+      ],
+      "components": [
+        "CustomerFormComponent",
+        "CustomerDetailsComponent",
+        "CustomerListComponent"
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/customers/:id/status",
+      "callers": [
+        {
+          "service": "CustomersApiService",
+          "method": "updateStatus",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/customers/services/customers-api.service.ts",
+            "line": 65
+          }
+        }
+      ],
+      "components": [
+        "CustomerFormComponent",
+        "CustomerDetailsComponent",
+        "CustomerListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/customers/:id/transactions",
+      "callers": [
+        {
+          "service": "CustomersApiService",
+          "method": "getTransactions",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/customers/services/customers-api.service.ts",
+            "line": 78
+          }
+        }
+      ],
+      "components": [
+        "CustomerFormComponent",
+        "CustomerDetailsComponent",
+        "CustomerListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/customers/:id/merchants",
+      "callers": [
+        {
+          "service": "CustomersApiService",
+          "method": "getMerchants",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/customers/services/customers-api.service.ts",
+            "line": 87
+          }
+        }
+      ],
+      "components": [
+        "CustomerFormComponent",
+        "CustomerDetailsComponent",
+        "CustomerListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/dashboard/executive/ai/chat",
+      "callers": [
+        {
+          "service": "DashboardAiApiService",
+          "method": "chat",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/dashboard/services/dashboard-ai-api.service.ts",
+            "line": 14
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "DashboardAiWidgetComponent",
+        "ExecutiveOverviewComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/executive/summary",
+      "callers": [
+        {
+          "service": "DashboardApiService",
+          "method": "getSummary",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/dashboard/services/dashboard-api.service.ts",
+            "line": 25
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/executive/charts/revenue",
+      "callers": [
+        {
+          "service": "DashboardApiService",
+          "method": "getRevenueChart",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/dashboard/services/dashboard-api.service.ts",
+            "line": 33
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/executive/charts/payment-methods",
+      "callers": [
+        {
+          "service": "DashboardApiService",
+          "method": "getPaymentMethods",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/dashboard/services/dashboard-api.service.ts",
+            "line": 39
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/executive/charts/regional-distribution",
+      "callers": [
+        {
+          "service": "DashboardApiService",
+          "method": "getRegionalDistribution",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/dashboard/services/dashboard-api.service.ts",
+            "line": 47
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/executive/transactions/high-value",
+      "callers": [
+        {
+          "service": "DashboardApiService",
+          "method": "getHighValueTransactions",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/dashboard/services/dashboard-api.service.ts",
+            "line": 68
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/executive/activities",
+      "callers": [
+        {
+          "service": "DashboardApiService",
+          "method": "getActivities",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/dashboard/services/dashboard-api.service.ts",
+            "line": 76
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/executive/fraud-alerts",
+      "callers": [
+        {
+          "service": "DashboardApiService",
+          "method": "getFraudAlerts",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/dashboard/services/dashboard-api.service.ts",
+            "line": 82
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/dashboard/executive/export",
+      "callers": [
+        {
+          "service": "DashboardApiService",
+          "method": "exportReport",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/dashboard/services/dashboard-api.service.ts",
+            "line": 88
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/executive/preferences",
+      "callers": [
+        {
+          "service": "DashboardApiService",
+          "method": "getPreferences",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/dashboard/services/dashboard-api.service.ts",
+            "line": 97
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/dashboard/executive/operations-stats",
+      "callers": [
+        {
+          "service": "DashboardApiService",
+          "method": "getOperationsStats",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/dashboard/services/dashboard-api.service.ts",
+            "line": 103
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/developer/dashboard",
+      "callers": [
+        {
+          "service": "DeveloperApiService",
+          "method": "dashboard",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/developer/services/developer-api.service.ts",
+            "line": 19
+          }
+        }
+      ],
+      "components": [
+        "DeveloperDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/developer/api-keys",
+      "callers": [
+        {
+          "service": "DeveloperApiService",
+          "method": "listApiKeys",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/developer/services/developer-api.service.ts",
+            "line": 25
+          }
+        }
+      ],
+      "components": [
+        "DeveloperDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/developer/oauth-apps",
+      "callers": [
+        {
+          "service": "DeveloperApiService",
+          "method": "listOAuthApps",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/developer/services/developer-api.service.ts",
+            "line": 30
+          }
+        }
+      ],
+      "components": [
+        "DeveloperDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/developer/usage",
+      "callers": [
+        {
+          "service": "DeveloperApiService",
+          "method": "getUsage",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/developer/services/developer-api.service.ts",
+            "line": 35
+          }
+        }
+      ],
+      "components": [
+        "DeveloperDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/api/v1/devices",
+      "callers": [
+        {
+          "service": "DevicesApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/devices/services/devices-api.service.ts",
+            "line": 13
+          }
+        },
+        {
+          "service": "DevicesApiService",
+          "method": "provision",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/devices/services/devices-api.service.ts",
+            "line": 17
+          }
+        }
+      ],
+      "components": [
+        "DevicesListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/api/v1/devices/:param/activate",
+      "callers": [
+        {
+          "service": "DevicesApiService",
+          "method": "activate",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/devices/services/devices-api.service.ts",
+            "line": 21
+          }
+        }
+      ],
+      "components": [
+        "DevicesListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/api/v1/fraud",
+      "callers": [
+        {
+          "service": "FraudApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/fraud/services/fraud-api.service.ts",
+            "line": 13
+          }
+        }
+      ],
+      "components": [
+        "FraudQueueComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/api/v1/fraud/:param/approve",
+      "callers": [
+        {
+          "service": "FraudApiService",
+          "method": "approve",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/fraud/services/fraud-api.service.ts",
+            "line": 16
+          }
+        }
+      ],
+      "components": [
+        "FraudQueueComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/api/v1/fraud/:param/reject",
+      "callers": [
+        {
+          "service": "FraudApiService",
+          "method": "reject",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/fraud/services/fraud-api.service.ts",
+            "line": 17
+          }
+        }
+      ],
+      "components": [
+        "FraudQueueComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/api/v1/fraud/:param/release",
+      "callers": [
+        {
+          "service": "FraudApiService",
+          "method": "release",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/fraud/services/fraud-api.service.ts",
+            "line": 18
+          }
+        }
+      ],
+      "components": [
+        "FraudQueueComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/invoices",
+      "callers": [
+        {
+          "service": "InvoicesApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/invoices/services/invoices-api.service.ts",
+            "line": 19
+          }
+        },
+        {
+          "service": "InvoicesApiService",
+          "method": "create",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/invoices/services/invoices-api.service.ts",
+            "line": 27
+          }
+        }
+      ],
+      "components": [
+        "InvoiceCreateComponent",
+        "InvoiceDetailsComponent",
+        "InvoiceEditComponent",
+        "InvoiceListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/invoices/statistics",
+      "callers": [
+        {
+          "service": "InvoicesApiService",
+          "method": "getById",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/invoices/services/invoices-api.service.ts",
+            "line": 23
+          }
+        }
+      ],
+      "components": [
+        "InvoiceCreateComponent",
+        "InvoiceDetailsComponent",
+        "InvoiceEditComponent",
+        "InvoiceListComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/invoices/:id",
+      "callers": [
+        {
+          "service": "InvoicesApiService",
+          "method": "update",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/invoices/services/invoices-api.service.ts",
+            "line": 31
+          }
+        }
+      ],
+      "components": [
+        "InvoiceCreateComponent",
+        "InvoiceDetailsComponent",
+        "InvoiceEditComponent",
+        "InvoiceListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/invoices/:id/duplicate",
+      "callers": [
+        {
+          "service": "InvoicesApiService",
+          "method": "duplicate",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/invoices/services/invoices-api.service.ts",
+            "line": 35
+          }
+        }
+      ],
+      "components": [
+        "InvoiceCreateComponent",
+        "InvoiceDetailsComponent",
+        "InvoiceEditComponent",
+        "InvoiceListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/invoices/:id/void",
+      "callers": [
+        {
+          "service": "InvoicesApiService",
+          "method": "void",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/invoices/services/invoices-api.service.ts",
+            "line": 39
+          }
+        }
+      ],
+      "components": [
+        "InvoiceCreateComponent",
+        "InvoiceDetailsComponent",
+        "InvoiceEditComponent",
+        "InvoiceListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/invoices/:id/cancel",
+      "callers": [
+        {
+          "service": "InvoicesApiService",
+          "method": "cancel",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/invoices/services/invoices-api.service.ts",
+            "line": 43
+          }
+        }
+      ],
+      "components": [
+        "InvoiceCreateComponent",
+        "InvoiceDetailsComponent",
+        "InvoiceEditComponent",
+        "InvoiceListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/invoices/:id/send",
+      "callers": [
+        {
+          "service": "InvoicesApiService",
+          "method": "markSent",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/invoices/services/invoices-api.service.ts",
+            "line": 47
+          }
+        }
+      ],
+      "components": [
+        "InvoiceCreateComponent",
+        "InvoiceDetailsComponent",
+        "InvoiceEditComponent",
+        "InvoiceListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/invoices/:id/mark-overdue",
+      "callers": [
+        {
+          "service": "InvoicesApiService",
+          "method": "markOverdue",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/invoices/services/invoices-api.service.ts",
+            "line": 51
+          }
+        }
+      ],
+      "components": [
+        "InvoiceCreateComponent",
+        "InvoiceDetailsComponent",
+        "InvoiceEditComponent",
+        "InvoiceListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/invoices/:id/mark-paid",
+      "callers": [
+        {
+          "service": "InvoicesApiService",
+          "method": "markPaid",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/invoices/services/invoices-api.service.ts",
+            "line": 55
+          }
+        }
+      ],
+      "components": [
+        "InvoiceCreateComponent",
+        "InvoiceDetailsComponent",
+        "InvoiceEditComponent",
+        "InvoiceListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/invoices/:id/email",
+      "callers": [
+        {
+          "service": "InvoicesApiService",
+          "method": "email",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/invoices/services/invoices-api.service.ts",
+            "line": 59
+          }
+        }
+      ],
+      "components": [
+        "InvoiceCreateComponent",
+        "InvoiceDetailsComponent",
+        "InvoiceEditComponent",
+        "InvoiceListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/invoices/templates/:id",
+      "callers": [
+        {
+          "service": "InvoicesApiService",
+          "method": "downloadPdf",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/invoices/services/invoices-api.service.ts",
+            "line": 63
+          }
+        }
+      ],
+      "components": [
+        "InvoiceCreateComponent",
+        "InvoiceDetailsComponent",
+        "InvoiceEditComponent",
+        "InvoiceListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/invoices/:id/payment-link",
+      "callers": [
+        {
+          "service": "InvoicesApiService",
+          "method": "generatePaymentLink",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/invoices/services/invoices-api.service.ts",
+            "line": 67
+          }
+        }
+      ],
+      "components": [
+        "InvoiceCreateComponent",
+        "InvoiceDetailsComponent",
+        "InvoiceEditComponent",
+        "InvoiceListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/invoices/:id/payment-link/regenerate",
+      "callers": [
+        {
+          "service": "InvoicesApiService",
+          "method": "regeneratePaymentLink",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/invoices/services/invoices-api.service.ts",
+            "line": 71
+          }
+        }
+      ],
+      "components": [
+        "InvoiceCreateComponent",
+        "InvoiceDetailsComponent",
+        "InvoiceEditComponent",
+        "InvoiceListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/invoices/:id/payment-link/disable",
+      "callers": [
+        {
+          "service": "InvoicesApiService",
+          "method": "disablePaymentLink",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/invoices/services/invoices-api.service.ts",
+            "line": 75
+          }
+        }
+      ],
+      "components": [
+        "InvoiceCreateComponent",
+        "InvoiceDetailsComponent",
+        "InvoiceEditComponent",
+        "InvoiceListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/merchants",
+      "callers": [
+        {
+          "service": "MerchantApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant/services/merchant-api.service.ts",
+            "line": 50
+          }
+        },
+        {
+          "service": "MerchantApiService",
+          "method": "create",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant/services/merchant-api.service.ts",
+            "line": 76
+          }
+        }
+      ],
+      "components": [
+        "MerchantDetailsComponent",
+        "MerchantFormComponent",
+        "MerchantListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/merchants/search",
+      "callers": [
+        {
+          "service": "MerchantApiService",
+          "method": "search",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant/services/merchant-api.service.ts",
+            "line": 56
+          }
+        },
+        {
+          "service": "MerchantApiService",
+          "method": "getById",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant/services/merchant-api.service.ts",
+            "line": 70
+          }
+        }
+      ],
+      "components": [
+        "MerchantDetailsComponent",
+        "MerchantFormComponent",
+        "MerchantListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/merchants/statistics",
+      "callers": [
+        {
+          "service": "MerchantApiService",
+          "method": "getStatistics",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant/services/merchant-api.service.ts",
+            "line": 64
+          }
+        }
+      ],
+      "components": [
+        "MerchantDetailsComponent",
+        "MerchantFormComponent",
+        "MerchantListComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/merchants/:id",
+      "callers": [
+        {
+          "service": "MerchantApiService",
+          "method": "update",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant/services/merchant-api.service.ts",
+            "line": 82
+          }
+        },
+        {
+          "service": "MerchantApiService",
+          "method": "delete",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant/services/merchant-api.service.ts",
+            "line": 94
+          }
+        }
+      ],
+      "components": [
+        "MerchantDetailsComponent",
+        "MerchantFormComponent",
+        "MerchantListComponent"
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/merchants/:id/status",
+      "callers": [
+        {
+          "service": "MerchantApiService",
+          "method": "updateStatus",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant/services/merchant-api.service.ts",
+            "line": 88
+          }
+        }
+      ],
+      "components": [
+        "MerchantDetailsComponent",
+        "MerchantFormComponent",
+        "MerchantListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/merchants/:id/transactions",
+      "callers": [
+        {
+          "service": "MerchantApiService",
+          "method": "getTransactions",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant/services/merchant-api.service.ts",
+            "line": 101
+          }
+        }
+      ],
+      "components": [
+        "MerchantDetailsComponent",
+        "MerchantFormComponent",
+        "MerchantListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/merchants/:id/documents",
+      "callers": [
+        {
+          "service": "MerchantApiService",
+          "method": "getDocuments",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant/services/merchant-api.service.ts",
+            "line": 110
+          }
+        },
+        {
+          "service": "MerchantApiService",
+          "method": "uploadDocument",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant/services/merchant-api.service.ts",
+            "line": 116
+          }
+        }
+      ],
+      "components": [
+        "MerchantDetailsComponent",
+        "MerchantFormComponent",
+        "MerchantListComponent"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/merchants/:id/documents/:documentId",
+      "callers": [
+        {
+          "service": "MerchantApiService",
+          "method": "deleteDocument",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant/services/merchant-api.service.ts",
+            "line": 122
+          }
+        }
+      ],
+      "components": [
+        "MerchantDetailsComponent",
+        "MerchantFormComponent",
+        "MerchantListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/merchant-onboarding/statistics",
+      "callers": [
+        {
+          "service": "MerchantOnboardingApiService",
+          "method": "statistics",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-onboarding/services/merchant-onboarding-api.service.ts",
+            "line": 17
+          }
+        }
+      ],
+      "components": [
+        "OnboardingDashboardComponent",
+        "OnboardingDetailComponent",
+        "OnboardingWizardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/merchant-onboarding",
+      "callers": [
+        {
+          "service": "MerchantOnboardingApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-onboarding/services/merchant-onboarding-api.service.ts",
+            "line": 24
+          }
+        },
+        {
+          "service": "MerchantOnboardingApiService",
+          "method": "create",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-onboarding/services/merchant-onboarding-api.service.ts",
+            "line": 32
+          }
+        }
+      ],
+      "components": [
+        "OnboardingDashboardComponent",
+        "OnboardingDetailComponent",
+        "OnboardingWizardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/merchant-onboarding/:param",
+      "callers": [
+        {
+          "service": "MerchantOnboardingApiService",
+          "method": "getById",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-onboarding/services/merchant-onboarding-api.service.ts",
+            "line": 28
+          }
+        }
+      ],
+      "components": [
+        "OnboardingDashboardComponent",
+        "OnboardingDetailComponent",
+        "OnboardingWizardComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/merchant-onboarding/:param/business",
+      "callers": [
+        {
+          "service": "MerchantOnboardingApiService",
+          "method": "saveBusiness",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-onboarding/services/merchant-onboarding-api.service.ts",
+            "line": 36
+          }
+        }
+      ],
+      "components": [
+        "OnboardingDashboardComponent",
+        "OnboardingDetailComponent",
+        "OnboardingWizardComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/merchant-onboarding/:param/addresses",
+      "callers": [
+        {
+          "service": "MerchantOnboardingApiService",
+          "method": "saveAddresses",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-onboarding/services/merchant-onboarding-api.service.ts",
+            "line": 40
+          }
+        }
+      ],
+      "components": [
+        "OnboardingDashboardComponent",
+        "OnboardingDetailComponent",
+        "OnboardingWizardComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/merchant-onboarding/:param/kyc",
+      "callers": [
+        {
+          "service": "MerchantOnboardingApiService",
+          "method": "saveKyc",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-onboarding/services/merchant-onboarding-api.service.ts",
+            "line": 44
+          }
+        }
+      ],
+      "components": [
+        "OnboardingDashboardComponent",
+        "OnboardingDetailComponent",
+        "OnboardingWizardComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/merchant-onboarding/:param/bank",
+      "callers": [
+        {
+          "service": "MerchantOnboardingApiService",
+          "method": "saveBank",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-onboarding/services/merchant-onboarding-api.service.ts",
+            "line": 48
+          }
+        }
+      ],
+      "components": [
+        "OnboardingDashboardComponent",
+        "OnboardingDetailComponent",
+        "OnboardingWizardComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/merchant-onboarding/:param/settlement",
+      "callers": [
+        {
+          "service": "MerchantOnboardingApiService",
+          "method": "saveSettlement",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-onboarding/services/merchant-onboarding-api.service.ts",
+            "line": 52
+          }
+        }
+      ],
+      "components": [
+        "OnboardingDashboardComponent",
+        "OnboardingDetailComponent",
+        "OnboardingWizardComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/merchant-onboarding/:param/payment",
+      "callers": [
+        {
+          "service": "MerchantOnboardingApiService",
+          "method": "savePayment",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-onboarding/services/merchant-onboarding-api.service.ts",
+            "line": 56
+          }
+        }
+      ],
+      "components": [
+        "OnboardingDashboardComponent",
+        "OnboardingDetailComponent",
+        "OnboardingWizardComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/merchant-onboarding/:param/submit",
+      "callers": [
+        {
+          "service": "MerchantOnboardingApiService",
+          "method": "submit",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-onboarding/services/merchant-onboarding-api.service.ts",
+            "line": 60
+          }
+        }
+      ],
+      "components": [
+        "OnboardingDashboardComponent",
+        "OnboardingDetailComponent",
+        "OnboardingWizardComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/merchant-onboarding/:param/approve",
+      "callers": [
+        {
+          "service": "MerchantOnboardingApiService",
+          "method": "approve",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-onboarding/services/merchant-onboarding-api.service.ts",
+            "line": 64
+          }
+        }
+      ],
+      "components": [
+        "OnboardingDashboardComponent",
+        "OnboardingDetailComponent",
+        "OnboardingWizardComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/merchant-onboarding/:param/reject",
+      "callers": [
+        {
+          "service": "MerchantOnboardingApiService",
+          "method": "reject",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-onboarding/services/merchant-onboarding-api.service.ts",
+            "line": 68
+          }
+        }
+      ],
+      "components": [
+        "OnboardingDashboardComponent",
+        "OnboardingDetailComponent",
+        "OnboardingWizardComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/merchant-onboarding/:param/go-live",
+      "callers": [
+        {
+          "service": "MerchantOnboardingApiService",
+          "method": "goLive",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-onboarding/services/merchant-onboarding-api.service.ts",
+            "line": 72
+          }
+        }
+      ],
+      "components": [
+        "OnboardingDashboardComponent",
+        "OnboardingDetailComponent",
+        "OnboardingWizardComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/merchant-onboarding/:param/suspend",
+      "callers": [
+        {
+          "service": "MerchantOnboardingApiService",
+          "method": "suspend",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-onboarding/services/merchant-onboarding-api.service.ts",
+            "line": 76
+          }
+        }
+      ],
+      "components": [
+        "OnboardingDashboardComponent",
+        "OnboardingDetailComponent",
+        "OnboardingWizardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/merchant-onboarding/:param/timeline",
+      "callers": [
+        {
+          "service": "MerchantOnboardingApiService",
+          "method": "timeline",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-onboarding/services/merchant-onboarding-api.service.ts",
+            "line": 80
+          }
+        }
+      ],
+      "components": [
+        "OnboardingDashboardComponent",
+        "OnboardingDetailComponent",
+        "OnboardingWizardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/api/v1/merchant-users/me",
+      "callers": [
+        {
+          "service": "MerchantContextService",
+          "method": "load",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-users/services/merchant-context.service.ts",
+            "line": 32
+          }
+        }
+      ],
+      "components": [
+        "DashboardSidenavComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/api/v1/merchant-users",
+      "callers": [
+        {
+          "service": "MerchantUsersApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-users/services/merchant-users-api.service.ts",
+            "line": 17
+          }
+        }
+      ],
+      "components": [
+        "MerchantUserListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/api/v1/merchant-users/roles",
+      "callers": [
+        {
+          "service": "MerchantUsersApiService",
+          "method": "listRoles",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-users/services/merchant-users-api.service.ts",
+            "line": 21
+          }
+        }
+      ],
+      "components": [
+        "MerchantUserListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/api/v1/merchant-users/invite",
+      "callers": [
+        {
+          "service": "MerchantUsersApiService",
+          "method": "invite",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-users/services/merchant-users-api.service.ts",
+            "line": 25
+          }
+        }
+      ],
+      "components": [
+        "MerchantUserListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/api/v1/merchant-users/:param/activate",
+      "callers": [
+        {
+          "service": "MerchantUsersApiService",
+          "method": "activate",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-users/services/merchant-users-api.service.ts",
+            "line": 29
+          }
+        }
+      ],
+      "components": [
+        "MerchantUserListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/api/v1/merchant-users/:param/deactivate",
+      "callers": [
+        {
+          "service": "MerchantUsersApiService",
+          "method": "deactivate",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/merchant-users/services/merchant-users-api.service.ts",
+            "line": 33
+          }
+        }
+      ],
+      "components": [
+        "MerchantUserListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/notifications",
+      "callers": [
+        {
+          "service": "NotificationsApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/notifications/services/notifications-api.service.ts",
+            "line": 48
+          }
+        }
+      ],
+      "components": [
+        "DashboardTopnavComponent",
+        "NotificationBroadcastsComponent",
+        "NotificationCenterComponent",
+        "NotificationDetailsComponent",
+        "NotificationTemplatesComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/notifications/",
+      "callers": [
+        {
+          "service": "NotificationsApiService",
+          "method": "getById",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/notifications/services/notifications-api.service.ts",
+            "line": 54
+          }
+        }
+      ],
+      "components": [
+        "DashboardTopnavComponent",
+        "NotificationBroadcastsComponent",
+        "NotificationCenterComponent",
+        "NotificationDetailsComponent",
+        "NotificationTemplatesComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/notifications/unread-count",
+      "callers": [
+        {
+          "service": "NotificationsApiService",
+          "method": "getUnreadCount",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/notifications/services/notifications-api.service.ts",
+            "line": 60
+          }
+        }
+      ],
+      "components": [
+        "DashboardTopnavComponent",
+        "NotificationBroadcastsComponent",
+        "NotificationCenterComponent",
+        "NotificationDetailsComponent",
+        "NotificationTemplatesComponent"
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/notifications/:id/read",
+      "callers": [
+        {
+          "service": "NotificationsApiService",
+          "method": "markRead",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/notifications/services/notifications-api.service.ts",
+            "line": 66
+          }
+        }
+      ],
+      "components": [
+        "DashboardTopnavComponent",
+        "NotificationBroadcastsComponent",
+        "NotificationCenterComponent",
+        "NotificationDetailsComponent",
+        "NotificationTemplatesComponent"
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/notifications/read-all",
+      "callers": [
+        {
+          "service": "NotificationsApiService",
+          "method": "markAllRead",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/notifications/services/notifications-api.service.ts",
+            "line": 72
+          }
+        }
+      ],
+      "components": [
+        "DashboardTopnavComponent",
+        "NotificationBroadcastsComponent",
+        "NotificationCenterComponent",
+        "NotificationDetailsComponent",
+        "NotificationTemplatesComponent"
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/notifications/:id/archive",
+      "callers": [
+        {
+          "service": "NotificationsApiService",
+          "method": "archive",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/notifications/services/notifications-api.service.ts",
+            "line": 78
+          }
+        }
+      ],
+      "components": [
+        "DashboardTopnavComponent",
+        "NotificationBroadcastsComponent",
+        "NotificationCenterComponent",
+        "NotificationDetailsComponent",
+        "NotificationTemplatesComponent"
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/notifications/archive-all",
+      "callers": [
+        {
+          "service": "NotificationsApiService",
+          "method": "archiveAll",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/notifications/services/notifications-api.service.ts",
+            "line": 84
+          }
+        }
+      ],
+      "components": [
+        "DashboardTopnavComponent",
+        "NotificationBroadcastsComponent",
+        "NotificationCenterComponent",
+        "NotificationDetailsComponent",
+        "NotificationTemplatesComponent"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/notifications/:id",
+      "callers": [
+        {
+          "service": "NotificationsApiService",
+          "method": "delete",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/notifications/services/notifications-api.service.ts",
+            "line": 90
+          }
+        }
+      ],
+      "components": [
+        "DashboardTopnavComponent",
+        "NotificationBroadcastsComponent",
+        "NotificationCenterComponent",
+        "NotificationDetailsComponent",
+        "NotificationTemplatesComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/notifications/templates",
+      "callers": [
+        {
+          "service": "NotificationsApiService",
+          "method": "listTemplates",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/notifications/services/notifications-api.service.ts",
+            "line": 113
+          }
+        },
+        {
+          "service": "NotificationsApiService",
+          "method": "createTemplate",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/notifications/services/notifications-api.service.ts",
+            "line": 125
+          }
+        }
+      ],
+      "components": [
+        "DashboardTopnavComponent",
+        "NotificationBroadcastsComponent",
+        "NotificationCenterComponent",
+        "NotificationDetailsComponent",
+        "NotificationTemplatesComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/notifications/templates/:id",
+      "callers": [
+        {
+          "service": "NotificationsApiService",
+          "method": "getTemplate",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/notifications/services/notifications-api.service.ts",
+            "line": 119
+          }
+        },
+        {
+          "service": "NotificationsApiService",
+          "method": "updateTemplate",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/notifications/services/notifications-api.service.ts",
+            "line": 131
+          }
+        },
+        {
+          "service": "NotificationsApiService",
+          "method": "deleteTemplate",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/notifications/services/notifications-api.service.ts",
+            "line": 137
+          }
+        }
+      ],
+      "components": [
+        "DashboardTopnavComponent",
+        "NotificationBroadcastsComponent",
+        "NotificationCenterComponent",
+        "NotificationDetailsComponent",
+        "NotificationTemplatesComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/notifications/broadcasts",
+      "callers": [
+        {
+          "service": "NotificationsApiService",
+          "method": "listBroadcasts",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/notifications/services/notifications-api.service.ts",
+            "line": 148
+          }
+        },
+        {
+          "service": "NotificationsApiService",
+          "method": "createBroadcast",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/notifications/services/notifications-api.service.ts",
+            "line": 160
+          }
+        }
+      ],
+      "components": [
+        "DashboardTopnavComponent",
+        "NotificationBroadcastsComponent",
+        "NotificationCenterComponent",
+        "NotificationDetailsComponent",
+        "NotificationTemplatesComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/notifications/groups",
+      "callers": [
+        {
+          "service": "NotificationsApiService",
+          "method": "getGroups",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/notifications/services/notifications-api.service.ts",
+            "line": 166
+          }
+        }
+      ],
+      "components": [
+        "DashboardTopnavComponent",
+        "NotificationBroadcastsComponent",
+        "NotificationCenterComponent",
+        "NotificationDetailsComponent",
+        "NotificationTemplatesComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/notifications/channels",
+      "callers": [
+        {
+          "service": "NotificationsApiService",
+          "method": "getChannels",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/notifications/services/notifications-api.service.ts",
+            "line": 172
+          }
+        }
+      ],
+      "components": [
+        "DashboardTopnavComponent",
+        "NotificationBroadcastsComponent",
+        "NotificationCenterComponent",
+        "NotificationDetailsComponent",
+        "NotificationTemplatesComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/notifications/events",
+      "callers": [
+        {
+          "service": "NotificationsApiService",
+          "method": "getEvents",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/notifications/services/notifications-api.service.ts",
+            "line": 178
+          }
+        }
+      ],
+      "components": [
+        "DashboardTopnavComponent",
+        "NotificationBroadcastsComponent",
+        "NotificationCenterComponent",
+        "NotificationDetailsComponent",
+        "NotificationTemplatesComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/api/v1/onboarding-approval/compliance-queue",
+      "callers": [
+        {
+          "service": "OnboardingApprovalApiService",
+          "method": "complianceQueue",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/onboarding-approval/services/onboarding-approval-api.service.ts",
+            "line": 16
+          }
+        }
+      ],
+      "components": [
+        "ComplianceQueueComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/api/v1/dashboard/executive/onboarding-stats",
+      "callers": [
+        {
+          "service": "OnboardingApprovalApiService",
+          "method": "dashboardStats",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/onboarding-approval/services/onboarding-approval-api.service.ts",
+            "line": 20
+          }
+        }
+      ],
+      "components": [
+        "ComplianceQueueComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/api/v1/onboarding-approval/:param/workflow",
+      "callers": [
+        {
+          "service": "OnboardingApprovalApiService",
+          "method": "getWorkflow",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/onboarding-approval/services/onboarding-approval-api.service.ts",
+            "line": 24
+          }
+        }
+      ],
+      "components": [
+        "ComplianceQueueComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/api/v1/onboarding-approval/:param/approve",
+      "callers": [
+        {
+          "service": "OnboardingApprovalApiService",
+          "method": "approve",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/onboarding-approval/services/onboarding-approval-api.service.ts",
+            "line": 28
+          }
+        }
+      ],
+      "components": [
+        "ComplianceQueueComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/api/v1/onboarding-approval/:param/reject",
+      "callers": [
+        {
+          "service": "OnboardingApprovalApiService",
+          "method": "reject",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/onboarding-approval/services/onboarding-approval-api.service.ts",
+            "line": 32
+          }
+        }
+      ],
+      "components": [
+        "ComplianceQueueComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/api/v1/onboarding-approval/:param/go-live",
+      "callers": [
+        {
+          "service": "OnboardingApprovalApiService",
+          "method": "goLive",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/onboarding-approval/services/onboarding-approval-api.service.ts",
+            "line": 36
+          }
+        }
+      ],
+      "components": [
+        "ComplianceQueueComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/dashboard",
+      "callers": [
+        {
+          "service": "OperationsApiService",
+          "method": "dashboard",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/operations/services/operations-api.service.ts",
+            "line": 15
+          }
+        }
+      ],
+      "components": [
+        "OperationsDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/health",
+      "callers": [
+        {
+          "service": "OperationsApiService",
+          "method": "health",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/operations/services/operations-api.service.ts",
+            "line": 19
+          }
+        }
+      ],
+      "components": [
+        "OperationsDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/alerts",
+      "callers": [
+        {
+          "service": "OperationsApiService",
+          "method": "alerts",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/operations/services/operations-api.service.ts",
+            "line": 23
+          }
+        }
+      ],
+      "components": [
+        "OperationsDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/incidents",
+      "callers": [
+        {
+          "service": "OperationsApiService",
+          "method": "incidents",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/operations/services/operations-api.service.ts",
+            "line": 27
+          }
+        }
+      ],
+      "components": [
+        "OperationsDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/retry-queue",
+      "callers": [
+        {
+          "service": "OperationsApiService",
+          "method": "retryQueue",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/operations/services/operations-api.service.ts",
+            "line": 31
+          }
+        }
+      ],
+      "components": [
+        "OperationsDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/jobs",
+      "callers": [
+        {
+          "service": "OperationsApiService",
+          "method": "jobs",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/operations/services/operations-api.service.ts",
+            "line": 35
+          }
+        }
+      ],
+      "components": [
+        "OperationsDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/failed-payments",
+      "callers": [
+        {
+          "service": "OperationsApiService",
+          "method": "failedPayments",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/operations/services/operations-api.service.ts",
+            "line": 39
+          }
+        }
+      ],
+      "components": [
+        "OperationsDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/failed-payouts",
+      "callers": [
+        {
+          "service": "OperationsApiService",
+          "method": "failedPayouts",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/operations/services/operations-api.service.ts",
+            "line": 43
+          }
+        }
+      ],
+      "components": [
+        "OperationsDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/failed-webhooks",
+      "callers": [
+        {
+          "service": "OperationsApiService",
+          "method": "failedWebhooks",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/operations/services/operations-api.service.ts",
+            "line": 47
+          }
+        }
+      ],
+      "components": [
+        "OperationsDashboardComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/operations/retry-queue/:id/retry",
+      "callers": [
+        {
+          "service": "OperationsApiService",
+          "method": "retryQueueItem",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/operations/services/operations-api.service.ts",
+            "line": 51
+          }
+        }
+      ],
+      "components": [
+        "OperationsDashboardComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/operations/jobs/:id/retry",
+      "callers": [
+        {
+          "service": "OperationsApiService",
+          "method": "retryJob",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/operations/services/operations-api.service.ts",
+            "line": 55
+          }
+        }
+      ],
+      "components": [
+        "OperationsDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/operations/pending-tasks",
+      "callers": [
+        {
+          "service": "OperationsApiService",
+          "method": "pendingTasks",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/operations/services/operations-api.service.ts",
+            "line": 68
+          }
+        }
+      ],
+      "components": [
+        "OperationsDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/organizations",
+      "callers": [
+        {
+          "service": "OrganizationsApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/organizations/services/organizations-api.service.ts",
+            "line": 37
+          }
+        },
+        {
+          "service": "OrganizationsApiService",
+          "method": "create",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/organizations/services/organizations-api.service.ts",
+            "line": 61
+          }
+        }
+      ],
+      "components": [
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "OrganizationDetailsComponent",
+        "OrganizationFormComponent",
+        "OrganizationListComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/organizations/mine",
+      "callers": [
+        {
+          "service": "OrganizationsApiService",
+          "method": "getMine",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/organizations/services/organizations-api.service.ts",
+            "line": 43
+          }
+        },
+        {
+          "service": "OrganizationsApiService",
+          "method": "getById",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/organizations/services/organizations-api.service.ts",
+            "line": 55
+          }
+        }
+      ],
+      "components": [
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "OrganizationDetailsComponent",
+        "OrganizationFormComponent",
+        "OrganizationListComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/organizations/roles",
+      "callers": [
+        {
+          "service": "OrganizationsApiService",
+          "method": "getRoles",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/organizations/services/organizations-api.service.ts",
+            "line": 49
+          }
+        }
+      ],
+      "components": [
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "OrganizationDetailsComponent",
+        "OrganizationFormComponent",
+        "OrganizationListComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/organizations/:id",
+      "callers": [
+        {
+          "service": "OrganizationsApiService",
+          "method": "update",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/organizations/services/organizations-api.service.ts",
+            "line": 67
+          }
+        }
+      ],
+      "components": [
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "OrganizationDetailsComponent",
+        "OrganizationFormComponent",
+        "OrganizationListComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/organizations/:id/archive",
+      "callers": [
+        {
+          "service": "OrganizationsApiService",
+          "method": "archive",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/organizations/services/organizations-api.service.ts",
+            "line": 73
+          }
+        }
+      ],
+      "components": [
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "OrganizationDetailsComponent",
+        "OrganizationFormComponent",
+        "OrganizationListComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/organizations/:id/restore",
+      "callers": [
+        {
+          "service": "OrganizationsApiService",
+          "method": "restore",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/organizations/services/organizations-api.service.ts",
+            "line": 79
+          }
+        }
+      ],
+      "components": [
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "OrganizationDetailsComponent",
+        "OrganizationFormComponent",
+        "OrganizationListComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/organizations/:id/members/:memberId",
+      "callers": [
+        {
+          "service": "OrganizationsApiService",
+          "method": "updateMembers",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/organizations/services/organizations-api.service.ts",
+            "line": 85
+          }
+        },
+        {
+          "service": "OrganizationsApiService",
+          "method": "removeMember",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/organizations/services/organizations-api.service.ts",
+            "line": 97
+          }
+        }
+      ],
+      "components": [
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "OrganizationDetailsComponent",
+        "OrganizationFormComponent",
+        "OrganizationListComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/organizations/:id/members",
+      "callers": [
+        {
+          "service": "OrganizationsApiService",
+          "method": "addMember",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/organizations/services/organizations-api.service.ts",
+            "line": 91
+          }
+        }
+      ],
+      "components": [
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "OrganizationDetailsComponent",
+        "OrganizationFormComponent",
+        "OrganizationListComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/organizations/:id/domains",
+      "callers": [
+        {
+          "service": "OrganizationsApiService",
+          "method": "addDomain",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/organizations/services/organizations-api.service.ts",
+            "line": 103
+          }
+        }
+      ],
+      "components": [
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "OrganizationDetailsComponent",
+        "OrganizationFormComponent",
+        "OrganizationListComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/organizations/:id/domains/:domainId",
+      "callers": [
+        {
+          "service": "OrganizationsApiService",
+          "method": "updateDomain",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/organizations/services/organizations-api.service.ts",
+            "line": 109
+          }
+        },
+        {
+          "service": "OrganizationsApiService",
+          "method": "deleteDomain",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/organizations/services/organizations-api.service.ts",
+            "line": 115
+          }
+        }
+      ],
+      "components": [
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "OrganizationDetailsComponent",
+        "OrganizationFormComponent",
+        "OrganizationListComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/organizations/:id/branding",
+      "callers": [
+        {
+          "service": "OrganizationsApiService",
+          "method": "updateBranding",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/organizations/services/organizations-api.service.ts",
+            "line": 121
+          }
+        }
+      ],
+      "components": [
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "OrganizationDetailsComponent",
+        "OrganizationFormComponent",
+        "OrganizationListComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/organizations/:id/preferences",
+      "callers": [
+        {
+          "service": "OrganizationsApiService",
+          "method": "updatePreferences",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/organizations/services/organizations-api.service.ts",
+            "line": 127
+          }
+        }
+      ],
+      "components": [
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "OrganizationDetailsComponent",
+        "OrganizationFormComponent",
+        "OrganizationListComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/organizations/:id/api-keys",
+      "callers": [
+        {
+          "service": "OrganizationsApiService",
+          "method": "createApiKey",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/organizations/services/organizations-api.service.ts",
+            "line": 133
+          }
+        }
+      ],
+      "components": [
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "OrganizationDetailsComponent",
+        "OrganizationFormComponent",
+        "OrganizationListComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/organizations/:id/api-keys/:keyId",
+      "callers": [
+        {
+          "service": "OrganizationsApiService",
+          "method": "revokeApiKey",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/organizations/services/organizations-api.service.ts",
+            "line": 139
+          }
+        }
+      ],
+      "components": [
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "OrganizationDetailsComponent",
+        "OrganizationFormComponent",
+        "OrganizationListComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/organizations/:id/billing",
+      "callers": [
+        {
+          "service": "OrganizationsApiService",
+          "method": "updateBilling",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/organizations/services/organizations-api.service.ts",
+            "line": 145
+          }
+        }
+      ],
+      "components": [
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "OrganizationDetailsComponent",
+        "OrganizationFormComponent",
+        "OrganizationListComponent",
+        "SelectOrganizationComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/api/v1/outlets",
+      "callers": [
+        {
+          "service": "OutletsApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/outlets/services/outlets-api.service.ts",
+            "line": 17
+          }
+        },
+        {
+          "service": "OutletsApiService",
+          "method": "create",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/outlets/services/outlets-api.service.ts",
+            "line": 25
+          }
+        }
+      ],
+      "components": [
+        "OutletListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/api/v1/outlets/:param",
+      "callers": [
+        {
+          "service": "OutletsApiService",
+          "method": "getById",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/outlets/services/outlets-api.service.ts",
+            "line": 21
+          }
+        },
+        {
+          "service": "OutletsApiService",
+          "method": "update",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/outlets/services/outlets-api.service.ts",
+            "line": 29
+          }
+        }
+      ],
+      "components": [
+        "OutletListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/api/v1/outlets/:param/activate",
+      "callers": [
+        {
+          "service": "OutletsApiService",
+          "method": "activate",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/outlets/services/outlets-api.service.ts",
+            "line": 33
+          }
+        }
+      ],
+      "components": [
+        "OutletListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/api/v1/outlets/:param/deactivate",
+      "callers": [
+        {
+          "service": "OutletsApiService",
+          "method": "deactivate",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/outlets/services/outlets-api.service.ts",
+            "line": 37
+          }
+        }
+      ],
+      "components": [
+        "OutletListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/payment-links",
+      "callers": [
+        {
+          "service": "PaymentLinksApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/payment-links/services/payment-links-api.service.ts",
+            "line": 42
+          }
+        },
+        {
+          "service": "PaymentLinksApiService",
+          "method": "create",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/payment-links/services/payment-links-api.service.ts",
+            "line": 58
+          }
+        }
+      ],
+      "components": [
+        "PaymentLinkCreateComponent",
+        "PaymentLinkDetailsComponent",
+        "PaymentLinkEditComponent",
+        "PaymentLinkListComponent",
+        "PublicPayComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/payment-links/statistics",
+      "callers": [
+        {
+          "service": "PaymentLinksApiService",
+          "method": "statistics",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/payment-links/services/payment-links-api.service.ts",
+            "line": 48
+          }
+        },
+        {
+          "service": "PaymentLinksApiService",
+          "method": "getById",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/payment-links/services/payment-links-api.service.ts",
+            "line": 54
+          }
+        }
+      ],
+      "components": [
+        "PaymentLinkCreateComponent",
+        "PaymentLinkDetailsComponent",
+        "PaymentLinkEditComponent",
+        "PaymentLinkListComponent",
+        "PublicPayComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/payment-links/:id",
+      "callers": [
+        {
+          "service": "PaymentLinksApiService",
+          "method": "update",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/payment-links/services/payment-links-api.service.ts",
+            "line": 62
+          }
+        }
+      ],
+      "components": [
+        "PaymentLinkCreateComponent",
+        "PaymentLinkDetailsComponent",
+        "PaymentLinkEditComponent",
+        "PaymentLinkListComponent",
+        "PublicPayComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/payment-links/:id/enable",
+      "callers": [
+        {
+          "service": "PaymentLinksApiService",
+          "method": "enable",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/payment-links/services/payment-links-api.service.ts",
+            "line": 66
+          }
+        }
+      ],
+      "components": [
+        "PaymentLinkCreateComponent",
+        "PaymentLinkDetailsComponent",
+        "PaymentLinkEditComponent",
+        "PaymentLinkListComponent",
+        "PublicPayComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/payment-links/:id/disable",
+      "callers": [
+        {
+          "service": "PaymentLinksApiService",
+          "method": "disable",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/payment-links/services/payment-links-api.service.ts",
+            "line": 70
+          }
+        }
+      ],
+      "components": [
+        "PaymentLinkCreateComponent",
+        "PaymentLinkDetailsComponent",
+        "PaymentLinkEditComponent",
+        "PaymentLinkListComponent",
+        "PublicPayComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/payment-links/:id/expire",
+      "callers": [
+        {
+          "service": "PaymentLinksApiService",
+          "method": "expire",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/payment-links/services/payment-links-api.service.ts",
+            "line": 74
+          }
+        }
+      ],
+      "components": [
+        "PaymentLinkCreateComponent",
+        "PaymentLinkDetailsComponent",
+        "PaymentLinkEditComponent",
+        "PaymentLinkListComponent",
+        "PublicPayComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/payment-links/:id/regenerate-token",
+      "callers": [
+        {
+          "service": "PaymentLinksApiService",
+          "method": "regenerateToken",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/payment-links/services/payment-links-api.service.ts",
+            "line": 78
+          }
+        }
+      ],
+      "components": [
+        "PaymentLinkCreateComponent",
+        "PaymentLinkDetailsComponent",
+        "PaymentLinkEditComponent",
+        "PaymentLinkListComponent",
+        "PublicPayComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/payment-links/:id/qr",
+      "callers": [
+        {
+          "service": "PaymentLinksApiService",
+          "method": "getQrCode",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/payment-links/services/payment-links-api.service.ts",
+            "line": 84
+          }
+        }
+      ],
+      "components": [
+        "PaymentLinkCreateComponent",
+        "PaymentLinkDetailsComponent",
+        "PaymentLinkEditComponent",
+        "PaymentLinkListComponent",
+        "PublicPayComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/public/payment-links/:param",
+      "callers": [
+        {
+          "service": "PaymentLinksApiService",
+          "method": "getPublicLink",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/payment-links/services/payment-links-api.service.ts",
+            "line": 88
+          }
+        }
+      ],
+      "components": [
+        "PaymentLinkCreateComponent",
+        "PaymentLinkDetailsComponent",
+        "PaymentLinkEditComponent",
+        "PaymentLinkListComponent",
+        "PublicPayComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/public/payment-links/:param/pay",
+      "callers": [
+        {
+          "service": "PaymentLinksApiService",
+          "method": "pay",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/payment-links/services/payment-links-api.service.ts",
+            "line": 94
+          }
+        }
+      ],
+      "components": [
+        "PaymentLinkCreateComponent",
+        "PaymentLinkDetailsComponent",
+        "PaymentLinkEditComponent",
+        "PaymentLinkListComponent",
+        "PublicPayComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/payouts",
+      "callers": [
+        {
+          "service": "PayoutsApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/payouts/services/payouts-api.service.ts",
+            "line": 36
+          }
+        },
+        {
+          "service": "PayoutsApiService",
+          "method": "create",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/payouts/services/payouts-api.service.ts",
+            "line": 46
+          }
+        }
+      ],
+      "components": [
+        "BankAccountsComponent",
+        "PayoutCreateComponent",
+        "PayoutDetailsComponent",
+        "PayoutListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/payouts/statistics",
+      "callers": [
+        {
+          "service": "PayoutsApiService",
+          "method": "getById",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/payouts/services/payouts-api.service.ts",
+            "line": 42
+          }
+        }
+      ],
+      "components": [
+        "BankAccountsComponent",
+        "PayoutCreateComponent",
+        "PayoutDetailsComponent",
+        "PayoutListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/payouts/:id/approve",
+      "callers": [
+        {
+          "service": "PayoutsApiService",
+          "method": "approve",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/payouts/services/payouts-api.service.ts",
+            "line": 50
+          }
+        }
+      ],
+      "components": [
+        "BankAccountsComponent",
+        "PayoutCreateComponent",
+        "PayoutDetailsComponent",
+        "PayoutListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/payouts/:id/reject",
+      "callers": [
+        {
+          "service": "PayoutsApiService",
+          "method": "reject",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/payouts/services/payouts-api.service.ts",
+            "line": 54
+          }
+        }
+      ],
+      "components": [
+        "BankAccountsComponent",
+        "PayoutCreateComponent",
+        "PayoutDetailsComponent",
+        "PayoutListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/payouts/:id/retry",
+      "callers": [
+        {
+          "service": "PayoutsApiService",
+          "method": "retry",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/payouts/services/payouts-api.service.ts",
+            "line": 58
+          }
+        }
+      ],
+      "components": [
+        "BankAccountsComponent",
+        "PayoutCreateComponent",
+        "PayoutDetailsComponent",
+        "PayoutListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/payouts/bank-accounts",
+      "callers": [
+        {
+          "service": "PayoutsApiService",
+          "method": "listBankAccounts",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/payouts/services/payouts-api.service.ts",
+            "line": 64
+          }
+        },
+        {
+          "service": "PayoutsApiService",
+          "method": "createBankAccount",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/payouts/services/payouts-api.service.ts",
+            "line": 70
+          }
+        }
+      ],
+      "components": [
+        "BankAccountsComponent",
+        "PayoutCreateComponent",
+        "PayoutDetailsComponent",
+        "PayoutListComponent"
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/payouts/bank-accounts/:id",
+      "callers": [
+        {
+          "service": "PayoutsApiService",
+          "method": "setPrimaryBankAccount",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/payouts/services/payouts-api.service.ts",
+            "line": 76
+          }
+        }
+      ],
+      "components": [
+        "BankAccountsComponent",
+        "PayoutCreateComponent",
+        "PayoutDetailsComponent",
+        "PayoutListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/permissions",
+      "callers": [
+        {
+          "service": "PermissionApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/permissions/services/permission-api.service.ts",
+            "line": 12
+          }
+        }
+      ],
+      "components": [
+        "PermissionMatrixComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/qr-payments",
+      "callers": [
+        {
+          "service": "QrPaymentsApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/qr-payments/services/qr-payments-api.service.ts",
+            "line": 40
+          }
+        },
+        {
+          "service": "QrPaymentsApiService",
+          "method": "create",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/qr-payments/services/qr-payments-api.service.ts",
+            "line": 56
+          }
+        }
+      ],
+      "components": [
+        "PublicQrPayComponent",
+        "QrCreateComponent",
+        "QrDetailsComponent",
+        "QrListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/qr-payments/statistics",
+      "callers": [
+        {
+          "service": "QrPaymentsApiService",
+          "method": "statistics",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/qr-payments/services/qr-payments-api.service.ts",
+            "line": 46
+          }
+        }
+      ],
+      "components": [
+        "PublicQrPayComponent",
+        "QrCreateComponent",
+        "QrDetailsComponent",
+        "QrListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/qr-payments/templates",
+      "callers": [
+        {
+          "service": "QrPaymentsApiService",
+          "method": "getById",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/qr-payments/services/qr-payments-api.service.ts",
+            "line": 52
+          }
+        }
+      ],
+      "components": [
+        "PublicQrPayComponent",
+        "QrCreateComponent",
+        "QrDetailsComponent",
+        "QrListComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/qr-payments/:id",
+      "callers": [
+        {
+          "service": "QrPaymentsApiService",
+          "method": "update",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/qr-payments/services/qr-payments-api.service.ts",
+            "line": 60
+          }
+        }
+      ],
+      "components": [
+        "PublicQrPayComponent",
+        "QrCreateComponent",
+        "QrDetailsComponent",
+        "QrListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/qr-payments/:id/enable",
+      "callers": [
+        {
+          "service": "QrPaymentsApiService",
+          "method": "enable",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/qr-payments/services/qr-payments-api.service.ts",
+            "line": 64
+          }
+        }
+      ],
+      "components": [
+        "PublicQrPayComponent",
+        "QrCreateComponent",
+        "QrDetailsComponent",
+        "QrListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/qr-payments/:id/disable",
+      "callers": [
+        {
+          "service": "QrPaymentsApiService",
+          "method": "disable",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/qr-payments/services/qr-payments-api.service.ts",
+            "line": 68
+          }
+        }
+      ],
+      "components": [
+        "PublicQrPayComponent",
+        "QrCreateComponent",
+        "QrDetailsComponent",
+        "QrListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/qr-payments/:id/regenerate",
+      "callers": [
+        {
+          "service": "QrPaymentsApiService",
+          "method": "regenerate",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/qr-payments/services/qr-payments-api.service.ts",
+            "line": 72
+          }
+        }
+      ],
+      "components": [
+        "PublicQrPayComponent",
+        "QrCreateComponent",
+        "QrDetailsComponent",
+        "QrListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/qr-payments/:id/download",
+      "callers": [
+        {
+          "service": "QrPaymentsApiService",
+          "method": "download",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/qr-payments/services/qr-payments-api.service.ts",
+            "line": 76
+          }
+        }
+      ],
+      "components": [
+        "PublicQrPayComponent",
+        "QrCreateComponent",
+        "QrDetailsComponent",
+        "QrListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/public/qr-payments/:param",
+      "callers": [
+        {
+          "service": "QrPaymentsApiService",
+          "method": "getPublicQr",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/qr-payments/services/qr-payments-api.service.ts",
+            "line": 82
+          }
+        }
+      ],
+      "components": [
+        "PublicQrPayComponent",
+        "QrCreateComponent",
+        "QrDetailsComponent",
+        "QrListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/public/qr-payments/:param/pay",
+      "callers": [
+        {
+          "service": "QrPaymentsApiService",
+          "method": "pay",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/qr-payments/services/qr-payments-api.service.ts",
+            "line": 88
+          }
+        }
+      ],
+      "components": [
+        "PublicQrPayComponent",
+        "QrCreateComponent",
+        "QrDetailsComponent",
+        "QrListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/reconciliation/dashboard",
+      "callers": [
+        {
+          "service": "ReconciliationApiService",
+          "method": "dashboard",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reconciliation/services/reconciliation-api.service.ts",
+            "line": 19
+          }
+        }
+      ],
+      "components": [
+        "ReconciliationDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/reconciliation/imports",
+      "callers": [
+        {
+          "service": "ReconciliationApiService",
+          "method": "listImports",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reconciliation/services/reconciliation-api.service.ts",
+            "line": 25
+          }
+        }
+      ],
+      "components": [
+        "ReconciliationDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/reconciliation/records",
+      "callers": [
+        {
+          "service": "ReconciliationApiService",
+          "method": "listRecords",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reconciliation/services/reconciliation-api.service.ts",
+            "line": 37
+          }
+        }
+      ],
+      "components": [
+        "ReconciliationDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/reconciliation/records/:id",
+      "callers": [
+        {
+          "service": "ReconciliationApiService",
+          "method": "listUnmatched",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reconciliation/services/reconciliation-api.service.ts",
+            "line": 43
+          }
+        }
+      ],
+      "components": [
+        "ReconciliationDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/refunds",
+      "callers": [
+        {
+          "service": "RefundsApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/refunds/services/refunds-api.service.ts",
+            "line": 29
+          }
+        },
+        {
+          "service": "RefundsApiService",
+          "method": "create",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/refunds/services/refunds-api.service.ts",
+            "line": 39
+          }
+        }
+      ],
+      "components": [
+        "RefundDetailsComponent",
+        "RefundListComponent",
+        "RefundRequestComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/refunds/statistics",
+      "callers": [
+        {
+          "service": "RefundsApiService",
+          "method": "getById",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/refunds/services/refunds-api.service.ts",
+            "line": 35
+          }
+        }
+      ],
+      "components": [
+        "RefundDetailsComponent",
+        "RefundListComponent",
+        "RefundRequestComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/refunds/:id/approve",
+      "callers": [
+        {
+          "service": "RefundsApiService",
+          "method": "approve",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/refunds/services/refunds-api.service.ts",
+            "line": 43
+          }
+        }
+      ],
+      "components": [
+        "RefundDetailsComponent",
+        "RefundListComponent",
+        "RefundRequestComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/refunds/:id/reject",
+      "callers": [
+        {
+          "service": "RefundsApiService",
+          "method": "reject",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/refunds/services/refunds-api.service.ts",
+            "line": 47
+          }
+        }
+      ],
+      "components": [
+        "RefundDetailsComponent",
+        "RefundListComponent",
+        "RefundRequestComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/refunds/:id/history",
+      "callers": [
+        {
+          "service": "RefundsApiService",
+          "method": "getHistory",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/refunds/services/refunds-api.service.ts",
+            "line": 53
+          }
+        }
+      ],
+      "components": [
+        "RefundDetailsComponent",
+        "RefundListComponent",
+        "RefundRequestComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/analytics/overview",
+      "callers": [
+        {
+          "service": "AnalyticsApiService",
+          "method": "getOverview",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/analytics-api.service.ts",
+            "line": 22
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent",
+        "AnalyticsDashboardComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/analytics/revenue",
+      "callers": [
+        {
+          "service": "AnalyticsApiService",
+          "method": "getRevenue",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/analytics-api.service.ts",
+            "line": 26
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent",
+        "AnalyticsDashboardComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/analytics/transactions",
+      "callers": [
+        {
+          "service": "AnalyticsApiService",
+          "method": "getTransactions",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/analytics-api.service.ts",
+            "line": 30
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent",
+        "AnalyticsDashboardComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/analytics/settlements",
+      "callers": [
+        {
+          "service": "AnalyticsApiService",
+          "method": "getSettlements",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/analytics-api.service.ts",
+            "line": 34
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent",
+        "AnalyticsDashboardComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/analytics/merchants",
+      "callers": [
+        {
+          "service": "AnalyticsApiService",
+          "method": "getMerchants",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/analytics-api.service.ts",
+            "line": 38
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent",
+        "AnalyticsDashboardComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/analytics/customers",
+      "callers": [
+        {
+          "service": "AnalyticsApiService",
+          "method": "getCustomers",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/analytics-api.service.ts",
+            "line": 42
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent",
+        "AnalyticsDashboardComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/analytics/payment-methods",
+      "callers": [
+        {
+          "service": "AnalyticsApiService",
+          "method": "getPaymentMethods",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/analytics-api.service.ts",
+            "line": 46
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent",
+        "AnalyticsDashboardComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/analytics/regional",
+      "callers": [
+        {
+          "service": "AnalyticsApiService",
+          "method": "getRegional",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/analytics-api.service.ts",
+            "line": 50
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent",
+        "AnalyticsDashboardComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/analytics/export",
+      "callers": [
+        {
+          "service": "AnalyticsApiService",
+          "method": "export",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/analytics-api.service.ts",
+            "line": 55
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent",
+        "AnalyticsDashboardComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/reports",
+      "callers": [
+        {
+          "service": "ReportsApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+            "line": 26
+          }
+        },
+        {
+          "service": "ReportsApiService",
+          "method": "create",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+            "line": 34
+          }
+        }
+      ],
+      "components": [
+        "AnalyticsDashboardComponent",
+        "ReportBuilderComponent",
+        "ReportCenterComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/reports/overview",
+      "callers": [
+        {
+          "service": "ReportsApiService",
+          "method": "getById",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+            "line": 30
+          }
+        }
+      ],
+      "components": [
+        "AnalyticsDashboardComponent",
+        "ReportBuilderComponent",
+        "ReportCenterComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/reports/:id",
+      "callers": [
+        {
+          "service": "ReportsApiService",
+          "method": "update",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+            "line": 38
+          }
+        },
+        {
+          "service": "ReportsApiService",
+          "method": "delete",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+            "line": 42
+          }
+        }
+      ],
+      "components": [
+        "AnalyticsDashboardComponent",
+        "ReportBuilderComponent",
+        "ReportCenterComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/reports/templates",
+      "callers": [
+        {
+          "service": "ReportsApiService",
+          "method": "getTemplates",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+            "line": 46
+          }
+        }
+      ],
+      "components": [
+        "AnalyticsDashboardComponent",
+        "ReportBuilderComponent",
+        "ReportCenterComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/reports/categories",
+      "callers": [
+        {
+          "service": "ReportsApiService",
+          "method": "getCategories",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+            "line": 50
+          }
+        }
+      ],
+      "components": [
+        "AnalyticsDashboardComponent",
+        "ReportBuilderComponent",
+        "ReportCenterComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/reports/run",
+      "callers": [
+        {
+          "service": "ReportsApiService",
+          "method": "run",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+            "line": 54
+          }
+        }
+      ],
+      "components": [
+        "AnalyticsDashboardComponent",
+        "ReportBuilderComponent",
+        "ReportCenterComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/reports/export",
+      "callers": [
+        {
+          "service": "ReportsApiService",
+          "method": "export",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+            "line": 58
+          }
+        }
+      ],
+      "components": [
+        "AnalyticsDashboardComponent",
+        "ReportBuilderComponent",
+        "ReportCenterComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/reports/history",
+      "callers": [
+        {
+          "service": "ReportsApiService",
+          "method": "getHistory",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+            "line": 63
+          }
+        }
+      ],
+      "components": [
+        "AnalyticsDashboardComponent",
+        "ReportBuilderComponent",
+        "ReportCenterComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/reports/scheduled",
+      "callers": [
+        {
+          "service": "ReportsApiService",
+          "method": "getScheduled",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+            "line": 67
+          }
+        },
+        {
+          "service": "ReportsApiService",
+          "method": "createScheduled",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+            "line": 71
+          }
+        }
+      ],
+      "components": [
+        "AnalyticsDashboardComponent",
+        "ReportBuilderComponent",
+        "ReportCenterComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/reports/scheduled/:id",
+      "callers": [
+        {
+          "service": "ReportsApiService",
+          "method": "updateScheduled",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+            "line": 75
+          }
+        },
+        {
+          "service": "ReportsApiService",
+          "method": "deleteScheduled",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+            "line": 79
+          }
+        }
+      ],
+      "components": [
+        "AnalyticsDashboardComponent",
+        "ReportBuilderComponent",
+        "ReportCenterComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/reports/center/catalog",
+      "callers": [
+        {
+          "service": "ReportsApiService",
+          "method": "getCenterCatalog",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+            "line": 83
+          }
+        }
+      ],
+      "components": [
+        "AnalyticsDashboardComponent",
+        "ReportBuilderComponent",
+        "ReportCenterComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/reports/center/saved-filters",
+      "callers": [
+        {
+          "service": "ReportsApiService",
+          "method": "getCenterSavedFilters",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+            "line": 89
+          }
+        },
+        {
+          "service": "ReportsApiService",
+          "method": "saveCenterFilter",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+            "line": 93
+          }
+        }
+      ],
+      "components": [
+        "AnalyticsDashboardComponent",
+        "ReportBuilderComponent",
+        "ReportCenterComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/reports/center/saved-filters/:id",
+      "callers": [
+        {
+          "service": "ReportsApiService",
+          "method": "deleteCenterFilter",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+            "line": 97
+          }
+        }
+      ],
+      "components": [
+        "AnalyticsDashboardComponent",
+        "ReportBuilderComponent",
+        "ReportCenterComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/reports/center/generate",
+      "callers": [
+        {
+          "service": "ReportsApiService",
+          "method": "generateCenterReport",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+            "line": 101
+          }
+        }
+      ],
+      "components": [
+        "AnalyticsDashboardComponent",
+        "ReportBuilderComponent",
+        "ReportCenterComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/reports/center/export",
+      "callers": [
+        {
+          "service": "ReportsApiService",
+          "method": "exportCenterReport",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+            "line": 105
+          }
+        }
+      ],
+      "components": [
+        "AnalyticsDashboardComponent",
+        "ReportBuilderComponent",
+        "ReportCenterComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/reports/center/export-history",
+      "callers": [
+        {
+          "service": "ReportsApiService",
+          "method": "getCenterExportHistory",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+            "line": 109
+          }
+        }
+      ],
+      "components": [
+        "AnalyticsDashboardComponent",
+        "ReportBuilderComponent",
+        "ReportCenterComponent",
+        "ReportHistoryComponent",
+        "ReportsDashboardComponent",
+        "SavedReportsComponent",
+        "ScheduledReportsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/api/v1/risk-rules",
+      "callers": [
+        {
+          "service": "RiskRulesApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/risk-rules/services/risk-rules-api.service.ts",
+            "line": 13
+          }
+        }
+      ],
+      "components": [
+        "RiskRulesListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/roles",
+      "callers": [
+        {
+          "service": "RoleApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/roles/services/role-api.service.ts",
+            "line": 13
+          }
+        },
+        {
+          "service": "RoleApiService",
+          "method": "create",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/roles/services/role-api.service.ts",
+            "line": 21
+          }
+        }
+      ],
+      "components": [
+        "PermissionMatrixComponent",
+        "RoleFormComponent",
+        "RoleListComponent",
+        "UserDetailsComponent",
+        "UserFormComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/roles/",
+      "callers": [
+        {
+          "service": "RoleApiService",
+          "method": "getById",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/roles/services/role-api.service.ts",
+            "line": 17
+          }
+        }
+      ],
+      "components": [
+        "PermissionMatrixComponent",
+        "RoleFormComponent",
+        "RoleListComponent",
+        "UserDetailsComponent",
+        "UserFormComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/roles/:id",
+      "callers": [
+        {
+          "service": "RoleApiService",
+          "method": "update",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/roles/services/role-api.service.ts",
+            "line": 25
+          }
+        },
+        {
+          "service": "RoleApiService",
+          "method": "delete",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/roles/services/role-api.service.ts",
+            "line": 29
+          }
+        }
+      ],
+      "components": [
+        "PermissionMatrixComponent",
+        "RoleFormComponent",
+        "RoleListComponent",
+        "UserDetailsComponent",
+        "UserFormComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/roles/:id/permissions",
+      "callers": [
+        {
+          "service": "RoleApiService",
+          "method": "assignPermissions",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/roles/services/role-api.service.ts",
+            "line": 33
+          }
+        }
+      ],
+      "components": [
+        "PermissionMatrixComponent",
+        "RoleFormComponent",
+        "RoleListComponent",
+        "UserDetailsComponent",
+        "UserFormComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/sandbox/dashboard",
+      "callers": [
+        {
+          "service": "SandboxApiService",
+          "method": "dashboard",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/sandbox/services/sandbox-api.service.ts",
+            "line": 19
+          }
+        }
+      ],
+      "components": [
+        "SandboxDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/sandbox/accounts",
+      "callers": [
+        {
+          "service": "SandboxApiService",
+          "method": "listAccounts",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/sandbox/services/sandbox-api.service.ts",
+            "line": 25
+          }
+        }
+      ],
+      "components": [
+        "SandboxDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/sandbox/test-cards",
+      "callers": [
+        {
+          "service": "SandboxApiService",
+          "method": "listTestCards",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/sandbox/services/sandbox-api.service.ts",
+            "line": 29
+          }
+        }
+      ],
+      "components": [
+        "SandboxDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/sandbox/simulations",
+      "callers": [
+        {
+          "service": "SandboxApiService",
+          "method": "listSimulations",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/sandbox/services/sandbox-api.service.ts",
+            "line": 34
+          }
+        }
+      ],
+      "components": [
+        "SandboxDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/settings/overview",
+      "callers": [
+        {
+          "service": "SettingsApiService",
+          "method": "getOverview",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 27
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "LoginComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "NotificationPreferencesComponent",
+        "SelectOrganizationComponent",
+        "SettingsAccountComponent",
+        "SettingsApiComponent",
+        "SettingsBrandingComponent",
+        "SettingsBusinessComponent",
+        "SettingsConfigurationComponent",
+        "SettingsFeatureFlagsComponent",
+        "SettingsGeneralComponent",
+        "SettingsNotificationsComponent",
+        "SettingsPasswordPolicyComponent",
+        "SettingsSecurityComponent",
+        "SettingsSessionComponent",
+        "SettingsStorageComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/settings/organization",
+      "callers": [
+        {
+          "service": "SettingsApiService",
+          "method": "getOrganization",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 31
+          }
+        },
+        {
+          "service": "SettingsApiService",
+          "method": "updateOrganization",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 35
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "LoginComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "NotificationPreferencesComponent",
+        "SelectOrganizationComponent",
+        "SettingsAccountComponent",
+        "SettingsApiComponent",
+        "SettingsBrandingComponent",
+        "SettingsBusinessComponent",
+        "SettingsConfigurationComponent",
+        "SettingsFeatureFlagsComponent",
+        "SettingsGeneralComponent",
+        "SettingsNotificationsComponent",
+        "SettingsPasswordPolicyComponent",
+        "SettingsSecurityComponent",
+        "SettingsSessionComponent",
+        "SettingsStorageComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/settings/branding",
+      "callers": [
+        {
+          "service": "SettingsApiService",
+          "method": "getBranding",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 39
+          }
+        },
+        {
+          "service": "SettingsApiService",
+          "method": "updateBranding",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 47
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "LoginComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "NotificationPreferencesComponent",
+        "SelectOrganizationComponent",
+        "SettingsAccountComponent",
+        "SettingsApiComponent",
+        "SettingsBrandingComponent",
+        "SettingsBusinessComponent",
+        "SettingsConfigurationComponent",
+        "SettingsFeatureFlagsComponent",
+        "SettingsGeneralComponent",
+        "SettingsNotificationsComponent",
+        "SettingsPasswordPolicyComponent",
+        "SettingsSecurityComponent",
+        "SettingsSessionComponent",
+        "SettingsStorageComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/settings/public/branding",
+      "callers": [
+        {
+          "service": "SettingsApiService",
+          "method": "getPublicBranding",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 43
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "LoginComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "NotificationPreferencesComponent",
+        "SelectOrganizationComponent",
+        "SettingsAccountComponent",
+        "SettingsApiComponent",
+        "SettingsBrandingComponent",
+        "SettingsBusinessComponent",
+        "SettingsConfigurationComponent",
+        "SettingsFeatureFlagsComponent",
+        "SettingsGeneralComponent",
+        "SettingsNotificationsComponent",
+        "SettingsPasswordPolicyComponent",
+        "SettingsSecurityComponent",
+        "SettingsSessionComponent",
+        "SettingsStorageComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/settings/security",
+      "callers": [
+        {
+          "service": "SettingsApiService",
+          "method": "getSecurity",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 51
+          }
+        },
+        {
+          "service": "SettingsApiService",
+          "method": "updateSecurity",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 55
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "LoginComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "NotificationPreferencesComponent",
+        "SelectOrganizationComponent",
+        "SettingsAccountComponent",
+        "SettingsApiComponent",
+        "SettingsBrandingComponent",
+        "SettingsBusinessComponent",
+        "SettingsConfigurationComponent",
+        "SettingsFeatureFlagsComponent",
+        "SettingsGeneralComponent",
+        "SettingsNotificationsComponent",
+        "SettingsPasswordPolicyComponent",
+        "SettingsSecurityComponent",
+        "SettingsSessionComponent",
+        "SettingsStorageComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/settings/password-policy",
+      "callers": [
+        {
+          "service": "SettingsApiService",
+          "method": "getPasswordPolicy",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 59
+          }
+        },
+        {
+          "service": "SettingsApiService",
+          "method": "updatePasswordPolicy",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 63
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "LoginComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "NotificationPreferencesComponent",
+        "SelectOrganizationComponent",
+        "SettingsAccountComponent",
+        "SettingsApiComponent",
+        "SettingsBrandingComponent",
+        "SettingsBusinessComponent",
+        "SettingsConfigurationComponent",
+        "SettingsFeatureFlagsComponent",
+        "SettingsGeneralComponent",
+        "SettingsNotificationsComponent",
+        "SettingsPasswordPolicyComponent",
+        "SettingsSecurityComponent",
+        "SettingsSessionComponent",
+        "SettingsStorageComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/settings/session",
+      "callers": [
+        {
+          "service": "SettingsApiService",
+          "method": "getSessionSettings",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 67
+          }
+        },
+        {
+          "service": "SettingsApiService",
+          "method": "updateSessionSettings",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 71
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "LoginComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "NotificationPreferencesComponent",
+        "SelectOrganizationComponent",
+        "SettingsAccountComponent",
+        "SettingsApiComponent",
+        "SettingsBrandingComponent",
+        "SettingsBusinessComponent",
+        "SettingsConfigurationComponent",
+        "SettingsFeatureFlagsComponent",
+        "SettingsGeneralComponent",
+        "SettingsNotificationsComponent",
+        "SettingsPasswordPolicyComponent",
+        "SettingsSecurityComponent",
+        "SettingsSessionComponent",
+        "SettingsStorageComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/settings/notifications/me",
+      "callers": [
+        {
+          "service": "SettingsApiService",
+          "method": "getUserNotifications",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 75
+          }
+        },
+        {
+          "service": "SettingsApiService",
+          "method": "updateUserNotifications",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 79
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "LoginComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "NotificationPreferencesComponent",
+        "SelectOrganizationComponent",
+        "SettingsAccountComponent",
+        "SettingsApiComponent",
+        "SettingsBrandingComponent",
+        "SettingsBusinessComponent",
+        "SettingsConfigurationComponent",
+        "SettingsFeatureFlagsComponent",
+        "SettingsGeneralComponent",
+        "SettingsNotificationsComponent",
+        "SettingsPasswordPolicyComponent",
+        "SettingsSecurityComponent",
+        "SettingsSessionComponent",
+        "SettingsStorageComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/settings/notifications/defaults",
+      "callers": [
+        {
+          "service": "SettingsApiService",
+          "method": "getDefaultNotifications",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 83
+          }
+        },
+        {
+          "service": "SettingsApiService",
+          "method": "updateDefaultNotifications",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 87
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "LoginComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "NotificationPreferencesComponent",
+        "SelectOrganizationComponent",
+        "SettingsAccountComponent",
+        "SettingsApiComponent",
+        "SettingsBrandingComponent",
+        "SettingsBusinessComponent",
+        "SettingsConfigurationComponent",
+        "SettingsFeatureFlagsComponent",
+        "SettingsGeneralComponent",
+        "SettingsNotificationsComponent",
+        "SettingsPasswordPolicyComponent",
+        "SettingsSecurityComponent",
+        "SettingsSessionComponent",
+        "SettingsStorageComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/settings/feature-flags",
+      "callers": [
+        {
+          "service": "SettingsApiService",
+          "method": "listFeatureFlags",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 96
+          }
+        },
+        {
+          "service": "SettingsApiService",
+          "method": "createFeatureFlag",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 102
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "LoginComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "NotificationPreferencesComponent",
+        "SelectOrganizationComponent",
+        "SettingsAccountComponent",
+        "SettingsApiComponent",
+        "SettingsBrandingComponent",
+        "SettingsBusinessComponent",
+        "SettingsConfigurationComponent",
+        "SettingsFeatureFlagsComponent",
+        "SettingsGeneralComponent",
+        "SettingsNotificationsComponent",
+        "SettingsPasswordPolicyComponent",
+        "SettingsSecurityComponent",
+        "SettingsSessionComponent",
+        "SettingsStorageComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/settings/feature-flags/:id",
+      "callers": [
+        {
+          "service": "SettingsApiService",
+          "method": "updateFeatureFlag",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 106
+          }
+        },
+        {
+          "service": "SettingsApiService",
+          "method": "deleteFeatureFlag",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 110
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "LoginComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "NotificationPreferencesComponent",
+        "SelectOrganizationComponent",
+        "SettingsAccountComponent",
+        "SettingsApiComponent",
+        "SettingsBrandingComponent",
+        "SettingsBusinessComponent",
+        "SettingsConfigurationComponent",
+        "SettingsFeatureFlagsComponent",
+        "SettingsGeneralComponent",
+        "SettingsNotificationsComponent",
+        "SettingsPasswordPolicyComponent",
+        "SettingsSecurityComponent",
+        "SettingsSessionComponent",
+        "SettingsStorageComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/settings/public/feature-flags",
+      "callers": [
+        {
+          "service": "SettingsApiService",
+          "method": "getPublicFeatureFlags",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 114
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "LoginComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "NotificationPreferencesComponent",
+        "SelectOrganizationComponent",
+        "SettingsAccountComponent",
+        "SettingsApiComponent",
+        "SettingsBrandingComponent",
+        "SettingsBusinessComponent",
+        "SettingsConfigurationComponent",
+        "SettingsFeatureFlagsComponent",
+        "SettingsGeneralComponent",
+        "SettingsNotificationsComponent",
+        "SettingsPasswordPolicyComponent",
+        "SettingsSecurityComponent",
+        "SettingsSessionComponent",
+        "SettingsStorageComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/settings/api",
+      "callers": [
+        {
+          "service": "SettingsApiService",
+          "method": "getApiSettings",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 120
+          }
+        },
+        {
+          "service": "SettingsApiService",
+          "method": "updateApiSettings",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 124
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "LoginComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "NotificationPreferencesComponent",
+        "SelectOrganizationComponent",
+        "SettingsAccountComponent",
+        "SettingsApiComponent",
+        "SettingsBrandingComponent",
+        "SettingsBusinessComponent",
+        "SettingsConfigurationComponent",
+        "SettingsFeatureFlagsComponent",
+        "SettingsGeneralComponent",
+        "SettingsNotificationsComponent",
+        "SettingsPasswordPolicyComponent",
+        "SettingsSecurityComponent",
+        "SettingsSessionComponent",
+        "SettingsStorageComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/settings/smtp",
+      "callers": [
+        {
+          "service": "SettingsApiService",
+          "method": "getSmtpSettings",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 128
+          }
+        },
+        {
+          "service": "SettingsApiService",
+          "method": "updateSmtpSettings",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 132
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "LoginComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "NotificationPreferencesComponent",
+        "SelectOrganizationComponent",
+        "SettingsAccountComponent",
+        "SettingsApiComponent",
+        "SettingsBrandingComponent",
+        "SettingsBusinessComponent",
+        "SettingsConfigurationComponent",
+        "SettingsFeatureFlagsComponent",
+        "SettingsGeneralComponent",
+        "SettingsNotificationsComponent",
+        "SettingsPasswordPolicyComponent",
+        "SettingsSecurityComponent",
+        "SettingsSessionComponent",
+        "SettingsStorageComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/settings/storage",
+      "callers": [
+        {
+          "service": "SettingsApiService",
+          "method": "getStorageSettings",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 136
+          }
+        },
+        {
+          "service": "SettingsApiService",
+          "method": "updateStorageSettings",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 140
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "LoginComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "NotificationPreferencesComponent",
+        "SelectOrganizationComponent",
+        "SettingsAccountComponent",
+        "SettingsApiComponent",
+        "SettingsBrandingComponent",
+        "SettingsBusinessComponent",
+        "SettingsConfigurationComponent",
+        "SettingsFeatureFlagsComponent",
+        "SettingsGeneralComponent",
+        "SettingsNotificationsComponent",
+        "SettingsPasswordPolicyComponent",
+        "SettingsSecurityComponent",
+        "SettingsSessionComponent",
+        "SettingsStorageComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/change-password",
+      "callers": [
+        {
+          "service": "SettingsApiService",
+          "method": "changePassword",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 144
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "LoginComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "NotificationPreferencesComponent",
+        "SelectOrganizationComponent",
+        "SettingsAccountComponent",
+        "SettingsApiComponent",
+        "SettingsBrandingComponent",
+        "SettingsBusinessComponent",
+        "SettingsConfigurationComponent",
+        "SettingsFeatureFlagsComponent",
+        "SettingsGeneralComponent",
+        "SettingsNotificationsComponent",
+        "SettingsPasswordPolicyComponent",
+        "SettingsSecurityComponent",
+        "SettingsSessionComponent",
+        "SettingsStorageComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/settings/configuration",
+      "callers": [
+        {
+          "service": "SettingsApiService",
+          "method": "listPlatformConfig",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 150
+          }
+        },
+        {
+          "service": "SettingsApiService",
+          "method": "updatePlatformConfig",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 154
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "LoginComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "NotificationPreferencesComponent",
+        "SelectOrganizationComponent",
+        "SettingsAccountComponent",
+        "SettingsApiComponent",
+        "SettingsBrandingComponent",
+        "SettingsBusinessComponent",
+        "SettingsConfigurationComponent",
+        "SettingsFeatureFlagsComponent",
+        "SettingsGeneralComponent",
+        "SettingsNotificationsComponent",
+        "SettingsPasswordPolicyComponent",
+        "SettingsSecurityComponent",
+        "SettingsSessionComponent",
+        "SettingsStorageComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/auth/mfa-preferences",
+      "callers": [
+        {
+          "service": "SettingsApiService",
+          "method": "updateMfaPreferences",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 158
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "LoginComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "NotificationPreferencesComponent",
+        "SelectOrganizationComponent",
+        "SettingsAccountComponent",
+        "SettingsApiComponent",
+        "SettingsBrandingComponent",
+        "SettingsBusinessComponent",
+        "SettingsConfigurationComponent",
+        "SettingsFeatureFlagsComponent",
+        "SettingsGeneralComponent",
+        "SettingsNotificationsComponent",
+        "SettingsPasswordPolicyComponent",
+        "SettingsSecurityComponent",
+        "SettingsSessionComponent",
+        "SettingsStorageComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/session-settings",
+      "callers": [
+        {
+          "service": "SettingsApiService",
+          "method": "getAuthSessionSettings",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+            "line": 162
+          }
+        }
+      ],
+      "components": [
+        "ActiveSessionsComponent",
+        "LoginComponent",
+        "VerifyOtpComponent",
+        "CustomerFormComponent",
+        "CustomerListComponent",
+        "DashboardShellComponent",
+        "DashboardSidenavComponent",
+        "DashboardTopnavComponent",
+        "NotificationPreferencesComponent",
+        "SelectOrganizationComponent",
+        "SettingsAccountComponent",
+        "SettingsApiComponent",
+        "SettingsBrandingComponent",
+        "SettingsBusinessComponent",
+        "SettingsConfigurationComponent",
+        "SettingsFeatureFlagsComponent",
+        "SettingsGeneralComponent",
+        "SettingsNotificationsComponent",
+        "SettingsPasswordPolicyComponent",
+        "SettingsSecurityComponent",
+        "SettingsSessionComponent",
+        "SettingsStorageComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/system/version",
+      "callers": [
+        {
+          "service": "SystemApiService",
+          "method": "getVersion",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/system-api.service.ts",
+            "line": 43
+          }
+        }
+      ],
+      "components": [
+        "SettingsSystemStatusComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": ":param",
+      "callers": [
+        {
+          "service": "SystemApiService",
+          "method": "getWithOperationalStatus",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settings/services/system-api.service.ts",
+            "line": 55
+          }
+        }
+      ],
+      "components": [
+        "SettingsSystemStatusComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/settlements",
+      "callers": [
+        {
+          "service": "SettlementApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settlements/services/settlement-api.service.ts",
+            "line": 25
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent",
+        "MerchantDetailsComponent",
+        "BatchDetailsComponent",
+        "BatchListComponent",
+        "SettlementDetailsComponent",
+        "SettlementListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/settlements/statistics",
+      "callers": [
+        {
+          "service": "SettlementApiService",
+          "method": "getStatistics",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settlements/services/settlement-api.service.ts",
+            "line": 31
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent",
+        "MerchantDetailsComponent",
+        "BatchDetailsComponent",
+        "BatchListComponent",
+        "SettlementDetailsComponent",
+        "SettlementListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/settlements/calendar",
+      "callers": [
+        {
+          "service": "SettlementApiService",
+          "method": "getById",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settlements/services/settlement-api.service.ts",
+            "line": 35
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent",
+        "MerchantDetailsComponent",
+        "BatchDetailsComponent",
+        "BatchListComponent",
+        "SettlementDetailsComponent",
+        "SettlementListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/settlements/batches",
+      "callers": [
+        {
+          "service": "SettlementApiService",
+          "method": "getBatches",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settlements/services/settlement-api.service.ts",
+            "line": 39
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent",
+        "MerchantDetailsComponent",
+        "BatchDetailsComponent",
+        "BatchListComponent",
+        "SettlementDetailsComponent",
+        "SettlementListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/settlements/batches/:id",
+      "callers": [
+        {
+          "service": "SettlementApiService",
+          "method": "getBatchById",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settlements/services/settlement-api.service.ts",
+            "line": 43
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent",
+        "MerchantDetailsComponent",
+        "BatchDetailsComponent",
+        "BatchListComponent",
+        "SettlementDetailsComponent",
+        "SettlementListComponent"
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/settlements/:id/status",
+      "callers": [
+        {
+          "service": "SettlementApiService",
+          "method": "updateStatus",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settlements/services/settlement-api.service.ts",
+            "line": 47
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent",
+        "MerchantDetailsComponent",
+        "BatchDetailsComponent",
+        "BatchListComponent",
+        "SettlementDetailsComponent",
+        "SettlementListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/settlements/:id/reversal",
+      "callers": [
+        {
+          "service": "SettlementApiService",
+          "method": "reversal",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settlements/services/settlement-api.service.ts",
+            "line": 51
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent",
+        "MerchantDetailsComponent",
+        "BatchDetailsComponent",
+        "BatchListComponent",
+        "SettlementDetailsComponent",
+        "SettlementListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/settlements/export",
+      "callers": [
+        {
+          "service": "SettlementApiService",
+          "method": "export",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/settlements/services/settlement-api.service.ts",
+            "line": 59
+          }
+        }
+      ],
+      "components": [
+        "DashboardAiChatPanelComponent",
+        "ExecutiveOverviewComponent",
+        "MerchantDetailsComponent",
+        "BatchDetailsComponent",
+        "BatchListComponent",
+        "SettlementDetailsComponent",
+        "SettlementListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/smart-collect/dashboard",
+      "callers": [
+        {
+          "service": "SmartCollectApiService",
+          "method": "dashboard",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/smart-collect/services/smart-collect-api.service.ts",
+            "line": 16
+          }
+        }
+      ],
+      "components": [
+        "SmartCollectDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/smart-collect/virtual-accounts",
+      "callers": [
+        {
+          "service": "SmartCollectApiService",
+          "method": "listVirtualAccounts",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/smart-collect/services/smart-collect-api.service.ts",
+            "line": 23
+          }
+        },
+        {
+          "service": "SmartCollectApiService",
+          "method": "createVirtualAccount",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/smart-collect/services/smart-collect-api.service.ts",
+            "line": 42
+          }
+        }
+      ],
+      "components": [
+        "SmartCollectDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/smart-collect/collections",
+      "callers": [
+        {
+          "service": "SmartCollectApiService",
+          "method": "listCollections",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/smart-collect/services/smart-collect-api.service.ts",
+            "line": 30
+          }
+        }
+      ],
+      "components": [
+        "SmartCollectDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/smart-collect/collections/:id",
+      "callers": [
+        {
+          "service": "SmartCollectApiService",
+          "method": "getCollection",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/smart-collect/services/smart-collect-api.service.ts",
+            "line": 34
+          }
+        }
+      ],
+      "components": [
+        "SmartCollectDashboardComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/smart-collect/collections/:id/match",
+      "callers": [
+        {
+          "service": "SmartCollectApiService",
+          "method": "matchCollection",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/smart-collect/services/smart-collect-api.service.ts",
+            "line": 38
+          }
+        }
+      ],
+      "components": [
+        "SmartCollectDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/subscriptions",
+      "callers": [
+        {
+          "service": "SubscriptionsApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/subscriptions/services/subscriptions-api.service.ts",
+            "line": 36
+          }
+        },
+        {
+          "service": "SubscriptionsApiService",
+          "method": "create",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/subscriptions/services/subscriptions-api.service.ts",
+            "line": 70
+          }
+        }
+      ],
+      "components": [
+        "PlanCreateComponent",
+        "PlanListComponent",
+        "SubscriptionCreateComponent",
+        "SubscriptionDashboardComponent",
+        "SubscriptionDetailsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/subscriptions/statistics",
+      "callers": [
+        {
+          "service": "SubscriptionsApiService",
+          "method": "statistics",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/subscriptions/services/subscriptions-api.service.ts",
+            "line": 42
+          }
+        },
+        {
+          "service": "SubscriptionsApiService",
+          "method": "getById",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/subscriptions/services/subscriptions-api.service.ts",
+            "line": 64
+          }
+        }
+      ],
+      "components": [
+        "PlanCreateComponent",
+        "PlanListComponent",
+        "SubscriptionCreateComponent",
+        "SubscriptionDashboardComponent",
+        "SubscriptionDetailsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/subscriptions/plans",
+      "callers": [
+        {
+          "service": "SubscriptionsApiService",
+          "method": "listPlans",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/subscriptions/services/subscriptions-api.service.ts",
+            "line": 52
+          }
+        },
+        {
+          "service": "SubscriptionsApiService",
+          "method": "createPlan",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/subscriptions/services/subscriptions-api.service.ts",
+            "line": 58
+          }
+        }
+      ],
+      "components": [
+        "PlanCreateComponent",
+        "PlanListComponent",
+        "SubscriptionCreateComponent",
+        "SubscriptionDashboardComponent",
+        "SubscriptionDetailsComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/subscriptions/:id/pause",
+      "callers": [
+        {
+          "service": "SubscriptionsApiService",
+          "method": "pause",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/subscriptions/services/subscriptions-api.service.ts",
+            "line": 76
+          }
+        }
+      ],
+      "components": [
+        "PlanCreateComponent",
+        "PlanListComponent",
+        "SubscriptionCreateComponent",
+        "SubscriptionDashboardComponent",
+        "SubscriptionDetailsComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/subscriptions/:id/cancel",
+      "callers": [
+        {
+          "service": "SubscriptionsApiService",
+          "method": "cancel",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/subscriptions/services/subscriptions-api.service.ts",
+            "line": 82
+          }
+        }
+      ],
+      "components": [
+        "PlanCreateComponent",
+        "PlanListComponent",
+        "SubscriptionCreateComponent",
+        "SubscriptionDashboardComponent",
+        "SubscriptionDetailsComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/subscriptions/:id/renew",
+      "callers": [
+        {
+          "service": "SubscriptionsApiService",
+          "method": "renew",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/subscriptions/services/subscriptions-api.service.ts",
+            "line": 88
+          }
+        }
+      ],
+      "components": [
+        "PlanCreateComponent",
+        "PlanListComponent",
+        "SubscriptionCreateComponent",
+        "SubscriptionDashboardComponent",
+        "SubscriptionDetailsComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/subscriptions/:id/fail",
+      "callers": [
+        {
+          "service": "SubscriptionsApiService",
+          "method": "markFailed",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/subscriptions/services/subscriptions-api.service.ts",
+            "line": 94
+          }
+        }
+      ],
+      "components": [
+        "PlanCreateComponent",
+        "PlanListComponent",
+        "SubscriptionCreateComponent",
+        "SubscriptionDashboardComponent",
+        "SubscriptionDetailsComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/support",
+      "callers": [
+        {
+          "service": "SupportApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/support/services/support-api.service.ts",
+            "line": 20
+          }
+        },
+        {
+          "service": "SupportApiService",
+          "method": "create",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/support/services/support-api.service.ts",
+            "line": 32
+          }
+        }
+      ],
+      "components": [
+        "TicketCreateComponent",
+        "TicketDetailsComponent",
+        "TicketEditComponent",
+        "TicketListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/support/statistics",
+      "callers": [
+        {
+          "service": "SupportApiService",
+          "method": "statistics",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/support/services/support-api.service.ts",
+            "line": 24
+          }
+        },
+        {
+          "service": "SupportApiService",
+          "method": "getById",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/support/services/support-api.service.ts",
+            "line": 28
+          }
+        }
+      ],
+      "components": [
+        "TicketCreateComponent",
+        "TicketDetailsComponent",
+        "TicketEditComponent",
+        "TicketListComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/support/:id",
+      "callers": [
+        {
+          "service": "SupportApiService",
+          "method": "update",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/support/services/support-api.service.ts",
+            "line": 36
+          }
+        }
+      ],
+      "components": [
+        "TicketCreateComponent",
+        "TicketDetailsComponent",
+        "TicketEditComponent",
+        "TicketListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/support/:id/assign",
+      "callers": [
+        {
+          "service": "SupportApiService",
+          "method": "assign",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/support/services/support-api.service.ts",
+            "line": 40
+          }
+        }
+      ],
+      "components": [
+        "TicketCreateComponent",
+        "TicketDetailsComponent",
+        "TicketEditComponent",
+        "TicketListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/support/:id/escalate",
+      "callers": [
+        {
+          "service": "SupportApiService",
+          "method": "escalate",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/support/services/support-api.service.ts",
+            "line": 44
+          }
+        }
+      ],
+      "components": [
+        "TicketCreateComponent",
+        "TicketDetailsComponent",
+        "TicketEditComponent",
+        "TicketListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/support/:id/close",
+      "callers": [
+        {
+          "service": "SupportApiService",
+          "method": "close",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/support/services/support-api.service.ts",
+            "line": 48
+          }
+        }
+      ],
+      "components": [
+        "TicketCreateComponent",
+        "TicketDetailsComponent",
+        "TicketEditComponent",
+        "TicketListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/support/:id/reopen",
+      "callers": [
+        {
+          "service": "SupportApiService",
+          "method": "reopen",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/support/services/support-api.service.ts",
+            "line": 52
+          }
+        }
+      ],
+      "components": [
+        "TicketCreateComponent",
+        "TicketDetailsComponent",
+        "TicketEditComponent",
+        "TicketListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/support/:id/notes",
+      "callers": [
+        {
+          "service": "SupportApiService",
+          "method": "addNote",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/support/services/support-api.service.ts",
+            "line": 56
+          }
+        }
+      ],
+      "components": [
+        "TicketCreateComponent",
+        "TicketDetailsComponent",
+        "TicketEditComponent",
+        "TicketListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/transactions",
+      "callers": [
+        {
+          "service": "TransactionApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/transactions/services/transaction-api.service.ts",
+            "line": 45
+          }
+        }
+      ],
+      "components": [
+        "MerchantDetailsComponent",
+        "TransactionDetailsComponent",
+        "TransactionListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/transactions/statistics",
+      "callers": [
+        {
+          "service": "TransactionApiService",
+          "method": "getStatistics",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/transactions/services/transaction-api.service.ts",
+            "line": 54
+          }
+        }
+      ],
+      "components": [
+        "MerchantDetailsComponent",
+        "TransactionDetailsComponent",
+        "TransactionListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/transactions/search",
+      "callers": [
+        {
+          "service": "TransactionApiService",
+          "method": "getById",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/transactions/services/transaction-api.service.ts",
+            "line": 60
+          }
+        }
+      ],
+      "components": [
+        "MerchantDetailsComponent",
+        "TransactionDetailsComponent",
+        "TransactionListComponent"
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/transactions/:id/status",
+      "callers": [
+        {
+          "service": "TransactionApiService",
+          "method": "updateStatus",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/transactions/services/transaction-api.service.ts",
+            "line": 66
+          }
+        }
+      ],
+      "components": [
+        "MerchantDetailsComponent",
+        "TransactionDetailsComponent",
+        "TransactionListComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/transactions/:id/refund",
+      "callers": [
+        {
+          "service": "TransactionApiService",
+          "method": "refund",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/transactions/services/transaction-api.service.ts",
+            "line": 72
+          }
+        }
+      ],
+      "components": [
+        "MerchantDetailsComponent",
+        "TransactionDetailsComponent",
+        "TransactionListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/transactions/export",
+      "callers": [
+        {
+          "service": "TransactionApiService",
+          "method": "export",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/transactions/services/transaction-api.service.ts",
+            "line": 85
+          }
+        }
+      ],
+      "components": [
+        "MerchantDetailsComponent",
+        "TransactionDetailsComponent",
+        "TransactionListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/transactions/disputes",
+      "callers": [
+        {
+          "service": "TransactionApiService",
+          "method": "getDisputes",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/transactions/services/transaction-api.service.ts",
+            "line": 91
+          }
+        },
+        {
+          "service": "TransactionApiService",
+          "method": "createDispute",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/transactions/services/transaction-api.service.ts",
+            "line": 97
+          }
+        }
+      ],
+      "components": [
+        "MerchantDetailsComponent",
+        "TransactionDetailsComponent",
+        "TransactionListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/users",
+      "callers": [
+        {
+          "service": "UserApiService",
+          "method": "list",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/users/services/user-api.service.ts",
+            "line": 17
+          }
+        },
+        {
+          "service": "UserApiService",
+          "method": "create",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/users/services/user-api.service.ts",
+            "line": 25
+          }
+        }
+      ],
+      "components": [
+        "UserDetailsComponent",
+        "UserFormComponent",
+        "UserListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/users/",
+      "callers": [
+        {
+          "service": "UserApiService",
+          "method": "getById",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/users/services/user-api.service.ts",
+            "line": 21
+          }
+        }
+      ],
+      "components": [
+        "UserDetailsComponent",
+        "UserFormComponent",
+        "UserListComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/users/:id",
+      "callers": [
+        {
+          "service": "UserApiService",
+          "method": "update",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/users/services/user-api.service.ts",
+            "line": 29
+          }
+        },
+        {
+          "service": "UserApiService",
+          "method": "delete",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/users/services/user-api.service.ts",
+            "line": 37
+          }
+        }
+      ],
+      "components": [
+        "UserDetailsComponent",
+        "UserFormComponent",
+        "UserListComponent"
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/users/:id/status",
+      "callers": [
+        {
+          "service": "UserApiService",
+          "method": "updateStatus",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/users/services/user-api.service.ts",
+            "line": 33
+          }
+        }
+      ],
+      "components": [
+        "UserDetailsComponent",
+        "UserFormComponent",
+        "UserListComponent"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/users/:id/roles",
+      "callers": [
+        {
+          "service": "UserApiService",
+          "method": "assignRoles",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/users/services/user-api.service.ts",
+            "line": 41
+          }
+        }
+      ],
+      "components": [
+        "UserDetailsComponent",
+        "UserFormComponent",
+        "UserListComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/webhooks/dashboard",
+      "callers": [
+        {
+          "service": "WebhooksApiService",
+          "method": "dashboard",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/webhooks/services/webhooks-api.service.ts",
+            "line": 19
+          }
+        }
+      ],
+      "components": [
+        "WebhooksDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/webhooks/endpoints",
+      "callers": [
+        {
+          "service": "WebhooksApiService",
+          "method": "listEndpoints",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/webhooks/services/webhooks-api.service.ts",
+            "line": 25
+          }
+        }
+      ],
+      "components": [
+        "WebhooksDashboardComponent"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/webhooks/deliveries",
+      "callers": [
+        {
+          "service": "WebhooksApiService",
+          "method": "listDeliveries",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/webhooks/services/webhooks-api.service.ts",
+            "line": 37
+          }
+        }
+      ],
+      "components": [
+        "WebhooksDashboardComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/webhooks/deliveries/:param/replay",
+      "callers": [
+        {
+          "service": "WebhooksApiService",
+          "method": "replayDelivery",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/features/webhooks/services/webhooks-api.service.ts",
+            "line": 41
+          }
+        }
+      ],
+      "components": [
+        "WebhooksDashboardComponent"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/ai/chat",
+      "callers": [
+        {
+          "service": "AiApiService",
+          "method": "chat",
+          "evidence": {
+            "file": "Frontend_Fintech/src/app/shared/ai/services/ai-api.service.ts",
+            "line": 14
+          }
+        }
+      ],
+      "components": [
+        "AiChatPanelComponent"
+      ]
+    }
+  ]
+}

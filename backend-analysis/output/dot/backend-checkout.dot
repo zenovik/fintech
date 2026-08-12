@@ -1,0 +1,16 @@
+digraph "checkout" {
+  rankdir=LR;
+  node [shape=box fontsize=10];
+  n0 [label="Endpoint\nGET /api/v1/public/checkout/themes"];
+  n1 [label="Endpoint\nGET /api/v1/public/checkout/analytic"];
+  n2 [label="Endpoint\nGET /api/v1/public/checkout/sessions"];
+  n3 [label="Endpoint\nPOST /api/v1/public/checkout/session"];
+  n4 [label="Endpoint\nGET /api/v1/public/checkout/sessions"];
+  n5 [label="Endpoint\nGET /api/v1/public/checkout/branding"];
+  n6 [label="Endpoint\nPUT /api/v1/public/checkout/branding"];
+  n7 [label="Table\ncheckout_sessions"];
+  n8 [label="Table\ncheckout_session_events"];
+  n9 [label="Table\nmerchant_checkout_branding"];
+  n10 [label="Table\ncheckout_themes"];
+  n11 [label="Table\ncheckout_analytics_daily"];
+}

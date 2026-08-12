@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T18:13:27.127Z",
+    "generatorVersion": "3.0.0-a",
+    "evidenceCount": 4,
+    "verificationStatus": "verified-from-source"
+  },
+  "jobTypes": [
+    "invoice_email",
+    "webhook_delivery",
+    "notification_email",
+    "password_reset_email"
+  ],
+  "queueTables": [
+    "background_jobs",
+    "retry_queue",
+    "notification_deliveries"
+  ],
+  "redisLockPatterns": [],
+  "heartbeat": "worker:heartbeat",
+  "sources": [
+    "Backend_Fintech/src/app/shared/workers/job-handlers.ts",
+    "Backend_Fintech/src/app/shared/workers/worker-runner.ts"
+  ]
+}

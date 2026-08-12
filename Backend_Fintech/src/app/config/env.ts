@@ -72,6 +72,18 @@ export const env = {
     enabled: (process.env.REDIS_ENABLED ?? 'true').toLowerCase() !== 'false',
     url: process.env.REDIS_URL ?? 'redis://localhost:6379',
   },
+  gateway: {
+    provider: process.env.PAYMENT_GATEWAY_PROVIDER ?? 'internal',
+    stripeSecretKey: process.env.STRIPE_SECRET_KEY ?? '',
+    stripeWebhookSecret: process.env.STRIPE_WEBHOOK_SECRET ?? '',
+    razorpayKeyId: process.env.RAZORPAY_KEY_ID ?? '',
+    razorpayKeySecret: process.env.RAZORPAY_KEY_SECRET ?? '',
+    razorpayWebhookSecret: process.env.RAZORPAY_WEBHOOK_SECRET ?? '',
+  },
+  observability: {
+    tracingEnabled: (process.env.OTEL_TRACING_ENABLED ?? 'true').toLowerCase() !== 'false',
+    metricsEnabled: (process.env.PROMETHEUS_METRICS_ENABLED ?? 'true').toLowerCase() !== 'false',
+  },
   secrets: {
     configEncryptionKey: requireEnv('CONFIG_ENCRYPTION_KEY', process.env.JWT_SECRET ?? 'dev-config-encryption-key-change-me'),
   },

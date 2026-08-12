@@ -132,4 +132,32 @@ export class ReconciliationRepository {
       [matchType === 'auto' ? 'auto_matched' : 'manual_matched', actorId ?? null, transactionId ?? null, settlementId ?? null, id],
     );
   }
+
+  async autoMatchImport(importId: number, actorId?: number): Promise<{ matched: number; exceptions: number }> {
+    const [records] = await this.pool.query<RowDataPacket[]>(
+      `SELECT * FROM reconciliation_records WHERE import_id = ? AND match_status = 'unmatched'`,
+      [importId],
+    );
+    let matched = 0;
+    let exceptions = 0;
+    for (const rec of records) {
+      const amount = Number(rec.amount);
+      const [txns] = await this.pool.query<RowDataPacket[]>(
+        `SELECT id, amount FROM transactions WHERE merchant_id = ? AND ABS(amount - ?) < 0.01 LIMIT 1`,
+        [rec.merchant_id, amount],
+      );
+      if (txns[0]) {
+        await this.matchRecord(Number(rec.id), 'auto', actorId, Number(txns[0].id));
+        await this.pool.query(
+          `INSERT INTO reconciliation_matches (uuid, record_id, match_type, matched_entity_type, matched_entity_id, status, matched_by)
+           VALUES (?, ?, 'automatic', 'transaction', ?, 'matched', ?)`,
+          [randomUUID(), rec.id, txns[0].id, actorId ?? null],
+        );
+        matched += 1;
+      } else {
+        exceptions += 1;
+      }
+    }
+    return { matched, exceptions };
+  }
 }

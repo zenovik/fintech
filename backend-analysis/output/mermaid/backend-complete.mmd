@@ -1,0 +1,1674 @@
+flowchart LR
+  N0["Endpoint: GET /api/v1/acceptance/ana"]
+  N1["Controller: analytics"]
+  N2["Endpoint: GET /api/v1/acceptance/top"]
+  N3["Controller: topMerchants"]
+  N4["Endpoint: GET /api/v1/acceptance/fai"]
+  N5["Controller: failureInsights"]
+  N6["Endpoint: GET /api/v1/acceptance/mer"]
+  N7["Controller: merchantPortal"]
+  N8["Endpoint: GET /api/v1/accounting/acc"]
+  N9["Controller: listAccounts"]
+  N10["Endpoint: GET /api/v1/accounting/ent"]
+  N11["Controller: listEntries"]
+  N12["Endpoint: GET /api/v1/accounting/sum"]
+  N13["Controller: summary"]
+  N14["Endpoint: GET /api/v1/accounting/exp"]
+  N15["Controller: export"]
+  N16["Endpoint: GET /api/v1/activity/timel"]
+  N17["Controller: timeline"]
+  N18["Endpoint: POST /api/v1/ai/chat"]
+  N19["Controller: chat"]
+  N20["Endpoint: GET /api/v1/ai/insights/da"]
+  N21["Controller: insightsDashboard"]
+  N22["Endpoint: GET /api/v1/ai/insights/re"]
+  N23["Controller: revenueForecast"]
+  N24["Endpoint: GET /api/v1/ai/insights/se"]
+  N25["Controller: settlementForecast"]
+  N26["Endpoint: GET /api/v1/ai/insights/me"]
+  N27["Controller: merchantHealth"]
+  N28["Endpoint: GET /api/v1/ai/insights/fr"]
+  N29["Controller: fraudPrediction"]
+  N30["Endpoint: POST /api/v1/ai/search"]
+  N31["Controller: nlSearch"]
+  N32["Endpoint: GET /api/v1/audit"]
+  N33["Controller: list"]
+  N34["Endpoint: GET /api/v1/audit/export"]
+  N35["Controller: exportLogs"]
+  N36["Endpoint: GET /api/v1/audit/categori"]
+  N37["Controller: getCategories"]
+  N38["Endpoint: GET /api/v1/audit/actions"]
+  N39["Controller: getActions"]
+  N40["Endpoint: GET /api/v1/audit/api-logs"]
+  N41["Controller: listApiLogs"]
+  N42["Endpoint: GET /api/v1/audit/webhook-"]
+  N43["Controller: listWebhookLogs"]
+  N44["Endpoint: GET /api/v1/audit/:id"]
+  N45["Controller: getById"]
+  N46["Endpoint: GET /csrf-token"]
+  N47["Endpoint: POST /login"]
+  N48["Controller: login"]
+  N49["Endpoint: POST /verify-otp"]
+  N50["Controller: verifyOtp"]
+  N51["Endpoint: POST /resend-otp"]
+  N52["Controller: resendOtp"]
+  N53["Endpoint: POST /forgot-password"]
+  N54["Controller: forgotPassword"]
+  N55["Endpoint: POST /reset-password"]
+  N56["Controller: resetPassword"]
+  N57["Endpoint: POST /refresh-token"]
+  N58["Controller: refreshToken"]
+  N59["Endpoint: POST /select-organization"]
+  N60["Controller: selectOrganization"]
+  N61["Endpoint: POST /logout"]
+  N62["Controller: logout"]
+  N63["Endpoint: GET /me"]
+  N64["Controller: me"]
+  N65["Endpoint: GET /sessions"]
+  N66["Controller: getSessions"]
+  N67["Endpoint: DELETE /sessions/others"]
+  N68["Controller: revokeOtherSessions"]
+  N69["Endpoint: DELETE /session/:id"]
+  N70["Controller: revokeSession"]
+  N71["Endpoint: POST /change-password"]
+  N72["Controller: changePassword"]
+  N73["Endpoint: PUT /mfa-preferences"]
+  N74["Controller: updateMfaPreferences"]
+  N75["Endpoint: GET /session-settings"]
+  N76["Controller: getSessionSettings"]
+  N77["Endpoint: GET /api/v1/chargebacks/st"]
+  N78["Controller: statistics"]
+  N79["Endpoint: GET /api/v1/chargebacks/sl"]
+  N80["Controller: slaDashboard"]
+  N81["Endpoint: GET /api/v1/chargebacks/an"]
+  N82["Endpoint: GET /api/v1/chargebacks"]
+  N83["Endpoint: POST /api/v1/chargebacks"]
+  N84["Controller: create"]
+  N85["Endpoint: GET /api/v1/chargebacks/:i"]
+  N86["Controller: history"]
+  N87["Endpoint: GET /api/v1/chargebacks/:i"]
+  N88["Controller: evidence"]
+  N89["Endpoint: POST /api/v1/chargebacks/:"]
+  N90["Controller: addEvidence"]
+  N91["Endpoint: POST /api/v1/chargebacks/:"]
+  N92["Controller: representment"]
+  N93["Endpoint: POST /api/v1/chargebacks/:"]
+  N94["Controller: arbitration"]
+  N95["Endpoint: POST /api/v1/chargebacks/:"]
+  N96["Controller: resolve"]
+  N97["Endpoint: GET /api/v1/chargebacks/:i"]
+  N98["Endpoint: GET /api/v1/public/checkou"]
+  N99["Controller: listThemes"]
+  N100["Endpoint: GET /api/v1/public/checkou"]
+  N101["Endpoint: GET /api/v1/public/checkou"]
+  N102["Endpoint: POST /api/v1/public/checko"]
+  N103["Endpoint: GET /api/v1/public/checkou"]
+  N104["Endpoint: GET /api/v1/public/checkou"]
+  N105["Controller: getBranding"]
+  N106["Endpoint: PUT /api/v1/public/checkou"]
+  N107["Controller: updateBranding"]
+  N108["Endpoint: GET /api/v1/customers/sear"]
+  N109["Controller: search"]
+  N110["Endpoint: GET /api/v1/customers/stat"]
+  N111["Endpoint: GET /api/v1/customers"]
+  N112["Endpoint: POST /api/v1/customers"]
+  N113["Endpoint: GET /api/v1/customers/:id"]
+  N114["Endpoint: PUT /api/v1/customers/:id"]
+  N115["Controller: update"]
+  N116["Endpoint: PATCH /api/v1/customers/:i"]
+  N117["Controller: updateStatus"]
+  N118["Endpoint: DELETE /api/v1/customers/:"]
+  N119["Controller: remove"]
+  N120["Endpoint: GET /api/v1/customers/:id/"]
+  N121["Controller: transactions"]
+  N122["Endpoint: GET /api/v1/customers/:id/"]
+  N123["Controller: merchants"]
+  N124["Endpoint: GET /api/v1/customers/:id/"]
+  N125["Controller: preferences"]
+  N126["Endpoint: PUT /api/v1/customers/:id/"]
+  N127["Controller: updatePreferences"]
+  N128["Endpoint: GET /api/v1/customers/:id/"]
+  N129["Controller: paymentMethods"]
+  N130["Endpoint: GET /api/v1/customers/:id/"]
+  N131["Endpoint: GET /api/v1/dashboard/exec"]
+  N132["Endpoint: GET /api/v1/dashboard/exec"]
+  N133["Controller: revenueChart"]
+  N134["Endpoint: GET /api/v1/dashboard/exec"]
+  N135["Endpoint: GET /api/v1/dashboard/exec"]
+  N136["Controller: regionalDistribution"]
+  N137["Endpoint: GET /api/v1/dashboard/exec"]
+  N138["Controller: highValueTransactions"]
+  N139["Endpoint: GET /api/v1/dashboard/exec"]
+  N140["Controller: activities"]
+  N141["Endpoint: GET /api/v1/dashboard/exec"]
+  N142["Controller: fraudAlerts"]
+  N143["Endpoint: GET /api/v1/dashboard/exec"]
+  N144["Controller: onboardingStats"]
+  N145["Endpoint: GET /api/v1/dashboard/exec"]
+  N146["Controller: paymentPlatformStats"]
+  N147["Endpoint: GET /api/v1/dashboard/exec"]
+  N148["Controller: operationsStats"]
+  N149["Endpoint: POST /api/v1/dashboard/exe"]
+  N150["Controller: exportReport"]
+  N151["Endpoint: GET /api/v1/dashboard/exec"]
+  N152["Controller: getPreferences"]
+  N153["Endpoint: PUT /api/v1/dashboard/exec"]
+  N154["Endpoint: POST /api/v1/dashboard/exe"]
+  N155["Controller: aiChat"]
+  N156["Endpoint: GET /api/v1/developer/dash"]
+  N157["Controller: dashboard"]
+  N158["Endpoint: GET /api/v1/developer/prof"]
+  N159["Controller: listProfiles"]
+  N160["Endpoint: POST /api/v1/developer/pro"]
+  N161["Controller: createProfile"]
+  N162["Endpoint: GET /api/v1/developer/prof"]
+  N163["Controller: getProfile"]
+  N164["Endpoint: PUT /api/v1/developer/prof"]
+  N165["Controller: updateProfile"]
+  N166["Endpoint: DELETE /api/v1/developer/p"]
+  N167["Controller: deleteProfile"]
+  N168["Endpoint: GET /api/v1/developer/oaut"]
+  N169["Controller: listOAuthApps"]
+  N170["Endpoint: POST /api/v1/developer/oau"]
+  N171["Controller: createOAuthApp"]
+  N172["Endpoint: GET /api/v1/developer/oaut"]
+  N173["Controller: getOAuthApp"]
+  N174["Endpoint: PUT /api/v1/developer/oaut"]
+  N175["Controller: updateOAuthApp"]
+  N176["Endpoint: POST /api/v1/developer/oau"]
+  N177["Controller: revokeOAuthApp"]
+  N178["Endpoint: GET /api/v1/developer/api-"]
+  N179["Controller: listApiUsageLogs"]
+  N180["Endpoint: GET /api/v1/developer/api-"]
+  N181["Controller: listApiKeys"]
+  N182["Endpoint: GET /api/v1/devices/invent"]
+  N183["Controller: inventory"]
+  N184["Endpoint: GET /api/v1/devices"]
+  N185["Endpoint: POST /api/v1/devices"]
+  N186["Controller: provision"]
+  N187["Endpoint: GET /api/v1/devices/:id"]
+  N188["Endpoint: POST /api/v1/devices/:id/a"]
+  N189["Controller: activate"]
+  N190["Endpoint: POST /api/v1/devices/:id/d"]
+  N191["Controller: deactivate"]
+  N192["Endpoint: POST /api/v1/devices/:id/t"]
+  N193["Controller: transfer"]
+  N194["Endpoint: POST /api/v1/devices/:id/r"]
+  N195["Controller: replace"]
+  N196["Endpoint: POST /api/v1/devices/:id/s"]
+  N197["Controller: sync"]
+  N198["Endpoint: GET /api/v1/exports/:fileI"]
+  N199["Controller: download"]
+  N200["Endpoint: GET /api/v1/fraud"]
+  N201["Endpoint: GET /api/v1/fraud/:id"]
+  N202["Endpoint: POST /api/v1/fraud/:id/app"]
+  N203["Controller: approve"]
+  N204["Endpoint: POST /api/v1/fraud/:id/rej"]
+  N205["Controller: reject"]
+  N206["Endpoint: POST /api/v1/fraud/:id/rel"]
+  N207["Controller: release"]
+  N208["Endpoint: GET /api/v1/invoices/stati"]
+  N209["Endpoint: GET /api/v1/invoices/analy"]
+  N210["Endpoint: GET /api/v1/invoices/templ"]
+  N211["Controller: listTemplates"]
+  N212["Endpoint: POST /api/v1/invoices/temp"]
+  N213["Controller: createTemplate"]
+  N214["Endpoint: GET /api/v1/invoices/templ"]
+  N215["Controller: getTemplate"]
+  N216["Endpoint: PUT /api/v1/invoices/templ"]
+  N217["Controller: updateTemplate"]
+  N218["Endpoint: DELETE /api/v1/invoices/te"]
+  N219["Controller: deleteTemplate"]
+  N220["Endpoint: GET /api/v1/invoices/credi"]
+  N221["Controller: listCreditNotes"]
+  N222["Endpoint: POST /api/v1/invoices/cred"]
+  N223["Controller: createCreditNote"]
+  N224["Endpoint: GET /api/v1/invoices/debit"]
+  N225["Controller: listDebitNotes"]
+  N226["Endpoint: POST /api/v1/invoices/debi"]
+  N227["Controller: createDebitNote"]
+  N228["Endpoint: GET /api/v1/invoices"]
+  N229["Endpoint: POST /api/v1/invoices"]
+  N230["Endpoint: GET /api/v1/invoices/:id/p"]
+  N231["Controller: downloadPdf"]
+  N232["Endpoint: GET /api/v1/invoices/:id/p"]
+  N233["Controller: pdfMetadata"]
+  N234["Endpoint: POST /api/v1/invoices/:id/"]
+  N235["Controller: duplicate"]
+  N236["Endpoint: POST /api/v1/invoices/:id/"]
+  N237["Controller: voidInvoice"]
+  N238["Endpoint: POST /api/v1/invoices/:id/"]
+  N239["Controller: cancel"]
+  N240["Endpoint: POST /api/v1/invoices/:id/"]
+  N241["Controller: markSent"]
+  N242["Endpoint: POST /api/v1/invoices/:id/"]
+  N243["Controller: markViewed"]
+  N244["Endpoint: POST /api/v1/invoices/:id/"]
+  N245["Controller: markOverdue"]
+  N246["Endpoint: POST /api/v1/invoices/:id/"]
+  N247["Controller: markPaid"]
+  N248["Endpoint: POST /api/v1/invoices/:id/"]
+  N249["Controller: email"]
+  N250["Endpoint: POST /api/v1/invoices/:id/"]
+  N251["Controller: generatePaymentLink"]
+  N252["Endpoint: POST /api/v1/invoices/:id/"]
+  N253["Controller: regeneratePaymentLink"]
+  N254["Endpoint: POST /api/v1/invoices/:id/"]
+  N255["Controller: disablePaymentLink"]
+  N256["Endpoint: GET /api/v1/invoices/:id"]
+  N257["Endpoint: PUT /api/v1/invoices/:id"]
+  N258["Endpoint: GET /api/v1/merchants/sear"]
+  N259["Endpoint: GET /api/v1/merchants/stat"]
+  N260["Endpoint: GET /api/v1/merchants"]
+  N261["Endpoint: POST /api/v1/merchants"]
+  N262["Endpoint: GET /api/v1/merchants/:id"]
+  N263["Endpoint: PUT /api/v1/merchants/:id"]
+  N264["Endpoint: PATCH /api/v1/merchants/:i"]
+  N265["Endpoint: DELETE /api/v1/merchants/:"]
+  N266["Endpoint: GET /api/v1/merchants/:id/"]
+  N267["Endpoint: GET /api/v1/merchants/:id/"]
+  N268["Controller: settlements"]
+  N269["Endpoint: GET /api/v1/merchants/:id/"]
+  N270["Controller: documents"]
+  N271["Endpoint: POST /api/v1/merchants/:id"]
+  N272["Controller: createDocument"]
+  N273["Endpoint: DELETE /api/v1/merchants/:"]
+  N274["Controller: deleteDocument"]
+  N275["Endpoint: GET /api/v1/merchant-onboa"]
+  N276["Endpoint: GET /api/v1/merchant-onboa"]
+  N277["Endpoint: POST /api/v1/merchant-onbo"]
+  N278["Endpoint: GET /api/v1/merchant-onboa"]
+  N279["Endpoint: GET /api/v1/merchant-onboa"]
+  N280["Endpoint: PUT /api/v1/merchant-onboa"]
+  N281["Controller: saveBusiness"]
+  N282["Endpoint: PUT /api/v1/merchant-onboa"]
+  N283["Controller: saveAddresses"]
+  N284["Endpoint: PUT /api/v1/merchant-onboa"]
+  N285["Controller: saveKyc"]
+  N286["Endpoint: PUT /api/v1/merchant-onboa"]
+  N287["Controller: saveBank"]
+  N288["Endpoint: PUT /api/v1/merchant-onboa"]
+  N289["Controller: saveSettlement"]
+  N290["Endpoint: PUT /api/v1/merchant-onboa"]
+  N291["Controller: savePayment"]
+  N292["Endpoint: POST /api/v1/merchant-onbo"]
+  N293["Controller: submit"]
+  N294["Endpoint: POST /api/v1/merchant-onbo"]
+  N295["Endpoint: POST /api/v1/merchant-onbo"]
+  N296["Endpoint: POST /api/v1/merchant-onbo"]
+  N297["Controller: goLive"]
+  N298["Endpoint: POST /api/v1/merchant-onbo"]
+  N299["Controller: suspend"]
+  N300["Endpoint: GET /api/v1/merchant-users"]
+  N301["Endpoint: GET /api/v1/merchant-users"]
+  N302["Controller: listRoles"]
+  N303["Endpoint: GET /api/v1/merchant-users"]
+  N304["Endpoint: POST /api/v1/merchant-user"]
+  N305["Endpoint: POST /api/v1/merchant-user"]
+  N306["Controller: invite"]
+  N307["Endpoint: GET /api/v1/merchant-users"]
+  N308["Endpoint: PUT /api/v1/merchant-users"]
+  N309["Endpoint: POST /api/v1/merchant-user"]
+  N310["Endpoint: POST /api/v1/merchant-user"]
+  N311["Endpoint: PUT /api/v1/merchant-users"]
+  N312["Controller: assignRole"]
+  N313["Endpoint: PUT /api/v1/merchant-users"]
+  N314["Controller: assignOutlets"]
+  N315["Endpoint: POST /api/v1/merchant-user"]
+  N316["Endpoint: GET /api/v1/notifications"]
+  N317["Endpoint: GET /api/v1/notifications/"]
+  N318["Controller: unreadCount"]
+  N319["Endpoint: PATCH /api/v1/notification"]
+  N320["Controller: markAllRead"]
+  N321["Endpoint: PATCH /api/v1/notification"]
+  N322["Controller: archiveAll"]
+  N323["Endpoint: GET /api/v1/notifications/"]
+  N324["Endpoint: POST /api/v1/notifications"]
+  N325["Endpoint: GET /api/v1/notifications/"]
+  N326["Endpoint: PUT /api/v1/notifications/"]
+  N327["Endpoint: DELETE /api/v1/notificatio"]
+  N328["Endpoint: GET /api/v1/notifications/"]
+  N329["Controller: listBroadcasts"]
+  N330["Endpoint: POST /api/v1/notifications"]
+  N331["Controller: createBroadcast"]
+  N332["Endpoint: GET /api/v1/notifications/"]
+  N333["Controller: listCampaigns"]
+  N334["Endpoint: POST /api/v1/notifications"]
+  N335["Controller: createCampaign"]
+  N336["Endpoint: GET /api/v1/notifications/"]
+  N337["Controller: getCampaign"]
+  N338["Endpoint: PUT /api/v1/notifications/"]
+  N339["Controller: updateCampaign"]
+  N340["Endpoint: DELETE /api/v1/notificatio"]
+  N341["Controller: deleteCampaign"]
+  N342["Endpoint: GET /api/v1/notifications/"]
+  N343["Controller: getTemplateVariables"]
+  N344["Endpoint: GET /api/v1/notifications/"]
+  N345["Controller: getChannels"]
+  N346["Endpoint: GET /api/v1/notifications/"]
+  N347["Controller: getEvents"]
+  N348["Endpoint: GET /api/v1/notifications/"]
+  N349["Controller: getGroups"]
+  N350["Endpoint: GET /api/v1/notifications/"]
+  N351["Endpoint: PATCH /api/v1/notification"]
+  N352["Controller: markRead"]
+  N353["Endpoint: PATCH /api/v1/notification"]
+  N354["Controller: archive"]
+  N355["Endpoint: DELETE /api/v1/notificatio"]
+  N356["Endpoint: GET /api/v1/onboarding-app"]
+  N357["Controller: stages"]
+  N358["Endpoint: GET /api/v1/onboarding-app"]
+  N359["Controller: dashboardStats"]
+  N360["Endpoint: GET /api/v1/onboarding-app"]
+  N361["Controller: complianceQueue"]
+  N362["Endpoint: POST /api/v1/onboarding-ap"]
+  N363["Controller: bulkAssign"]
+  N364["Endpoint: GET /api/v1/onboarding-app"]
+  N365["Controller: getWorkflow"]
+  N366["Endpoint: POST /api/v1/onboarding-ap"]
+  N367["Controller: startWorkflow"]
+  N368["Endpoint: POST /api/v1/onboarding-ap"]
+  N369["Endpoint: POST /api/v1/onboarding-ap"]
+  N370["Endpoint: POST /api/v1/onboarding-ap"]
+  N371["Controller: sendBack"]
+  N372["Endpoint: POST /api/v1/onboarding-ap"]
+  N373["Controller: reassign"]
+  N374["Endpoint: POST /api/v1/onboarding-ap"]
+  N375["Controller: skipStage"]
+  N376["Endpoint: POST /api/v1/onboarding-ap"]
+  N377["Endpoint: POST /api/v1/onboarding-ap"]
+  N378["Endpoint: POST /api/v1/onboarding-ap"]
+  N379["Endpoint: GET /api/v1/onboarding-app"]
+  N380["Controller: getRisk"]
+  N381["Endpoint: PUT /api/v1/onboarding-app"]
+  N382["Controller: saveRisk"]
+  N383["Endpoint: GET /api/v1/onboarding-app"]
+  N384["Controller: listKyc"]
+  N385["Endpoint: POST /api/v1/onboarding-ap"]
+  N386["Controller: kycDecision"]
+  N387["Endpoint: GET /api/v1/operations/das"]
+  N388["Endpoint: GET /api/v1/operations/que"]
+  N389["Controller: queuesDashboard"]
+  N390["Endpoint: GET /api/v1/operations/dea"]
+  N391["Controller: deadLetterQueue"]
+  N392["Endpoint: GET /api/v1/operations/mai"]
+  N393["Controller: getMaintenanceMode"]
+  N394["Endpoint: PUT /api/v1/operations/mai"]
+  N395["Controller: setMaintenanceMode"]
+  N396["Endpoint: GET /api/v1/operations/dep"]
+  N397["Controller: deploymentHistory"]
+  N398["Endpoint: GET /api/v1/operations/pen"]
+  N399["Controller: pendingTasks"]
+  N400["Endpoint: GET /api/v1/operations/hea"]
+  N401["Controller: health"]
+  N402["Endpoint: GET /api/v1/operations/ale"]
+  N403["Controller: alerts"]
+  N404["Endpoint: GET /api/v1/operations/inc"]
+  N405["Controller: incidents"]
+  N406["Endpoint: GET /api/v1/operations/ret"]
+  N407["Controller: retryQueue"]
+  N408["Endpoint: GET /api/v1/operations/job"]
+  N409["Controller: jobs"]
+  N410["Endpoint: GET /api/v1/operations/fai"]
+  N411["Controller: failedPayments"]
+  N412["Endpoint: GET /api/v1/operations/fai"]
+  N413["Controller: failedPayouts"]
+  N414["Endpoint: GET /api/v1/operations/fai"]
+  N415["Controller: failedWebhooks"]
+  N416["Endpoint: POST /api/v1/operations/al"]
+  N417["Controller: acknowledgeAlert"]
+  N418["Endpoint: POST /api/v1/operations/al"]
+  N419["Controller: resolveAlert"]
+  N420["Endpoint: POST /api/v1/operations/re"]
+  N421["Controller: retryQueueItem"]
+  N422["Endpoint: POST /api/v1/operations/jo"]
+  N423["Controller: retryJob"]
+  N424["Endpoint: GET /api/v1/organizations/"]
+  N425["Controller: getMine"]
+  N426["Endpoint: GET /api/v1/organizations/"]
+  N427["Controller: getRoles"]
+  N428["Endpoint: GET /api/v1/organizations"]
+  N429["Endpoint: POST /api/v1/organizations"]
+  N430["Endpoint: GET /api/v1/organizations/"]
+  N431["Endpoint: PUT /api/v1/organizations/"]
+  N432["Endpoint: PATCH /api/v1/organization"]
+  N433["Endpoint: POST /api/v1/organizations"]
+  N434["Endpoint: POST /api/v1/organizations"]
+  N435["Controller: restore"]
+  N436["Endpoint: GET /api/v1/organizations/"]
+  N437["Controller: getMembers"]
+  N438["Endpoint: POST /api/v1/organizations"]
+  N439["Controller: addMember"]
+  N440["Endpoint: PUT /api/v1/organizations/"]
+  N441["Controller: updateMember"]
+  N442["Endpoint: DELETE /api/v1/organizatio"]
+  N443["Controller: removeMember"]
+  N444["Endpoint: GET /api/v1/organizations/"]
+  N445["Controller: getDomains"]
+  N446["Endpoint: POST /api/v1/organizations"]
+  N447["Controller: addDomain"]
+  N448["Endpoint: PUT /api/v1/organizations/"]
+  N449["Controller: updateDomain"]
+  N450["Endpoint: DELETE /api/v1/organizatio"]
+  N451["Controller: deleteDomain"]
+  N452["Endpoint: GET /api/v1/organizations/"]
+  N453["Endpoint: PUT /api/v1/organizations/"]
+  N454["Endpoint: GET /api/v1/organizations/"]
+  N455["Endpoint: PUT /api/v1/organizations/"]
+  N456["Endpoint: GET /api/v1/organizations/"]
+  N457["Controller: getApiKeys"]
+  N458["Endpoint: POST /api/v1/organizations"]
+  N459["Controller: createApiKey"]
+  N460["Endpoint: DELETE /api/v1/organizatio"]
+  N461["Controller: revokeApiKey"]
+  N462["Endpoint: GET /api/v1/organizations/"]
+  N463["Controller: getBilling"]
+  N464["Endpoint: PUT /api/v1/organizations/"]
+  N465["Controller: updateBilling"]
+  N466["Endpoint: GET /api/v1/outlets"]
+  N467["Endpoint: POST /api/v1/outlets"]
+  N468["Endpoint: GET /api/v1/outlets/:id"]
+  N469["Endpoint: PUT /api/v1/outlets/:id"]
+  N470["Endpoint: POST /api/v1/outlets/:id/a"]
+  N471["Endpoint: POST /api/v1/outlets/:id/d"]
+  N472["Endpoint: GET /api/v1/payment-config"]
+  N473["Controller: listLimits"]
+  N474["Endpoint: POST /api/v1/payment-confi"]
+  N475["Controller: saveLimit"]
+  N476["Endpoint: GET /api/v1/payment-config"]
+  N477["Controller: getMerchantConfig"]
+  N478["Endpoint: PUT /api/v1/payment-config"]
+  N479["Controller: saveConfig"]
+  N480["Endpoint: GET /api/v1/payment-links/"]
+  N481["Endpoint: GET /api/v1/payment-links"]
+  N482["Endpoint: POST /api/v1/payment-links"]
+  N483["Endpoint: GET /api/v1/payment-links/"]
+  N484["Endpoint: GET /api/v1/payment-links/"]
+  N485["Controller: visits"]
+  N486["Endpoint: POST /api/v1/payment-links"]
+  N487["Controller: clone"]
+  N488["Endpoint: GET /api/v1/payment-links/"]
+  N489["Controller: qrCode"]
+  N490["Endpoint: POST /api/v1/payment-links"]
+  N491["Controller: enable"]
+  N492["Endpoint: POST /api/v1/payment-links"]
+  N493["Controller: disable"]
+  N494["Endpoint: POST /api/v1/payment-links"]
+  N495["Controller: expire"]
+  N496["Endpoint: POST /api/v1/payment-links"]
+  N497["Controller: regenerateToken"]
+  N498["Endpoint: GET /api/v1/payment-links/"]
+  N499["Endpoint: PUT /api/v1/payment-links/"]
+  N500["Endpoint: GET /api/v1/public/payment"]
+  N501["Controller: getByToken"]
+  N502["Endpoint: POST /api/v1/public/paymen"]
+  N503["Controller: pay"]
+  N504["Endpoint: GET /api/v1/payments/webho"]
+  N505["Controller: webhookDeliveries"]
+  N506["Endpoint: GET /api/v1/payments/order"]
+  N507["Controller: listOrders"]
+  N508["Endpoint: GET /api/v1/payments/order"]
+  N509["Controller: getOrder"]
+  N510["Endpoint: POST /api/v1/payments/sess"]
+  N511["Controller: createSession"]
+  N512["Endpoint: GET /api/v1/payments/sessi"]
+  N513["Controller: getSession"]
+  N514["Endpoint: GET /api/v1/payments/merch"]
+  N515["Controller: merchantConfig"]
+  N516["Endpoint: GET /api/v1/payments/custo"]
+  N517["Controller: customerProfile"]
+  N518["Endpoint: GET /api/v1/payments"]
+  N519["Endpoint: POST /api/v1/payments"]
+  N520["Endpoint: GET /api/v1/payments/:id"]
+  N521["Endpoint: GET /api/v1/payments/:id/t"]
+  N522["Endpoint: POST /api/v1/payments/:id/"]
+  N523["Controller: authorize"]
+  N524["Endpoint: POST /api/v1/payments/:id/"]
+  N525["Controller: capture"]
+  N526["Endpoint: POST /api/v1/payments/:id/"]
+  N527["Endpoint: POST /api/v1/payments/:id/"]
+  N528["Controller: refund"]
+  N529["Endpoint: POST /api/v1/payments/:id/"]
+  N530["Controller: retry"]
+  N531["Endpoint: POST /api/v1/payments/:id/"]
+  N532["Endpoint: GET /api/v1/payouts/statis"]
+  N533["Endpoint: GET /api/v1/payouts/bank-a"]
+  N534["Controller: listBankAccounts"]
+  N535["Endpoint: POST /api/v1/payouts/bank-"]
+  N536["Controller: createBankAccount"]
+  N537["Endpoint: PATCH /api/v1/payouts/bank"]
+  N538["Controller: updateBankAccount"]
+  N539["Endpoint: GET /api/v1/payouts"]
+  N540["Endpoint: POST /api/v1/payouts"]
+  N541["Endpoint: GET /api/v1/payouts/:id/hi"]
+  N542["Endpoint: POST /api/v1/payouts/:id/a"]
+  N543["Endpoint: POST /api/v1/payouts/:id/r"]
+  N544["Endpoint: POST /api/v1/payouts/:id/r"]
+  N545["Endpoint: GET /api/v1/payouts/:id"]
+  N546["Endpoint: GET /api/v1/permissions"]
+  N547["Endpoint: GET /api/v1/pricing"]
+  N548["Endpoint: POST /api/v1/pricing"]
+  N549["Endpoint: GET /api/v1/pricing/:id"]
+  N550["Endpoint: GET /api/v1/public/qr-paym"]
+  N551["Controller: templates"]
+  N552["Endpoint: GET /api/v1/public/qr-paym"]
+  N553["Controller: categories"]
+  N554["Endpoint: POST /api/v1/public/qr-pay"]
+  N555["Controller: bulkCreate"]
+  N556["Endpoint: GET /api/v1/public/qr-paym"]
+  N557["Endpoint: GET /api/v1/public/qr-paym"]
+  N558["Endpoint: POST /api/v1/public/qr-pay"]
+  N559["Endpoint: GET /api/v1/public/qr-paym"]
+  N560["Controller: downloadSvg"]
+  N561["Endpoint: GET /api/v1/public/qr-paym"]
+  N562["Endpoint: GET /api/v1/public/qr-paym"]
+  N563["Controller: scanHistory"]
+  N564["Endpoint: POST /api/v1/public/qr-pay"]
+  N565["Endpoint: POST /api/v1/public/qr-pay"]
+  N566["Endpoint: POST /api/v1/public/qr-pay"]
+  N567["Endpoint: POST /api/v1/public/qr-pay"]
+  N568["Endpoint: POST /api/v1/public/qr-pay"]
+  N569["Controller: regenerate"]
+  N570["Endpoint: GET /api/v1/public/qr-paym"]
+  N571["Endpoint: PUT /api/v1/public/qr-paym"]
+  N572["Endpoint: GET /api/v1/reconciliation"]
+  N573["Endpoint: GET /api/v1/reconciliation"]
+  N574["Controller: listImports"]
+  N575["Endpoint: POST /api/v1/reconciliatio"]
+  N576["Controller: createImport"]
+  N577["Endpoint: GET /api/v1/reconciliation"]
+  N578["Controller: getImport"]
+  N579["Endpoint: PUT /api/v1/reconciliation"]
+  N580["Controller: updateImport"]
+  N581["Endpoint: DELETE /api/v1/reconciliat"]
+  N582["Controller: deleteImport"]
+  N583["Endpoint: POST /api/v1/reconciliatio"]
+  N584["Controller: createRecord"]
+  N585["Endpoint: GET /api/v1/reconciliation"]
+  N586["Controller: listRecords"]
+  N587["Endpoint: GET /api/v1/reconciliation"]
+  N588["Controller: getRecord"]
+  N589["Endpoint: POST /api/v1/reconciliatio"]
+  N590["Controller: matchRecord"]
+  N591["Endpoint: GET /api/v1/refunds/statis"]
+  N592["Endpoint: GET /api/v1/refunds"]
+  N593["Endpoint: POST /api/v1/refunds"]
+  N594["Endpoint: GET /api/v1/refunds/:id/hi"]
+  N595["Endpoint: GET /api/v1/refunds/:id"]
+  N596["Endpoint: POST /api/v1/refunds/:id/a"]
+  N597["Endpoint: POST /api/v1/refunds/:id/r"]
+  N598["Endpoint: GET /api/v1/analytics/over"]
+  N599["Controller: overview"]
+  N600["Endpoint: GET /api/v1/analytics/reve"]
+  N601["Controller: revenue"]
+  N602["Endpoint: GET /api/v1/analytics/tran"]
+  N603["Endpoint: GET /api/v1/analytics/sett"]
+  N604["Endpoint: GET /api/v1/analytics/merc"]
+  N605["Endpoint: GET /api/v1/analytics/cust"]
+  N606["Controller: customers"]
+  N607["Endpoint: GET /api/v1/analytics/refu"]
+  N608["Controller: refunds"]
+  N609["Endpoint: GET /api/v1/analytics/char"]
+  N610["Controller: chargebacks"]
+  N611["Endpoint: GET /api/v1/analytics/payo"]
+  N612["Controller: payouts"]
+  N613["Endpoint: GET /api/v1/analytics/paym"]
+  N614["Controller: paymentLinks"]
+  N615["Endpoint: GET /api/v1/analytics/invo"]
+  N616["Controller: invoices"]
+  N617["Endpoint: GET /api/v1/analytics/qr-p"]
+  N618["Controller: qrPayments"]
+  N619["Endpoint: GET /api/v1/analytics/subs"]
+  N620["Controller: subscriptions"]
+  N621["Endpoint: GET /api/v1/analytics/supp"]
+  N622["Controller: support"]
+  N623["Endpoint: GET /api/v1/analytics/oper"]
+  N624["Controller: operations"]
+  N625["Endpoint: GET /api/v1/analytics/paym"]
+  N626["Endpoint: GET /api/v1/analytics/regi"]
+  N627["Controller: regional"]
+  N628["Endpoint: GET /api/v1/analytics/expo"]
+  N629["Endpoint: GET /api/v1/reports/center"]
+  N630["Controller: catalog"]
+  N631["Endpoint: GET /api/v1/reports/center"]
+  N632["Controller: savedFilters"]
+  N633["Endpoint: POST /api/v1/reports/cente"]
+  N634["Controller: saveFilter"]
+  N635["Endpoint: DELETE /api/v1/reports/cen"]
+  N636["Controller: deleteFilter"]
+  N637["Endpoint: POST /api/v1/reports/cente"]
+  N638["Controller: generate"]
+  N639["Endpoint: POST /api/v1/reports/cente"]
+  N640["Endpoint: GET /api/v1/reports/center"]
+  N641["Controller: exportHistory"]
+  N642["Endpoint: GET /api/v1/reports/templa"]
+  N643["Endpoint: GET /api/v1/reports/catego"]
+  N644["Endpoint: GET /api/v1/reports/histor"]
+  N645["Endpoint: GET /api/v1/reports/schedu"]
+  N646["Controller: scheduled"]
+  N647["Endpoint: POST /api/v1/reports/sched"]
+  N648["Controller: createScheduled"]
+  N649["Endpoint: PUT /api/v1/reports/schedu"]
+  N650["Controller: updateScheduled"]
+  N651["Endpoint: DELETE /api/v1/reports/sch"]
+  N652["Controller: deleteScheduled"]
+  N653["Endpoint: POST /api/v1/reports/run"]
+  N654["Controller: run"]
+  N655["Endpoint: POST /api/v1/reports/expor"]
+  N656["Endpoint: GET /api/v1/reports"]
+  N657["Endpoint: POST /api/v1/reports"]
+  N658["Endpoint: GET /api/v1/reports/:id"]
+  N659["Endpoint: PUT /api/v1/reports/:id"]
+  N660["Endpoint: DELETE /api/v1/reports/:id"]
+  N661["Controller: delete"]
+  N662["Endpoint: GET /api/v1/risk-rules"]
+  N663["Endpoint: POST /api/v1/risk-rules"]
+  N664["Endpoint: GET /api/v1/risk-rules/:id"]
+  N665["Endpoint: PUT /api/v1/risk-rules/:id"]
+  N666["Endpoint: POST /api/v1/risk-rules/:i"]
+  N667["Controller: evaluate"]
+  N668["Endpoint: GET /api/v1/roles"]
+  N669["Endpoint: POST /api/v1/roles"]
+  N670["Endpoint: GET /api/v1/roles/:id"]
+  N671["Endpoint: PUT /api/v1/roles/:id"]
+  N672["Endpoint: DELETE /api/v1/roles/:id"]
+  N673["Endpoint: PUT /api/v1/roles/:id/perm"]
+  N674["Controller: assignPermissions"]
+  N675["Endpoint: GET /api/v1/sandbox/dashbo"]
+  N676["Endpoint: GET /api/v1/sandbox/accoun"]
+  N677["Endpoint: POST /api/v1/sandbox/accou"]
+  N678["Controller: createAccount"]
+  N679["Endpoint: GET /api/v1/sandbox/accoun"]
+  N680["Controller: getAccount"]
+  N681["Endpoint: PUT /api/v1/sandbox/accoun"]
+  N682["Controller: updateAccount"]
+  N683["Endpoint: DELETE /api/v1/sandbox/acc"]
+  N684["Controller: deleteAccount"]
+  N685["Endpoint: GET /api/v1/sandbox/test-c"]
+  N686["Controller: listTestCards"]
+  N687["Endpoint: GET /api/v1/sandbox/simula"]
+  N688["Controller: listSimulations"]
+  N689["Endpoint: POST /api/v1/sandbox/simul"]
+  N690["Controller: createSimulation"]
+  N691["Endpoint: GET /api/v1/sandbox/simula"]
+  N692["Controller: getSimulation"]
+  N693["Endpoint: PUT /api/v1/sandbox/simula"]
+  N694["Controller: updateSimulation"]
+  N695["Endpoint: DELETE /api/v1/sandbox/sim"]
+  N696["Controller: deleteSimulation"]
+  N697["Endpoint: GET /api/v1/search"]
+  N698["Endpoint: GET /api/v1/settings/publi"]
+  N699["Controller: getPublicBranding"]
+  N700["Endpoint: GET /api/v1/settings/publi"]
+  N701["Controller: getPublicFeatureFlags"]
+  N702["Endpoint: GET /api/v1/settings/overv"]
+  N703["Endpoint: GET /api/v1/settings/organ"]
+  N704["Controller: getOrganization"]
+  N705["Endpoint: PUT /api/v1/settings/organ"]
+  N706["Controller: updateOrganization"]
+  N707["Endpoint: GET /api/v1/settings/brand"]
+  N708["Endpoint: PUT /api/v1/settings/brand"]
+  N709["Endpoint: GET /api/v1/settings/secur"]
+  N710["Controller: getSecurity"]
+  N711["Endpoint: PUT /api/v1/settings/secur"]
+  N712["Controller: updateSecurity"]
+  N713["Endpoint: GET /api/v1/settings/passw"]
+  N714["Controller: getPasswordPolicy"]
+  N715["Endpoint: PUT /api/v1/settings/passw"]
+  N716["Controller: updatePasswordPolicy"]
+  N717["Endpoint: GET /api/v1/settings/sessi"]
+  N718["Endpoint: PUT /api/v1/settings/sessi"]
+  N719["Controller: updateSessionSettings"]
+  N720["Endpoint: GET /api/v1/settings/notif"]
+  N721["Controller: getUserNotifications"]
+  N722["Endpoint: PUT /api/v1/settings/notif"]
+  N723["Controller: updateUserNotifications"]
+  N724["Endpoint: GET /api/v1/settings/notif"]
+  N725["Controller: getDefaultNotifications"]
+  N726["Endpoint: PUT /api/v1/settings/notif"]
+  N727["Controller: updateDefaultNotifications"]
+  N728["Endpoint: GET /api/v1/settings/confi"]
+  N729["Controller: listPlatformConfig"]
+  N730["Endpoint: PUT /api/v1/settings/confi"]
+  N731["Controller: updatePlatformConfig"]
+  N732["Endpoint: GET /api/v1/settings/featu"]
+  N733["Controller: listFeatureFlags"]
+  N734["Endpoint: POST /api/v1/settings/feat"]
+  N735["Controller: createFeatureFlag"]
+  N736["Endpoint: GET /api/v1/settings/featu"]
+  N737["Controller: getFeatureFlag"]
+  N738["Endpoint: PUT /api/v1/settings/featu"]
+  N739["Controller: updateFeatureFlag"]
+  N740["Endpoint: DELETE /api/v1/settings/fe"]
+  N741["Controller: deleteFeatureFlag"]
+  N742["Endpoint: GET /api/v1/settings/api"]
+  N743["Controller: getApiSettings"]
+  N744["Endpoint: PUT /api/v1/settings/api"]
+  N745["Controller: updateApiSettings"]
+  N746["Endpoint: GET /api/v1/settings/smtp"]
+  N747["Controller: getSmtpSettings"]
+  N748["Endpoint: PUT /api/v1/settings/smtp"]
+  N749["Controller: updateSmtpSettings"]
+  N750["Endpoint: GET /api/v1/settings/stora"]
+  N751["Controller: getStorageSettings"]
+  N752["Endpoint: PUT /api/v1/settings/stora"]
+  N753["Controller: updateStorageSettings"]
+  N754["Endpoint: GET /api/v1/settings/rate-"]
+  N755["Controller: listRateLimits"]
+  N756["Endpoint: PUT /api/v1/settings/rate-"]
+  N757["Controller: upsertRateLimit"]
+  N758["Endpoint: PUT /api/v1/settings/secur"]
+  N759["Controller: updateGeoLogin"]
+  N760["Endpoint: GET /api/v1/settings/secur"]
+  N761["Controller: getApiIpRestrictions"]
+  N762["Endpoint: PUT /api/v1/settings/secur"]
+  N763["Controller: updateApiIpRestrictions"]
+  N764["Endpoint: GET /api/v1/settlements/ca"]
+  N765["Controller: calendar"]
+  N766["Endpoint: GET /api/v1/settlements/re"]
+  N767["Controller: listReserves"]
+  N768["Endpoint: POST /api/v1/settlements/m"]
+  N769["Controller: createReserve"]
+  N770["Endpoint: GET /api/v1/settlements/se"]
+  N771["Endpoint: GET /api/v1/settlements/st"]
+  N772["Endpoint: GET /api/v1/settlements/ex"]
+  N773["Endpoint: GET /api/v1/settlements/ba"]
+  N774["Controller: batches"]
+  N775["Endpoint: POST /api/v1/settlements/b"]
+  N776["Controller: createBatch"]
+  N777["Endpoint: GET /api/v1/settlements/ba"]
+  N778["Controller: batchById"]
+  N779["Endpoint: GET /api/v1/settlements"]
+  N780["Endpoint: POST /api/v1/settlements"]
+  N781["Endpoint: GET /api/v1/settlements/:i"]
+  N782["Endpoint: PATCH /api/v1/settlements/"]
+  N783["Endpoint: GET /api/v1/settlements/:i"]
+  N784["Endpoint: POST /api/v1/settlements/:"]
+  N785["Controller: hold"]
+  N786["Endpoint: POST /api/v1/settlements/:"]
+  N787["Endpoint: POST /api/v1/settlements/:"]
+  N788["Endpoint: POST /api/v1/settlements/:"]
+  N789["Controller: reversal"]
+  N790["Endpoint: GET /api/v1/smart-collect/"]
+  N791["Endpoint: GET /api/v1/smart-collect/"]
+  N792["Controller: listVirtualAccounts"]
+  N793["Endpoint: POST /api/v1/smart-collect"]
+  N794["Controller: createVirtualAccount"]
+  N795["Endpoint: GET /api/v1/smart-collect/"]
+  N796["Controller: getVirtualAccount"]
+  N797["Endpoint: GET /api/v1/smart-collect/"]
+  N798["Controller: listCollections"]
+  N799["Endpoint: GET /api/v1/smart-collect/"]
+  N800["Controller: getCollection"]
+  N801["Endpoint: POST /api/v1/smart-collect"]
+  N802["Controller: matchCollection"]
+  N803["Endpoint: GET /api/v1/subscriptions/"]
+  N804["Endpoint: GET /api/v1/subscriptions/"]
+  N805["Endpoint: GET /api/v1/subscriptions/"]
+  N806["Controller: listDunning"]
+  N807["Endpoint: GET /api/v1/subscriptions/"]
+  N808["Controller: listMandates"]
+  N809["Endpoint: GET /api/v1/subscriptions/"]
+  N810["Controller: listPlans"]
+  N811["Endpoint: POST /api/v1/subscriptions"]
+  N812["Controller: createPlan"]
+  N813["Endpoint: GET /api/v1/subscriptions"]
+  N814["Endpoint: POST /api/v1/subscriptions"]
+  N815["Endpoint: POST /api/v1/subscriptions"]
+  N816["Controller: pause"]
+  N817["Endpoint: POST /api/v1/subscriptions"]
+  N818["Controller: resume"]
+  N819["Endpoint: POST /api/v1/subscriptions"]
+  N820["Controller: upgrade"]
+  N821["Endpoint: POST /api/v1/subscriptions"]
+  N822["Controller: downgrade"]
+  N823["Endpoint: POST /api/v1/subscriptions"]
+  N824["Endpoint: POST /api/v1/subscriptions"]
+  N825["Controller: renew"]
+  N826["Endpoint: POST /api/v1/subscriptions"]
+  N827["Controller: markFailed"]
+  N828["Endpoint: GET /api/v1/subscriptions/"]
+  N829["Endpoint: GET /api/v1/support/statis"]
+  N830["Endpoint: GET /api/v1/support"]
+  N831["Endpoint: POST /api/v1/support"]
+  N832["Endpoint: GET /api/v1/support/:id"]
+  N833["Endpoint: PUT /api/v1/support/:id"]
+  N834["Endpoint: POST /api/v1/support/:id/a"]
+  N835["Controller: assign"]
+  N836["Endpoint: POST /api/v1/support/:id/r"]
+  N837["Endpoint: POST /api/v1/support/:id/e"]
+  N838["Controller: escalate"]
+  N839["Endpoint: POST /api/v1/support/:id/c"]
+  N840["Controller: close"]
+  N841["Endpoint: POST /api/v1/support/:id/r"]
+  N842["Controller: reopen"]
+  N843["Endpoint: POST /api/v1/support/:id/n"]
+  N844["Controller: addNote"]
+  N845["Endpoint: POST /api/v1/support/:id/a"]
+  N846["Controller: addAttachment"]
+  N847["Endpoint: GET /api/v1/system/admin/s"]
+  N848["Controller: adminStatus"]
+  N849["Endpoint: GET /api/v1/system/health"]
+  N850["Endpoint: GET /api/v1/system/livenes"]
+  N851["Controller: liveness"]
+  N852["Endpoint: GET /api/v1/system/readine"]
+  N853["Controller: readiness"]
+  N854["Endpoint: GET /api/v1/system/metrics"]
+  N855["Controller: metrics"]
+  N856["Endpoint: GET /api/v1/system/version"]
+  N857["Controller: version"]
+  N858["Endpoint: GET /api/v1/system/cache-c"]
+  N859["Controller: listCacheConfig"]
+  N860["Endpoint: PUT /api/v1/system/cache-c"]
+  N861["Controller: updateCacheConfig"]
+  N862["Endpoint: GET /api/v1/system/backup-"]
+  N863["Controller: listBackupConfig"]
+  N864["Endpoint: PUT /api/v1/system/backup-"]
+  N865["Controller: updateBackupConfig"]
+  N866["Endpoint: GET /api/v1/system/jobs/hi"]
+  N867["Controller: jobHistory"]
+  N868["Endpoint: GET /api/v1/system/perform"]
+  N869["Controller: performanceMetrics"]
+  N870["Endpoint: GET /api/v1/transactions/s"]
+  N871["Endpoint: GET /api/v1/transactions/s"]
+  N872["Endpoint: GET /api/v1/transactions/e"]
+  N873["Endpoint: GET /api/v1/transactions/d"]
+  N874["Controller: disputes"]
+  N875["Endpoint: POST /api/v1/transactions/"]
+  N876["Controller: createDispute"]
+  N877["Endpoint: GET /api/v1/transactions"]
+  N878["Endpoint: POST /api/v1/transactions"]
+  N879["Endpoint: GET /api/v1/transactions/:"]
+  N880["Endpoint: PATCH /api/v1/transactions"]
+  N881["Endpoint: POST /api/v1/transactions/"]
+  N882["Endpoint: GET /api/v1/users"]
+  N883["Endpoint: POST /api/v1/users"]
+  N884["Endpoint: GET /api/v1/users/:id"]
+  N885["Endpoint: PUT /api/v1/users/:id"]
+  N886["Endpoint: PATCH /api/v1/users/:id/st"]
+  N887["Endpoint: DELETE /api/v1/users/:id"]
+  N888["Endpoint: PUT /api/v1/users/:id/role"]
+  N889["Controller: assignRoles"]
+  N890["Endpoint: GET /api/v1/webhooks/dashb"]
+  N891["Endpoint: GET /api/v1/webhooks/endpo"]
+  N892["Controller: listWebhooks"]
+  N893["Endpoint: POST /api/v1/webhooks/endp"]
+  N894["Controller: createWebhook"]
+  N895["Endpoint: GET /api/v1/webhooks/endpo"]
+  N896["Controller: getWebhook"]
+  N897["Endpoint: PUT /api/v1/webhooks/endpo"]
+  N898["Controller: updateWebhook"]
+  N899["Endpoint: DELETE /api/v1/webhooks/en"]
+  N900["Controller: deleteWebhook"]
+  N901["Endpoint: POST /api/v1/webhooks/endp"]
+  N902["Controller: createSubscription"]
+  N903["Endpoint: PUT /api/v1/webhooks/endpo"]
+  N904["Controller: updateSubscription"]
+  N905["Endpoint: DELETE /api/v1/webhooks/en"]
+  N906["Controller: deleteSubscription"]
+  N907["Endpoint: GET /api/v1/webhooks/deliv"]
+  N908["Controller: listDeliveries"]
+  N909["Endpoint: GET /api/v1/webhooks/deliv"]
+  N910["Controller: getDelivery"]
+  N911["Endpoint: POST /api/v1/webhooks/deli"]
+  N912["Controller: retryDelivery"]
+  N913["Table: acceptance_analytics_daily"]
+  N914["Table: qr_codes"]
+  N915["Table: payment_links"]
+  N916["Table: merchants"]
+  N917["Table: collections"]
+  N918["Table: customer_merchants"]
+  N919["Table: checkout_sessions"]
+  N920["Table: ledger_accounts"]
+  N921["Table: ledger_entries"]
+  N922["Table: audit_logs"]
+  N923["Table: users"]
+  N924["Table: audit_actions"]
+  N925["Table: notifications"]
+  N926["Table: activity_events"]
+  N927["Table: onboarding_workflow_stage_"]
+  N928["Table: merchant_onboarding_applic"]
+  N929["Table: onboarding_workflow_stage_"]
+  N930["Table: payment_devices"]
+  N931["Table: settlements"]
+  N932["Table: risk_rule_evaluations"]
+  N933["Table: ai_insights_daily"]
+  N934["Table: transactions"]
+  N935["Table: audit_metadata"]
+  N936["Table: audit_categories"]
+  N937["Table: api_logs"]
+  N938["Table: webhook_logs"]
+  N939["Table: auth_audit_logs"]
+  N940["Table: auth_challenges"]
+  N941["Table: login_attempts"]
+  N942["Table: otp_verifications"]
+  N943["Table: password_history"]
+  N944["Table: password_reset_tokens"]
+  N945["Table: refresh_tokens"]
+  N946["Table: user_sessions"]
+  N947["Table: trusted_devices"]
+  N948["Table: transaction_disputes"]
+  N949["Table: customers"]
+  N950["Table: dispute_status_history"]
+  N951["Table: dispute_evidence"]
+  N952["Table: transaction_events"]
+  N953["Table: payment_intents"]
+  N954["Table: checkout_session_events"]
+  N955["Table: merchant_checkout_branding"]
+  N956["Table: checkout_themes"]
+  N957["Table: checkout_analytics_daily"]
+  N958["Table: organizations"]
+  N959["Table: regions"]
+  N960["Table: customer_addresses"]
+  N961["Table: transaction_statuses"]
+  N962["Table: customer_preferences"]
+  N963["Table: customer_payment_methods"]
+  N964["Table: dashboard_kpi_snapshots"]
+  N965["Table: revenue_time_series"]
+  N966["Table: payment_method_distributio"]
+  N967["Table: payment_method_types"]
+  N968["Table: regional_distribution"]
+  N969["Table: activity_event_types"]
+  N970["Table: fraud_alerts"]
+  N971["Table: fraud_alert_severities"]
+  N972["Table: user_dashboard_preferences"]
+  N973["Table: dashboard_export_jobs"]
+  N974["Table: dashboard_export_formats"]
+  N975["Table: fraud_cases"]
+  N976["Table: risk_rules"]
+  N977["Table: developer_profiles"]
+  N978["Table: oauth_applications"]
+  N979["Table: api_usage_logs"]
+  N980["Table: organization_api_keys"]
+  N981["Table: device_sync_logs"]
+  N982["Table: terminal_inventory"]
+  N983["Table: invoices"]
+  N984["Table: invoice_line_items"]
+  N985["Table: invoice_payments"]
+  N986["Table: invoice_templates"]
+  N987["Table: credit_notes"]
+  N988["Table: debit_notes"]
+  N989["Table: merchant_contacts"]
+  N990["Table: merchant_addresses"]
+  N991["Table: merchant_documents"]
+  N992["Table: merchant_api_credentials"]
+  N993["Table: merchant_tags"]
+  N994["Table: merchant_tag_assignments"]
+  N995["Table: merchant_notes"]
+  N996["Table: merchant_onboarding_busine"]
+  N997["Table: merchant_onboarding_addres"]
+  N998["Table: merchant_onboarding_kyc_do"]
+  N999["Table: merchant_onboarding_bank_d"]
+  N1000["Table: merchant_onboarding_settle"]
+  N1001["Table: merchant_onboarding_paymen"]
+  N1002["Table: merchant_onboarding_timeli"]
+  N1003["Table: merchant_bank_accounts"]
+  N1004["Table: merchant_settlement_accoun"]
+  N1005["Table: merchant_payment_methods"]
+  N1006["Table: merchant_users"]
+  N1007["Table: merchant_roles"]
+  N1008["Table: merchant_user_outlets"]
+  N1009["Table: roles"]
+  N1010["Table: user_roles"]
+  N1011["Table: organization_members"]
+  N1012["Table: organization_roles"]
+  N1013["Table: merchant_outlets"]
+  N1014["Table: notification_deliveries"]
+  N1015["Table: notification_preferences"]
+  N1016["Table: notification_templates"]
+  N1017["Table: notification_channels"]
+  N1018["Table: notification_events"]
+  N1019["Table: notification_groups"]
+  N1020["Table: communication_campaigns"]
+  N1021["Table: onboarding_risk_reviews"]
+  N1022["Table: onboarding_kyc_verificatio"]
+  N1023["Table: merchant_tax_profiles"]
+  N1024["Table: onboarding_workflow_instan"]
+  N1025["Table: support_tickets"]
+  N1026["Table: system_alerts"]
+  N1027["Table: operations_incidents"]
+  N1028["Table: retry_queue"]
+  N1029["Table: background_jobs"]
+  N1030["Table: payouts"]
+  N1031["Table: webhook_delivery_queue"]
+  N1032["Table: platform_configurations"]
+  N1033["Table: config_value"]
+  N1034["Table: organization_branding"]
+  N1035["Table: organization_billing"]
+  N1036["Table: organization_addresses"]
+  N1037["Table: organization_contacts"]
+  N1038["Table: organization_domains"]
+  N1039["Table: organization_preferences"]
+  N1040["Table: merchant_payment_method_co"]
+  N1041["Table: transaction_limit_rules"]
+  N1042["Table: payment_link_transactions"]
+  N1043["Table: payment_link_visits"]
+  N1044["Table: payment_link_events"]
+  N1045["Table: payment_orders"]
+  N1046["Table: payment_sessions"]
+  N1047["Table: payment_timeline_events"]
+  N1048["Table: payment_idempotency_keys"]
+  N1049["Table: payment_webhook_deliveries"]
+  N1050["Table: merchant_webhooks"]
+  N1051["Table: payout_status_history"]
+  N1052["Table: permissions"]
+  N1053["Table: pricing_plans"]
+  N1054["Table: pricing_fee_rules"]
+  N1055["Table: qr_transactions"]
+  N1056["Table: qr_scan_history"]
+  N1057["Table: qr_templates"]
+  N1058["Table: qr_categories"]
+  N1059["Table: reconciliation_imports"]
+  N1060["Table: reconciliation_records"]
+  N1061["Table: transaction_refunds"]
+  N1062["Table: refund_status_history"]
+  N1063["Table: report_center_catalog"]
+  N1064["Table: report_saved_filters"]
+  N1065["Table: report_exports"]
+  N1066["Table: report_categories"]
+  N1067["Table: report_templates"]
+  N1068["Table: reports"]
+  N1069["Table: report_execution_logs"]
+  N1070["Table: scheduled_reports"]
+  N1071["Table: analytics_snapshots"]
+  N1072["Table: subscriptions"]
+  N1073["Table: subscription_plans"]
+  N1074["Table: role_permissions"]
+  N1075["Table: sandbox_accounts"]
+  N1076["Table: sandbox_simulations"]
+  N1077["Table: sandbox_test_cards"]
+  N1078["Table: platform_config"]
+  N1079["Table: organization_settings"]
+  N1080["Table: branding_settings"]
+  N1081["Table: security_settings"]
+  N1082["Table: password_policy"]
+  N1083["Table: session_settings"]
+  N1084["Table: api_settings"]
+  N1085["Table: smtp_settings"]
+  N1086["Table: storage_settings"]
+  N1087["Table: feature_flags"]
+  N1088["Table: api_rate_limits"]
+  N1089["Table: settlement_calendar"]
+  N1090["Table: settlement_holds"]
+  N1091["Table: settlement_reserves"]
+  N1092["Table: settlement_transactions"]
+  N1093["Table: settlement_status_history"]
+  N1094["Table: settlement_reversals"]
+  N1095["Table: settlement_fees"]
+  N1096["Table: settlement_bank_transfers"]
+  N1097["Table: settlement_notes"]
+  N1098["Table: settlement_adjustments"]
+  N1099["Table: settlement_batches"]
+  N1100["Table: settlement_exports"]
+  N1101["Table: virtual_accounts"]
+  N1102["Table: collection_events"]
+  N1103["Table: subscription_invoices"]
+  N1104["Table: subscription_dunning_event"]
+  N1105["Table: subscription_mandates"]
+  N1106["Table: support_ticket_notes"]
+  N1107["Table: support_ticket_attachments"]
+  N1108["Table: support_ticket_activities"]
+  N1109["Table: cache_configurations"]
+  N1110["Table: backup_configurations"]
+  N1111["Table: transaction_status_history"]
+  N1112["Table: transaction_fees"]
+  N1113["Table: transaction_notes"]
+  N1114["Table: transaction_attachments"]
+  N1115["Table: transaction_exports"]
+  N1116["Table: user_activity_logs"]
+  N1117["Table: login_history"]
+  N1118["Table: webhook_event_subscription"]
+  N1119["Table: webhook_replay_history"]
+  N1120["Table: merchant_role_permissions"]
+  N1121["Table: export_file_registry"]
+  N0 -->|handles| N1
+  N2 -->|handles| N3
+  N4 -->|handles| N5
+  N6 -->|handles| N7
+  N8 -->|handles| N9
+  N10 -->|handles| N11
+  N12 -->|handles| N13
+  N14 -->|handles| N15
+  N16 -->|handles| N17
+  N18 -->|handles| N19
+  N20 -->|handles| N21
+  N22 -->|handles| N23
+  N24 -->|handles| N25
+  N26 -->|handles| N27
+  N28 -->|handles| N29
+  N30 -->|handles| N31
+  N32 -->|handles| N33
+  N34 -->|handles| N35
+  N36 -->|handles| N37
+  N38 -->|handles| N39
+  N40 -->|handles| N41
+  N42 -->|handles| N43
+  N44 -->|handles| N45
+  N47 -->|handles| N48
+  N49 -->|handles| N50
+  N51 -->|handles| N52
+  N53 -->|handles| N54
+  N55 -->|handles| N56
+  N57 -->|handles| N58
+  N59 -->|handles| N60
+  N61 -->|handles| N62
+  N63 -->|handles| N64
+  N65 -->|handles| N66
+  N67 -->|handles| N68
+  N69 -->|handles| N70
+  N71 -->|handles| N72
+  N73 -->|handles| N74
+  N75 -->|handles| N76
+  N77 -->|handles| N78
+  N79 -->|handles| N80
+  N81 -->|handles| N1
+  N82 -->|handles| N33
+  N83 -->|handles| N84
+  N85 -->|handles| N86
+  N87 -->|handles| N88
+  N89 -->|handles| N90
+  N91 -->|handles| N92
+  N93 -->|handles| N94
+  N95 -->|handles| N96
+  N97 -->|handles| N45
+  N98 -->|handles| N99
+  N100 -->|handles| N1
+  N101 -->|handles| N33
+  N102 -->|handles| N84
+  N103 -->|handles| N45
+  N104 -->|handles| N105
+  N106 -->|handles| N107
+  N108 -->|handles| N109
+  N110 -->|handles| N78
+  N111 -->|handles| N33
+  N112 -->|handles| N84
+  N113 -->|handles| N45
+  N114 -->|handles| N115
+  N116 -->|handles| N117
+  N118 -->|handles| N119
+  N120 -->|handles| N121
+  N122 -->|handles| N123
+  N124 -->|handles| N125
+  N126 -->|handles| N127
+  N128 -->|handles| N129
+  N130 -->|handles| N17
+  N131 -->|handles| N13
+  N132 -->|handles| N133
+  N134 -->|handles| N129
+  N135 -->|handles| N136
+  N137 -->|handles| N138
+  N139 -->|handles| N140
+  N141 -->|handles| N142
+  N143 -->|handles| N144
+  N145 -->|handles| N146
+  N147 -->|handles| N148
+  N149 -->|handles| N150
+  N151 -->|handles| N152
+  N153 -->|handles| N127
+  N154 -->|handles| N155
+  N156 -->|handles| N157
+  N158 -->|handles| N159
+  N160 -->|handles| N161
+  N162 -->|handles| N163
+  N164 -->|handles| N165
+  N166 -->|handles| N167
+  N168 -->|handles| N169
+  N170 -->|handles| N171
+  N172 -->|handles| N173
+  N174 -->|handles| N175
+  N176 -->|handles| N177
+  N178 -->|handles| N179
+  N180 -->|handles| N181
+  N182 -->|handles| N183
+  N184 -->|handles| N33
+  N185 -->|handles| N186
+  N187 -->|handles| N45
+  N188 -->|handles| N189
+  N190 -->|handles| N191
+  N192 -->|handles| N193
+  N194 -->|handles| N195
+  N196 -->|handles| N197
+  N198 -->|handles| N199
+  N200 -->|handles| N33
+  N201 -->|handles| N45
+  N202 -->|handles| N203
+  N204 -->|handles| N205
+  N206 -->|handles| N207
+  N208 -->|handles| N78
+  N209 -->|handles| N1
+  N210 -->|handles| N211
+  N212 -->|handles| N213
+  N214 -->|handles| N215
+  N216 -->|handles| N217
+  N218 -->|handles| N219
+  N220 -->|handles| N221
+  N222 -->|handles| N223
+  N224 -->|handles| N225
+  N226 -->|handles| N227
+  N228 -->|handles| N33
+  N229 -->|handles| N84
+  N230 -->|handles| N231
+  N232 -->|handles| N233
+  N234 -->|handles| N235
+  N236 -->|handles| N237
+  N238 -->|handles| N239
+  N240 -->|handles| N241
+  N242 -->|handles| N243
+  N244 -->|handles| N245
+  N246 -->|handles| N247
+  N248 -->|handles| N249
+  N250 -->|handles| N251
+  N252 -->|handles| N253
+  N254 -->|handles| N255
+  N256 -->|handles| N45
+  N257 -->|handles| N115
+  N258 -->|handles| N109
+  N259 -->|handles| N78
+  N260 -->|handles| N33
+  N261 -->|handles| N84
+  N262 -->|handles| N45
+  N263 -->|handles| N115
+  N264 -->|handles| N117
+  N265 -->|handles| N119
+  N266 -->|handles| N121
+  N267 -->|handles| N268
+  N269 -->|handles| N270
+  N271 -->|handles| N272
+  N273 -->|handles| N274
+  N275 -->|handles| N78
+  N276 -->|handles| N33
+  N277 -->|handles| N84
+  N278 -->|handles| N45
+  N279 -->|handles| N17
+  N280 -->|handles| N281
+  N282 -->|handles| N283
+  N284 -->|handles| N285
+  N286 -->|handles| N287
+  N288 -->|handles| N289
+  N290 -->|handles| N291
+  N292 -->|handles| N293
+  N294 -->|handles| N203
+  N295 -->|handles| N205
+  N296 -->|handles| N297
+  N298 -->|handles| N299
+  N300 -->|handles| N64
+  N301 -->|handles| N302
+  N303 -->|handles| N33
+  N304 -->|handles| N84
+  N305 -->|handles| N306
+  N307 -->|handles| N45
+  N308 -->|handles| N115
+  N309 -->|handles| N189
+  N310 -->|handles| N191
+  N311 -->|handles| N312
+  N313 -->|handles| N314
+  N315 -->|handles| N56
+  N316 -->|handles| N33
+  N317 -->|handles| N318
+  N319 -->|handles| N320
+  N321 -->|handles| N322
+  N323 -->|handles| N211
+  N324 -->|handles| N213
+  N325 -->|handles| N215
+  N326 -->|handles| N217
+  N327 -->|handles| N219
+  N328 -->|handles| N329
+  N330 -->|handles| N331
+  N332 -->|handles| N333
+  N334 -->|handles| N335
+  N336 -->|handles| N337
+  N338 -->|handles| N339
+  N340 -->|handles| N341
+  N342 -->|handles| N343
+  N344 -->|handles| N345
+  N346 -->|handles| N347
+  N348 -->|handles| N349
+  N350 -->|handles| N45
+  N351 -->|handles| N352
+  N353 -->|handles| N354
+  N355 -->|handles| N119
+  N356 -->|handles| N357
+  N358 -->|handles| N359
+  N360 -->|handles| N361
+  N362 -->|handles| N363
+  N364 -->|handles| N365
+  N366 -->|handles| N367
+  N368 -->|handles| N203
+  N369 -->|handles| N205
+  N370 -->|handles| N371
+  N372 -->|handles| N373
+  N374 -->|handles| N375
+  N376 -->|handles| N297
+  N377 -->|handles| N299
+  N378 -->|handles| N189
+  N379 -->|handles| N380
+  N381 -->|handles| N382
+  N383 -->|handles| N384
+  N385 -->|handles| N386
+  N387 -->|handles| N157
+  N388 -->|handles| N389
+  N390 -->|handles| N391
+  N392 -->|handles| N393
+  N394 -->|handles| N395
+  N396 -->|handles| N397
+  N398 -->|handles| N399
+  N400 -->|handles| N401
+  N402 -->|handles| N403
+  N404 -->|handles| N405
+  N406 -->|handles| N407
+  N408 -->|handles| N409
+  N410 -->|handles| N411
+  N412 -->|handles| N413
+  N414 -->|handles| N415
+  N416 -->|handles| N417
+  N418 -->|handles| N419
+  N420 -->|handles| N421
+  N422 -->|handles| N423
+  N424 -->|handles| N425
+  N426 -->|handles| N427
+  N428 -->|handles| N33
+  N429 -->|handles| N84
+  N430 -->|handles| N45
+  N431 -->|handles| N115
+  N432 -->|handles| N117
+  N433 -->|handles| N354
+  N434 -->|handles| N435
+  N436 -->|handles| N437
+  N438 -->|handles| N439
+  N440 -->|handles| N441
+  N442 -->|handles| N443
+  N444 -->|handles| N445
+  N446 -->|handles| N447
+  N448 -->|handles| N449
+  N450 -->|handles| N451
+  N452 -->|handles| N105
+  N453 -->|handles| N107
+  N454 -->|handles| N152
+  N455 -->|handles| N127
+  N456 -->|handles| N457
+  N458 -->|handles| N459
+  N460 -->|handles| N461
+  N462 -->|handles| N463
+  N464 -->|handles| N465
+  N466 -->|handles| N33
+  N467 -->|handles| N84
+  N468 -->|handles| N45
+  N469 -->|handles| N115
+  N470 -->|handles| N189
+  N471 -->|handles| N191
+  N472 -->|handles| N473
+  N474 -->|handles| N475
+  N476 -->|handles| N477
+  N478 -->|handles| N479
+  N480 -->|handles| N78
+  N481 -->|handles| N33
+  N482 -->|handles| N84
+  N483 -->|handles| N1
+  N484 -->|handles| N485
+  N486 -->|handles| N487
+  N488 -->|handles| N489
+  N490 -->|handles| N491
+  N492 -->|handles| N493
+  N494 -->|handles| N495
+  N496 -->|handles| N497
+  N498 -->|handles| N45
+  N499 -->|handles| N115
+  N500 -->|handles| N501
+  N502 -->|handles| N503
+  N504 -->|handles| N505
+  N506 -->|handles| N507
+  N508 -->|handles| N509
+  N510 -->|handles| N511
+  N512 -->|handles| N513
+  N514 -->|handles| N515
+  N516 -->|handles| N517
+  N518 -->|handles| N33
+  N519 -->|handles| N84
+  N520 -->|handles| N45
+  N521 -->|handles| N17
+  N522 -->|handles| N523
+  N524 -->|handles| N525
+  N526 -->|handles| N239
+  N527 -->|handles| N528
+  N529 -->|handles| N530
+  N531 -->|handles| N495
+  N532 -->|handles| N78
+  N533 -->|handles| N534
+  N535 -->|handles| N536
+  N537 -->|handles| N538
+  N539 -->|handles| N33
+  N540 -->|handles| N84
+  N541 -->|handles| N86
+  N542 -->|handles| N203
+  N543 -->|handles| N205
+  N544 -->|handles| N530
+  N545 -->|handles| N45
+  N546 -->|handles| N33
+  N547 -->|handles| N33
+  N548 -->|handles| N84
+  N549 -->|handles| N45
+  N550 -->|handles| N551
+  N552 -->|handles| N553
+  N554 -->|handles| N555
+  N556 -->|handles| N78
+  N557 -->|handles| N33
+  N558 -->|handles| N84
+  N559 -->|handles| N560
+  N561 -->|handles| N199
+  N562 -->|handles| N563
+  N564 -->|handles| N487
+  N565 -->|handles| N354
+  N566 -->|handles| N491
+  N567 -->|handles| N493
+  N568 -->|handles| N569
+  N570 -->|handles| N45
+  N571 -->|handles| N115
+  N572 -->|handles| N157
+  N573 -->|handles| N574
+  N575 -->|handles| N576
+  N577 -->|handles| N578
+  N579 -->|handles| N580
+  N581 -->|handles| N582
+  N583 -->|handles| N584
+  N585 -->|handles| N586
+  N587 -->|handles| N588
+  N589 -->|handles| N590
+  N591 -->|handles| N78
+  N592 -->|handles| N33
+  N593 -->|handles| N84
+  N594 -->|handles| N86
+  N595 -->|handles| N45
+  N596 -->|handles| N203
+  N597 -->|handles| N205
+  N598 -->|handles| N599
+  N600 -->|handles| N601
+  N602 -->|handles| N121
+  N603 -->|handles| N268
+  N604 -->|handles| N123
+  N605 -->|handles| N606
+  N607 -->|handles| N608
+  N609 -->|handles| N610
+  N611 -->|handles| N612
+  N613 -->|handles| N614
+  N615 -->|handles| N616
+  N617 -->|handles| N618
+  N619 -->|handles| N620
+  N621 -->|handles| N622
+  N623 -->|handles| N624
+  N625 -->|handles| N129
+  N626 -->|handles| N627
+  N628 -->|handles| N15
+  N629 -->|handles| N630
+  N631 -->|handles| N632
+  N633 -->|handles| N634
+  N635 -->|handles| N636
+  N637 -->|handles| N638
+  N639 -->|handles| N150
+  N640 -->|handles| N641
+  N642 -->|handles| N551
+  N643 -->|handles| N553
+  N644 -->|handles| N86
+  N645 -->|handles| N646
+  N647 -->|handles| N648
+  N649 -->|handles| N650
+  N651 -->|handles| N652
+  N653 -->|handles| N654
+  N655 -->|handles| N15
+  N656 -->|handles| N33
+  N657 -->|handles| N84
+  N658 -->|handles| N45
+  N659 -->|handles| N115
+  N660 -->|handles| N661
+  N662 -->|handles| N33
+  N663 -->|handles| N84
+  N664 -->|handles| N45
+  N665 -->|handles| N115
+  N666 -->|handles| N667
+  N668 -->|handles| N33
+  N669 -->|handles| N84
+  N670 -->|handles| N45
+  N671 -->|handles| N115
+  N672 -->|handles| N119
+  N673 -->|handles| N674
+  N675 -->|handles| N157
+  N676 -->|handles| N9
+  N677 -->|handles| N678
+  N679 -->|handles| N680
+  N681 -->|handles| N682
+  N683 -->|handles| N684
+  N685 -->|handles| N686
+  N687 -->|handles| N688
+  N689 -->|handles| N690
+  N691 -->|handles| N692
+  N693 -->|handles| N694
+  N695 -->|handles| N696
+  N697 -->|handles| N109
+  N698 -->|handles| N699
+  N700 -->|handles| N701
+  N702 -->|handles| N599
+  N703 -->|handles| N704
+  N705 -->|handles| N706
+  N707 -->|handles| N105
+  N708 -->|handles| N107
+  N709 -->|handles| N710
+  N711 -->|handles| N712
+  N713 -->|handles| N714
+  N715 -->|handles| N716
+  N717 -->|handles| N76
+  N718 -->|handles| N719
+  N720 -->|handles| N721
+  N722 -->|handles| N723
+  N724 -->|handles| N725
+  N726 -->|handles| N727
+  N728 -->|handles| N729
+  N730 -->|handles| N731
+  N732 -->|handles| N733
+  N734 -->|handles| N735
+  N736 -->|handles| N737
+  N738 -->|handles| N739
+  N740 -->|handles| N741
+  N742 -->|handles| N743
+  N744 -->|handles| N745
+  N746 -->|handles| N747
+  N748 -->|handles| N749
+  N750 -->|handles| N751
+  N752 -->|handles| N753
+  N754 -->|handles| N755
+  N756 -->|handles| N757
+  N758 -->|handles| N759
+  N760 -->|handles| N761
+  N762 -->|handles| N763
+  N764 -->|handles| N765
+  N766 -->|handles| N767
+  N768 -->|handles| N769
+  N770 -->|handles| N109
+  N771 -->|handles| N78
+  N772 -->|handles| N15
+  N773 -->|handles| N774
+  N775 -->|handles| N776
+  N777 -->|handles| N778
+  N779 -->|handles| N33
+  N780 -->|handles| N84
+  N781 -->|handles| N45
+  N782 -->|handles| N117
+  N783 -->|handles| N121
+  N784 -->|handles| N785
+  N786 -->|handles| N207
+  N787 -->|handles| N530
+  N788 -->|handles| N789
+  N790 -->|handles| N157
+  N791 -->|handles| N792
+  N793 -->|handles| N794
+  N795 -->|handles| N796
+  N797 -->|handles| N798
+  N799 -->|handles| N800
+  N801 -->|handles| N802
+  N803 -->|handles| N78
+  N804 -->|handles| N1
+  N805 -->|handles| N806
+  N807 -->|handles| N808
+  N809 -->|handles| N810
+  N811 -->|handles| N812
+  N813 -->|handles| N33
+  N814 -->|handles| N84
+  N815 -->|handles| N816
+  N817 -->|handles| N818
+  N819 -->|handles| N820
+  N821 -->|handles| N822
+  N823 -->|handles| N239
+  N824 -->|handles| N825
+  N826 -->|handles| N827
+  N828 -->|handles| N45
+  N829 -->|handles| N78
+  N830 -->|handles| N33
+  N831 -->|handles| N84
+  N832 -->|handles| N45
+  N833 -->|handles| N115
+  N834 -->|handles| N835
+  N836 -->|handles| N373
+  N837 -->|handles| N838
+  N839 -->|handles| N840
+  N841 -->|handles| N842
+  N843 -->|handles| N844
+  N845 -->|handles| N846
+  N847 -->|handles| N848
+  N849 -->|handles| N401
+  N850 -->|handles| N851
+  N852 -->|handles| N853
+  N854 -->|handles| N855
+  N856 -->|handles| N857
+  N858 -->|handles| N859
+  N860 -->|handles| N861
+  N862 -->|handles| N863
+  N864 -->|handles| N865
+  N866 -->|handles| N867
+  N868 -->|handles| N869
+  N870 -->|handles| N109
+  N871 -->|handles| N78
+  N872 -->|handles| N15
+  N873 -->|handles| N874
+  N875 -->|handles| N876
+  N877 -->|handles| N33
+  N878 -->|handles| N84
+  N879 -->|handles| N45
+  N880 -->|handles| N117
+  N881 -->|handles| N528
+  N882 -->|handles| N33
+  N883 -->|handles| N84
+  N884 -->|handles| N45
+  N885 -->|handles| N115
+  N886 -->|handles| N117
+  N887 -->|handles| N119
+  N888 -->|handles| N889
+  N890 -->|handles| N157
+  N891 -->|handles| N892
+  N893 -->|handles| N894
+  N895 -->|handles| N896
+  N897 -->|handles| N898
+  N899 -->|handles| N900
+  N901 -->|handles| N902
+  N903 -->|handles| N904
+  N905 -->|handles| N906
+  N907 -->|handles| N908
+  N909 -->|handles| N910
+  N911 -->|handles| N912

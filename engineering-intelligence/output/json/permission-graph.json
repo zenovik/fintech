@@ -1,0 +1,874 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T18:13:27.127Z",
+    "generatorVersion": "3.0.0-a",
+    "evidenceCount": 144,
+    "verificationStatus": "verified-from-source"
+  },
+  "permissions": [
+    {
+      "permission": "dashboard:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "dashboard:export",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "merchants:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "merchants:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "merchants:delete",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "merchant_onboarding:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "merchant_onboarding:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "merchant_onboarding:approve",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "merchant_onboarding:reject",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "merchant_onboarding:suspend",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "transactions:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "transactions:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "transactions:export",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "settlements:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "settlements:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "settlements:export",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "reports:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "reports:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "reports:export",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "analytics:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "analytics:export",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "users:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "users:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "users:delete",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "roles:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "roles:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "roles:delete",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "permissions:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "permissions:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "settings:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "settings:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "notifications:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "notifications:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "notifications:broadcast",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "notifications:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "audit:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "audit:export",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "organizations:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "organizations:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "organizations:delete",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "organizations:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "customers:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "customers:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "customers:delete",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "refunds:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "refunds:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "refunds:approve",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "chargebacks:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "chargebacks:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "chargebacks:resolve",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "payouts:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "payouts:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "payouts:approve",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "payment_links:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "payment_links:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "payment_links:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "invoices:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "invoices:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "invoices:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "qr_payments:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "qr_payments:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "qr_payments:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "subscriptions:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "subscriptions:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "subscriptions:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "support:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "support:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "support:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "operations:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "operations:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "operations:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "ai:view",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "ai:chat",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "system:view",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "outlets:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "outlets:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "outlets:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "merchant_users:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "merchant_users:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "merchant_users:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "onboarding_workflow:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "onboarding_workflow:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "onboarding_workflow:approve",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "onboarding_workflow:reject",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "onboarding_workflow:send_back",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "onboarding_workflow:reassign",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "onboarding_workflow:skip",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "compliance_queue:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "compliance_queue:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "risk_review:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "risk_review:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "kyc_review:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "kyc_review:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "go_live:execute",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "devices:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "devices:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "devices:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "payment_config:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "payment_config:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "pricing:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "pricing:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "risk_rules:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "risk_rules:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "risk_rules:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "fraud:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "fraud:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "fraud:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "accounting:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "accounting:export",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "terminal_inventory:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "global_search:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "activity_center:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "platform_config:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "platform_config:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "payments:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "payments:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "payments:capture",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "payments:refund",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "payments:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "checkout:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "checkout:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "checkout:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "checkout:analytics",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "checkout:branding",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "smart_collect:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "smart_collect:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "smart_collect:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "acceptance_analytics:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "merchant_portal:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "developer:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "developer:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "developer:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "webhooks:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "webhooks:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "webhooks:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "reconciliation:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "reconciliation:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "reconciliation:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "sandbox:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "sandbox:write",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "sandbox:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "ai_insights:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "production:read",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    },
+    {
+      "permission": "production:manage",
+      "routeCount": 0,
+      "routes": [],
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    }
+  ]
+}

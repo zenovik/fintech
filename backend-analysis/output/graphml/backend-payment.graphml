@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+<key id="type" for="node" attr.name="type" attr.type="string"/>
+<key id="label" for="node" attr.name="label" attr.type="string"/>
+<key id="verification" for="node" attr.name="verification" attr.type="string"/>
+<key id="rel" for="edge" attr.name="rel" attr.type="string"/>
+<graph id="G" edgedefault="directed">
+<node id="ep:GET:/api/v1/customers/:id/payment-methods"><data key="type">Endpoint</data><data key="label">GET /api/v1/customers/:id/payment-methods</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:paymentMethods"><data key="type">Controller</data><data key="label">paymentMethods</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/dashboard/executive/charts/payment-methods"><data key="type">Endpoint</data><data key="label">GET /api/v1/dashboard/executive/charts/payment-methods</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/dashboard/executive/payment-platform-stats"><data key="type">Endpoint</data><data key="label">GET /api/v1/dashboard/executive/payment-platform-stats</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:paymentPlatformStats"><data key="type">Controller</data><data key="label">paymentPlatformStats</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/invoices/:id/payment-link"><data key="type">Endpoint</data><data key="label">POST /api/v1/invoices/:id/payment-link</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:generatePaymentLink"><data key="type">Controller</data><data key="label">generatePaymentLink</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/invoices/:id/payment-link/regenerate"><data key="type">Endpoint</data><data key="label">POST /api/v1/invoices/:id/payment-link/regenerate</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:regeneratePaymentLink"><data key="type">Controller</data><data key="label">regeneratePaymentLink</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/invoices/:id/payment-link/disable"><data key="type">Endpoint</data><data key="label">POST /api/v1/invoices/:id/payment-link/disable</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:disablePaymentLink"><data key="type">Controller</data><data key="label">disablePaymentLink</data><data key="verification">VERIFIED</data></node>
+<node id="ep:PUT:/api/v1/merchant-onboarding/:id/payment"><data key="type">Endpoint</data><data key="label">PUT /api/v1/merchant-onboarding/:id/payment</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:savePayment"><data key="type">Controller</data><data key="label">savePayment</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/operations/failed-payments"><data key="type">Endpoint</data><data key="label">GET /api/v1/operations/failed-payments</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:failedPayments"><data key="type">Controller</data><data key="label">failedPayments</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/payment-config/limits"><data key="type">Endpoint</data><data key="label">GET /api/v1/payment-config/limits</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/payment-config/limits"><data key="type">Endpoint</data><data key="label">POST /api/v1/payment-config/limits</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/payment-config/merchants/:merchantId"><data key="type">Endpoint</data><data key="label">GET /api/v1/payment-config/merchants/:merchantId</data><data key="verification">VERIFIED</data></node>
+<node id="ep:PUT:/api/v1/payment-config/merchants/:merchantId"><data key="type">Endpoint</data><data key="label">PUT /api/v1/payment-config/merchants/:merchantId</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/payment-links/statistics"><data key="type">Endpoint</data><data key="label">GET /api/v1/payment-links/statistics</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/payment-links"><data key="type">Endpoint</data><data key="label">GET /api/v1/payment-links</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/payment-links"><data key="type">Endpoint</data><data key="label">POST /api/v1/payment-links</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/payment-links/:id/analytics"><data key="type">Endpoint</data><data key="label">GET /api/v1/payment-links/:id/analytics</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/payment-links/:id/visits"><data key="type">Endpoint</data><data key="label">GET /api/v1/payment-links/:id/visits</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/payment-links/:id/clone"><data key="type">Endpoint</data><data key="label">POST /api/v1/payment-links/:id/clone</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/payment-links/:id/qr"><data key="type">Endpoint</data><data key="label">GET /api/v1/payment-links/:id/qr</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/payment-links/:id/enable"><data key="type">Endpoint</data><data key="label">POST /api/v1/payment-links/:id/enable</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/payment-links/:id/disable"><data key="type">Endpoint</data><data key="label">POST /api/v1/payment-links/:id/disable</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/payment-links/:id/expire"><data key="type">Endpoint</data><data key="label">POST /api/v1/payment-links/:id/expire</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/payment-links/:id/regenerate-token"><data key="type">Endpoint</data><data key="label">POST /api/v1/payment-links/:id/regenerate-token</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/payment-links/:id"><data key="type">Endpoint</data><data key="label">GET /api/v1/payment-links/:id</data><data key="verification">VERIFIED</data></node>
+<node id="ep:PUT:/api/v1/payment-links/:id"><data key="type">Endpoint</data><data key="label">PUT /api/v1/payment-links/:id</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/public/payment-links/:token"><data key="type">Endpoint</data><data key="label">GET /api/v1/public/payment-links/:token</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/public/payment-links/:token/pay"><data key="type">Endpoint</data><data key="label">POST /api/v1/public/payment-links/:token/pay</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/payments/webhooks/deliveries"><data key="type">Endpoint</data><data key="label">GET /api/v1/payments/webhooks/deliveries</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/payments/orders"><data key="type">Endpoint</data><data key="label">GET /api/v1/payments/orders</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/payments/orders/:id"><data key="type">Endpoint</data><data key="label">GET /api/v1/payments/orders/:id</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/payments/sessions"><data key="type">Endpoint</data><data key="label">POST /api/v1/payments/sessions</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/payments/sessions/:id"><data key="type">Endpoint</data><data key="label">GET /api/v1/payments/sessions/:id</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/payments/merchant-config/:merchantId"><data key="type">Endpoint</data><data key="label">GET /api/v1/payments/merchant-config/:merchantId</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/payments/customers/:customerId/profile"><data key="type">Endpoint</data><data key="label">GET /api/v1/payments/customers/:customerId/profile</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/payments"><data key="type">Endpoint</data><data key="label">GET /api/v1/payments</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/payments"><data key="type">Endpoint</data><data key="label">POST /api/v1/payments</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/payments/:id"><data key="type">Endpoint</data><data key="label">GET /api/v1/payments/:id</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/payments/:id/timeline"><data key="type">Endpoint</data><data key="label">GET /api/v1/payments/:id/timeline</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/payments/:id/authorize"><data key="type">Endpoint</data><data key="label">POST /api/v1/payments/:id/authorize</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/payments/:id/capture"><data key="type">Endpoint</data><data key="label">POST /api/v1/payments/:id/capture</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/payments/:id/cancel"><data key="type">Endpoint</data><data key="label">POST /api/v1/payments/:id/cancel</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/payments/:id/refund"><data key="type">Endpoint</data><data key="label">POST /api/v1/payments/:id/refund</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/payments/:id/retry"><data key="type">Endpoint</data><data key="label">POST /api/v1/payments/:id/retry</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/payments/:id/expire"><data key="type">Endpoint</data><data key="label">POST /api/v1/payments/:id/expire</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/public/qr-payments/templates"><data key="type">Endpoint</data><data key="label">GET /api/v1/public/qr-payments/templates</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/public/qr-payments/categories"><data key="type">Endpoint</data><data key="label">GET /api/v1/public/qr-payments/categories</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/public/qr-payments/bulk"><data key="type">Endpoint</data><data key="label">POST /api/v1/public/qr-payments/bulk</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/public/qr-payments/statistics"><data key="type">Endpoint</data><data key="label">GET /api/v1/public/qr-payments/statistics</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/public/qr-payments"><data key="type">Endpoint</data><data key="label">GET /api/v1/public/qr-payments</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/public/qr-payments"><data key="type">Endpoint</data><data key="label">POST /api/v1/public/qr-payments</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/public/qr-payments/:id/download/svg"><data key="type">Endpoint</data><data key="label">GET /api/v1/public/qr-payments/:id/download/svg</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/public/qr-payments/:id/download"><data key="type">Endpoint</data><data key="label">GET /api/v1/public/qr-payments/:id/download</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/public/qr-payments/:id/scan-history"><data key="type">Endpoint</data><data key="label">GET /api/v1/public/qr-payments/:id/scan-history</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/public/qr-payments/:id/clone"><data key="type">Endpoint</data><data key="label">POST /api/v1/public/qr-payments/:id/clone</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/public/qr-payments/:id/archive"><data key="type">Endpoint</data><data key="label">POST /api/v1/public/qr-payments/:id/archive</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/public/qr-payments/:id/enable"><data key="type">Endpoint</data><data key="label">POST /api/v1/public/qr-payments/:id/enable</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/public/qr-payments/:id/disable"><data key="type">Endpoint</data><data key="label">POST /api/v1/public/qr-payments/:id/disable</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/public/qr-payments/:id/regenerate"><data key="type">Endpoint</data><data key="label">POST /api/v1/public/qr-payments/:id/regenerate</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/public/qr-payments/:id"><data key="type">Endpoint</data><data key="label">GET /api/v1/public/qr-payments/:id</data><data key="verification">VERIFIED</data></node>
+<node id="ep:PUT:/api/v1/public/qr-payments/:id"><data key="type">Endpoint</data><data key="label">PUT /api/v1/public/qr-payments/:id</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/analytics/payment-links"><data key="type">Endpoint</data><data key="label">GET /api/v1/analytics/payment-links</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:paymentLinks"><data key="type">Controller</data><data key="label">paymentLinks</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/analytics/qr-payments"><data key="type">Endpoint</data><data key="label">GET /api/v1/analytics/qr-payments</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:qrPayments"><data key="type">Controller</data><data key="label">qrPayments</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/analytics/payment-methods"><data key="type">Endpoint</data><data key="label">GET /api/v1/analytics/payment-methods</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:payment_links"><data key="type">Table</data><data key="label">payment_links</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:payment_devices"><data key="type">Table</data><data key="label">payment_devices</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:payment_intents"><data key="type">Table</data><data key="label">payment_intents</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:customer_payment_methods"><data key="type">Table</data><data key="label">customer_payment_methods</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:payment_method_distribution"><data key="type">Table</data><data key="label">payment_method_distribution</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:payment_method_types"><data key="type">Table</data><data key="label">payment_method_types</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:invoice_payments"><data key="type">Table</data><data key="label">invoice_payments</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:merchant_onboarding_payment_config"><data key="type">Table</data><data key="label">merchant_onboarding_payment_config</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:merchant_payment_methods"><data key="type">Table</data><data key="label">merchant_payment_methods</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:merchant_payment_method_config"><data key="type">Table</data><data key="label">merchant_payment_method_config</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:payment_link_transactions"><data key="type">Table</data><data key="label">payment_link_transactions</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:payment_link_visits"><data key="type">Table</data><data key="label">payment_link_visits</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:payment_link_events"><data key="type">Table</data><data key="label">payment_link_events</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:payment_orders"><data key="type">Table</data><data key="label">payment_orders</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:payment_sessions"><data key="type">Table</data><data key="label">payment_sessions</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:payment_timeline_events"><data key="type">Table</data><data key="label">payment_timeline_events</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:payment_idempotency_keys"><data key="type">Table</data><data key="label">payment_idempotency_keys</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:payment_webhook_deliveries"><data key="type">Table</data><data key="label">payment_webhook_deliveries</data><data key="verification">VERIFIED</data></node>
+<edge id="e0" source="ep:GET:/api/v1/customers/:id/payment-methods" target="ctrl:paymentMethods"><data key="rel">handles</data></edge>
+<edge id="e1" source="ep:GET:/api/v1/dashboard/executive/charts/payment-methods" target="ctrl:paymentMethods"><data key="rel">handles</data></edge>
+<edge id="e2" source="ep:GET:/api/v1/dashboard/executive/payment-platform-stats" target="ctrl:paymentPlatformStats"><data key="rel">handles</data></edge>
+<edge id="e3" source="ep:POST:/api/v1/invoices/:id/payment-link" target="ctrl:generatePaymentLink"><data key="rel">handles</data></edge>
+<edge id="e4" source="ep:POST:/api/v1/invoices/:id/payment-link/regenerate" target="ctrl:regeneratePaymentLink"><data key="rel">handles</data></edge>
+<edge id="e5" source="ep:POST:/api/v1/invoices/:id/payment-link/disable" target="ctrl:disablePaymentLink"><data key="rel">handles</data></edge>
+<edge id="e6" source="ep:PUT:/api/v1/merchant-onboarding/:id/payment" target="ctrl:savePayment"><data key="rel">handles</data></edge>
+<edge id="e7" source="ep:GET:/api/v1/operations/failed-payments" target="ctrl:failedPayments"><data key="rel">handles</data></edge>
+<edge id="e8" source="ep:GET:/api/v1/analytics/payment-links" target="ctrl:paymentLinks"><data key="rel">handles</data></edge>
+<edge id="e9" source="ep:GET:/api/v1/analytics/qr-payments" target="ctrl:qrPayments"><data key="rel">handles</data></edge>
+<edge id="e10" source="ep:GET:/api/v1/analytics/payment-methods" target="ctrl:paymentMethods"><data key="rel">handles</data></edge>
+</graph></graphml>

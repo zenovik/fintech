@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+<key id="type" for="node" attr.name="type" attr.type="string"/>
+<key id="label" for="node" attr.name="label" attr.type="string"/>
+<key id="verification" for="node" attr.name="verification" attr.type="string"/>
+<key id="rel" for="edge" attr.name="rel" attr.type="string"/>
+<graph id="G" edgedefault="directed">
+<node id="ep:POST:/api/v1/payments/:id/authorize"><data key="type">Endpoint</data><data key="label">POST /api/v1/payments/:id/authorize</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:authorize"><data key="type">Controller</data><data key="label">authorize</data><data key="verification">VERIFIED</data></node>
+<edge id="e0" source="ep:POST:/api/v1/payments/:id/authorize" target="ctrl:authorize"><data key="rel">handles</data></edge>
+</graph></graphml>

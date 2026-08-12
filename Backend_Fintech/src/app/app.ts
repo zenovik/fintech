@@ -62,6 +62,10 @@ import { developerRoutes } from './modules/developer';
 import { webhooksRoutes } from './modules/webhooks';
 import { reconciliationRoutes } from './modules/reconciliation';
 import { sandboxRoutes } from './modules/sandbox';
+import { gatewayRoutes } from './modules/gateway';
+import { eventsRoutes } from './modules/events';
+import { tracingMiddleware } from './shared/observability/tracing.middleware';
+import { renderPrometheusMetrics } from './shared/observability/prometheus.exporter';
 
 import { featureFlagGuard } from './shared/middleware/feature-flag.middleware';
 import { buildGlobalRateLimitMiddleware, buildApiRateLimitMiddleware } from './shared/middleware/global-rate-limit.middleware';
@@ -115,9 +119,16 @@ export function createApp(): Application {
     });
   });
 
+  app.get('/metrics', (_req, res) => {
+    res.setHeader('Content-Type', 'text/plain; version=0.0.4');
+    res.send(renderPrometheusMetrics());
+  });
+
 
 
   setupSwagger(app);
+
+  app.use(tracingMiddleware);
 
   app.use('/api/v1', buildGlobalRateLimitMiddleware());
   app.use('/api/v1', buildApiRateLimitMiddleware());
@@ -172,6 +183,8 @@ export function createApp(): Application {
   app.use('/api/v1/developer', developerRoutes);
   app.use('/api/v1/webhooks', webhooksRoutes);
   app.use('/api/v1/reconciliation', reconciliationRoutes);
+  app.use('/api/v1/gateway', gatewayRoutes);
+  app.use('/api/v1/events', eventsRoutes);
   app.use('/api/v1/sandbox', sandboxRoutes);
 
 

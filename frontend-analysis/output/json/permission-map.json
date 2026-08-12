@@ -1,0 +1,943 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T18:43:41.784Z",
+    "generatorVersion": "2.0.0-ast"
+  },
+  "permissions": [
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.ACCEPTANCE_ANALYTICS_READ)",
+      "permissions": [
+        "PERMISSIONS.ACCEPTANCE_ANALYTICS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/acceptance/acceptance.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.ACTIVITY_CENTER_READ)",
+      "permissions": [
+        "PERMISSIONS.ACTIVITY_CENTER_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/activity/activity.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.AUDIT_READ)",
+      "permissions": [
+        "PERMISSIONS.AUDIT_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "route": "timeline",
+      "guard": "permissionGuard(PERMISSIONS.AUDIT_READ)",
+      "permissions": [
+        "PERMISSIONS.AUDIT_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "route": "api-logs",
+      "guard": "permissionGuard(PERMISSIONS.AUDIT_READ)",
+      "permissions": [
+        "PERMISSIONS.AUDIT_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "route": "webhook-logs",
+      "guard": "permissionGuard(PERMISSIONS.AUDIT_READ)",
+      "permissions": [
+        "PERMISSIONS.AUDIT_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 39
+      }
+    },
+    {
+      "route": ":id",
+      "guard": "permissionGuard(PERMISSIONS.AUDIT_READ)",
+      "permissions": [
+        "PERMISSIONS.AUDIT_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 46
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.CHARGEBACKS_READ)",
+      "permissions": [
+        "PERMISSIONS.CHARGEBACKS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/chargebacks/chargebacks.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "create",
+      "guard": "permissionGuard(PERMISSIONS.CHARGEBACKS_WRITE)",
+      "permissions": [
+        "PERMISSIONS.CHARGEBACKS_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/chargebacks/chargebacks.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.CHECKOUT_READ)",
+      "permissions": [
+        "PERMISSIONS.CHECKOUT_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout-admin/checkout-admin.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "analytics",
+      "guard": "permissionGuard(PERMISSIONS.CHECKOUT_ANALYTICS)",
+      "permissions": [
+        "PERMISSIONS.CHECKOUT_ANALYTICS"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout-admin/checkout-admin.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "route": "branding",
+      "guard": "permissionGuard(PERMISSIONS.CHECKOUT_BRANDING)",
+      "permissions": [
+        "PERMISSIONS.CHECKOUT_BRANDING"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout-admin/checkout-admin.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.CUSTOMERS_READ)",
+      "permissions": [
+        "PERMISSIONS.CUSTOMERS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/customers/customers.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "create",
+      "guard": "permissionGuard(PERMISSIONS.CUSTOMERS_WRITE)",
+      "permissions": [
+        "PERMISSIONS.CUSTOMERS_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/customers/customers.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "route": ":id/edit",
+      "guard": "permissionGuard(PERMISSIONS.CUSTOMERS_WRITE)",
+      "permissions": [
+        "PERMISSIONS.CUSTOMERS_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/customers/customers.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.DASHBOARD_READ)",
+      "permissions": [
+        "PERMISSIONS.DASHBOARD_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/dashboard/dashboard.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.DEVELOPER_READ)",
+      "permissions": [
+        "PERMISSIONS.DEVELOPER_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/developer/developer.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.DEVICES_READ)",
+      "permissions": [
+        "PERMISSIONS.DEVICES_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/devices/devices.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.FRAUD_READ)",
+      "permissions": [
+        "PERMISSIONS.FRAUD_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/fraud/fraud.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.INVOICES_READ)",
+      "permissions": [
+        "PERMISSIONS.INVOICES_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/invoices/invoices.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "create",
+      "guard": "permissionGuard(PERMISSIONS.INVOICES_WRITE)",
+      "permissions": [
+        "PERMISSIONS.INVOICES_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/invoices/invoices.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "route": ":id/edit",
+      "guard": "permissionGuard(PERMISSIONS.INVOICES_WRITE)",
+      "permissions": [
+        "PERMISSIONS.INVOICES_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/invoices/invoices.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.MERCHANTS_READ)",
+      "permissions": [
+        "PERMISSIONS.MERCHANTS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant/merchant.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "create",
+      "guard": "permissionGuard(PERMISSIONS.MERCHANTS_WRITE)",
+      "permissions": [
+        "PERMISSIONS.MERCHANTS_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant/merchant.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "route": ":id/edit",
+      "guard": "permissionGuard(PERMISSIONS.MERCHANTS_WRITE)",
+      "permissions": [
+        "PERMISSIONS.MERCHANTS_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant/merchant.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.MERCHANT_ONBOARDING_READ)",
+      "permissions": [
+        "PERMISSIONS.MERCHANT_ONBOARDING_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-onboarding/merchant-onboarding.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "create",
+      "guard": "permissionGuard(PERMISSIONS.MERCHANT_ONBOARDING_WRITE)",
+      "permissions": [
+        "PERMISSIONS.MERCHANT_ONBOARDING_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-onboarding/merchant-onboarding.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "route": ":id/wizard",
+      "guard": "permissionGuard(PERMISSIONS.MERCHANT_ONBOARDING_WRITE)",
+      "permissions": [
+        "PERMISSIONS.MERCHANT_ONBOARDING_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-onboarding/merchant-onboarding.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.MERCHANT_PORTAL_READ)",
+      "permissions": [
+        "PERMISSIONS.MERCHANT_PORTAL_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-portal/merchant-portal.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.MERCHANT_USERS_READ)",
+      "permissions": [
+        "PERMISSIONS.MERCHANT_USERS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-users/merchant-users.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.NOTIFICATIONS_READ)",
+      "permissions": [
+        "PERMISSIONS.NOTIFICATIONS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "route": "broadcasts",
+      "guard": "permissionGuard(PERMISSIONS.NOTIFICATIONS_BROADCAST)",
+      "permissions": [
+        "PERMISSIONS.NOTIFICATIONS_BROADCAST"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "route": "templates",
+      "guard": "permissionGuard(PERMISSIONS.NOTIFICATIONS_MANAGE)",
+      "permissions": [
+        "PERMISSIONS.NOTIFICATIONS_MANAGE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+        "line": 38
+      }
+    },
+    {
+      "route": ":id",
+      "guard": "permissionGuard(PERMISSIONS.NOTIFICATIONS_READ)",
+      "permissions": [
+        "PERMISSIONS.NOTIFICATIONS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+        "line": 45
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.COMPLIANCE_QUEUE_READ)",
+      "permissions": [
+        "PERMISSIONS.COMPLIANCE_QUEUE_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/onboarding-approval/onboarding-approval.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.OPERATIONS_READ)",
+      "permissions": [
+        "PERMISSIONS.OPERATIONS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/operations/operations.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.ORGANIZATIONS_READ)",
+      "permissions": [
+        "PERMISSIONS.ORGANIZATIONS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/organizations/organizations.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "route": "create",
+      "guard": "permissionGuard(PERMISSIONS.ORGANIZATIONS_WRITE)",
+      "permissions": [
+        "PERMISSIONS.ORGANIZATIONS_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/organizations/organizations.routes.ts",
+        "line": 20
+      }
+    },
+    {
+      "route": ":id",
+      "guard": "permissionGuard(PERMISSIONS.ORGANIZATIONS_READ)",
+      "permissions": [
+        "PERMISSIONS.ORGANIZATIONS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/organizations/organizations.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "route": ":id/edit",
+      "guard": "permissionGuard(PERMISSIONS.ORGANIZATIONS_WRITE)",
+      "permissions": [
+        "PERMISSIONS.ORGANIZATIONS_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/organizations/organizations.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.OUTLETS_READ)",
+      "permissions": [
+        "PERMISSIONS.OUTLETS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/outlets/outlets.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.PAYMENT_LINKS_READ)",
+      "permissions": [
+        "PERMISSIONS.PAYMENT_LINKS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payment-links/payment-links.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "create",
+      "guard": "permissionGuard(PERMISSIONS.PAYMENT_LINKS_WRITE)",
+      "permissions": [
+        "PERMISSIONS.PAYMENT_LINKS_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payment-links/payment-links.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "route": ":id/edit",
+      "guard": "permissionGuard(PERMISSIONS.PAYMENT_LINKS_WRITE)",
+      "permissions": [
+        "PERMISSIONS.PAYMENT_LINKS_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payment-links/payment-links.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.PAYOUTS_READ)",
+      "permissions": [
+        "PERMISSIONS.PAYOUTS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payouts/payouts.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "create",
+      "guard": "permissionGuard(PERMISSIONS.PAYOUTS_WRITE)",
+      "permissions": [
+        "PERMISSIONS.PAYOUTS_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payouts/payouts.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "route": "bank-accounts",
+      "guard": "permissionGuard(PERMISSIONS.PAYOUTS_READ)",
+      "permissions": [
+        "PERMISSIONS.PAYOUTS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payouts/payouts.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.QR_PAYMENTS_READ)",
+      "permissions": [
+        "PERMISSIONS.QR_PAYMENTS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/qr-payments/qr-payments.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "route": "create",
+      "guard": "permissionGuard(PERMISSIONS.QR_PAYMENTS_WRITE)",
+      "permissions": [
+        "PERMISSIONS.QR_PAYMENTS_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/qr-payments/qr-payments.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.RECONCILIATION_READ)",
+      "permissions": [
+        "PERMISSIONS.RECONCILIATION_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reconciliation/reconciliation.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.REFUNDS_READ)",
+      "permissions": [
+        "PERMISSIONS.REFUNDS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/refunds/refunds.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "request",
+      "guard": "permissionGuard(PERMISSIONS.REFUNDS_WRITE)",
+      "permissions": [
+        "PERMISSIONS.REFUNDS_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/refunds/refunds.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.REPORTS_READ)",
+      "permissions": [
+        "PERMISSIONS.REPORTS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "analytics",
+      "guard": "permissionGuard(PERMISSIONS.ANALYTICS_READ)",
+      "permissions": [
+        "PERMISSIONS.ANALYTICS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "route": "builder",
+      "guard": "permissionGuard(PERMISSIONS.REPORTS_WRITE)",
+      "permissions": [
+        "PERMISSIONS.REPORTS_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "route": "builder/:id",
+      "guard": "permissionGuard(PERMISSIONS.REPORTS_WRITE)",
+      "permissions": [
+        "PERMISSIONS.REPORTS_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 40
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.RISK_RULES_READ)",
+      "permissions": [
+        "PERMISSIONS.RISK_RULES_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/risk-rules/risk-rules.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.ROLES_READ)",
+      "permissions": [
+        "PERMISSIONS.ROLES_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/roles/roles.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "create",
+      "guard": "permissionGuard(PERMISSIONS.ROLES_WRITE)",
+      "permissions": [
+        "PERMISSIONS.ROLES_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/roles/roles.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "route": ":id/edit",
+      "guard": "permissionGuard(PERMISSIONS.ROLES_WRITE)",
+      "permissions": [
+        "PERMISSIONS.ROLES_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/roles/roles.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "route": ":id/permissions",
+      "guard": "permissionGuard(PERMISSIONS.PERMISSIONS_READ)",
+      "permissions": [
+        "PERMISSIONS.PERMISSIONS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/roles/roles.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.SANDBOX_READ)",
+      "permissions": [
+        "PERMISSIONS.SANDBOX_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/sandbox/sandbox.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "business",
+      "guard": "permissionGuard(PERMISSIONS.SETTINGS_READ)",
+      "permissions": [
+        "PERMISSIONS.SETTINGS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "route": "branding",
+      "guard": "permissionGuard(PERMISSIONS.SETTINGS_READ)",
+      "permissions": [
+        "PERMISSIONS.SETTINGS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "route": "security",
+      "guard": "permissionGuard(PERMISSIONS.SETTINGS_READ)",
+      "permissions": [
+        "PERMISSIONS.SETTINGS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 40
+      }
+    },
+    {
+      "route": "password-policy",
+      "guard": "permissionGuard(PERMISSIONS.SETTINGS_READ)",
+      "permissions": [
+        "PERMISSIONS.SETTINGS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 47
+      }
+    },
+    {
+      "route": "session",
+      "guard": "permissionGuard(PERMISSIONS.SETTINGS_READ)",
+      "permissions": [
+        "PERMISSIONS.SETTINGS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 54
+      }
+    },
+    {
+      "route": "api",
+      "guard": "permissionGuard(PERMISSIONS.SETTINGS_READ)",
+      "permissions": [
+        "PERMISSIONS.SETTINGS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 67
+      }
+    },
+    {
+      "route": "feature-flags",
+      "guard": "permissionGuard(PERMISSIONS.SETTINGS_READ)",
+      "permissions": [
+        "PERMISSIONS.SETTINGS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 74
+      }
+    },
+    {
+      "route": "configuration",
+      "guard": "permissionGuard(PERMISSIONS.PLATFORM_CONFIG_READ)",
+      "permissions": [
+        "PERMISSIONS.PLATFORM_CONFIG_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 81
+      }
+    },
+    {
+      "route": "storage",
+      "guard": "permissionGuard(PERMISSIONS.SETTINGS_READ)",
+      "permissions": [
+        "PERMISSIONS.SETTINGS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 88
+      }
+    },
+    {
+      "route": "system-status",
+      "guard": "permissionGuard(PERMISSIONS.SYSTEM_VIEW)",
+      "permissions": [
+        "PERMISSIONS.SYSTEM_VIEW"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 101
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.SETTLEMENTS_READ)",
+      "permissions": [
+        "PERMISSIONS.SETTLEMENTS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settlements/settlements.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.SMART_COLLECT_READ)",
+      "permissions": [
+        "PERMISSIONS.SMART_COLLECT_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/smart-collect/smart-collect.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.SUBSCRIPTIONS_READ)",
+      "permissions": [
+        "PERMISSIONS.SUBSCRIPTIONS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/subscriptions/subscriptions.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "route": "plans/create",
+      "guard": "permissionGuard(PERMISSIONS.SUBSCRIPTIONS_WRITE)",
+      "permissions": [
+        "PERMISSIONS.SUBSCRIPTIONS_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/subscriptions/subscriptions.routes.ts",
+        "line": 47
+      }
+    },
+    {
+      "route": "create",
+      "guard": "permissionGuard(PERMISSIONS.SUBSCRIPTIONS_WRITE)",
+      "permissions": [
+        "PERMISSIONS.SUBSCRIPTIONS_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/subscriptions/subscriptions.routes.ts",
+        "line": 59
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.SUPPORT_READ)",
+      "permissions": [
+        "PERMISSIONS.SUPPORT_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/support/support.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "create",
+      "guard": "permissionGuard(PERMISSIONS.SUPPORT_WRITE)",
+      "permissions": [
+        "PERMISSIONS.SUPPORT_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/support/support.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "route": ":id/edit",
+      "guard": "permissionGuard(PERMISSIONS.SUPPORT_WRITE)",
+      "permissions": [
+        "PERMISSIONS.SUPPORT_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/support/support.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.TRANSACTIONS_READ)",
+      "permissions": [
+        "PERMISSIONS.TRANSACTIONS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/transactions/transactions.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.USERS_READ)",
+      "permissions": [
+        "PERMISSIONS.USERS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/users/users.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "route": "create",
+      "guard": "permissionGuard(PERMISSIONS.USERS_WRITE)",
+      "permissions": [
+        "PERMISSIONS.USERS_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/users/users.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "route": ":id/edit",
+      "guard": "permissionGuard(PERMISSIONS.USERS_WRITE)",
+      "permissions": [
+        "PERMISSIONS.USERS_WRITE"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/users/users.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "route": "",
+      "guard": "permissionGuard(PERMISSIONS.WEBHOOKS_READ)",
+      "permissions": [
+        "PERMISSIONS.WEBHOOKS_READ"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/webhooks/webhooks.routes.ts",
+        "line": 8
+      }
+    }
+  ]
+}

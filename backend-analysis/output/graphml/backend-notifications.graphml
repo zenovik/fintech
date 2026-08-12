@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+<key id="type" for="node" attr.name="type" attr.type="string"/>
+<key id="label" for="node" attr.name="label" attr.type="string"/>
+<key id="verification" for="node" attr.name="verification" attr.type="string"/>
+<key id="rel" for="edge" attr.name="rel" attr.type="string"/>
+<graph id="G" edgedefault="directed">
+<node id="ep:GET:/api/v1/notifications"><data key="type">Endpoint</data><data key="label">GET /api/v1/notifications</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/notifications/unread-count"><data key="type">Endpoint</data><data key="label">GET /api/v1/notifications/unread-count</data><data key="verification">VERIFIED</data></node>
+<node id="ep:PATCH:/api/v1/notifications/read-all"><data key="type">Endpoint</data><data key="label">PATCH /api/v1/notifications/read-all</data><data key="verification">VERIFIED</data></node>
+<node id="ep:PATCH:/api/v1/notifications/archive-all"><data key="type">Endpoint</data><data key="label">PATCH /api/v1/notifications/archive-all</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/notifications/templates"><data key="type">Endpoint</data><data key="label">GET /api/v1/notifications/templates</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/notifications/templates"><data key="type">Endpoint</data><data key="label">POST /api/v1/notifications/templates</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/notifications/templates/:id"><data key="type">Endpoint</data><data key="label">GET /api/v1/notifications/templates/:id</data><data key="verification">VERIFIED</data></node>
+<node id="ep:PUT:/api/v1/notifications/templates/:id"><data key="type">Endpoint</data><data key="label">PUT /api/v1/notifications/templates/:id</data><data key="verification">VERIFIED</data></node>
+<node id="ep:DELETE:/api/v1/notifications/templates/:id"><data key="type">Endpoint</data><data key="label">DELETE /api/v1/notifications/templates/:id</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/notifications/broadcasts"><data key="type">Endpoint</data><data key="label">GET /api/v1/notifications/broadcasts</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/notifications/broadcasts"><data key="type">Endpoint</data><data key="label">POST /api/v1/notifications/broadcasts</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/notifications/campaigns"><data key="type">Endpoint</data><data key="label">GET /api/v1/notifications/campaigns</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/notifications/campaigns"><data key="type">Endpoint</data><data key="label">POST /api/v1/notifications/campaigns</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/notifications/campaigns/:id"><data key="type">Endpoint</data><data key="label">GET /api/v1/notifications/campaigns/:id</data><data key="verification">VERIFIED</data></node>
+<node id="ep:PUT:/api/v1/notifications/campaigns/:id"><data key="type">Endpoint</data><data key="label">PUT /api/v1/notifications/campaigns/:id</data><data key="verification">VERIFIED</data></node>
+<node id="ep:DELETE:/api/v1/notifications/campaigns/:id"><data key="type">Endpoint</data><data key="label">DELETE /api/v1/notifications/campaigns/:id</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/notifications/templates/:id/variables"><data key="type">Endpoint</data><data key="label">GET /api/v1/notifications/templates/:id/variables</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/notifications/channels"><data key="type">Endpoint</data><data key="label">GET /api/v1/notifications/channels</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/notifications/events"><data key="type">Endpoint</data><data key="label">GET /api/v1/notifications/events</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/notifications/groups"><data key="type">Endpoint</data><data key="label">GET /api/v1/notifications/groups</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/notifications/:id"><data key="type">Endpoint</data><data key="label">GET /api/v1/notifications/:id</data><data key="verification">VERIFIED</data></node>
+<node id="ep:PATCH:/api/v1/notifications/:id/read"><data key="type">Endpoint</data><data key="label">PATCH /api/v1/notifications/:id/read</data><data key="verification">VERIFIED</data></node>
+<node id="ep:PATCH:/api/v1/notifications/:id/archive"><data key="type">Endpoint</data><data key="label">PATCH /api/v1/notifications/:id/archive</data><data key="verification">VERIFIED</data></node>
+<node id="ep:DELETE:/api/v1/notifications/:id"><data key="type">Endpoint</data><data key="label">DELETE /api/v1/notifications/:id</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/settings/notifications/me"><data key="type">Endpoint</data><data key="label">GET /api/v1/settings/notifications/me</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:getUserNotifications"><data key="type">Controller</data><data key="label">getUserNotifications</data><data key="verification">VERIFIED</data></node>
+<node id="ep:PUT:/api/v1/settings/notifications/me"><data key="type">Endpoint</data><data key="label">PUT /api/v1/settings/notifications/me</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:updateUserNotifications"><data key="type">Controller</data><data key="label">updateUserNotifications</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/settings/notifications/defaults"><data key="type">Endpoint</data><data key="label">GET /api/v1/settings/notifications/defaults</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:getDefaultNotifications"><data key="type">Controller</data><data key="label">getDefaultNotifications</data><data key="verification">VERIFIED</data></node>
+<node id="ep:PUT:/api/v1/settings/notifications/defaults"><data key="type">Endpoint</data><data key="label">PUT /api/v1/settings/notifications/defaults</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:updateDefaultNotifications"><data key="type">Controller</data><data key="label">updateDefaultNotifications</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:notifications"><data key="type">Table</data><data key="label">notifications</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:notification_deliveries"><data key="type">Table</data><data key="label">notification_deliveries</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:notification_preferences"><data key="type">Table</data><data key="label">notification_preferences</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:notification_templates"><data key="type">Table</data><data key="label">notification_templates</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:notification_channels"><data key="type">Table</data><data key="label">notification_channels</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:notification_events"><data key="type">Table</data><data key="label">notification_events</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:notification_groups"><data key="type">Table</data><data key="label">notification_groups</data><data key="verification">VERIFIED</data></node>
+<edge id="e0" source="ep:GET:/api/v1/settings/notifications/me" target="ctrl:getUserNotifications"><data key="rel">handles</data></edge>
+<edge id="e1" source="ep:PUT:/api/v1/settings/notifications/me" target="ctrl:updateUserNotifications"><data key="rel">handles</data></edge>
+<edge id="e2" source="ep:GET:/api/v1/settings/notifications/defaults" target="ctrl:getDefaultNotifications"><data key="rel">handles</data></edge>
+<edge id="e3" source="ep:PUT:/api/v1/settings/notifications/defaults" target="ctrl:updateDefaultNotifications"><data key="rel">handles</data></edge>
+</graph></graphml>

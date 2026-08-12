@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fintech-backend-config
+data:
+  CORS_ORIGIN: https://dev.app.example.com
+  LOG_LEVEL: debug
+  APP_BUILD: kubernetes-dev

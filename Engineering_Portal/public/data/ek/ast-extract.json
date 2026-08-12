@@ -1,0 +1,385 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T18:20:27.631Z",
+    "generatorVersion": "3.0.0-b",
+    "evidenceCount": 888,
+    "verificationStatus": "verified-from-source"
+  },
+  "files": 888,
+  "data": [
+    {
+      "file": "Backend_Fintech/src/app/app.ts",
+      "entities": [
+        {
+          "kind": "Function",
+          "name": "createApp",
+          "file": "Backend_Fintech/src/app/app.ts"
+        }
+      ],
+      "imports": [
+        {
+          "from": "express",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "morgan",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "cookie-parser",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./config",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/system/services/health.service",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./config/http-security",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./shared/middleware/not-found.middleware",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./shared/middleware/error-handler.middleware",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./shared/middleware/request-context.middleware",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./shared/middleware/request-logging.middleware",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/auth",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/dashboard",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/merchant",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/transactions",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/settlements",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/users",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/roles",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/permissions",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/reports",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/exports",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/settings",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/notifications",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/audit",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/organizations",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/customers",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/refunds",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/chargebacks",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/payouts",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/payment-links",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/invoices",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/qr-payments",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/subscriptions",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/support",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/merchant-onboarding",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/outlets",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/merchant-users",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/onboarding-approval",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/devices",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/payment-config",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/pricing",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/risk-rules",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/fraud",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/accounting",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/search",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/activity",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/payments",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/checkout",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/smart-collect",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/acceptance",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/operations",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/ai",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/system",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/developer",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/webhooks",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/reconciliation",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./modules/sandbox",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./shared/middleware/feature-flag.middleware",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./shared/middleware/global-rate-limit.middleware",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./shared/middleware/csrf.middleware",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "from": "./swagger",
+          "file": "Backend_Fintech/src/app/app.ts"
+        }
+      ],
+      "exports": [],
+      "injections": [],
+      "methodCalls": [],
+      "httpCalls": [
+        {
+          "method": "GET",
+          "url": "/api/live",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "method": "GET",
+          "url": "/api/ready",
+          "file": "Backend_Fintech/src/app/app.ts"
+        },
+        {
+          "method": "GET",
+          "url": "/api/health",
+          "file": "Backend_Fintech/src/app/app.ts"
+        }
+      ],
+      "templateUrls": []
+    },
+    {
+      "file": "Backend_Fintech/src/app/config/app-meta.ts",
+      "entities": [
+        {
+          "kind": "Function",
+          "name": "readPackageVersion",
+          "file": "Backend_Fintech/src/app/config/app-meta.ts"
+        }
+      ],
+      "imports": [
+        {
+          "from": "node:fs",
+          "file": "Backend_Fintech/src/app/config/app-meta.ts"
+        },
+        {
+          "from": "node:path",
+          "file": "Backend_Fintech/src/app/config/app-meta.ts"
+        },
+        {
+          "from": "./env",
+          "file": "Backend_Fintech/src/app/config/app-meta.ts"
+        }
+      ],
+      "exports": [],
+      "injections": [],
+      "methodCalls": [],
+      "httpCalls": [],
+      "templateUrls": []
+    },
+    {
+      "file": "Backend_Fintech/src/app/config/csp.config.ts",
+      "entities": [
+        {
+          "kind": "Function",
+          "name": "resolveCorsOrigins",
+          "file": "Backend_Fintech/src/app/config/csp.config.ts"
+        },
+        {
+          "kind": "Function",
+          "name": "parseExtraOrigins",
+          "file": "Backend_Fintech/src/app/config/csp.config.ts"
+        },
+        {
+          "kind": "Function",
+          "name": "normalizeOrigin",
+          "file": "Backend_Fintech/src/app/config/csp.config.ts"
+        },
+        {
+          "kind": "Function",
+          "name": "buildContentSecurityPolicyDirectives",
+          "file": "Backend_Fintech/src/app/config/csp.config.ts"
+        },
+        {
+          "kind": "Function",
+          "name": "isContentSecurityPolicyEnabled",
+          "file": "Backend_Fintech/src/app/config/csp.config.ts"
+        },
+        {
+          "kind": "Function",
+          "name": "buildAngularContentSecurityPolicy",
+          "file": "Backend_Fintech/src/app/config/csp.config.ts"
+        }
+      ],
+      "imports": [
+        {
+          "from": "./env",
+          "file": "Backend_Fintech/src/app/config/csp.config.ts"
+        }
+      ],
+      "exports": [],
+      "injections": [],
+      "methodCalls": [],
+      "httpCalls": [],
+      "templateUrls": []
+    },
+    {
+      "file": "Backend_Fintech/src/app/config/database/index.ts",
+      "entities": [],
+      "imports": [],
+      "exports": [],
+      "injections": [],
+      "methodCalls": [],
+      "httpCalls": [],
+      "templateUrls": []
+    },
+    {
+      "file": "Backend_Fintech/src/app/config/env.ts",
+      "entities": [
+        {
+          "kind": "Function",
+          "name": "requireEnv",
+          "file": "Backend_Fintech/src/app/config/env.ts"
+        }
+      ],
+      "imports": [],
+      "exports": [],
+      "injections": [],
+      "methodCalls": [],
+      "httpCalls": [],
+      "templateUrls": []
+    }
+  ]
+}

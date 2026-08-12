@@ -1,0 +1,6282 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T19:07:37.657Z"
+  },
+  "mappings": [
+    {
+      "swagger": "/api/docs",
+      "configFile": "Backend_Fintech/src/app/swagger/swagger.config.ts",
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\swagger\\swagger.config.ts",
+        "line": 1
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/acceptance/analytics",
+      "module": "acceptance",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/acceptance/routes/acceptance.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/acceptance/top-merchants",
+      "module": "acceptance",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/acceptance/routes/acceptance.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/acceptance/failure-insights",
+      "module": "acceptance",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/acceptance/routes/acceptance.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/acceptance/merchant-portal/:merchantId",
+      "module": "acceptance",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/acceptance/routes/acceptance.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/accounting/accounts",
+      "module": "accounting",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/accounting/routes/accounting.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/accounting/entries",
+      "module": "accounting",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/accounting/routes/accounting.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/accounting/summary",
+      "module": "accounting",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/accounting/routes/accounting.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/accounting/export",
+      "module": "accounting",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/accounting/routes/accounting.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/activity/timeline",
+      "module": "activity",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/activity/routes/activity.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/ai/chat",
+      "module": "ai",
+      "dtos": [
+        "validateBody(aiChatBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/ai/routes/ai.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/ai/insights/dashboard",
+      "module": "ai",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/ai/routes/ai.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/ai/insights/revenue-forecast",
+      "module": "ai",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/ai/routes/ai.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/ai/insights/settlement-forecast",
+      "module": "ai",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/ai/routes/ai.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/ai/insights/merchant-health",
+      "module": "ai",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/ai/routes/ai.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/ai/insights/fraud-prediction",
+      "module": "ai",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/ai/routes/ai.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/ai/search",
+      "module": "ai",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/ai/routes/ai.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/audit",
+      "module": "audit",
+      "dtos": [
+        "validateQuery(auditListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/audit/routes/audit.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/audit/export",
+      "module": "audit",
+      "dtos": [
+        "validateQuery(auditExportQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/audit/routes/audit.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/audit/categories",
+      "module": "audit",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/audit/routes/audit.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/audit/actions",
+      "module": "audit",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/audit/routes/audit.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/audit/api-logs",
+      "module": "audit",
+      "dtos": [
+        "validateQuery(apiLogListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/audit/routes/audit.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/audit/webhook-logs",
+      "module": "audit",
+      "dtos": [
+        "validateQuery(webhookLogListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/audit/routes/audit.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/audit/:id",
+      "module": "audit",
+      "dtos": [
+        "validateParams(auditIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/audit/routes/audit.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "GET /csrf-token",
+      "module": "auth",
+      "dtos": [],
+      "verification": "NOT VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 61
+      }
+    },
+    {
+      "endpoint": "POST /login",
+      "module": "auth",
+      "dtos": [
+        "validateBody(loginSchema)"
+      ],
+      "verification": "NOT VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 62
+      }
+    },
+    {
+      "endpoint": "POST /verify-otp",
+      "module": "auth",
+      "dtos": [
+        "validateBody(verifyOtpSchema)"
+      ],
+      "verification": "NOT VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 63
+      }
+    },
+    {
+      "endpoint": "POST /resend-otp",
+      "module": "auth",
+      "dtos": [
+        "validateBody(resendOtpSchema)"
+      ],
+      "verification": "NOT VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 64
+      }
+    },
+    {
+      "endpoint": "POST /forgot-password",
+      "module": "auth",
+      "dtos": [
+        "validateBody(forgotPasswordSchema)"
+      ],
+      "verification": "NOT VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 65
+      }
+    },
+    {
+      "endpoint": "POST /reset-password",
+      "module": "auth",
+      "dtos": [
+        "validateBody(resetPasswordSchema)"
+      ],
+      "verification": "NOT VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 66
+      }
+    },
+    {
+      "endpoint": "POST /refresh-token",
+      "module": "auth",
+      "dtos": [
+        "validateBody(refreshTokenSchema)"
+      ],
+      "verification": "NOT VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 67
+      }
+    },
+    {
+      "endpoint": "POST /select-organization",
+      "module": "auth",
+      "dtos": [
+        "validateBody(selectOrganizationSchema)"
+      ],
+      "verification": "NOT VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 68
+      }
+    },
+    {
+      "endpoint": "POST /logout",
+      "module": "auth",
+      "dtos": [],
+      "verification": "NOT VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 70
+      }
+    },
+    {
+      "endpoint": "GET /me",
+      "module": "auth",
+      "dtos": [],
+      "verification": "NOT VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 71
+      }
+    },
+    {
+      "endpoint": "GET /sessions",
+      "module": "auth",
+      "dtos": [],
+      "verification": "NOT VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 72
+      }
+    },
+    {
+      "endpoint": "DELETE /sessions/others",
+      "module": "auth",
+      "dtos": [],
+      "verification": "NOT VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 73
+      }
+    },
+    {
+      "endpoint": "DELETE /session/:id",
+      "module": "auth",
+      "dtos": [],
+      "verification": "NOT VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 74
+      }
+    },
+    {
+      "endpoint": "POST /change-password",
+      "module": "auth",
+      "dtos": [
+        "validateBody(changePasswordSchema)"
+      ],
+      "verification": "NOT VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 75
+      }
+    },
+    {
+      "endpoint": "PUT /mfa-preferences",
+      "module": "auth",
+      "dtos": [
+        "validateBody(mfaPreferencesSchema)"
+      ],
+      "verification": "NOT VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 76
+      }
+    },
+    {
+      "endpoint": "GET /session-settings",
+      "module": "auth",
+      "dtos": [],
+      "verification": "NOT VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 77
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/chargebacks/statistics",
+      "module": "chargebacks",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/chargebacks/sla-dashboard",
+      "module": "chargebacks",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/chargebacks/analytics",
+      "module": "chargebacks",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/chargebacks",
+      "module": "chargebacks",
+      "dtos": [
+        "validateQuery(chargebackListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/chargebacks",
+      "module": "chargebacks",
+      "dtos": [
+        "validateBody(createChargebackBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/chargebacks/:id/history",
+      "module": "chargebacks",
+      "dtos": [
+        "validateParams(chargebackIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/chargebacks/:id/evidence",
+      "module": "chargebacks",
+      "dtos": [
+        "validateParams(chargebackIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/chargebacks/:id/evidence",
+      "module": "chargebacks",
+      "dtos": [
+        "validateParams(chargebackIdParamSchema)",
+        "validateBody(addEvidenceBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/chargebacks/:id/representment",
+      "module": "chargebacks",
+      "dtos": [
+        "validateParams(chargebackIdParamSchema)",
+        "validateBody(representmentBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/chargebacks/:id/arbitration",
+      "module": "chargebacks",
+      "dtos": [
+        "validateParams(chargebackIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/chargebacks/:id/resolve",
+      "module": "chargebacks",
+      "dtos": [
+        "validateParams(chargebackIdParamSchema)",
+        "validateBody(resolveChargebackBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/chargebacks/:id",
+      "module": "chargebacks",
+      "dtos": [
+        "validateParams(chargebackIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/public/checkout/themes",
+      "module": "checkout",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/checkout/routes/checkout.routes.ts",
+        "line": 21
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/public/checkout/analytics",
+      "module": "checkout",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/checkout/routes/checkout.routes.ts",
+        "line": 22
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/public/checkout/sessions",
+      "module": "checkout",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/checkout/routes/checkout.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/public/checkout/sessions",
+      "module": "checkout",
+      "dtos": [
+        "validateBody(createCheckoutSessionBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/checkout/routes/checkout.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/public/checkout/sessions/:id",
+      "module": "checkout",
+      "dtos": [
+        "validateParams(checkoutIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/checkout/routes/checkout.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/public/checkout/branding/:merchantId",
+      "module": "checkout",
+      "dtos": [
+        "validateParams(merchantIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/checkout/routes/checkout.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/public/checkout/branding/:merchantId",
+      "module": "checkout",
+      "dtos": [
+        "validateParams(merchantIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/checkout/routes/checkout.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/customers/search",
+      "module": "customers",
+      "dtos": [
+        "validateQuery(customerSearchQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/customers/statistics",
+      "module": "customers",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/customers",
+      "module": "customers",
+      "dtos": [
+        "validateQuery(customerListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/customers",
+      "module": "customers",
+      "dtos": [
+        "validateBody(createCustomerBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/customers/:id",
+      "module": "customers",
+      "dtos": [
+        "validateParams(customerIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/customers/:id",
+      "module": "customers",
+      "dtos": [
+        "validateParams(customerIdParamSchema)",
+        "validateBody(updateCustomerBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "PATCH /api/v1/customers/:id/status",
+      "module": "customers",
+      "dtos": [
+        "validateParams(customerIdParamSchema)",
+        "validateBody(updateCustomerStatusBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/customers/:id",
+      "module": "customers",
+      "dtos": [
+        "validateParams(customerIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/customers/:id/transactions",
+      "module": "customers",
+      "dtos": [
+        "validateParams(customerIdParamSchema)",
+        "validateQuery(customerTransactionsQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/customers/:id/merchants",
+      "module": "customers",
+      "dtos": [
+        "validateParams(customerIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/customers/:id/preferences",
+      "module": "customers",
+      "dtos": [
+        "validateParams(customerIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/customers/:id/preferences",
+      "module": "customers",
+      "dtos": [
+        "validateParams(customerIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 36
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/customers/:id/payment-methods",
+      "module": "customers",
+      "dtos": [
+        "validateParams(customerIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 37
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/customers/:id/timeline",
+      "module": "customers",
+      "dtos": [
+        "validateParams(customerIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 38
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/dashboard/executive/summary",
+      "module": "dashboard",
+      "dtos": [
+        "validateQuery(periodQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/dashboard/executive/charts/revenue",
+      "module": "dashboard",
+      "dtos": [
+        "validateQuery(periodQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/dashboard/executive/charts/payment-methods",
+      "module": "dashboard",
+      "dtos": [
+        "validateQuery(periodQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/dashboard/executive/charts/regional-distribution",
+      "module": "dashboard",
+      "dtos": [
+        "validateQuery(periodQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/dashboard/executive/transactions/high-value",
+      "module": "dashboard",
+      "dtos": [
+        "validateQuery(highValueTransactionsQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/dashboard/executive/activities",
+      "module": "dashboard",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/dashboard/executive/fraud-alerts",
+      "module": "dashboard",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/dashboard/executive/onboarding-stats",
+      "module": "dashboard",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/dashboard/executive/payment-platform-stats",
+      "module": "dashboard",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/dashboard/executive/operations-stats",
+      "module": "dashboard",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/dashboard/executive/export",
+      "module": "dashboard",
+      "dtos": [
+        "validateBody(exportBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/dashboard/executive/preferences",
+      "module": "dashboard",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 36
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/dashboard/executive/preferences",
+      "module": "dashboard",
+      "dtos": [
+        "validateBody(preferencesBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 37
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/dashboard/executive/ai/chat",
+      "module": "dashboard",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 39
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/developer/dashboard",
+      "module": "developer",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/developer/routes/developer.routes.ts",
+        "line": 22
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/developer/profiles",
+      "module": "developer",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/developer/routes/developer.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/developer/profiles",
+      "module": "developer",
+      "dtos": [
+        "validateBody(createProfileSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/developer/routes/developer.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/developer/profiles/:id",
+      "module": "developer",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/developer/routes/developer.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/developer/profiles/:id",
+      "module": "developer",
+      "dtos": [
+        "validateBody(updateProfileSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/developer/routes/developer.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/developer/profiles/:id",
+      "module": "developer",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/developer/routes/developer.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/developer/oauth-apps",
+      "module": "developer",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/developer/routes/developer.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/developer/oauth-apps",
+      "module": "developer",
+      "dtos": [
+        "validateBody(createOAuthAppSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/developer/routes/developer.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/developer/oauth-apps/:id",
+      "module": "developer",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/developer/routes/developer.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/developer/oauth-apps/:id",
+      "module": "developer",
+      "dtos": [
+        "validateBody(updateOAuthAppSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/developer/routes/developer.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/developer/oauth-apps/:id/revoke",
+      "module": "developer",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/developer/routes/developer.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/developer/api-usage",
+      "module": "developer",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/developer/routes/developer.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/developer/api-keys",
+      "module": "developer",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/developer/routes/developer.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/devices/inventory",
+      "module": "devices",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/devices/routes/device.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/devices",
+      "module": "devices",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/devices/routes/device.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/devices",
+      "module": "devices",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/devices/routes/device.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/devices/:id",
+      "module": "devices",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/devices/routes/device.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/devices/:id/activate",
+      "module": "devices",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/devices/routes/device.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/devices/:id/deactivate",
+      "module": "devices",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/devices/routes/device.routes.ts",
+        "line": 20
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/devices/:id/transfer",
+      "module": "devices",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/devices/routes/device.routes.ts",
+        "line": 21
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/devices/:id/replace",
+      "module": "devices",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/devices/routes/device.routes.ts",
+        "line": 22
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/devices/:id/sync",
+      "module": "devices",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/devices/routes/device.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/exports/:fileId",
+      "module": "exports",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/exports/routes/export.routes.ts",
+        "line": 12
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/fraud",
+      "module": "fraud",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/fraud/routes/fraud.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/fraud/:id",
+      "module": "fraud",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/fraud/routes/fraud.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/fraud/:id/approve",
+      "module": "fraud",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/fraud/routes/fraud.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/fraud/:id/reject",
+      "module": "fraud",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/fraud/routes/fraud.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/fraud/:id/release",
+      "module": "fraud",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/fraud/routes/fraud.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/invoices/statistics",
+      "module": "invoices",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/invoices/analytics",
+      "module": "invoices",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/invoices/templates",
+      "module": "invoices",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/invoices/templates",
+      "module": "invoices",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/invoices/templates/:id",
+      "module": "invoices",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/invoices/templates/:id",
+      "module": "invoices",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/invoices/templates/:id",
+      "module": "invoices",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/invoices/credit-notes",
+      "module": "invoices",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/invoices/credit-notes",
+      "module": "invoices",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/invoices/debit-notes",
+      "module": "invoices",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/invoices/debit-notes",
+      "module": "invoices",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/invoices",
+      "module": "invoices",
+      "dtos": [
+        "validateQuery(invoiceListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/invoices",
+      "module": "invoices",
+      "dtos": [
+        "validateBody(createInvoiceBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 36
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/invoices/:id/pdf",
+      "module": "invoices",
+      "dtos": [
+        "validateParams(invoiceIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 37
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/invoices/:id/pdf/metadata",
+      "module": "invoices",
+      "dtos": [
+        "validateParams(invoiceIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 38
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/invoices/:id/duplicate",
+      "module": "invoices",
+      "dtos": [
+        "validateParams(invoiceIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 39
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/invoices/:id/void",
+      "module": "invoices",
+      "dtos": [
+        "validateParams(invoiceIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 40
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/invoices/:id/cancel",
+      "module": "invoices",
+      "dtos": [
+        "validateParams(invoiceIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 41
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/invoices/:id/send",
+      "module": "invoices",
+      "dtos": [
+        "validateParams(invoiceIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 42
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/invoices/:id/mark-viewed",
+      "module": "invoices",
+      "dtos": [
+        "validateParams(invoiceIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 43
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/invoices/:id/mark-overdue",
+      "module": "invoices",
+      "dtos": [
+        "validateParams(invoiceIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 44
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/invoices/:id/mark-paid",
+      "module": "invoices",
+      "dtos": [
+        "validateParams(invoiceIdParamSchema)",
+        "validateBody(markPaidBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 45
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/invoices/:id/email",
+      "module": "invoices",
+      "dtos": [
+        "validateParams(invoiceIdParamSchema)",
+        "validateBody(emailInvoiceBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 46
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/invoices/:id/payment-link",
+      "module": "invoices",
+      "dtos": [
+        "validateParams(invoiceIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 47
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/invoices/:id/payment-link/regenerate",
+      "module": "invoices",
+      "dtos": [
+        "validateParams(invoiceIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 48
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/invoices/:id/payment-link/disable",
+      "module": "invoices",
+      "dtos": [
+        "validateParams(invoiceIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 49
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/invoices/:id",
+      "module": "invoices",
+      "dtos": [
+        "validateParams(invoiceIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 50
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/invoices/:id",
+      "module": "invoices",
+      "dtos": [
+        "validateParams(invoiceIdParamSchema)",
+        "validateBody(updateInvoiceBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 51
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/merchants/search",
+      "module": "merchant",
+      "dtos": [
+        "validateQuery(merchantSearchQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/merchants/statistics",
+      "module": "merchant",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/merchants",
+      "module": "merchant",
+      "dtos": [
+        "validateQuery(merchantListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/merchants",
+      "module": "merchant",
+      "dtos": [
+        "validateBody(createMerchantBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/merchants/:id",
+      "module": "merchant",
+      "dtos": [
+        "validateParams(merchantIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/merchants/:id",
+      "module": "merchant",
+      "dtos": [
+        "validateParams(merchantIdParamSchema)",
+        "validateBody(updateMerchantBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "PATCH /api/v1/merchants/:id/status",
+      "module": "merchant",
+      "dtos": [
+        "validateParams(merchantIdParamSchema)",
+        "validateBody(updateMerchantStatusBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/merchants/:id",
+      "module": "merchant",
+      "dtos": [
+        "validateParams(merchantIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/merchants/:id/transactions",
+      "module": "merchant",
+      "dtos": [
+        "validateParams(merchantIdParamSchema)",
+        "validateQuery(merchantTransactionsQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/merchants/:id/settlements",
+      "module": "merchant",
+      "dtos": [
+        "validateParams(merchantIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 36
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/merchants/:id/documents",
+      "module": "merchant",
+      "dtos": [
+        "validateParams(merchantIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 37
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/merchants/:id/documents",
+      "module": "merchant",
+      "dtos": [
+        "validateParams(merchantIdParamSchema)",
+        "validateBody(createDocumentBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 38
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/merchants/:id/documents/:documentId",
+      "module": "merchant",
+      "dtos": [
+        "validateParams(merchantDocumentParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 39
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/merchant-onboarding/statistics",
+      "module": "merchant-onboarding",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 21
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/merchant-onboarding",
+      "module": "merchant-onboarding",
+      "dtos": [
+        "validateQuery(onboardingListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 22
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/merchant-onboarding",
+      "module": "merchant-onboarding",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/merchant-onboarding/:id",
+      "module": "merchant-onboarding",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/merchant-onboarding/:id/timeline",
+      "module": "merchant-onboarding",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/merchant-onboarding/:id/business",
+      "module": "merchant-onboarding",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)",
+        "validateBody(businessInfoSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/merchant-onboarding/:id/addresses",
+      "module": "merchant-onboarding",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)",
+        "validateBody(addressesBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/merchant-onboarding/:id/kyc",
+      "module": "merchant-onboarding",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)",
+        "validateBody(kycDocumentsBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/merchant-onboarding/:id/bank",
+      "module": "merchant-onboarding",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)",
+        "validateBody(bankDetailsSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/merchant-onboarding/:id/settlement",
+      "module": "merchant-onboarding",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)",
+        "validateBody(settlementConfigSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/merchant-onboarding/:id/payment",
+      "module": "merchant-onboarding",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)",
+        "validateBody(paymentConfigSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/merchant-onboarding/:id/submit",
+      "module": "merchant-onboarding",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/merchant-onboarding/:id/approve",
+      "module": "merchant-onboarding",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/merchant-onboarding/:id/reject",
+      "module": "merchant-onboarding",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)",
+        "validateBody(rejectBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/merchant-onboarding/:id/go-live",
+      "module": "merchant-onboarding",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/merchant-onboarding/:id/suspend",
+      "module": "merchant-onboarding",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)",
+        "validateBody(suspendBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 36
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/merchant-users/me",
+      "module": "merchant-users",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 22
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/merchant-users/roles",
+      "module": "merchant-users",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/merchant-users",
+      "module": "merchant-users",
+      "dtos": [
+        "validateQuery(merchantUserListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/merchant-users",
+      "module": "merchant-users",
+      "dtos": [
+        "validateBody(createMerchantUserBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/merchant-users/invite",
+      "module": "merchant-users",
+      "dtos": [
+        "validateBody(inviteMerchantUserBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/merchant-users/:id",
+      "module": "merchant-users",
+      "dtos": [
+        "validateParams(merchantUserIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/merchant-users/:id",
+      "module": "merchant-users",
+      "dtos": [
+        "validateParams(merchantUserIdParamSchema)",
+        "validateBody(updateMerchantUserBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/merchant-users/:id/activate",
+      "module": "merchant-users",
+      "dtos": [
+        "validateParams(merchantUserIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/merchant-users/:id/deactivate",
+      "module": "merchant-users",
+      "dtos": [
+        "validateParams(merchantUserIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/merchant-users/:id/role",
+      "module": "merchant-users",
+      "dtos": [
+        "validateParams(merchantUserIdParamSchema)",
+        "validateBody(assignRoleBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/merchant-users/:id/outlets",
+      "module": "merchant-users",
+      "dtos": [
+        "validateParams(merchantUserIdParamSchema)",
+        "validateBody(assignOutletsBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/merchant-users/:id/reset-password",
+      "module": "merchant-users",
+      "dtos": [
+        "validateParams(merchantUserIdParamSchema)",
+        "validateBody(resetPasswordBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 36
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/notifications",
+      "module": "notifications",
+      "dtos": [
+        "validateQuery(notificationListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/notifications/unread-count",
+      "module": "notifications",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "PATCH /api/v1/notifications/read-all",
+      "module": "notifications",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "PATCH /api/v1/notifications/archive-all",
+      "module": "notifications",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/notifications/templates",
+      "module": "notifications",
+      "dtos": [
+        "validateQuery(templateListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 36
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/notifications/templates",
+      "module": "notifications",
+      "dtos": [
+        "validateBody(createTemplateBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 37
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/notifications/templates/:id",
+      "module": "notifications",
+      "dtos": [
+        "validateParams(templateIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 38
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/notifications/templates/:id",
+      "module": "notifications",
+      "dtos": [
+        "validateParams(templateIdParamSchema)",
+        "validateBody(updateTemplateBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 39
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/notifications/templates/:id",
+      "module": "notifications",
+      "dtos": [
+        "validateParams(templateIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 40
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/notifications/broadcasts",
+      "module": "notifications",
+      "dtos": [
+        "validateQuery(broadcastListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 43
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/notifications/broadcasts",
+      "module": "notifications",
+      "dtos": [
+        "validateBody(createBroadcastBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 44
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/notifications/campaigns",
+      "module": "notifications",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 46
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/notifications/campaigns",
+      "module": "notifications",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 47
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/notifications/campaigns/:id",
+      "module": "notifications",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 48
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/notifications/campaigns/:id",
+      "module": "notifications",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 49
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/notifications/campaigns/:id",
+      "module": "notifications",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 50
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/notifications/templates/:id/variables",
+      "module": "notifications",
+      "dtos": [
+        "validateParams(templateIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 51
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/notifications/channels",
+      "module": "notifications",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 54
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/notifications/events",
+      "module": "notifications",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 55
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/notifications/groups",
+      "module": "notifications",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 56
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/notifications/:id",
+      "module": "notifications",
+      "dtos": [
+        "validateParams(notificationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 59
+      }
+    },
+    {
+      "endpoint": "PATCH /api/v1/notifications/:id/read",
+      "module": "notifications",
+      "dtos": [
+        "validateParams(notificationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 60
+      }
+    },
+    {
+      "endpoint": "PATCH /api/v1/notifications/:id/archive",
+      "module": "notifications",
+      "dtos": [
+        "validateParams(notificationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 61
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/notifications/:id",
+      "module": "notifications",
+      "dtos": [
+        "validateParams(notificationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 62
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/onboarding-approval/stages",
+      "module": "onboarding-approval",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 21
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/onboarding-approval/dashboard-stats",
+      "module": "onboarding-approval",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 22
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/onboarding-approval/compliance-queue",
+      "module": "onboarding-approval",
+      "dtos": [
+        "validateQuery(complianceQueueQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/onboarding-approval/compliance-queue/bulk-assign",
+      "module": "onboarding-approval",
+      "dtos": [
+        "validateBody(bulkAssignBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/onboarding-approval/:applicationId/workflow",
+      "module": "onboarding-approval",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/workflow/start",
+      "module": "onboarding-approval",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/approve",
+      "module": "onboarding-approval",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)",
+        "validateBody(decisionBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/reject",
+      "module": "onboarding-approval",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)",
+        "validateBody(decisionBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/send-back",
+      "module": "onboarding-approval",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)",
+        "validateBody(decisionBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/reassign",
+      "module": "onboarding-approval",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)",
+        "validateBody(reassignBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/skip-stage",
+      "module": "onboarding-approval",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)",
+        "validateBody(decisionBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/go-live",
+      "module": "onboarding-approval",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/suspend",
+      "module": "onboarding-approval",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)",
+        "validateBody(suspendBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/activate",
+      "module": "onboarding-approval",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/onboarding-approval/:applicationId/risk",
+      "module": "onboarding-approval",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 37
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/onboarding-approval/:applicationId/risk",
+      "module": "onboarding-approval",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)",
+        "validateBody(riskReviewBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 38
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/onboarding-approval/:applicationId/kyc",
+      "module": "onboarding-approval",
+      "dtos": [
+        "validateParams(applicationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 40
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/kyc/:documentId/decision",
+      "module": "onboarding-approval",
+      "dtos": [
+        "validateParams(documentIdParamSchema)",
+        "validateBody(kycDecisionBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 41
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/operations/dashboard",
+      "module": "operations",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/operations/queues",
+      "module": "operations",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/operations/dead-letter-queue",
+      "module": "operations",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/operations/maintenance",
+      "module": "operations",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 20
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/operations/maintenance",
+      "module": "operations",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 21
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/operations/deployments",
+      "module": "operations",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 22
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/operations/pending-tasks",
+      "module": "operations",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/operations/health",
+      "module": "operations",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/operations/alerts",
+      "module": "operations",
+      "dtos": [
+        "validateQuery(alertListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/operations/incidents",
+      "module": "operations",
+      "dtos": [
+        "validateQuery(incidentListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/operations/retry-queue",
+      "module": "operations",
+      "dtos": [
+        "validateQuery(retryListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/operations/jobs",
+      "module": "operations",
+      "dtos": [
+        "validateQuery(jobListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/operations/failed-payments",
+      "module": "operations",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/operations/failed-payouts",
+      "module": "operations",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/operations/failed-webhooks",
+      "module": "operations",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/operations/alerts/:id/acknowledge",
+      "module": "operations",
+      "dtos": [
+        "validateParams(idParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/operations/alerts/:id/resolve",
+      "module": "operations",
+      "dtos": [
+        "validateParams(idParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/operations/retry-queue/:id/retry",
+      "module": "operations",
+      "dtos": [
+        "validateParams(idParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/operations/jobs/:id/retry",
+      "module": "operations",
+      "dtos": [
+        "validateParams(idParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/organizations/mine",
+      "module": "organizations",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/organizations/roles",
+      "module": "organizations",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/organizations",
+      "module": "organizations",
+      "dtos": [
+        "validateQuery(organizationListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 36
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/organizations",
+      "module": "organizations",
+      "dtos": [
+        "validateBody(createOrganizationBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 37
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/organizations/:id",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(organizationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 39
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/organizations/:id",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(organizationIdParamSchema)",
+        "validateBody(updateOrganizationBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 40
+      }
+    },
+    {
+      "endpoint": "PATCH /api/v1/organizations/:id/status",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(organizationIdParamSchema)",
+        "validateBody(updateOrganizationStatusBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 41
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/organizations/:id/archive",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(organizationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 42
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/organizations/:id/restore",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(organizationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 43
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/organizations/:id/members",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(organizationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 45
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/organizations/:id/members",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(organizationIdParamSchema)",
+        "validateBody(createMemberBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 46
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/organizations/:id/members/:memberId",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(memberIdParamSchema)",
+        "validateBody(updateMemberBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 47
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/organizations/:id/members/:memberId",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(memberIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 48
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/organizations/:id/domains",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(organizationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 50
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/organizations/:id/domains",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(organizationIdParamSchema)",
+        "validateBody(createDomainBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 51
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/organizations/:id/domains/:domainId",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(domainIdParamSchema)",
+        "validateBody(updateDomainBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 52
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/organizations/:id/domains/:domainId",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(domainIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 53
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/organizations/:id/branding",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(organizationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 55
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/organizations/:id/branding",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(organizationIdParamSchema)",
+        "validateBody(brandingBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 56
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/organizations/:id/preferences",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(organizationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 58
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/organizations/:id/preferences",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(organizationIdParamSchema)",
+        "validateBody(preferencesBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 59
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/organizations/:id/api-keys",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(organizationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 61
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/organizations/:id/api-keys",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(organizationIdParamSchema)",
+        "validateBody(createApiKeyBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 62
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/organizations/:id/api-keys/:keyId",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(apiKeyIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 63
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/organizations/:id/billing",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(organizationIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 65
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/organizations/:id/billing",
+      "module": "organizations",
+      "dtos": [
+        "validateParams(organizationIdParamSchema)",
+        "validateBody(billingBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 66
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/outlets",
+      "module": "outlets",
+      "dtos": [
+        "validateQuery(outletListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/outlets/routes/outlet.routes.ts",
+        "line": 21
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/outlets",
+      "module": "outlets",
+      "dtos": [
+        "validateBody(createOutletBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/outlets/routes/outlet.routes.ts",
+        "line": 22
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/outlets/:id",
+      "module": "outlets",
+      "dtos": [
+        "validateParams(outletIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/outlets/routes/outlet.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/outlets/:id",
+      "module": "outlets",
+      "dtos": [
+        "validateParams(outletIdParamSchema)",
+        "validateBody(updateOutletBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/outlets/routes/outlet.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/outlets/:id/activate",
+      "module": "outlets",
+      "dtos": [
+        "validateParams(outletIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/outlets/routes/outlet.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/outlets/:id/deactivate",
+      "module": "outlets",
+      "dtos": [
+        "validateParams(outletIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/outlets/routes/outlet.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payment-config/limits",
+      "module": "payment-config",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-config/routes/payment-config.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/payment-config/limits",
+      "module": "payment-config",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-config/routes/payment-config.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payment-config/merchants/:merchantId",
+      "module": "payment-config",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-config/routes/payment-config.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/payment-config/merchants/:merchantId",
+      "module": "payment-config",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-config/routes/payment-config.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payment-links/statistics",
+      "module": "payment-links",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 22
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payment-links",
+      "module": "payment-links",
+      "dtos": [
+        "validateQuery(paymentLinkListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/payment-links",
+      "module": "payment-links",
+      "dtos": [
+        "validateBody(createPaymentLinkBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payment-links/:id/analytics",
+      "module": "payment-links",
+      "dtos": [
+        "validateParams(paymentLinkIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payment-links/:id/visits",
+      "module": "payment-links",
+      "dtos": [
+        "validateParams(paymentLinkIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/payment-links/:id/clone",
+      "module": "payment-links",
+      "dtos": [
+        "validateParams(paymentLinkIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payment-links/:id/qr",
+      "module": "payment-links",
+      "dtos": [
+        "validateParams(paymentLinkIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/payment-links/:id/enable",
+      "module": "payment-links",
+      "dtos": [
+        "validateParams(paymentLinkIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/payment-links/:id/disable",
+      "module": "payment-links",
+      "dtos": [
+        "validateParams(paymentLinkIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/payment-links/:id/expire",
+      "module": "payment-links",
+      "dtos": [
+        "validateParams(paymentLinkIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/payment-links/:id/regenerate-token",
+      "module": "payment-links",
+      "dtos": [
+        "validateParams(paymentLinkIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payment-links/:id",
+      "module": "payment-links",
+      "dtos": [
+        "validateParams(paymentLinkIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/payment-links/:id",
+      "module": "payment-links",
+      "dtos": [
+        "validateParams(paymentLinkIdParamSchema)",
+        "validateBody(updatePaymentLinkBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/public/payment-links/:token",
+      "module": "payment-links",
+      "dtos": [
+        "validateParams(publicTokenParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/public-payment-link.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/public/payment-links/:token/pay",
+      "module": "payment-links",
+      "dtos": [
+        "validateParams(publicTokenParamSchema)",
+        "validateBody(publicPayBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/public-payment-link.routes.ts",
+        "line": 20
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payments/webhooks/deliveries",
+      "module": "payments",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 20
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payments/orders",
+      "module": "payments",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 21
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payments/orders/:id",
+      "module": "payments",
+      "dtos": [
+        "validateParams(idParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 22
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/payments/sessions",
+      "module": "payments",
+      "dtos": [
+        "validateBody(createSessionBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payments/sessions/:id",
+      "module": "payments",
+      "dtos": [
+        "validateParams(idParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payments/merchant-config/:merchantId",
+      "module": "payments",
+      "dtos": [
+        "validateParams(merchantIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payments/customers/:customerId/profile",
+      "module": "payments",
+      "dtos": [
+        "validateParams(customerIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payments",
+      "module": "payments",
+      "dtos": [
+        "validateQuery(paymentListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/payments",
+      "module": "payments",
+      "dtos": [
+        "validateBody(createPaymentBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payments/:id",
+      "module": "payments",
+      "dtos": [
+        "validateParams(idParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payments/:id/timeline",
+      "module": "payments",
+      "dtos": [
+        "validateParams(idParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/payments/:id/authorize",
+      "module": "payments",
+      "dtos": [
+        "validateParams(idParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/payments/:id/capture",
+      "module": "payments",
+      "dtos": [
+        "validateParams(idParamSchema)",
+        "validateBody(captureBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/payments/:id/cancel",
+      "module": "payments",
+      "dtos": [
+        "validateParams(idParamSchema)",
+        "validateBody(cancelBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/payments/:id/refund",
+      "module": "payments",
+      "dtos": [
+        "validateParams(idParamSchema)",
+        "validateBody(refundBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/payments/:id/retry",
+      "module": "payments",
+      "dtos": [
+        "validateParams(idParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 36
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/payments/:id/expire",
+      "module": "payments",
+      "dtos": [
+        "validateParams(idParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 37
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payouts/statistics",
+      "module": "payouts",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payouts/bank-accounts",
+      "module": "payouts",
+      "dtos": [
+        "validateQuery(bankAccountListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/payouts/bank-accounts",
+      "module": "payouts",
+      "dtos": [
+        "validateBody(createBankAccountBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "PATCH /api/v1/payouts/bank-accounts/:id",
+      "module": "payouts",
+      "dtos": [
+        "validateParams(bankAccountIdParamSchema)",
+        "validateBody(updateBankAccountBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payouts",
+      "module": "payouts",
+      "dtos": [
+        "validateQuery(payoutListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/payouts",
+      "module": "payouts",
+      "dtos": [
+        "validateBody(createPayoutBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payouts/:id/history",
+      "module": "payouts",
+      "dtos": [
+        "validateParams(payoutIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/payouts/:id/approve",
+      "module": "payouts",
+      "dtos": [
+        "validateParams(payoutIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/payouts/:id/reject",
+      "module": "payouts",
+      "dtos": [
+        "validateParams(payoutIdParamSchema)",
+        "validateBody(rejectPayoutBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/payouts/:id/retry",
+      "module": "payouts",
+      "dtos": [
+        "validateParams(payoutIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 36
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/payouts/:id",
+      "module": "payouts",
+      "dtos": [
+        "validateParams(payoutIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 37
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/permissions",
+      "module": "permissions",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/permissions/routes/permission.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/pricing",
+      "module": "pricing",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/pricing/routes/pricing.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/pricing",
+      "module": "pricing",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/pricing/routes/pricing.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/pricing/:id",
+      "module": "pricing",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/pricing/routes/pricing.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/public/qr-payments/templates",
+      "module": "qr-payments",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/public/qr-payments/categories",
+      "module": "qr-payments",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/public/qr-payments/bulk",
+      "module": "qr-payments",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 20
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/public/qr-payments/statistics",
+      "module": "qr-payments",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 21
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/public/qr-payments",
+      "module": "qr-payments",
+      "dtos": [
+        "validateQuery(qrListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 22
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/public/qr-payments",
+      "module": "qr-payments",
+      "dtos": [
+        "validateBody(createQrBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/public/qr-payments/:id/download/svg",
+      "module": "qr-payments",
+      "dtos": [
+        "validateParams(qrIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/public/qr-payments/:id/download",
+      "module": "qr-payments",
+      "dtos": [
+        "validateParams(qrIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/public/qr-payments/:id/scan-history",
+      "module": "qr-payments",
+      "dtos": [
+        "validateParams(qrIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/public/qr-payments/:id/clone",
+      "module": "qr-payments",
+      "dtos": [
+        "validateParams(qrIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/public/qr-payments/:id/archive",
+      "module": "qr-payments",
+      "dtos": [
+        "validateParams(qrIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/public/qr-payments/:id/enable",
+      "module": "qr-payments",
+      "dtos": [
+        "validateParams(qrIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/public/qr-payments/:id/disable",
+      "module": "qr-payments",
+      "dtos": [
+        "validateParams(qrIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/public/qr-payments/:id/regenerate",
+      "module": "qr-payments",
+      "dtos": [
+        "validateParams(qrIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/public/qr-payments/:id",
+      "module": "qr-payments",
+      "dtos": [
+        "validateParams(qrIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/public/qr-payments/:id",
+      "module": "qr-payments",
+      "dtos": [
+        "validateParams(qrIdParamSchema)",
+        "validateBody(updateQrBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/reconciliation/dashboard",
+      "module": "reconciliation",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reconciliation/routes/reconciliation.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/reconciliation/imports",
+      "module": "reconciliation",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reconciliation/routes/reconciliation.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/reconciliation/imports",
+      "module": "reconciliation",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reconciliation/routes/reconciliation.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/reconciliation/imports/:id",
+      "module": "reconciliation",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reconciliation/routes/reconciliation.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/reconciliation/imports/:id",
+      "module": "reconciliation",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reconciliation/routes/reconciliation.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/reconciliation/imports/:id",
+      "module": "reconciliation",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reconciliation/routes/reconciliation.routes.ts",
+        "line": 20
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/reconciliation/imports/:importId/records",
+      "module": "reconciliation",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reconciliation/routes/reconciliation.routes.ts",
+        "line": 21
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/reconciliation/records",
+      "module": "reconciliation",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reconciliation/routes/reconciliation.routes.ts",
+        "line": 22
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/reconciliation/records/:id",
+      "module": "reconciliation",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reconciliation/routes/reconciliation.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/reconciliation/records/:id/match",
+      "module": "reconciliation",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reconciliation/routes/reconciliation.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/refunds/statistics",
+      "module": "refunds",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/refunds/routes/refund.routes.ts",
+        "line": 22
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/refunds",
+      "module": "refunds",
+      "dtos": [
+        "validateQuery(refundListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/refunds/routes/refund.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/refunds",
+      "module": "refunds",
+      "dtos": [
+        "validateBody(createRefundBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/refunds/routes/refund.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/refunds/:id/history",
+      "module": "refunds",
+      "dtos": [
+        "validateParams(refundIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/refunds/routes/refund.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/refunds/:id",
+      "module": "refunds",
+      "dtos": [
+        "validateParams(refundIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/refunds/routes/refund.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/refunds/:id/approve",
+      "module": "refunds",
+      "dtos": [
+        "validateParams(refundIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/refunds/routes/refund.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/refunds/:id/reject",
+      "module": "refunds",
+      "dtos": [
+        "validateParams(refundIdParamSchema)",
+        "validateBody(rejectRefundBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/refunds/routes/refund.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/analytics/overview",
+      "module": "reports",
+      "dtos": [
+        "validateQuery(analyticsQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/analytics/revenue",
+      "module": "reports",
+      "dtos": [
+        "validateQuery(analyticsQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/analytics/transactions",
+      "module": "reports",
+      "dtos": [
+        "validateQuery(analyticsQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/analytics/settlements",
+      "module": "reports",
+      "dtos": [
+        "validateQuery(analyticsQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 20
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/analytics/merchants",
+      "module": "reports",
+      "dtos": [
+        "validateQuery(analyticsQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 21
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/analytics/customers",
+      "module": "reports",
+      "dtos": [
+        "validateQuery(analyticsQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 22
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/analytics/refunds",
+      "module": "reports",
+      "dtos": [
+        "validateQuery(analyticsQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/analytics/chargebacks",
+      "module": "reports",
+      "dtos": [
+        "validateQuery(analyticsQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/analytics/payouts",
+      "module": "reports",
+      "dtos": [
+        "validateQuery(analyticsQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/analytics/payment-links",
+      "module": "reports",
+      "dtos": [
+        "validateQuery(analyticsQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/analytics/invoices",
+      "module": "reports",
+      "dtos": [
+        "validateQuery(analyticsQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/analytics/qr-payments",
+      "module": "reports",
+      "dtos": [
+        "validateQuery(analyticsQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/analytics/subscriptions",
+      "module": "reports",
+      "dtos": [
+        "validateQuery(analyticsQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/analytics/support",
+      "module": "reports",
+      "dtos": [
+        "validateQuery(analyticsQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/analytics/operations",
+      "module": "reports",
+      "dtos": [
+        "validateQuery(analyticsQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/analytics/payment-methods",
+      "module": "reports",
+      "dtos": [
+        "validateQuery(analyticsQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/analytics/regional",
+      "module": "reports",
+      "dtos": [
+        "validateQuery(analyticsQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/analytics/export",
+      "module": "reports",
+      "dtos": [
+        "validateQuery(exportQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/reports/center/catalog",
+      "module": "reports",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/reports/center/saved-filters",
+      "module": "reports",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/reports/center/saved-filters",
+      "module": "reports",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/reports/center/saved-filters/:id",
+      "module": "reports",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/reports/center/generate",
+      "module": "reports",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/reports/center/export",
+      "module": "reports",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/reports/center/export-history",
+      "module": "reports",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 36
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/reports/templates",
+      "module": "reports",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 38
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/reports/categories",
+      "module": "reports",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 39
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/reports/history",
+      "module": "reports",
+      "dtos": [
+        "validateQuery(historyQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 40
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/reports/scheduled",
+      "module": "reports",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 41
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/reports/scheduled",
+      "module": "reports",
+      "dtos": [
+        "validateBody(createScheduledBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 42
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/reports/scheduled/:id",
+      "module": "reports",
+      "dtos": [
+        "validateParams(scheduledIdParamSchema)",
+        "validateBody(updateScheduledBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 43
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/reports/scheduled/:id",
+      "module": "reports",
+      "dtos": [
+        "validateParams(scheduledIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 44
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/reports/run",
+      "module": "reports",
+      "dtos": [
+        "validateBody(runReportBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 45
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/reports/export",
+      "module": "reports",
+      "dtos": [
+        "validateBody(exportReportBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 46
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/reports",
+      "module": "reports",
+      "dtos": [
+        "validateQuery(reportListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 47
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/reports",
+      "module": "reports",
+      "dtos": [
+        "validateBody(createReportBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 48
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/reports/:id",
+      "module": "reports",
+      "dtos": [
+        "validateParams(reportIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 49
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/reports/:id",
+      "module": "reports",
+      "dtos": [
+        "validateParams(reportIdParamSchema)",
+        "validateBody(updateReportBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 50
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/reports/:id",
+      "module": "reports",
+      "dtos": [
+        "validateParams(reportIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 51
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/risk-rules",
+      "module": "risk-rules",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/risk-rules/routes/risk-rule.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/risk-rules",
+      "module": "risk-rules",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/risk-rules/routes/risk-rule.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/risk-rules/:id",
+      "module": "risk-rules",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/risk-rules/routes/risk-rule.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/risk-rules/:id",
+      "module": "risk-rules",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/risk-rules/routes/risk-rule.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/risk-rules/:id/evaluate",
+      "module": "risk-rules",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/risk-rules/routes/risk-rule.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/roles",
+      "module": "roles",
+      "dtos": [
+        "validateQuery(roleListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/roles/routes/role.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/roles",
+      "module": "roles",
+      "dtos": [
+        "validateBody(createRoleBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/roles/routes/role.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/roles/:id",
+      "module": "roles",
+      "dtos": [
+        "validateParams(roleIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/roles/routes/role.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/roles/:id",
+      "module": "roles",
+      "dtos": [
+        "validateParams(roleIdParamSchema)",
+        "validateBody(updateRoleBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/roles/routes/role.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/roles/:id",
+      "module": "roles",
+      "dtos": [
+        "validateParams(roleIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/roles/routes/role.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/roles/:id/permissions",
+      "module": "roles",
+      "dtos": [
+        "validateParams(roleIdParamSchema)",
+        "validateBody(assignRolePermissionsBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/roles/routes/role.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/sandbox/dashboard",
+      "module": "sandbox",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/sandbox/routes/sandbox.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/sandbox/accounts",
+      "module": "sandbox",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/sandbox/routes/sandbox.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/sandbox/accounts",
+      "module": "sandbox",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/sandbox/routes/sandbox.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/sandbox/accounts/:id",
+      "module": "sandbox",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/sandbox/routes/sandbox.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/sandbox/accounts/:id",
+      "module": "sandbox",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/sandbox/routes/sandbox.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/sandbox/accounts/:id",
+      "module": "sandbox",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/sandbox/routes/sandbox.routes.ts",
+        "line": 20
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/sandbox/test-cards",
+      "module": "sandbox",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/sandbox/routes/sandbox.routes.ts",
+        "line": 21
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/sandbox/simulations",
+      "module": "sandbox",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/sandbox/routes/sandbox.routes.ts",
+        "line": 22
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/sandbox/simulations",
+      "module": "sandbox",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/sandbox/routes/sandbox.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/sandbox/simulations/:id",
+      "module": "sandbox",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/sandbox/routes/sandbox.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/sandbox/simulations/:id",
+      "module": "sandbox",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/sandbox/routes/sandbox.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/sandbox/simulations/:id",
+      "module": "sandbox",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/sandbox/routes/sandbox.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/search",
+      "module": "search",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/search/routes/search.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settings/public/branding",
+      "module": "settings",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settings/public/feature-flags",
+      "module": "settings",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settings/overview",
+      "module": "settings",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 38
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settings/organization",
+      "module": "settings",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 40
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/settings/organization",
+      "module": "settings",
+      "dtos": [
+        "validateBody(organizationSettingsSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 41
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settings/branding",
+      "module": "settings",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 43
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/settings/branding",
+      "module": "settings",
+      "dtos": [
+        "validateBody(brandingSettingsSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 44
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settings/security",
+      "module": "settings",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 46
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/settings/security",
+      "module": "settings",
+      "dtos": [
+        "validateBody(securitySettingsSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 47
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settings/password-policy",
+      "module": "settings",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 49
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/settings/password-policy",
+      "module": "settings",
+      "dtos": [
+        "validateBody(passwordPolicySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 50
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settings/session",
+      "module": "settings",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 52
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/settings/session",
+      "module": "settings",
+      "dtos": [
+        "validateBody(sessionSettingsSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 53
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settings/notifications/me",
+      "module": "settings",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 55
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/settings/notifications/me",
+      "module": "settings",
+      "dtos": [
+        "validateBody(notificationPreferencesBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 56
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settings/notifications/defaults",
+      "module": "settings",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 58
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/settings/notifications/defaults",
+      "module": "settings",
+      "dtos": [
+        "validateBody(notificationPreferencesBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 59
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settings/configuration",
+      "module": "settings",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 61
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/settings/configuration",
+      "module": "settings",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 62
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settings/feature-flags",
+      "module": "settings",
+      "dtos": [
+        "validateQuery(featureFlagListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 64
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/settings/feature-flags",
+      "module": "settings",
+      "dtos": [
+        "validateBody(createFeatureFlagBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 65
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settings/feature-flags/:id",
+      "module": "settings",
+      "dtos": [
+        "validateParams(featureFlagIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 66
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/settings/feature-flags/:id",
+      "module": "settings",
+      "dtos": [
+        "validateParams(featureFlagIdParamSchema)",
+        "validateBody(updateFeatureFlagBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 67
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/settings/feature-flags/:id",
+      "module": "settings",
+      "dtos": [
+        "validateParams(featureFlagIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 68
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settings/api",
+      "module": "settings",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 70
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/settings/api",
+      "module": "settings",
+      "dtos": [
+        "validateBody(apiSettingsSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 71
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settings/smtp",
+      "module": "settings",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 73
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/settings/smtp",
+      "module": "settings",
+      "dtos": [
+        "validateBody(smtpSettingsSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 74
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settings/storage",
+      "module": "settings",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 76
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/settings/storage",
+      "module": "settings",
+      "dtos": [
+        "validateBody(storageSettingsSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 77
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settings/rate-limits",
+      "module": "settings",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 79
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/settings/rate-limits",
+      "module": "settings",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 80
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/settings/security/geo-login",
+      "module": "settings",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 81
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settings/security/api-ip-restrictions",
+      "module": "settings",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 82
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/settings/security/api-ip-restrictions",
+      "module": "settings",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 83
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settlements/calendar",
+      "module": "settlements",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settlements/reserves",
+      "module": "settlements",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/settlements/merchants/:merchantId/reserves",
+      "module": "settlements",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settlements/search",
+      "module": "settlements",
+      "dtos": [
+        "validateQuery(settlementSearchQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settlements/statistics",
+      "module": "settlements",
+      "dtos": [
+        "validateQuery(settlementListQuerySchema.partial())"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settlements/export",
+      "module": "settlements",
+      "dtos": [
+        "validateQuery(exportQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settlements/batches",
+      "module": "settlements",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/settlements/batches",
+      "module": "settlements",
+      "dtos": [
+        "validateBody(createBatchBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settlements/batches/:id",
+      "module": "settlements",
+      "dtos": [
+        "validateParams(batchIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settlements",
+      "module": "settlements",
+      "dtos": [
+        "validateQuery(settlementListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 36
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/settlements",
+      "module": "settlements",
+      "dtos": [
+        "validateBody(createSettlementBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 37
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settlements/:id",
+      "module": "settlements",
+      "dtos": [
+        "validateParams(settlementIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 38
+      }
+    },
+    {
+      "endpoint": "PATCH /api/v1/settlements/:id/status",
+      "module": "settlements",
+      "dtos": [
+        "validateParams(settlementIdParamSchema)",
+        "validateBody(updateSettlementStatusBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 39
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/settlements/:id/transactions",
+      "module": "settlements",
+      "dtos": [
+        "validateParams(settlementIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 40
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/settlements/:id/hold",
+      "module": "settlements",
+      "dtos": [
+        "validateParams(settlementIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 41
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/settlements/:id/release",
+      "module": "settlements",
+      "dtos": [
+        "validateParams(settlementIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 42
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/settlements/:id/retry",
+      "module": "settlements",
+      "dtos": [
+        "validateParams(settlementIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 43
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/settlements/:id/reversal",
+      "module": "settlements",
+      "dtos": [
+        "validateParams(settlementIdParamSchema)",
+        "validateBody(reversalBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 44
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/smart-collect/dashboard",
+      "module": "smart-collect",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/smart-collect/routes/smart-collect.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/smart-collect/virtual-accounts",
+      "module": "smart-collect",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/smart-collect/routes/smart-collect.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/smart-collect/virtual-accounts",
+      "module": "smart-collect",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/smart-collect/routes/smart-collect.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/smart-collect/virtual-accounts/:id",
+      "module": "smart-collect",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/smart-collect/routes/smart-collect.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/smart-collect/collections",
+      "module": "smart-collect",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/smart-collect/routes/smart-collect.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/smart-collect/collections/:id",
+      "module": "smart-collect",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/smart-collect/routes/smart-collect.routes.ts",
+        "line": 20
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/smart-collect/collections/:id/match",
+      "module": "smart-collect",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/smart-collect/routes/smart-collect.routes.ts",
+        "line": 21
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/subscriptions/statistics",
+      "module": "subscriptions",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/subscriptions/analytics",
+      "module": "subscriptions",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/subscriptions/dunning",
+      "module": "subscriptions",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/subscriptions/mandates",
+      "module": "subscriptions",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 20
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/subscriptions/plans",
+      "module": "subscriptions",
+      "dtos": [
+        "validateQuery(planListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 21
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/subscriptions/plans",
+      "module": "subscriptions",
+      "dtos": [
+        "validateBody(createPlanBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 22
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/subscriptions",
+      "module": "subscriptions",
+      "dtos": [
+        "validateQuery(subscriptionListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/subscriptions",
+      "module": "subscriptions",
+      "dtos": [
+        "validateBody(createSubscriptionBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/subscriptions/:id/pause",
+      "module": "subscriptions",
+      "dtos": [
+        "validateParams(idParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/subscriptions/:id/resume",
+      "module": "subscriptions",
+      "dtos": [
+        "validateParams(idParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/subscriptions/:id/upgrade",
+      "module": "subscriptions",
+      "dtos": [
+        "validateParams(idParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/subscriptions/:id/downgrade",
+      "module": "subscriptions",
+      "dtos": [
+        "validateParams(idParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/subscriptions/:id/cancel",
+      "module": "subscriptions",
+      "dtos": [
+        "validateParams(idParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/subscriptions/:id/renew",
+      "module": "subscriptions",
+      "dtos": [
+        "validateParams(idParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/subscriptions/:id/fail",
+      "module": "subscriptions",
+      "dtos": [
+        "validateParams(idParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/subscriptions/:id",
+      "module": "subscriptions",
+      "dtos": [
+        "validateParams(idParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/support/statistics",
+      "module": "support",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 20
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/support",
+      "module": "support",
+      "dtos": [
+        "validateQuery(ticketListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 21
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/support",
+      "module": "support",
+      "dtos": [
+        "validateBody(createTicketBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 22
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/support/:id",
+      "module": "support",
+      "dtos": [
+        "validateParams(ticketIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/support/:id",
+      "module": "support",
+      "dtos": [
+        "validateParams(ticketIdParamSchema)",
+        "validateBody(updateTicketBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/support/:id/assign",
+      "module": "support",
+      "dtos": [
+        "validateParams(ticketIdParamSchema)",
+        "validateBody(assignTicketBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/support/:id/reassign",
+      "module": "support",
+      "dtos": [
+        "validateParams(ticketIdParamSchema)",
+        "validateBody(assignTicketBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/support/:id/escalate",
+      "module": "support",
+      "dtos": [
+        "validateParams(ticketIdParamSchema)",
+        "validateBody(escalateTicketBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/support/:id/close",
+      "module": "support",
+      "dtos": [
+        "validateParams(ticketIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/support/:id/reopen",
+      "module": "support",
+      "dtos": [
+        "validateParams(ticketIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/support/:id/notes",
+      "module": "support",
+      "dtos": [
+        "validateParams(ticketIdParamSchema)",
+        "validateBody(addNoteBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/support/:id/attachments",
+      "module": "support",
+      "dtos": [
+        "validateParams(ticketIdParamSchema)",
+        "validateBody(addAttachmentBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/system/admin/status",
+      "module": "system",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/system/routes/system.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/system/health",
+      "module": "system",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/system/routes/system.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/system/liveness",
+      "module": "system",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/system/routes/system.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/system/readiness",
+      "module": "system",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/system/routes/system.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/system/metrics",
+      "module": "system",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/system/routes/system.routes.ts",
+        "line": 20
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/system/version",
+      "module": "system",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/system/routes/system.routes.ts",
+        "line": 21
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/system/cache-config",
+      "module": "system",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/system/routes/system.routes.ts",
+        "line": 22
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/system/cache-config/:id",
+      "module": "system",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/system/routes/system.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/system/backup-config",
+      "module": "system",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/system/routes/system.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/system/backup-config/:id",
+      "module": "system",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/system/routes/system.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/system/jobs/history",
+      "module": "system",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/system/routes/system.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/system/performance",
+      "module": "system",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/system/routes/system.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/transactions/search",
+      "module": "transactions",
+      "dtos": [
+        "validateQuery(transactionSearchQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/routes/transaction.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/transactions/statistics",
+      "module": "transactions",
+      "dtos": [
+        "validateQuery(transactionListQuerySchema.partial())"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/routes/transaction.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/transactions/export",
+      "module": "transactions",
+      "dtos": [
+        "validateQuery(exportQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/routes/transaction.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/transactions/disputes",
+      "module": "transactions",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/routes/transaction.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/transactions/disputes",
+      "module": "transactions",
+      "dtos": [
+        "validateBody(createDisputeBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/routes/transaction.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/transactions",
+      "module": "transactions",
+      "dtos": [
+        "validateQuery(transactionListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/routes/transaction.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/transactions",
+      "module": "transactions",
+      "dtos": [
+        "validateBody(createTransactionBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/routes/transaction.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/transactions/:id",
+      "module": "transactions",
+      "dtos": [
+        "validateParams(transactionIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/routes/transaction.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "endpoint": "PATCH /api/v1/transactions/:id/status",
+      "module": "transactions",
+      "dtos": [
+        "validateParams(transactionIdParamSchema)",
+        "validateBody(updateTransactionStatusBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/routes/transaction.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/transactions/:id/refund",
+      "module": "transactions",
+      "dtos": [
+        "validateParams(transactionIdParamSchema)",
+        "validateBody(refundTransactionBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/routes/transaction.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/users",
+      "module": "users",
+      "dtos": [
+        "validateQuery(userListQuerySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/users/routes/user.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/users",
+      "module": "users",
+      "dtos": [
+        "validateBody(createUserBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/users/routes/user.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/users/:id",
+      "module": "users",
+      "dtos": [
+        "validateParams(userIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/users/routes/user.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/users/:id",
+      "module": "users",
+      "dtos": [
+        "validateParams(userIdParamSchema)",
+        "validateBody(updateUserBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/users/routes/user.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "PATCH /api/v1/users/:id/status",
+      "module": "users",
+      "dtos": [
+        "validateParams(userIdParamSchema)",
+        "validateBody(updateUserStatusBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/users/routes/user.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/users/:id",
+      "module": "users",
+      "dtos": [
+        "validateParams(userIdParamSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/users/routes/user.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/users/:id/roles",
+      "module": "users",
+      "dtos": [
+        "validateParams(userIdParamSchema)",
+        "validateBody(assignUserRolesBodySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/users/routes/user.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/webhooks/dashboard",
+      "module": "webhooks",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/webhooks/routes/webhooks.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/webhooks/endpoints",
+      "module": "webhooks",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/webhooks/routes/webhooks.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/webhooks/endpoints",
+      "module": "webhooks",
+      "dtos": [
+        "validateBody(createWebhookSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/webhooks/routes/webhooks.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/webhooks/endpoints/:id",
+      "module": "webhooks",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/webhooks/routes/webhooks.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/webhooks/endpoints/:id",
+      "module": "webhooks",
+      "dtos": [
+        "validateBody(updateWebhookSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/webhooks/routes/webhooks.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/webhooks/endpoints/:id",
+      "module": "webhooks",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/webhooks/routes/webhooks.routes.ts",
+        "line": 28
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/webhooks/endpoints/:id/subscriptions",
+      "module": "webhooks",
+      "dtos": [
+        "validateBody(createSubscriptionSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/webhooks/routes/webhooks.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "endpoint": "PUT /api/v1/webhooks/endpoints/:id/subscriptions/:subId",
+      "module": "webhooks",
+      "dtos": [
+        "validateBody(updateSubscriptionSchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/webhooks/routes/webhooks.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "endpoint": "DELETE /api/v1/webhooks/endpoints/:id/subscriptions/:subId",
+      "module": "webhooks",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/webhooks/routes/webhooks.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/webhooks/deliveries",
+      "module": "webhooks",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/webhooks/routes/webhooks.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "endpoint": "GET /api/v1/webhooks/deliveries/:id",
+      "module": "webhooks",
+      "dtos": [],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/webhooks/routes/webhooks.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "endpoint": "POST /api/v1/webhooks/deliveries/:id/retry",
+      "module": "webhooks",
+      "dtos": [
+        "validateBody(retryDeliverySchema)"
+      ],
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/webhooks/routes/webhooks.routes.ts",
+        "line": 34
+      }
+    }
+  ]
+}

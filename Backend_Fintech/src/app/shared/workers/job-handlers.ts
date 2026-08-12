@@ -3,6 +3,9 @@ import { getPool } from '../../database';
 import { auditRecorder } from '../../modules/audit';
 import { emailService } from '../email/email.service';
 import { webhookDeliveryProcessor } from '../webhooks/webhook-delivery.engine';
+import { settlementProcessor } from '../financial/settlement-processor.service';
+import { payoutProcessor } from '../financial/payout-processor.service';
+import { eventBus } from '../events/event-bus.service';
 import { recordMetric } from '../observability/metrics.registry';
 import { logger } from '../logger';
 
@@ -61,6 +64,23 @@ export async function processBackgroundJob(
           job.organization_id ? Number(job.organization_id) : undefined,
         );
         break;
+      case 'settlement_batch': {
+        const mode = String((payload.mode as string) ?? 'daily') as 'daily' | 'weekly' | 'manual';
+        const result = await settlementProcessor.runDailyBatch(mode);
+        logger.info('Settlement batch completed', result);
+        break;
+      }
+      case 'payout_batch': {
+        const result = await payoutProcessor.runScheduledBatch();
+        logger.info('Payout batch completed', result);
+        break;
+      }
+      case 'outbox_publish': {
+        const batchSize = Number(payload.batchSize ?? 50);
+        const result = await eventBus.processOutboxBatch(batchSize);
+        logger.info('Outbox publish batch', result);
+        break;
+      }
       default: {
         const jobType = String(job.job_type);
         logger.warn('Unknown background job type', { jobId, jobType });
@@ -209,6 +229,10 @@ export async function processRetryQueueItem(
       await webhookDeliveryProcessor.processPaymentWebhookDelivery(deliveryId);
     } else if (entityType === 'email' || operation === 'email_retry') {
       await emailService.retryFailedEmails(1);
+    } else if (entityType === 'settlement' || operation === 'settlement_retry') {
+      await settlementProcessor.retryFailed(Number(payload.settlementId ?? item.entity_id));
+    } else if (entityType === 'payout' || operation === 'payout_retry') {
+      await payoutProcessor.retryPayout(Number(payload.payoutId ?? item.entity_id));
     } else {
       logger.info('Retry queue item processed (generic)', { itemId, entityType, operation });
     }

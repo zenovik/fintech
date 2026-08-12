@@ -1,0 +1,5733 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T19:07:37.657Z"
+  },
+  "mappings": [
+    {
+      "dto": "aiChatBodySchema",
+      "endpoint": "POST /api/v1/ai/chat",
+      "controller": {
+        "controller": "controller",
+        "method": "chat"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/ai/dto/ai.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/ai/routes/ai.routes.ts",
+        "line": 18
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "auditListQuerySchema",
+      "endpoint": "GET /api/v1/audit",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/audit/dto/audit.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/audit/routes/audit.routes.ts",
+        "line": 23
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "auditExportQuerySchema",
+      "endpoint": "GET /api/v1/audit/export",
+      "controller": {
+        "controller": "controller",
+        "method": "exportLogs"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/audit/dto/audit.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/audit/routes/audit.routes.ts",
+        "line": 24
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "apiLogListQuerySchema",
+      "endpoint": "GET /api/v1/audit/api-logs",
+      "controller": {
+        "controller": "controller",
+        "method": "listApiLogs"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/audit/dto/audit.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/audit/routes/audit.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "webhookLogListQuerySchema",
+      "endpoint": "GET /api/v1/audit/webhook-logs",
+      "controller": {
+        "controller": "controller",
+        "method": "listWebhookLogs"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/audit/dto/audit.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/audit/routes/audit.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "auditIdParamSchema",
+      "endpoint": "GET /api/v1/audit/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/audit/dto/audit.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/audit/routes/audit.routes.ts",
+        "line": 29
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "loginSchema",
+      "endpoint": "POST /login",
+      "controller": {
+        "controller": "controller",
+        "method": "login"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/auth/dto/auth.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 62
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "verifyOtpSchema",
+      "endpoint": "POST /verify-otp",
+      "controller": {
+        "controller": "controller",
+        "method": "verifyOtp"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/auth/dto/auth.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 63
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "resendOtpSchema",
+      "endpoint": "POST /resend-otp",
+      "controller": {
+        "controller": "controller",
+        "method": "resendOtp"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/auth/dto/auth.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 64
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "forgotPasswordSchema",
+      "endpoint": "POST /forgot-password",
+      "controller": {
+        "controller": "controller",
+        "method": "forgotPassword"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/auth/dto/auth.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 65
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "resetPasswordSchema",
+      "endpoint": "POST /reset-password",
+      "controller": {
+        "controller": "controller",
+        "method": "resetPassword"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/auth/dto/auth.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 66
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "refreshTokenSchema",
+      "endpoint": "POST /refresh-token",
+      "controller": {
+        "controller": "controller",
+        "method": "refreshToken"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/auth/dto/auth.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 67
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "selectOrganizationSchema",
+      "endpoint": "POST /select-organization",
+      "controller": {
+        "controller": "controller",
+        "method": "selectOrganization"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/auth/dto/auth.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 68
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "changePasswordSchema",
+      "endpoint": "POST /change-password",
+      "controller": {
+        "controller": "controller",
+        "method": "changePassword"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/auth/dto/auth.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 75
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "mfaPreferencesSchema",
+      "endpoint": "PUT /mfa-preferences",
+      "controller": {
+        "controller": "controller",
+        "method": "updateMfaPreferences"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/auth/dto/auth.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 76
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "chargebackListQuerySchema",
+      "endpoint": "GET /api/v1/chargebacks",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/chargebacks/dto/chargebacks.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createChargebackBodySchema",
+      "endpoint": "POST /api/v1/chargebacks",
+      "controller": {
+        "controller": "controller",
+        "method": "create"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/chargebacks/dto/chargebacks.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "chargebackIdParamSchema",
+      "endpoint": "GET /api/v1/chargebacks/:id/history",
+      "controller": {
+        "controller": "controller",
+        "method": "history"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/chargebacks/dto/chargebacks.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 29
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "chargebackIdParamSchema",
+      "endpoint": "GET /api/v1/chargebacks/:id/evidence",
+      "controller": {
+        "controller": "controller",
+        "method": "evidence"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/chargebacks/dto/chargebacks.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "chargebackIdParamSchema",
+      "endpoint": "POST /api/v1/chargebacks/:id/evidence",
+      "controller": {
+        "controller": "controller",
+        "method": "addEvidence"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/chargebacks/dto/chargebacks.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "addEvidenceBodySchema",
+      "endpoint": "POST /api/v1/chargebacks/:id/evidence",
+      "controller": {
+        "controller": "controller",
+        "method": "addEvidence"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/chargebacks/dto/chargebacks.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "chargebackIdParamSchema",
+      "endpoint": "POST /api/v1/chargebacks/:id/representment",
+      "controller": {
+        "controller": "controller",
+        "method": "representment"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/chargebacks/dto/chargebacks.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 32
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "representmentBodySchema",
+      "endpoint": "POST /api/v1/chargebacks/:id/representment",
+      "controller": {
+        "controller": "controller",
+        "method": "representment"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/chargebacks/dto/chargebacks.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 32
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "chargebackIdParamSchema",
+      "endpoint": "POST /api/v1/chargebacks/:id/arbitration",
+      "controller": {
+        "controller": "controller",
+        "method": "arbitration"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/chargebacks/dto/chargebacks.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 33
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "chargebackIdParamSchema",
+      "endpoint": "POST /api/v1/chargebacks/:id/resolve",
+      "controller": {
+        "controller": "controller",
+        "method": "resolve"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/chargebacks/dto/chargebacks.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "resolveChargebackBodySchema",
+      "endpoint": "POST /api/v1/chargebacks/:id/resolve",
+      "controller": {
+        "controller": "controller",
+        "method": "resolve"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/chargebacks/dto/chargebacks.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "chargebackIdParamSchema",
+      "endpoint": "GET /api/v1/chargebacks/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/chargebacks/dto/chargebacks.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/routes/chargeback.routes.ts",
+        "line": 35
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createCheckoutSessionBodySchema",
+      "endpoint": "POST /api/v1/public/checkout/sessions",
+      "controller": {
+        "controller": "controller",
+        "method": "create"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/checkout/dto/checkout.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/checkout/routes/checkout.routes.ts",
+        "line": 24
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "checkoutIdParamSchema",
+      "endpoint": "GET /api/v1/public/checkout/sessions/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/checkout/dto/checkout.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/checkout/routes/checkout.routes.ts",
+        "line": 25
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantIdParamSchema",
+      "endpoint": "GET /api/v1/public/checkout/branding/:merchantId",
+      "controller": {
+        "controller": "controller",
+        "method": "getBranding"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/checkout/dto/checkout.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/checkout/routes/checkout.routes.ts",
+        "line": 26
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantIdParamSchema",
+      "endpoint": "PUT /api/v1/public/checkout/branding/:merchantId",
+      "controller": {
+        "controller": "controller",
+        "method": "updateBranding"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/checkout/dto/checkout.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/checkout/routes/checkout.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "customerSearchQuerySchema",
+      "endpoint": "GET /api/v1/customers/search",
+      "controller": {
+        "controller": "controller",
+        "method": "search"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/customers/dto/customers.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 25
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "customerListQuerySchema",
+      "endpoint": "GET /api/v1/customers",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/customers/dto/customers.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createCustomerBodySchema",
+      "endpoint": "POST /api/v1/customers",
+      "controller": {
+        "controller": "controller",
+        "method": "create"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/customers/dto/customers.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "customerIdParamSchema",
+      "endpoint": "GET /api/v1/customers/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/customers/dto/customers.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 29
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "customerIdParamSchema",
+      "endpoint": "PUT /api/v1/customers/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/customers/dto/customers.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateCustomerBodySchema",
+      "endpoint": "PUT /api/v1/customers/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/customers/dto/customers.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "customerIdParamSchema",
+      "endpoint": "PATCH /api/v1/customers/:id/status",
+      "controller": {
+        "controller": "controller",
+        "method": "updateStatus"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/customers/dto/customers.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateCustomerStatusBodySchema",
+      "endpoint": "PATCH /api/v1/customers/:id/status",
+      "controller": {
+        "controller": "controller",
+        "method": "updateStatus"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/customers/dto/customers.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "customerIdParamSchema",
+      "endpoint": "DELETE /api/v1/customers/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "remove"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/customers/dto/customers.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 32
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "customerIdParamSchema",
+      "endpoint": "GET /api/v1/customers/:id/transactions",
+      "controller": {
+        "controller": "controller",
+        "method": "transactions"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/customers/dto/customers.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 33
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "customerTransactionsQuerySchema",
+      "endpoint": "GET /api/v1/customers/:id/transactions",
+      "controller": {
+        "controller": "controller",
+        "method": "transactions"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/customers/dto/customers.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 33
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "customerIdParamSchema",
+      "endpoint": "GET /api/v1/customers/:id/merchants",
+      "controller": {
+        "controller": "controller",
+        "method": "merchants"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/customers/dto/customers.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "customerIdParamSchema",
+      "endpoint": "GET /api/v1/customers/:id/preferences",
+      "controller": {
+        "controller": "controller",
+        "method": "preferences"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/customers/dto/customers.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 35
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "customerIdParamSchema",
+      "endpoint": "PUT /api/v1/customers/:id/preferences",
+      "controller": {
+        "controller": "controller",
+        "method": "updatePreferences"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/customers/dto/customers.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 36
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "customerIdParamSchema",
+      "endpoint": "GET /api/v1/customers/:id/payment-methods",
+      "controller": {
+        "controller": "controller",
+        "method": "paymentMethods"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/customers/dto/customers.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 37
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "customerIdParamSchema",
+      "endpoint": "GET /api/v1/customers/:id/timeline",
+      "controller": {
+        "controller": "controller",
+        "method": "timeline"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/customers/dto/customers.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/routes/customer.routes.ts",
+        "line": 38
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "periodQuerySchema",
+      "endpoint": "GET /api/v1/dashboard/executive/summary",
+      "controller": {
+        "controller": "controller",
+        "method": "summary"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/dashboard/dto/dashboard.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 25
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "periodQuerySchema",
+      "endpoint": "GET /api/v1/dashboard/executive/charts/revenue",
+      "controller": {
+        "controller": "controller",
+        "method": "revenueChart"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/dashboard/dto/dashboard.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 26
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "periodQuerySchema",
+      "endpoint": "GET /api/v1/dashboard/executive/charts/payment-methods",
+      "controller": {
+        "controller": "controller",
+        "method": "paymentMethods"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/dashboard/dto/dashboard.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "periodQuerySchema",
+      "endpoint": "GET /api/v1/dashboard/executive/charts/regional-distribution",
+      "controller": {
+        "controller": "controller",
+        "method": "regionalDistribution"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/dashboard/dto/dashboard.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "highValueTransactionsQuerySchema",
+      "endpoint": "GET /api/v1/dashboard/executive/transactions/high-value",
+      "controller": {
+        "controller": "controller",
+        "method": "highValueTransactions"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/dashboard/dto/dashboard.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 29
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "exportBodySchema",
+      "endpoint": "POST /api/v1/dashboard/executive/export",
+      "controller": {
+        "controller": "controller",
+        "method": "exportReport"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/dashboard/dto/dashboard.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 35
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "preferencesBodySchema",
+      "endpoint": "PUT /api/v1/dashboard/executive/preferences",
+      "controller": {
+        "controller": "controller",
+        "method": "updatePreferences"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/dashboard/dto/dashboard.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 37
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createProfileSchema",
+      "endpoint": "POST /api/v1/developer/profiles",
+      "controller": {
+        "controller": "controller",
+        "method": "createProfile"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/developer/dto/developer.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/developer/routes/developer.routes.ts",
+        "line": 24
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateProfileSchema",
+      "endpoint": "PUT /api/v1/developer/profiles/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "updateProfile"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/developer/dto/developer.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/developer/routes/developer.routes.ts",
+        "line": 26
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createOAuthAppSchema",
+      "endpoint": "POST /api/v1/developer/oauth-apps",
+      "controller": {
+        "controller": "controller",
+        "method": "createOAuthApp"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/developer/dto/developer.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/developer/routes/developer.routes.ts",
+        "line": 29
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateOAuthAppSchema",
+      "endpoint": "PUT /api/v1/developer/oauth-apps/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "updateOAuthApp"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/developer/dto/developer.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/developer/routes/developer.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "invoiceListQuerySchema",
+      "endpoint": "GET /api/v1/invoices",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/invoices/dto/invoices.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 35
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createInvoiceBodySchema",
+      "endpoint": "POST /api/v1/invoices",
+      "controller": {
+        "controller": "controller",
+        "method": "create"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/invoices/dto/invoices.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 36
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "invoiceIdParamSchema",
+      "endpoint": "GET /api/v1/invoices/:id/pdf",
+      "controller": {
+        "controller": "controller",
+        "method": "downloadPdf"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/invoices/dto/invoices.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 37
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "invoiceIdParamSchema",
+      "endpoint": "GET /api/v1/invoices/:id/pdf/metadata",
+      "controller": {
+        "controller": "controller",
+        "method": "pdfMetadata"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/invoices/dto/invoices.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 38
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "invoiceIdParamSchema",
+      "endpoint": "POST /api/v1/invoices/:id/duplicate",
+      "controller": {
+        "controller": "controller",
+        "method": "duplicate"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/invoices/dto/invoices.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 39
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "invoiceIdParamSchema",
+      "endpoint": "POST /api/v1/invoices/:id/void",
+      "controller": {
+        "controller": "controller",
+        "method": "voidInvoice"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/invoices/dto/invoices.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 40
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "invoiceIdParamSchema",
+      "endpoint": "POST /api/v1/invoices/:id/cancel",
+      "controller": {
+        "controller": "controller",
+        "method": "cancel"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/invoices/dto/invoices.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 41
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "invoiceIdParamSchema",
+      "endpoint": "POST /api/v1/invoices/:id/send",
+      "controller": {
+        "controller": "controller",
+        "method": "markSent"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/invoices/dto/invoices.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 42
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "invoiceIdParamSchema",
+      "endpoint": "POST /api/v1/invoices/:id/mark-viewed",
+      "controller": {
+        "controller": "controller",
+        "method": "markViewed"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/invoices/dto/invoices.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 43
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "invoiceIdParamSchema",
+      "endpoint": "POST /api/v1/invoices/:id/mark-overdue",
+      "controller": {
+        "controller": "controller",
+        "method": "markOverdue"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/invoices/dto/invoices.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 44
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "invoiceIdParamSchema",
+      "endpoint": "POST /api/v1/invoices/:id/mark-paid",
+      "controller": {
+        "controller": "controller",
+        "method": "markPaid"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/invoices/dto/invoices.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 45
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "markPaidBodySchema",
+      "endpoint": "POST /api/v1/invoices/:id/mark-paid",
+      "controller": {
+        "controller": "controller",
+        "method": "markPaid"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/invoices/dto/invoices.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 45
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "invoiceIdParamSchema",
+      "endpoint": "POST /api/v1/invoices/:id/email",
+      "controller": {
+        "controller": "controller",
+        "method": "email"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/invoices/dto/invoices.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 46
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "emailInvoiceBodySchema",
+      "endpoint": "POST /api/v1/invoices/:id/email",
+      "controller": {
+        "controller": "controller",
+        "method": "email"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/invoices/dto/invoices.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 46
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "invoiceIdParamSchema",
+      "endpoint": "POST /api/v1/invoices/:id/payment-link",
+      "controller": {
+        "controller": "controller",
+        "method": "generatePaymentLink"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/invoices/dto/invoices.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 47
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "invoiceIdParamSchema",
+      "endpoint": "POST /api/v1/invoices/:id/payment-link/regenerate",
+      "controller": {
+        "controller": "controller",
+        "method": "regeneratePaymentLink"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/invoices/dto/invoices.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 48
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "invoiceIdParamSchema",
+      "endpoint": "POST /api/v1/invoices/:id/payment-link/disable",
+      "controller": {
+        "controller": "controller",
+        "method": "disablePaymentLink"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/invoices/dto/invoices.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 49
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "invoiceIdParamSchema",
+      "endpoint": "GET /api/v1/invoices/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/invoices/dto/invoices.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 50
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "invoiceIdParamSchema",
+      "endpoint": "PUT /api/v1/invoices/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/invoices/dto/invoices.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 51
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateInvoiceBodySchema",
+      "endpoint": "PUT /api/v1/invoices/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/invoices/dto/invoices.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 51
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantSearchQuerySchema",
+      "endpoint": "GET /api/v1/merchants/search",
+      "controller": {
+        "controller": "controller",
+        "method": "search"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant/dto/merchant.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantListQuerySchema",
+      "endpoint": "GET /api/v1/merchants",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant/dto/merchant.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 29
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createMerchantBodySchema",
+      "endpoint": "POST /api/v1/merchants",
+      "controller": {
+        "controller": "controller",
+        "method": "create"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant/dto/merchant.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantIdParamSchema",
+      "endpoint": "GET /api/v1/merchants/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/checkout/dto/checkout.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantIdParamSchema",
+      "endpoint": "PUT /api/v1/merchants/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/checkout/dto/checkout.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 32
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateMerchantBodySchema",
+      "endpoint": "PUT /api/v1/merchants/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant/dto/merchant.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 32
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantIdParamSchema",
+      "endpoint": "PATCH /api/v1/merchants/:id/status",
+      "controller": {
+        "controller": "controller",
+        "method": "updateStatus"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/checkout/dto/checkout.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 33
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateMerchantStatusBodySchema",
+      "endpoint": "PATCH /api/v1/merchants/:id/status",
+      "controller": {
+        "controller": "controller",
+        "method": "updateStatus"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant/dto/merchant.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 33
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantIdParamSchema",
+      "endpoint": "DELETE /api/v1/merchants/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "remove"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/checkout/dto/checkout.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantIdParamSchema",
+      "endpoint": "GET /api/v1/merchants/:id/transactions",
+      "controller": {
+        "controller": "controller",
+        "method": "transactions"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/checkout/dto/checkout.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 35
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantTransactionsQuerySchema",
+      "endpoint": "GET /api/v1/merchants/:id/transactions",
+      "controller": {
+        "controller": "controller",
+        "method": "transactions"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant/dto/merchant.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 35
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantIdParamSchema",
+      "endpoint": "GET /api/v1/merchants/:id/settlements",
+      "controller": {
+        "controller": "controller",
+        "method": "settlements"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/checkout/dto/checkout.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 36
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantIdParamSchema",
+      "endpoint": "GET /api/v1/merchants/:id/documents",
+      "controller": {
+        "controller": "controller",
+        "method": "documents"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/checkout/dto/checkout.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 37
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantIdParamSchema",
+      "endpoint": "POST /api/v1/merchants/:id/documents",
+      "controller": {
+        "controller": "controller",
+        "method": "createDocument"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/checkout/dto/checkout.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 38
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createDocumentBodySchema",
+      "endpoint": "POST /api/v1/merchants/:id/documents",
+      "controller": {
+        "controller": "controller",
+        "method": "createDocument"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant/dto/merchant.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 38
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantDocumentParamSchema",
+      "endpoint": "DELETE /api/v1/merchants/:id/documents/:documentId",
+      "controller": {
+        "controller": "controller",
+        "method": "deleteDocument"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant/dto/merchant.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/routes/merchant.routes.ts",
+        "line": 39
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "onboardingListQuerySchema",
+      "endpoint": "GET /api/v1/merchant-onboarding",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 22
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "GET /api/v1/merchant-onboarding/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 24
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "GET /api/v1/merchant-onboarding/:id/timeline",
+      "controller": {
+        "controller": "controller",
+        "method": "timeline"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 25
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "PUT /api/v1/merchant-onboarding/:id/business",
+      "controller": {
+        "controller": "controller",
+        "method": "saveBusiness"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 26
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "businessInfoSchema",
+      "endpoint": "PUT /api/v1/merchant-onboarding/:id/business",
+      "controller": {
+        "controller": "controller",
+        "method": "saveBusiness"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 26
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "PUT /api/v1/merchant-onboarding/:id/addresses",
+      "controller": {
+        "controller": "controller",
+        "method": "saveAddresses"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "addressesBodySchema",
+      "endpoint": "PUT /api/v1/merchant-onboarding/:id/addresses",
+      "controller": {
+        "controller": "controller",
+        "method": "saveAddresses"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "PUT /api/v1/merchant-onboarding/:id/kyc",
+      "controller": {
+        "controller": "controller",
+        "method": "saveKyc"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "kycDocumentsBodySchema",
+      "endpoint": "PUT /api/v1/merchant-onboarding/:id/kyc",
+      "controller": {
+        "controller": "controller",
+        "method": "saveKyc"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "PUT /api/v1/merchant-onboarding/:id/bank",
+      "controller": {
+        "controller": "controller",
+        "method": "saveBank"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 29
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "bankDetailsSchema",
+      "endpoint": "PUT /api/v1/merchant-onboarding/:id/bank",
+      "controller": {
+        "controller": "controller",
+        "method": "saveBank"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 29
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "PUT /api/v1/merchant-onboarding/:id/settlement",
+      "controller": {
+        "controller": "controller",
+        "method": "saveSettlement"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "settlementConfigSchema",
+      "endpoint": "PUT /api/v1/merchant-onboarding/:id/settlement",
+      "controller": {
+        "controller": "controller",
+        "method": "saveSettlement"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "PUT /api/v1/merchant-onboarding/:id/payment",
+      "controller": {
+        "controller": "controller",
+        "method": "savePayment"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "paymentConfigSchema",
+      "endpoint": "PUT /api/v1/merchant-onboarding/:id/payment",
+      "controller": {
+        "controller": "controller",
+        "method": "savePayment"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "POST /api/v1/merchant-onboarding/:id/submit",
+      "controller": {
+        "controller": "controller",
+        "method": "submit"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 32
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "POST /api/v1/merchant-onboarding/:id/approve",
+      "controller": {
+        "controller": "controller",
+        "method": "approve"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 33
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "POST /api/v1/merchant-onboarding/:id/reject",
+      "controller": {
+        "controller": "controller",
+        "method": "reject"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "rejectBodySchema",
+      "endpoint": "POST /api/v1/merchant-onboarding/:id/reject",
+      "controller": {
+        "controller": "controller",
+        "method": "reject"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "POST /api/v1/merchant-onboarding/:id/go-live",
+      "controller": {
+        "controller": "controller",
+        "method": "goLive"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 35
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "POST /api/v1/merchant-onboarding/:id/suspend",
+      "controller": {
+        "controller": "controller",
+        "method": "suspend"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 36
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "suspendBodySchema",
+      "endpoint": "POST /api/v1/merchant-onboarding/:id/suspend",
+      "controller": {
+        "controller": "controller",
+        "method": "suspend"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 36
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantUserListQuerySchema",
+      "endpoint": "GET /api/v1/merchant-users",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-users/dto/merchant-user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createMerchantUserBodySchema",
+      "endpoint": "POST /api/v1/merchant-users",
+      "controller": {
+        "controller": "controller",
+        "method": "create"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-users/dto/merchant-user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "inviteMerchantUserBodySchema",
+      "endpoint": "POST /api/v1/merchant-users/invite",
+      "controller": {
+        "controller": "controller",
+        "method": "invite"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-users/dto/merchant-user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 29
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantUserIdParamSchema",
+      "endpoint": "GET /api/v1/merchant-users/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-users/dto/merchant-user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantUserIdParamSchema",
+      "endpoint": "PUT /api/v1/merchant-users/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-users/dto/merchant-user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateMerchantUserBodySchema",
+      "endpoint": "PUT /api/v1/merchant-users/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-users/dto/merchant-user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantUserIdParamSchema",
+      "endpoint": "POST /api/v1/merchant-users/:id/activate",
+      "controller": {
+        "controller": "controller",
+        "method": "activate"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-users/dto/merchant-user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 32
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantUserIdParamSchema",
+      "endpoint": "POST /api/v1/merchant-users/:id/deactivate",
+      "controller": {
+        "controller": "controller",
+        "method": "deactivate"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-users/dto/merchant-user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 33
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantUserIdParamSchema",
+      "endpoint": "PUT /api/v1/merchant-users/:id/role",
+      "controller": {
+        "controller": "controller",
+        "method": "assignRole"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-users/dto/merchant-user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "assignRoleBodySchema",
+      "endpoint": "PUT /api/v1/merchant-users/:id/role",
+      "controller": {
+        "controller": "controller",
+        "method": "assignRole"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-users/dto/merchant-user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantUserIdParamSchema",
+      "endpoint": "PUT /api/v1/merchant-users/:id/outlets",
+      "controller": {
+        "controller": "controller",
+        "method": "assignOutlets"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-users/dto/merchant-user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 35
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "assignOutletsBodySchema",
+      "endpoint": "PUT /api/v1/merchant-users/:id/outlets",
+      "controller": {
+        "controller": "controller",
+        "method": "assignOutlets"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-users/dto/merchant-user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 35
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantUserIdParamSchema",
+      "endpoint": "POST /api/v1/merchant-users/:id/reset-password",
+      "controller": {
+        "controller": "controller",
+        "method": "resetPassword"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-users/dto/merchant-user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 36
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "resetPasswordBodySchema",
+      "endpoint": "POST /api/v1/merchant-users/:id/reset-password",
+      "controller": {
+        "controller": "controller",
+        "method": "resetPassword"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-users/dto/merchant-user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/routes/merchant-user.routes.ts",
+        "line": 36
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "notificationListQuerySchema",
+      "endpoint": "GET /api/v1/notifications",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/notifications/dto/notifications.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "templateListQuerySchema",
+      "endpoint": "GET /api/v1/notifications/templates",
+      "controller": {
+        "controller": "controller",
+        "method": "listTemplates"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/notifications/dto/notifications.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 36
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createTemplateBodySchema",
+      "endpoint": "POST /api/v1/notifications/templates",
+      "controller": {
+        "controller": "controller",
+        "method": "createTemplate"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/notifications/dto/notifications.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 37
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "templateIdParamSchema",
+      "endpoint": "GET /api/v1/notifications/templates/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getTemplate"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/notifications/dto/notifications.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 38
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "templateIdParamSchema",
+      "endpoint": "PUT /api/v1/notifications/templates/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "updateTemplate"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/notifications/dto/notifications.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 39
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateTemplateBodySchema",
+      "endpoint": "PUT /api/v1/notifications/templates/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "updateTemplate"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/notifications/dto/notifications.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 39
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "templateIdParamSchema",
+      "endpoint": "DELETE /api/v1/notifications/templates/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "deleteTemplate"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/notifications/dto/notifications.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 40
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "broadcastListQuerySchema",
+      "endpoint": "GET /api/v1/notifications/broadcasts",
+      "controller": {
+        "controller": "controller",
+        "method": "listBroadcasts"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/notifications/dto/notifications.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 43
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createBroadcastBodySchema",
+      "endpoint": "POST /api/v1/notifications/broadcasts",
+      "controller": {
+        "controller": "controller",
+        "method": "createBroadcast"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/notifications/dto/notifications.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 44
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "templateIdParamSchema",
+      "endpoint": "GET /api/v1/notifications/templates/:id/variables",
+      "controller": {
+        "controller": "controller",
+        "method": "getTemplateVariables"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/notifications/dto/notifications.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 51
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "notificationIdParamSchema",
+      "endpoint": "GET /api/v1/notifications/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/notifications/dto/notifications.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 59
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "notificationIdParamSchema",
+      "endpoint": "PATCH /api/v1/notifications/:id/read",
+      "controller": {
+        "controller": "controller",
+        "method": "markRead"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/notifications/dto/notifications.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 60
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "notificationIdParamSchema",
+      "endpoint": "PATCH /api/v1/notifications/:id/archive",
+      "controller": {
+        "controller": "controller",
+        "method": "archive"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/notifications/dto/notifications.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 61
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "notificationIdParamSchema",
+      "endpoint": "DELETE /api/v1/notifications/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "remove"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/notifications/dto/notifications.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 62
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "complianceQueueQuerySchema",
+      "endpoint": "GET /api/v1/onboarding-approval/compliance-queue",
+      "controller": {
+        "controller": "controller",
+        "method": "complianceQueue"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/onboarding-approval/dto/approval.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 23
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "bulkAssignBodySchema",
+      "endpoint": "POST /api/v1/onboarding-approval/compliance-queue/bulk-assign",
+      "controller": {
+        "controller": "controller",
+        "method": "bulkAssign"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/onboarding-approval/dto/approval.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 24
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "GET /api/v1/onboarding-approval/:applicationId/workflow",
+      "controller": {
+        "controller": "controller",
+        "method": "getWorkflow"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 26
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/workflow/start",
+      "controller": {
+        "controller": "controller",
+        "method": "startWorkflow"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/approve",
+      "controller": {
+        "controller": "controller",
+        "method": "approve"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "decisionBodySchema",
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/approve",
+      "controller": {
+        "controller": "controller",
+        "method": "approve"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/onboarding-approval/dto/approval.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/reject",
+      "controller": {
+        "controller": "controller",
+        "method": "reject"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 29
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "decisionBodySchema",
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/reject",
+      "controller": {
+        "controller": "controller",
+        "method": "reject"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/onboarding-approval/dto/approval.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 29
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/send-back",
+      "controller": {
+        "controller": "controller",
+        "method": "sendBack"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "decisionBodySchema",
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/send-back",
+      "controller": {
+        "controller": "controller",
+        "method": "sendBack"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/onboarding-approval/dto/approval.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/reassign",
+      "controller": {
+        "controller": "controller",
+        "method": "reassign"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "reassignBodySchema",
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/reassign",
+      "controller": {
+        "controller": "controller",
+        "method": "reassign"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/onboarding-approval/dto/approval.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/skip-stage",
+      "controller": {
+        "controller": "controller",
+        "method": "skipStage"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 32
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "decisionBodySchema",
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/skip-stage",
+      "controller": {
+        "controller": "controller",
+        "method": "skipStage"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/onboarding-approval/dto/approval.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 32
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/go-live",
+      "controller": {
+        "controller": "controller",
+        "method": "goLive"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 33
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/suspend",
+      "controller": {
+        "controller": "controller",
+        "method": "suspend"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "suspendBodySchema",
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/suspend",
+      "controller": {
+        "controller": "controller",
+        "method": "suspend"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/activate",
+      "controller": {
+        "controller": "controller",
+        "method": "activate"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 35
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "GET /api/v1/onboarding-approval/:applicationId/risk",
+      "controller": {
+        "controller": "controller",
+        "method": "getRisk"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 37
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "PUT /api/v1/onboarding-approval/:applicationId/risk",
+      "controller": {
+        "controller": "controller",
+        "method": "saveRisk"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 38
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "riskReviewBodySchema",
+      "endpoint": "PUT /api/v1/onboarding-approval/:applicationId/risk",
+      "controller": {
+        "controller": "controller",
+        "method": "saveRisk"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/onboarding-approval/dto/approval.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 38
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "applicationIdParamSchema",
+      "endpoint": "GET /api/v1/onboarding-approval/:applicationId/kyc",
+      "controller": {
+        "controller": "controller",
+        "method": "listKyc"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 40
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "documentIdParamSchema",
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/kyc/:documentId/decision",
+      "controller": {
+        "controller": "controller",
+        "method": "kycDecision"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/onboarding-approval/dto/approval.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 41
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "kycDecisionBodySchema",
+      "endpoint": "POST /api/v1/onboarding-approval/:applicationId/kyc/:documentId/decision",
+      "controller": {
+        "controller": "controller",
+        "method": "kycDecision"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/onboarding-approval/dto/approval.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/routes/approval.routes.ts",
+        "line": 41
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "alertListQuerySchema",
+      "endpoint": "GET /api/v1/operations/alerts",
+      "controller": {
+        "controller": "controller",
+        "method": "alerts"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 25
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "incidentListQuerySchema",
+      "endpoint": "GET /api/v1/operations/incidents",
+      "controller": {
+        "controller": "controller",
+        "method": "incidents"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 26
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "retryListQuerySchema",
+      "endpoint": "GET /api/v1/operations/retry-queue",
+      "controller": {
+        "controller": "controller",
+        "method": "retryQueue"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "jobListQuerySchema",
+      "endpoint": "GET /api/v1/operations/jobs",
+      "controller": {
+        "controller": "controller",
+        "method": "jobs"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "POST /api/v1/operations/alerts/:id/acknowledge",
+      "controller": {
+        "controller": "controller",
+        "method": "acknowledgeAlert"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 32
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "POST /api/v1/operations/alerts/:id/resolve",
+      "controller": {
+        "controller": "controller",
+        "method": "resolveAlert"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 33
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "POST /api/v1/operations/retry-queue/:id/retry",
+      "controller": {
+        "controller": "controller",
+        "method": "retryQueueItem"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "POST /api/v1/operations/jobs/:id/retry",
+      "controller": {
+        "controller": "controller",
+        "method": "retryJob"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 35
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "organizationListQuerySchema",
+      "endpoint": "GET /api/v1/organizations",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 36
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createOrganizationBodySchema",
+      "endpoint": "POST /api/v1/organizations",
+      "controller": {
+        "controller": "controller",
+        "method": "create"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 37
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "organizationIdParamSchema",
+      "endpoint": "GET /api/v1/organizations/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 39
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "organizationIdParamSchema",
+      "endpoint": "PUT /api/v1/organizations/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 40
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateOrganizationBodySchema",
+      "endpoint": "PUT /api/v1/organizations/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 40
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "organizationIdParamSchema",
+      "endpoint": "PATCH /api/v1/organizations/:id/status",
+      "controller": {
+        "controller": "controller",
+        "method": "updateStatus"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 41
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateOrganizationStatusBodySchema",
+      "endpoint": "PATCH /api/v1/organizations/:id/status",
+      "controller": {
+        "controller": "controller",
+        "method": "updateStatus"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 41
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "organizationIdParamSchema",
+      "endpoint": "POST /api/v1/organizations/:id/archive",
+      "controller": {
+        "controller": "controller",
+        "method": "archive"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 42
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "organizationIdParamSchema",
+      "endpoint": "POST /api/v1/organizations/:id/restore",
+      "controller": {
+        "controller": "controller",
+        "method": "restore"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 43
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "organizationIdParamSchema",
+      "endpoint": "GET /api/v1/organizations/:id/members",
+      "controller": {
+        "controller": "controller",
+        "method": "getMembers"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 45
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "organizationIdParamSchema",
+      "endpoint": "POST /api/v1/organizations/:id/members",
+      "controller": {
+        "controller": "controller",
+        "method": "addMember"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 46
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createMemberBodySchema",
+      "endpoint": "POST /api/v1/organizations/:id/members",
+      "controller": {
+        "controller": "controller",
+        "method": "addMember"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 46
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "memberIdParamSchema",
+      "endpoint": "PUT /api/v1/organizations/:id/members/:memberId",
+      "controller": {
+        "controller": "controller",
+        "method": "updateMember"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 47
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateMemberBodySchema",
+      "endpoint": "PUT /api/v1/organizations/:id/members/:memberId",
+      "controller": {
+        "controller": "controller",
+        "method": "updateMember"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 47
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "memberIdParamSchema",
+      "endpoint": "DELETE /api/v1/organizations/:id/members/:memberId",
+      "controller": {
+        "controller": "controller",
+        "method": "removeMember"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 48
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "organizationIdParamSchema",
+      "endpoint": "GET /api/v1/organizations/:id/domains",
+      "controller": {
+        "controller": "controller",
+        "method": "getDomains"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 50
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "organizationIdParamSchema",
+      "endpoint": "POST /api/v1/organizations/:id/domains",
+      "controller": {
+        "controller": "controller",
+        "method": "addDomain"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 51
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createDomainBodySchema",
+      "endpoint": "POST /api/v1/organizations/:id/domains",
+      "controller": {
+        "controller": "controller",
+        "method": "addDomain"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 51
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "domainIdParamSchema",
+      "endpoint": "PUT /api/v1/organizations/:id/domains/:domainId",
+      "controller": {
+        "controller": "controller",
+        "method": "updateDomain"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 52
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateDomainBodySchema",
+      "endpoint": "PUT /api/v1/organizations/:id/domains/:domainId",
+      "controller": {
+        "controller": "controller",
+        "method": "updateDomain"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 52
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "domainIdParamSchema",
+      "endpoint": "DELETE /api/v1/organizations/:id/domains/:domainId",
+      "controller": {
+        "controller": "controller",
+        "method": "deleteDomain"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 53
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "organizationIdParamSchema",
+      "endpoint": "GET /api/v1/organizations/:id/branding",
+      "controller": {
+        "controller": "controller",
+        "method": "getBranding"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 55
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "organizationIdParamSchema",
+      "endpoint": "PUT /api/v1/organizations/:id/branding",
+      "controller": {
+        "controller": "controller",
+        "method": "updateBranding"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 56
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "brandingBodySchema",
+      "endpoint": "PUT /api/v1/organizations/:id/branding",
+      "controller": {
+        "controller": "controller",
+        "method": "updateBranding"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 56
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "organizationIdParamSchema",
+      "endpoint": "GET /api/v1/organizations/:id/preferences",
+      "controller": {
+        "controller": "controller",
+        "method": "getPreferences"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 58
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "organizationIdParamSchema",
+      "endpoint": "PUT /api/v1/organizations/:id/preferences",
+      "controller": {
+        "controller": "controller",
+        "method": "updatePreferences"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 59
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "preferencesBodySchema",
+      "endpoint": "PUT /api/v1/organizations/:id/preferences",
+      "controller": {
+        "controller": "controller",
+        "method": "updatePreferences"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/dashboard/dto/dashboard.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 59
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "organizationIdParamSchema",
+      "endpoint": "GET /api/v1/organizations/:id/api-keys",
+      "controller": {
+        "controller": "controller",
+        "method": "getApiKeys"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 61
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "organizationIdParamSchema",
+      "endpoint": "POST /api/v1/organizations/:id/api-keys",
+      "controller": {
+        "controller": "controller",
+        "method": "createApiKey"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 62
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createApiKeyBodySchema",
+      "endpoint": "POST /api/v1/organizations/:id/api-keys",
+      "controller": {
+        "controller": "controller",
+        "method": "createApiKey"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 62
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "apiKeyIdParamSchema",
+      "endpoint": "DELETE /api/v1/organizations/:id/api-keys/:keyId",
+      "controller": {
+        "controller": "controller",
+        "method": "revokeApiKey"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 63
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "organizationIdParamSchema",
+      "endpoint": "GET /api/v1/organizations/:id/billing",
+      "controller": {
+        "controller": "controller",
+        "method": "getBilling"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 65
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "organizationIdParamSchema",
+      "endpoint": "PUT /api/v1/organizations/:id/billing",
+      "controller": {
+        "controller": "controller",
+        "method": "updateBilling"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 66
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "billingBodySchema",
+      "endpoint": "PUT /api/v1/organizations/:id/billing",
+      "controller": {
+        "controller": "controller",
+        "method": "updateBilling"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/organizations/routes/organization.routes.ts",
+        "line": 66
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "outletListQuerySchema",
+      "endpoint": "GET /api/v1/outlets",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/outlets/dto/outlet.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/outlets/routes/outlet.routes.ts",
+        "line": 21
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createOutletBodySchema",
+      "endpoint": "POST /api/v1/outlets",
+      "controller": {
+        "controller": "controller",
+        "method": "create"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/outlets/dto/outlet.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/outlets/routes/outlet.routes.ts",
+        "line": 22
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "outletIdParamSchema",
+      "endpoint": "GET /api/v1/outlets/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/outlets/dto/outlet.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/outlets/routes/outlet.routes.ts",
+        "line": 23
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "outletIdParamSchema",
+      "endpoint": "PUT /api/v1/outlets/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/outlets/dto/outlet.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/outlets/routes/outlet.routes.ts",
+        "line": 24
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateOutletBodySchema",
+      "endpoint": "PUT /api/v1/outlets/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/outlets/dto/outlet.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/outlets/routes/outlet.routes.ts",
+        "line": 24
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "outletIdParamSchema",
+      "endpoint": "POST /api/v1/outlets/:id/activate",
+      "controller": {
+        "controller": "controller",
+        "method": "activate"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/outlets/dto/outlet.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/outlets/routes/outlet.routes.ts",
+        "line": 25
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "outletIdParamSchema",
+      "endpoint": "POST /api/v1/outlets/:id/deactivate",
+      "controller": {
+        "controller": "controller",
+        "method": "deactivate"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/outlets/dto/outlet.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/outlets/routes/outlet.routes.ts",
+        "line": 26
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "paymentLinkListQuerySchema",
+      "endpoint": "GET /api/v1/payment-links",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payment-links/dto/payment-links.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 23
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createPaymentLinkBodySchema",
+      "endpoint": "POST /api/v1/payment-links",
+      "controller": {
+        "controller": "controller",
+        "method": "create"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payment-links/dto/payment-links.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 24
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "paymentLinkIdParamSchema",
+      "endpoint": "GET /api/v1/payment-links/:id/analytics",
+      "controller": {
+        "controller": "controller",
+        "method": "analytics"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payment-links/dto/payment-links.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 25
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "paymentLinkIdParamSchema",
+      "endpoint": "GET /api/v1/payment-links/:id/visits",
+      "controller": {
+        "controller": "controller",
+        "method": "visits"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payment-links/dto/payment-links.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 26
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "paymentLinkIdParamSchema",
+      "endpoint": "POST /api/v1/payment-links/:id/clone",
+      "controller": {
+        "controller": "controller",
+        "method": "clone"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payment-links/dto/payment-links.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "paymentLinkIdParamSchema",
+      "endpoint": "GET /api/v1/payment-links/:id/qr",
+      "controller": {
+        "controller": "controller",
+        "method": "qrCode"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payment-links/dto/payment-links.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "paymentLinkIdParamSchema",
+      "endpoint": "POST /api/v1/payment-links/:id/enable",
+      "controller": {
+        "controller": "controller",
+        "method": "enable"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payment-links/dto/payment-links.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 29
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "paymentLinkIdParamSchema",
+      "endpoint": "POST /api/v1/payment-links/:id/disable",
+      "controller": {
+        "controller": "controller",
+        "method": "disable"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payment-links/dto/payment-links.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "paymentLinkIdParamSchema",
+      "endpoint": "POST /api/v1/payment-links/:id/expire",
+      "controller": {
+        "controller": "controller",
+        "method": "expire"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payment-links/dto/payment-links.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "paymentLinkIdParamSchema",
+      "endpoint": "POST /api/v1/payment-links/:id/regenerate-token",
+      "controller": {
+        "controller": "controller",
+        "method": "regenerateToken"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payment-links/dto/payment-links.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 32
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "paymentLinkIdParamSchema",
+      "endpoint": "GET /api/v1/payment-links/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payment-links/dto/payment-links.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 33
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "paymentLinkIdParamSchema",
+      "endpoint": "PUT /api/v1/payment-links/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payment-links/dto/payment-links.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updatePaymentLinkBodySchema",
+      "endpoint": "PUT /api/v1/payment-links/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payment-links/dto/payment-links.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/payment-link.routes.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "publicTokenParamSchema",
+      "endpoint": "GET /api/v1/public/payment-links/:token",
+      "controller": {
+        "controller": "controller",
+        "method": "getByToken"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payment-links/dto/payment-links.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/public-payment-link.routes.ts",
+        "line": 19
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "publicTokenParamSchema",
+      "endpoint": "POST /api/v1/public/payment-links/:token/pay",
+      "controller": {
+        "controller": "controller",
+        "method": "pay"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payment-links/dto/payment-links.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/public-payment-link.routes.ts",
+        "line": 20
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "publicPayBodySchema",
+      "endpoint": "POST /api/v1/public/payment-links/:token/pay",
+      "controller": {
+        "controller": "controller",
+        "method": "pay"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payment-links/dto/payment-links.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/routes/public-payment-link.routes.ts",
+        "line": 20
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "GET /api/v1/payments/orders/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getOrder"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 22
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createSessionBodySchema",
+      "endpoint": "POST /api/v1/payments/sessions",
+      "controller": {
+        "controller": "controller",
+        "method": "createSession"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payments/dto/payment.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 23
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "GET /api/v1/payments/sessions/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getSession"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 24
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "merchantIdParamSchema",
+      "endpoint": "GET /api/v1/payments/merchant-config/:merchantId",
+      "controller": {
+        "controller": "controller",
+        "method": "merchantConfig"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/checkout/dto/checkout.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 25
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "customerIdParamSchema",
+      "endpoint": "GET /api/v1/payments/customers/:customerId/profile",
+      "controller": {
+        "controller": "controller",
+        "method": "customerProfile"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/customers/dto/customers.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 26
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "paymentListQuerySchema",
+      "endpoint": "GET /api/v1/payments",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payments/dto/payment.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createPaymentBodySchema",
+      "endpoint": "POST /api/v1/payments",
+      "controller": {
+        "controller": "controller",
+        "method": "create"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payments/dto/payment.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 29
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "GET /api/v1/payments/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "GET /api/v1/payments/:id/timeline",
+      "controller": {
+        "controller": "controller",
+        "method": "timeline"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "POST /api/v1/payments/:id/authorize",
+      "controller": {
+        "controller": "controller",
+        "method": "authorize"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 32
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "POST /api/v1/payments/:id/capture",
+      "controller": {
+        "controller": "controller",
+        "method": "capture"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 33
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "captureBodySchema",
+      "endpoint": "POST /api/v1/payments/:id/capture",
+      "controller": {
+        "controller": "controller",
+        "method": "capture"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payments/dto/payment.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 33
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "POST /api/v1/payments/:id/cancel",
+      "controller": {
+        "controller": "controller",
+        "method": "cancel"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "cancelBodySchema",
+      "endpoint": "POST /api/v1/payments/:id/cancel",
+      "controller": {
+        "controller": "controller",
+        "method": "cancel"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payments/dto/payment.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "POST /api/v1/payments/:id/refund",
+      "controller": {
+        "controller": "controller",
+        "method": "refund"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 35
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "refundBodySchema",
+      "endpoint": "POST /api/v1/payments/:id/refund",
+      "controller": {
+        "controller": "controller",
+        "method": "refund"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payments/dto/payment.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 35
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "POST /api/v1/payments/:id/retry",
+      "controller": {
+        "controller": "controller",
+        "method": "retry"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 36
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "POST /api/v1/payments/:id/expire",
+      "controller": {
+        "controller": "controller",
+        "method": "expire"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/routes/payment.routes.ts",
+        "line": 37
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "bankAccountListQuerySchema",
+      "endpoint": "GET /api/v1/payouts/bank-accounts",
+      "controller": {
+        "controller": "controller",
+        "method": "listBankAccounts"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payouts/dto/payouts.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createBankAccountBodySchema",
+      "endpoint": "POST /api/v1/payouts/bank-accounts",
+      "controller": {
+        "controller": "controller",
+        "method": "createBankAccount"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payouts/dto/payouts.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "bankAccountIdParamSchema",
+      "endpoint": "PATCH /api/v1/payouts/bank-accounts/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "updateBankAccount"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payouts/dto/payouts.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 29
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateBankAccountBodySchema",
+      "endpoint": "PATCH /api/v1/payouts/bank-accounts/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "updateBankAccount"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payouts/dto/payouts.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 29
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "payoutListQuerySchema",
+      "endpoint": "GET /api/v1/payouts",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payouts/dto/payouts.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createPayoutBodySchema",
+      "endpoint": "POST /api/v1/payouts",
+      "controller": {
+        "controller": "controller",
+        "method": "create"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payouts/dto/payouts.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 32
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "payoutIdParamSchema",
+      "endpoint": "GET /api/v1/payouts/:id/history",
+      "controller": {
+        "controller": "controller",
+        "method": "history"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payouts/dto/payouts.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 33
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "payoutIdParamSchema",
+      "endpoint": "POST /api/v1/payouts/:id/approve",
+      "controller": {
+        "controller": "controller",
+        "method": "approve"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payouts/dto/payouts.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "payoutIdParamSchema",
+      "endpoint": "POST /api/v1/payouts/:id/reject",
+      "controller": {
+        "controller": "controller",
+        "method": "reject"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payouts/dto/payouts.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 35
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "rejectPayoutBodySchema",
+      "endpoint": "POST /api/v1/payouts/:id/reject",
+      "controller": {
+        "controller": "controller",
+        "method": "reject"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payouts/dto/payouts.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 35
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "payoutIdParamSchema",
+      "endpoint": "POST /api/v1/payouts/:id/retry",
+      "controller": {
+        "controller": "controller",
+        "method": "retry"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payouts/dto/payouts.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 36
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "payoutIdParamSchema",
+      "endpoint": "GET /api/v1/payouts/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/payouts/dto/payouts.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/routes/payout.routes.ts",
+        "line": 37
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "qrListQuerySchema",
+      "endpoint": "GET /api/v1/public/qr-payments",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/qr-payments/dto/qr-payments.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 22
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createQrBodySchema",
+      "endpoint": "POST /api/v1/public/qr-payments",
+      "controller": {
+        "controller": "controller",
+        "method": "create"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/qr-payments/dto/qr-payments.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 23
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "qrIdParamSchema",
+      "endpoint": "GET /api/v1/public/qr-payments/:id/download/svg",
+      "controller": {
+        "controller": "controller",
+        "method": "downloadSvg"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/qr-payments/dto/qr-payments.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 24
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "qrIdParamSchema",
+      "endpoint": "GET /api/v1/public/qr-payments/:id/download",
+      "controller": {
+        "controller": "controller",
+        "method": "download"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/qr-payments/dto/qr-payments.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 25
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "qrIdParamSchema",
+      "endpoint": "GET /api/v1/public/qr-payments/:id/scan-history",
+      "controller": {
+        "controller": "controller",
+        "method": "scanHistory"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/qr-payments/dto/qr-payments.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 26
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "qrIdParamSchema",
+      "endpoint": "POST /api/v1/public/qr-payments/:id/clone",
+      "controller": {
+        "controller": "controller",
+        "method": "clone"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/qr-payments/dto/qr-payments.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "qrIdParamSchema",
+      "endpoint": "POST /api/v1/public/qr-payments/:id/archive",
+      "controller": {
+        "controller": "controller",
+        "method": "archive"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/qr-payments/dto/qr-payments.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "qrIdParamSchema",
+      "endpoint": "POST /api/v1/public/qr-payments/:id/enable",
+      "controller": {
+        "controller": "controller",
+        "method": "enable"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/qr-payments/dto/qr-payments.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 29
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "qrIdParamSchema",
+      "endpoint": "POST /api/v1/public/qr-payments/:id/disable",
+      "controller": {
+        "controller": "controller",
+        "method": "disable"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/qr-payments/dto/qr-payments.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "qrIdParamSchema",
+      "endpoint": "POST /api/v1/public/qr-payments/:id/regenerate",
+      "controller": {
+        "controller": "controller",
+        "method": "regenerate"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/qr-payments/dto/qr-payments.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "qrIdParamSchema",
+      "endpoint": "GET /api/v1/public/qr-payments/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/qr-payments/dto/qr-payments.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 32
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "qrIdParamSchema",
+      "endpoint": "PUT /api/v1/public/qr-payments/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/qr-payments/dto/qr-payments.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 33
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateQrBodySchema",
+      "endpoint": "PUT /api/v1/public/qr-payments/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/qr-payments/dto/qr-payments.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 33
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "refundListQuerySchema",
+      "endpoint": "GET /api/v1/refunds",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/refunds/dto/refunds.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/refunds/routes/refund.routes.ts",
+        "line": 23
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createRefundBodySchema",
+      "endpoint": "POST /api/v1/refunds",
+      "controller": {
+        "controller": "controller",
+        "method": "create"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/refunds/dto/refunds.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/refunds/routes/refund.routes.ts",
+        "line": 24
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "refundIdParamSchema",
+      "endpoint": "GET /api/v1/refunds/:id/history",
+      "controller": {
+        "controller": "controller",
+        "method": "history"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/refunds/dto/refunds.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/refunds/routes/refund.routes.ts",
+        "line": 25
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "refundIdParamSchema",
+      "endpoint": "GET /api/v1/refunds/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/refunds/dto/refunds.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/refunds/routes/refund.routes.ts",
+        "line": 26
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "refundIdParamSchema",
+      "endpoint": "POST /api/v1/refunds/:id/approve",
+      "controller": {
+        "controller": "controller",
+        "method": "approve"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/refunds/dto/refunds.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/refunds/routes/refund.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "refundIdParamSchema",
+      "endpoint": "POST /api/v1/refunds/:id/reject",
+      "controller": {
+        "controller": "controller",
+        "method": "reject"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/refunds/dto/refunds.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/refunds/routes/refund.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "rejectRefundBodySchema",
+      "endpoint": "POST /api/v1/refunds/:id/reject",
+      "controller": {
+        "controller": "controller",
+        "method": "reject"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/refunds/dto/refunds.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/refunds/routes/refund.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "analyticsQuerySchema",
+      "endpoint": "GET /api/v1/analytics/overview",
+      "controller": {
+        "controller": "controller",
+        "method": "overview"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 17
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "analyticsQuerySchema",
+      "endpoint": "GET /api/v1/analytics/revenue",
+      "controller": {
+        "controller": "controller",
+        "method": "revenue"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 18
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "analyticsQuerySchema",
+      "endpoint": "GET /api/v1/analytics/transactions",
+      "controller": {
+        "controller": "controller",
+        "method": "transactions"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 19
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "analyticsQuerySchema",
+      "endpoint": "GET /api/v1/analytics/settlements",
+      "controller": {
+        "controller": "controller",
+        "method": "settlements"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 20
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "analyticsQuerySchema",
+      "endpoint": "GET /api/v1/analytics/merchants",
+      "controller": {
+        "controller": "controller",
+        "method": "merchants"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 21
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "analyticsQuerySchema",
+      "endpoint": "GET /api/v1/analytics/customers",
+      "controller": {
+        "controller": "controller",
+        "method": "customers"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 22
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "analyticsQuerySchema",
+      "endpoint": "GET /api/v1/analytics/refunds",
+      "controller": {
+        "controller": "controller",
+        "method": "refunds"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 23
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "analyticsQuerySchema",
+      "endpoint": "GET /api/v1/analytics/chargebacks",
+      "controller": {
+        "controller": "controller",
+        "method": "chargebacks"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 24
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "analyticsQuerySchema",
+      "endpoint": "GET /api/v1/analytics/payouts",
+      "controller": {
+        "controller": "controller",
+        "method": "payouts"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 25
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "analyticsQuerySchema",
+      "endpoint": "GET /api/v1/analytics/payment-links",
+      "controller": {
+        "controller": "controller",
+        "method": "paymentLinks"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 26
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "analyticsQuerySchema",
+      "endpoint": "GET /api/v1/analytics/invoices",
+      "controller": {
+        "controller": "controller",
+        "method": "invoices"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "analyticsQuerySchema",
+      "endpoint": "GET /api/v1/analytics/qr-payments",
+      "controller": {
+        "controller": "controller",
+        "method": "qrPayments"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "analyticsQuerySchema",
+      "endpoint": "GET /api/v1/analytics/subscriptions",
+      "controller": {
+        "controller": "controller",
+        "method": "subscriptions"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 29
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "analyticsQuerySchema",
+      "endpoint": "GET /api/v1/analytics/support",
+      "controller": {
+        "controller": "controller",
+        "method": "support"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "analyticsQuerySchema",
+      "endpoint": "GET /api/v1/analytics/operations",
+      "controller": {
+        "controller": "controller",
+        "method": "operations"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "analyticsQuerySchema",
+      "endpoint": "GET /api/v1/analytics/payment-methods",
+      "controller": {
+        "controller": "controller",
+        "method": "paymentMethods"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 32
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "analyticsQuerySchema",
+      "endpoint": "GET /api/v1/analytics/regional",
+      "controller": {
+        "controller": "controller",
+        "method": "regional"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 33
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "exportQuerySchema",
+      "endpoint": "GET /api/v1/analytics/export",
+      "controller": {
+        "controller": "controller",
+        "method": "export"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/analytics.routes.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "historyQuerySchema",
+      "endpoint": "GET /api/v1/reports/history",
+      "controller": {
+        "controller": "controller",
+        "method": "history"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 40
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createScheduledBodySchema",
+      "endpoint": "POST /api/v1/reports/scheduled",
+      "controller": {
+        "controller": "controller",
+        "method": "createScheduled"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 42
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "scheduledIdParamSchema",
+      "endpoint": "PUT /api/v1/reports/scheduled/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "updateScheduled"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 43
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateScheduledBodySchema",
+      "endpoint": "PUT /api/v1/reports/scheduled/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "updateScheduled"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 43
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "scheduledIdParamSchema",
+      "endpoint": "DELETE /api/v1/reports/scheduled/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "deleteScheduled"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 44
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "runReportBodySchema",
+      "endpoint": "POST /api/v1/reports/run",
+      "controller": {
+        "controller": "controller",
+        "method": "run"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 45
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "exportReportBodySchema",
+      "endpoint": "POST /api/v1/reports/export",
+      "controller": {
+        "controller": "controller",
+        "method": "export"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 46
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "reportListQuerySchema",
+      "endpoint": "GET /api/v1/reports",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 47
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createReportBodySchema",
+      "endpoint": "POST /api/v1/reports",
+      "controller": {
+        "controller": "controller",
+        "method": "create"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 48
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "reportIdParamSchema",
+      "endpoint": "GET /api/v1/reports/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 49
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "reportIdParamSchema",
+      "endpoint": "PUT /api/v1/reports/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 50
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateReportBodySchema",
+      "endpoint": "PUT /api/v1/reports/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 50
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "reportIdParamSchema",
+      "endpoint": "DELETE /api/v1/reports/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "delete"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 51
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "roleListQuerySchema",
+      "endpoint": "GET /api/v1/roles",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/roles/dto/role.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/roles/routes/role.routes.ts",
+        "line": 23
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createRoleBodySchema",
+      "endpoint": "POST /api/v1/roles",
+      "controller": {
+        "controller": "controller",
+        "method": "create"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/roles/dto/role.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/roles/routes/role.routes.ts",
+        "line": 24
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "roleIdParamSchema",
+      "endpoint": "GET /api/v1/roles/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/roles/dto/role.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/roles/routes/role.routes.ts",
+        "line": 25
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "roleIdParamSchema",
+      "endpoint": "PUT /api/v1/roles/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/roles/dto/role.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/roles/routes/role.routes.ts",
+        "line": 26
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateRoleBodySchema",
+      "endpoint": "PUT /api/v1/roles/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/roles/dto/role.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/roles/routes/role.routes.ts",
+        "line": 26
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "roleIdParamSchema",
+      "endpoint": "DELETE /api/v1/roles/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "remove"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/roles/dto/role.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/roles/routes/role.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "roleIdParamSchema",
+      "endpoint": "PUT /api/v1/roles/:id/permissions",
+      "controller": {
+        "controller": "controller",
+        "method": "assignPermissions"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/roles/dto/role.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/roles/routes/role.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "assignRolePermissionsBodySchema",
+      "endpoint": "PUT /api/v1/roles/:id/permissions",
+      "controller": {
+        "controller": "controller",
+        "method": "assignPermissions"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/roles/dto/role.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/roles/routes/role.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "organizationSettingsSchema",
+      "endpoint": "PUT /api/v1/settings/organization",
+      "controller": {
+        "controller": "controller",
+        "method": "updateOrganization"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settings/dto/settings.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 41
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "brandingSettingsSchema",
+      "endpoint": "PUT /api/v1/settings/branding",
+      "controller": {
+        "controller": "controller",
+        "method": "updateBranding"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settings/dto/settings.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 44
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "securitySettingsSchema",
+      "endpoint": "PUT /api/v1/settings/security",
+      "controller": {
+        "controller": "controller",
+        "method": "updateSecurity"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settings/dto/settings.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 47
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "passwordPolicySchema",
+      "endpoint": "PUT /api/v1/settings/password-policy",
+      "controller": {
+        "controller": "controller",
+        "method": "updatePasswordPolicy"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settings/dto/settings.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 50
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "sessionSettingsSchema",
+      "endpoint": "PUT /api/v1/settings/session",
+      "controller": {
+        "controller": "controller",
+        "method": "updateSessionSettings"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settings/dto/settings.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 53
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "notificationPreferencesBodySchema",
+      "endpoint": "PUT /api/v1/settings/notifications/me",
+      "controller": {
+        "controller": "controller",
+        "method": "updateUserNotifications"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settings/dto/settings.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 56
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "notificationPreferencesBodySchema",
+      "endpoint": "PUT /api/v1/settings/notifications/defaults",
+      "controller": {
+        "controller": "controller",
+        "method": "updateDefaultNotifications"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settings/dto/settings.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 59
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "featureFlagListQuerySchema",
+      "endpoint": "GET /api/v1/settings/feature-flags",
+      "controller": {
+        "controller": "controller",
+        "method": "listFeatureFlags"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settings/dto/settings.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 64
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createFeatureFlagBodySchema",
+      "endpoint": "POST /api/v1/settings/feature-flags",
+      "controller": {
+        "controller": "controller",
+        "method": "createFeatureFlag"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settings/dto/settings.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 65
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "featureFlagIdParamSchema",
+      "endpoint": "GET /api/v1/settings/feature-flags/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getFeatureFlag"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settings/dto/settings.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 66
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "featureFlagIdParamSchema",
+      "endpoint": "PUT /api/v1/settings/feature-flags/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "updateFeatureFlag"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settings/dto/settings.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 67
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateFeatureFlagBodySchema",
+      "endpoint": "PUT /api/v1/settings/feature-flags/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "updateFeatureFlag"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settings/dto/settings.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 67
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "featureFlagIdParamSchema",
+      "endpoint": "DELETE /api/v1/settings/feature-flags/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "deleteFeatureFlag"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settings/dto/settings.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 68
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "apiSettingsSchema",
+      "endpoint": "PUT /api/v1/settings/api",
+      "controller": {
+        "controller": "controller",
+        "method": "updateApiSettings"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settings/dto/settings.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 71
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "smtpSettingsSchema",
+      "endpoint": "PUT /api/v1/settings/smtp",
+      "controller": {
+        "controller": "controller",
+        "method": "updateSmtpSettings"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settings/dto/settings.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 74
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "storageSettingsSchema",
+      "endpoint": "PUT /api/v1/settings/storage",
+      "controller": {
+        "controller": "controller",
+        "method": "updateStorageSettings"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settings/dto/settings.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 77
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "settlementSearchQuerySchema",
+      "endpoint": "GET /api/v1/settlements/search",
+      "controller": {
+        "controller": "controller",
+        "method": "search"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settlements/dto/settlement.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "settlementListQuerySchema",
+      "endpoint": "GET /api/v1/settlements/statistics",
+      "controller": {
+        "controller": "controller",
+        "method": "statistics"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settlements/dto/settlement.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "exportQuerySchema",
+      "endpoint": "GET /api/v1/settlements/export",
+      "controller": {
+        "controller": "controller",
+        "method": "export"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 32
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createBatchBodySchema",
+      "endpoint": "POST /api/v1/settlements/batches",
+      "controller": {
+        "controller": "controller",
+        "method": "createBatch"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settlements/dto/settlement.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "batchIdParamSchema",
+      "endpoint": "GET /api/v1/settlements/batches/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "batchById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settlements/dto/settlement.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 35
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "settlementListQuerySchema",
+      "endpoint": "GET /api/v1/settlements",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settlements/dto/settlement.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 36
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createSettlementBodySchema",
+      "endpoint": "POST /api/v1/settlements",
+      "controller": {
+        "controller": "controller",
+        "method": "create"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settlements/dto/settlement.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 37
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "settlementIdParamSchema",
+      "endpoint": "GET /api/v1/settlements/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settlements/dto/settlement.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 38
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "settlementIdParamSchema",
+      "endpoint": "PATCH /api/v1/settlements/:id/status",
+      "controller": {
+        "controller": "controller",
+        "method": "updateStatus"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settlements/dto/settlement.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 39
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateSettlementStatusBodySchema",
+      "endpoint": "PATCH /api/v1/settlements/:id/status",
+      "controller": {
+        "controller": "controller",
+        "method": "updateStatus"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settlements/dto/settlement.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 39
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "settlementIdParamSchema",
+      "endpoint": "GET /api/v1/settlements/:id/transactions",
+      "controller": {
+        "controller": "controller",
+        "method": "transactions"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settlements/dto/settlement.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 40
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "settlementIdParamSchema",
+      "endpoint": "POST /api/v1/settlements/:id/hold",
+      "controller": {
+        "controller": "controller",
+        "method": "hold"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settlements/dto/settlement.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 41
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "settlementIdParamSchema",
+      "endpoint": "POST /api/v1/settlements/:id/release",
+      "controller": {
+        "controller": "controller",
+        "method": "release"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settlements/dto/settlement.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 42
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "settlementIdParamSchema",
+      "endpoint": "POST /api/v1/settlements/:id/retry",
+      "controller": {
+        "controller": "controller",
+        "method": "retry"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settlements/dto/settlement.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 43
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "settlementIdParamSchema",
+      "endpoint": "POST /api/v1/settlements/:id/reversal",
+      "controller": {
+        "controller": "controller",
+        "method": "reversal"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settlements/dto/settlement.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 44
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "reversalBodySchema",
+      "endpoint": "POST /api/v1/settlements/:id/reversal",
+      "controller": {
+        "controller": "controller",
+        "method": "reversal"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/settlements/dto/settlement.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 44
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "planListQuerySchema",
+      "endpoint": "GET /api/v1/subscriptions/plans",
+      "controller": {
+        "controller": "controller",
+        "method": "listPlans"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/subscriptions/dto/subscriptions.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 21
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createPlanBodySchema",
+      "endpoint": "POST /api/v1/subscriptions/plans",
+      "controller": {
+        "controller": "controller",
+        "method": "createPlan"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/subscriptions/dto/subscriptions.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 22
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "subscriptionListQuerySchema",
+      "endpoint": "GET /api/v1/subscriptions",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/subscriptions/dto/subscriptions.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 23
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createSubscriptionBodySchema",
+      "endpoint": "POST /api/v1/subscriptions",
+      "controller": {
+        "controller": "controller",
+        "method": "create"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/subscriptions/dto/subscriptions.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 24
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "POST /api/v1/subscriptions/:id/pause",
+      "controller": {
+        "controller": "controller",
+        "method": "pause"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 25
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "POST /api/v1/subscriptions/:id/resume",
+      "controller": {
+        "controller": "controller",
+        "method": "resume"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 26
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "POST /api/v1/subscriptions/:id/upgrade",
+      "controller": {
+        "controller": "controller",
+        "method": "upgrade"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "POST /api/v1/subscriptions/:id/downgrade",
+      "controller": {
+        "controller": "controller",
+        "method": "downgrade"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "POST /api/v1/subscriptions/:id/cancel",
+      "controller": {
+        "controller": "controller",
+        "method": "cancel"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 29
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "POST /api/v1/subscriptions/:id/renew",
+      "controller": {
+        "controller": "controller",
+        "method": "renew"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "POST /api/v1/subscriptions/:id/fail",
+      "controller": {
+        "controller": "controller",
+        "method": "markFailed"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "idParamSchema",
+      "endpoint": "GET /api/v1/subscriptions/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/operations/dto/operations.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/routes/subscription.routes.ts",
+        "line": 32
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "ticketListQuerySchema",
+      "endpoint": "GET /api/v1/support",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/support/dto/support.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 21
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createTicketBodySchema",
+      "endpoint": "POST /api/v1/support",
+      "controller": {
+        "controller": "controller",
+        "method": "create"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/support/dto/support.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 22
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "ticketIdParamSchema",
+      "endpoint": "GET /api/v1/support/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/support/dto/support.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 23
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "ticketIdParamSchema",
+      "endpoint": "PUT /api/v1/support/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/support/dto/support.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 24
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateTicketBodySchema",
+      "endpoint": "PUT /api/v1/support/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/support/dto/support.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 24
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "ticketIdParamSchema",
+      "endpoint": "POST /api/v1/support/:id/assign",
+      "controller": {
+        "controller": "controller",
+        "method": "assign"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/support/dto/support.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 25
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "assignTicketBodySchema",
+      "endpoint": "POST /api/v1/support/:id/assign",
+      "controller": {
+        "controller": "controller",
+        "method": "assign"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/support/dto/support.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 25
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "ticketIdParamSchema",
+      "endpoint": "POST /api/v1/support/:id/reassign",
+      "controller": {
+        "controller": "controller",
+        "method": "reassign"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/support/dto/support.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 26
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "assignTicketBodySchema",
+      "endpoint": "POST /api/v1/support/:id/reassign",
+      "controller": {
+        "controller": "controller",
+        "method": "reassign"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/support/dto/support.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 26
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "ticketIdParamSchema",
+      "endpoint": "POST /api/v1/support/:id/escalate",
+      "controller": {
+        "controller": "controller",
+        "method": "escalate"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/support/dto/support.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "escalateTicketBodySchema",
+      "endpoint": "POST /api/v1/support/:id/escalate",
+      "controller": {
+        "controller": "controller",
+        "method": "escalate"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/support/dto/support.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "ticketIdParamSchema",
+      "endpoint": "POST /api/v1/support/:id/close",
+      "controller": {
+        "controller": "controller",
+        "method": "close"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/support/dto/support.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "ticketIdParamSchema",
+      "endpoint": "POST /api/v1/support/:id/reopen",
+      "controller": {
+        "controller": "controller",
+        "method": "reopen"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/support/dto/support.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 29
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "ticketIdParamSchema",
+      "endpoint": "POST /api/v1/support/:id/notes",
+      "controller": {
+        "controller": "controller",
+        "method": "addNote"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/support/dto/support.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "addNoteBodySchema",
+      "endpoint": "POST /api/v1/support/:id/notes",
+      "controller": {
+        "controller": "controller",
+        "method": "addNote"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/support/dto/support.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "ticketIdParamSchema",
+      "endpoint": "POST /api/v1/support/:id/attachments",
+      "controller": {
+        "controller": "controller",
+        "method": "addAttachment"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/support/dto/support.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "addAttachmentBodySchema",
+      "endpoint": "POST /api/v1/support/:id/attachments",
+      "controller": {
+        "controller": "controller",
+        "method": "addAttachment"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/support/dto/support.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/routes/support.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "transactionSearchQuerySchema",
+      "endpoint": "GET /api/v1/transactions/search",
+      "controller": {
+        "controller": "controller",
+        "method": "search"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/transactions/dto/transaction.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/routes/transaction.routes.ts",
+        "line": 26
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "transactionListQuerySchema",
+      "endpoint": "GET /api/v1/transactions/statistics",
+      "controller": {
+        "controller": "controller",
+        "method": "statistics"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/transactions/dto/transaction.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/routes/transaction.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "exportQuerySchema",
+      "endpoint": "GET /api/v1/transactions/export",
+      "controller": {
+        "controller": "controller",
+        "method": "export"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/reports/dto/reports.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/routes/transaction.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createDisputeBodySchema",
+      "endpoint": "POST /api/v1/transactions/disputes",
+      "controller": {
+        "controller": "controller",
+        "method": "createDispute"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/transactions/dto/transaction.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/routes/transaction.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "transactionListQuerySchema",
+      "endpoint": "GET /api/v1/transactions",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/transactions/dto/transaction.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/routes/transaction.routes.ts",
+        "line": 31
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createTransactionBodySchema",
+      "endpoint": "POST /api/v1/transactions",
+      "controller": {
+        "controller": "controller",
+        "method": "create"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/transactions/dto/transaction.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/routes/transaction.routes.ts",
+        "line": 32
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "transactionIdParamSchema",
+      "endpoint": "GET /api/v1/transactions/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/transactions/dto/transaction.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/routes/transaction.routes.ts",
+        "line": 33
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "transactionIdParamSchema",
+      "endpoint": "PATCH /api/v1/transactions/:id/status",
+      "controller": {
+        "controller": "controller",
+        "method": "updateStatus"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/transactions/dto/transaction.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/routes/transaction.routes.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateTransactionStatusBodySchema",
+      "endpoint": "PATCH /api/v1/transactions/:id/status",
+      "controller": {
+        "controller": "controller",
+        "method": "updateStatus"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/transactions/dto/transaction.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/routes/transaction.routes.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "transactionIdParamSchema",
+      "endpoint": "POST /api/v1/transactions/:id/refund",
+      "controller": {
+        "controller": "controller",
+        "method": "refund"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/transactions/dto/transaction.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/routes/transaction.routes.ts",
+        "line": 35
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "refundTransactionBodySchema",
+      "endpoint": "POST /api/v1/transactions/:id/refund",
+      "controller": {
+        "controller": "controller",
+        "method": "refund"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/transactions/dto/transaction.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/routes/transaction.routes.ts",
+        "line": 35
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "userListQuerySchema",
+      "endpoint": "GET /api/v1/users",
+      "controller": {
+        "controller": "controller",
+        "method": "list"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/users/dto/user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/users/routes/user.routes.ts",
+        "line": 24
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createUserBodySchema",
+      "endpoint": "POST /api/v1/users",
+      "controller": {
+        "controller": "controller",
+        "method": "create"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/users/dto/user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/users/routes/user.routes.ts",
+        "line": 25
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "userIdParamSchema",
+      "endpoint": "GET /api/v1/users/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "getById"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/users/dto/user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/users/routes/user.routes.ts",
+        "line": 26
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "userIdParamSchema",
+      "endpoint": "PUT /api/v1/users/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/users/dto/user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/users/routes/user.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateUserBodySchema",
+      "endpoint": "PUT /api/v1/users/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "update"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/users/dto/user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/users/routes/user.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "userIdParamSchema",
+      "endpoint": "PATCH /api/v1/users/:id/status",
+      "controller": {
+        "controller": "controller",
+        "method": "updateStatus"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/users/dto/user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/users/routes/user.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateUserStatusBodySchema",
+      "endpoint": "PATCH /api/v1/users/:id/status",
+      "controller": {
+        "controller": "controller",
+        "method": "updateStatus"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/users/dto/user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/users/routes/user.routes.ts",
+        "line": 28
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "userIdParamSchema",
+      "endpoint": "DELETE /api/v1/users/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "remove"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/users/dto/user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/users/routes/user.routes.ts",
+        "line": 29
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "userIdParamSchema",
+      "endpoint": "PUT /api/v1/users/:id/roles",
+      "controller": {
+        "controller": "controller",
+        "method": "assignRoles"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/users/dto/user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/users/routes/user.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "assignUserRolesBodySchema",
+      "endpoint": "PUT /api/v1/users/:id/roles",
+      "controller": {
+        "controller": "controller",
+        "method": "assignRoles"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/users/dto/user.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/users/routes/user.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createWebhookSchema",
+      "endpoint": "POST /api/v1/webhooks/endpoints",
+      "controller": {
+        "controller": "controller",
+        "method": "createWebhook"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/webhooks/dto/webhooks.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/webhooks/routes/webhooks.routes.ts",
+        "line": 25
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateWebhookSchema",
+      "endpoint": "PUT /api/v1/webhooks/endpoints/:id",
+      "controller": {
+        "controller": "controller",
+        "method": "updateWebhook"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/webhooks/dto/webhooks.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/webhooks/routes/webhooks.routes.ts",
+        "line": 27
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "createSubscriptionSchema",
+      "endpoint": "POST /api/v1/webhooks/endpoints/:id/subscriptions",
+      "controller": {
+        "controller": "controller",
+        "method": "createSubscription"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/webhooks/dto/webhooks.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/webhooks/routes/webhooks.routes.ts",
+        "line": 29
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "updateSubscriptionSchema",
+      "endpoint": "PUT /api/v1/webhooks/endpoints/:id/subscriptions/:subId",
+      "controller": {
+        "controller": "controller",
+        "method": "updateSubscription"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/webhooks/dto/webhooks.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/webhooks/routes/webhooks.routes.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "dto": "retryDeliverySchema",
+      "endpoint": "POST /api/v1/webhooks/deliveries/:id/retry",
+      "controller": {
+        "controller": "controller",
+        "method": "retryDelivery"
+      },
+      "dtoFile": "Backend_Fintech/src/app/modules/webhooks/dto/webhooks.dto.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/webhooks/routes/webhooks.routes.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    }
+  ]
+}

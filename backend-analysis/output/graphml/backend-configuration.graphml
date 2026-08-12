@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+<key id="type" for="node" attr.name="type" attr.type="string"/>
+<key id="label" for="node" attr.name="label" attr.type="string"/>
+<key id="verification" for="node" attr.name="verification" attr.type="string"/>
+<key id="rel" for="edge" attr.name="rel" attr.type="string"/>
+<graph id="G" edgedefault="directed">
+<node id="ep:GET:/api/v1/payment-config/limits"><data key="type">Endpoint</data><data key="label">GET /api/v1/payment-config/limits</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/payment-config/limits"><data key="type">Endpoint</data><data key="label">POST /api/v1/payment-config/limits</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/payment-config/merchants/:merchantId"><data key="type">Endpoint</data><data key="label">GET /api/v1/payment-config/merchants/:merchantId</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:getMerchantConfig"><data key="type">Controller</data><data key="label">getMerchantConfig</data><data key="verification">VERIFIED</data></node>
+<node id="ep:PUT:/api/v1/payment-config/merchants/:merchantId"><data key="type">Endpoint</data><data key="label">PUT /api/v1/payment-config/merchants/:merchantId</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:saveConfig"><data key="type">Controller</data><data key="label">saveConfig</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/payments/merchant-config/:merchantId"><data key="type">Endpoint</data><data key="label">GET /api/v1/payments/merchant-config/:merchantId</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:merchantConfig"><data key="type">Controller</data><data key="label">merchantConfig</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/settings/configuration"><data key="type">Endpoint</data><data key="label">GET /api/v1/settings/configuration</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:listPlatformConfig"><data key="type">Controller</data><data key="label">listPlatformConfig</data><data key="verification">VERIFIED</data></node>
+<node id="ep:PUT:/api/v1/settings/configuration"><data key="type">Endpoint</data><data key="label">PUT /api/v1/settings/configuration</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:updatePlatformConfig"><data key="type">Controller</data><data key="label">updatePlatformConfig</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/system/cache-config"><data key="type">Endpoint</data><data key="label">GET /api/v1/system/cache-config</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:listCacheConfig"><data key="type">Controller</data><data key="label">listCacheConfig</data><data key="verification">VERIFIED</data></node>
+<node id="ep:PUT:/api/v1/system/cache-config/:id"><data key="type">Endpoint</data><data key="label">PUT /api/v1/system/cache-config/:id</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:updateCacheConfig"><data key="type">Controller</data><data key="label">updateCacheConfig</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/system/backup-config"><data key="type">Endpoint</data><data key="label">GET /api/v1/system/backup-config</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:listBackupConfig"><data key="type">Controller</data><data key="label">listBackupConfig</data><data key="verification">VERIFIED</data></node>
+<node id="ep:PUT:/api/v1/system/backup-config/:id"><data key="type">Endpoint</data><data key="label">PUT /api/v1/system/backup-config/:id</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:updateBackupConfig"><data key="type">Controller</data><data key="label">updateBackupConfig</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:merchant_onboarding_settlement_config"><data key="type">Table</data><data key="label">merchant_onboarding_settlement_config</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:merchant_onboarding_payment_config"><data key="type">Table</data><data key="label">merchant_onboarding_payment_config</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:platform_configurations"><data key="type">Table</data><data key="label">platform_configurations</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:config_value"><data key="type">Table</data><data key="label">config_value</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:merchant_payment_method_config"><data key="type">Table</data><data key="label">merchant_payment_method_config</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:platform_config"><data key="type">Table</data><data key="label">platform_config</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:cache_configurations"><data key="type">Table</data><data key="label">cache_configurations</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:backup_configurations"><data key="type">Table</data><data key="label">backup_configurations</data><data key="verification">VERIFIED</data></node>
+<edge id="e0" source="ep:GET:/api/v1/payment-config/merchants/:merchantId" target="ctrl:getMerchantConfig"><data key="rel">handles</data></edge>
+<edge id="e1" source="ep:PUT:/api/v1/payment-config/merchants/:merchantId" target="ctrl:saveConfig"><data key="rel">handles</data></edge>
+<edge id="e2" source="ep:GET:/api/v1/payments/merchant-config/:merchantId" target="ctrl:merchantConfig"><data key="rel">handles</data></edge>
+<edge id="e3" source="ep:GET:/api/v1/settings/configuration" target="ctrl:listPlatformConfig"><data key="rel">handles</data></edge>
+<edge id="e4" source="ep:PUT:/api/v1/settings/configuration" target="ctrl:updatePlatformConfig"><data key="rel">handles</data></edge>
+<edge id="e5" source="ep:GET:/api/v1/system/cache-config" target="ctrl:listCacheConfig"><data key="rel">handles</data></edge>
+<edge id="e6" source="ep:PUT:/api/v1/system/cache-config/:id" target="ctrl:updateCacheConfig"><data key="rel">handles</data></edge>
+<edge id="e7" source="ep:GET:/api/v1/system/backup-config" target="ctrl:listBackupConfig"><data key="rel">handles</data></edge>
+<edge id="e8" source="ep:PUT:/api/v1/system/backup-config/:id" target="ctrl:updateBackupConfig"><data key="rel">handles</data></edge>
+</graph></graphml>

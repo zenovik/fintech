@@ -18,6 +18,7 @@ router.post('/imports', authorize(PERMISSIONS.RECONCILIATION_WRITE), asyncHandle
 router.get('/imports/:id', authorize(PERMISSIONS.RECONCILIATION_READ), asyncHandler(controller.getImport));
 router.put('/imports/:id', authorize(PERMISSIONS.RECONCILIATION_WRITE), asyncHandler(controller.updateImport));
 router.delete('/imports/:id', authorize(PERMISSIONS.RECONCILIATION_MANAGE), asyncHandler(controller.deleteImport));
+router.post('/imports/:id/auto-match', authorize(PERMISSIONS.RECONCILIATION_WRITE), asyncHandler(controller.autoMatchImport));
 router.post('/imports/:importId/records', authorize(PERMISSIONS.RECONCILIATION_WRITE), asyncHandler(controller.createRecord));
 router.get('/records', authorize(PERMISSIONS.RECONCILIATION_READ), asyncHandler(controller.listRecords));
 router.get('/records/:id', authorize(PERMISSIONS.RECONCILIATION_READ), asyncHandler(controller.getRecord));

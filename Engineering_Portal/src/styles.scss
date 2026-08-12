@@ -1,0 +1,86 @@
+@use '@angular/material' as mat;
+
+html {
+  color-scheme: light dark;
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Inter,
+      density: 0,
+    )
+  );
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body.dark-theme {
+  color-scheme: dark;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+body.light-theme {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+body.compact-theme {
+  --ep-density: compact;
+}
+
+.ep-page {
+  padding: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.ep-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.ep-card {
+  border-radius: 12px;
+}
+
+.ep-muted {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.ep-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  background: #334155;
+  color: #e2e8f0;
+}
+
+markdown-viewer pre {
+  overflow-x: auto;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #1e293b;
+}
+
+markdown-viewer h1,
+markdown-viewer h2,
+markdown-viewer h3 {
+  scroll-margin-top: 80px;
+}
+
+.graph-viewer svg {
+  max-width: 100%;
+  height: auto;
+}

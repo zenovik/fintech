@@ -1,0 +1,1093 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T19:07:37.679Z"
+  },
+  "errors": [],
+  "violations": [
+    {
+      "type": "repository_without_service",
+      "entity": "AcceptanceRepository",
+      "file": "Backend_Fintech/src/app/modules/acceptance/repositories/acceptance.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "AccountingRepository",
+      "file": "Backend_Fintech/src/app/modules/accounting/repositories/accounting.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "ActivityRepository",
+      "file": "Backend_Fintech/src/app/modules/activity/repositories/activity.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "AiInsightsRepository",
+      "file": "Backend_Fintech/src/app/modules/ai/repositories/ai-insights.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "AuditRepository",
+      "file": "Backend_Fintech/src/app/modules/audit/repositories/audit.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "AuditRepository",
+      "file": "Backend_Fintech/src/app/modules/auth/repositories/audit.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "ChallengeRepository",
+      "file": "Backend_Fintech/src/app/modules/auth/repositories/challenge.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "LoginAttemptRepository",
+      "file": "Backend_Fintech/src/app/modules/auth/repositories/login-attempt.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "OtpRepository",
+      "file": "Backend_Fintech/src/app/modules/auth/repositories/otp.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "PasswordHistoryRepository",
+      "file": "Backend_Fintech/src/app/modules/auth/repositories/password-history.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "PasswordResetRepository",
+      "file": "Backend_Fintech/src/app/modules/auth/repositories/password-reset.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "RefreshTokenRepository",
+      "file": "Backend_Fintech/src/app/modules/auth/repositories/refresh-token.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "SessionRepository",
+      "file": "Backend_Fintech/src/app/modules/auth/repositories/session.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "TrustedDeviceRepository",
+      "file": "Backend_Fintech/src/app/modules/auth/repositories/trusted-device.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "UserRepository",
+      "file": "Backend_Fintech/src/app/modules/auth/repositories/user.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "ChargebackRepository",
+      "file": "Backend_Fintech/src/app/modules/chargebacks/repositories/chargeback.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "CheckoutRepository",
+      "file": "Backend_Fintech/src/app/modules/checkout/repositories/checkout.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "CustomerRepository",
+      "file": "Backend_Fintech/src/app/modules/customers/repositories/customer.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "DashboardRepository",
+      "file": "Backend_Fintech/src/app/modules/dashboard/repositories/dashboard.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "PaymentPlatformStatsRepository",
+      "file": "Backend_Fintech/src/app/modules/dashboard/repositories/payment-platform-stats.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "DeveloperRepository",
+      "file": "Backend_Fintech/src/app/modules/developer/repositories/developer.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "DeviceRepository",
+      "file": "Backend_Fintech/src/app/modules/devices/repositories/device.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "FraudRepository",
+      "file": "Backend_Fintech/src/app/modules/fraud/repositories/fraud.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "InvoiceRepository",
+      "file": "Backend_Fintech/src/app/modules/invoices/repositories/invoice.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "MerchantRepository",
+      "file": "Backend_Fintech/src/app/modules/merchant/repositories/merchant.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "MerchantOnboardingRepository",
+      "file": "Backend_Fintech/src/app/modules/merchant-onboarding/repositories/merchant-onboarding.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "MerchantUserRepository",
+      "file": "Backend_Fintech/src/app/modules/merchant-users/repositories/merchant-user.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "NotificationRepository",
+      "file": "Backend_Fintech/src/app/modules/notifications/repositories/notification.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "RiskReviewRepository",
+      "file": "Backend_Fintech/src/app/modules/onboarding-approval/repositories/approval.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "KycReviewRepository",
+      "file": "Backend_Fintech/src/app/modules/onboarding-approval/repositories/approval.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "TaxProfileRepository",
+      "file": "Backend_Fintech/src/app/modules/onboarding-approval/repositories/approval.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "WorkflowRepository",
+      "file": "Backend_Fintech/src/app/modules/onboarding-approval/repositories/workflow.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "OperationsRepository",
+      "file": "Backend_Fintech/src/app/modules/operations/repositories/operations.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "OrganizationRepository",
+      "file": "Backend_Fintech/src/app/modules/organizations/repositories/organization.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "OutletRepository",
+      "file": "Backend_Fintech/src/app/modules/outlets/repositories/outlet.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "PaymentConfigRepository",
+      "file": "Backend_Fintech/src/app/modules/payment-config/repositories/payment-config.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "PaymentLinkRepository",
+      "file": "Backend_Fintech/src/app/modules/payment-links/repositories/payment-link.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "PaymentRepository",
+      "file": "Backend_Fintech/src/app/modules/payments/repositories/payment.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "PayoutRepository",
+      "file": "Backend_Fintech/src/app/modules/payouts/repositories/payout.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "PermissionRepository",
+      "file": "Backend_Fintech/src/app/modules/permissions/repositories/permission.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "PricingRepository",
+      "file": "Backend_Fintech/src/app/modules/pricing/repositories/pricing.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "QrPaymentRepository",
+      "file": "Backend_Fintech/src/app/modules/qr-payments/repositories/qr-payment.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "ReconciliationRepository",
+      "file": "Backend_Fintech/src/app/modules/reconciliation/repositories/reconciliation.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "RefundRepository",
+      "file": "Backend_Fintech/src/app/modules/refunds/repositories/refund.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "ReportCenterRepository",
+      "file": "Backend_Fintech/src/app/modules/reports/repositories/report-center.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "ReportsRepository",
+      "file": "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "AnalyticsRepository",
+      "file": "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "RiskRuleRepository",
+      "file": "Backend_Fintech/src/app/modules/risk-rules/repositories/risk-rule.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "RoleRepository",
+      "file": "Backend_Fintech/src/app/modules/roles/repositories/role.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "SandboxRepository",
+      "file": "Backend_Fintech/src/app/modules/sandbox/repositories/sandbox.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "SearchRepository",
+      "file": "Backend_Fintech/src/app/modules/search/repositories/search.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "PlatformConfigRepository",
+      "file": "Backend_Fintech/src/app/modules/settings/repositories/platform-config.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "SettingsRepository",
+      "file": "Backend_Fintech/src/app/modules/settings/repositories/settings.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "SettlementEngineRepository",
+      "file": "Backend_Fintech/src/app/modules/settlements/repositories/settlement-engine.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "SettlementRepository",
+      "file": "Backend_Fintech/src/app/modules/settlements/repositories/settlement.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "SmartCollectRepository",
+      "file": "Backend_Fintech/src/app/modules/smart-collect/repositories/smart-collect.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "SubscriptionRepository",
+      "file": "Backend_Fintech/src/app/modules/subscriptions/repositories/subscription.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "SupportRepository",
+      "file": "Backend_Fintech/src/app/modules/support/repositories/support.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "SystemRepository",
+      "file": "Backend_Fintech/src/app/modules/system/repositories/system.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "TransactionRepository",
+      "file": "Backend_Fintech/src/app/modules/transactions/repositories/transaction.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "UserAdminRepository",
+      "file": "Backend_Fintech/src/app/modules/users/repositories/user.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "WebhooksRepository",
+      "file": "Backend_Fintech/src/app/modules/webhooks/repositories/webhooks.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "PermissionRepository",
+      "file": "Backend_Fintech/src/app/shared/rbac/permission.repository.ts"
+    },
+    {
+      "type": "repository_without_service",
+      "entity": "ExportRegistryRepository",
+      "file": "Backend_Fintech/src/app/shared/repositories/export-registry.repository.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "AcceptanceController",
+      "file": "Backend_Fintech/src/app/modules/acceptance/controllers/acceptance.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "AccountingController",
+      "file": "Backend_Fintech/src/app/modules/accounting/controllers/accounting.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "ActivityController",
+      "file": "Backend_Fintech/src/app/modules/activity/controllers/activity.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "AiController",
+      "file": "Backend_Fintech/src/app/modules/ai/controllers/ai.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "AuditController",
+      "file": "Backend_Fintech/src/app/modules/audit/controllers/audit.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "AuthController",
+      "file": "Backend_Fintech/src/app/modules/auth/controllers/auth.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "ChargebackController",
+      "file": "Backend_Fintech/src/app/modules/chargebacks/controllers/chargeback.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "CheckoutController",
+      "file": "Backend_Fintech/src/app/modules/checkout/controllers/checkout.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "PublicCheckoutController",
+      "file": "Backend_Fintech/src/app/modules/checkout/controllers/checkout.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "CustomerController",
+      "file": "Backend_Fintech/src/app/modules/customers/controllers/customer.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "ExecutiveDashboardController",
+      "file": "Backend_Fintech/src/app/modules/dashboard/controllers/executive-dashboard.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "DeveloperController",
+      "file": "Backend_Fintech/src/app/modules/developer/controllers/developer.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "DeviceController",
+      "file": "Backend_Fintech/src/app/modules/devices/controllers/device.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "ExportController",
+      "file": "Backend_Fintech/src/app/modules/exports/controllers/export.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "FraudController",
+      "file": "Backend_Fintech/src/app/modules/fraud/controllers/fraud.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "InvoiceController",
+      "file": "Backend_Fintech/src/app/modules/invoices/controllers/invoice.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "MerchantController",
+      "file": "Backend_Fintech/src/app/modules/merchant/controllers/merchant.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "MerchantOnboardingController",
+      "file": "Backend_Fintech/src/app/modules/merchant-onboarding/controllers/merchant-onboarding.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "MerchantUserController",
+      "file": "Backend_Fintech/src/app/modules/merchant-users/controllers/merchant-user.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "NotificationController",
+      "file": "Backend_Fintech/src/app/modules/notifications/controllers/notification.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "ApprovalController",
+      "file": "Backend_Fintech/src/app/modules/onboarding-approval/controllers/approval.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "OperationsController",
+      "file": "Backend_Fintech/src/app/modules/operations/controllers/operations.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "OrganizationController",
+      "file": "Backend_Fintech/src/app/modules/organizations/controllers/organization.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "OutletController",
+      "file": "Backend_Fintech/src/app/modules/outlets/controllers/outlet.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "PaymentConfigController",
+      "file": "Backend_Fintech/src/app/modules/payment-config/controllers/payment-config.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "PaymentLinkController",
+      "file": "Backend_Fintech/src/app/modules/payment-links/controllers/payment-link.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "PublicPaymentLinkController",
+      "file": "Backend_Fintech/src/app/modules/payment-links/controllers/payment-link.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "PaymentController",
+      "file": "Backend_Fintech/src/app/modules/payments/controllers/payment.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "PayoutController",
+      "file": "Backend_Fintech/src/app/modules/payouts/controllers/payout.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "PermissionController",
+      "file": "Backend_Fintech/src/app/modules/permissions/controllers/permission.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "PricingController",
+      "file": "Backend_Fintech/src/app/modules/pricing/controllers/pricing.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "QrPaymentController",
+      "file": "Backend_Fintech/src/app/modules/qr-payments/controllers/qr-payment.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "PublicQrPaymentController",
+      "file": "Backend_Fintech/src/app/modules/qr-payments/controllers/qr-payment.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "ReconciliationController",
+      "file": "Backend_Fintech/src/app/modules/reconciliation/controllers/reconciliation.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "RefundController",
+      "file": "Backend_Fintech/src/app/modules/refunds/controllers/refund.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "ReportCenterController",
+      "file": "Backend_Fintech/src/app/modules/reports/controllers/report-center.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "ReportsController",
+      "file": "Backend_Fintech/src/app/modules/reports/controllers/reports.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "AnalyticsController",
+      "file": "Backend_Fintech/src/app/modules/reports/controllers/reports.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "RiskRuleController",
+      "file": "Backend_Fintech/src/app/modules/risk-rules/controllers/risk-rule.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "RoleController",
+      "file": "Backend_Fintech/src/app/modules/roles/controllers/role.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "SandboxController",
+      "file": "Backend_Fintech/src/app/modules/sandbox/controllers/sandbox.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "SearchController",
+      "file": "Backend_Fintech/src/app/modules/search/controllers/search.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "SettingsController",
+      "file": "Backend_Fintech/src/app/modules/settings/controllers/settings.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "SettlementController",
+      "file": "Backend_Fintech/src/app/modules/settlements/controllers/settlement.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "SmartCollectController",
+      "file": "Backend_Fintech/src/app/modules/smart-collect/controllers/smart-collect.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "SubscriptionController",
+      "file": "Backend_Fintech/src/app/modules/subscriptions/controllers/subscription.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "SupportController",
+      "file": "Backend_Fintech/src/app/modules/support/controllers/support.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "SystemController",
+      "file": "Backend_Fintech/src/app/modules/system/controllers/system.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "TransactionController",
+      "file": "Backend_Fintech/src/app/modules/transactions/controllers/transaction.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "UserController",
+      "file": "Backend_Fintech/src/app/modules/users/controllers/user.controller.ts"
+    },
+    {
+      "type": "controller_without_service",
+      "entity": "WebhooksController",
+      "file": "Backend_Fintech/src/app/modules/webhooks/controllers/webhooks.controller.ts"
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/ai/search",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/ai/routes/ai.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /logout",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/routes/auth.routes.ts",
+        "line": 70
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/dashboard/executive/ai/chat",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/dashboard/routes/executive-dashboard.routes.ts",
+        "line": 39
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/developer/oauth-apps/:id/revoke",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/developer/routes/developer.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/devices",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/devices/routes/device.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/devices/:id/activate",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/devices/routes/device.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/devices/:id/deactivate",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/devices/routes/device.routes.ts",
+        "line": 20
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/devices/:id/transfer",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/devices/routes/device.routes.ts",
+        "line": 21
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/devices/:id/replace",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/devices/routes/device.routes.ts",
+        "line": 22
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/devices/:id/sync",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/devices/routes/device.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/fraud/:id/approve",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/fraud/routes/fraud.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/fraud/:id/reject",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/fraud/routes/fraud.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/fraud/:id/release",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/fraud/routes/fraud.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/invoices/templates",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "PUT /api/v1/invoices/templates/:id",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/invoices/credit-notes",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/invoices/debit-notes",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/routes/invoice.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/merchant-onboarding",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/routes/merchant-onboarding.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "PATCH /api/v1/notifications/read-all",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "PATCH /api/v1/notifications/archive-all",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/notifications/campaigns",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 47
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "PUT /api/v1/notifications/campaigns/:id",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/notifications/routes/notification.routes.ts",
+        "line": 49
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "PUT /api/v1/operations/maintenance",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/operations/routes/operations.routes.ts",
+        "line": 21
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/payment-config/limits",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-config/routes/payment-config.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "PUT /api/v1/payment-config/merchants/:merchantId",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-config/routes/payment-config.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/pricing",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/pricing/routes/pricing.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/public/qr-payments/bulk",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/routes/qr-payment.routes.ts",
+        "line": 20
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/reconciliation/imports",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reconciliation/routes/reconciliation.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "PUT /api/v1/reconciliation/imports/:id",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reconciliation/routes/reconciliation.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/reconciliation/imports/:importId/records",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reconciliation/routes/reconciliation.routes.ts",
+        "line": 21
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/reconciliation/records/:id/match",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reconciliation/routes/reconciliation.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/reports/center/saved-filters",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/reports/center/generate",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/reports/center/export",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/reports/routes/reports.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/risk-rules",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/risk-rules/routes/risk-rule.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "PUT /api/v1/risk-rules/:id",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/risk-rules/routes/risk-rule.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/risk-rules/:id/evaluate",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/risk-rules/routes/risk-rule.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/sandbox/accounts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/sandbox/routes/sandbox.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "PUT /api/v1/sandbox/accounts/:id",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/sandbox/routes/sandbox.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/sandbox/simulations",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/sandbox/routes/sandbox.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "PUT /api/v1/sandbox/simulations/:id",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/sandbox/routes/sandbox.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "PUT /api/v1/settings/configuration",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 62
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "PUT /api/v1/settings/rate-limits",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 80
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "PUT /api/v1/settings/security/geo-login",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 81
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "PUT /api/v1/settings/security/api-ip-restrictions",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settings/routes/settings.routes.ts",
+        "line": 83
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/settlements/merchants/:merchantId/reserves",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/routes/settlement.routes.ts",
+        "line": 29
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/smart-collect/virtual-accounts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/smart-collect/routes/smart-collect.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "POST /api/v1/smart-collect/collections/:id/match",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/smart-collect/routes/smart-collect.routes.ts",
+        "line": 21
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "PUT /api/v1/system/cache-config/:id",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/system/routes/system.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "type": "route_without_validation",
+      "endpoint": "PUT /api/v1/system/backup-config/:id",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/system/routes/system.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "type": "transaction_without_rollback",
+      "class": "InvoiceService",
+      "method": "voidInvoice",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/services/invoice.service.ts",
+        "line": 308
+      }
+    },
+    {
+      "type": "transaction_without_rollback",
+      "class": "InvoiceService",
+      "method": "cancel",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/services/invoice.service.ts",
+        "line": 332
+      }
+    },
+    {
+      "type": "transaction_without_rollback",
+      "class": "InvoiceService",
+      "method": "markSent",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/services/invoice.service.ts",
+        "line": 354
+      }
+    },
+    {
+      "type": "transaction_without_rollback",
+      "class": "InvoiceService",
+      "method": "markViewed",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/services/invoice.service.ts",
+        "line": 381
+      }
+    },
+    {
+      "type": "transaction_without_rollback",
+      "class": "InvoiceService",
+      "method": "markOverdue",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/services/invoice.service.ts",
+        "line": 401
+      }
+    },
+    {
+      "type": "dto_without_route",
+      "dto": "checkoutRefParamSchema",
+      "file": "Backend_Fintech/src/app/modules/checkout/dto/checkout.dto.ts"
+    },
+    {
+      "type": "dto_without_route",
+      "dto": "recoveryTokenParamSchema",
+      "file": "Backend_Fintech/src/app/modules/checkout/dto/checkout.dto.ts"
+    },
+    {
+      "type": "dto_without_route",
+      "dto": "checkoutPayBodySchema",
+      "file": "Backend_Fintech/src/app/modules/checkout/dto/checkout.dto.ts"
+    },
+    {
+      "type": "dto_without_route",
+      "dto": "dashboardAiChatBodySchema",
+      "file": "Backend_Fintech/src/app/modules/dashboard/dto/dashboard-ai.dto.ts"
+    },
+    {
+      "type": "dto_without_route",
+      "dto": "lineItemSchema",
+      "file": "Backend_Fintech/src/app/modules/invoices/dto/invoices.dto.ts"
+    },
+    {
+      "type": "dto_without_route",
+      "dto": "addressSchema",
+      "file": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts"
+    },
+    {
+      "type": "dto_without_route",
+      "dto": "kycDocumentSchema",
+      "file": "Backend_Fintech/src/app/modules/merchant-onboarding/dto/merchant-onboarding.dto.ts"
+    },
+    {
+      "type": "dto_without_route",
+      "dto": "dispatchNotificationSchema",
+      "file": "Backend_Fintech/src/app/modules/notifications/dto/notifications.dto.ts"
+    },
+    {
+      "type": "dto_without_route",
+      "dto": "addressSchema",
+      "file": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts"
+    },
+    {
+      "type": "dto_without_route",
+      "dto": "contactSchema",
+      "file": "Backend_Fintech/src/app/modules/organizations/dto/organizations.dto.ts"
+    },
+    {
+      "type": "dto_without_route",
+      "dto": "outletStatusBodySchema",
+      "file": "Backend_Fintech/src/app/modules/outlets/dto/outlet.dto.ts"
+    },
+    {
+      "type": "dto_without_route",
+      "dto": "publicQrPayBodySchema",
+      "file": "Backend_Fintech/src/app/modules/qr-payments/dto/qr-payments.dto.ts"
+    },
+    {
+      "type": "dto_without_route",
+      "dto": "notificationPreferenceItemSchema",
+      "file": "Backend_Fintech/src/app/modules/settings/dto/settings.dto.ts"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: fintech-backend-binding
+  labels:
+    app.kubernetes.io/component: backend
+subjects:
+  - kind: ServiceAccount
+    name: fintech-backend
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: fintech-backend-role
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: fintech-worker-binding
+  labels:
+    app.kubernetes.io/component: worker
+subjects:
+  - kind: ServiceAccount
+    name: fintech-worker
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: fintech-worker-role
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: fintech-mysql-backup-binding
+  labels:
+    app.kubernetes.io/component: mysql-backup
+subjects:
+  - kind: ServiceAccount
+    name: fintech-mysql-backup
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: fintech-mysql-backup-role

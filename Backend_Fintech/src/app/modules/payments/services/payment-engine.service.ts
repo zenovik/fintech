@@ -9,6 +9,9 @@ import { canTransition, PaymentIntentStatus } from '../constants/payment-status'
 import { auditRecorder } from '../../audit';
 import { notificationDispatch } from '../../notifications';
 import { PaymentConfigRepository } from '../../payment-config/repositories/payment-config.repository';
+import { gatewayService } from '../../gateway/services/gateway.service';
+import { postingEngine } from '../../../shared/financial/posting-engine.service';
+import { eventBus } from '../../../shared/events/event-bus.service';
 
 function mapIntent(row: RowDataPacket) {
   return {
@@ -155,9 +158,19 @@ export class PaymentEngineService {
       const row = await this.repo.findIntentById(intentId, conn, true);
       if (!row) throw new NotFoundError('Payment not found');
       this.assertTransition(row.status, 'authorized');
+      const providerCode = process.env.PAYMENT_GATEWAY_PROVIDER ?? 'internal';
+      const gwResult = await gatewayService.execute(providerCode, {
+        operation: 'authorize',
+        amount: Number(row.amount),
+        currency: String(row.currency ?? 'USD'),
+        paymentIntentId: intentId,
+        metadata: { merchantId: row.merchant_id },
+      }, { paymentIntentId: intentId, merchantId: Number(row.merchant_id), organizationId: getOrganizationId() ?? undefined });
+
       await this.repo.updateIntentStatus(intentId, 'authorized', {
-        acquirerReference: `ACQ-${Date.now()}`,
-        rrn: `RRN${String(Date.now()).slice(-12)}`,
+        acquirerReference: gwResult.acquirerReference ?? `ACQ-${Date.now()}`,
+        rrn: gwResult.rrn ?? `RRN${String(Date.now()).slice(-12)}`,
+        gatewayTransactionId: gwResult.externalId,
       }, conn);
       await this.repo.addTimelineEvent(intentId, 'authorized', row.status, 'authorized', 'Payment authorized', actorId, undefined, conn);
       await conn.commit();
@@ -165,6 +178,13 @@ export class PaymentEngineService {
       const intent = mapIntent((await this.repo.findIntentById(intentId))!);
       void this.recordAudit('payment_authorized', intent.intentRef, actorId, 'Payment authorized');
       void this.webhooks.dispatch(Number(row.merchant_id), intentId, 'payment.authorized', intent);
+      void eventBus.publish({
+        eventType: 'payment.authorized',
+        aggregateType: 'payment_intent',
+        aggregateId: intentId,
+        organizationId: getOrganizationId() ?? undefined,
+        payload: { intentId, amount: Number(row.amount) },
+      }).catch(() => {});
       return { intent };
     } catch (err) {
       await conn.rollback();
@@ -212,6 +232,15 @@ export class PaymentEngineService {
       const intent = mapIntent((await this.repo.findIntentById(intentId))!);
       void this.recordAudit('payment_captured', intent.intentRef, actorId, `Captured ${captureAmount}`);
       void this.webhooks.dispatch(Number(row.merchant_id), intentId, 'payment.captured', intent);
+      void postingEngine.postPaymentCapture(captureAmount, Number(row.merchant_id), txnId, getOrganizationId() ?? undefined, actorId).catch(() => {});
+      void eventBus.publish({
+        eventType: 'payment.captured',
+        eventCategory: 'domain',
+        aggregateType: 'payment_intent',
+        aggregateId: intentId,
+        organizationId: getOrganizationId() ?? undefined,
+        payload: { intentId, transactionId: txnId, amount: captureAmount },
+      }).catch(() => {});
       if (actorId) {
         void notificationDispatch.paymentReceived(actorId, txnId, intent.intentRef, String(captureAmount), intent.currency).catch(() => {});
       }

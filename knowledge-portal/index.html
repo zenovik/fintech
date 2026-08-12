@@ -1,0 +1,5 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>index</title>
+<link rel="stylesheet" href="portal.css"></head><body>
+<nav class="nav"><a href="index.html">Home</a><a href="search.html">Search</a><a href="api.html">API</a><a href="frontend.html">Frontend</a><a href="backend.html">Backend</a><a href="database.html">Database</a><a href="permissions.html">Permissions</a><a href="workers.html">Workers</a><a href="impact.html">Impact</a><a href="traceability.html">Traceability</a><a href="documentation.html">Docs</a></nav>
+<main id="app"><h1>Knowledge Portal</h1><p id="stats">Loading...</p><script>loadGraph().then(g=>{document.getElementById('stats').innerHTML='Nodes: '+g.stats.nodes+' · Edges: '+g.stats.edges+' · Generated: '+(g.meta?.generatedAt||'');});</script></main>
+<script src="portal.js"></script></body></html>

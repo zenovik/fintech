@@ -1,0 +1,360 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T18:43:41.784Z",
+    "generatorVersion": "2.0.0-ast"
+  },
+  "navigations": [
+    {
+      "component": "SessionService",
+      "class": "SessionService",
+      "method": "handleSessionExpired",
+      "target": "[AUTH_ROUTES.SESSION_EXPIRED]",
+      "file": "Frontend_Fintech/src/app/core/auth/services/session.service.ts",
+      "line": 48
+    },
+    {
+      "component": "AuditDashboardComponent",
+      "class": "AuditDashboardComponent",
+      "method": "openLog",
+      "target": "['/audit', log.id]",
+      "file": "Frontend_Fintech/src/app/features/audit/pages/audit-dashboard/audit-dashboard.component.ts",
+      "line": 77
+    },
+    {
+      "component": "AuditTimelineComponent",
+      "class": "AuditTimelineComponent",
+      "method": "openLog",
+      "target": "['/audit', id]",
+      "file": "Frontend_Fintech/src/app/features/audit/pages/audit-timeline/audit-timeline.component.ts",
+      "line": 43
+    },
+    {
+      "component": "ActiveSessionsComponent",
+      "class": "ActiveSessionsComponent",
+      "method": "logout",
+      "target": "[AUTH_ROUTES.LOGIN]",
+      "file": "Frontend_Fintech/src/app/features/authentication/pages/active-sessions/active-sessions.component.ts",
+      "line": 90
+    },
+    {
+      "component": "ActiveSessionsComponent",
+      "class": "ActiveSessionsComponent",
+      "method": "logout",
+      "target": "[AUTH_ROUTES.LOGIN]",
+      "file": "Frontend_Fintech/src/app/features/authentication/pages/active-sessions/active-sessions.component.ts",
+      "line": 95
+    },
+    {
+      "component": "LoginComponent",
+      "class": "LoginComponent",
+      "method": "ngOnInit",
+      "target": "[DASHBOARD_ROUTES.EXECUTIVE]",
+      "file": "Frontend_Fintech/src/app/features/authentication/pages/login/login.component.ts",
+      "line": 65
+    },
+    {
+      "component": "LoginComponent",
+      "class": "LoginComponent",
+      "method": "onSubmit",
+      "target": "[AUTH_ROUTES.VERIFY_OTP]",
+      "file": "Frontend_Fintech/src/app/features/authentication/pages/login/login.component.ts",
+      "line": 99
+    },
+    {
+      "component": "ResetPasswordComponent",
+      "class": "ResetPasswordComponent",
+      "method": "ngOnInit",
+      "target": "[AUTH_ROUTES.FORGOT_PASSWORD]",
+      "file": "Frontend_Fintech/src/app/features/authentication/pages/reset-password/reset-password.component.ts",
+      "line": 74
+    },
+    {
+      "component": "ResetPasswordComponent",
+      "class": "ResetPasswordComponent",
+      "method": "onSubmit",
+      "target": "[AUTH_ROUTES.LOGIN]",
+      "file": "Frontend_Fintech/src/app/features/authentication/pages/reset-password/reset-password.component.ts",
+      "line": 92
+    },
+    {
+      "component": "SessionExpiredComponent",
+      "class": "SessionExpiredComponent",
+      "method": "goHome",
+      "target": "['/']",
+      "file": "Frontend_Fintech/src/app/features/authentication/pages/session-expired/session-expired.component.ts",
+      "line": 17
+    },
+    {
+      "component": "VerifyOtpComponent",
+      "class": "VerifyOtpComponent",
+      "method": "ngOnInit",
+      "target": "[AUTH_ROUTES.LOGIN]",
+      "file": "Frontend_Fintech/src/app/features/authentication/pages/verify-otp/verify-otp.component.ts",
+      "line": 64
+    },
+    {
+      "component": "ChargebackCreateComponent",
+      "class": "ChargebackCreateComponent",
+      "method": "submit",
+      "target": "['/chargebacks', c.id]",
+      "file": "Frontend_Fintech/src/app/features/chargebacks/pages/chargeback-create/chargeback-create.component.ts",
+      "line": 47
+    },
+    {
+      "component": "CustomerFormComponent",
+      "class": "CustomerFormComponent",
+      "method": "submit",
+      "target": "['/customers', c.id]",
+      "file": "Frontend_Fintech/src/app/features/customers/pages/customer-form/customer-form.component.ts",
+      "line": 86
+    },
+    {
+      "component": "InvoiceCreateComponent",
+      "class": "InvoiceCreateComponent",
+      "method": "submit",
+      "target": "['/invoices', inv.id]",
+      "file": "Frontend_Fintech/src/app/features/invoices/pages/invoice-create/invoice-create.component.ts",
+      "line": 48
+    },
+    {
+      "component": "InvoiceEditComponent",
+      "class": "InvoiceEditComponent",
+      "method": "submit",
+      "target": "['/invoices', this.invoiceId]",
+      "file": "Frontend_Fintech/src/app/features/invoices/pages/invoice-edit/invoice-edit.component.ts",
+      "line": 65
+    },
+    {
+      "component": "MerchantFormComponent",
+      "class": "MerchantFormComponent",
+      "method": "loadMerchant",
+      "target": "['/merchants']",
+      "file": "Frontend_Fintech/src/app/features/merchant/pages/merchant-form/merchant-form.component.ts",
+      "line": 138
+    },
+    {
+      "component": "MerchantStateService",
+      "class": "MerchantStateService",
+      "method": "createMerchant",
+      "target": "['/merchants', merchant.id]",
+      "file": "Frontend_Fintech/src/app/features/merchant/services/merchant-state.service.ts",
+      "line": 184
+    },
+    {
+      "component": "MerchantStateService",
+      "class": "MerchantStateService",
+      "method": "updateMerchant",
+      "target": "['/merchants', id]",
+      "file": "Frontend_Fintech/src/app/features/merchant/services/merchant-state.service.ts",
+      "line": 201
+    },
+    {
+      "component": "MerchantStateService",
+      "class": "MerchantStateService",
+      "method": "deleteMerchant",
+      "target": "['/merchants']",
+      "file": "Frontend_Fintech/src/app/features/merchant/services/merchant-state.service.ts",
+      "line": 224
+    },
+    {
+      "component": "OnboardingDashboardComponent",
+      "class": "OnboardingDashboardComponent",
+      "method": "createNew",
+      "target": "['/merchant-onboarding', app.id, 'wizard']",
+      "file": "Frontend_Fintech/src/app/features/merchant-onboarding/pages/onboarding-dashboard/onboarding-dashboard.component.ts",
+      "line": 76
+    },
+    {
+      "component": "OnboardingWizardComponent",
+      "class": "OnboardingWizardComponent",
+      "method": "ngOnInit",
+      "target": "['/merchant-onboarding', app.id, 'wizard']",
+      "file": "Frontend_Fintech/src/app/features/merchant-onboarding/pages/onboarding-wizard/onboarding-wizard.component.ts",
+      "line": 95
+    },
+    {
+      "component": "OnboardingWizardComponent",
+      "class": "OnboardingWizardComponent",
+      "method": "ngOnInit",
+      "target": "['/merchant-onboarding']",
+      "file": "Frontend_Fintech/src/app/features/merchant-onboarding/pages/onboarding-wizard/onboarding-wizard.component.ts",
+      "line": 97
+    },
+    {
+      "component": "OnboardingWizardComponent",
+      "class": "OnboardingWizardComponent",
+      "method": "loadApplication",
+      "target": "['/merchant-onboarding']",
+      "file": "Frontend_Fintech/src/app/features/merchant-onboarding/pages/onboarding-wizard/onboarding-wizard.component.ts",
+      "line": 120
+    },
+    {
+      "component": "OnboardingWizardComponent",
+      "class": "OnboardingWizardComponent",
+      "method": "submitApplication",
+      "target": "['/merchant-onboarding', this.applicationId]",
+      "file": "Frontend_Fintech/src/app/features/merchant-onboarding/pages/onboarding-wizard/onboarding-wizard.component.ts",
+      "line": 199
+    },
+    {
+      "component": "NotificationCenterComponent",
+      "class": "NotificationCenterComponent",
+      "method": "openNotification",
+      "target": "['/notifications', id]",
+      "file": "Frontend_Fintech/src/app/features/notifications/pages/notification-center/notification-center.component.ts",
+      "line": 60
+    },
+    {
+      "component": "OrganizationDetailsComponent",
+      "class": "OrganizationDetailsComponent",
+      "method": "setTab",
+      "target": "[]",
+      "file": "Frontend_Fintech/src/app/features/organizations/pages/organization-details/organization-details.component.ts",
+      "line": 91
+    },
+    {
+      "component": "OrganizationFormComponent",
+      "class": "OrganizationFormComponent",
+      "method": "save",
+      "target": "['/organizations', org.id]",
+      "file": "Frontend_Fintech/src/app/features/organizations/pages/organization-form/organization-form.component.ts",
+      "line": 139
+    },
+    {
+      "component": "OrganizationFormComponent",
+      "class": "OrganizationFormComponent",
+      "method": "save",
+      "target": "['/organizations', org.id]",
+      "file": "Frontend_Fintech/src/app/features/organizations/pages/organization-form/organization-form.component.ts",
+      "line": 147
+    },
+    {
+      "component": "OrganizationListComponent",
+      "class": "OrganizationListComponent",
+      "method": "open",
+      "target": "['/organizations', org.id]",
+      "file": "Frontend_Fintech/src/app/features/organizations/pages/organization-list/organization-list.component.ts",
+      "line": 73
+    },
+    {
+      "component": "PaymentLinkCreateComponent",
+      "class": "PaymentLinkCreateComponent",
+      "method": "submit",
+      "target": "['/payment-links', link.id]",
+      "file": "Frontend_Fintech/src/app/features/payment-links/pages/payment-link-create/payment-link-create.component.ts",
+      "line": 64
+    },
+    {
+      "component": "PaymentLinkEditComponent",
+      "class": "PaymentLinkEditComponent",
+      "method": "submit",
+      "target": "['/payment-links', this.linkId]",
+      "file": "Frontend_Fintech/src/app/features/payment-links/pages/payment-link-edit/payment-link-edit.component.ts",
+      "line": 87
+    },
+    {
+      "component": "PayoutCreateComponent",
+      "class": "PayoutCreateComponent",
+      "method": "submit",
+      "target": "['/payouts', p.id]",
+      "file": "Frontend_Fintech/src/app/features/payouts/pages/payout-create/payout-create.component.ts",
+      "line": 54
+    },
+    {
+      "component": "QrCreateComponent",
+      "class": "QrCreateComponent",
+      "method": "submit",
+      "target": "['/qr-payments', qr.id]",
+      "file": "Frontend_Fintech/src/app/features/qr-payments/pages/qr-create/qr-create.component.ts",
+      "line": 119
+    },
+    {
+      "component": "RefundRequestComponent",
+      "class": "RefundRequestComponent",
+      "method": "submit",
+      "target": "['/refunds', r.id]",
+      "file": "Frontend_Fintech/src/app/features/refunds/pages/refund-request/refund-request.component.ts",
+      "line": 36
+    },
+    {
+      "component": "ReportBuilderComponent",
+      "class": "ReportBuilderComponent",
+      "method": "onSave",
+      "target": "['/reports']",
+      "file": "Frontend_Fintech/src/app/features/reports/pages/report-builder/report-builder.component.ts",
+      "line": 80
+    },
+    {
+      "component": "RoleStateService",
+      "class": "RoleStateService",
+      "method": "createRole",
+      "target": "['/roles', r.id, 'permissions']",
+      "file": "Frontend_Fintech/src/app/features/roles/services/role-state.service.ts",
+      "line": 36
+    },
+    {
+      "component": "RoleStateService",
+      "class": "RoleStateService",
+      "method": "deleteRole",
+      "target": "['/roles']",
+      "file": "Frontend_Fintech/src/app/features/roles/services/role-state.service.ts",
+      "line": 50
+    },
+    {
+      "component": "PlanCreateComponent",
+      "class": "PlanCreateComponent",
+      "method": "submit",
+      "target": "['/subscriptions/plans']",
+      "file": "Frontend_Fintech/src/app/features/subscriptions/pages/plan-create/plan-create.component.ts",
+      "line": 103
+    },
+    {
+      "component": "SubscriptionCreateComponent",
+      "class": "SubscriptionCreateComponent",
+      "method": "submit",
+      "target": "['/subscriptions', sub.id]",
+      "file": "Frontend_Fintech/src/app/features/subscriptions/pages/subscription-create/subscription-create.component.ts",
+      "line": 105
+    },
+    {
+      "component": "TicketCreateComponent",
+      "class": "TicketCreateComponent",
+      "method": "submit",
+      "target": "['/support', t.id]",
+      "file": "Frontend_Fintech/src/app/features/support/pages/ticket-create/ticket-create.component.ts",
+      "line": 34
+    },
+    {
+      "component": "TicketEditComponent",
+      "class": "TicketEditComponent",
+      "method": "submit",
+      "target": "['/support', this.id]",
+      "file": "Frontend_Fintech/src/app/features/support/pages/ticket-edit/ticket-edit.component.ts",
+      "line": 37
+    },
+    {
+      "component": "UserStateService",
+      "class": "UserStateService",
+      "method": "createUser",
+      "target": "['/users', u.id]",
+      "file": "Frontend_Fintech/src/app/features/users/services/user-state.service.ts",
+      "line": 62
+    },
+    {
+      "component": "UserStateService",
+      "class": "UserStateService",
+      "method": "updateUser",
+      "target": "['/users', id]",
+      "file": "Frontend_Fintech/src/app/features/users/services/user-state.service.ts",
+      "line": 69
+    },
+    {
+      "component": "UserStateService",
+      "class": "UserStateService",
+      "method": "deleteUser",
+      "target": "['/users']",
+      "file": "Frontend_Fintech/src/app/features/users/services/user-state.service.ts",
+      "line": 76
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T19:07:37.657Z"
+  },
+  "mappings": [
+    {
+      "class": "BackgroundJobService",
+      "method": "processNext",
+      "operation": "acquireLock",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/jobs/background-job.service.ts",
+        "line": 92
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "class": "CacheService",
+      "method": "getOrSet",
+      "operation": "cacheGet",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/services/cache.service.ts",
+        "line": 41
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "class": "CacheService",
+      "method": "invalidate",
+      "operation": "cacheSet",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/services/cache.service.ts",
+        "line": 55
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "isRedisFallback",
+      "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+        "line": 0
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "getRedisClient",
+      "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+        "line": 0
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "attemptRedisRecovery",
+      "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+        "line": 0
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "startRedisRecoveryLoop",
+      "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+        "line": 0
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "checkRedisHealth",
+      "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+        "line": 0
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "closeRedis",
+      "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+        "line": 0
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "acquireLock",
+      "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+        "line": 0
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "releaseLock",
+      "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+        "line": 0
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "cacheGet",
+      "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+        "line": 0
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "cacheSet",
+      "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+        "line": 0
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "rateLimitCheck",
+      "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/infrastructure/redis.client.ts",
+        "line": 0
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "key": "cache:*",
+      "purpose": "Cache",
+      "verification": "VERIFIED",
+      "evidence": {
+        "file": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\shared\\infrastructure\\redis.client.ts",
+        "line": 0
+      }
+    }
+  ]
+}

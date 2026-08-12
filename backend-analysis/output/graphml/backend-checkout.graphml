@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+<key id="type" for="node" attr.name="type" attr.type="string"/>
+<key id="label" for="node" attr.name="label" attr.type="string"/>
+<key id="verification" for="node" attr.name="verification" attr.type="string"/>
+<key id="rel" for="edge" attr.name="rel" attr.type="string"/>
+<graph id="G" edgedefault="directed">
+<node id="ep:GET:/api/v1/public/checkout/themes"><data key="type">Endpoint</data><data key="label">GET /api/v1/public/checkout/themes</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/public/checkout/analytics"><data key="type">Endpoint</data><data key="label">GET /api/v1/public/checkout/analytics</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/public/checkout/sessions"><data key="type">Endpoint</data><data key="label">GET /api/v1/public/checkout/sessions</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/public/checkout/sessions"><data key="type">Endpoint</data><data key="label">POST /api/v1/public/checkout/sessions</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/public/checkout/sessions/:id"><data key="type">Endpoint</data><data key="label">GET /api/v1/public/checkout/sessions/:id</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/public/checkout/branding/:merchantId"><data key="type">Endpoint</data><data key="label">GET /api/v1/public/checkout/branding/:merchantId</data><data key="verification">VERIFIED</data></node>
+<node id="ep:PUT:/api/v1/public/checkout/branding/:merchantId"><data key="type">Endpoint</data><data key="label">PUT /api/v1/public/checkout/branding/:merchantId</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:checkout_sessions"><data key="type">Table</data><data key="label">checkout_sessions</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:checkout_session_events"><data key="type">Table</data><data key="label">checkout_session_events</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:merchant_checkout_branding"><data key="type">Table</data><data key="label">merchant_checkout_branding</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:checkout_themes"><data key="type">Table</data><data key="label">checkout_themes</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:checkout_analytics_daily"><data key="type">Table</data><data key="label">checkout_analytics_daily</data><data key="verification">VERIFIED</data></node>
+</graph></graphml>

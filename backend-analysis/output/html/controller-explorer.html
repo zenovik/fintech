@@ -1,0 +1,16 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"/><title>Controller Explorer</title>
+<style>body{font-family:system-ui;background:#0f172a;color:#e2e8f0;margin:0;padding:1rem}
+input{width:100%;padding:.5rem;margin-bottom:1rem;background:#1e293b;border:1px solid #475569;color:#e2e8f0;border-radius:4px}
+.card{background:#1e293b;border:1px solid #334155;border-radius:6px;padding:.75rem;margin-bottom:.5rem;font-size:.85rem}
+.tag{font-size:.7rem;background:#334155;padding:.1rem .4rem;border-radius:3px;margin-right:.25rem}
+</style></head><body>
+<h1>Controller Explorer</h1>
+<input id="q" placeholder="Search..."/>
+<div id="list"></div>
+<script>
+const DATA=[];
+const FIELDS=["controller","service","verification"];
+function render(list){document.getElementById('list').innerHTML=list.slice(0,300).map(i=>'<div class="card">'+FIELDS.map(f=>'<div><span class="tag">'+f+'</span> '+(Array.isArray(i[f])?i[f].join(', '):JSON.stringify(i[f]))+'</div>').join('')+'</div>').join('');}
+document.getElementById('q').oninput=e=>{const q=e.target.value.toLowerCase();render(DATA.filter(i=>JSON.stringify(i).toLowerCase().includes(q)));};
+render(DATA);
+</script></body></html>

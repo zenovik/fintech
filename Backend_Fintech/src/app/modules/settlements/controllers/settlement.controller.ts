@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { SettlementService } from '../services/settlement.service';
 import { SettlementEngineService } from '../services/settlement-engine.service';
+import { settlementProcessor } from '../../../shared/financial/settlement-processor.service';
 import { sendSuccess } from '../../../shared/responses/api.response';
 import {
   CreateBatchBodyDto,
@@ -88,5 +89,10 @@ export class SettlementController {
 
   retry = async (req: Request, res: Response): Promise<void> => {
     sendSuccess(res, await this.engineService.retry(Number(req.params.id), req.user?.sub));
+  };
+
+  runBatch = async (req: Request, res: Response): Promise<void> => {
+    const mode = String(req.body?.mode ?? 'daily') as 'daily' | 'weekly' | 'manual';
+    sendSuccess(res, await settlementProcessor.runDailyBatch(mode), 202, 'Settlement batch started');
   };
 }

@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T18:43:41.784Z",
+    "generatorVersion": "2.0.0-ast"
+  },
+  "interceptors": [
+    {
+      "name": "authGuard",
+      "file": "Frontend_Fintech/src/app/core/auth/guards/auth.guard.ts",
+      "injections": [
+        "AuthStateService",
+        "AuthService",
+        "SessionService",
+        "Router"
+      ],
+      "features": [
+        "Error handling"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/auth/guards/auth.guard.ts",
+        "line": 9
+      }
+    },
+    {
+      "name": "guestGuard",
+      "file": "Frontend_Fintech/src/app/core/auth/guards/guest.guard.ts",
+      "injections": [
+        "AuthStateService",
+        "Router"
+      ],
+      "features": [
+        "Logging"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/auth/guards/guest.guard.ts",
+        "line": 6
+      }
+    },
+    {
+      "name": "authInterceptor",
+      "file": "Frontend_Fintech/src/app/core/auth/interceptors/auth.interceptor.ts",
+      "injections": [
+        "AuthStateService",
+        "AuthService",
+        "SessionService",
+        "CsrfService",
+        "Router"
+      ],
+      "features": [
+        "CSRF",
+        "Refresh",
+        "JWT",
+        "Error handling",
+        "Retry chain",
+        "Credentials",
+        "Context headers"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/auth/interceptors/auth.interceptor.ts",
+        "line": 35
+      }
+    },
+    {
+      "name": "prepare",
+      "file": "Frontend_Fintech/src/app/core/auth/interceptors/auth.interceptor.ts",
+      "injections": [],
+      "features": [
+        "CSRF",
+        "Refresh",
+        "JWT",
+        "Error handling",
+        "Retry chain",
+        "Credentials",
+        "Context headers"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/auth/interceptors/auth.interceptor.ts",
+        "line": 52
+      }
+    },
+    {
+      "name": "has",
+      "file": "Frontend_Fintech/src/app/core/navigation/nav.service.ts",
+      "injections": [],
+      "features": [
+        "Logging"
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/navigation/nav.service.ts",
+        "line": 12
+      }
+    }
+  ]
+}

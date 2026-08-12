@@ -96,4 +96,9 @@ export class ReconciliationService {
     await this.repo.matchRecord(id, dto.matchType ?? 'manual', actorId, dto.transactionId, dto.settlementId);
     return this.getRecord(id);
   }
+
+  async autoMatchImport(importId: number, actorId?: number) {
+    if (!(await this.repo.findImport(importId))) throw new NotFoundError('Reconciliation import not found');
+    return this.repo.autoMatchImport(importId, actorId);
+  }
 }

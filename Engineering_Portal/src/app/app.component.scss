@@ -1,0 +1,45 @@
+.shell {
+  height: 100vh;
+}
+
+.shell-nav {
+  width: 260px;
+  border-right: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  gap: 0.5rem;
+}
+
+.topbar-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.main {
+  min-height: calc(100vh - 64px);
+}
+
+a.active {
+  background: rgba(59, 130, 246, 0.15);
+}
+
+.load-error {
+  color: #f59e0b;
+}

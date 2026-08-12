@@ -30,4 +30,7 @@ export class ReconciliationController {
   matchRecord = async (req: Request, res: Response) => {
     sendSuccess(res, await this.service.matchRecord(Number(req.params.id), req.body, req.user?.sub));
   };
+  autoMatchImport = async (req: Request, res: Response) => {
+    sendSuccess(res, await this.service.autoMatchImport(Number(req.params.id), req.user?.sub));
+  };
 }

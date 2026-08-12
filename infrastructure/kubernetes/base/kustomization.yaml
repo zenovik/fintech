@@ -1,0 +1,38 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: production
+
+commonLabels:
+  app.kubernetes.io/part-of: fintech-platform
+  app.kubernetes.io/managed-by: kustomize
+
+resources:
+  - rbac/serviceaccounts.yaml
+  - rbac/roles.yaml
+  - rbac/rolebindings.yaml
+  - storage/pvc-uploads.yaml
+  - storage/pvc-logs.yaml
+  - mysql/statefulset.yaml
+  - mysql/service-headless.yaml
+  - mysql/service.yaml
+  - mysql/cronjob-backup.yaml
+  - redis/configmap.yaml
+  - redis/secret.yaml
+  - redis/pvc.yaml
+  - redis/deployment.yaml
+  - redis/service.yaml
+  - backend/configmap.yaml
+  - backend/secret.yaml
+  - backend/deployment.yaml
+  - backend/service.yaml
+  - backend/pdb.yaml
+  - backend/hpa.yaml
+  - worker/configmap.yaml
+  - worker/deployment.yaml
+  - worker/hpa.yaml
+  - frontend/configmap.yaml
+  - frontend/deployment.yaml
+  - frontend/service.yaml
+  - networking/ingress.yaml
+  - networking/networkpolicy.yaml

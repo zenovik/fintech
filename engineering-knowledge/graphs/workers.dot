@@ -1,0 +1,22 @@
+digraph "workers" {
+  rankdir=LR;
+  node [shape=box fontsize=10];
+  n0 [label="Worker\nBackend_Fintech/src/__tests__/integratio"];
+  n1 [label="Worker\nBackend_Fintech/src/app/shared/workers/j"];
+  n2 [label="Worker\nBackend_Fintech/src/app/shared/workers/w"];
+  n3 [label="WorkerProcess\nBackend_Fintech/src/worker.ts"];
+  n4 [label="BackgroundJob\ninvoice_email"];
+  n5 [label="BackgroundJob\nwebhook_delivery"];
+  n6 [label="BackgroundJob\nnotification_email"];
+  n7 [label="BackgroundJob\npassword_reset_email"];
+  n8 [label="Queue\nbackground_jobs"];
+  n9 [label="Queue\nretry_queue"];
+  n10 [label="Queue\nnotification_deliveries"];
+  n3 -> n4 [label="CONSUMES"];
+  n3 -> n5 [label="CONSUMES"];
+  n3 -> n6 [label="CONSUMES"];
+  n3 -> n7 [label="CONSUMES"];
+  n3 -> n8 [label="READS"];
+  n3 -> n9 [label="READS"];
+  n3 -> n10 [label="READS"];
+}

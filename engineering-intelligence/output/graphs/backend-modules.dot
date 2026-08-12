@@ -1,0 +1,35 @@
+digraph backend {
+  rankdir=LR;
+  "acceptance" [label="acceptance"];
+  "accounting" [label="accounting"];
+  "activity" [label="activity"];
+  "ai" [label="ai"];
+  "audit" [label="audit"];
+  "auth" [label="auth"];
+  "chargebacks" [label="chargebacks"];
+  "checkout" [label="checkout"];
+  "customers" [label="customers"];
+  "dashboard" [label="dashboard"];
+  "developer" [label="developer"];
+  "devices" [label="devices"];
+  "exports" [label="exports"];
+  "fraud" [label="fraud"];
+  "invoices" [label="invoices"];
+  "merchant" [label="merchant"];
+  "merchant-onboarding" [label="merchant-onboarding"];
+  "merchant-users" [label="merchant-users"];
+  "notifications" [label="notifications"];
+  "onboarding-approval" [label="onboarding-approval"];
+  "operations" [label="operations"];
+  "organizations" [label="organizations"];
+  "outlets" [label="outlets"];
+  "payment-config" [label="payment-config"];
+  "payment-links" [label="payment-links"];
+  "payments" [label="payments"];
+  "payouts" [label="payouts"];
+  "permissions" [label="permissions"];
+  "pricing" [label="pricing"];
+  "qr-payments" [label="qr-payments"];
+  payments -> payment_intents [label="repository"];
+  auth -> users [label="repository"];
+}

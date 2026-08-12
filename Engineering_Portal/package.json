@@ -1,0 +1,35 @@
+{
+  "name": "engineering-portal",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "sync-data": "node scripts/sync-data.mjs",
+    "start": "npm run sync-data && ng serve --port 4300",
+    "build": "npm run sync-data && ng build",
+    "lint": "prettier --check \"src/**/*.{ts,html,scss}\""
+  },
+  "dependencies": {
+    "@angular/animations": "19.2.19",
+    "@angular/cdk": "19.2.19",
+    "@angular/common": "19.2.19",
+    "@angular/compiler": "19.2.19",
+    "@angular/core": "19.2.19",
+    "@angular/forms": "19.2.19",
+    "@angular/material": "19.2.19",
+    "@angular/platform-browser": "19.2.19",
+    "@angular/platform-browser-dynamic": "19.2.19",
+    "@angular/router": "19.2.19",
+    "marked": "^15.0.0",
+    "mermaid": "^11.4.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.15.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "19.2.19",
+    "@angular/cli": "19.2.19",
+    "@angular/compiler-cli": "19.2.19",
+    "prettier": "^3.4.0",
+    "typescript": "~5.7.2"
+  }
+}

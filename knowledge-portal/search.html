@@ -1,0 +1,5 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>search</title>
+<link rel="stylesheet" href="portal.css"></head><body>
+<nav class="nav"><a href="index.html">Home</a><a href="search.html">Search</a><a href="api.html">API</a><a href="frontend.html">Frontend</a><a href="backend.html">Backend</a><a href="database.html">Database</a><a href="permissions.html">Permissions</a><a href="workers.html">Workers</a><a href="impact.html">Impact</a><a href="traceability.html">Traceability</a><a href="documentation.html">Docs</a></nav>
+<main id="app"><h1>Semantic Search</h1><input id="q" placeholder="Search..." oninput="doSearch(this.value)"><div id="r"></div><script>async function doSearch(q){const s=await loadSearch();const terms=q.toLowerCase().split(/\s+/);let ids=new Set();for(const t of terms){for(const k of Object.keys(s.index||{})){if(k.includes(t))(s.index[k]||[]).forEach(x=>ids.add(x.id));}}document.getElementById('r').innerHTML='<p>'+ids.size+' matches</p>'+renderTable([...ids].slice(0,50).map(id=>({id})),['id']);}</script></main>
+<script src="portal.js"></script></body></html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+<key id="type" for="node" attr.name="type" attr.type="string"/>
+<key id="label" for="node" attr.name="label" attr.type="string"/>
+<key id="verification" for="node" attr.name="verification" attr.type="string"/>
+<key id="rel" for="edge" attr.name="rel" attr.type="string"/>
+<graph id="G" edgedefault="directed">
+<node id="ep:GET:/api/v1/audit"><data key="type">Endpoint</data><data key="label">GET /api/v1/audit</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/audit/export"><data key="type">Endpoint</data><data key="label">GET /api/v1/audit/export</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/audit/categories"><data key="type">Endpoint</data><data key="label">GET /api/v1/audit/categories</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/audit/actions"><data key="type">Endpoint</data><data key="label">GET /api/v1/audit/actions</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/audit/api-logs"><data key="type">Endpoint</data><data key="label">GET /api/v1/audit/api-logs</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/audit/webhook-logs"><data key="type">Endpoint</data><data key="label">GET /api/v1/audit/webhook-logs</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/audit/:id"><data key="type">Endpoint</data><data key="label">GET /api/v1/audit/:id</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:audit_logs"><data key="type">Table</data><data key="label">audit_logs</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:audit_actions"><data key="type">Table</data><data key="label">audit_actions</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:audit_metadata"><data key="type">Table</data><data key="label">audit_metadata</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:audit_categories"><data key="type">Table</data><data key="label">audit_categories</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:auth_audit_logs"><data key="type">Table</data><data key="label">auth_audit_logs</data><data key="verification">VERIFIED</data></node>
+</graph></graphml>

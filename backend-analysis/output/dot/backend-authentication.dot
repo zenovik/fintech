@@ -1,0 +1,25 @@
+digraph "authentication" {
+  rankdir=LR;
+  node [shape=box fontsize=10];
+  n0 [label="Endpoint\nGET /api/v1/developer/oauth-apps"];
+  n1 [label="Controller\nlistOAuthApps"];
+  n2 [label="Endpoint\nPOST /api/v1/developer/oauth-apps"];
+  n3 [label="Controller\ncreateOAuthApp"];
+  n4 [label="Endpoint\nGET /api/v1/developer/oauth-apps/:id"];
+  n5 [label="Controller\ngetOAuthApp"];
+  n6 [label="Endpoint\nPUT /api/v1/developer/oauth-apps/:id"];
+  n7 [label="Controller\nupdateOAuthApp"];
+  n8 [label="Endpoint\nPOST /api/v1/developer/oauth-apps/:i"];
+  n9 [label="Controller\nrevokeOAuthApp"];
+  n10 [label="Endpoint\nPOST /api/v1/payments/:id/authorize"];
+  n11 [label="Controller\nauthorize"];
+  n12 [label="Table\nauth_audit_logs"];
+  n13 [label="Table\nauth_challenges"];
+  n14 [label="Table\noauth_applications"];
+  n0 -> n1 [label="handles"];
+  n2 -> n3 [label="handles"];
+  n4 -> n5 [label="handles"];
+  n6 -> n7 [label="handles"];
+  n8 -> n9 [label="handles"];
+  n10 -> n11 [label="handles"];
+}

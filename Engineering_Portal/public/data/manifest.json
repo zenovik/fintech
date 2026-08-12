@@ -1,0 +1,35 @@
+{
+  "syncedAt": "2026-08-03T19:25:12.362Z",
+  "sources": [
+    {
+      "path": "engineering-intelligence/output/json",
+      "dest": "ei"
+    },
+    {
+      "path": "frontend-analysis/output/json",
+      "dest": "fe"
+    },
+    {
+      "path": "backend-analysis/output/json",
+      "dest": "be"
+    },
+    {
+      "path": "engineering-knowledge/json",
+      "dest": "ek"
+    },
+    {
+      "path": "engineering-knowledge/reports",
+      "dest": "ek/reports"
+    },
+    {
+      "path": "docs/07_Governance/json",
+      "dest": "gov"
+    },
+    {
+      "path": "docs/08_Enterprise_Delivery/json",
+      "dest": "delivery"
+    }
+  ],
+  "filesCopied": 49,
+  "docsCopied": 112
+}

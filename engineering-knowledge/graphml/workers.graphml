@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+<key id="type" for="node" attr.name="type" attr.type="string"/>
+<key id="key" for="node" attr.name="key" attr.type="string"/>
+<key id="rel" for="edge" attr.name="rel" attr.type="string"/>
+<graph id="G" edgedefault="directed">
+<node id="Worker:Backend_Fintech/src/__tests__/integration/webhooks-workers.integration.test.ts"><data key="type">Worker</data><data key="key">Backend_Fintech/src/__tests__/integration/webhooks-workers.integration.test.ts</data></node>
+<node id="Worker:Backend_Fintech/src/app/shared/workers/job-handlers.ts"><data key="type">Worker</data><data key="key">Backend_Fintech/src/app/shared/workers/job-handlers.ts</data></node>
+<node id="Worker:Backend_Fintech/src/app/shared/workers/worker-runner.ts"><data key="type">Worker</data><data key="key">Backend_Fintech/src/app/shared/workers/worker-runner.ts</data></node>
+<node id="WorkerProcess:Backend_Fintech/src/worker.ts"><data key="type">WorkerProcess</data><data key="key">Backend_Fintech/src/worker.ts</data></node>
+<node id="BackgroundJob:invoice_email"><data key="type">BackgroundJob</data><data key="key">invoice_email</data></node>
+<node id="BackgroundJob:webhook_delivery"><data key="type">BackgroundJob</data><data key="key">webhook_delivery</data></node>
+<node id="BackgroundJob:notification_email"><data key="type">BackgroundJob</data><data key="key">notification_email</data></node>
+<node id="BackgroundJob:password_reset_email"><data key="type">BackgroundJob</data><data key="key">password_reset_email</data></node>
+<node id="Queue:background_jobs"><data key="type">Queue</data><data key="key">background_jobs</data></node>
+<node id="Queue:retry_queue"><data key="type">Queue</data><data key="key">retry_queue</data></node>
+<node id="Queue:notification_deliveries"><data key="type">Queue</data><data key="key">notification_deliveries</data></node>
+<edge id="e0" source="WorkerProcess:Backend_Fintech/src/worker.ts" target="BackgroundJob:invoice_email"><data key="rel">CONSUMES</data></edge>
+<edge id="e1" source="WorkerProcess:Backend_Fintech/src/worker.ts" target="BackgroundJob:webhook_delivery"><data key="rel">CONSUMES</data></edge>
+<edge id="e2" source="WorkerProcess:Backend_Fintech/src/worker.ts" target="BackgroundJob:notification_email"><data key="rel">CONSUMES</data></edge>
+<edge id="e3" source="WorkerProcess:Backend_Fintech/src/worker.ts" target="BackgroundJob:password_reset_email"><data key="rel">CONSUMES</data></edge>
+<edge id="e4" source="WorkerProcess:Backend_Fintech/src/worker.ts" target="Queue:background_jobs"><data key="rel">READS</data></edge>
+<edge id="e5" source="WorkerProcess:Backend_Fintech/src/worker.ts" target="Queue:retry_queue"><data key="rel">READS</data></edge>
+<edge id="e6" source="WorkerProcess:Backend_Fintech/src/worker.ts" target="Queue:notification_deliveries"><data key="rel">READS</data></edge>
+</graph></graphml>

@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T18:43:41.942Z",
+    "generatorVersion": "2.0.0-ast",
+    "durationMs": 8302
+  },
+  "componentsParsed": 153,
+  "servicesParsed": 67,
+  "directivesParsed": 0,
+  "pipesParsed": 0,
+  "httpClientCalls": 356,
+  "endpointsResolved": 259,
+  "feApiMappings": 2076,
+  "feApiMappingsVerified": 1742,
+  "routeMappings": 268,
+  "guardMappings": 163,
+  "interceptorMappings": 5,
+  "permissionMappings": 85,
+  "navigationMappings": 44,
+  "observableChains": 866,
+  "lazyRoutes": 161,
+  "validationErrors": 97,
+  "parseErrors": 0,
+  "filesScanned": 329,
+  "repositoryIntelligenceScoreBefore": 76,
+  "repositoryIntelligenceScoreAfter": 100,
+  "knowledgeGraphCoverageBefore": 93,
+  "knowledgeGraphCoverageAfter": 98,
+  "graphmlGenerated": 7,
+  "svgGenerated": 7
+}

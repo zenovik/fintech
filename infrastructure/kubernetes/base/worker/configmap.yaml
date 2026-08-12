@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fintech-worker-config
+  labels:
+    app.kubernetes.io/component: worker
+data:
+  NODE_ENV: production
+  DB_HOST: mysql
+  DB_PORT: "3306"
+  DB_NAME: fintech_db
+  DB_USER: fintech_user
+  REDIS_ENABLED: "true"
+  LOG_LEVEL: info
+  WORKER_POLL_INTERVAL_MS: "3000"
+  WORKER_CONCURRENCY: "5"
+  WORKER_BATCH_SIZE: "10"

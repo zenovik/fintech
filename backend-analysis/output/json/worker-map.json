@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T19:07:37.657Z"
+  },
+  "workers": [
+    {
+      "function": "processBackgroundJob",
+      "file": "Backend_Fintech/src/app/shared/workers/job-handlers.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/workers/job-handlers.ts",
+        "line": 21
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "processRetryQueueItem",
+      "file": "Backend_Fintech/src/app/shared/workers/job-handlers.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/workers/job-handlers.ts",
+        "line": 172
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "processNotificationEmailDelivery",
+      "file": "Backend_Fintech/src/app/shared/workers/job-handlers.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/workers/job-handlers.ts",
+        "line": 233
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "processScheduledTasks",
+      "file": "Backend_Fintech/src/app/shared/workers/job-handlers.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/workers/job-handlers.ts",
+        "line": 249
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "getWorkerState",
+      "file": "Backend_Fintech/src/app/shared/workers/worker-runner.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/workers/worker-runner.ts",
+        "line": 30
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "requestWorkerShutdown",
+      "file": "Backend_Fintech/src/app/shared/workers/worker-runner.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/workers/worker-runner.ts",
+        "line": 34
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "claimBackgroundJobs",
+      "file": "Backend_Fintech/src/app/shared/workers/worker-runner.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/workers/worker-runner.ts",
+        "line": 38
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "claimRetryQueue",
+      "file": "Backend_Fintech/src/app/shared/workers/worker-runner.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/workers/worker-runner.ts",
+        "line": 63
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "claimNotificationEmails",
+      "file": "Backend_Fintech/src/app/shared/workers/worker-runner.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/workers/worker-runner.ts",
+        "line": 91
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "runWorkerTickOnce",
+      "file": "Backend_Fintech/src/app/shared/workers/worker-runner.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/workers/worker-runner.ts",
+        "line": 210
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "startWorkerLoop",
+      "file": "Backend_Fintech/src/app/shared/workers/worker-runner.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/workers/worker-runner.ts",
+        "line": 214
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "function": "shutdownWorker",
+      "file": "Backend_Fintech/src/app/shared/workers/worker-runner.ts",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/workers/worker-runner.ts",
+        "line": 240
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "type": "invoice_email",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/workers/job-handlers.ts",
+        "line": 0
+      },
+      "kind": "job-type",
+      "verification": "VERIFIED"
+    },
+    {
+      "type": "webhook_delivery",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/workers/job-handlers.ts",
+        "line": 0
+      },
+      "kind": "job-type",
+      "verification": "VERIFIED"
+    },
+    {
+      "type": "notification_email",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/workers/job-handlers.ts",
+        "line": 0
+      },
+      "kind": "job-type",
+      "verification": "VERIFIED"
+    },
+    {
+      "type": "password_reset_email",
+      "evidence": {
+        "file": "Backend_Fintech/src/app/shared/workers/job-handlers.ts",
+        "line": 0
+      },
+      "kind": "job-type",
+      "verification": "VERIFIED"
+    }
+  ]
+}

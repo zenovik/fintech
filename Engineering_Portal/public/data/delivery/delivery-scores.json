@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-08-03T19:13:35.559Z",
+  "faqCount": 110,
+  "runbookCount": 18,
+  "handbookCount": 10,
+  "guideCount": 6,
+  "matrixCount": 7,
+  "fileCount": 42,
+  "scores": {
+    "handover": 88,
+    "repository": 96,
+    "ops": 72,
+    "support": 68,
+    "docs": 90,
+    "overall": 84
+  }
+}

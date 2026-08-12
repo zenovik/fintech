@@ -24,6 +24,7 @@ const controller = new SettlementController();
 router.use(authenticate);
 router.use(requireOrganization());
 
+router.post('/batch/run', authorize(PERMISSIONS.SETTLEMENTS_WRITE), asyncHandler(controller.runBatch));
 router.get('/calendar', authorize(PERMISSIONS.SETTLEMENTS_READ), asyncHandler(controller.calendar));
 router.get('/reserves', authorize(PERMISSIONS.SETTLEMENTS_READ), asyncHandler(controller.listReserves));
 router.post('/merchants/:merchantId/reserves', authorize(PERMISSIONS.SETTLEMENTS_WRITE), asyncHandler(controller.createReserve));

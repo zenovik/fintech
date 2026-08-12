@@ -1,0 +1,2309 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T18:13:27.127Z",
+    "generatorVersion": "3.0.0-a",
+    "evidenceCount": 223,
+    "verificationStatus": "verified-from-source"
+  },
+  "masterSqlFile": "Database_Fintech/master_database.sql",
+  "tables": [
+    "users",
+    "password_history",
+    "password_reset_tokens",
+    "trusted_devices",
+    "user_sessions",
+    "refresh_tokens",
+    "auth_challenges",
+    "otp_verifications",
+    "login_attempts",
+    "auth_audit_logs",
+    "sso_identities",
+    "organizations",
+    "organization_addresses",
+    "organization_contacts",
+    "organization_domains",
+    "organization_roles",
+    "organization_members",
+    "organization_preferences",
+    "organization_branding",
+    "organization_api_keys",
+    "organization_billing",
+    "regions",
+    "payment_method_types",
+    "transaction_statuses",
+    "activity_event_types",
+    "fraud_alert_severities",
+    "dashboard_export_formats",
+    "merchants",
+    "merchant_tags",
+    "merchant_addresses",
+    "merchant_contacts",
+    "merchant_documents",
+    "merchant_bank_accounts",
+    "merchant_settlement_accounts",
+    "merchant_payment_methods",
+    "merchant_api_credentials",
+    "merchant_webhooks",
+    "merchant_notes",
+    "merchant_tag_assignments",
+    "customers",
+    "customer_addresses",
+    "customer_merchants",
+    "transactions",
+    "transaction_events",
+    "transaction_status_history",
+    "transaction_refunds",
+    "refund_status_history",
+    "transaction_fees",
+    "transaction_disputes",
+    "dispute_evidence",
+    "dispute_status_history",
+    "transaction_notes",
+    "transaction_exports",
+    "transaction_attachments",
+    "settlement_batches",
+    "settlements",
+    "settlement_transactions",
+    "settlement_adjustments",
+    "settlement_reversals",
+    "settlement_fees",
+    "settlement_bank_transfers",
+    "settlement_status_history",
+    "settlement_exports",
+    "settlement_notes",
+    "payout_batches",
+    "payouts",
+    "payout_status_history",
+    "payment_links",
+    "payment_link_transactions",
+    "invoices",
+    "invoice_line_items",
+    "invoice_payments",
+    "qr_codes",
+    "qr_transactions",
+    "subscription_plans",
+    "subscriptions",
+    "subscription_invoices",
+    "support_tickets",
+    "support_ticket_notes",
+    "support_ticket_attachments",
+    "support_ticket_activities",
+    "system_alerts",
+    "operations_incidents",
+    "retry_queue",
+    "background_jobs",
+    "merchant_onboarding_applications",
+    "merchant_onboarding_business",
+    "merchant_onboarding_addresses",
+    "merchant_onboarding_kyc_documents",
+    "merchant_onboarding_bank_details",
+    "merchant_onboarding_settlement_config",
+    "merchant_onboarding_payment_config",
+    "merchant_onboarding_timeline_events",
+    "roles",
+    "permissions",
+    "role_permissions",
+    "user_roles",
+    "user_activity_logs",
+    "login_history",
+    "api_tokens",
+    "state_region_mapping",
+    "merchant_code_sequences",
+    "merchant_roles",
+    "merchant_role_permissions",
+    "merchant_outlets",
+    "merchant_users",
+    "merchant_user_outlets",
+    "onboarding_workflow_stage_definitions",
+    "onboarding_workflow_instances",
+    "onboarding_workflow_stage_history",
+    "onboarding_risk_reviews",
+    "onboarding_kyc_verification_events",
+    "merchant_tax_profiles",
+    "merchant_payment_method_config",
+    "payment_devices",
+    "device_sync_logs",
+    "terminal_inventory",
+    "settlement_calendar",
+    "settlement_holds",
+    "settlement_reserves",
+    "pricing_plans",
+    "pricing_fee_rules",
+    "transaction_limit_rules",
+    "risk_rules",
+    "risk_rule_evaluations",
+    "fraud_cases",
+    "ledger_accounts",
+    "ledger_entries",
+    "payment_orders",
+    "payment_intents",
+    "payment_sessions",
+    "payment_timeline_events",
+    "payment_idempotency_keys",
+    "customer_payment_methods",
+    "payment_webhook_deliveries",
+    "checkout_themes",
+    "merchant_checkout_branding",
+    "checkout_sessions",
+    "checkout_session_events",
+    "checkout_analytics_daily",
+    "qr_templates",
+    "qr_categories",
+    "qr_tags",
+    "qr_scan_history",
+    "payment_link_visits",
+    "payment_link_events",
+    "payment_link_reminders",
+    "virtual_accounts",
+    "collections",
+    "collection_events",
+    "customer_preferences",
+    "merchant_branding_assets",
+    "acceptance_analytics_daily",
+    "fraud_alerts",
+    "activity_events",
+    "dashboard_kpi_snapshots",
+    "revenue_time_series",
+    "payment_method_distribution",
+    "regional_distribution",
+    "user_dashboard_preferences",
+    "dashboard_export_jobs",
+    "report_categories",
+    "report_templates",
+    "reports",
+    "saved_reports",
+    "scheduled_reports",
+    "report_exports",
+    "report_execution_logs",
+    "analytics_metrics",
+    "analytics_snapshots",
+    "analytics_widgets",
+    "dashboard_preferences",
+    "organization_settings",
+    "branding_settings",
+    "security_settings",
+    "password_policy",
+    "session_settings",
+    "notification_preferences",
+    "feature_flags",
+    "api_settings",
+    "smtp_settings",
+    "storage_settings",
+    "notification_channels",
+    "notification_events",
+    "notification_templates",
+    "notification_groups",
+    "notifications",
+    "notification_deliveries",
+    "audit_categories",
+    "audit_actions",
+    "audit_logs",
+    "audit_metadata",
+    "api_logs",
+    "webhook_logs",
+    "export_file_registry",
+    "developer_profiles",
+    "oauth_applications",
+    "api_usage_logs",
+    "webhook_event_subscriptions",
+    "webhook_delivery_queue",
+    "webhook_replay_history",
+    "subscription_mandates",
+    "subscription_dunning_events",
+    "invoice_templates",
+    "credit_notes",
+    "debit_notes",
+    "reconciliation_imports",
+    "reconciliation_records",
+    "sandbox_accounts",
+    "sandbox_test_cards",
+    "sandbox_simulations",
+    "cache_configurations",
+    "backup_configurations",
+    "ai_insights_daily",
+    "communication_campaigns",
+    "api_rate_limits",
+    "email_delivery_log",
+    "data_retention_policies",
+    "report_saved_filters",
+    "report_center_catalog",
+    "platform_config",
+    "feature_flag_api_routes",
+    "background_job_schedules"
+  ],
+  "tableCount": 223,
+  "views": [],
+  "procedures": [
+    "sp_seed_enterprise_payments_demo",
+    "sp_seed_payment_gateway_demo",
+    "sp_seed_hosted_checkout_demo",
+    "sp_seed_payment_acceptance_demo",
+    "sp_seed_enterprise_platform_demo"
+  ],
+  "indexes": [],
+  "foreignKeys": [],
+  "softDeleteTables": [
+    "users",
+    "trusted_devices",
+    "sso_identities",
+    "merchants",
+    "merchant_addresses",
+    "merchant_contacts",
+    "merchant_documents",
+    "merchant_bank_accounts",
+    "merchant_settlement_accounts",
+    "merchant_api_credentials",
+    "merchant_webhooks",
+    "merchant_notes",
+    "customers",
+    "customer_addresses",
+    "transactions",
+    "transaction_refunds",
+    "transaction_disputes",
+    "dispute_evidence",
+    "transaction_notes",
+    "transaction_attachments",
+    "settlement_batches",
+    "settlements",
+    "settlement_adjustments",
+    "settlement_reversals",
+    "settlement_notes",
+    "payout_batches",
+    "payouts",
+    "payment_links",
+    "invoices",
+    "qr_codes",
+    "subscription_plans",
+    "subscriptions",
+    "support_tickets",
+    "merchant_onboarding_applications",
+    "roles",
+    "api_tokens",
+    "merchant_outlets",
+    "merchant_users",
+    "payment_devices",
+    "report_categories",
+    "report_templates",
+    "reports",
+    "saved_reports",
+    "scheduled_reports",
+    "report_exports",
+    "analytics_metrics",
+    "analytics_widgets",
+    "notification_templates",
+    "notification_groups",
+    "notifications"
+  ],
+  "sqlFileCount": 81,
+  "tableUsage": {
+    "users": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/activity/repositories/activity.repository.ts",
+        "Backend_Fintech/src/app/modules/auth/repositories/user.repository.ts",
+        "Backend_Fintech/src/app/modules/chargebacks/repositories/chargeback.repository.ts",
+        "Backend_Fintech/src/app/modules/developer/repositories/developer.repository.ts",
+        "Backend_Fintech/src/app/modules/devices/repositories/device.repository.ts",
+        "Backend_Fintech/src/app/modules/invoices/repositories/invoice.repository.ts",
+        "Backend_Fintech/src/app/modules/merchant-onboarding/repositories/merchant-onboarding.repository.ts",
+        "Backend_Fintech/src/app/modules/merchant-users/repositories/merchant-user.repository.ts",
+        "Backend_Fintech/src/app/modules/notifications/repositories/notification.repository.ts",
+        "Backend_Fintech/src/app/modules/onboarding-approval/repositories/approval.repository.ts",
+        "Backend_Fintech/src/app/modules/onboarding-approval/repositories/workflow.repository.ts",
+        "Backend_Fintech/src/app/modules/organizations/repositories/organization.repository.ts",
+        "Backend_Fintech/src/app/modules/outlets/repositories/outlet.repository.ts",
+        "Backend_Fintech/src/app/modules/payment-links/repositories/payment-link.repository.ts",
+        "Backend_Fintech/src/app/modules/payments/repositories/payment.repository.ts",
+        "Backend_Fintech/src/app/modules/payouts/repositories/payout.repository.ts",
+        "Backend_Fintech/src/app/modules/qr-payments/repositories/qr-payment.repository.ts",
+        "Backend_Fintech/src/app/modules/refunds/repositories/refund.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts",
+        "Backend_Fintech/src/app/modules/search/repositories/search.repository.ts",
+        "Backend_Fintech/src/app/modules/support/repositories/support.repository.ts",
+        "Backend_Fintech/src/app/modules/users/repositories/user.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "password_history": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/auth/repositories/password-history.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "password_reset_tokens": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/auth/repositories/password-reset.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "trusted_devices": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/auth/repositories/trusted-device.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "user_sessions": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/auth/repositories/session.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "refresh_tokens": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/auth/repositories/refresh-token.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "auth_challenges": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/auth/repositories/challenge.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "otp_verifications": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/auth/repositories/otp.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "login_attempts": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/auth/repositories/login-attempt.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "auth_audit_logs": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/auth/repositories/audit.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "sso_identities": {
+      "repositories": [],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "organizations": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/customers/repositories/customer.repository.ts",
+        "Backend_Fintech/src/app/modules/invoices/repositories/invoice.repository.ts",
+        "Backend_Fintech/src/app/modules/merchant-onboarding/repositories/merchant-onboarding.repository.ts",
+        "Backend_Fintech/src/app/modules/merchant-users/repositories/merchant-user.repository.ts",
+        "Backend_Fintech/src/app/modules/onboarding-approval/repositories/workflow.repository.ts",
+        "Backend_Fintech/src/app/modules/organizations/repositories/organization.repository.ts",
+        "Backend_Fintech/src/app/modules/outlets/repositories/outlet.repository.ts",
+        "Backend_Fintech/src/app/modules/payment-links/repositories/payment-link.repository.ts",
+        "Backend_Fintech/src/app/modules/qr-payments/repositories/qr-payment.repository.ts",
+        "Backend_Fintech/src/app/modules/support/repositories/support.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "organization_addresses": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/organizations/repositories/organization.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "organization_contacts": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/organizations/repositories/organization.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "organization_domains": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/organizations/repositories/organization.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "organization_roles": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant-users/repositories/merchant-user.repository.ts",
+        "Backend_Fintech/src/app/modules/organizations/repositories/organization.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "organization_members": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/audit/repositories/audit.repository.ts",
+        "Backend_Fintech/src/app/modules/merchant-users/repositories/merchant-user.repository.ts",
+        "Backend_Fintech/src/app/modules/organizations/repositories/organization.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "organization_preferences": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/organizations/repositories/organization.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "organization_branding": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/organizations/repositories/organization.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "organization_api_keys": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/developer/repositories/developer.repository.ts",
+        "Backend_Fintech/src/app/modules/organizations/repositories/organization.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "organization_billing": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/organizations/repositories/organization.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "regions": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/customers/repositories/customer.repository.ts",
+        "Backend_Fintech/src/app/modules/dashboard/repositories/dashboard.repository.ts",
+        "Backend_Fintech/src/app/modules/merchant/repositories/merchant.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts",
+        "Backend_Fintech/src/app/modules/transactions/repositories/transaction.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "payment_method_types": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/dashboard/repositories/dashboard.repository.ts",
+        "Backend_Fintech/src/app/modules/payment-config/repositories/payment-config.repository.ts",
+        "Backend_Fintech/src/app/modules/payments/repositories/payment.repository.ts",
+        "Backend_Fintech/src/app/modules/pricing/repositories/pricing.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts",
+        "Backend_Fintech/src/app/modules/transactions/repositories/transaction.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "transaction_statuses": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/customers/repositories/customer.repository.ts",
+        "Backend_Fintech/src/app/modules/dashboard/repositories/dashboard.repository.ts",
+        "Backend_Fintech/src/app/modules/merchant/repositories/merchant.repository.ts",
+        "Backend_Fintech/src/app/modules/operations/repositories/operations.repository.ts",
+        "Backend_Fintech/src/app/modules/payment-links/repositories/payment-link.repository.ts",
+        "Backend_Fintech/src/app/modules/payments/repositories/payment.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts",
+        "Backend_Fintech/src/app/modules/transactions/repositories/transaction.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "activity_event_types": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/dashboard/repositories/dashboard.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "fraud_alert_severities": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/dashboard/repositories/dashboard.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "dashboard_export_formats": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/dashboard/repositories/dashboard.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchants": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/acceptance/repositories/acceptance.repository.ts",
+        "Backend_Fintech/src/app/modules/ai/repositories/ai-insights.repository.ts",
+        "Backend_Fintech/src/app/modules/audit/repositories/audit.repository.ts",
+        "Backend_Fintech/src/app/modules/chargebacks/repositories/chargeback.repository.ts",
+        "Backend_Fintech/src/app/modules/checkout/repositories/checkout.repository.ts",
+        "Backend_Fintech/src/app/modules/customers/repositories/customer.repository.ts",
+        "Backend_Fintech/src/app/modules/dashboard/repositories/dashboard.repository.ts",
+        "Backend_Fintech/src/app/modules/devices/repositories/device.repository.ts",
+        "Backend_Fintech/src/app/modules/fraud/repositories/fraud.repository.ts",
+        "Backend_Fintech/src/app/modules/invoices/repositories/invoice.repository.ts",
+        "Backend_Fintech/src/app/modules/merchant/repositories/merchant.repository.ts",
+        "Backend_Fintech/src/app/modules/merchant-onboarding/repositories/merchant-onboarding.repository.ts",
+        "Backend_Fintech/src/app/modules/merchant-users/repositories/merchant-user.repository.ts",
+        "Backend_Fintech/src/app/modules/operations/repositories/operations.repository.ts",
+        "Backend_Fintech/src/app/modules/outlets/repositories/outlet.repository.ts",
+        "Backend_Fintech/src/app/modules/payment-links/repositories/payment-link.repository.ts",
+        "Backend_Fintech/src/app/modules/payments/repositories/payment.repository.ts",
+        "Backend_Fintech/src/app/modules/payouts/repositories/payout.repository.ts",
+        "Backend_Fintech/src/app/modules/qr-payments/repositories/qr-payment.repository.ts",
+        "Backend_Fintech/src/app/modules/refunds/repositories/refund.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/report-center.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts",
+        "Backend_Fintech/src/app/modules/search/repositories/search.repository.ts",
+        "Backend_Fintech/src/app/modules/settlements/repositories/settlement.repository.ts",
+        "Backend_Fintech/src/app/modules/smart-collect/repositories/smart-collect.repository.ts",
+        "Backend_Fintech/src/app/modules/subscriptions/repositories/subscription.repository.ts",
+        "Backend_Fintech/src/app/modules/support/repositories/support.repository.ts",
+        "Backend_Fintech/src/app/modules/transactions/repositories/transaction.repository.ts",
+        "Backend_Fintech/src/app/modules/webhooks/repositories/webhooks.repository.ts"
+      ],
+      "services": [
+        "Backend_Fintech/src/app/modules/onboarding-approval/services/go-live-promotion.service.ts",
+        "Backend_Fintech/src/app/modules/onboarding-approval/services/status-sync.service.ts"
+      ],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_tags": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant/repositories/merchant.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_addresses": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant/repositories/merchant.repository.ts",
+        "Backend_Fintech/src/app/modules/merchant-onboarding/repositories/merchant-onboarding.repository.ts"
+      ],
+      "services": [
+        "Backend_Fintech/src/app/modules/onboarding-approval/services/go-live-promotion.service.ts"
+      ],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_contacts": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant/repositories/merchant.repository.ts",
+        "Backend_Fintech/src/app/modules/merchant-onboarding/repositories/merchant-onboarding.repository.ts"
+      ],
+      "services": [
+        "Backend_Fintech/src/app/modules/onboarding-approval/services/go-live-promotion.service.ts"
+      ],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_documents": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant/repositories/merchant.repository.ts"
+      ],
+      "services": [
+        "Backend_Fintech/src/app/modules/onboarding-approval/services/go-live-promotion.service.ts"
+      ],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_bank_accounts": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant-onboarding/repositories/merchant-onboarding.repository.ts",
+        "Backend_Fintech/src/app/modules/payouts/repositories/payout.repository.ts"
+      ],
+      "services": [
+        "Backend_Fintech/src/app/modules/onboarding-approval/services/go-live-promotion.service.ts"
+      ],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_settlement_accounts": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant-onboarding/repositories/merchant-onboarding.repository.ts"
+      ],
+      "services": [
+        "Backend_Fintech/src/app/modules/onboarding-approval/services/go-live-promotion.service.ts"
+      ],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_payment_methods": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant-onboarding/repositories/merchant-onboarding.repository.ts"
+      ],
+      "services": [
+        "Backend_Fintech/src/app/modules/onboarding-approval/services/go-live-promotion.service.ts"
+      ],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_api_credentials": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant/repositories/merchant.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_webhooks": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/audit/repositories/audit.repository.ts",
+        "Backend_Fintech/src/app/modules/payments/repositories/payment.repository.ts",
+        "Backend_Fintech/src/app/modules/webhooks/repositories/webhooks.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": [
+        "Backend_Fintech/src/__tests__/integration/webhooks-workers.integration.test.ts"
+      ]
+    },
+    "merchant_notes": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant/repositories/merchant.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_tag_assignments": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant/repositories/merchant.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "customers": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/chargebacks/repositories/chargeback.repository.ts",
+        "Backend_Fintech/src/app/modules/customers/repositories/customer.repository.ts",
+        "Backend_Fintech/src/app/modules/invoices/repositories/invoice.repository.ts",
+        "Backend_Fintech/src/app/modules/payment-links/repositories/payment-link.repository.ts",
+        "Backend_Fintech/src/app/modules/qr-payments/repositories/qr-payment.repository.ts",
+        "Backend_Fintech/src/app/modules/refunds/repositories/refund.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts",
+        "Backend_Fintech/src/app/modules/subscriptions/repositories/subscription.repository.ts",
+        "Backend_Fintech/src/app/modules/support/repositories/support.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "customer_addresses": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/customers/repositories/customer.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "customer_merchants": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/acceptance/repositories/acceptance.repository.ts",
+        "Backend_Fintech/src/app/modules/customers/repositories/customer.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "transactions": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/ai/repositories/ai-insights.repository.ts",
+        "Backend_Fintech/src/app/modules/chargebacks/repositories/chargeback.repository.ts",
+        "Backend_Fintech/src/app/modules/customers/repositories/customer.repository.ts",
+        "Backend_Fintech/src/app/modules/dashboard/repositories/dashboard.repository.ts",
+        "Backend_Fintech/src/app/modules/invoices/repositories/invoice.repository.ts",
+        "Backend_Fintech/src/app/modules/merchant/repositories/merchant.repository.ts",
+        "Backend_Fintech/src/app/modules/operations/repositories/operations.repository.ts",
+        "Backend_Fintech/src/app/modules/payment-links/repositories/payment-link.repository.ts",
+        "Backend_Fintech/src/app/modules/payments/repositories/payment.repository.ts",
+        "Backend_Fintech/src/app/modules/refunds/repositories/refund.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/report-center.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts",
+        "Backend_Fintech/src/app/modules/search/repositories/search.repository.ts",
+        "Backend_Fintech/src/app/modules/settlements/repositories/settlement.repository.ts",
+        "Backend_Fintech/src/app/modules/transactions/repositories/transaction.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "transaction_events": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/chargebacks/repositories/chargeback.repository.ts",
+        "Backend_Fintech/src/app/modules/refunds/repositories/refund.repository.ts",
+        "Backend_Fintech/src/app/modules/transactions/repositories/transaction.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "transaction_status_history": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/transactions/repositories/transaction.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "transaction_refunds": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/refunds/repositories/refund.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts",
+        "Backend_Fintech/src/app/modules/transactions/repositories/transaction.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "refund_status_history": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/refunds/repositories/refund.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "transaction_fees": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/transactions/repositories/transaction.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "transaction_disputes": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/chargebacks/repositories/chargeback.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts",
+        "Backend_Fintech/src/app/modules/transactions/repositories/transaction.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "dispute_evidence": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/chargebacks/repositories/chargeback.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "dispute_status_history": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/chargebacks/repositories/chargeback.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "transaction_notes": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/transactions/repositories/transaction.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "transaction_exports": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/transactions/repositories/transaction.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "transaction_attachments": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/transactions/repositories/transaction.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "settlement_batches": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settlements/repositories/settlement.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "settlements": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/activity/repositories/activity.repository.ts",
+        "Backend_Fintech/src/app/modules/dashboard/repositories/payment-platform-stats.repository.ts",
+        "Backend_Fintech/src/app/modules/merchant/repositories/merchant.repository.ts",
+        "Backend_Fintech/src/app/modules/operations/repositories/operations.repository.ts",
+        "Backend_Fintech/src/app/modules/payouts/repositories/payout.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/report-center.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts",
+        "Backend_Fintech/src/app/modules/search/repositories/search.repository.ts",
+        "Backend_Fintech/src/app/modules/settlements/repositories/settlement-engine.repository.ts",
+        "Backend_Fintech/src/app/modules/settlements/repositories/settlement.repository.ts",
+        "Backend_Fintech/src/app/modules/transactions/repositories/transaction.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "settlement_transactions": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settlements/repositories/settlement.repository.ts",
+        "Backend_Fintech/src/app/modules/transactions/repositories/transaction.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "settlement_adjustments": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settlements/repositories/settlement.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "settlement_reversals": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settlements/repositories/settlement.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "settlement_fees": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settlements/repositories/settlement.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "settlement_bank_transfers": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settlements/repositories/settlement.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "settlement_status_history": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settlements/repositories/settlement.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "settlement_exports": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settlements/repositories/settlement.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "settlement_notes": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settlements/repositories/settlement.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "payout_batches": {
+      "repositories": [],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "payouts": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/operations/repositories/operations.repository.ts",
+        "Backend_Fintech/src/app/modules/payouts/repositories/payout.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "payout_status_history": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/payouts/repositories/payout.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "payment_links": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/acceptance/repositories/acceptance.repository.ts",
+        "Backend_Fintech/src/app/modules/invoices/repositories/invoice.repository.ts",
+        "Backend_Fintech/src/app/modules/payment-links/repositories/payment-link.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts",
+        "Backend_Fintech/src/app/modules/subscriptions/repositories/subscription.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "payment_link_transactions": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/payment-links/repositories/payment-link.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "invoices": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/invoices/repositories/invoice.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "invoice_line_items": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/invoices/repositories/invoice.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "invoice_payments": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/invoices/repositories/invoice.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "qr_codes": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/acceptance/repositories/acceptance.repository.ts",
+        "Backend_Fintech/src/app/modules/dashboard/repositories/payment-platform-stats.repository.ts",
+        "Backend_Fintech/src/app/modules/qr-payments/repositories/qr-payment.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts",
+        "Backend_Fintech/src/app/modules/search/repositories/search.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "qr_transactions": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/qr-payments/repositories/qr-payment.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "subscription_plans": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts",
+        "Backend_Fintech/src/app/modules/subscriptions/repositories/subscription.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "subscriptions": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts",
+        "Backend_Fintech/src/app/modules/subscriptions/repositories/subscription.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "subscription_invoices": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/subscriptions/repositories/subscription.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "support_tickets": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/operations/repositories/operations.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts",
+        "Backend_Fintech/src/app/modules/support/repositories/support.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "support_ticket_notes": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/support/repositories/support.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "support_ticket_attachments": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/support/repositories/support.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "support_ticket_activities": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/support/repositories/support.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "system_alerts": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/operations/repositories/operations.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "operations_incidents": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/operations/repositories/operations.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "retry_queue": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/operations/repositories/operations.repository.ts"
+      ],
+      "services": [
+        "Backend_Fintech/src/app/modules/system/services/health.service.ts"
+      ],
+      "endpoints": [],
+      "workers": [
+        "Backend_Fintech/src/app/shared/workers/job-handlers.ts",
+        "Backend_Fintech/src/app/shared/workers/worker-runner.ts",
+        "Backend_Fintech/src/__tests__/integration/webhooks-workers.integration.test.ts"
+      ]
+    },
+    "background_jobs": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/operations/repositories/operations.repository.ts",
+        "Backend_Fintech/src/app/modules/system/repositories/system.repository.ts"
+      ],
+      "services": [
+        "Backend_Fintech/src/app/modules/system/services/health.service.ts",
+        "Backend_Fintech/src/app/shared/jobs/background-job.service.ts"
+      ],
+      "endpoints": [],
+      "workers": [
+        "Backend_Fintech/src/app/shared/workers/job-handlers.ts",
+        "Backend_Fintech/src/app/shared/workers/worker-runner.ts",
+        "Backend_Fintech/src/__tests__/integration/webhooks-workers.integration.test.ts"
+      ]
+    },
+    "merchant_onboarding_applications": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/activity/repositories/activity.repository.ts",
+        "Backend_Fintech/src/app/modules/merchant-onboarding/repositories/merchant-onboarding.repository.ts",
+        "Backend_Fintech/src/app/modules/onboarding-approval/repositories/workflow.repository.ts",
+        "Backend_Fintech/src/app/modules/operations/repositories/operations.repository.ts",
+        "Backend_Fintech/src/app/modules/search/repositories/search.repository.ts"
+      ],
+      "services": [
+        "Backend_Fintech/src/app/modules/onboarding-approval/services/status-sync.service.ts"
+      ],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_onboarding_business": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant-onboarding/repositories/merchant-onboarding.repository.ts",
+        "Backend_Fintech/src/app/modules/onboarding-approval/repositories/workflow.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_onboarding_addresses": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant-onboarding/repositories/merchant-onboarding.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_onboarding_kyc_documents": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant-onboarding/repositories/merchant-onboarding.repository.ts",
+        "Backend_Fintech/src/app/modules/onboarding-approval/repositories/approval.repository.ts",
+        "Backend_Fintech/src/app/modules/operations/repositories/operations.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_onboarding_bank_details": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant-onboarding/repositories/merchant-onboarding.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_onboarding_settlement_config": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant-onboarding/repositories/merchant-onboarding.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_onboarding_payment_config": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant-onboarding/repositories/merchant-onboarding.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_onboarding_timeline_events": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant-onboarding/repositories/merchant-onboarding.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "roles": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant-users/repositories/merchant-user.repository.ts",
+        "Backend_Fintech/src/app/modules/notifications/repositories/notification.repository.ts",
+        "Backend_Fintech/src/app/modules/roles/repositories/role.repository.ts",
+        "Backend_Fintech/src/app/modules/users/repositories/user.repository.ts",
+        "Backend_Fintech/src/app/shared/rbac/permission.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "permissions": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/permissions/repositories/permission.repository.ts",
+        "Backend_Fintech/src/app/shared/rbac/permission.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "role_permissions": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/roles/repositories/role.repository.ts",
+        "Backend_Fintech/src/app/shared/rbac/permission.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "user_roles": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant-users/repositories/merchant-user.repository.ts",
+        "Backend_Fintech/src/app/modules/notifications/repositories/notification.repository.ts",
+        "Backend_Fintech/src/app/modules/roles/repositories/role.repository.ts",
+        "Backend_Fintech/src/app/modules/users/repositories/user.repository.ts",
+        "Backend_Fintech/src/app/shared/rbac/permission.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "user_activity_logs": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/users/repositories/user.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "login_history": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/users/repositories/user.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "api_tokens": {
+      "repositories": [],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "state_region_mapping": {
+      "repositories": [],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_code_sequences": {
+      "repositories": [],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_roles": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant-users/repositories/merchant-user.repository.ts",
+        "Backend_Fintech/src/app/shared/rbac/permission.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_role_permissions": {
+      "repositories": [
+        "Backend_Fintech/src/app/shared/rbac/permission.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_outlets": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/devices/repositories/device.repository.ts",
+        "Backend_Fintech/src/app/modules/merchant-users/repositories/merchant-user.repository.ts",
+        "Backend_Fintech/src/app/modules/outlets/repositories/outlet.repository.ts",
+        "Backend_Fintech/src/app/modules/search/repositories/search.repository.ts"
+      ],
+      "services": [
+        "Backend_Fintech/src/app/modules/onboarding-approval/services/go-live-promotion.service.ts",
+        "Backend_Fintech/src/app/modules/onboarding-approval/services/status-sync.service.ts"
+      ],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_users": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant-users/repositories/merchant-user.repository.ts"
+      ],
+      "services": [
+        "Backend_Fintech/src/app/modules/onboarding-approval/services/status-sync.service.ts"
+      ],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_user_outlets": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/merchant-users/repositories/merchant-user.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "onboarding_workflow_stage_definitions": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/activity/repositories/activity.repository.ts",
+        "Backend_Fintech/src/app/modules/onboarding-approval/repositories/workflow.repository.ts",
+        "Backend_Fintech/src/app/modules/operations/repositories/operations.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "onboarding_workflow_instances": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/onboarding-approval/repositories/workflow.repository.ts",
+        "Backend_Fintech/src/app/modules/operations/repositories/operations.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "onboarding_workflow_stage_history": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/activity/repositories/activity.repository.ts",
+        "Backend_Fintech/src/app/modules/onboarding-approval/repositories/workflow.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "onboarding_risk_reviews": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/onboarding-approval/repositories/approval.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "onboarding_kyc_verification_events": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/onboarding-approval/repositories/approval.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_tax_profiles": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/onboarding-approval/repositories/approval.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_payment_method_config": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/payment-config/repositories/payment-config.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "payment_devices": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/activity/repositories/activity.repository.ts",
+        "Backend_Fintech/src/app/modules/dashboard/repositories/payment-platform-stats.repository.ts",
+        "Backend_Fintech/src/app/modules/devices/repositories/device.repository.ts",
+        "Backend_Fintech/src/app/modules/operations/repositories/operations.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/report-center.repository.ts",
+        "Backend_Fintech/src/app/modules/search/repositories/search.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "device_sync_logs": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/devices/repositories/device.repository.ts",
+        "Backend_Fintech/src/app/modules/operations/repositories/operations.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "terminal_inventory": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/devices/repositories/device.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "settlement_calendar": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settlements/repositories/settlement-engine.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "settlement_holds": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settlements/repositories/settlement-engine.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "settlement_reserves": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settlements/repositories/settlement-engine.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "pricing_plans": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/pricing/repositories/pricing.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "pricing_fee_rules": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/pricing/repositories/pricing.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "transaction_limit_rules": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/payment-config/repositories/payment-config.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "risk_rules": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/dashboard/repositories/payment-platform-stats.repository.ts",
+        "Backend_Fintech/src/app/modules/risk-rules/repositories/risk-rule.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "risk_rule_evaluations": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/activity/repositories/activity.repository.ts",
+        "Backend_Fintech/src/app/modules/risk-rules/repositories/risk-rule.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "fraud_cases": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/dashboard/repositories/payment-platform-stats.repository.ts",
+        "Backend_Fintech/src/app/modules/fraud/repositories/fraud.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/report-center.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "ledger_accounts": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/accounting/repositories/accounting.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "ledger_entries": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/accounting/repositories/accounting.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "payment_orders": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/payments/repositories/payment.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "payment_intents": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/checkout/repositories/checkout.repository.ts",
+        "Backend_Fintech/src/app/modules/payments/repositories/payment.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "payment_sessions": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/payments/repositories/payment.repository.ts"
+      ],
+      "services": [
+        "Backend_Fintech/src/app/modules/payments/services/payment-engine.service.ts"
+      ],
+      "endpoints": [],
+      "workers": []
+    },
+    "payment_timeline_events": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/payments/repositories/payment.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "payment_idempotency_keys": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/payments/repositories/payment.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "customer_payment_methods": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/customers/repositories/customer.repository.ts",
+        "Backend_Fintech/src/app/modules/payments/repositories/payment.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "payment_webhook_deliveries": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/payments/repositories/payment.repository.ts"
+      ],
+      "services": [
+        "Backend_Fintech/src/app/modules/payments/services/payment-webhook.service.ts",
+        "Backend_Fintech/src/app/modules/system/services/health.service.ts"
+      ],
+      "endpoints": [],
+      "workers": []
+    },
+    "checkout_themes": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/checkout/repositories/checkout.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_checkout_branding": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/checkout/repositories/checkout.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "checkout_sessions": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/acceptance/repositories/acceptance.repository.ts",
+        "Backend_Fintech/src/app/modules/checkout/repositories/checkout.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "checkout_session_events": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/checkout/repositories/checkout.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "checkout_analytics_daily": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/checkout/repositories/checkout.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "qr_templates": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/qr-payments/repositories/qr-payment.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "qr_categories": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/qr-payments/repositories/qr-payment.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "qr_tags": {
+      "repositories": [],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "qr_scan_history": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/qr-payments/repositories/qr-payment.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "payment_link_visits": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/payment-links/repositories/payment-link.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "payment_link_events": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/payment-links/repositories/payment-link.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "payment_link_reminders": {
+      "repositories": [],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "virtual_accounts": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/smart-collect/repositories/smart-collect.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "collections": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/acceptance/repositories/acceptance.repository.ts",
+        "Backend_Fintech/src/app/modules/smart-collect/repositories/smart-collect.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "collection_events": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/smart-collect/repositories/smart-collect.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "customer_preferences": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/customers/repositories/customer.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "merchant_branding_assets": {
+      "repositories": [],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "acceptance_analytics_daily": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/acceptance/repositories/acceptance.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "fraud_alerts": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/dashboard/repositories/dashboard.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "activity_events": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/activity/repositories/activity.repository.ts",
+        "Backend_Fintech/src/app/modules/dashboard/repositories/dashboard.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "dashboard_kpi_snapshots": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/dashboard/repositories/dashboard.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "revenue_time_series": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/dashboard/repositories/dashboard.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "payment_method_distribution": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/dashboard/repositories/dashboard.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "regional_distribution": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/dashboard/repositories/dashboard.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "user_dashboard_preferences": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/dashboard/repositories/dashboard.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "dashboard_export_jobs": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/dashboard/repositories/dashboard.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "report_categories": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "report_templates": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "reports": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "saved_reports": {
+      "repositories": [],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "scheduled_reports": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "report_exports": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/reports/repositories/report-center.repository.ts",
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "report_execution_logs": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "analytics_metrics": {
+      "repositories": [],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "analytics_snapshots": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/reports/repositories/reports.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "analytics_widgets": {
+      "repositories": [],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "dashboard_preferences": {
+      "repositories": [],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "organization_settings": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settings/repositories/settings.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "branding_settings": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settings/repositories/settings.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "security_settings": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settings/repositories/settings.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "password_policy": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settings/repositories/settings.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "session_settings": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settings/repositories/settings.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "notification_preferences": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/notifications/repositories/notification.repository.ts",
+        "Backend_Fintech/src/app/modules/settings/repositories/settings.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "feature_flags": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settings/repositories/settings.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "api_settings": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settings/repositories/settings.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "smtp_settings": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settings/repositories/settings.repository.ts"
+      ],
+      "services": [
+        "Backend_Fintech/src/app/shared/email/email.service.ts"
+      ],
+      "endpoints": [],
+      "workers": []
+    },
+    "storage_settings": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settings/repositories/settings.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "notification_channels": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/notifications/repositories/notification.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "notification_events": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/notifications/repositories/notification.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "notification_templates": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/notifications/repositories/notification.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "notification_groups": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/notifications/repositories/notification.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "notifications": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/activity/repositories/activity.repository.ts",
+        "Backend_Fintech/src/app/modules/notifications/repositories/notification.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "notification_deliveries": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/notifications/repositories/notification.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": [
+        "Backend_Fintech/src/app/shared/workers/job-handlers.ts",
+        "Backend_Fintech/src/app/shared/workers/worker-runner.ts"
+      ]
+    },
+    "audit_categories": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/audit/repositories/audit.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "audit_actions": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/activity/repositories/activity.repository.ts",
+        "Backend_Fintech/src/app/modules/audit/repositories/audit.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "audit_logs": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/activity/repositories/activity.repository.ts",
+        "Backend_Fintech/src/app/modules/audit/repositories/audit.repository.ts",
+        "Backend_Fintech/src/app/modules/operations/repositories/operations.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "audit_metadata": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/audit/repositories/audit.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "api_logs": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/audit/repositories/audit.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "webhook_logs": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/audit/repositories/audit.repository.ts",
+        "Backend_Fintech/src/app/modules/operations/repositories/operations.repository.ts"
+      ],
+      "services": [
+        "Backend_Fintech/src/app/modules/payments/services/payment-webhook.service.ts"
+      ],
+      "endpoints": [],
+      "workers": []
+    },
+    "export_file_registry": {
+      "repositories": [
+        "Backend_Fintech/src/app/shared/repositories/export-registry.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "developer_profiles": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/developer/repositories/developer.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "oauth_applications": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/developer/repositories/developer.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "api_usage_logs": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/developer/repositories/developer.repository.ts",
+        "Backend_Fintech/src/app/modules/system/repositories/system.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "webhook_event_subscriptions": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/webhooks/repositories/webhooks.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "webhook_delivery_queue": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/operations/repositories/operations.repository.ts",
+        "Backend_Fintech/src/app/modules/webhooks/repositories/webhooks.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": [
+        "Backend_Fintech/src/__tests__/integration/webhooks-workers.integration.test.ts"
+      ]
+    },
+    "webhook_replay_history": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/webhooks/repositories/webhooks.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "subscription_mandates": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/subscriptions/repositories/subscription.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "subscription_dunning_events": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/subscriptions/repositories/subscription.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "invoice_templates": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/invoices/repositories/invoice.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "credit_notes": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/invoices/repositories/invoice.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "debit_notes": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/invoices/repositories/invoice.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "reconciliation_imports": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/reconciliation/repositories/reconciliation.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "reconciliation_records": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/reconciliation/repositories/reconciliation.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "sandbox_accounts": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/sandbox/repositories/sandbox.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "sandbox_test_cards": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/sandbox/repositories/sandbox.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "sandbox_simulations": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/sandbox/repositories/sandbox.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "cache_configurations": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/system/repositories/system.repository.ts"
+      ],
+      "services": [
+        "Backend_Fintech/src/app/shared/services/cache.service.ts"
+      ],
+      "endpoints": [],
+      "workers": []
+    },
+    "backup_configurations": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/system/repositories/system.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "ai_insights_daily": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/ai/repositories/ai-insights.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "communication_campaigns": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/notifications/repositories/notification.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "api_rate_limits": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/settings/repositories/settings.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "email_delivery_log": {
+      "repositories": [],
+      "services": [
+        "Backend_Fintech/src/app/modules/system/services/health.service.ts",
+        "Backend_Fintech/src/app/shared/email/email.service.ts"
+      ],
+      "endpoints": [],
+      "workers": []
+    },
+    "data_retention_policies": {
+      "repositories": [],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "report_saved_filters": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/reports/repositories/report-center.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "report_center_catalog": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/reports/repositories/report-center.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "platform_config": {
+      "repositories": [
+        "Backend_Fintech/src/app/modules/operations/repositories/operations.repository.ts",
+        "Backend_Fintech/src/app/modules/settings/repositories/platform-config.repository.ts"
+      ],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "feature_flag_api_routes": {
+      "repositories": [],
+      "services": [],
+      "endpoints": [],
+      "workers": []
+    },
+    "background_job_schedules": {
+      "repositories": [],
+      "services": [
+        "Backend_Fintech/src/app/modules/system/services/health.service.ts",
+        "Backend_Fintech/src/app/shared/jobs/background-job.service.ts"
+      ],
+      "endpoints": [],
+      "workers": [
+        "Backend_Fintech/src/app/shared/workers/job-handlers.ts"
+      ]
+    }
+  }
+}

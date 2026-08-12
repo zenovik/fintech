@@ -1,0 +1,19 @@
+flowchart TB
+  N0["Worker: Backend_Fintech/src/__tests__/"]
+  N1["Worker: Backend_Fintech/src/app/shared"]
+  N2["Worker: Backend_Fintech/src/app/shared"]
+  N3["WorkerProcess: Backend_Fintech/src/worker.ts"]
+  N4["BackgroundJob: invoice_email"]
+  N5["BackgroundJob: webhook_delivery"]
+  N6["BackgroundJob: notification_email"]
+  N7["BackgroundJob: password_reset_email"]
+  N8["Queue: background_jobs"]
+  N9["Queue: retry_queue"]
+  N10["Queue: notification_deliveries"]
+  N3 -->|CONSUMES| N4
+  N3 -->|CONSUMES| N5
+  N3 -->|CONSUMES| N6
+  N3 -->|CONSUMES| N7
+  N3 -->|READS| N8
+  N3 -->|READS| N9
+  N3 -->|READS| N10

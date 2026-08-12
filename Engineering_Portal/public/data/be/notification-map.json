@@ -1,0 +1,1911 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T19:07:37.657Z"
+  },
+  "mappings": [
+    {
+      "source": "AuthService",
+      "method": "completeLogin",
+      "call": "notificationDispatch.welcome(user.id).catch",
+      "chain": [
+        "Endpoint",
+        "AuthService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/services/auth.service.ts",
+        "line": 468
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "AuthService",
+      "method": "completeLogin",
+      "call": "notificationDispatch.welcome",
+      "chain": [
+        "Endpoint",
+        "AuthService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/services/auth.service.ts",
+        "line": 468
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "AuthService",
+      "method": "changePassword",
+      "call": "notificationDispatch.passwordChanged(userId).catch",
+      "chain": [
+        "Endpoint",
+        "AuthService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/services/auth.service.ts",
+        "line": 777
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "AuthService",
+      "method": "changePassword",
+      "call": "notificationDispatch.passwordChanged",
+      "chain": [
+        "Endpoint",
+        "AuthService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/services/auth.service.ts",
+        "line": 777
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "AuthService",
+      "method": "updateMfaPreferences",
+      "call": "notificationDispatch.mfaEnabled(userId).catch",
+      "chain": [
+        "Endpoint",
+        "AuthService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/services/auth.service.ts",
+        "line": 802
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "AuthService",
+      "method": "updateMfaPreferences",
+      "call": "notificationDispatch.mfaEnabled",
+      "chain": [
+        "Endpoint",
+        "AuthService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/auth/services/auth.service.ts",
+        "line": 802
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "ChargebackService",
+      "method": "create",
+      "call": "notificationDispatch.chargebackOpened(actorId, id, detail.disputeRef, String(detail.amount), detail.currency).catch",
+      "chain": [
+        "Endpoint",
+        "ChargebackService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/services/chargeback.service.ts",
+        "line": 137
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "ChargebackService",
+      "method": "create",
+      "call": "notificationDispatch.chargebackOpened",
+      "chain": [
+        "Endpoint",
+        "ChargebackService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/services/chargeback.service.ts",
+        "line": 137
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "ChargebackService",
+      "method": "create",
+      "call": "notificationDispatch.chargebackEvidenceDue(\r\n            actorId,\r\n            id,\r\n            detail.disputeRef,\r\n            new Date(detail.evidenceDueAt).toISOString().slice(0, 10),\r\n            String(detail.amount),\r\n            detail.currency,\r\n          ).catch",
+      "chain": [
+        "Endpoint",
+        "ChargebackService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/services/chargeback.service.ts",
+        "line": 139
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "ChargebackService",
+      "method": "create",
+      "call": "notificationDispatch.chargebackEvidenceDue",
+      "chain": [
+        "Endpoint",
+        "ChargebackService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/services/chargeback.service.ts",
+        "line": 139
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "ChargebackService",
+      "method": "resolve",
+      "call": "notificationDispatch.chargebackResolved(actorId, id, detail.disputeRef, dto.outcome).catch",
+      "chain": [
+        "Endpoint",
+        "ChargebackService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/services/chargeback.service.ts",
+        "line": 221
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "ChargebackService",
+      "method": "resolve",
+      "call": "notificationDispatch.chargebackResolved",
+      "chain": [
+        "Endpoint",
+        "ChargebackService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/chargebacks/services/chargeback.service.ts",
+        "line": 221
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "CustomerService",
+      "method": "create",
+      "call": "notificationDispatch.customerCreated(actorId, id, dto.displayName ?? dto.firstName).catch",
+      "chain": [
+        "Endpoint",
+        "CustomerService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/services/customer.service.ts",
+        "line": 171
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "CustomerService",
+      "method": "create",
+      "call": "notificationDispatch.customerCreated",
+      "chain": [
+        "Endpoint",
+        "CustomerService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/services/customer.service.ts",
+        "line": 171
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "CustomerService",
+      "method": "updateStatus",
+      "call": "notificationDispatch.customerStatusChanged(actorId, id, before.displayName, dto.status).catch",
+      "chain": [
+        "Endpoint",
+        "CustomerService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/services/customer.service.ts",
+        "line": 201
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "CustomerService",
+      "method": "updateStatus",
+      "call": "notificationDispatch.customerStatusChanged",
+      "chain": [
+        "Endpoint",
+        "CustomerService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/customers/services/customer.service.ts",
+        "line": 201
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "DeviceService",
+      "method": "activate",
+      "call": "notificationDispatch.dispatch({ userId: actorId, eventCode: 'device_assigned', title: `Device activated`, body: `Device #${id} assigned to merchant`, relatedEntityType: 'payment_device', relatedEntityId: id }).catch",
+      "chain": [
+        "Endpoint",
+        "DeviceService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/devices/services/device.service.ts",
+        "line": 55
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "DeviceService",
+      "method": "activate",
+      "call": "notificationDispatch.dispatch",
+      "chain": [
+        "Endpoint",
+        "DeviceService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/devices/services/device.service.ts",
+        "line": 55
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "FraudService",
+      "method": "decide",
+      "call": "notificationDispatch.dispatch({ userId: actorId, eventCode: 'fraud_alert_case', title: 'Fraud case updated', body: `Case #${id} ${status}`, relatedEntityType: 'fraud_case', relatedEntityId: id }).catch",
+      "chain": [
+        "Endpoint",
+        "FraudService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/fraud/services/fraud.service.ts",
+        "line": 43
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "FraudService",
+      "method": "decide",
+      "call": "notificationDispatch.dispatch",
+      "chain": [
+        "Endpoint",
+        "FraudService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/fraud/services/fraud.service.ts",
+        "line": 43
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "InvoicePaymentHandler",
+      "method": "onPaymentLinkPaid",
+      "call": "notificationDispatch.invoicePaid(\r\n        invoice.created_by, invoice.id, invoice.invoice_number, String(amount), invoice.currency,\r\n      ).catch",
+      "chain": [
+        "Endpoint",
+        "InvoicePaymentHandler",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/services/invoice-payment.handler.ts",
+        "line": 45
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "InvoicePaymentHandler",
+      "method": "onPaymentLinkPaid",
+      "call": "notificationDispatch.invoicePaid",
+      "chain": [
+        "Endpoint",
+        "InvoicePaymentHandler",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/services/invoice-payment.handler.ts",
+        "line": 45
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "InvoiceService",
+      "method": "create",
+      "call": "notificationDispatch.invoiceCreated(actorId, invoiceId, detail.invoiceNumber, String(detail.total), detail.currency).catch",
+      "chain": [
+        "Endpoint",
+        "InvoiceService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/services/invoice.service.ts",
+        "line": 213
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "InvoiceService",
+      "method": "create",
+      "call": "notificationDispatch.invoiceCreated",
+      "chain": [
+        "Endpoint",
+        "InvoiceService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/services/invoice.service.ts",
+        "line": 213
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "InvoiceService",
+      "method": "markSent",
+      "call": "notificationDispatch.invoiceSent(actorId, id, before.invoiceNumber, before.customerName ?? 'Customer').catch",
+      "chain": [
+        "Endpoint",
+        "InvoiceService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/services/invoice.service.ts",
+        "line": 369
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "InvoiceService",
+      "method": "markSent",
+      "call": "notificationDispatch.invoiceSent",
+      "chain": [
+        "Endpoint",
+        "InvoiceService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/services/invoice.service.ts",
+        "line": 369
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "InvoiceService",
+      "method": "markViewed",
+      "call": "notificationDispatch.invoiceViewed(before.createdBy, id, before.invoiceNumber).catch",
+      "chain": [
+        "Endpoint",
+        "InvoiceService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/services/invoice.service.ts",
+        "line": 390
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "InvoiceService",
+      "method": "markViewed",
+      "call": "notificationDispatch.invoiceViewed",
+      "chain": [
+        "Endpoint",
+        "InvoiceService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/services/invoice.service.ts",
+        "line": 390
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "InvoiceService",
+      "method": "markOverdue",
+      "call": "notificationDispatch.invoiceOverdue(before.createdBy, id, before.invoiceNumber, String(before.balanceDue), before.currency).catch",
+      "chain": [
+        "Endpoint",
+        "InvoiceService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/services/invoice.service.ts",
+        "line": 410
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "InvoiceService",
+      "method": "markOverdue",
+      "call": "notificationDispatch.invoiceOverdue",
+      "chain": [
+        "Endpoint",
+        "InvoiceService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/services/invoice.service.ts",
+        "line": 410
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "InvoiceService",
+      "method": "markPaid",
+      "call": "notificationDispatch.invoicePaid(actorId, id, before.invoiceNumber, String(amount), before.currency).catch",
+      "chain": [
+        "Endpoint",
+        "InvoiceService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/services/invoice.service.ts",
+        "line": 461
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "InvoiceService",
+      "method": "markPaid",
+      "call": "notificationDispatch.invoicePaid",
+      "chain": [
+        "Endpoint",
+        "InvoiceService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/services/invoice.service.ts",
+        "line": 461
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "InvoiceService",
+      "method": "emailInvoice",
+      "call": "notificationDispatch.invoiceSent(actorId, id, invoice.invoiceNumber, invoice.customerName ?? recipient).catch",
+      "chain": [
+        "Endpoint",
+        "InvoiceService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/services/invoice.service.ts",
+        "line": 484
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "InvoiceService",
+      "method": "emailInvoice",
+      "call": "notificationDispatch.invoiceSent",
+      "chain": [
+        "Endpoint",
+        "InvoiceService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/invoices/services/invoice.service.ts",
+        "line": 484
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "MerchantService",
+      "method": "updateStatus",
+      "call": "notificationDispatch.merchantApproved(userId, id, existing.display_name).catch",
+      "chain": [
+        "Endpoint",
+        "MerchantService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/services/merchant.service.ts",
+        "line": 185
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "MerchantService",
+      "method": "updateStatus",
+      "call": "notificationDispatch.merchantApproved",
+      "chain": [
+        "Endpoint",
+        "MerchantService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/services/merchant.service.ts",
+        "line": 185
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "MerchantService",
+      "method": "updateStatus",
+      "call": "notificationDispatch.merchantRejected(userId, id, existing.display_name, dto.reason).catch",
+      "chain": [
+        "Endpoint",
+        "MerchantService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/services/merchant.service.ts",
+        "line": 188
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "MerchantService",
+      "method": "updateStatus",
+      "call": "notificationDispatch.merchantRejected",
+      "chain": [
+        "Endpoint",
+        "MerchantService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant/services/merchant.service.ts",
+        "line": 188
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "MerchantOnboardingService",
+      "method": "submit",
+      "call": "notificationDispatch.dispatch({\r\n        userId: actorId, eventCode: 'merchant_onboarding_submitted', category: 'merchant',\r\n        body: `Onboarding application ${app.application_ref} has been submitted.`,\r\n        relatedEntityType: 'merchant_onboarding', relatedEntityId: id,\r\n        actionUrl: `/merchant-onboarding/${id}`, actionLabel: 'View Application',\r\n        metadata: { applicationRef: app.application_ref },\r\n      }).catch",
+      "chain": [
+        "Endpoint",
+        "MerchantOnboardingService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/services/merchant-onboarding.service.ts",
+        "line": 195
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "MerchantOnboardingService",
+      "method": "submit",
+      "call": "notificationDispatch.dispatch",
+      "chain": [
+        "Endpoint",
+        "MerchantOnboardingService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/services/merchant-onboarding.service.ts",
+        "line": 195
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "MerchantOnboardingService",
+      "method": "approve",
+      "call": "notificationDispatch.dispatch({\r\n        userId: actorId, eventCode: 'merchant_onboarding_approved', category: 'merchant',\r\n        body: `Onboarding application ${app.application_ref} has been approved.`,\r\n        relatedEntityType: 'merchant_onboarding', relatedEntityId: id,\r\n        actionUrl: `/merchant-onboarding/${id}`, actionLabel: 'View Application',\r\n        metadata: { applicationRef: app.application_ref },\r\n      }).catch",
+      "chain": [
+        "Endpoint",
+        "MerchantOnboardingService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/services/merchant-onboarding.service.ts",
+        "line": 218
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "MerchantOnboardingService",
+      "method": "approve",
+      "call": "notificationDispatch.dispatch",
+      "chain": [
+        "Endpoint",
+        "MerchantOnboardingService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/services/merchant-onboarding.service.ts",
+        "line": 218
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "MerchantOnboardingService",
+      "method": "reject",
+      "call": "notificationDispatch.dispatch({\r\n        userId: actorId, eventCode: 'merchant_onboarding_rejected', category: 'merchant',\r\n        body: `Onboarding application ${app.application_ref} was rejected: ${dto.reason}`,\r\n        relatedEntityType: 'merchant_onboarding', relatedEntityId: id,\r\n        actionUrl: `/merchant-onboarding/${id}`, actionLabel: 'View Application',\r\n        metadata: { applicationRef: app.application_ref, reason: dto.reason },\r\n      }).catch",
+      "chain": [
+        "Endpoint",
+        "MerchantOnboardingService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/services/merchant-onboarding.service.ts",
+        "line": 241
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "MerchantOnboardingService",
+      "method": "reject",
+      "call": "notificationDispatch.dispatch",
+      "chain": [
+        "Endpoint",
+        "MerchantOnboardingService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-onboarding/services/merchant-onboarding.service.ts",
+        "line": 241
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "MerchantUserService",
+      "method": "invite",
+      "call": "notificationDispatch.dispatch({\r\n      userId,\r\n      eventCode: 'merchant_user_invited',\r\n      body: `You have been invited to ${user.merchantName} as ${user.roleName}.`,\r\n      category: 'merchant',\r\n      actionUrl: '/merchant-users',\r\n      actionLabel: 'View Invitation',\r\n      relatedEntityType: 'merchant_user',\r\n      relatedEntityId: id,\r\n    }).catch",
+      "chain": [
+        "Endpoint",
+        "MerchantUserService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/services/merchant-user.service.ts",
+        "line": 109
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "MerchantUserService",
+      "method": "invite",
+      "call": "notificationDispatch.dispatch",
+      "chain": [
+        "Endpoint",
+        "MerchantUserService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/services/merchant-user.service.ts",
+        "line": 109
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "MerchantUserService",
+      "method": "update",
+      "call": "notificationDispatch.dispatch({\r\n        userId: after.userId,\r\n        eventCode: 'merchant_role_changed',\r\n        body: `Your role has been updated to ${after.roleName}.`,\r\n        category: 'merchant',\r\n        relatedEntityType: 'merchant_user',\r\n        relatedEntityId: id,\r\n      }).catch",
+      "chain": [
+        "Endpoint",
+        "MerchantUserService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/services/merchant-user.service.ts",
+        "line": 145
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "MerchantUserService",
+      "method": "update",
+      "call": "notificationDispatch.dispatch",
+      "chain": [
+        "Endpoint",
+        "MerchantUserService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/services/merchant-user.service.ts",
+        "line": 145
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "MerchantUserService",
+      "method": "activate",
+      "call": "notificationDispatch.dispatch({\r\n      userId: after.userId,\r\n      eventCode: 'merchant_user_activated',\r\n      body: `Your ${after.merchantName} account is now active.`,\r\n      category: 'merchant',\r\n      actionUrl: '/dashboard',\r\n      actionLabel: 'Go to Dashboard',\r\n    }).catch",
+      "chain": [
+        "Endpoint",
+        "MerchantUserService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/services/merchant-user.service.ts",
+        "line": 170
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "MerchantUserService",
+      "method": "activate",
+      "call": "notificationDispatch.dispatch",
+      "chain": [
+        "Endpoint",
+        "MerchantUserService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/merchant-users/services/merchant-user.service.ts",
+        "line": 170
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "WorkflowService",
+      "method": "reassign",
+      "call": "notificationDispatch.dispatch({\r\n      userId: dto.userId, eventCode: 'onboarding_assigned',\r\n      body: `You have been assigned onboarding application #${applicationId}.`,\r\n      category: 'merchant', relatedEntityType: 'merchant_onboarding', relatedEntityId: applicationId,\r\n    }).catch",
+      "chain": [
+        "Endpoint",
+        "WorkflowService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/services/workflow.service.ts",
+        "line": 117
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "WorkflowService",
+      "method": "reassign",
+      "call": "notificationDispatch.dispatch",
+      "chain": [
+        "Endpoint",
+        "WorkflowService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/services/workflow.service.ts",
+        "line": 117
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "WorkflowService",
+      "method": "goLive",
+      "call": "notificationDispatch.dispatch({\r\n      userId: actorId!, eventCode: 'onboarding_go_live_done',\r\n      body: `Merchant go live completed for application ${app.application_ref}.`,\r\n      category: 'merchant', relatedEntityType: 'merchant', relatedEntityId: merchantId,\r\n    }).catch",
+      "chain": [
+        "Endpoint",
+        "WorkflowService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/services/workflow.service.ts",
+        "line": 179
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "WorkflowService",
+      "method": "goLive",
+      "call": "notificationDispatch.dispatch",
+      "chain": [
+        "Endpoint",
+        "WorkflowService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/services/workflow.service.ts",
+        "line": 179
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "WorkflowService",
+      "method": "activate",
+      "call": "notificationDispatch.dispatch({\r\n      userId: actorId!, eventCode: 'merchant_activated',\r\n      body: `Merchant account reactivated for ${app.application_ref}.`, category: 'merchant',\r\n    }).catch",
+      "chain": [
+        "Endpoint",
+        "WorkflowService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/services/workflow.service.ts",
+        "line": 209
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "WorkflowService",
+      "method": "activate",
+      "call": "notificationDispatch.dispatch",
+      "chain": [
+        "Endpoint",
+        "WorkflowService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/services/workflow.service.ts",
+        "line": 209
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "WorkflowService",
+      "method": "notify",
+      "call": "notificationDispatch.dispatch({\r\n      userId, eventCode, body: body ?? 'Onboarding status updated', category: 'merchant',\r\n      relatedEntityType: 'merchant_onboarding', relatedEntityId: applicationId,\r\n    }).catch",
+      "chain": [
+        "Endpoint",
+        "WorkflowService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/services/workflow.service.ts",
+        "line": 399
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "WorkflowService",
+      "method": "notify",
+      "call": "notificationDispatch.dispatch",
+      "chain": [
+        "Endpoint",
+        "WorkflowService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/onboarding-approval/services/workflow.service.ts",
+        "line": 399
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "OutletService",
+      "method": "create",
+      "call": "notificationDispatch.dispatch({\r\n        userId: actorId,\r\n        eventCode: 'outlet_created',\r\n        body: `Outlet ${outlet.outletName} (${outlet.outletCode}) has been created.`,\r\n        category: 'merchant',\r\n        actionUrl: `/outlets/${id}`,\r\n        actionLabel: 'View Outlet',\r\n        relatedEntityType: 'outlet',\r\n        relatedEntityId: id,\r\n      }).catch",
+      "chain": [
+        "Endpoint",
+        "OutletService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/outlets/services/outlet.service.ts",
+        "line": 80
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "OutletService",
+      "method": "create",
+      "call": "notificationDispatch.dispatch",
+      "chain": [
+        "Endpoint",
+        "OutletService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/outlets/services/outlet.service.ts",
+        "line": 80
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "PaymentLinkService",
+      "method": "create",
+      "call": "notificationDispatch.paymentLinkCreated(actorId, id, detail.linkRef, detail.title).catch",
+      "chain": [
+        "Endpoint",
+        "PaymentLinkService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/services/payment-link.service.ts",
+        "line": 136
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "PaymentLinkService",
+      "method": "create",
+      "call": "notificationDispatch.paymentLinkCreated",
+      "chain": [
+        "Endpoint",
+        "PaymentLinkService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/services/payment-link.service.ts",
+        "line": 136
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "PaymentLinkService",
+      "method": "expire",
+      "call": "notificationDispatch.paymentLinkExpired(before.createdBy, id, before.linkRef, before.title).catch",
+      "chain": [
+        "Endpoint",
+        "PaymentLinkService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/services/payment-link.service.ts",
+        "line": 194
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "PaymentLinkService",
+      "method": "expire",
+      "call": "notificationDispatch.paymentLinkExpired",
+      "chain": [
+        "Endpoint",
+        "PaymentLinkService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/services/payment-link.service.ts",
+        "line": 194
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "PaymentLinkService",
+      "method": "processPayment",
+      "call": "notificationDispatch.paymentReceived(\r\n        link.created_by, transaction.id, transaction.transactionRef, String(amount), link.currency,\r\n      ).catch",
+      "chain": [
+        "Endpoint",
+        "PaymentLinkService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/services/payment-link.service.ts",
+        "line": 322
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "PaymentLinkService",
+      "method": "processPayment",
+      "call": "notificationDispatch.paymentReceived",
+      "chain": [
+        "Endpoint",
+        "PaymentLinkService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payment-links/services/payment-link.service.ts",
+        "line": 322
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "PaymentEngineService",
+      "method": "capture",
+      "call": "notificationDispatch.paymentReceived(actorId, txnId, intent.intentRef, String(captureAmount), intent.currency).catch",
+      "chain": [
+        "Endpoint",
+        "PaymentEngineService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/services/payment-engine.service.ts",
+        "line": 216
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "PaymentEngineService",
+      "method": "capture",
+      "call": "notificationDispatch.paymentReceived",
+      "chain": [
+        "Endpoint",
+        "PaymentEngineService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/services/payment-engine.service.ts",
+        "line": 216
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "PaymentEngineService",
+      "method": "refund",
+      "call": "notificationDispatch.refundProcessed(actorId, Number(row.transaction_id) || 0, intent.intentRef, String(refundAmount), intent.currency).catch",
+      "chain": [
+        "Endpoint",
+        "PaymentEngineService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/services/payment-engine.service.ts",
+        "line": 285
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "PaymentEngineService",
+      "method": "refund",
+      "call": "notificationDispatch.refundProcessed",
+      "chain": [
+        "Endpoint",
+        "PaymentEngineService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payments/services/payment-engine.service.ts",
+        "line": 285
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "PayoutService",
+      "method": "create",
+      "call": "notificationDispatch.payoutScheduled(actorId, id, detail.payoutRef, String(detail.amount), detail.currency).catch",
+      "chain": [
+        "Endpoint",
+        "PayoutService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/services/payout.service.ts",
+        "line": 140
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "PayoutService",
+      "method": "create",
+      "call": "notificationDispatch.payoutScheduled",
+      "chain": [
+        "Endpoint",
+        "PayoutService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/services/payout.service.ts",
+        "line": 140
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "PayoutService",
+      "method": "approve",
+      "call": "notificationDispatch.payoutCompleted(actorId, id, detail.payoutRef, String(detail.amount), detail.currency).catch",
+      "chain": [
+        "Endpoint",
+        "PayoutService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/services/payout.service.ts",
+        "line": 180
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "PayoutService",
+      "method": "approve",
+      "call": "notificationDispatch.payoutCompleted",
+      "chain": [
+        "Endpoint",
+        "PayoutService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/services/payout.service.ts",
+        "line": 180
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "PayoutService",
+      "method": "reject",
+      "call": "notificationDispatch.payoutFailed(actorId, id, detail.payoutRef, dto.reason).catch",
+      "chain": [
+        "Endpoint",
+        "PayoutService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/services/payout.service.ts",
+        "line": 196
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "PayoutService",
+      "method": "reject",
+      "call": "notificationDispatch.payoutFailed",
+      "chain": [
+        "Endpoint",
+        "PayoutService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/services/payout.service.ts",
+        "line": 196
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "PayoutService",
+      "method": "retry",
+      "call": "notificationDispatch.payoutCompleted(actorId, id, detail.payoutRef, String(detail.amount), detail.currency).catch",
+      "chain": [
+        "Endpoint",
+        "PayoutService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/services/payout.service.ts",
+        "line": 219
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "PayoutService",
+      "method": "retry",
+      "call": "notificationDispatch.payoutCompleted",
+      "chain": [
+        "Endpoint",
+        "PayoutService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/payouts/services/payout.service.ts",
+        "line": 219
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "QrPaymentService",
+      "method": "create",
+      "call": "notificationDispatch.qrCodeCreated(actorId, id, detail.qrRef, detail.title).catch",
+      "chain": [
+        "Endpoint",
+        "QrPaymentService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/services/qr-payment.service.ts",
+        "line": 80
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "QrPaymentService",
+      "method": "create",
+      "call": "notificationDispatch.qrCodeCreated",
+      "chain": [
+        "Endpoint",
+        "QrPaymentService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/services/qr-payment.service.ts",
+        "line": 80
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "QrPaymentService",
+      "method": "processPayment",
+      "call": "notificationDispatch.qrPaymentReceived(row.created_by, row.id, row.qr_ref, String(amount), row.currency).catch",
+      "chain": [
+        "Endpoint",
+        "QrPaymentService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/services/qr-payment.service.ts",
+        "line": 222
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "QrPaymentService",
+      "method": "processPayment",
+      "call": "notificationDispatch.qrPaymentReceived",
+      "chain": [
+        "Endpoint",
+        "QrPaymentService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/qr-payments/services/qr-payment.service.ts",
+        "line": 222
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "RefundService",
+      "method": "createRequest",
+      "call": "notificationDispatch.refundRequested(actorId, id, detail.refundRef, String(detail.amount), detail.currency).catch",
+      "chain": [
+        "Endpoint",
+        "RefundService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/refunds/services/refund.service.ts",
+        "line": 109
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "RefundService",
+      "method": "createRequest",
+      "call": "notificationDispatch.refundRequested",
+      "chain": [
+        "Endpoint",
+        "RefundService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/refunds/services/refund.service.ts",
+        "line": 109
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "RefundService",
+      "method": "approve",
+      "call": "notificationDispatch.refundProcessed(actorId, detail.transactionId, detail.transactionRef ?? '', String(detail.amount), detail.currency).catch",
+      "chain": [
+        "Endpoint",
+        "RefundService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/refunds/services/refund.service.ts",
+        "line": 139
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "RefundService",
+      "method": "approve",
+      "call": "notificationDispatch.refundProcessed",
+      "chain": [
+        "Endpoint",
+        "RefundService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/refunds/services/refund.service.ts",
+        "line": 139
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "RefundService",
+      "method": "reject",
+      "call": "notificationDispatch.refundRejected(actorId, id, detail.refundRef, dto.reason).catch",
+      "chain": [
+        "Endpoint",
+        "RefundService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/refunds/services/refund.service.ts",
+        "line": 162
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "RefundService",
+      "method": "reject",
+      "call": "notificationDispatch.refundRejected",
+      "chain": [
+        "Endpoint",
+        "RefundService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/refunds/services/refund.service.ts",
+        "line": 162
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "RiskRuleService",
+      "method": "evaluate",
+      "call": "notificationDispatch.dispatch({ userId: actorId, eventCode: 'risk_alert', title: 'Risk rule triggered', body: `${rule.rule_name} matched`, metadata: { ruleId: id } }).catch",
+      "chain": [
+        "Endpoint",
+        "RiskRuleService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/risk-rules/services/risk-rule.service.ts",
+        "line": 54
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "RiskRuleService",
+      "method": "evaluate",
+      "call": "notificationDispatch.dispatch",
+      "chain": [
+        "Endpoint",
+        "RiskRuleService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/risk-rules/services/risk-rule.service.ts",
+        "line": 54
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "SettlementEngineService",
+      "method": "retry",
+      "call": "notificationDispatch.dispatch({ userId: actorId, eventCode: 'settlement_failed', title: 'Settlement retry', body: `Settlement #${settlementId} queued for retry` }).catch",
+      "chain": [
+        "Endpoint",
+        "SettlementEngineService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/services/settlement-engine.service.ts",
+        "line": 47
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "SettlementEngineService",
+      "method": "retry",
+      "call": "notificationDispatch.dispatch",
+      "chain": [
+        "Endpoint",
+        "SettlementEngineService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/services/settlement-engine.service.ts",
+        "line": 47
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "SettlementService",
+      "method": "updateStatus",
+      "call": "notificationDispatch.settlementCompleted(\r\n        userId, id, existing.settlement_ref, String(existing.amount), existing.currency,\r\n      ).catch",
+      "chain": [
+        "Endpoint",
+        "SettlementService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/services/settlement.service.ts",
+        "line": 183
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "SettlementService",
+      "method": "updateStatus",
+      "call": "notificationDispatch.settlementCompleted",
+      "chain": [
+        "Endpoint",
+        "SettlementService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/settlements/services/settlement.service.ts",
+        "line": 183
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "SubscriptionPaymentHandler",
+      "method": "onInvoicePaid",
+      "call": "notificationDispatch.subscriptionRenewed(sub.created_by, sub.id, sub.subscription_ref).catch",
+      "chain": [
+        "Endpoint",
+        "SubscriptionPaymentHandler",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/services/subscription-payment.handler.ts",
+        "line": 38
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "SubscriptionPaymentHandler",
+      "method": "onInvoicePaid",
+      "call": "notificationDispatch.subscriptionRenewed",
+      "chain": [
+        "Endpoint",
+        "SubscriptionPaymentHandler",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/services/subscription-payment.handler.ts",
+        "line": 38
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "SubscriptionService",
+      "method": "create",
+      "call": "notificationDispatch.subscriptionCreated(actorId, id, detail.subscriptionRef, detail.planName).catch",
+      "chain": [
+        "Endpoint",
+        "SubscriptionService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/services/subscription.service.ts",
+        "line": 121
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "SubscriptionService",
+      "method": "create",
+      "call": "notificationDispatch.subscriptionCreated",
+      "chain": [
+        "Endpoint",
+        "SubscriptionService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/services/subscription.service.ts",
+        "line": 121
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "SubscriptionService",
+      "method": "cancel",
+      "call": "notificationDispatch.subscriptionCancelled(actorId, id, before.subscriptionRef).catch",
+      "chain": [
+        "Endpoint",
+        "SubscriptionService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/services/subscription.service.ts",
+        "line": 145
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "SubscriptionService",
+      "method": "cancel",
+      "call": "notificationDispatch.subscriptionCancelled",
+      "chain": [
+        "Endpoint",
+        "SubscriptionService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/services/subscription.service.ts",
+        "line": 145
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "SubscriptionService",
+      "method": "renew",
+      "call": "notificationDispatch.subscriptionRenewed(actorId, id, before.subscriptionRef).catch",
+      "chain": [
+        "Endpoint",
+        "SubscriptionService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/services/subscription.service.ts",
+        "line": 159
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "SubscriptionService",
+      "method": "renew",
+      "call": "notificationDispatch.subscriptionRenewed",
+      "chain": [
+        "Endpoint",
+        "SubscriptionService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/services/subscription.service.ts",
+        "line": 159
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "SubscriptionService",
+      "method": "markFailed",
+      "call": "notificationDispatch.subscriptionFailed(actorId, id, before.subscriptionRef).catch",
+      "chain": [
+        "Endpoint",
+        "SubscriptionService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/services/subscription.service.ts",
+        "line": 171
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "SubscriptionService",
+      "method": "markFailed",
+      "call": "notificationDispatch.subscriptionFailed",
+      "chain": [
+        "Endpoint",
+        "SubscriptionService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/subscriptions/services/subscription.service.ts",
+        "line": 171
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "SupportService",
+      "method": "create",
+      "call": "notificationDispatch.ticketCreated(actorId, id, detail.ticketRef, detail.subject).catch",
+      "chain": [
+        "Endpoint",
+        "SupportService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/services/support.service.ts",
+        "line": 106
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "SupportService",
+      "method": "create",
+      "call": "notificationDispatch.ticketCreated",
+      "chain": [
+        "Endpoint",
+        "SupportService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/services/support.service.ts",
+        "line": 106
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "SupportService",
+      "method": "assign",
+      "call": "notificationDispatch.ticketAssigned(dto.assigneeId, id, before.ticketRef).catch",
+      "chain": [
+        "Endpoint",
+        "SupportService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/services/support.service.ts",
+        "line": 131
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "SupportService",
+      "method": "assign",
+      "call": "notificationDispatch.ticketAssigned",
+      "chain": [
+        "Endpoint",
+        "SupportService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/services/support.service.ts",
+        "line": 131
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "SupportService",
+      "method": "escalate",
+      "call": "notificationDispatch.ticketEscalated(dto.assigneeId, id, before.ticketRef).catch",
+      "chain": [
+        "Endpoint",
+        "SupportService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/services/support.service.ts",
+        "line": 147
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "SupportService",
+      "method": "escalate",
+      "call": "notificationDispatch.ticketEscalated",
+      "chain": [
+        "Endpoint",
+        "SupportService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/support/services/support.service.ts",
+        "line": 147
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "TransactionService",
+      "method": "updateStatus",
+      "call": "notificationDispatch.paymentFailed(userId, id, existing.transaction_ref, dto.reason).catch",
+      "chain": [
+        "Endpoint",
+        "TransactionService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/services/transaction.service.ts",
+        "line": 215
+      },
+      "verification": "VERIFIED"
+    },
+    {
+      "source": "TransactionService",
+      "method": "updateStatus",
+      "call": "notificationDispatch.paymentFailed",
+      "chain": [
+        "Endpoint",
+        "TransactionService",
+        "NotificationDispatch",
+        "NotificationRepository",
+        "notification_deliveries"
+      ],
+      "evidence": {
+        "file": "Backend_Fintech/src/app/modules/transactions/services/transaction.service.ts",
+        "line": 215
+      },
+      "verification": "VERIFIED"
+    }
+  ]
+}

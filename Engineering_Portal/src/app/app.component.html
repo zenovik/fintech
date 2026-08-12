@@ -1,0 +1,40 @@
+<mat-sidenav-container class="shell">
+  <mat-sidenav [opened]="sidenavOpen()" mode="side" class="shell-nav">
+    <div class="brand">
+      <mat-icon>engineering</mat-icon>
+      <span>Engineering Portal</span>
+    </div>
+    <mat-nav-list>
+      @for (item of nav; track item.route) {
+        <a mat-list-item [routerLink]="item.route" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: item.route === '/' }">
+          <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+          <span matListItemTitle>{{ item.label }}</span>
+        </a>
+      }
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar class="topbar">
+      <button mat-icon-button (click)="toggleSidenav()" aria-label="Toggle navigation">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="topbar-title">Enterprise Engineering Intelligence</span>
+      <span class="spacer"></span>
+      <ep-search-bar />
+      <button mat-icon-button (click)="settings.toggleTheme()" aria-label="Toggle theme">
+        <mat-icon>{{ settings.theme() === 'dark' ? 'light_mode' : 'dark_mode' }}</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    @if (!data.loaded()) {
+      <mat-progress-bar mode="indeterminate" />
+    } @else if (data.loadError()) {
+      <div class="load-error ep-page">Data load warning: {{ data.loadError() }}</div>
+    }
+
+    <main class="main">
+      <router-outlet />
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

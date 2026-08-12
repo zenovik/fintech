@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fintech-redis-config
+  labels:
+    app.kubernetes.io/component: redis
+data:
+  redis.conf: |
+    appendonly yes
+    appendfsync everysec
+    maxmemory 256mb
+    maxmemory-policy allkeys-lru
+    protected-mode yes
+    port 6379

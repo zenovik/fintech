@@ -1,0 +1,38 @@
+flowchart LR
+  N0["Endpoint: GET /api/v1/payment-config"]
+  N1["Endpoint: POST /api/v1/payment-confi"]
+  N2["Endpoint: GET /api/v1/payment-config"]
+  N3["Controller: getMerchantConfig"]
+  N4["Endpoint: PUT /api/v1/payment-config"]
+  N5["Controller: saveConfig"]
+  N6["Endpoint: GET /api/v1/payments/merch"]
+  N7["Controller: merchantConfig"]
+  N8["Endpoint: GET /api/v1/settings/confi"]
+  N9["Controller: listPlatformConfig"]
+  N10["Endpoint: PUT /api/v1/settings/confi"]
+  N11["Controller: updatePlatformConfig"]
+  N12["Endpoint: GET /api/v1/system/cache-c"]
+  N13["Controller: listCacheConfig"]
+  N14["Endpoint: PUT /api/v1/system/cache-c"]
+  N15["Controller: updateCacheConfig"]
+  N16["Endpoint: GET /api/v1/system/backup-"]
+  N17["Controller: listBackupConfig"]
+  N18["Endpoint: PUT /api/v1/system/backup-"]
+  N19["Controller: updateBackupConfig"]
+  N20["Table: merchant_onboarding_settle"]
+  N21["Table: merchant_onboarding_paymen"]
+  N22["Table: platform_configurations"]
+  N23["Table: config_value"]
+  N24["Table: merchant_payment_method_co"]
+  N25["Table: platform_config"]
+  N26["Table: cache_configurations"]
+  N27["Table: backup_configurations"]
+  N2 -->|handles| N3
+  N4 -->|handles| N5
+  N6 -->|handles| N7
+  N8 -->|handles| N9
+  N10 -->|handles| N11
+  N12 -->|handles| N13
+  N14 -->|handles| N15
+  N16 -->|handles| N17
+  N18 -->|handles| N19

@@ -1,0 +1,22 @@
+flowchart LR
+  N0["Endpoint: GET /api/v1/developer/oaut"]
+  N1["Controller: listOAuthApps"]
+  N2["Endpoint: POST /api/v1/developer/oau"]
+  N3["Controller: createOAuthApp"]
+  N4["Endpoint: GET /api/v1/developer/oaut"]
+  N5["Controller: getOAuthApp"]
+  N6["Endpoint: PUT /api/v1/developer/oaut"]
+  N7["Controller: updateOAuthApp"]
+  N8["Endpoint: POST /api/v1/developer/oau"]
+  N9["Controller: revokeOAuthApp"]
+  N10["Endpoint: POST /api/v1/payments/:id/"]
+  N11["Controller: authorize"]
+  N12["Table: auth_audit_logs"]
+  N13["Table: auth_challenges"]
+  N14["Table: oauth_applications"]
+  N0 -->|handles| N1
+  N2 -->|handles| N3
+  N4 -->|handles| N5
+  N6 -->|handles| N7
+  N8 -->|handles| N9
+  N10 -->|handles| N11

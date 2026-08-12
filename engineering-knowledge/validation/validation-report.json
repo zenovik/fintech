@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T18:20:27.631Z",
+    "generatorVersion": "3.0.0-b",
+    "evidenceCount": 6,
+    "verificationStatus": "verified-from-source"
+  },
+  "errors": [],
+  "brokenLinks": [
+    {
+      "type": "fe-api-no-endpoint",
+      "component": "Frontend_Fintech/src/app/features/roles/pages/role-form/role-form.component.ts",
+      "apiPath": "code"
+    },
+    {
+      "type": "fe-api-no-endpoint",
+      "component": "Frontend_Fintech/src/app/features/settings/pages/settings-security/settings-security.component.ts",
+      "apiPath": "mfaMethodsAllowed"
+    },
+    {
+      "type": "fe-api-no-endpoint",
+      "component": "Frontend_Fintech/src/app/features/users/components/assign-roles-dialog/assign-roles-dialog.component.ts",
+      "apiPath": "role_${r.id}"
+    },
+    {
+      "type": "guard-perm-link-NOT-VERIFIED",
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/auth.guard.ts",
+      "note": "static guard-permission mapping requires AST deep analysis"
+    },
+    {
+      "type": "guard-perm-link-NOT-VERIFIED",
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/guest.guard.ts",
+      "note": "static guard-permission mapping requires AST deep analysis"
+    },
+    {
+      "type": "guard-perm-link-NOT-VERIFIED",
+      "guard": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts",
+      "note": "static guard-permission mapping requires AST deep analysis"
+    }
+  ],
+  "orphans": [],
+  "counts": {
+    "errors": 0,
+    "brokenLinks": 6,
+    "orphans": 0
+  }
+}

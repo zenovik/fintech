@@ -46,6 +46,7 @@ $files = @(
   '077_execution_layer.sql',
   '078_production_hardening.sql',
   '079_verified_remediation.sql',
+  '080_financial_core_engine.sql',
   '071_enterprise_production_readiness.sql',
   # Seed data (DML)
   '21_dummy_data_auth.sql',

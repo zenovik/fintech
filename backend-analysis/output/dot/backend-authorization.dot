@@ -1,0 +1,7 @@
+digraph "authorization" {
+  rankdir=LR;
+  node [shape=box fontsize=10];
+  n0 [label="Endpoint\nPOST /api/v1/payments/:id/authorize"];
+  n1 [label="Controller\nauthorize"];
+  n0 -> n1 [label="handles"];
+}

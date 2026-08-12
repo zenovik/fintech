@@ -1,0 +1,16 @@
+digraph "audit" {
+  rankdir=LR;
+  node [shape=box fontsize=10];
+  n0 [label="Endpoint\nGET /api/v1/audit"];
+  n1 [label="Endpoint\nGET /api/v1/audit/export"];
+  n2 [label="Endpoint\nGET /api/v1/audit/categories"];
+  n3 [label="Endpoint\nGET /api/v1/audit/actions"];
+  n4 [label="Endpoint\nGET /api/v1/audit/api-logs"];
+  n5 [label="Endpoint\nGET /api/v1/audit/webhook-logs"];
+  n6 [label="Endpoint\nGET /api/v1/audit/:id"];
+  n7 [label="Table\naudit_logs"];
+  n8 [label="Table\naudit_actions"];
+  n9 [label="Table\naudit_metadata"];
+  n10 [label="Table\naudit_categories"];
+  n11 [label="Table\nauth_audit_logs"];
+}

@@ -122,6 +122,7 @@ export class PaymentRepository {
     if (extra.amountRefunded != null) { sets.push('amount_refunded = ?'); params.push(extra.amountRefunded); }
     if (extra.transactionId != null) { sets.push('transaction_id = ?'); params.push(extra.transactionId); }
     if (extra.acquirerReference != null) { sets.push('acquirer_reference = ?'); params.push(extra.acquirerReference); }
+    if (extra.gatewayTransactionId != null) { sets.push('gateway_transaction_id = ?'); params.push(extra.gatewayTransactionId); }
     if (extra.rrn != null) { sets.push('rrn = ?'); params.push(extra.rrn); }
     if (extra.failureReason != null) { sets.push('failure_reason = ?'); params.push(extra.failureReason); }
     if (status === 'authorized') { sets.push('authorized_at = NOW()'); }

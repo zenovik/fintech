@@ -1,0 +1,14 @@
+{
+  "name": "engineering-intelligence",
+  "version": "3.0.0-a",
+  "private": true,
+  "description": "Code-first engineering intelligence platform for Merchant Pro",
+  "type": "module",
+  "scripts": {
+    "analyze": "node run.mjs",
+    "validate": "node validate.mjs"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

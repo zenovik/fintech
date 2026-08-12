@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T19:07:37.680Z"
+  },
+  "controllersParsed": 51,
+  "servicesParsed": 67,
+  "repositoriesParsed": 64,
+  "dtosParsed": 242,
+  "sqlStatementsParsed": 877,
+  "transactionsDiscovered": 39,
+  "middlewareChainsResolved": 552,
+  "workerGraphsGenerated": 16,
+  "redisMappings": 15,
+  "auditMappings": 227,
+  "notificationMappings": 112,
+  "repositorySqlMappings": 877,
+  "repositoryTableMappings": 844,
+  "dtoSwaggerMappings": 537,
+  "endpointsDiscovered": 552,
+  "interfacesParsed": 392,
+  "functionsParsed": 395,
+  "validationErrors": 0,
+  "architectureViolations": 183
+}

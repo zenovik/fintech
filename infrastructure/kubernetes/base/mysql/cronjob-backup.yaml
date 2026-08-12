@@ -1,0 +1,60 @@
+# Placeholder — replace image/command with your backup tooling (Velero, mysqldump sidecar, etc.)
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: mysql-backup
+  labels:
+    app.kubernetes.io/name: mysql
+    app.kubernetes.io/component: backup
+spec:
+  schedule: "0 3 * * *"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          labels:
+            app.kubernetes.io/name: mysql-backup
+        spec:
+          restartPolicy: OnFailure
+          serviceAccountName: fintech-mysql-backup
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1001
+            seccompProfile:
+              type: RuntimeDefault
+          containers:
+            - name: backup
+              image: mysql:8.0
+              command:
+                - /bin/sh
+                - -c
+                - |
+                  echo "MySQL backup placeholder — configure mysqldump or object storage upload"
+                  mysqldump -h mysql -u${MYSQL_USER} -p${MYSQL_PASSWORD} ${MYSQL_DATABASE} > /backup/dump.sql
+                  echo "Backup complete"
+              env:
+                - name: MYSQL_USER
+                  value: fintech_user
+                - name: MYSQL_PASSWORD
+                  valueFrom:
+                    secretKeyRef:
+                      name: fintech-app-secrets
+                      key: MYSQL_PASSWORD
+                - name: MYSQL_DATABASE
+                  value: fintech_db
+              volumeMounts:
+                - name: backup
+                  mountPath: /backup
+              resources:
+                requests:
+                  cpu: 100m
+                  memory: 256Mi
+                limits:
+                  cpu: 500m
+                  memory: 512Mi
+          volumes:
+            - name: backup
+              emptyDir: {}

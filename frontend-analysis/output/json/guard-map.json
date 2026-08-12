@@ -1,0 +1,1484 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T18:43:41.784Z",
+    "generatorVersion": "2.0.0-ast"
+  },
+  "guards": [
+    {
+      "guard": "permissionGuard",
+      "file": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts",
+      "injections": [
+        {
+          "type": "RbacService",
+          "line": 8
+        },
+        {
+          "type": "Router",
+          "line": 9
+        }
+      ],
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts",
+        "line": 6
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/acceptance/acceptance.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.ACCEPTANCE_ANALYTICS_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/acceptance/acceptance.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/activity/activity.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.ACTIVITY_CENTER_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/activity/activity.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 9
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.AUDIT_READ)",
+      "route": "/",
+      "component": "AuditDashboardComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.AUDIT_READ)",
+      "route": "/timeline",
+      "component": "AuditTimelineComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.AUDIT_READ)",
+      "route": "/api-logs",
+      "component": "ApiLogsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.AUDIT_READ)",
+      "route": "/webhook-logs",
+      "component": "WebhookLogsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 39
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.AUDIT_READ)",
+      "route": "/:id",
+      "component": "AuditDetailsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+        "line": 46
+      }
+    },
+    {
+      "guard": "guestGuard",
+      "route": "/login",
+      "component": "LoginComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts",
+        "line": 11
+      }
+    },
+    {
+      "guard": "guestGuard",
+      "route": "/forgot-password",
+      "component": "ForgotPasswordComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts",
+        "line": 17
+      }
+    },
+    {
+      "guard": "guestGuard",
+      "route": "/reset-password",
+      "component": "ResetPasswordComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "guard": "guestGuard",
+      "route": "/verify-otp",
+      "component": "VerifyOtpComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/sessions",
+      "component": "ActiveSessionsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts",
+        "line": 56
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/chargebacks/chargebacks.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.CHARGEBACKS_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/chargebacks/chargebacks.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.CHARGEBACKS_WRITE)",
+      "route": "/create",
+      "component": "ChargebackCreateComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/chargebacks/chargebacks.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout-admin/checkout-admin.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.CHECKOUT_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout-admin/checkout-admin.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.CHECKOUT_ANALYTICS)",
+      "route": "/analytics",
+      "component": "CheckoutAnalyticsDashboardComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout-admin/checkout-admin.routes.ts",
+        "line": 25
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.CHECKOUT_BRANDING)",
+      "route": "/branding",
+      "component": "CheckoutBrandingManagerComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/checkout-admin/checkout-admin.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/customers/customers.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.CUSTOMERS_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/customers/customers.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.CUSTOMERS_WRITE)",
+      "route": "/create",
+      "component": "CustomerFormComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/customers/customers.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.CUSTOMERS_WRITE)",
+      "route": "/:id/edit",
+      "component": "CustomerFormComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/customers/customers.routes.ts",
+        "line": 32
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/dashboard/dashboard.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.DASHBOARD_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/dashboard/dashboard.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/developer/developer.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.DEVELOPER_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/developer/developer.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/devices/devices.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.DEVICES_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/devices/devices.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/fraud/fraud.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.FRAUD_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/fraud/fraud.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/invoices/invoices.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.INVOICES_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/invoices/invoices.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.INVOICES_WRITE)",
+      "route": "/create",
+      "component": "InvoiceCreateComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/invoices/invoices.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.INVOICES_WRITE)",
+      "route": "/:id/edit",
+      "component": "InvoiceEditComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/invoices/invoices.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant/merchant.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.MERCHANTS_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant/merchant.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.MERCHANTS_WRITE)",
+      "route": "/create",
+      "component": "MerchantFormComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant/merchant.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.MERCHANTS_WRITE)",
+      "route": "/:id/edit",
+      "component": "MerchantFormComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant/merchant.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-onboarding/merchant-onboarding.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.MERCHANT_ONBOARDING_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-onboarding/merchant-onboarding.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.MERCHANT_ONBOARDING_WRITE)",
+      "route": "/create",
+      "component": "OnboardingWizardComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-onboarding/merchant-onboarding.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.MERCHANT_ONBOARDING_WRITE)",
+      "route": "/:id/wizard",
+      "component": "OnboardingWizardComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-onboarding/merchant-onboarding.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-portal/merchant-portal.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.MERCHANT_PORTAL_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-portal/merchant-portal.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-users/merchant-users.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.MERCHANT_USERS_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/merchant-users/merchant-users.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+        "line": 9
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.NOTIFICATIONS_READ)",
+      "route": "/",
+      "component": "NotificationCenterComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.NOTIFICATIONS_BROADCAST)",
+      "route": "/broadcasts",
+      "component": "NotificationBroadcastsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+        "line": 31
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.NOTIFICATIONS_MANAGE)",
+      "route": "/templates",
+      "component": "NotificationTemplatesComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+        "line": 38
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.NOTIFICATIONS_READ)",
+      "route": "/:id",
+      "component": "NotificationDetailsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+        "line": 45
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/onboarding-approval/onboarding-approval.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.COMPLIANCE_QUEUE_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/onboarding-approval/onboarding-approval.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/operations/operations.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.OPERATIONS_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/operations/operations.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/organizations/organizations.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.ORGANIZATIONS_READ)",
+      "route": "/",
+      "component": "OrganizationListComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/organizations/organizations.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.ORGANIZATIONS_WRITE)",
+      "route": "/create",
+      "component": "OrganizationFormComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/organizations/organizations.routes.ts",
+        "line": 20
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.ORGANIZATIONS_READ)",
+      "route": "/:id",
+      "component": "OrganizationDetailsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/organizations/organizations.routes.ts",
+        "line": 27
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.ORGANIZATIONS_WRITE)",
+      "route": "/:id/edit",
+      "component": "OrganizationFormComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/organizations/organizations.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/outlets/outlets.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.OUTLETS_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/outlets/outlets.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payment-links/payment-links.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.PAYMENT_LINKS_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payment-links/payment-links.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.PAYMENT_LINKS_WRITE)",
+      "route": "/create",
+      "component": "PaymentLinkCreateComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payment-links/payment-links.routes.ts",
+        "line": 19
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.PAYMENT_LINKS_WRITE)",
+      "route": "/:id/edit",
+      "component": "PaymentLinkEditComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payment-links/payment-links.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payouts/payouts.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.PAYOUTS_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payouts/payouts.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.PAYOUTS_WRITE)",
+      "route": "/create",
+      "component": "PayoutCreateComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payouts/payouts.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.PAYOUTS_READ)",
+      "route": "/bank-accounts",
+      "component": "BankAccountsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/payouts/payouts.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/qr-payments/qr-payments.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.QR_PAYMENTS_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/qr-payments/qr-payments.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.QR_PAYMENTS_WRITE)",
+      "route": "/create",
+      "component": "QrCreateComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/qr-payments/qr-payments.routes.ts",
+        "line": 35
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reconciliation/reconciliation.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.RECONCILIATION_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reconciliation/reconciliation.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/refunds/refunds.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.REFUNDS_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/refunds/refunds.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.REFUNDS_WRITE)",
+      "route": "/request",
+      "component": "RefundRequestComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/refunds/refunds.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.REPORTS_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.ANALYTICS_READ)",
+      "route": "/analytics",
+      "component": "AnalyticsDashboardComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 23
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.REPORTS_WRITE)",
+      "route": "/builder",
+      "component": "ReportBuilderComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 34
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.REPORTS_WRITE)",
+      "route": "/builder/:id",
+      "component": "ReportBuilderComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+        "line": 40
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/risk-rules/risk-rules.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.RISK_RULES_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/risk-rules/risk-rules.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/roles/roles.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.ROLES_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/roles/roles.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.ROLES_WRITE)",
+      "route": "/create",
+      "component": "RoleFormComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/roles/roles.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.ROLES_WRITE)",
+      "route": "/:id/edit",
+      "component": "RoleFormComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/roles/roles.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.PERMISSIONS_READ)",
+      "route": "/:id/permissions",
+      "component": "PermissionMatrixComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/roles/roles.routes.ts",
+        "line": 16
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/sandbox/sandbox.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.SANDBOX_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/sandbox/sandbox.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 10
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.SETTINGS_READ)",
+      "route": "/business",
+      "component": "SettingsBusinessComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 26
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.SETTINGS_READ)",
+      "route": "/branding",
+      "component": "SettingsBrandingComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 33
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.SETTINGS_READ)",
+      "route": "/security",
+      "component": "SettingsSecurityComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 40
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.SETTINGS_READ)",
+      "route": "/password-policy",
+      "component": "SettingsPasswordPolicyComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 47
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.SETTINGS_READ)",
+      "route": "/session",
+      "component": "SettingsSessionComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 54
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.SETTINGS_READ)",
+      "route": "/api",
+      "component": "SettingsApiComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 67
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.SETTINGS_READ)",
+      "route": "/feature-flags",
+      "component": "SettingsFeatureFlagsComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 74
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.PLATFORM_CONFIG_READ)",
+      "route": "/configuration",
+      "component": "SettingsConfigurationComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 81
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.SETTINGS_READ)",
+      "route": "/storage",
+      "component": "SettingsStorageComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 88
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.SYSTEM_VIEW)",
+      "route": "/system-status",
+      "component": "SettingsSystemStatusComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+        "line": 101
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settlements/settlements.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.SETTLEMENTS_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/settlements/settlements.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/smart-collect/smart-collect.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.SMART_COLLECT_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/smart-collect/smart-collect.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/subscriptions/subscriptions.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.SUBSCRIPTIONS_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/subscriptions/subscriptions.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.SUBSCRIPTIONS_WRITE)",
+      "route": "/plans/create",
+      "component": "PlanCreateComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/subscriptions/subscriptions.routes.ts",
+        "line": 47
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.SUBSCRIPTIONS_WRITE)",
+      "route": "/create",
+      "component": "SubscriptionCreateComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/subscriptions/subscriptions.routes.ts",
+        "line": 59
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/support/support.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.SUPPORT_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/support/support.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.SUPPORT_WRITE)",
+      "route": "/create",
+      "component": "TicketCreateComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/support/support.routes.ts",
+        "line": 13
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.SUPPORT_WRITE)",
+      "route": "/:id/edit",
+      "component": "TicketEditComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/support/support.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/transactions/transactions.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.TRANSACTIONS_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/transactions/transactions.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/users/users.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.USERS_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/users/users.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.USERS_WRITE)",
+      "route": "/create",
+      "component": "UserFormComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/users/users.routes.ts",
+        "line": 14
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.USERS_WRITE)",
+      "route": "/:id/edit",
+      "component": "UserFormComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/users/users.routes.ts",
+        "line": 15
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/webhooks/webhooks.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "permissionGuard(PERMISSIONS.WEBHOOKS_READ)",
+      "route": "/",
+      "component": "DashboardShellComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/features/webhooks/webhooks.routes.ts",
+        "line": 8
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/dashboard",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 18
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/merchants",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 24
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/merchant-onboarding",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 30
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/outlets",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 36
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/onboarding-approval",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 42
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/merchant-users",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 48
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/devices",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 54
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/fraud",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 60
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/risk-rules",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 66
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/transactions",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 72
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/settlements",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 78
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/reports",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 94
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/notifications",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 105
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/audit",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 111
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/refunds",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 117
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/chargebacks",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 123
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/payouts",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 129
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/payment-links",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 135
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/invoices",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 141
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/qr-payments",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 147
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/subscriptions",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 153
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/support",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 159
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/operations",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 165
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/activity",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 171
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/checkout",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 177
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/smart-collect",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 201
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/acceptance",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 207
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/merchant-portal",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 213
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/developer",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 219
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/webhooks",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 225
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/reconciliation",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 231
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/sandbox",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 237
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/customers",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 243
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/organizations",
+      "component": null,
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 249
+      }
+    },
+    {
+      "guard": "authGuard",
+      "route": "/select-organization",
+      "component": "SelectOrganizationComponent",
+      "evidence": {
+        "file": "Frontend_Fintech/src/app/routing/app.routes.ts",
+        "line": 255
+      }
+    }
+  ]
+}

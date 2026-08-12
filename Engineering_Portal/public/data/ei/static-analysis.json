@@ -1,0 +1,508 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T18:13:27.127Z",
+    "generatorVersion": "3.0.0-a",
+    "evidenceCount": 46,
+    "verificationStatus": "verified-from-source"
+  },
+  "findings": [
+    {
+      "type": "backend-without-frontend",
+      "module": "accounting",
+      "confidence": "high",
+      "evidence": "module name comparison"
+    },
+    {
+      "type": "backend-without-frontend",
+      "module": "pricing",
+      "confidence": "high",
+      "evidence": "module name comparison"
+    },
+    {
+      "type": "table-no-code-reference",
+      "table": "sso_identities",
+      "confidence": "medium",
+      "evidence": "grep repos/services/workers"
+    },
+    {
+      "type": "table-no-code-reference",
+      "table": "payout_batches",
+      "confidence": "medium",
+      "evidence": "grep repos/services/workers"
+    },
+    {
+      "type": "table-no-code-reference",
+      "table": "api_tokens",
+      "confidence": "medium",
+      "evidence": "grep repos/services/workers"
+    },
+    {
+      "type": "table-no-code-reference",
+      "table": "state_region_mapping",
+      "confidence": "medium",
+      "evidence": "grep repos/services/workers"
+    },
+    {
+      "type": "table-no-code-reference",
+      "table": "merchant_code_sequences",
+      "confidence": "medium",
+      "evidence": "grep repos/services/workers"
+    },
+    {
+      "type": "table-no-code-reference",
+      "table": "qr_tags",
+      "confidence": "medium",
+      "evidence": "grep repos/services/workers"
+    },
+    {
+      "type": "table-no-code-reference",
+      "table": "payment_link_reminders",
+      "confidence": "medium",
+      "evidence": "grep repos/services/workers"
+    },
+    {
+      "type": "table-no-code-reference",
+      "table": "merchant_branding_assets",
+      "confidence": "medium",
+      "evidence": "grep repos/services/workers"
+    },
+    {
+      "type": "table-no-code-reference",
+      "table": "saved_reports",
+      "confidence": "medium",
+      "evidence": "grep repos/services/workers"
+    },
+    {
+      "type": "table-no-code-reference",
+      "table": "analytics_metrics",
+      "confidence": "medium",
+      "evidence": "grep repos/services/workers"
+    },
+    {
+      "type": "table-no-code-reference",
+      "table": "analytics_widgets",
+      "confidence": "medium",
+      "evidence": "grep repos/services/workers"
+    },
+    {
+      "type": "table-no-code-reference",
+      "table": "dashboard_preferences",
+      "confidence": "medium",
+      "evidence": "grep repos/services/workers"
+    },
+    {
+      "type": "table-no-code-reference",
+      "table": "data_retention_policies",
+      "confidence": "medium",
+      "evidence": "grep repos/services/workers"
+    },
+    {
+      "type": "table-no-code-reference",
+      "table": "feature_flag_api_routes",
+      "confidence": "medium",
+      "evidence": "grep repos/services/workers"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "dashboard:read",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "dashboard:export",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "merchants:read",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "merchants:write",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "merchants:delete",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "merchant_onboarding:read",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "merchant_onboarding:write",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "merchant_onboarding:approve",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "merchant_onboarding:reject",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "merchant_onboarding:suspend",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "transactions:read",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "transactions:write",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "transactions:export",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "settlements:read",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "settlements:write",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "settlements:export",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "reports:read",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "reports:write",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "reports:export",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "analytics:read",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "analytics:export",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "users:read",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "users:write",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "users:delete",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "roles:read",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "roles:write",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "roles:delete",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "permissions:read",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "permissions:manage",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    },
+    {
+      "type": "permission-not-in-routes-grep",
+      "permission": "settings:read",
+      "confidence": "medium",
+      "evidence": "authorize() grep"
+    }
+  ],
+  "unusedTables": 14,
+  "unusedPermissionsInRoutes": 144,
+  "circularImports": [],
+  "complexityTop100": [
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\reports\\repositories\\reports.repository.ts",
+      "complexity": 42,
+      "methodCount": 38,
+      "classCount": 2,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\notifications\\services\\notification-dispatch.service.ts",
+      "complexity": 40,
+      "methodCount": 38,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\reports\\services\\reports.service.ts",
+      "complexity": 37,
+      "methodCount": 33,
+      "classCount": 2,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\settings\\services\\settings.service.ts",
+      "complexity": 34,
+      "methodCount": 32,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Frontend_Fintech\\src\\app\\features\\settings\\services\\settings-api.service.ts",
+      "complexity": 34,
+      "methodCount": 32,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\invoices\\services\\invoice.service.ts",
+      "complexity": 33,
+      "methodCount": 31,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\settings\\repositories\\settings.repository.ts",
+      "complexity": 33,
+      "methodCount": 31,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\notifications\\repositories\\notification.repository.ts",
+      "complexity": 31,
+      "methodCount": 29,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\invoices\\repositories\\invoice.repository.ts",
+      "complexity": 30,
+      "methodCount": 28,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\onboarding-approval\\services\\workflow.service.ts",
+      "complexity": 29,
+      "methodCount": 27,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\organizations\\repositories\\organization.repository.ts",
+      "complexity": 29,
+      "methodCount": 27,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\organizations\\services\\organization.service.ts",
+      "complexity": 29,
+      "methodCount": 27,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\payments\\services\\payment-engine.service.ts",
+      "complexity": 29,
+      "methodCount": 27,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\merchant-onboarding\\repositories\\merchant-onboarding.repository.ts",
+      "complexity": 26,
+      "methodCount": 24,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\notifications\\services\\notification.service.ts",
+      "complexity": 26,
+      "methodCount": 24,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Frontend_Fintech\\src\\app\\features\\settings\\services\\settings-state.service.ts",
+      "complexity": 26,
+      "methodCount": 24,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\audit\\services\\audit-recorder.service.ts",
+      "complexity": 25,
+      "methodCount": 23,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\operations\\repositories\\operations.repository.ts",
+      "complexity": 25,
+      "methodCount": 23,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\payments\\repositories\\payment.repository.ts",
+      "complexity": 25,
+      "methodCount": 23,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\settlements\\repositories\\settlement.repository.ts",
+      "complexity": 24,
+      "methodCount": 22,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\payment-links\\repositories\\payment-link.repository.ts",
+      "complexity": 23,
+      "methodCount": 21,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\subscriptions\\repositories\\subscription.repository.ts",
+      "complexity": 23,
+      "methodCount": 21,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\transactions\\repositories\\transaction.repository.ts",
+      "complexity": 23,
+      "methodCount": 21,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Frontend_Fintech\\src\\app\\features\\reports\\services\\reports-api.service.ts",
+      "complexity": 23,
+      "methodCount": 21,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\auth\\services\\auth.service.ts",
+      "complexity": 22,
+      "methodCount": 20,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\qr-payments\\repositories\\qr-payment.repository.ts",
+      "complexity": 22,
+      "methodCount": 20,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\merchant-users\\repositories\\merchant-user.repository.ts",
+      "complexity": 21,
+      "methodCount": 19,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\operations\\services\\operations.service.ts",
+      "complexity": 21,
+      "methodCount": 19,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\qr-payments\\services\\qr-payment.service.ts",
+      "complexity": 21,
+      "methodCount": 19,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Backend_Fintech\\src\\app\\modules\\support\\repositories\\support.repository.ts",
+      "complexity": 21,
+      "methodCount": 19,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    },
+    {
+      "path": "C:\\Users\\danis\\OneDrive\\Desktop\\fintech_application\\Frontend_Fintech\\src\\app\\features\\organizations\\services\\organizations-api.service.ts",
+      "complexity": 21,
+      "methodCount": 19,
+      "classCount": 1,
+      "evidence": "AST method/class count"
+    }
+  ]
+}

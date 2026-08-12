@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T18:20:27.631Z",
+    "generatorVersion": "3.0.0-b",
+    "evidenceCount": 3,
+    "verificationStatus": "verified-from-source"
+  },
+  "reports": [
+    {
+      "source": "payment.repository.ts",
+      "services": [],
+      "controllers": [],
+      "endpoints": [],
+      "components": [],
+      "tests": [],
+      "tables": [
+        "users",
+        "users",
+        "organizations",
+        "payment_method_types",
+        "transaction_statuses",
+        "merchants",
+        "merchants",
+        "merchant_webhooks",
+        "customers",
+        "transactions",
+        "qr_codes",
+        "qr_transactions",
+        "payment_orders",
+        "payment_intents",
+        "payment_sessions",
+        "payment_timeline_events",
+        "payment_idempotency_keys",
+        "customer_payment_methods",
+        "payment_webhook_deliveries",
+        "qr_templates",
+        "qr_categories",
+        "qr_scan_history",
+        "users",
+        "payment_method_types",
+        "transaction_statuses",
+        "merchants",
+        "merchant_webhooks",
+        "transactions",
+        "payment_orders",
+        "payment_intents",
+        "payment_sessions",
+        "payment_timeline_events",
+        "payment_idempotency_keys",
+        "customer_payment_methods",
+        "payment_webhook_deliveries",
+        "users",
+        "organizations",
+        "merchants",
+        "customers",
+        "qr_codes",
+        "qr_transactions",
+        "qr_templates",
+        "qr_categories",
+        "qr_scan_history"
+      ],
+      "docs": []
+    },
+    {
+      "source": "auth.service.ts",
+      "services": [],
+      "controllers": [],
+      "endpoints": [],
+      "components": [],
+      "tests": [],
+      "tables": [],
+      "docs": []
+    },
+    {
+      "source": "payment_intents",
+      "services": [],
+      "controllers": [],
+      "endpoints": [],
+      "components": [],
+      "tests": [],
+      "tables": [
+        "payment_intents",
+        "payment_intents",
+        "payment_intents",
+        "payment_intents"
+      ],
+      "docs": []
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>documentation</title>
+<link rel="stylesheet" href="portal.css"></head><body>
+<nav class="nav"><a href="index.html">Home</a><a href="search.html">Search</a><a href="api.html">API</a><a href="frontend.html">Frontend</a><a href="backend.html">Backend</a><a href="database.html">Database</a><a href="permissions.html">Permissions</a><a href="workers.html">Workers</a><a href="impact.html">Impact</a><a href="traceability.html">Traceability</a><a href="documentation.html">Docs</a></nav>
+<main id="app"><h1>Documentation Links</h1><div id="t"></div><script>loadGraph().then(g=>{const d=g.nodes.filter(n=>n.type==='Documentation');document.getElementById('t').innerHTML=renderTable(d.map(n=>({doc:n.key})),['doc']);});</script></main>
+<script src="portal.js"></script></body></html>

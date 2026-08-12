@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+<key id="type" for="node" attr.name="type" attr.type="string"/>
+<key id="label" for="node" attr.name="label" attr.type="string"/>
+<key id="rel" for="edge" attr.name="rel" attr.type="string"/>
+<graph id="G" edgedefault="directed">
+<node id="ep:GET:/api/v1/acceptance/top-merchants"><data key="type">Endpoint</data><data key="label">GET /api/v1/acceptance/top-merchants</data></node>
+<node id="ep:GET:/api/v1/acceptance/merchant-portal/:merchantId"><data key="type">Endpoint</data><data key="label">GET /api/v1/acceptance/merchant-portal/:merchantId</data></node>
+<node id="ep:GET:/api/v1/customers/:id/merchants"><data key="type">Endpoint</data><data key="label">GET /api/v1/customers/:id/merchants</data></node>
+<node id="ep:GET:/api/v1/checkout/branding/:merchantId"><data key="type">Endpoint</data><data key="label">GET /api/v1/checkout/branding/:merchantId</data></node>
+<node id="ep:PUT:/api/v1/checkout/branding/:merchantId"><data key="type">Endpoint</data><data key="label">PUT /api/v1/checkout/branding/:merchantId</data></node>
+<node id="svc:MerchantContextService"><data key="type">Service</data><data key="label">MerchantContextService</data></node>
+<node id="comp:MerchantDetailsComponent"><data key="type">Component</data><data key="label">MerchantDetailsComponent</data></node>
+<node id="svc:MerchantApiService"><data key="type">Service</data><data key="label">MerchantApiService</data></node>
+<node id="ep:GET:/api/v1/merchants/search"><data key="type">Endpoint</data><data key="label">GET /api/v1/merchants/search</data></node>
+<node id="ep:GET:/api/v1/merchants/statistics"><data key="type">Endpoint</data><data key="label">GET /api/v1/merchants/statistics</data></node>
+<node id="ep:PUT:/api/v1/merchants/:id"><data key="type">Endpoint</data><data key="label">PUT /api/v1/merchants/:id</data></node>
+<node id="ep:PATCH:/api/v1/merchants/:id/status"><data key="type">Endpoint</data><data key="label">PATCH /api/v1/merchants/:id/status</data></node>
+<node id="ep:DELETE:/api/v1/merchants/:id"><data key="type">Endpoint</data><data key="label">DELETE /api/v1/merchants/:id</data></node>
+<node id="ep:GET:/api/v1/merchants/:id/transactions"><data key="type">Endpoint</data><data key="label">GET /api/v1/merchants/:id/transactions</data></node>
+<node id="ep:GET:/api/v1/merchants/:id/documents"><data key="type">Endpoint</data><data key="label">GET /api/v1/merchants/:id/documents</data></node>
+<node id="ep:POST:/api/v1/merchants/:id/documents"><data key="type">Endpoint</data><data key="label">POST /api/v1/merchants/:id/documents</data></node>
+<node id="ep:DELETE:/api/v1/merchants/:id/documents/:documentId"><data key="type">Endpoint</data><data key="label">DELETE /api/v1/merchants/:id/documents/:documentId</data></node>
+<node id="comp:MerchantFormComponent"><data key="type">Component</data><data key="label">MerchantFormComponent</data></node>
+<node id="comp:MerchantListComponent"><data key="type">Component</data><data key="label">MerchantListComponent</data></node>
+<node id="svc:MerchantOnboardingApiService"><data key="type">Service</data><data key="label">MerchantOnboardingApiService</data></node>
+<node id="comp:MerchantPaymentPortalComponent"><data key="type">Component</data><data key="label">MerchantPaymentPortalComponent</data></node>
+<node id="comp:MerchantUserListComponent"><data key="type">Component</data><data key="label">MerchantUserListComponent</data></node>
+<node id="svc:MerchantUsersApiService"><data key="type">Service</data><data key="label">MerchantUsersApiService</data></node>
+<edge id="e0" source="comp:MerchantDetailsComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e1" source="comp:MerchantDetailsComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e2" source="svc:MerchantApiService" target="ep:GET:/api/v1/merchants/search"><data key="rel">http</data></edge>
+<edge id="e3" source="comp:MerchantDetailsComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e4" source="svc:MerchantApiService" target="ep:GET:/api/v1/merchants/statistics"><data key="rel">http</data></edge>
+<edge id="e5" source="comp:MerchantDetailsComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e6" source="svc:MerchantApiService" target="ep:GET:/api/v1/merchants/search"><data key="rel">http</data></edge>
+<edge id="e7" source="comp:MerchantDetailsComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e8" source="comp:MerchantDetailsComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e9" source="svc:MerchantApiService" target="ep:PUT:/api/v1/merchants/:id"><data key="rel">http</data></edge>
+<edge id="e10" source="comp:MerchantDetailsComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e11" source="svc:MerchantApiService" target="ep:PATCH:/api/v1/merchants/:id/status"><data key="rel">http</data></edge>
+<edge id="e12" source="comp:MerchantDetailsComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e13" source="svc:MerchantApiService" target="ep:DELETE:/api/v1/merchants/:id"><data key="rel">http</data></edge>
+<edge id="e14" source="comp:MerchantDetailsComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e15" source="svc:MerchantApiService" target="ep:GET:/api/v1/merchants/:id/transactions"><data key="rel">http</data></edge>
+<edge id="e16" source="comp:MerchantDetailsComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e17" source="svc:MerchantApiService" target="ep:GET:/api/v1/merchants/:id/documents"><data key="rel">http</data></edge>
+<edge id="e18" source="comp:MerchantDetailsComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e19" source="svc:MerchantApiService" target="ep:POST:/api/v1/merchants/:id/documents"><data key="rel">http</data></edge>
+<edge id="e20" source="comp:MerchantDetailsComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e21" source="svc:MerchantApiService" target="ep:DELETE:/api/v1/merchants/:id/documents/:documentId"><data key="rel">http</data></edge>
+<edge id="e22" source="comp:MerchantFormComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e23" source="comp:MerchantFormComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e24" source="svc:MerchantApiService" target="ep:GET:/api/v1/merchants/search"><data key="rel">http</data></edge>
+<edge id="e25" source="comp:MerchantFormComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e26" source="svc:MerchantApiService" target="ep:GET:/api/v1/merchants/statistics"><data key="rel">http</data></edge>
+<edge id="e27" source="comp:MerchantFormComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e28" source="svc:MerchantApiService" target="ep:GET:/api/v1/merchants/search"><data key="rel">http</data></edge>
+<edge id="e29" source="comp:MerchantFormComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e30" source="comp:MerchantFormComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e31" source="svc:MerchantApiService" target="ep:PUT:/api/v1/merchants/:id"><data key="rel">http</data></edge>
+<edge id="e32" source="comp:MerchantFormComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e33" source="svc:MerchantApiService" target="ep:PATCH:/api/v1/merchants/:id/status"><data key="rel">http</data></edge>
+<edge id="e34" source="comp:MerchantFormComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e35" source="svc:MerchantApiService" target="ep:DELETE:/api/v1/merchants/:id"><data key="rel">http</data></edge>
+<edge id="e36" source="comp:MerchantFormComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e37" source="svc:MerchantApiService" target="ep:GET:/api/v1/merchants/:id/transactions"><data key="rel">http</data></edge>
+<edge id="e38" source="comp:MerchantFormComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e39" source="svc:MerchantApiService" target="ep:GET:/api/v1/merchants/:id/documents"><data key="rel">http</data></edge>
+<edge id="e40" source="comp:MerchantFormComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e41" source="svc:MerchantApiService" target="ep:POST:/api/v1/merchants/:id/documents"><data key="rel">http</data></edge>
+<edge id="e42" source="comp:MerchantFormComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e43" source="svc:MerchantApiService" target="ep:DELETE:/api/v1/merchants/:id/documents/:documentId"><data key="rel">http</data></edge>
+<edge id="e44" source="comp:MerchantListComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e45" source="comp:MerchantListComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e46" source="svc:MerchantApiService" target="ep:GET:/api/v1/merchants/search"><data key="rel">http</data></edge>
+<edge id="e47" source="comp:MerchantListComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e48" source="svc:MerchantApiService" target="ep:GET:/api/v1/merchants/statistics"><data key="rel">http</data></edge>
+<edge id="e49" source="comp:MerchantListComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e50" source="svc:MerchantApiService" target="ep:GET:/api/v1/merchants/search"><data key="rel">http</data></edge>
+<edge id="e51" source="comp:MerchantListComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e52" source="comp:MerchantListComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e53" source="svc:MerchantApiService" target="ep:PUT:/api/v1/merchants/:id"><data key="rel">http</data></edge>
+<edge id="e54" source="comp:MerchantListComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e55" source="svc:MerchantApiService" target="ep:PATCH:/api/v1/merchants/:id/status"><data key="rel">http</data></edge>
+<edge id="e56" source="comp:MerchantListComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e57" source="svc:MerchantApiService" target="ep:DELETE:/api/v1/merchants/:id"><data key="rel">http</data></edge>
+<edge id="e58" source="comp:MerchantListComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e59" source="svc:MerchantApiService" target="ep:GET:/api/v1/merchants/:id/transactions"><data key="rel">http</data></edge>
+<edge id="e60" source="comp:MerchantListComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e61" source="svc:MerchantApiService" target="ep:GET:/api/v1/merchants/:id/documents"><data key="rel">http</data></edge>
+<edge id="e62" source="comp:MerchantListComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e63" source="svc:MerchantApiService" target="ep:POST:/api/v1/merchants/:id/documents"><data key="rel">http</data></edge>
+<edge id="e64" source="comp:MerchantListComponent" target="svc:MerchantApiService"><data key="rel">injects</data></edge>
+<edge id="e65" source="svc:MerchantApiService" target="ep:DELETE:/api/v1/merchants/:id/documents/:documentId"><data key="rel">http</data></edge>
+<edge id="e66" source="comp:MerchantUserListComponent" target="svc:MerchantUsersApiService"><data key="rel">injects</data></edge>
+<edge id="e67" source="comp:MerchantUserListComponent" target="svc:MerchantUsersApiService"><data key="rel">injects</data></edge>
+<edge id="e68" source="comp:MerchantUserListComponent" target="svc:MerchantUsersApiService"><data key="rel">injects</data></edge>
+<edge id="e69" source="comp:MerchantUserListComponent" target="svc:MerchantUsersApiService"><data key="rel">injects</data></edge>
+<edge id="e70" source="comp:MerchantUserListComponent" target="svc:MerchantUsersApiService"><data key="rel">injects</data></edge>
+</graph></graphml>

@@ -1,0 +1,3210 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-03T18:13:27.127Z",
+    "generatorVersion": "3.0.0-a",
+    "evidenceCount": 153,
+    "verificationStatus": "verified-from-source"
+  },
+  "components": [
+    {
+      "path": "Frontend_Fintech/src/app/app.component.ts",
+      "selector": "app-root",
+      "standalone": false,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/app.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/acceptance/pages/acceptance-analytics/acceptance-analytics.component.ts",
+      "selector": "app-acceptance-analytics",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "AcceptanceApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/acceptance/pages/acceptance-analytics/acceptance-analytics.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/activity/pages/activity-timeline/activity-timeline.component.ts",
+      "selector": "app-activity-timeline",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "ActivityApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/activity/pages/activity-timeline/activity-timeline.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/audit/layouts/audit-shell/audit-shell.component.ts",
+      "selector": "app-audit-shell",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/audit/layouts/audit-shell/audit-shell.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/audit/pages/api-logs/api-logs.component.ts",
+      "selector": "app-api-logs",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "AuditApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/audit/pages/api-logs/api-logs.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/audit/pages/audit-dashboard/audit-dashboard.component.ts",
+      "selector": "app-audit-dashboard",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "AuditStateService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/audit/pages/audit-dashboard/audit-dashboard.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/audit/pages/audit-details/audit-details.component.ts",
+      "selector": "app-audit-details",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "AuditApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/audit/pages/audit-details/audit-details.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/audit/pages/audit-timeline/audit-timeline.component.ts",
+      "selector": "app-audit-timeline",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "AuditApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/audit/pages/audit-timeline/audit-timeline.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/audit/pages/webhook-logs/webhook-logs.component.ts",
+      "selector": "app-webhook-logs",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "AuditApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/audit/pages/webhook-logs/webhook-logs.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/authentication/components/auth-brand/auth-brand.component.ts",
+      "selector": "app-auth-brand",
+      "standalone": true,
+      "inputs": [
+        "icon",
+        "title",
+        "subtitle",
+        "filledIcon"
+      ],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/authentication/components/auth-brand/auth-brand.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/authentication/components/auth-layout/auth-layout.component.ts",
+      "selector": "app-auth-layout",
+      "standalone": true,
+      "inputs": [
+        "maxWidth",
+        "showDecorations"
+      ],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/authentication/components/auth-layout/auth-layout.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/authentication/components/otp-input/otp-input.component.ts",
+      "selector": "app-otp-input",
+      "standalone": true,
+      "inputs": [
+        "length",
+        "autoFocus"
+      ],
+      "outputs": [
+        "completed"
+      ],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/authentication/components/otp-input/otp-input.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/authentication/components/password-requirements/password-requirements.component.ts",
+      "selector": "app-password-requirements",
+      "standalone": true,
+      "inputs": [
+        "password"
+      ],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/authentication/components/password-requirements/password-requirements.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/authentication/pages/access-denied/access-denied.component.ts",
+      "selector": "app-access-denied",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/authentication/pages/access-denied/access-denied.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/authentication/pages/active-sessions/active-sessions.component.ts",
+      "selector": "app-active-sessions",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "AuthService",
+        "AuthStateService",
+        "NotificationService",
+        "SessionService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/authentication/pages/active-sessions/active-sessions.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/authentication/pages/forgot-password/forgot-password.component.ts",
+      "selector": "app-forgot-password",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "AuthService",
+        "NotificationService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/authentication/pages/forgot-password/forgot-password.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/authentication/pages/login/login.component.ts",
+      "selector": "app-login",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "AuthService",
+        "AuthStateService",
+        "NotificationService",
+        "SessionService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/authentication/pages/login/login.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/authentication/pages/reset-password/reset-password.component.ts",
+      "selector": "app-reset-password",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "AuthService",
+        "NotificationService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/authentication/pages/reset-password/reset-password.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/authentication/pages/session-expired/session-expired.component.ts",
+      "selector": "app-session-expired",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/authentication/pages/session-expired/session-expired.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/authentication/pages/verify-otp/verify-otp.component.ts",
+      "selector": "app-verify-otp",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "AuthService",
+        "AuthStateService",
+        "NotificationService",
+        "SessionService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/authentication/pages/verify-otp/verify-otp.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/chargebacks/pages/chargeback-create/chargeback-create.component.ts",
+      "selector": "app-chargeback-create",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "ChargebacksApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/chargebacks/pages/chargeback-create/chargeback-create.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/chargebacks/pages/chargeback-details/chargeback-details.component.ts",
+      "selector": "app-chargeback-details",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "ChargebacksApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/chargebacks/pages/chargeback-details/chargeback-details.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/chargebacks/pages/chargeback-list/chargeback-list.component.ts",
+      "selector": "app-chargeback-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "ChargebacksApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/chargebacks/pages/chargeback-list/chargeback-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/checkout/components/address-form/address-form.component.ts",
+      "selector": "app-address-form",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/checkout/components/address-form/address-form.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/checkout/components/checkout-countdown/checkout-countdown.component.ts",
+      "selector": "app-checkout-countdown",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/checkout/components/checkout-countdown/checkout-countdown.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/checkout/components/checkout-loading-overlay/checkout-loading-overlay.component.ts",
+      "selector": "app-checkout-loading-overlay",
+      "standalone": true,
+      "inputs": [
+        "false"
+      ],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/checkout/components/checkout-loading-overlay/checkout-loading-overlay.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/checkout/components/checkout-shell/checkout-shell.component.ts",
+      "selector": "app-checkout-shell",
+      "standalone": true,
+      "inputs": [
+        "false",
+        "false"
+      ],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/checkout/components/checkout-shell/checkout-shell.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/checkout/components/checkout-status-screen/checkout-status-screen.component.ts",
+      "selector": "app-checkout-status-screen",
+      "standalone": true,
+      "inputs": [
+        "false",
+        "false"
+      ],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/checkout/components/checkout-status-screen/checkout-status-screen.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/checkout/components/customer-form/customer-form.component.ts",
+      "selector": "app-customer-form",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/checkout/components/customer-form/customer-form.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/checkout/components/order-summary/order-summary.component.ts",
+      "selector": "app-order-summary",
+      "standalone": true,
+      "inputs": [
+        "0",
+        "USD"
+      ],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/checkout/components/order-summary/order-summary.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/checkout/components/payment-method-selector/payment-method-selector.component.ts",
+      "selector": "app-payment-method-selector",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/checkout/components/payment-method-selector/payment-method-selector.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/checkout/pages/hosted-checkout/hosted-checkout.component.ts",
+      "selector": "app-hosted-checkout",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "CheckoutApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/checkout/pages/hosted-checkout/hosted-checkout.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/checkout-admin/pages/checkout-analytics-dashboard/checkout-analytics-dashboard.component.ts",
+      "selector": "app-checkout-analytics-dashboard",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "CheckoutApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/checkout-admin/pages/checkout-analytics-dashboard/checkout-analytics-dashboard.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/checkout-admin/pages/checkout-branding-manager/checkout-branding-manager.component.ts",
+      "selector": "app-checkout-branding-manager",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "CheckoutApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/checkout-admin/pages/checkout-branding-manager/checkout-branding-manager.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/checkout-admin/pages/checkout-session-detail/checkout-session-detail.component.ts",
+      "selector": "app-checkout-session-detail",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "CheckoutApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/checkout-admin/pages/checkout-session-detail/checkout-session-detail.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/checkout-admin/pages/checkout-session-list/checkout-session-list.component.ts",
+      "selector": "app-checkout-session-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "CheckoutApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/checkout-admin/pages/checkout-session-list/checkout-session-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/checkout-admin/pages/checkout-theme-list/checkout-theme-list.component.ts",
+      "selector": "app-checkout-theme-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "CheckoutApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/checkout-admin/pages/checkout-theme-list/checkout-theme-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/customers/pages/customer-details/customer-details.component.ts",
+      "selector": "app-customer-details",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "CustomersApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/customers/pages/customer-details/customer-details.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/customers/pages/customer-form/customer-form.component.ts",
+      "selector": "app-customer-form",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "CustomersApiService",
+        "OrganizationContextService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/customers/pages/customer-form/customer-form.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/customers/pages/customer-list/customer-list.component.ts",
+      "selector": "app-customer-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "CustomersApiService",
+        "OrganizationContextService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/customers/pages/customer-list/customer-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/dashboard/components/dashboard-ai-chat-panel/dashboard-ai-chat-panel.component.ts",
+      "selector": "app-dashboard-ai-chat-panel",
+      "standalone": true,
+      "inputs": [
+        "true"
+      ],
+      "outputs": [],
+      "injectedServices": [
+        "DashboardAiSessionService",
+        "DashboardStateService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/dashboard/components/dashboard-ai-chat-panel/dashboard-ai-chat-panel.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/dashboard/components/dashboard-ai-drawer/dashboard-ai-drawer.component.ts",
+      "selector": "app-dashboard-ai-drawer",
+      "standalone": true,
+      "inputs": [
+        "false",
+        "true"
+      ],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/dashboard/components/dashboard-ai-drawer/dashboard-ai-drawer.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/dashboard/components/dashboard-ai-quick-actions/dashboard-ai-quick-actions.component.ts",
+      "selector": "app-dashboard-ai-quick-actions",
+      "standalone": true,
+      "inputs": [
+        "false"
+      ],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/dashboard/components/dashboard-ai-quick-actions/dashboard-ai-quick-actions.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/dashboard/components/dashboard-ai-widget/dashboard-ai-widget.component.ts",
+      "selector": "app-dashboard-ai-widget",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "DashboardAiSessionService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/dashboard/components/dashboard-ai-widget/dashboard-ai-widget.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/dashboard/layouts/dashboard-shell/dashboard-shell.component.ts",
+      "selector": "app-dashboard-shell",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "OrganizationContextService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/dashboard/layouts/dashboard-shell/dashboard-shell.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/dashboard/layouts/dashboard-sidenav/dashboard-sidenav.component.ts",
+      "selector": "app-dashboard-sidenav",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "AuthStateService",
+        "AuthService",
+        "SessionService",
+        "RbacService",
+        "NavService",
+        "BrandingService",
+        "FeatureFlagService",
+        "OrganizationContextService",
+        "MerchantContextService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/dashboard/layouts/dashboard-sidenav/dashboard-sidenav.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/dashboard/layouts/dashboard-topnav/dashboard-topnav.component.ts",
+      "selector": "app-dashboard-topnav",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "AuthStateService",
+        "RbacService",
+        "NotificationsRealtimeService",
+        "OrganizationContextService",
+        "SearchApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/dashboard/layouts/dashboard-topnav/dashboard-topnav.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/dashboard/pages/executive-overview/executive-overview.component.ts",
+      "selector": "app-executive-overview",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "DashboardStateService",
+        "DashboardAiSessionService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/dashboard/pages/executive-overview/executive-overview.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/developer/pages/developer-dashboard/developer-dashboard.component.ts",
+      "selector": "app-developer-dashboard",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "DeveloperApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/developer/pages/developer-dashboard/developer-dashboard.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/devices/pages/devices-list/devices-list.component.ts",
+      "selector": "app-devices-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "DevicesApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/devices/pages/devices-list/devices-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/fraud/pages/fraud-queue/fraud-queue.component.ts",
+      "selector": "app-fraud-queue",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "FraudApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/fraud/pages/fraud-queue/fraud-queue.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/invoices/pages/invoice-create/invoice-create.component.ts",
+      "selector": "app-invoice-create",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "InvoicesApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/invoices/pages/invoice-create/invoice-create.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/invoices/pages/invoice-details/invoice-details.component.ts",
+      "selector": "app-invoice-details",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "InvoicesApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/invoices/pages/invoice-details/invoice-details.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/invoices/pages/invoice-edit/invoice-edit.component.ts",
+      "selector": "app-invoice-edit",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "InvoicesApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/invoices/pages/invoice-edit/invoice-edit.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/invoices/pages/invoice-list/invoice-list.component.ts",
+      "selector": "app-invoice-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "InvoicesApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/invoices/pages/invoice-list/invoice-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/merchant/components/merchant-status-dialog/merchant-status-dialog.component.ts",
+      "selector": "app-merchant-status-dialog",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/merchant/components/merchant-status-dialog/merchant-status-dialog.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/merchant/pages/merchant-details/merchant-details.component.ts",
+      "selector": "app-merchant-details",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "TransactionApiService",
+        "SettlementApiService",
+        "MerchantStateService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/merchant/pages/merchant-details/merchant-details.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/merchant/pages/merchant-form/merchant-form.component.ts",
+      "selector": "app-merchant-form",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "MerchantApiService",
+        "MerchantStateService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/merchant/pages/merchant-form/merchant-form.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/merchant/pages/merchant-list/merchant-list.component.ts",
+      "selector": "app-merchant-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "MerchantStateService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/merchant/pages/merchant-list/merchant-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/merchant-onboarding/pages/onboarding-dashboard/onboarding-dashboard.component.ts",
+      "selector": "app-onboarding-dashboard",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "MerchantOnboardingApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/merchant-onboarding/pages/onboarding-dashboard/onboarding-dashboard.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/merchant-onboarding/pages/onboarding-detail/onboarding-detail.component.ts",
+      "selector": "app-onboarding-detail",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "MerchantOnboardingApiService",
+        "NotificationService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/merchant-onboarding/pages/onboarding-detail/onboarding-detail.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/merchant-onboarding/pages/onboarding-wizard/onboarding-wizard.component.ts",
+      "selector": "app-onboarding-wizard",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "MerchantOnboardingApiService",
+        "NotificationService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/merchant-onboarding/pages/onboarding-wizard/onboarding-wizard.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/merchant-portal/pages/merchant-payment-portal/merchant-payment-portal.component.ts",
+      "selector": "app-merchant-payment-portal",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "AcceptanceApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/merchant-portal/pages/merchant-payment-portal/merchant-payment-portal.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/merchant-users/pages/merchant-user-list/merchant-user-list.component.ts",
+      "selector": "app-merchant-user-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "MerchantUsersApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/merchant-users/pages/merchant-user-list/merchant-user-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/notifications/layouts/notifications-shell/notifications-shell.component.ts",
+      "selector": "app-notifications-shell",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/notifications/layouts/notifications-shell/notifications-shell.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/notifications/pages/notification-broadcasts/notification-broadcasts.component.ts",
+      "selector": "app-notification-broadcasts",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "NotificationsApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/notifications/pages/notification-broadcasts/notification-broadcasts.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/notifications/pages/notification-center/notification-center.component.ts",
+      "selector": "app-notification-center",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "NotificationsStateService",
+        "NotificationsRealtimeService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/notifications/pages/notification-center/notification-center.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/notifications/pages/notification-details/notification-details.component.ts",
+      "selector": "app-notification-details",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "NotificationsApiService",
+        "NotificationsRealtimeService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/notifications/pages/notification-details/notification-details.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/notifications/pages/notification-preferences/notification-preferences.component.ts",
+      "selector": "app-notification-preferences",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SettingsStateService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/notifications/pages/notification-preferences/notification-preferences.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/notifications/pages/notification-templates/notification-templates.component.ts",
+      "selector": "app-notification-templates",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "NotificationsApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/notifications/pages/notification-templates/notification-templates.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/onboarding-approval/pages/compliance-queue/compliance-queue.component.ts",
+      "selector": "app-compliance-queue",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "OnboardingApprovalApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/onboarding-approval/pages/compliance-queue/compliance-queue.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/operations/pages/operations-dashboard/operations-dashboard.component.ts",
+      "selector": "app-operations-dashboard",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "OperationsApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/operations/pages/operations-dashboard/operations-dashboard.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/organizations/pages/organization-details/organization-details.component.ts",
+      "selector": "app-organization-details",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "OrganizationsApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/organizations/pages/organization-details/organization-details.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/organizations/pages/organization-form/organization-form.component.ts",
+      "selector": "app-organization-form",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "OrganizationsApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/organizations/pages/organization-form/organization-form.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/organizations/pages/organization-list/organization-list.component.ts",
+      "selector": "app-organization-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "OrganizationsApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/organizations/pages/organization-list/organization-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/organizations/pages/select-organization/select-organization.component.ts",
+      "selector": "app-select-organization",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "OrganizationContextService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/organizations/pages/select-organization/select-organization.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/outlets/pages/outlet-list/outlet-list.component.ts",
+      "selector": "app-outlet-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "OutletsApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/outlets/pages/outlet-list/outlet-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/payment-links/pages/payment-link-create/payment-link-create.component.ts",
+      "selector": "app-payment-link-create",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "PaymentLinksApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/payment-links/pages/payment-link-create/payment-link-create.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/payment-links/pages/payment-link-details/payment-link-details.component.ts",
+      "selector": "app-payment-link-details",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "PaymentLinksApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/payment-links/pages/payment-link-details/payment-link-details.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/payment-links/pages/payment-link-edit/payment-link-edit.component.ts",
+      "selector": "app-payment-link-edit",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "PaymentLinksApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/payment-links/pages/payment-link-edit/payment-link-edit.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/payment-links/pages/payment-link-list/payment-link-list.component.ts",
+      "selector": "app-payment-link-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "PaymentLinksApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/payment-links/pages/payment-link-list/payment-link-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/payment-links/pages/public-pay/public-pay.component.ts",
+      "selector": "app-public-pay",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "PaymentLinksApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/payment-links/pages/public-pay/public-pay.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/payouts/pages/bank-accounts/bank-accounts.component.ts",
+      "selector": "app-bank-accounts",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "PayoutsApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/payouts/pages/bank-accounts/bank-accounts.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/payouts/pages/payout-create/payout-create.component.ts",
+      "selector": "app-payout-create",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "PayoutsApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/payouts/pages/payout-create/payout-create.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/payouts/pages/payout-details/payout-details.component.ts",
+      "selector": "app-payout-details",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "PayoutsApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/payouts/pages/payout-details/payout-details.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/payouts/pages/payout-list/payout-list.component.ts",
+      "selector": "app-payout-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "PayoutsApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/payouts/pages/payout-list/payout-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/qr-payments/pages/public-qr-pay/public-qr-pay.component.ts",
+      "selector": "app-public-qr-pay",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "QrPaymentsApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/qr-payments/pages/public-qr-pay/public-qr-pay.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/qr-payments/pages/qr-create/qr-create.component.ts",
+      "selector": "app-qr-create",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "QrPaymentsApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/qr-payments/pages/qr-create/qr-create.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/qr-payments/pages/qr-details/qr-details.component.ts",
+      "selector": "app-qr-details",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "QrPaymentsApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/qr-payments/pages/qr-details/qr-details.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/qr-payments/pages/qr-list/qr-list.component.ts",
+      "selector": "app-qr-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "QrPaymentsApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/qr-payments/pages/qr-list/qr-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/reconciliation/pages/reconciliation-dashboard/reconciliation-dashboard.component.ts",
+      "selector": "app-reconciliation-dashboard",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "ReconciliationApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/reconciliation/pages/reconciliation-dashboard/reconciliation-dashboard.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/refunds/pages/refund-details/refund-details.component.ts",
+      "selector": "app-refund-details",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "RefundsApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/refunds/pages/refund-details/refund-details.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/refunds/pages/refund-list/refund-list.component.ts",
+      "selector": "app-refund-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "RefundsApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/refunds/pages/refund-list/refund-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/refunds/pages/refund-request/refund-request.component.ts",
+      "selector": "app-refund-request",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "RefundsApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/refunds/pages/refund-request/refund-request.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/reports/pages/analytics-dashboard/analytics-dashboard.component.ts",
+      "selector": "app-analytics-dashboard",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "ReportsStateService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/reports/pages/analytics-dashboard/analytics-dashboard.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/reports/pages/report-builder/report-builder.component.ts",
+      "selector": "app-report-builder",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "ReportsApiService",
+        "NotificationService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/reports/pages/report-builder/report-builder.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/reports/pages/report-center/report-center.component.ts",
+      "selector": "app-report-center",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "ReportsApiService",
+        "TokenStorageService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/reports/pages/report-center/report-center.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/reports/pages/report-history/report-history.component.ts",
+      "selector": "app-report-history",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "ReportsStateService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/reports/pages/report-history/report-history.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/reports/pages/reports-dashboard/reports-dashboard.component.ts",
+      "selector": "app-reports-dashboard",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "ReportsStateService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/reports/pages/reports-dashboard/reports-dashboard.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/reports/pages/saved-reports/saved-reports.component.ts",
+      "selector": "app-saved-reports",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "ReportsStateService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/reports/pages/saved-reports/saved-reports.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/reports/pages/scheduled-reports/scheduled-reports.component.ts",
+      "selector": "app-scheduled-reports",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "ReportsStateService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/reports/pages/scheduled-reports/scheduled-reports.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/risk-rules/pages/risk-rules-list/risk-rules-list.component.ts",
+      "selector": "app-risk-rules-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "RiskRulesApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/risk-rules/pages/risk-rules-list/risk-rules-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/roles/pages/permission-matrix/permission-matrix.component.ts",
+      "selector": "app-permission-matrix",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "RoleStateService",
+        "PermissionApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/roles/pages/permission-matrix/permission-matrix.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/roles/pages/role-form/role-form.component.ts",
+      "selector": "app-role-form",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "RoleStateService"
+      ],
+      "apiPaths": [
+        "code"
+      ],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/roles/pages/role-form/role-form.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/roles/pages/role-list/role-list.component.ts",
+      "selector": "app-role-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "RoleStateService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/roles/pages/role-list/role-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/sandbox/pages/sandbox-dashboard/sandbox-dashboard.component.ts",
+      "selector": "app-sandbox-dashboard",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SandboxApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/sandbox/pages/sandbox-dashboard/sandbox-dashboard.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settings/layouts/settings-shell/settings-shell.component.ts",
+      "selector": "app-settings-shell",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settings/layouts/settings-shell/settings-shell.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settings/pages/settings-account/settings-account.component.ts",
+      "selector": "app-settings-account",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SettingsApiService",
+        "AuthStateService",
+        "NotificationService",
+        "SettingsStateService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settings/pages/settings-account/settings-account.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settings/pages/settings-api/settings-api.component.ts",
+      "selector": "app-settings-api",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SettingsStateService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settings/pages/settings-api/settings-api.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settings/pages/settings-branding/settings-branding.component.ts",
+      "selector": "app-settings-branding",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "BrandingService",
+        "SettingsStateService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settings/pages/settings-branding/settings-branding.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settings/pages/settings-business/settings-business.component.ts",
+      "selector": "app-settings-business",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SettingsStateService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settings/pages/settings-business/settings-business.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settings/pages/settings-configuration/settings-configuration.component.ts",
+      "selector": "app-settings-configuration",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SettingsApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settings/pages/settings-configuration/settings-configuration.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settings/pages/settings-feature-flags/settings-feature-flags.component.ts",
+      "selector": "app-settings-feature-flags",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SettingsStateService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settings/pages/settings-feature-flags/settings-feature-flags.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settings/pages/settings-general/settings-general.component.ts",
+      "selector": "app-settings-general",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SettingsStateService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settings/pages/settings-general/settings-general.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settings/pages/settings-notifications/settings-notifications.component.ts",
+      "selector": "app-settings-notifications",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SettingsStateService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settings/pages/settings-notifications/settings-notifications.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settings/pages/settings-password-policy/settings-password-policy.component.ts",
+      "selector": "app-settings-password-policy",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SettingsStateService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settings/pages/settings-password-policy/settings-password-policy.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settings/pages/settings-security/settings-security.component.ts",
+      "selector": "app-settings-security",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SettingsStateService",
+        "RbacService"
+      ],
+      "apiPaths": [
+        "mfaMethodsAllowed"
+      ],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settings/pages/settings-security/settings-security.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settings/pages/settings-session/settings-session.component.ts",
+      "selector": "app-settings-session",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SettingsStateService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settings/pages/settings-session/settings-session.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settings/pages/settings-storage/settings-storage.component.ts",
+      "selector": "app-settings-storage",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SettingsStateService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settings/pages/settings-storage/settings-storage.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settings/pages/settings-system-status/settings-system-status.component.ts",
+      "selector": "app-settings-system-status",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SystemApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settings/pages/settings-system-status/settings-system-status.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settlements/components/reversal-dialog/reversal-dialog.component.ts",
+      "selector": "app-reversal-dialog",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settlements/components/reversal-dialog/reversal-dialog.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settlements/pages/batch-details/batch-details.component.ts",
+      "selector": "app-batch-details",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SettlementStateService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settlements/pages/batch-details/batch-details.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settlements/pages/batch-list/batch-list.component.ts",
+      "selector": "app-batch-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SettlementStateService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settlements/pages/batch-list/batch-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settlements/pages/settlement-details/settlement-details.component.ts",
+      "selector": "app-settlement-details",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SettlementStateService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settlements/pages/settlement-details/settlement-details.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settlements/pages/settlement-list/settlement-list.component.ts",
+      "selector": "app-settlement-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SettlementStateService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settlements/pages/settlement-list/settlement-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/smart-collect/pages/smart-collect-dashboard/smart-collect-dashboard.component.ts",
+      "selector": "app-smart-collect-dashboard",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SmartCollectApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/smart-collect/pages/smart-collect-dashboard/smart-collect-dashboard.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/subscriptions/pages/plan-create/plan-create.component.ts",
+      "selector": "app-plan-create",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SubscriptionsApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/subscriptions/pages/plan-create/plan-create.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/subscriptions/pages/plan-list/plan-list.component.ts",
+      "selector": "app-plan-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SubscriptionsApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/subscriptions/pages/plan-list/plan-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/subscriptions/pages/subscription-create/subscription-create.component.ts",
+      "selector": "app-subscription-create",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SubscriptionsApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/subscriptions/pages/subscription-create/subscription-create.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/subscriptions/pages/subscription-dashboard/subscription-dashboard.component.ts",
+      "selector": "app-subscription-dashboard",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SubscriptionsApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/subscriptions/pages/subscription-dashboard/subscription-dashboard.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/subscriptions/pages/subscription-details/subscription-details.component.ts",
+      "selector": "app-subscription-details",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SubscriptionsApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/subscriptions/pages/subscription-details/subscription-details.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/support/pages/ticket-create/ticket-create.component.ts",
+      "selector": "app-ticket-create",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SupportApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/support/pages/ticket-create/ticket-create.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/support/pages/ticket-details/ticket-details.component.ts",
+      "selector": "app-ticket-details",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SupportApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/support/pages/ticket-details/ticket-details.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/support/pages/ticket-edit/ticket-edit.component.ts",
+      "selector": "app-ticket-edit",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SupportApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/support/pages/ticket-edit/ticket-edit.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/support/pages/ticket-list/ticket-list.component.ts",
+      "selector": "app-ticket-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "SupportApiService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/support/pages/ticket-list/ticket-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/transactions/components/dispute-dialog/dispute-dialog.component.ts",
+      "selector": "app-dispute-dialog",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/transactions/components/dispute-dialog/dispute-dialog.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/transactions/components/refund-dialog/refund-dialog.component.ts",
+      "selector": "app-refund-dialog",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/transactions/components/refund-dialog/refund-dialog.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/transactions/pages/transaction-details/transaction-details.component.ts",
+      "selector": "app-transaction-details",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "TransactionStateService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/transactions/pages/transaction-details/transaction-details.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/transactions/pages/transaction-list/transaction-list.component.ts",
+      "selector": "app-transaction-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "TransactionStateService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/transactions/pages/transaction-list/transaction-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/users/components/assign-roles-dialog/assign-roles-dialog.component.ts",
+      "selector": "app-assign-roles-dialog",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [
+        "role_${r.id}"
+      ],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/users/components/assign-roles-dialog/assign-roles-dialog.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/users/pages/user-details/user-details.component.ts",
+      "selector": "app-user-details",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "RoleApiService",
+        "UserStateService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/users/pages/user-details/user-details.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/users/pages/user-form/user-form.component.ts",
+      "selector": "app-user-form",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "RoleApiService",
+        "UserStateService"
+      ],
+      "apiPaths": [
+        "password"
+      ],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/users/pages/user-form/user-form.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/users/pages/user-list/user-list.component.ts",
+      "selector": "app-user-list",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "UserStateService",
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/users/pages/user-list/user-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/webhooks/pages/webhooks-dashboard/webhooks-dashboard.component.ts",
+      "selector": "app-webhooks-dashboard",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "WebhooksApiService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/webhooks/pages/webhooks-dashboard/webhooks-dashboard.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/shared/ai/components/ai-assistant/ai-assistant.component.ts",
+      "selector": "app-ai-assistant",
+      "standalone": true,
+      "inputs": [],
+      "outputs": [],
+      "injectedServices": [
+        "RbacService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/shared/ai/components/ai-assistant/ai-assistant.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/shared/ai/components/ai-assistant-fab/ai-assistant-fab.component.ts",
+      "selector": "app-ai-assistant-fab",
+      "standalone": true,
+      "inputs": [
+        "false"
+      ],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/shared/ai/components/ai-assistant-fab/ai-assistant-fab.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/shared/ai/components/ai-chat-input/ai-chat-input.component.ts",
+      "selector": "app-ai-chat-input",
+      "standalone": true,
+      "inputs": [
+        "false",
+        "false"
+      ],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/shared/ai/components/ai-chat-input/ai-chat-input.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/shared/ai/components/ai-chat-panel/ai-chat-panel.component.ts",
+      "selector": "app-ai-chat-panel",
+      "standalone": true,
+      "inputs": [
+        "true"
+      ],
+      "outputs": [],
+      "injectedServices": [
+        "AiChatSessionService"
+      ],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/shared/ai/components/ai-chat-panel/ai-chat-panel.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/shared/ai/components/ai-drawer/ai-drawer.component.ts",
+      "selector": "app-ai-drawer",
+      "standalone": true,
+      "inputs": [
+        "false",
+        "true"
+      ],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/shared/ai/components/ai-drawer/ai-drawer.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/shared/ai/components/ai-message-list/ai-message-list.component.ts",
+      "selector": "app-ai-message-list",
+      "standalone": true,
+      "inputs": [
+        "false"
+      ],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/shared/ai/components/ai-message-list/ai-message-list.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/shared/ui/empty-state/empty-state.component.ts",
+      "selector": "app-empty-state",
+      "standalone": true,
+      "inputs": [
+        "title",
+        "description",
+        "icon"
+      ],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/shared/ui/empty-state/empty-state.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/shared/ui/icon-button/icon-button.component.ts",
+      "selector": "app-icon-button",
+      "standalone": true,
+      "inputs": [
+        "title",
+        "disabled"
+      ],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/shared/ui/icon-button/icon-button.component.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/shared/ui/loading-state/loading-state.component.ts",
+      "selector": "app-loading-state",
+      "standalone": true,
+      "inputs": [
+        "message",
+        "ariaLabel"
+      ],
+      "outputs": [],
+      "injectedServices": [],
+      "apiPaths": [],
+      "permissions": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/shared/ui/loading-state/loading-state.component.ts"
+    }
+  ],
+  "services": [
+    {
+      "path": "Frontend_Fintech/src/app/core/auth/services/auth-state.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/core/auth/services/auth-state.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/core/auth/services/auth.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/core/auth/services/auth.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/core/auth/services/csrf.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/core/auth/services/csrf.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/core/auth/services/notification.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/core/auth/services/notification.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/core/auth/services/rbac.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/core/auth/services/rbac.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/core/auth/services/session.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/core/auth/services/session.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/core/auth/services/token-storage.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/core/auth/services/token-storage.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/core/navigation/nav.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/core/navigation/nav.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/core/search/services/search-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/core/search/services/search-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/acceptance/services/acceptance-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/acceptance/services/acceptance-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/activity/services/activity-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/activity/services/activity-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/audit/services/audit-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/audit/services/audit-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/audit/services/audit-state.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/audit/services/audit-state.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/chargebacks/services/chargebacks-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/chargebacks/services/chargebacks-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/checkout/services/checkout-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/checkout/services/checkout-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/customers/services/customers-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/customers/services/customers-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/dashboard/services/dashboard-ai-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/dashboard/services/dashboard-ai-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/dashboard/services/dashboard-ai-session.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/dashboard/services/dashboard-ai-session.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/dashboard/services/dashboard-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/dashboard/services/dashboard-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/dashboard/services/dashboard-state.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/dashboard/services/dashboard-state.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/developer/services/developer-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/developer/services/developer-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/devices/services/devices-api.service.ts",
+      "apiCalls": [
+        {
+          "method": "GET",
+          "url": "${this.base}"
+        },
+        {
+          "method": "POST",
+          "url": "${this.base}"
+        },
+        {
+          "method": "POST",
+          "url": "${this.base}/${id}/activate"
+        }
+      ],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/devices/services/devices-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/fraud/services/fraud-api.service.ts",
+      "apiCalls": [
+        {
+          "method": "GET",
+          "url": "${this.base}"
+        },
+        {
+          "method": "POST",
+          "url": "${this.base}/${id}/approve"
+        },
+        {
+          "method": "POST",
+          "url": "${this.base}/${id}/reject"
+        },
+        {
+          "method": "POST",
+          "url": "${this.base}/${id}/release"
+        }
+      ],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/fraud/services/fraud-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/invoices/services/invoices-api.service.ts",
+      "apiCalls": [
+        {
+          "method": "GET",
+          "url": "${this.base}${INVOICES_API.BASE}/${id}/pdf"
+        }
+      ],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/invoices/services/invoices-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/merchant/services/merchant-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/merchant/services/merchant-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/merchant/services/merchant-state.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/merchant/services/merchant-state.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/merchant-onboarding/services/merchant-onboarding-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/merchant-onboarding/services/merchant-onboarding-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/merchant-users/services/merchant-context.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/merchant-users/services/merchant-context.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/merchant-users/services/merchant-users-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/merchant-users/services/merchant-users-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/notifications/services/notifications-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/notifications/services/notifications-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/notifications/services/notifications-realtime.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/notifications/services/notifications-realtime.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/notifications/services/notifications-state.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/notifications/services/notifications-state.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/onboarding-approval/services/onboarding-approval-api.service.ts",
+      "apiCalls": [
+        {
+          "method": "GET",
+          "url": "${this.base}/compliance-queue"
+        },
+        {
+          "method": "GET",
+          "url": "${environment.apiUrl}/api/v1/dashboard/executive/onboarding-stats"
+        },
+        {
+          "method": "GET",
+          "url": "${this.base}/${applicationId}/workflow"
+        },
+        {
+          "method": "POST",
+          "url": "${this.base}/${applicationId}/approve"
+        },
+        {
+          "method": "POST",
+          "url": "${this.base}/${applicationId}/reject"
+        },
+        {
+          "method": "POST",
+          "url": "${this.base}/${applicationId}/go-live"
+        }
+      ],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/onboarding-approval/services/onboarding-approval-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/operations/services/operations-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/operations/services/operations-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/organizations/services/organization-context.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/organizations/services/organization-context.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/organizations/services/organizations-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/organizations/services/organizations-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/outlets/services/outlets-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/outlets/services/outlets-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/payment-links/services/payment-links-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/payment-links/services/payment-links-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/payouts/services/payouts-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/payouts/services/payouts-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/permissions/services/permission-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/permissions/services/permission-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/qr-payments/services/qr-payments-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/qr-payments/services/qr-payments-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/reconciliation/services/reconciliation-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/reconciliation/services/reconciliation-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/refunds/services/refunds-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/refunds/services/refunds-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/reports/services/analytics-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/reports/services/analytics-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/reports/services/reports-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/reports/services/reports-state.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/reports/services/reports-state.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/risk-rules/services/risk-rules-api.service.ts",
+      "apiCalls": [
+        {
+          "method": "GET",
+          "url": "${this.base}"
+        }
+      ],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/risk-rules/services/risk-rules-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/roles/services/role-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/roles/services/role-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/roles/services/role-state.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/roles/services/role-state.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/sandbox/services/sandbox-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/sandbox/services/sandbox-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settings/services/branding.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settings/services/branding.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settings/services/feature-flag.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settings/services/feature-flag.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settings/services/settings-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settings/services/settings-state.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settings/services/settings-state.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settings/services/system-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settings/services/system-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settlements/services/settlement-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settlements/services/settlement-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settlements/services/settlement-state.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settlements/services/settlement-state.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/smart-collect/services/smart-collect-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/smart-collect/services/smart-collect-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/subscriptions/services/subscriptions-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/subscriptions/services/subscriptions-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/support/services/support-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/support/services/support-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/transactions/services/transaction-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/transactions/services/transaction-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/transactions/services/transaction-state.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/transactions/services/transaction-state.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/users/services/user-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/users/services/user-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/users/services/user-state.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/users/services/user-state.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/webhooks/services/webhooks-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/webhooks/services/webhooks-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/shared/ai/services/ai-api.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/shared/ai/services/ai-api.service.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/shared/ai/services/ai-chat-session.service.ts",
+      "apiCalls": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/shared/ai/services/ai-chat-session.service.ts"
+    }
+  ],
+  "guards": [
+    {
+      "path": "Frontend_Fintech/src/app/core/auth/guards/auth.guard.ts",
+      "sourceEvidence": "Frontend_Fintech/src/app/core/auth/guards/auth.guard.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/core/auth/guards/guest.guard.ts",
+      "sourceEvidence": "Frontend_Fintech/src/app/core/auth/guards/guest.guard.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts",
+      "sourceEvidence": "Frontend_Fintech/src/app/core/auth/guards/permission.guard.ts"
+    }
+  ],
+  "interceptors": [
+    {
+      "path": "Frontend_Fintech/src/app/core/auth/interceptors/auth.interceptor.ts",
+      "sourceEvidence": "Frontend_Fintech/src/app/core/auth/interceptors/auth.interceptor.ts"
+    }
+  ],
+  "routes": [
+    {
+      "path": "Frontend_Fintech/src/app/features/acceptance/acceptance.routes.ts",
+      "paths": [
+        "analytics"
+      ],
+      "lazyComponents": [
+        "./pages/acceptance-analytics/acceptance-analytics.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/acceptance/acceptance.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/activity/activity.routes.ts",
+      "paths": [],
+      "lazyComponents": [
+        "./pages/activity-timeline/activity-timeline.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/activity/activity.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/audit/audit.routes.ts",
+      "paths": [
+        "timeline",
+        "api-logs",
+        "webhook-logs",
+        ":id"
+      ],
+      "lazyComponents": [
+        "./pages/audit-dashboard/audit-dashboard.component",
+        "./pages/audit-timeline/audit-timeline.component",
+        "./pages/api-logs/api-logs.component",
+        "./pages/webhook-logs/webhook-logs.component",
+        "./pages/audit-details/audit-details.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/audit/audit.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts",
+      "paths": [
+        "login",
+        "forgot-password",
+        "reset-password",
+        "verify-otp",
+        "session-expired",
+        "access-denied",
+        "sessions"
+      ],
+      "lazyComponents": [
+        "./pages/login/login.component",
+        "./pages/forgot-password/forgot-password.component",
+        "./pages/reset-password/reset-password.component",
+        "./pages/verify-otp/verify-otp.component",
+        "./pages/session-expired/session-expired.component",
+        "./pages/access-denied/access-denied.component",
+        "./pages/active-sessions/active-sessions.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/authentication/authentication.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/chargebacks/chargebacks.routes.ts",
+      "paths": [
+        "create",
+        ":id"
+      ],
+      "lazyComponents": [
+        "./pages/chargeback-list/chargeback-list.component",
+        "./pages/chargeback-create/chargeback-create.component",
+        "./pages/chargeback-details/chargeback-details.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/chargebacks/chargebacks.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/checkout-admin/checkout-admin.routes.ts",
+      "paths": [
+        "sessions",
+        "sessions/:id",
+        "analytics",
+        "branding",
+        "themes"
+      ],
+      "lazyComponents": [
+        "./pages/checkout-session-list/checkout-session-list.component",
+        "./pages/checkout-session-detail/checkout-session-detail.component",
+        "./pages/checkout-analytics-dashboard/checkout-analytics-dashboard.component",
+        "./pages/checkout-branding-manager/checkout-branding-manager.component",
+        "./pages/checkout-theme-list/checkout-theme-list.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/checkout-admin/checkout-admin.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/customers/customers.routes.ts",
+      "paths": [
+        "create",
+        ":id",
+        ":id/edit"
+      ],
+      "lazyComponents": [
+        "./pages/customer-list/customer-list.component",
+        "./pages/customer-form/customer-form.component",
+        "./pages/customer-details/customer-details.component",
+        "./pages/customer-form/customer-form.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/customers/customers.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/dashboard/dashboard.routes.ts",
+      "paths": [
+        "executive"
+      ],
+      "lazyComponents": [
+        "./pages/executive-overview/executive-overview.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/dashboard/dashboard.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/developer/developer.routes.ts",
+      "paths": [],
+      "lazyComponents": [
+        "./pages/developer-dashboard/developer-dashboard.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/developer/developer.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/devices/devices.routes.ts",
+      "paths": [],
+      "lazyComponents": [
+        "./pages/devices-list/devices-list.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/devices/devices.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/fraud/fraud.routes.ts",
+      "paths": [],
+      "lazyComponents": [
+        "./pages/fraud-queue/fraud-queue.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/fraud/fraud.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/invoices/invoices.routes.ts",
+      "paths": [
+        "create",
+        ":id/edit",
+        ":id"
+      ],
+      "lazyComponents": [
+        "./pages/invoice-list/invoice-list.component",
+        "./pages/invoice-create/invoice-create.component",
+        "./pages/invoice-edit/invoice-edit.component",
+        "./pages/invoice-details/invoice-details.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/invoices/invoices.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/merchant/merchant.routes.ts",
+      "paths": [
+        "create",
+        ":id",
+        ":id/edit"
+      ],
+      "lazyComponents": [
+        "./pages/merchant-list/merchant-list.component",
+        "./pages/merchant-form/merchant-form.component",
+        "./pages/merchant-details/merchant-details.component",
+        "./pages/merchant-form/merchant-form.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/merchant/merchant.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/merchant-onboarding/merchant-onboarding.routes.ts",
+      "paths": [
+        "create",
+        ":id/wizard",
+        ":id"
+      ],
+      "lazyComponents": [
+        "./pages/onboarding-dashboard/onboarding-dashboard.component",
+        "./pages/onboarding-wizard/onboarding-wizard.component",
+        "./pages/onboarding-wizard/onboarding-wizard.component",
+        "./pages/onboarding-detail/onboarding-detail.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/merchant-onboarding/merchant-onboarding.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/merchant-portal/merchant-portal.routes.ts",
+      "paths": [],
+      "lazyComponents": [
+        "./pages/merchant-payment-portal/merchant-payment-portal.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/merchant-portal/merchant-portal.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/merchant-users/merchant-users.routes.ts",
+      "paths": [],
+      "lazyComponents": [
+        "./pages/merchant-user-list/merchant-user-list.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/merchant-users/merchant-users.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts",
+      "paths": [
+        "preferences",
+        "broadcasts",
+        "templates",
+        ":id"
+      ],
+      "lazyComponents": [
+        "./pages/notification-center/notification-center.component",
+        "./pages/notification-preferences/notification-preferences.component",
+        "./pages/notification-broadcasts/notification-broadcasts.component",
+        "./pages/notification-templates/notification-templates.component",
+        "./pages/notification-details/notification-details.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/notifications/notifications.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/onboarding-approval/onboarding-approval.routes.ts",
+      "paths": [
+        "compliance"
+      ],
+      "lazyComponents": [
+        "./pages/compliance-queue/compliance-queue.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/onboarding-approval/onboarding-approval.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/operations/operations.routes.ts",
+      "paths": [],
+      "lazyComponents": [
+        "./pages/operations-dashboard/operations-dashboard.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/operations/operations.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/organizations/organizations.routes.ts",
+      "paths": [
+        "create",
+        ":id",
+        ":id/edit"
+      ],
+      "lazyComponents": [
+        "./pages/organization-list/organization-list.component",
+        "./pages/organization-form/organization-form.component",
+        "./pages/organization-details/organization-details.component",
+        "./pages/organization-form/organization-form.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/organizations/organizations.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/outlets/outlets.routes.ts",
+      "paths": [],
+      "lazyComponents": [
+        "./pages/outlet-list/outlet-list.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/outlets/outlets.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/payment-links/payment-links.routes.ts",
+      "paths": [
+        "create",
+        ":id/edit",
+        ":id"
+      ],
+      "lazyComponents": [
+        "./pages/payment-link-list/payment-link-list.component",
+        "./pages/payment-link-create/payment-link-create.component",
+        "./pages/payment-link-edit/payment-link-edit.component",
+        "./pages/payment-link-details/payment-link-details.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/payment-links/payment-links.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/payouts/payouts.routes.ts",
+      "paths": [
+        "create",
+        "bank-accounts",
+        ":id"
+      ],
+      "lazyComponents": [
+        "./pages/payout-list/payout-list.component",
+        "./pages/payout-create/payout-create.component",
+        "./pages/bank-accounts/bank-accounts.component",
+        "./pages/payout-details/payout-details.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/payouts/payouts.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/qr-payments/qr-payments.routes.ts",
+      "paths": [
+        "create",
+        ":id"
+      ],
+      "lazyComponents": [
+        "./pages/qr-list/qr-list.component",
+        "./pages/qr-create/qr-create.component",
+        "./pages/qr-details/qr-details.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/qr-payments/qr-payments.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/reconciliation/reconciliation.routes.ts",
+      "paths": [],
+      "lazyComponents": [
+        "./pages/reconciliation-dashboard/reconciliation-dashboard.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/reconciliation/reconciliation.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/refunds/refunds.routes.ts",
+      "paths": [
+        "request",
+        ":id"
+      ],
+      "lazyComponents": [
+        "./pages/refund-list/refund-list.component",
+        "./pages/refund-request/refund-request.component",
+        "./pages/refund-details/refund-details.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/refunds/refunds.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/reports/reports.routes.ts",
+      "paths": [
+        "center",
+        "analytics",
+        "saved",
+        "builder",
+        "builder/:id",
+        "history",
+        "scheduled"
+      ],
+      "lazyComponents": [
+        "./pages/reports-dashboard/reports-dashboard.component",
+        "./pages/report-center/report-center.component",
+        "./pages/analytics-dashboard/analytics-dashboard.component",
+        "./pages/saved-reports/saved-reports.component",
+        "./pages/report-builder/report-builder.component",
+        "./pages/report-builder/report-builder.component",
+        "./pages/report-history/report-history.component",
+        "./pages/scheduled-reports/scheduled-reports.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/reports/reports.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/risk-rules/risk-rules.routes.ts",
+      "paths": [],
+      "lazyComponents": [
+        "./pages/risk-rules-list/risk-rules-list.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/risk-rules/risk-rules.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/roles/roles.routes.ts",
+      "paths": [
+        "create",
+        ":id/edit",
+        ":id/permissions"
+      ],
+      "lazyComponents": [
+        "./pages/role-list/role-list.component",
+        "./pages/role-form/role-form.component",
+        "./pages/role-form/role-form.component",
+        "./pages/permission-matrix/permission-matrix.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/roles/roles.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/sandbox/sandbox.routes.ts",
+      "paths": [],
+      "lazyComponents": [
+        "./pages/sandbox-dashboard/sandbox-dashboard.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/sandbox/sandbox.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settings/settings.routes.ts",
+      "paths": [
+        "general",
+        "business",
+        "branding",
+        "security",
+        "password-policy",
+        "session",
+        "notifications",
+        "api",
+        "feature-flags",
+        "configuration",
+        "storage",
+        "account",
+        "system-status"
+      ],
+      "lazyComponents": [
+        "./pages/settings-general/settings-general.component",
+        "./pages/settings-business/settings-business.component",
+        "./pages/settings-branding/settings-branding.component",
+        "./pages/settings-security/settings-security.component",
+        "./pages/settings-password-policy/settings-password-policy.component",
+        "./pages/settings-session/settings-session.component",
+        "./pages/settings-notifications/settings-notifications.component",
+        "./pages/settings-api/settings-api.component",
+        "./pages/settings-feature-flags/settings-feature-flags.component",
+        "./pages/settings-configuration/settings-configuration.component",
+        "./pages/settings-storage/settings-storage.component",
+        "./pages/settings-account/settings-account.component",
+        "./pages/settings-system-status/settings-system-status.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settings/settings.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/settlements/settlements.routes.ts",
+      "paths": [
+        "batches",
+        "batches/:id",
+        ":id"
+      ],
+      "lazyComponents": [
+        "./pages/settlement-list/settlement-list.component",
+        "./pages/batch-list/batch-list.component",
+        "./pages/batch-details/batch-details.component",
+        "./pages/settlement-details/settlement-details.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/settlements/settlements.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/smart-collect/smart-collect.routes.ts",
+      "paths": [],
+      "lazyComponents": [
+        "./pages/smart-collect-dashboard/smart-collect-dashboard.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/smart-collect/smart-collect.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/subscriptions/subscriptions.routes.ts",
+      "paths": [
+        "plans",
+        "plans/create",
+        "create",
+        ":id"
+      ],
+      "lazyComponents": [
+        "./pages/subscription-dashboard/subscription-dashboard.component",
+        "./pages/plan-list/plan-list.component",
+        "./pages/plan-create/plan-create.component",
+        "./pages/subscription-create/subscription-create.component",
+        "./pages/subscription-details/subscription-details.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/subscriptions/subscriptions.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/support/support.routes.ts",
+      "paths": [
+        "create",
+        ":id/edit",
+        ":id"
+      ],
+      "lazyComponents": [
+        "./pages/ticket-list/ticket-list.component",
+        "./pages/ticket-create/ticket-create.component",
+        "./pages/ticket-edit/ticket-edit.component",
+        "./pages/ticket-details/ticket-details.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/support/support.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/transactions/transactions.routes.ts",
+      "paths": [
+        ":id"
+      ],
+      "lazyComponents": [
+        "./pages/transaction-list/transaction-list.component",
+        "./pages/transaction-details/transaction-details.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/transactions/transactions.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/users/users.routes.ts",
+      "paths": [
+        "create",
+        ":id/edit",
+        ":id"
+      ],
+      "lazyComponents": [
+        "./pages/user-list/user-list.component",
+        "./pages/user-form/user-form.component",
+        "./pages/user-form/user-form.component",
+        "./pages/user-details/user-details.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/users/users.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/features/webhooks/webhooks.routes.ts",
+      "paths": [],
+      "lazyComponents": [
+        "./pages/webhooks-dashboard/webhooks-dashboard.component"
+      ],
+      "loadChildren": [],
+      "sourceEvidence": "Frontend_Fintech/src/app/features/webhooks/webhooks.routes.ts"
+    },
+    {
+      "path": "Frontend_Fintech/src/app/routing/app.routes.ts",
+      "paths": [
+        "auth",
+        "dashboard",
+        "merchants",
+        "merchant-onboarding",
+        "outlets",
+        "onboarding-approval",
+        "merchant-users",
+        "devices",
+        "fraud",
+        "risk-rules",
+        "transactions",
+        "settlements",
+        "users",
+        "roles",
+        "reports",
+        "settings",
+        "notifications",
+        "audit",
+        "refunds",
+        "chargebacks",
+        "payouts",
+        "payment-links",
+        "invoices",
+        "qr-payments",
+        "subscriptions",
+        "support",
+        "operations",
+        "activity",
+        "checkout",
+        "pay/checkout/:ref",
+        "pay/:token",
+        "qr/:token",
+        "smart-collect",
+        "acceptance",
+        "merchant-portal",
+        "developer",
+        "webhooks",
+        "reconciliation",
+        "sandbox",
+        "customers",
+        "organizations",
+        "select-organization",
+        "**"
+      ],
+      "lazyComponents": [
+        "../features/checkout/pages/hosted-checkout/hosted-checkout.component",
+        "../features/payment-links/pages/public-pay/public-pay.component",
+        "../features/qr-payments/pages/public-qr-pay/public-qr-pay.component",
+        "../features/organizations/pages/select-organization/select-organization.component"
+      ],
+      "loadChildren": [
+        "../features/authentication/authentication.routes",
+        "../features/dashboard/dashboard.routes",
+        "../features/merchant/merchant.routes",
+        "../features/merchant-onboarding/merchant-onboarding.routes",
+        "../features/outlets/outlets.routes",
+        "../features/onboarding-approval/onboarding-approval.routes",
+        "../features/merchant-users/merchant-users.routes",
+        "../features/devices/devices.routes",
+        "../features/fraud/fraud.routes",
+        "../features/risk-rules/risk-rules.routes",
+        "../features/transactions/transactions.routes",
+        "../features/settlements/settlements.routes",
+        "../features/users/users.routes",
+        "../features/roles/roles.routes",
+        "../features/reports/reports.routes",
+        "../features/settings/settings.routes",
+        "../features/notifications/notifications.routes",
+        "../features/audit/audit.routes",
+        "../features/refunds/refunds.routes",
+        "../features/chargebacks/chargebacks.routes",
+        "../features/payouts/payouts.routes",
+        "../features/payment-links/payment-links.routes",
+        "../features/invoices/invoices.routes",
+        "../features/qr-payments/qr-payments.routes",
+        "../features/subscriptions/subscriptions.routes",
+        "../features/support/support.routes",
+        "../features/operations/operations.routes",
+        "../features/activity/activity.routes",
+        "../features/checkout-admin/checkout-admin.routes",
+        "../features/smart-collect/smart-collect.routes",
+        "../features/acceptance/acceptance.routes",
+        "../features/merchant-portal/merchant-portal.routes",
+        "../features/developer/developer.routes",
+        "../features/webhooks/webhooks.routes",
+        "../features/reconciliation/reconciliation.routes",
+        "../features/sandbox/sandbox.routes",
+        "../features/customers/customers.routes",
+        "../features/organizations/organizations.routes"
+      ],
+      "sourceEvidence": "Frontend_Fintech/src/app/routing/app.routes.ts"
+    }
+  ],
+  "pipes": [],
+  "directives": [],
+  "topLevelRoutes": [
+    "auth",
+    "dashboard",
+    "merchants",
+    "merchant-onboarding",
+    "outlets",
+    "onboarding-approval",
+    "merchant-users",
+    "devices",
+    "fraud",
+    "risk-rules",
+    "transactions",
+    "settlements",
+    "users",
+    "roles",
+    "reports",
+    "settings",
+    "notifications",
+    "audit",
+    "refunds",
+    "chargebacks",
+    "payouts",
+    "payment-links",
+    "invoices",
+    "qr-payments",
+    "subscriptions",
+    "support",
+    "operations",
+    "activity",
+    "checkout",
+    "pay/checkout/:ref",
+    "pay/:token",
+    "qr/:token",
+    "smart-collect",
+    "acceptance",
+    "merchant-portal",
+    "developer",
+    "webhooks",
+    "reconciliation",
+    "sandbox",
+    "customers",
+    "organizations",
+    "select-organization",
+    "**"
+  ],
+  "appRoutesFile": "Frontend_Fintech/src/app/routing/app.routes.ts"
+}

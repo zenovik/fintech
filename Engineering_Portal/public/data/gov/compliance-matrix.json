@@ -1,0 +1,186 @@
+{
+  "generatedAt": "2026-08-03T19:10:27.449Z",
+  "security": [
+    {
+      "id": "V2.1",
+      "control": "Authentication — JWT + session",
+      "framework": "OWASP ASVS",
+      "evidence": "Backend_Fintech/src/app/modules/auth/middleware/auth.middleware.ts",
+      "verification": "VERIFIED"
+    },
+    {
+      "id": "V4.1",
+      "control": "Access control — RBAC authorize()",
+      "framework": "OWASP ASVS",
+      "evidence": "Backend_Fintech/src/app/shared/middleware/authorize.middleware.ts",
+      "verification": "VERIFIED"
+    },
+    {
+      "id": "A01",
+      "control": "Broken Access Control",
+      "framework": "OWASP Top 10",
+      "evidence": "PERMISSIONS + authorize middleware",
+      "verification": "PARTIAL"
+    },
+    {
+      "id": "A02",
+      "control": "Cryptographic Failures",
+      "framework": "OWASP Top 10",
+      "evidence": "bcryptjs + CONFIG_ENCRYPTION_KEY",
+      "verification": "VERIFIED"
+    },
+    {
+      "id": "A03",
+      "control": "Injection",
+      "framework": "OWASP Top 10",
+      "evidence": "Parameterized mysql2 queries + Zod validation",
+      "verification": "VERIFIED"
+    },
+    {
+      "id": "A05",
+      "control": "Security Misconfiguration",
+      "framework": "OWASP Top 10",
+      "evidence": "Helmet + CORS + CSP config",
+      "verification": "VERIFIED"
+    },
+    {
+      "id": "A07",
+      "control": "Identification and Authentication Failures",
+      "framework": "OWASP Top 10",
+      "evidence": "MFA + auth routes",
+      "verification": "VERIFIED"
+    },
+    {
+      "id": "CSRF",
+      "control": "Cross-Site Request Forgery",
+      "framework": "CWE-352",
+      "evidence": "csrf.middleware.ts + FE interceptor",
+      "verification": "VERIFIED"
+    },
+    {
+      "id": "CWE-798",
+      "control": "Hard-coded Credentials",
+      "framework": "CWE",
+      "evidence": "env vars via dotenv — no secrets in repo",
+      "verification": "VERIFIED"
+    },
+    {
+      "id": "PCI 3.4",
+      "control": "Render PAN unreadable",
+      "framework": "PCI DSS",
+      "evidence": "NOT VERIFIED — no PCI scope doc in repo",
+      "verification": "NOT VERIFIED"
+    },
+    {
+      "id": "SOC2 CC6.1",
+      "control": "Logical access controls",
+      "framework": "SOC2",
+      "evidence": "RBAC + audit logs",
+      "verification": "PARTIAL"
+    },
+    {
+      "id": "ISO A.9",
+      "control": "Access control",
+      "framework": "ISO27001",
+      "evidence": "Authorization architecture docs + code",
+      "verification": "PARTIAL"
+    },
+    {
+      "id": "T1078",
+      "control": "Valid Accounts",
+      "framework": "MITRE ATT&CK",
+      "evidence": "JWT + MFA + session revocation",
+      "verification": "VERIFIED"
+    }
+  ],
+  "architecture": [
+    {
+      "document": "Architecture_Overview.md",
+      "status": "VERIFIED",
+      "location": "docs/02_Architecture/Architecture_Overview.md"
+    },
+    {
+      "document": "Security_Architecture.md",
+      "status": "VERIFIED",
+      "location": "docs/02_Architecture/Security_Architecture.md"
+    },
+    {
+      "document": "Authentication_Architecture.md",
+      "status": "VERIFIED",
+      "location": "docs/02_Architecture/Authentication_Architecture.md"
+    },
+    {
+      "document": "Payment_Architecture.md",
+      "status": "VERIFIED",
+      "location": "docs/02_Architecture/Payment_Architecture.md"
+    },
+    {
+      "document": "Worker_Architecture.md",
+      "status": "VERIFIED",
+      "location": "docs/02_Architecture/Worker_Architecture.md"
+    },
+    {
+      "document": "CI/CD Pipeline Architecture",
+      "status": "NOT VERIFIED",
+      "location": "docs/06_Code_Traceability/Implementation_Gaps.md#43"
+    },
+    {
+      "document": "Multi-region DR implementation",
+      "status": "PARTIAL",
+      "location": "docs/02_Architecture/Disaster_Recovery.md"
+    },
+    {
+      "document": "Event outbox pattern",
+      "status": "NOT VERIFIED",
+      "location": "docs/06_Code_Traceability/Implementation_Gaps.md#73"
+    },
+    {
+      "document": "Backend AST call graph",
+      "status": "VERIFIED",
+      "location": "backend-analysis/output/json/backend-callgraph.json"
+    },
+    {
+      "document": "Frontend AST call graph",
+      "status": "VERIFIED",
+      "location": "frontend-analysis/output/json/frontend-api-callgraph.json"
+    }
+  ],
+  "repository": [
+    {
+      "metric": "Endpoints discovered",
+      "value": 552,
+      "evidence": "backend-analysis/output/json/run-summary.json",
+      "verification": "VERIFIED"
+    },
+    {
+      "metric": "FE→API verified mappings",
+      "value": 1742,
+      "evidence": "frontend-analysis/output/json/run-summary.json",
+      "verification": "VERIFIED"
+    },
+    {
+      "metric": "SQL statements parsed",
+      "value": 877,
+      "evidence": "backend-analysis/output/json/repository-sql-map.json",
+      "verification": "VERIFIED"
+    },
+    {
+      "metric": "PCI-DSS compliance",
+      "value": "NOT VERIFIED",
+      "evidence": "NOT VERIFIED",
+      "verification": "NOT VERIFIED"
+    },
+    {
+      "metric": "SOC2 Type II",
+      "value": "NOT VERIFIED",
+      "evidence": "NOT VERIFIED",
+      "verification": "NOT VERIFIED"
+    },
+    {
+      "metric": "ISO27001 certification",
+      "value": "NOT VERIFIED",
+      "evidence": "NOT VERIFIED",
+      "verification": "NOT VERIFIED"
+    }
+  ]
+}

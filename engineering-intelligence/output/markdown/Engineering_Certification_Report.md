@@ -1,0 +1,29 @@
+# Engineering Certification
+
+{
+  "meta": {
+    "generatedAt": "2026-08-03T18:13:27.127Z",
+    "generatorVersion": "3.0.0-a",
+    "evidenceCount": 2654,
+    "verificationStatus": "verified-from-source"
+  },
+  "repositoryHealthScore": 93,
+  "engineeringIntelligenceCoveragePercent": 72,
+  "filesAnalyzed": 1869,
+  "endpointsDiscovered": 562,
+  "angularComponents": 153,
+  "sqlTablesMapped": 223,
+  "tablesWithRepositoryReference": 207,
+  "dependencyGraphsGenerated": 2,
+  "reportsGenerated": 3,
+  "htmlDashboardsGenerated": 12,
+  "validationErrors": 0,
+  "architectureViolations": 0,
+  "deadCodeFindings": 46,
+  "circularDependencies": 0,
+  "endpointsFullyVerified": 406,
+  "astParseErrors": 0
+}
+
+---
+{"generatedAt":"2026-08-03T18:13:27.127Z","generatorVersion":"3.0.0-a","evidenceCount":1869,"verificationStatus":"verified-from-source"}

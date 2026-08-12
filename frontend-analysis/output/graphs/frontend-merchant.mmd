@@ -1,0 +1,95 @@
+flowchart LR
+  N0["Endpoint: GET /api/v1/acceptance/top-m"]
+  N1["Endpoint: GET /api/v1/acceptance/merch"]
+  N2["Endpoint: GET /api/v1/customers/:id/me"]
+  N3["Endpoint: GET /api/v1/checkout/brandin"]
+  N4["Endpoint: PUT /api/v1/checkout/brandin"]
+  N5["Service: MerchantContextService"]
+  N6["Component: MerchantDetailsComponent"]
+  N7["Service: MerchantApiService"]
+  N8["Endpoint: GET /api/v1/merchants/search"]
+  N9["Endpoint: GET /api/v1/merchants/statis"]
+  N10["Endpoint: PUT /api/v1/merchants/:id"]
+  N11["Endpoint: PATCH /api/v1/merchants/:id/"]
+  N12["Endpoint: DELETE /api/v1/merchants/:id"]
+  N13["Endpoint: GET /api/v1/merchants/:id/tr"]
+  N14["Endpoint: GET /api/v1/merchants/:id/do"]
+  N15["Endpoint: POST /api/v1/merchants/:id/d"]
+  N16["Endpoint: DELETE /api/v1/merchants/:id"]
+  N17["Component: MerchantFormComponent"]
+  N18["Component: MerchantListComponent"]
+  N19["Service: MerchantOnboardingApiService"]
+  N20["Component: MerchantPaymentPortalCompone"]
+  N21["Component: MerchantUserListComponent"]
+  N22["Service: MerchantUsersApiService"]
+  N6 -->|injects| N7
+  N6 -->|injects| N7
+  N7 -->|http| N8
+  N6 -->|injects| N7
+  N7 -->|http| N9
+  N6 -->|injects| N7
+  N7 -->|http| N8
+  N6 -->|injects| N7
+  N6 -->|injects| N7
+  N7 -->|http| N10
+  N6 -->|injects| N7
+  N7 -->|http| N11
+  N6 -->|injects| N7
+  N7 -->|http| N12
+  N6 -->|injects| N7
+  N7 -->|http| N13
+  N6 -->|injects| N7
+  N7 -->|http| N14
+  N6 -->|injects| N7
+  N7 -->|http| N15
+  N6 -->|injects| N7
+  N7 -->|http| N16
+  N17 -->|injects| N7
+  N17 -->|injects| N7
+  N7 -->|http| N8
+  N17 -->|injects| N7
+  N7 -->|http| N9
+  N17 -->|injects| N7
+  N7 -->|http| N8
+  N17 -->|injects| N7
+  N17 -->|injects| N7
+  N7 -->|http| N10
+  N17 -->|injects| N7
+  N7 -->|http| N11
+  N17 -->|injects| N7
+  N7 -->|http| N12
+  N17 -->|injects| N7
+  N7 -->|http| N13
+  N17 -->|injects| N7
+  N7 -->|http| N14
+  N17 -->|injects| N7
+  N7 -->|http| N15
+  N17 -->|injects| N7
+  N7 -->|http| N16
+  N18 -->|injects| N7
+  N18 -->|injects| N7
+  N7 -->|http| N8
+  N18 -->|injects| N7
+  N7 -->|http| N9
+  N18 -->|injects| N7
+  N7 -->|http| N8
+  N18 -->|injects| N7
+  N18 -->|injects| N7
+  N7 -->|http| N10
+  N18 -->|injects| N7
+  N7 -->|http| N11
+  N18 -->|injects| N7
+  N7 -->|http| N12
+  N18 -->|injects| N7
+  N7 -->|http| N13
+  N18 -->|injects| N7
+  N7 -->|http| N14
+  N18 -->|injects| N7
+  N7 -->|http| N15
+  N18 -->|injects| N7
+  N7 -->|http| N16
+  N21 -->|injects| N22
+  N21 -->|injects| N22
+  N21 -->|injects| N22
+  N21 -->|injects| N22
+  N21 -->|injects| N22

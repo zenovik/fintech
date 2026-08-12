@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+<key id="type" for="node" attr.name="type" attr.type="string"/>
+<key id="label" for="node" attr.name="label" attr.type="string"/>
+<key id="verification" for="node" attr.name="verification" attr.type="string"/>
+<key id="rel" for="edge" attr.name="rel" attr.type="string"/>
+<graph id="G" edgedefault="directed">
+<node id="ep:GET:/api/v1/developer/oauth-apps"><data key="type">Endpoint</data><data key="label">GET /api/v1/developer/oauth-apps</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:listOAuthApps"><data key="type">Controller</data><data key="label">listOAuthApps</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/developer/oauth-apps"><data key="type">Endpoint</data><data key="label">POST /api/v1/developer/oauth-apps</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:createOAuthApp"><data key="type">Controller</data><data key="label">createOAuthApp</data><data key="verification">VERIFIED</data></node>
+<node id="ep:GET:/api/v1/developer/oauth-apps/:id"><data key="type">Endpoint</data><data key="label">GET /api/v1/developer/oauth-apps/:id</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:getOAuthApp"><data key="type">Controller</data><data key="label">getOAuthApp</data><data key="verification">VERIFIED</data></node>
+<node id="ep:PUT:/api/v1/developer/oauth-apps/:id"><data key="type">Endpoint</data><data key="label">PUT /api/v1/developer/oauth-apps/:id</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:updateOAuthApp"><data key="type">Controller</data><data key="label">updateOAuthApp</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/developer/oauth-apps/:id/revoke"><data key="type">Endpoint</data><data key="label">POST /api/v1/developer/oauth-apps/:id/revoke</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:revokeOAuthApp"><data key="type">Controller</data><data key="label">revokeOAuthApp</data><data key="verification">VERIFIED</data></node>
+<node id="ep:POST:/api/v1/payments/:id/authorize"><data key="type">Endpoint</data><data key="label">POST /api/v1/payments/:id/authorize</data><data key="verification">VERIFIED</data></node>
+<node id="ctrl:authorize"><data key="type">Controller</data><data key="label">authorize</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:auth_audit_logs"><data key="type">Table</data><data key="label">auth_audit_logs</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:auth_challenges"><data key="type">Table</data><data key="label">auth_challenges</data><data key="verification">VERIFIED</data></node>
+<node id="tbl:oauth_applications"><data key="type">Table</data><data key="label">oauth_applications</data><data key="verification">VERIFIED</data></node>
+<edge id="e0" source="ep:GET:/api/v1/developer/oauth-apps" target="ctrl:listOAuthApps"><data key="rel">handles</data></edge>
+<edge id="e1" source="ep:POST:/api/v1/developer/oauth-apps" target="ctrl:createOAuthApp"><data key="rel">handles</data></edge>
+<edge id="e2" source="ep:GET:/api/v1/developer/oauth-apps/:id" target="ctrl:getOAuthApp"><data key="rel">handles</data></edge>
+<edge id="e3" source="ep:PUT:/api/v1/developer/oauth-apps/:id" target="ctrl:updateOAuthApp"><data key="rel">handles</data></edge>
+<edge id="e4" source="ep:POST:/api/v1/developer/oauth-apps/:id/revoke" target="ctrl:revokeOAuthApp"><data key="rel">handles</data></edge>
+<edge id="e5" source="ep:POST:/api/v1/payments/:id/authorize" target="ctrl:authorize"><data key="rel">handles</data></edge>
+</graph></graphml>

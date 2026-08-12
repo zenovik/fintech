@@ -1,0 +1,564 @@
+{
+  "docs": [
+    {
+      "path": "about.md",
+      "title": "about",
+      "category": "Portal"
+    },
+    {
+      "path": "governance.md",
+      "title": "governance",
+      "category": "Portal"
+    },
+    {
+      "path": "01_Product_Assumptions_and_Constraints.md",
+      "title": "Assumptions_and_Constraints",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Business_Rules.md",
+      "title": "Business_Rules",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Executive_Summary.md",
+      "title": "Executive_Summary",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Feature_Matrix.md",
+      "title": "Feature_Matrix",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Functional_Requirements.md",
+      "title": "Functional_Requirements",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Activity_Center.md",
+      "title": "Modules/Activity_Center",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Audit.md",
+      "title": "Modules/Audit",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Authentication.md",
+      "title": "Modules/Authentication",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Authorization.md",
+      "title": "Modules/Authorization",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Background_Jobs.md",
+      "title": "Modules/Background_Jobs",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Chargebacks.md",
+      "title": "Modules/Chargebacks",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Checkout.md",
+      "title": "Modules/Checkout",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Configuration.md",
+      "title": "Modules/Configuration",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Dashboard.md",
+      "title": "Modules/Dashboard",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Developer_Portal.md",
+      "title": "Modules/Developer_Portal",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Feature_Flags.md",
+      "title": "Modules/Feature_Flags",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Invoices.md",
+      "title": "Modules/Invoices",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Merchant_Management.md",
+      "title": "Modules/Merchant_Management",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Merchant_Users.md",
+      "title": "Modules/Merchant_Users",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Notifications.md",
+      "title": "Modules/Notifications",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Operations_Center.md",
+      "title": "Modules/Operations_Center",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Organization_Management.md",
+      "title": "Modules/Organization_Management",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Payments.md",
+      "title": "Modules/Payments",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Payment_Lifecycle.md",
+      "title": "Modules/Payment_Lifecycle",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Payment_Links.md",
+      "title": "Modules/Payment_Links",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_QR_Payments.md",
+      "title": "Modules/QR_Payments",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_README.md",
+      "title": "Modules/README",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Refunds.md",
+      "title": "Modules/Refunds",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Reports.md",
+      "title": "Modules/Reports",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Sandbox.md",
+      "title": "Modules/Sandbox",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Search_Center.md",
+      "title": "Modules/Search_Center",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Subscriptions.md",
+      "title": "Modules/Subscriptions",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_System_Health.md",
+      "title": "Modules/System_Health",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Webhooks.md",
+      "title": "Modules/Webhooks",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Modules_Workers.md",
+      "title": "Modules/Workers",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Non_Functional_Requirements.md",
+      "title": "Non_Functional_Requirements",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Product_Functional_Specification.md",
+      "title": "Product_Functional_Specification",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Product_Glossary.md",
+      "title": "Product_Glossary",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Product_Vision.md",
+      "title": "Product_Vision",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_README.md",
+      "title": "README",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_Success_Metrics.md",
+      "title": "Success_Metrics",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_User_Journeys.md",
+      "title": "User_Journeys",
+      "category": "01_Product"
+    },
+    {
+      "path": "01_Product_User_Roles.md",
+      "title": "User_Roles",
+      "category": "01_Product"
+    },
+    {
+      "path": "07_Governance_API_Governance.md",
+      "title": "API_Governance",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Architecture_Governance.md",
+      "title": "Architecture_Governance",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Architecture_Standards.md",
+      "title": "Architecture_Standards",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Backend_Governance.md",
+      "title": "Backend_Governance",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Certification.md",
+      "title": "Certification",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Compliance_Matrix.md",
+      "title": "Compliance_Matrix",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Compliance_Register.md",
+      "title": "Compliance_Register",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Database_Governance.md",
+      "title": "Database_Governance",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Data_Governance.md",
+      "title": "Data_Governance",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_DevOps_Governance.md",
+      "title": "DevOps_Governance",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Engineering_Standards.md",
+      "title": "Engineering_Standards",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Executive_Dashboard.md",
+      "title": "Executive_Dashboard",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Final_Enterprise_Certification.md",
+      "title": "Final_Enterprise_Certification",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Frontend_Governance.md",
+      "title": "Frontend_Governance",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Operational_Governance.md",
+      "title": "Operational_Governance",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Operations_Standards.md",
+      "title": "Operations_Standards",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Production_Readiness.md",
+      "title": "Production_Readiness",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_README.md",
+      "title": "README",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Repository_Certification.md",
+      "title": "Repository_Certification",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Repository_Governance.md",
+      "title": "Repository_Governance",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Risk_Register.md",
+      "title": "Risk_Register",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Security_Governance.md",
+      "title": "Security_Governance",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Security_Standards.md",
+      "title": "Security_Standards",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Technical_Debt_Register.md",
+      "title": "Technical_Debt_Register",
+      "category": "07_Governance"
+    },
+    {
+      "path": "07_Governance_Testing_Governance.md",
+      "title": "Testing_Governance",
+      "category": "07_Governance"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Business_Handover.md",
+      "title": "Business_Handover",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Executive_Package.md",
+      "title": "Executive_Package",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Final_Certification.md",
+      "title": "Final_Certification",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Guides_API_Consumer_Guide.md",
+      "title": "Guides/API_Consumer_Guide",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Guides_Implementation_Guide.md",
+      "title": "Guides/Implementation_Guide",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Guides_Merchant_User_Guide.md",
+      "title": "Guides/Merchant_User_Guide",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Guides_Migration_Guide.md",
+      "title": "Guides/Migration_Guide",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Guides_Organization_Admin_Guide.md",
+      "title": "Guides/Organization_Admin_Guide",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Guides_Release_Guide.md",
+      "title": "Guides/Release_Guide",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Handbooks_Backend_Developer_Handbook.md",
+      "title": "Handbooks/Backend_Developer_Handbook",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Handbooks_CTO_Handbook.md",
+      "title": "Handbooks/CTO_Handbook",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Handbooks_Database_Handbook.md",
+      "title": "Handbooks/Database_Handbook",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Handbooks_DevOps_Handbook.md",
+      "title": "Handbooks/DevOps_Handbook",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Handbooks_Frontend_Developer_Handbook.md",
+      "title": "Handbooks/Frontend_Developer_Handbook",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Handbooks_Operations_Handbook.md",
+      "title": "Handbooks/Operations_Handbook",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Handbooks_QA_Handbook.md",
+      "title": "Handbooks/QA_Handbook",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Handbooks_Security_Handbook.md",
+      "title": "Handbooks/Security_Handbook",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Handbooks_Solution_Architect_Handbook.md",
+      "title": "Handbooks/Solution_Architect_Handbook",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Handbooks_Support_Handbook.md",
+      "title": "Handbooks/Support_Handbook",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Knowledge_Base.md",
+      "title": "Knowledge_Base",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Operations_Matrices.md",
+      "title": "Operations_Matrices",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_README.md",
+      "title": "README",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Runbooks_Backup_Restore.md",
+      "title": "Runbooks/Backup_Restore",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Runbooks_Certificate_Rotation.md",
+      "title": "Runbooks/Certificate_Rotation",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Runbooks_Database_Failure.md",
+      "title": "Runbooks/Database_Failure",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Runbooks_Deadlocks.md",
+      "title": "Runbooks/Deadlocks",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Runbooks_Deployment_Failure.md",
+      "title": "Runbooks/Deployment_Failure",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Runbooks_Disk_Full.md",
+      "title": "Runbooks/Disk_Full",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Runbooks_High_CPU.md",
+      "title": "Runbooks/High_CPU",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Runbooks_High_Memory.md",
+      "title": "Runbooks/High_Memory",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Runbooks_Incident_Response.md",
+      "title": "Runbooks/Incident_Response",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Runbooks_Key_Rotation.md",
+      "title": "Runbooks/Key_Rotation",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Runbooks_Notification_Failure.md",
+      "title": "Runbooks/Notification_Failure",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Runbooks_Payment_Failure.md",
+      "title": "Runbooks/Payment_Failure",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Runbooks_README.md",
+      "title": "Runbooks/README",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Runbooks_Redis_Failure.md",
+      "title": "Runbooks/Redis_Failure",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Runbooks_Rollback.md",
+      "title": "Runbooks/Rollback",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Runbooks_Secret_Rotation.md",
+      "title": "Runbooks/Secret_Rotation",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Runbooks_Slow_Queries.md",
+      "title": "Runbooks/Slow_Queries",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Runbooks_Webhook_Failure.md",
+      "title": "Runbooks/Webhook_Failure",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Runbooks_Worker_Failure.md",
+      "title": "Runbooks/Worker_Failure",
+      "category": "08_Enterprise_Delivery"
+    },
+    {
+      "path": "08_Enterprise_Delivery_Training_Material.md",
+      "title": "Training_Material",
+      "category": "08_Enterprise_Delivery"
+    }
+  ]
+}

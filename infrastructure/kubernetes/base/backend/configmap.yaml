@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fintech-backend-config
+  labels:
+    app.kubernetes.io/component: backend
+data:
+  NODE_ENV: production
+  PORT: "3000"
+  DB_HOST: mysql
+  DB_PORT: "3306"
+  DB_NAME: fintech_db
+  DB_USER: fintech_user
+  REDIS_ENABLED: "true"
+  LOG_LEVEL: info
+  APP_BUILD: kubernetes
+  APP_COMMIT: unknown
+  JWT_EXPIRES_IN: 15m
+  JWT_REFRESH_EXPIRES_IN: 7d
+  CORS_ORIGIN: https://app.example.com
+  PAYMENT_GATEWAY_PROVIDER: internal
+  OTEL_TRACING_ENABLED: "true"
+  PROMETHEUS_METRICS_ENABLED: "true"

@@ -1,0 +1,1123 @@
+id,type,label,verification
+ep:GET:/api/v1/acceptance/analytics,Endpoint,GET /api/v1/acceptance/analytics,VERIFIED
+ctrl:analytics,Controller,analytics,VERIFIED
+ep:GET:/api/v1/acceptance/top-merchants,Endpoint,GET /api/v1/acceptance/top-merchants,VERIFIED
+ctrl:topMerchants,Controller,topMerchants,VERIFIED
+ep:GET:/api/v1/acceptance/failure-insights,Endpoint,GET /api/v1/acceptance/failure-insights,VERIFIED
+ctrl:failureInsights,Controller,failureInsights,VERIFIED
+ep:GET:/api/v1/acceptance/merchant-portal/:merchantId,Endpoint,GET /api/v1/acceptance/merchant-portal/:merchantId,VERIFIED
+ctrl:merchantPortal,Controller,merchantPortal,VERIFIED
+ep:GET:/api/v1/accounting/accounts,Endpoint,GET /api/v1/accounting/accounts,VERIFIED
+ctrl:listAccounts,Controller,listAccounts,VERIFIED
+ep:GET:/api/v1/accounting/entries,Endpoint,GET /api/v1/accounting/entries,VERIFIED
+ctrl:listEntries,Controller,listEntries,VERIFIED
+ep:GET:/api/v1/accounting/summary,Endpoint,GET /api/v1/accounting/summary,VERIFIED
+ctrl:summary,Controller,summary,VERIFIED
+ep:GET:/api/v1/accounting/export,Endpoint,GET /api/v1/accounting/export,VERIFIED
+ctrl:export,Controller,export,VERIFIED
+ep:GET:/api/v1/activity/timeline,Endpoint,GET /api/v1/activity/timeline,VERIFIED
+ctrl:timeline,Controller,timeline,VERIFIED
+ep:POST:/api/v1/ai/chat,Endpoint,POST /api/v1/ai/chat,VERIFIED
+ctrl:chat,Controller,chat,VERIFIED
+ep:GET:/api/v1/ai/insights/dashboard,Endpoint,GET /api/v1/ai/insights/dashboard,VERIFIED
+ctrl:insightsDashboard,Controller,insightsDashboard,VERIFIED
+ep:GET:/api/v1/ai/insights/revenue-forecast,Endpoint,GET /api/v1/ai/insights/revenue-forecast,VERIFIED
+ctrl:revenueForecast,Controller,revenueForecast,VERIFIED
+ep:GET:/api/v1/ai/insights/settlement-forecast,Endpoint,GET /api/v1/ai/insights/settlement-forecast,VERIFIED
+ctrl:settlementForecast,Controller,settlementForecast,VERIFIED
+ep:GET:/api/v1/ai/insights/merchant-health,Endpoint,GET /api/v1/ai/insights/merchant-health,VERIFIED
+ctrl:merchantHealth,Controller,merchantHealth,VERIFIED
+ep:GET:/api/v1/ai/insights/fraud-prediction,Endpoint,GET /api/v1/ai/insights/fraud-prediction,VERIFIED
+ctrl:fraudPrediction,Controller,fraudPrediction,VERIFIED
+ep:POST:/api/v1/ai/search,Endpoint,POST /api/v1/ai/search,VERIFIED
+ctrl:nlSearch,Controller,nlSearch,VERIFIED
+ep:GET:/api/v1/audit,Endpoint,GET /api/v1/audit,VERIFIED
+ctrl:list,Controller,list,VERIFIED
+ep:GET:/api/v1/audit/export,Endpoint,GET /api/v1/audit/export,VERIFIED
+ctrl:exportLogs,Controller,exportLogs,VERIFIED
+ep:GET:/api/v1/audit/categories,Endpoint,GET /api/v1/audit/categories,VERIFIED
+ctrl:getCategories,Controller,getCategories,VERIFIED
+ep:GET:/api/v1/audit/actions,Endpoint,GET /api/v1/audit/actions,VERIFIED
+ctrl:getActions,Controller,getActions,VERIFIED
+ep:GET:/api/v1/audit/api-logs,Endpoint,GET /api/v1/audit/api-logs,VERIFIED
+ctrl:listApiLogs,Controller,listApiLogs,VERIFIED
+ep:GET:/api/v1/audit/webhook-logs,Endpoint,GET /api/v1/audit/webhook-logs,VERIFIED
+ctrl:listWebhookLogs,Controller,listWebhookLogs,VERIFIED
+ep:GET:/api/v1/audit/:id,Endpoint,GET /api/v1/audit/:id,VERIFIED
+ctrl:getById,Controller,getById,VERIFIED
+ep:GET:/csrf-token,Endpoint,GET /csrf-token,NOT VERIFIED
+ep:POST:/login,Endpoint,POST /login,NOT VERIFIED
+ctrl:login,Controller,login,VERIFIED
+ep:POST:/verify-otp,Endpoint,POST /verify-otp,NOT VERIFIED
+ctrl:verifyOtp,Controller,verifyOtp,VERIFIED
+ep:POST:/resend-otp,Endpoint,POST /resend-otp,NOT VERIFIED
+ctrl:resendOtp,Controller,resendOtp,VERIFIED
+ep:POST:/forgot-password,Endpoint,POST /forgot-password,NOT VERIFIED
+ctrl:forgotPassword,Controller,forgotPassword,VERIFIED
+ep:POST:/reset-password,Endpoint,POST /reset-password,NOT VERIFIED
+ctrl:resetPassword,Controller,resetPassword,VERIFIED
+ep:POST:/refresh-token,Endpoint,POST /refresh-token,NOT VERIFIED
+ctrl:refreshToken,Controller,refreshToken,VERIFIED
+ep:POST:/select-organization,Endpoint,POST /select-organization,NOT VERIFIED
+ctrl:selectOrganization,Controller,selectOrganization,VERIFIED
+ep:POST:/logout,Endpoint,POST /logout,NOT VERIFIED
+ctrl:logout,Controller,logout,VERIFIED
+ep:GET:/me,Endpoint,GET /me,NOT VERIFIED
+ctrl:me,Controller,me,VERIFIED
+ep:GET:/sessions,Endpoint,GET /sessions,NOT VERIFIED
+ctrl:getSessions,Controller,getSessions,VERIFIED
+ep:DELETE:/sessions/others,Endpoint,DELETE /sessions/others,NOT VERIFIED
+ctrl:revokeOtherSessions,Controller,revokeOtherSessions,VERIFIED
+ep:DELETE:/session/:id,Endpoint,DELETE /session/:id,NOT VERIFIED
+ctrl:revokeSession,Controller,revokeSession,VERIFIED
+ep:POST:/change-password,Endpoint,POST /change-password,NOT VERIFIED
+ctrl:changePassword,Controller,changePassword,VERIFIED
+ep:PUT:/mfa-preferences,Endpoint,PUT /mfa-preferences,NOT VERIFIED
+ctrl:updateMfaPreferences,Controller,updateMfaPreferences,VERIFIED
+ep:GET:/session-settings,Endpoint,GET /session-settings,NOT VERIFIED
+ctrl:getSessionSettings,Controller,getSessionSettings,VERIFIED
+ep:GET:/api/v1/chargebacks/statistics,Endpoint,GET /api/v1/chargebacks/statistics,VERIFIED
+ctrl:statistics,Controller,statistics,VERIFIED
+ep:GET:/api/v1/chargebacks/sla-dashboard,Endpoint,GET /api/v1/chargebacks/sla-dashboard,VERIFIED
+ctrl:slaDashboard,Controller,slaDashboard,VERIFIED
+ep:GET:/api/v1/chargebacks/analytics,Endpoint,GET /api/v1/chargebacks/analytics,VERIFIED
+ep:GET:/api/v1/chargebacks,Endpoint,GET /api/v1/chargebacks,VERIFIED
+ep:POST:/api/v1/chargebacks,Endpoint,POST /api/v1/chargebacks,VERIFIED
+ctrl:create,Controller,create,VERIFIED
+ep:GET:/api/v1/chargebacks/:id/history,Endpoint,GET /api/v1/chargebacks/:id/history,VERIFIED
+ctrl:history,Controller,history,VERIFIED
+ep:GET:/api/v1/chargebacks/:id/evidence,Endpoint,GET /api/v1/chargebacks/:id/evidence,VERIFIED
+ctrl:evidence,Controller,evidence,VERIFIED
+ep:POST:/api/v1/chargebacks/:id/evidence,Endpoint,POST /api/v1/chargebacks/:id/evidence,VERIFIED
+ctrl:addEvidence,Controller,addEvidence,VERIFIED
+ep:POST:/api/v1/chargebacks/:id/representment,Endpoint,POST /api/v1/chargebacks/:id/representment,VERIFIED
+ctrl:representment,Controller,representment,VERIFIED
+ep:POST:/api/v1/chargebacks/:id/arbitration,Endpoint,POST /api/v1/chargebacks/:id/arbitration,VERIFIED
+ctrl:arbitration,Controller,arbitration,VERIFIED
+ep:POST:/api/v1/chargebacks/:id/resolve,Endpoint,POST /api/v1/chargebacks/:id/resolve,VERIFIED
+ctrl:resolve,Controller,resolve,VERIFIED
+ep:GET:/api/v1/chargebacks/:id,Endpoint,GET /api/v1/chargebacks/:id,VERIFIED
+ep:GET:/api/v1/public/checkout/themes,Endpoint,GET /api/v1/public/checkout/themes,VERIFIED
+ctrl:listThemes,Controller,listThemes,VERIFIED
+ep:GET:/api/v1/public/checkout/analytics,Endpoint,GET /api/v1/public/checkout/analytics,VERIFIED
+ep:GET:/api/v1/public/checkout/sessions,Endpoint,GET /api/v1/public/checkout/sessions,VERIFIED
+ep:POST:/api/v1/public/checkout/sessions,Endpoint,POST /api/v1/public/checkout/sessions,VERIFIED
+ep:GET:/api/v1/public/checkout/sessions/:id,Endpoint,GET /api/v1/public/checkout/sessions/:id,VERIFIED
+ep:GET:/api/v1/public/checkout/branding/:merchantId,Endpoint,GET /api/v1/public/checkout/branding/:merchantId,VERIFIED
+ctrl:getBranding,Controller,getBranding,VERIFIED
+ep:PUT:/api/v1/public/checkout/branding/:merchantId,Endpoint,PUT /api/v1/public/checkout/branding/:merchantId,VERIFIED
+ctrl:updateBranding,Controller,updateBranding,VERIFIED
+ep:GET:/api/v1/customers/search,Endpoint,GET /api/v1/customers/search,VERIFIED
+ctrl:search,Controller,search,VERIFIED
+ep:GET:/api/v1/customers/statistics,Endpoint,GET /api/v1/customers/statistics,VERIFIED
+ep:GET:/api/v1/customers,Endpoint,GET /api/v1/customers,VERIFIED
+ep:POST:/api/v1/customers,Endpoint,POST /api/v1/customers,VERIFIED
+ep:GET:/api/v1/customers/:id,Endpoint,GET /api/v1/customers/:id,VERIFIED
+ep:PUT:/api/v1/customers/:id,Endpoint,PUT /api/v1/customers/:id,VERIFIED
+ctrl:update,Controller,update,VERIFIED
+ep:PATCH:/api/v1/customers/:id/status,Endpoint,PATCH /api/v1/customers/:id/status,VERIFIED
+ctrl:updateStatus,Controller,updateStatus,VERIFIED
+ep:DELETE:/api/v1/customers/:id,Endpoint,DELETE /api/v1/customers/:id,VERIFIED
+ctrl:remove,Controller,remove,VERIFIED
+ep:GET:/api/v1/customers/:id/transactions,Endpoint,GET /api/v1/customers/:id/transactions,VERIFIED
+ctrl:transactions,Controller,transactions,VERIFIED
+ep:GET:/api/v1/customers/:id/merchants,Endpoint,GET /api/v1/customers/:id/merchants,VERIFIED
+ctrl:merchants,Controller,merchants,VERIFIED
+ep:GET:/api/v1/customers/:id/preferences,Endpoint,GET /api/v1/customers/:id/preferences,VERIFIED
+ctrl:preferences,Controller,preferences,VERIFIED
+ep:PUT:/api/v1/customers/:id/preferences,Endpoint,PUT /api/v1/customers/:id/preferences,VERIFIED
+ctrl:updatePreferences,Controller,updatePreferences,VERIFIED
+ep:GET:/api/v1/customers/:id/payment-methods,Endpoint,GET /api/v1/customers/:id/payment-methods,VERIFIED
+ctrl:paymentMethods,Controller,paymentMethods,VERIFIED
+ep:GET:/api/v1/customers/:id/timeline,Endpoint,GET /api/v1/customers/:id/timeline,VERIFIED
+ep:GET:/api/v1/dashboard/executive/summary,Endpoint,GET /api/v1/dashboard/executive/summary,VERIFIED
+ep:GET:/api/v1/dashboard/executive/charts/revenue,Endpoint,GET /api/v1/dashboard/executive/charts/revenue,VERIFIED
+ctrl:revenueChart,Controller,revenueChart,VERIFIED
+ep:GET:/api/v1/dashboard/executive/charts/payment-methods,Endpoint,GET /api/v1/dashboard/executive/charts/payment-methods,VERIFIED
+ep:GET:/api/v1/dashboard/executive/charts/regional-distribution,Endpoint,GET /api/v1/dashboard/executive/charts/regional-distribution,VERIFIED
+ctrl:regionalDistribution,Controller,regionalDistribution,VERIFIED
+ep:GET:/api/v1/dashboard/executive/transactions/high-value,Endpoint,GET /api/v1/dashboard/executive/transactions/high-value,VERIFIED
+ctrl:highValueTransactions,Controller,highValueTransactions,VERIFIED
+ep:GET:/api/v1/dashboard/executive/activities,Endpoint,GET /api/v1/dashboard/executive/activities,VERIFIED
+ctrl:activities,Controller,activities,VERIFIED
+ep:GET:/api/v1/dashboard/executive/fraud-alerts,Endpoint,GET /api/v1/dashboard/executive/fraud-alerts,VERIFIED
+ctrl:fraudAlerts,Controller,fraudAlerts,VERIFIED
+ep:GET:/api/v1/dashboard/executive/onboarding-stats,Endpoint,GET /api/v1/dashboard/executive/onboarding-stats,VERIFIED
+ctrl:onboardingStats,Controller,onboardingStats,VERIFIED
+ep:GET:/api/v1/dashboard/executive/payment-platform-stats,Endpoint,GET /api/v1/dashboard/executive/payment-platform-stats,VERIFIED
+ctrl:paymentPlatformStats,Controller,paymentPlatformStats,VERIFIED
+ep:GET:/api/v1/dashboard/executive/operations-stats,Endpoint,GET /api/v1/dashboard/executive/operations-stats,VERIFIED
+ctrl:operationsStats,Controller,operationsStats,VERIFIED
+ep:POST:/api/v1/dashboard/executive/export,Endpoint,POST /api/v1/dashboard/executive/export,VERIFIED
+ctrl:exportReport,Controller,exportReport,VERIFIED
+ep:GET:/api/v1/dashboard/executive/preferences,Endpoint,GET /api/v1/dashboard/executive/preferences,VERIFIED
+ctrl:getPreferences,Controller,getPreferences,VERIFIED
+ep:PUT:/api/v1/dashboard/executive/preferences,Endpoint,PUT /api/v1/dashboard/executive/preferences,VERIFIED
+ep:POST:/api/v1/dashboard/executive/ai/chat,Endpoint,POST /api/v1/dashboard/executive/ai/chat,VERIFIED
+ctrl:aiChat,Controller,aiChat,VERIFIED
+ep:GET:/api/v1/developer/dashboard,Endpoint,GET /api/v1/developer/dashboard,VERIFIED
+ctrl:dashboard,Controller,dashboard,VERIFIED
+ep:GET:/api/v1/developer/profiles,Endpoint,GET /api/v1/developer/profiles,VERIFIED
+ctrl:listProfiles,Controller,listProfiles,VERIFIED
+ep:POST:/api/v1/developer/profiles,Endpoint,POST /api/v1/developer/profiles,VERIFIED
+ctrl:createProfile,Controller,createProfile,VERIFIED
+ep:GET:/api/v1/developer/profiles/:id,Endpoint,GET /api/v1/developer/profiles/:id,VERIFIED
+ctrl:getProfile,Controller,getProfile,VERIFIED
+ep:PUT:/api/v1/developer/profiles/:id,Endpoint,PUT /api/v1/developer/profiles/:id,VERIFIED
+ctrl:updateProfile,Controller,updateProfile,VERIFIED
+ep:DELETE:/api/v1/developer/profiles/:id,Endpoint,DELETE /api/v1/developer/profiles/:id,VERIFIED
+ctrl:deleteProfile,Controller,deleteProfile,VERIFIED
+ep:GET:/api/v1/developer/oauth-apps,Endpoint,GET /api/v1/developer/oauth-apps,VERIFIED
+ctrl:listOAuthApps,Controller,listOAuthApps,VERIFIED
+ep:POST:/api/v1/developer/oauth-apps,Endpoint,POST /api/v1/developer/oauth-apps,VERIFIED
+ctrl:createOAuthApp,Controller,createOAuthApp,VERIFIED
+ep:GET:/api/v1/developer/oauth-apps/:id,Endpoint,GET /api/v1/developer/oauth-apps/:id,VERIFIED
+ctrl:getOAuthApp,Controller,getOAuthApp,VERIFIED
+ep:PUT:/api/v1/developer/oauth-apps/:id,Endpoint,PUT /api/v1/developer/oauth-apps/:id,VERIFIED
+ctrl:updateOAuthApp,Controller,updateOAuthApp,VERIFIED
+ep:POST:/api/v1/developer/oauth-apps/:id/revoke,Endpoint,POST /api/v1/developer/oauth-apps/:id/revoke,VERIFIED
+ctrl:revokeOAuthApp,Controller,revokeOAuthApp,VERIFIED
+ep:GET:/api/v1/developer/api-usage,Endpoint,GET /api/v1/developer/api-usage,VERIFIED
+ctrl:listApiUsageLogs,Controller,listApiUsageLogs,VERIFIED
+ep:GET:/api/v1/developer/api-keys,Endpoint,GET /api/v1/developer/api-keys,VERIFIED
+ctrl:listApiKeys,Controller,listApiKeys,VERIFIED
+ep:GET:/api/v1/devices/inventory,Endpoint,GET /api/v1/devices/inventory,VERIFIED
+ctrl:inventory,Controller,inventory,VERIFIED
+ep:GET:/api/v1/devices,Endpoint,GET /api/v1/devices,VERIFIED
+ep:POST:/api/v1/devices,Endpoint,POST /api/v1/devices,VERIFIED
+ctrl:provision,Controller,provision,VERIFIED
+ep:GET:/api/v1/devices/:id,Endpoint,GET /api/v1/devices/:id,VERIFIED
+ep:POST:/api/v1/devices/:id/activate,Endpoint,POST /api/v1/devices/:id/activate,VERIFIED
+ctrl:activate,Controller,activate,VERIFIED
+ep:POST:/api/v1/devices/:id/deactivate,Endpoint,POST /api/v1/devices/:id/deactivate,VERIFIED
+ctrl:deactivate,Controller,deactivate,VERIFIED
+ep:POST:/api/v1/devices/:id/transfer,Endpoint,POST /api/v1/devices/:id/transfer,VERIFIED
+ctrl:transfer,Controller,transfer,VERIFIED
+ep:POST:/api/v1/devices/:id/replace,Endpoint,POST /api/v1/devices/:id/replace,VERIFIED
+ctrl:replace,Controller,replace,VERIFIED
+ep:POST:/api/v1/devices/:id/sync,Endpoint,POST /api/v1/devices/:id/sync,VERIFIED
+ctrl:sync,Controller,sync,VERIFIED
+ep:GET:/api/v1/exports/:fileId,Endpoint,GET /api/v1/exports/:fileId,VERIFIED
+ctrl:download,Controller,download,VERIFIED
+ep:GET:/api/v1/fraud,Endpoint,GET /api/v1/fraud,VERIFIED
+ep:GET:/api/v1/fraud/:id,Endpoint,GET /api/v1/fraud/:id,VERIFIED
+ep:POST:/api/v1/fraud/:id/approve,Endpoint,POST /api/v1/fraud/:id/approve,VERIFIED
+ctrl:approve,Controller,approve,VERIFIED
+ep:POST:/api/v1/fraud/:id/reject,Endpoint,POST /api/v1/fraud/:id/reject,VERIFIED
+ctrl:reject,Controller,reject,VERIFIED
+ep:POST:/api/v1/fraud/:id/release,Endpoint,POST /api/v1/fraud/:id/release,VERIFIED
+ctrl:release,Controller,release,VERIFIED
+ep:GET:/api/v1/invoices/statistics,Endpoint,GET /api/v1/invoices/statistics,VERIFIED
+ep:GET:/api/v1/invoices/analytics,Endpoint,GET /api/v1/invoices/analytics,VERIFIED
+ep:GET:/api/v1/invoices/templates,Endpoint,GET /api/v1/invoices/templates,VERIFIED
+ctrl:listTemplates,Controller,listTemplates,VERIFIED
+ep:POST:/api/v1/invoices/templates,Endpoint,POST /api/v1/invoices/templates,VERIFIED
+ctrl:createTemplate,Controller,createTemplate,VERIFIED
+ep:GET:/api/v1/invoices/templates/:id,Endpoint,GET /api/v1/invoices/templates/:id,VERIFIED
+ctrl:getTemplate,Controller,getTemplate,VERIFIED
+ep:PUT:/api/v1/invoices/templates/:id,Endpoint,PUT /api/v1/invoices/templates/:id,VERIFIED
+ctrl:updateTemplate,Controller,updateTemplate,VERIFIED
+ep:DELETE:/api/v1/invoices/templates/:id,Endpoint,DELETE /api/v1/invoices/templates/:id,VERIFIED
+ctrl:deleteTemplate,Controller,deleteTemplate,VERIFIED
+ep:GET:/api/v1/invoices/credit-notes,Endpoint,GET /api/v1/invoices/credit-notes,VERIFIED
+ctrl:listCreditNotes,Controller,listCreditNotes,VERIFIED
+ep:POST:/api/v1/invoices/credit-notes,Endpoint,POST /api/v1/invoices/credit-notes,VERIFIED
+ctrl:createCreditNote,Controller,createCreditNote,VERIFIED
+ep:GET:/api/v1/invoices/debit-notes,Endpoint,GET /api/v1/invoices/debit-notes,VERIFIED
+ctrl:listDebitNotes,Controller,listDebitNotes,VERIFIED
+ep:POST:/api/v1/invoices/debit-notes,Endpoint,POST /api/v1/invoices/debit-notes,VERIFIED
+ctrl:createDebitNote,Controller,createDebitNote,VERIFIED
+ep:GET:/api/v1/invoices,Endpoint,GET /api/v1/invoices,VERIFIED
+ep:POST:/api/v1/invoices,Endpoint,POST /api/v1/invoices,VERIFIED
+ep:GET:/api/v1/invoices/:id/pdf,Endpoint,GET /api/v1/invoices/:id/pdf,VERIFIED
+ctrl:downloadPdf,Controller,downloadPdf,VERIFIED
+ep:GET:/api/v1/invoices/:id/pdf/metadata,Endpoint,GET /api/v1/invoices/:id/pdf/metadata,VERIFIED
+ctrl:pdfMetadata,Controller,pdfMetadata,VERIFIED
+ep:POST:/api/v1/invoices/:id/duplicate,Endpoint,POST /api/v1/invoices/:id/duplicate,VERIFIED
+ctrl:duplicate,Controller,duplicate,VERIFIED
+ep:POST:/api/v1/invoices/:id/void,Endpoint,POST /api/v1/invoices/:id/void,VERIFIED
+ctrl:voidInvoice,Controller,voidInvoice,VERIFIED
+ep:POST:/api/v1/invoices/:id/cancel,Endpoint,POST /api/v1/invoices/:id/cancel,VERIFIED
+ctrl:cancel,Controller,cancel,VERIFIED
+ep:POST:/api/v1/invoices/:id/send,Endpoint,POST /api/v1/invoices/:id/send,VERIFIED
+ctrl:markSent,Controller,markSent,VERIFIED
+ep:POST:/api/v1/invoices/:id/mark-viewed,Endpoint,POST /api/v1/invoices/:id/mark-viewed,VERIFIED
+ctrl:markViewed,Controller,markViewed,VERIFIED
+ep:POST:/api/v1/invoices/:id/mark-overdue,Endpoint,POST /api/v1/invoices/:id/mark-overdue,VERIFIED
+ctrl:markOverdue,Controller,markOverdue,VERIFIED
+ep:POST:/api/v1/invoices/:id/mark-paid,Endpoint,POST /api/v1/invoices/:id/mark-paid,VERIFIED
+ctrl:markPaid,Controller,markPaid,VERIFIED
+ep:POST:/api/v1/invoices/:id/email,Endpoint,POST /api/v1/invoices/:id/email,VERIFIED
+ctrl:email,Controller,email,VERIFIED
+ep:POST:/api/v1/invoices/:id/payment-link,Endpoint,POST /api/v1/invoices/:id/payment-link,VERIFIED
+ctrl:generatePaymentLink,Controller,generatePaymentLink,VERIFIED
+ep:POST:/api/v1/invoices/:id/payment-link/regenerate,Endpoint,POST /api/v1/invoices/:id/payment-link/regenerate,VERIFIED
+ctrl:regeneratePaymentLink,Controller,regeneratePaymentLink,VERIFIED
+ep:POST:/api/v1/invoices/:id/payment-link/disable,Endpoint,POST /api/v1/invoices/:id/payment-link/disable,VERIFIED
+ctrl:disablePaymentLink,Controller,disablePaymentLink,VERIFIED
+ep:GET:/api/v1/invoices/:id,Endpoint,GET /api/v1/invoices/:id,VERIFIED
+ep:PUT:/api/v1/invoices/:id,Endpoint,PUT /api/v1/invoices/:id,VERIFIED
+ep:GET:/api/v1/merchants/search,Endpoint,GET /api/v1/merchants/search,VERIFIED
+ep:GET:/api/v1/merchants/statistics,Endpoint,GET /api/v1/merchants/statistics,VERIFIED
+ep:GET:/api/v1/merchants,Endpoint,GET /api/v1/merchants,VERIFIED
+ep:POST:/api/v1/merchants,Endpoint,POST /api/v1/merchants,VERIFIED
+ep:GET:/api/v1/merchants/:id,Endpoint,GET /api/v1/merchants/:id,VERIFIED
+ep:PUT:/api/v1/merchants/:id,Endpoint,PUT /api/v1/merchants/:id,VERIFIED
+ep:PATCH:/api/v1/merchants/:id/status,Endpoint,PATCH /api/v1/merchants/:id/status,VERIFIED
+ep:DELETE:/api/v1/merchants/:id,Endpoint,DELETE /api/v1/merchants/:id,VERIFIED
+ep:GET:/api/v1/merchants/:id/transactions,Endpoint,GET /api/v1/merchants/:id/transactions,VERIFIED
+ep:GET:/api/v1/merchants/:id/settlements,Endpoint,GET /api/v1/merchants/:id/settlements,VERIFIED
+ctrl:settlements,Controller,settlements,VERIFIED
+ep:GET:/api/v1/merchants/:id/documents,Endpoint,GET /api/v1/merchants/:id/documents,VERIFIED
+ctrl:documents,Controller,documents,VERIFIED
+ep:POST:/api/v1/merchants/:id/documents,Endpoint,POST /api/v1/merchants/:id/documents,VERIFIED
+ctrl:createDocument,Controller,createDocument,VERIFIED
+ep:DELETE:/api/v1/merchants/:id/documents/:documentId,Endpoint,DELETE /api/v1/merchants/:id/documents/:documentId,VERIFIED
+ctrl:deleteDocument,Controller,deleteDocument,VERIFIED
+ep:GET:/api/v1/merchant-onboarding/statistics,Endpoint,GET /api/v1/merchant-onboarding/statistics,VERIFIED
+ep:GET:/api/v1/merchant-onboarding,Endpoint,GET /api/v1/merchant-onboarding,VERIFIED
+ep:POST:/api/v1/merchant-onboarding,Endpoint,POST /api/v1/merchant-onboarding,VERIFIED
+ep:GET:/api/v1/merchant-onboarding/:id,Endpoint,GET /api/v1/merchant-onboarding/:id,VERIFIED
+ep:GET:/api/v1/merchant-onboarding/:id/timeline,Endpoint,GET /api/v1/merchant-onboarding/:id/timeline,VERIFIED
+ep:PUT:/api/v1/merchant-onboarding/:id/business,Endpoint,PUT /api/v1/merchant-onboarding/:id/business,VERIFIED
+ctrl:saveBusiness,Controller,saveBusiness,VERIFIED
+ep:PUT:/api/v1/merchant-onboarding/:id/addresses,Endpoint,PUT /api/v1/merchant-onboarding/:id/addresses,VERIFIED
+ctrl:saveAddresses,Controller,saveAddresses,VERIFIED
+ep:PUT:/api/v1/merchant-onboarding/:id/kyc,Endpoint,PUT /api/v1/merchant-onboarding/:id/kyc,VERIFIED
+ctrl:saveKyc,Controller,saveKyc,VERIFIED
+ep:PUT:/api/v1/merchant-onboarding/:id/bank,Endpoint,PUT /api/v1/merchant-onboarding/:id/bank,VERIFIED
+ctrl:saveBank,Controller,saveBank,VERIFIED
+ep:PUT:/api/v1/merchant-onboarding/:id/settlement,Endpoint,PUT /api/v1/merchant-onboarding/:id/settlement,VERIFIED
+ctrl:saveSettlement,Controller,saveSettlement,VERIFIED
+ep:PUT:/api/v1/merchant-onboarding/:id/payment,Endpoint,PUT /api/v1/merchant-onboarding/:id/payment,VERIFIED
+ctrl:savePayment,Controller,savePayment,VERIFIED
+ep:POST:/api/v1/merchant-onboarding/:id/submit,Endpoint,POST /api/v1/merchant-onboarding/:id/submit,VERIFIED
+ctrl:submit,Controller,submit,VERIFIED
+ep:POST:/api/v1/merchant-onboarding/:id/approve,Endpoint,POST /api/v1/merchant-onboarding/:id/approve,VERIFIED
+ep:POST:/api/v1/merchant-onboarding/:id/reject,Endpoint,POST /api/v1/merchant-onboarding/:id/reject,VERIFIED
+ep:POST:/api/v1/merchant-onboarding/:id/go-live,Endpoint,POST /api/v1/merchant-onboarding/:id/go-live,VERIFIED
+ctrl:goLive,Controller,goLive,VERIFIED
+ep:POST:/api/v1/merchant-onboarding/:id/suspend,Endpoint,POST /api/v1/merchant-onboarding/:id/suspend,VERIFIED
+ctrl:suspend,Controller,suspend,VERIFIED
+ep:GET:/api/v1/merchant-users/me,Endpoint,GET /api/v1/merchant-users/me,VERIFIED
+ep:GET:/api/v1/merchant-users/roles,Endpoint,GET /api/v1/merchant-users/roles,VERIFIED
+ctrl:listRoles,Controller,listRoles,VERIFIED
+ep:GET:/api/v1/merchant-users,Endpoint,GET /api/v1/merchant-users,VERIFIED
+ep:POST:/api/v1/merchant-users,Endpoint,POST /api/v1/merchant-users,VERIFIED
+ep:POST:/api/v1/merchant-users/invite,Endpoint,POST /api/v1/merchant-users/invite,VERIFIED
+ctrl:invite,Controller,invite,VERIFIED
+ep:GET:/api/v1/merchant-users/:id,Endpoint,GET /api/v1/merchant-users/:id,VERIFIED
+ep:PUT:/api/v1/merchant-users/:id,Endpoint,PUT /api/v1/merchant-users/:id,VERIFIED
+ep:POST:/api/v1/merchant-users/:id/activate,Endpoint,POST /api/v1/merchant-users/:id/activate,VERIFIED
+ep:POST:/api/v1/merchant-users/:id/deactivate,Endpoint,POST /api/v1/merchant-users/:id/deactivate,VERIFIED
+ep:PUT:/api/v1/merchant-users/:id/role,Endpoint,PUT /api/v1/merchant-users/:id/role,VERIFIED
+ctrl:assignRole,Controller,assignRole,VERIFIED
+ep:PUT:/api/v1/merchant-users/:id/outlets,Endpoint,PUT /api/v1/merchant-users/:id/outlets,VERIFIED
+ctrl:assignOutlets,Controller,assignOutlets,VERIFIED
+ep:POST:/api/v1/merchant-users/:id/reset-password,Endpoint,POST /api/v1/merchant-users/:id/reset-password,VERIFIED
+ep:GET:/api/v1/notifications,Endpoint,GET /api/v1/notifications,VERIFIED
+ep:GET:/api/v1/notifications/unread-count,Endpoint,GET /api/v1/notifications/unread-count,VERIFIED
+ctrl:unreadCount,Controller,unreadCount,VERIFIED
+ep:PATCH:/api/v1/notifications/read-all,Endpoint,PATCH /api/v1/notifications/read-all,VERIFIED
+ctrl:markAllRead,Controller,markAllRead,VERIFIED
+ep:PATCH:/api/v1/notifications/archive-all,Endpoint,PATCH /api/v1/notifications/archive-all,VERIFIED
+ctrl:archiveAll,Controller,archiveAll,VERIFIED
+ep:GET:/api/v1/notifications/templates,Endpoint,GET /api/v1/notifications/templates,VERIFIED
+ep:POST:/api/v1/notifications/templates,Endpoint,POST /api/v1/notifications/templates,VERIFIED
+ep:GET:/api/v1/notifications/templates/:id,Endpoint,GET /api/v1/notifications/templates/:id,VERIFIED
+ep:PUT:/api/v1/notifications/templates/:id,Endpoint,PUT /api/v1/notifications/templates/:id,VERIFIED
+ep:DELETE:/api/v1/notifications/templates/:id,Endpoint,DELETE /api/v1/notifications/templates/:id,VERIFIED
+ep:GET:/api/v1/notifications/broadcasts,Endpoint,GET /api/v1/notifications/broadcasts,VERIFIED
+ctrl:listBroadcasts,Controller,listBroadcasts,VERIFIED
+ep:POST:/api/v1/notifications/broadcasts,Endpoint,POST /api/v1/notifications/broadcasts,VERIFIED
+ctrl:createBroadcast,Controller,createBroadcast,VERIFIED
+ep:GET:/api/v1/notifications/campaigns,Endpoint,GET /api/v1/notifications/campaigns,VERIFIED
+ctrl:listCampaigns,Controller,listCampaigns,VERIFIED
+ep:POST:/api/v1/notifications/campaigns,Endpoint,POST /api/v1/notifications/campaigns,VERIFIED
+ctrl:createCampaign,Controller,createCampaign,VERIFIED
+ep:GET:/api/v1/notifications/campaigns/:id,Endpoint,GET /api/v1/notifications/campaigns/:id,VERIFIED
+ctrl:getCampaign,Controller,getCampaign,VERIFIED
+ep:PUT:/api/v1/notifications/campaigns/:id,Endpoint,PUT /api/v1/notifications/campaigns/:id,VERIFIED
+ctrl:updateCampaign,Controller,updateCampaign,VERIFIED
+ep:DELETE:/api/v1/notifications/campaigns/:id,Endpoint,DELETE /api/v1/notifications/campaigns/:id,VERIFIED
+ctrl:deleteCampaign,Controller,deleteCampaign,VERIFIED
+ep:GET:/api/v1/notifications/templates/:id/variables,Endpoint,GET /api/v1/notifications/templates/:id/variables,VERIFIED
+ctrl:getTemplateVariables,Controller,getTemplateVariables,VERIFIED
+ep:GET:/api/v1/notifications/channels,Endpoint,GET /api/v1/notifications/channels,VERIFIED
+ctrl:getChannels,Controller,getChannels,VERIFIED
+ep:GET:/api/v1/notifications/events,Endpoint,GET /api/v1/notifications/events,VERIFIED
+ctrl:getEvents,Controller,getEvents,VERIFIED
+ep:GET:/api/v1/notifications/groups,Endpoint,GET /api/v1/notifications/groups,VERIFIED
+ctrl:getGroups,Controller,getGroups,VERIFIED
+ep:GET:/api/v1/notifications/:id,Endpoint,GET /api/v1/notifications/:id,VERIFIED
+ep:PATCH:/api/v1/notifications/:id/read,Endpoint,PATCH /api/v1/notifications/:id/read,VERIFIED
+ctrl:markRead,Controller,markRead,VERIFIED
+ep:PATCH:/api/v1/notifications/:id/archive,Endpoint,PATCH /api/v1/notifications/:id/archive,VERIFIED
+ctrl:archive,Controller,archive,VERIFIED
+ep:DELETE:/api/v1/notifications/:id,Endpoint,DELETE /api/v1/notifications/:id,VERIFIED
+ep:GET:/api/v1/onboarding-approval/stages,Endpoint,GET /api/v1/onboarding-approval/stages,VERIFIED
+ctrl:stages,Controller,stages,VERIFIED
+ep:GET:/api/v1/onboarding-approval/dashboard-stats,Endpoint,GET /api/v1/onboarding-approval/dashboard-stats,VERIFIED
+ctrl:dashboardStats,Controller,dashboardStats,VERIFIED
+ep:GET:/api/v1/onboarding-approval/compliance-queue,Endpoint,GET /api/v1/onboarding-approval/compliance-queue,VERIFIED
+ctrl:complianceQueue,Controller,complianceQueue,VERIFIED
+ep:POST:/api/v1/onboarding-approval/compliance-queue/bulk-assign,Endpoint,POST /api/v1/onboarding-approval/compliance-queue/bulk-assign,VERIFIED
+ctrl:bulkAssign,Controller,bulkAssign,VERIFIED
+ep:GET:/api/v1/onboarding-approval/:applicationId/workflow,Endpoint,GET /api/v1/onboarding-approval/:applicationId/workflow,VERIFIED
+ctrl:getWorkflow,Controller,getWorkflow,VERIFIED
+ep:POST:/api/v1/onboarding-approval/:applicationId/workflow/start,Endpoint,POST /api/v1/onboarding-approval/:applicationId/workflow/start,VERIFIED
+ctrl:startWorkflow,Controller,startWorkflow,VERIFIED
+ep:POST:/api/v1/onboarding-approval/:applicationId/approve,Endpoint,POST /api/v1/onboarding-approval/:applicationId/approve,VERIFIED
+ep:POST:/api/v1/onboarding-approval/:applicationId/reject,Endpoint,POST /api/v1/onboarding-approval/:applicationId/reject,VERIFIED
+ep:POST:/api/v1/onboarding-approval/:applicationId/send-back,Endpoint,POST /api/v1/onboarding-approval/:applicationId/send-back,VERIFIED
+ctrl:sendBack,Controller,sendBack,VERIFIED
+ep:POST:/api/v1/onboarding-approval/:applicationId/reassign,Endpoint,POST /api/v1/onboarding-approval/:applicationId/reassign,VERIFIED
+ctrl:reassign,Controller,reassign,VERIFIED
+ep:POST:/api/v1/onboarding-approval/:applicationId/skip-stage,Endpoint,POST /api/v1/onboarding-approval/:applicationId/skip-stage,VERIFIED
+ctrl:skipStage,Controller,skipStage,VERIFIED
+ep:POST:/api/v1/onboarding-approval/:applicationId/go-live,Endpoint,POST /api/v1/onboarding-approval/:applicationId/go-live,VERIFIED
+ep:POST:/api/v1/onboarding-approval/:applicationId/suspend,Endpoint,POST /api/v1/onboarding-approval/:applicationId/suspend,VERIFIED
+ep:POST:/api/v1/onboarding-approval/:applicationId/activate,Endpoint,POST /api/v1/onboarding-approval/:applicationId/activate,VERIFIED
+ep:GET:/api/v1/onboarding-approval/:applicationId/risk,Endpoint,GET /api/v1/onboarding-approval/:applicationId/risk,VERIFIED
+ctrl:getRisk,Controller,getRisk,VERIFIED
+ep:PUT:/api/v1/onboarding-approval/:applicationId/risk,Endpoint,PUT /api/v1/onboarding-approval/:applicationId/risk,VERIFIED
+ctrl:saveRisk,Controller,saveRisk,VERIFIED
+ep:GET:/api/v1/onboarding-approval/:applicationId/kyc,Endpoint,GET /api/v1/onboarding-approval/:applicationId/kyc,VERIFIED
+ctrl:listKyc,Controller,listKyc,VERIFIED
+ep:POST:/api/v1/onboarding-approval/:applicationId/kyc/:documentId/decision,Endpoint,POST /api/v1/onboarding-approval/:applicationId/kyc/:documentId/decision,VERIFIED
+ctrl:kycDecision,Controller,kycDecision,VERIFIED
+ep:GET:/api/v1/operations/dashboard,Endpoint,GET /api/v1/operations/dashboard,VERIFIED
+ep:GET:/api/v1/operations/queues,Endpoint,GET /api/v1/operations/queues,VERIFIED
+ctrl:queuesDashboard,Controller,queuesDashboard,VERIFIED
+ep:GET:/api/v1/operations/dead-letter-queue,Endpoint,GET /api/v1/operations/dead-letter-queue,VERIFIED
+ctrl:deadLetterQueue,Controller,deadLetterQueue,VERIFIED
+ep:GET:/api/v1/operations/maintenance,Endpoint,GET /api/v1/operations/maintenance,VERIFIED
+ctrl:getMaintenanceMode,Controller,getMaintenanceMode,VERIFIED
+ep:PUT:/api/v1/operations/maintenance,Endpoint,PUT /api/v1/operations/maintenance,VERIFIED
+ctrl:setMaintenanceMode,Controller,setMaintenanceMode,VERIFIED
+ep:GET:/api/v1/operations/deployments,Endpoint,GET /api/v1/operations/deployments,VERIFIED
+ctrl:deploymentHistory,Controller,deploymentHistory,VERIFIED
+ep:GET:/api/v1/operations/pending-tasks,Endpoint,GET /api/v1/operations/pending-tasks,VERIFIED
+ctrl:pendingTasks,Controller,pendingTasks,VERIFIED
+ep:GET:/api/v1/operations/health,Endpoint,GET /api/v1/operations/health,VERIFIED
+ctrl:health,Controller,health,VERIFIED
+ep:GET:/api/v1/operations/alerts,Endpoint,GET /api/v1/operations/alerts,VERIFIED
+ctrl:alerts,Controller,alerts,VERIFIED
+ep:GET:/api/v1/operations/incidents,Endpoint,GET /api/v1/operations/incidents,VERIFIED
+ctrl:incidents,Controller,incidents,VERIFIED
+ep:GET:/api/v1/operations/retry-queue,Endpoint,GET /api/v1/operations/retry-queue,VERIFIED
+ctrl:retryQueue,Controller,retryQueue,VERIFIED
+ep:GET:/api/v1/operations/jobs,Endpoint,GET /api/v1/operations/jobs,VERIFIED
+ctrl:jobs,Controller,jobs,VERIFIED
+ep:GET:/api/v1/operations/failed-payments,Endpoint,GET /api/v1/operations/failed-payments,VERIFIED
+ctrl:failedPayments,Controller,failedPayments,VERIFIED
+ep:GET:/api/v1/operations/failed-payouts,Endpoint,GET /api/v1/operations/failed-payouts,VERIFIED
+ctrl:failedPayouts,Controller,failedPayouts,VERIFIED
+ep:GET:/api/v1/operations/failed-webhooks,Endpoint,GET /api/v1/operations/failed-webhooks,VERIFIED
+ctrl:failedWebhooks,Controller,failedWebhooks,VERIFIED
+ep:POST:/api/v1/operations/alerts/:id/acknowledge,Endpoint,POST /api/v1/operations/alerts/:id/acknowledge,VERIFIED
+ctrl:acknowledgeAlert,Controller,acknowledgeAlert,VERIFIED
+ep:POST:/api/v1/operations/alerts/:id/resolve,Endpoint,POST /api/v1/operations/alerts/:id/resolve,VERIFIED
+ctrl:resolveAlert,Controller,resolveAlert,VERIFIED
+ep:POST:/api/v1/operations/retry-queue/:id/retry,Endpoint,POST /api/v1/operations/retry-queue/:id/retry,VERIFIED
+ctrl:retryQueueItem,Controller,retryQueueItem,VERIFIED
+ep:POST:/api/v1/operations/jobs/:id/retry,Endpoint,POST /api/v1/operations/jobs/:id/retry,VERIFIED
+ctrl:retryJob,Controller,retryJob,VERIFIED
+ep:GET:/api/v1/organizations/mine,Endpoint,GET /api/v1/organizations/mine,VERIFIED
+ctrl:getMine,Controller,getMine,VERIFIED
+ep:GET:/api/v1/organizations/roles,Endpoint,GET /api/v1/organizations/roles,VERIFIED
+ctrl:getRoles,Controller,getRoles,VERIFIED
+ep:GET:/api/v1/organizations,Endpoint,GET /api/v1/organizations,VERIFIED
+ep:POST:/api/v1/organizations,Endpoint,POST /api/v1/organizations,VERIFIED
+ep:GET:/api/v1/organizations/:id,Endpoint,GET /api/v1/organizations/:id,VERIFIED
+ep:PUT:/api/v1/organizations/:id,Endpoint,PUT /api/v1/organizations/:id,VERIFIED
+ep:PATCH:/api/v1/organizations/:id/status,Endpoint,PATCH /api/v1/organizations/:id/status,VERIFIED
+ep:POST:/api/v1/organizations/:id/archive,Endpoint,POST /api/v1/organizations/:id/archive,VERIFIED
+ep:POST:/api/v1/organizations/:id/restore,Endpoint,POST /api/v1/organizations/:id/restore,VERIFIED
+ctrl:restore,Controller,restore,VERIFIED
+ep:GET:/api/v1/organizations/:id/members,Endpoint,GET /api/v1/organizations/:id/members,VERIFIED
+ctrl:getMembers,Controller,getMembers,VERIFIED
+ep:POST:/api/v1/organizations/:id/members,Endpoint,POST /api/v1/organizations/:id/members,VERIFIED
+ctrl:addMember,Controller,addMember,VERIFIED
+ep:PUT:/api/v1/organizations/:id/members/:memberId,Endpoint,PUT /api/v1/organizations/:id/members/:memberId,VERIFIED
+ctrl:updateMember,Controller,updateMember,VERIFIED
+ep:DELETE:/api/v1/organizations/:id/members/:memberId,Endpoint,DELETE /api/v1/organizations/:id/members/:memberId,VERIFIED
+ctrl:removeMember,Controller,removeMember,VERIFIED
+ep:GET:/api/v1/organizations/:id/domains,Endpoint,GET /api/v1/organizations/:id/domains,VERIFIED
+ctrl:getDomains,Controller,getDomains,VERIFIED
+ep:POST:/api/v1/organizations/:id/domains,Endpoint,POST /api/v1/organizations/:id/domains,VERIFIED
+ctrl:addDomain,Controller,addDomain,VERIFIED
+ep:PUT:/api/v1/organizations/:id/domains/:domainId,Endpoint,PUT /api/v1/organizations/:id/domains/:domainId,VERIFIED
+ctrl:updateDomain,Controller,updateDomain,VERIFIED
+ep:DELETE:/api/v1/organizations/:id/domains/:domainId,Endpoint,DELETE /api/v1/organizations/:id/domains/:domainId,VERIFIED
+ctrl:deleteDomain,Controller,deleteDomain,VERIFIED
+ep:GET:/api/v1/organizations/:id/branding,Endpoint,GET /api/v1/organizations/:id/branding,VERIFIED
+ep:PUT:/api/v1/organizations/:id/branding,Endpoint,PUT /api/v1/organizations/:id/branding,VERIFIED
+ep:GET:/api/v1/organizations/:id/preferences,Endpoint,GET /api/v1/organizations/:id/preferences,VERIFIED
+ep:PUT:/api/v1/organizations/:id/preferences,Endpoint,PUT /api/v1/organizations/:id/preferences,VERIFIED
+ep:GET:/api/v1/organizations/:id/api-keys,Endpoint,GET /api/v1/organizations/:id/api-keys,VERIFIED
+ctrl:getApiKeys,Controller,getApiKeys,VERIFIED
+ep:POST:/api/v1/organizations/:id/api-keys,Endpoint,POST /api/v1/organizations/:id/api-keys,VERIFIED
+ctrl:createApiKey,Controller,createApiKey,VERIFIED
+ep:DELETE:/api/v1/organizations/:id/api-keys/:keyId,Endpoint,DELETE /api/v1/organizations/:id/api-keys/:keyId,VERIFIED
+ctrl:revokeApiKey,Controller,revokeApiKey,VERIFIED
+ep:GET:/api/v1/organizations/:id/billing,Endpoint,GET /api/v1/organizations/:id/billing,VERIFIED
+ctrl:getBilling,Controller,getBilling,VERIFIED
+ep:PUT:/api/v1/organizations/:id/billing,Endpoint,PUT /api/v1/organizations/:id/billing,VERIFIED
+ctrl:updateBilling,Controller,updateBilling,VERIFIED
+ep:GET:/api/v1/outlets,Endpoint,GET /api/v1/outlets,VERIFIED
+ep:POST:/api/v1/outlets,Endpoint,POST /api/v1/outlets,VERIFIED
+ep:GET:/api/v1/outlets/:id,Endpoint,GET /api/v1/outlets/:id,VERIFIED
+ep:PUT:/api/v1/outlets/:id,Endpoint,PUT /api/v1/outlets/:id,VERIFIED
+ep:POST:/api/v1/outlets/:id/activate,Endpoint,POST /api/v1/outlets/:id/activate,VERIFIED
+ep:POST:/api/v1/outlets/:id/deactivate,Endpoint,POST /api/v1/outlets/:id/deactivate,VERIFIED
+ep:GET:/api/v1/payment-config/limits,Endpoint,GET /api/v1/payment-config/limits,VERIFIED
+ctrl:listLimits,Controller,listLimits,VERIFIED
+ep:POST:/api/v1/payment-config/limits,Endpoint,POST /api/v1/payment-config/limits,VERIFIED
+ctrl:saveLimit,Controller,saveLimit,VERIFIED
+ep:GET:/api/v1/payment-config/merchants/:merchantId,Endpoint,GET /api/v1/payment-config/merchants/:merchantId,VERIFIED
+ctrl:getMerchantConfig,Controller,getMerchantConfig,VERIFIED
+ep:PUT:/api/v1/payment-config/merchants/:merchantId,Endpoint,PUT /api/v1/payment-config/merchants/:merchantId,VERIFIED
+ctrl:saveConfig,Controller,saveConfig,VERIFIED
+ep:GET:/api/v1/payment-links/statistics,Endpoint,GET /api/v1/payment-links/statistics,VERIFIED
+ep:GET:/api/v1/payment-links,Endpoint,GET /api/v1/payment-links,VERIFIED
+ep:POST:/api/v1/payment-links,Endpoint,POST /api/v1/payment-links,VERIFIED
+ep:GET:/api/v1/payment-links/:id/analytics,Endpoint,GET /api/v1/payment-links/:id/analytics,VERIFIED
+ep:GET:/api/v1/payment-links/:id/visits,Endpoint,GET /api/v1/payment-links/:id/visits,VERIFIED
+ctrl:visits,Controller,visits,VERIFIED
+ep:POST:/api/v1/payment-links/:id/clone,Endpoint,POST /api/v1/payment-links/:id/clone,VERIFIED
+ctrl:clone,Controller,clone,VERIFIED
+ep:GET:/api/v1/payment-links/:id/qr,Endpoint,GET /api/v1/payment-links/:id/qr,VERIFIED
+ctrl:qrCode,Controller,qrCode,VERIFIED
+ep:POST:/api/v1/payment-links/:id/enable,Endpoint,POST /api/v1/payment-links/:id/enable,VERIFIED
+ctrl:enable,Controller,enable,VERIFIED
+ep:POST:/api/v1/payment-links/:id/disable,Endpoint,POST /api/v1/payment-links/:id/disable,VERIFIED
+ctrl:disable,Controller,disable,VERIFIED
+ep:POST:/api/v1/payment-links/:id/expire,Endpoint,POST /api/v1/payment-links/:id/expire,VERIFIED
+ctrl:expire,Controller,expire,VERIFIED
+ep:POST:/api/v1/payment-links/:id/regenerate-token,Endpoint,POST /api/v1/payment-links/:id/regenerate-token,VERIFIED
+ctrl:regenerateToken,Controller,regenerateToken,VERIFIED
+ep:GET:/api/v1/payment-links/:id,Endpoint,GET /api/v1/payment-links/:id,VERIFIED
+ep:PUT:/api/v1/payment-links/:id,Endpoint,PUT /api/v1/payment-links/:id,VERIFIED
+ep:GET:/api/v1/public/payment-links/:token,Endpoint,GET /api/v1/public/payment-links/:token,VERIFIED
+ctrl:getByToken,Controller,getByToken,VERIFIED
+ep:POST:/api/v1/public/payment-links/:token/pay,Endpoint,POST /api/v1/public/payment-links/:token/pay,VERIFIED
+ctrl:pay,Controller,pay,VERIFIED
+ep:GET:/api/v1/payments/webhooks/deliveries,Endpoint,GET /api/v1/payments/webhooks/deliveries,VERIFIED
+ctrl:webhookDeliveries,Controller,webhookDeliveries,VERIFIED
+ep:GET:/api/v1/payments/orders,Endpoint,GET /api/v1/payments/orders,VERIFIED
+ctrl:listOrders,Controller,listOrders,VERIFIED
+ep:GET:/api/v1/payments/orders/:id,Endpoint,GET /api/v1/payments/orders/:id,VERIFIED
+ctrl:getOrder,Controller,getOrder,VERIFIED
+ep:POST:/api/v1/payments/sessions,Endpoint,POST /api/v1/payments/sessions,VERIFIED
+ctrl:createSession,Controller,createSession,VERIFIED
+ep:GET:/api/v1/payments/sessions/:id,Endpoint,GET /api/v1/payments/sessions/:id,VERIFIED
+ctrl:getSession,Controller,getSession,VERIFIED
+ep:GET:/api/v1/payments/merchant-config/:merchantId,Endpoint,GET /api/v1/payments/merchant-config/:merchantId,VERIFIED
+ctrl:merchantConfig,Controller,merchantConfig,VERIFIED
+ep:GET:/api/v1/payments/customers/:customerId/profile,Endpoint,GET /api/v1/payments/customers/:customerId/profile,VERIFIED
+ctrl:customerProfile,Controller,customerProfile,VERIFIED
+ep:GET:/api/v1/payments,Endpoint,GET /api/v1/payments,VERIFIED
+ep:POST:/api/v1/payments,Endpoint,POST /api/v1/payments,VERIFIED
+ep:GET:/api/v1/payments/:id,Endpoint,GET /api/v1/payments/:id,VERIFIED
+ep:GET:/api/v1/payments/:id/timeline,Endpoint,GET /api/v1/payments/:id/timeline,VERIFIED
+ep:POST:/api/v1/payments/:id/authorize,Endpoint,POST /api/v1/payments/:id/authorize,VERIFIED
+ctrl:authorize,Controller,authorize,VERIFIED
+ep:POST:/api/v1/payments/:id/capture,Endpoint,POST /api/v1/payments/:id/capture,VERIFIED
+ctrl:capture,Controller,capture,VERIFIED
+ep:POST:/api/v1/payments/:id/cancel,Endpoint,POST /api/v1/payments/:id/cancel,VERIFIED
+ep:POST:/api/v1/payments/:id/refund,Endpoint,POST /api/v1/payments/:id/refund,VERIFIED
+ctrl:refund,Controller,refund,VERIFIED
+ep:POST:/api/v1/payments/:id/retry,Endpoint,POST /api/v1/payments/:id/retry,VERIFIED
+ctrl:retry,Controller,retry,VERIFIED
+ep:POST:/api/v1/payments/:id/expire,Endpoint,POST /api/v1/payments/:id/expire,VERIFIED
+ep:GET:/api/v1/payouts/statistics,Endpoint,GET /api/v1/payouts/statistics,VERIFIED
+ep:GET:/api/v1/payouts/bank-accounts,Endpoint,GET /api/v1/payouts/bank-accounts,VERIFIED
+ctrl:listBankAccounts,Controller,listBankAccounts,VERIFIED
+ep:POST:/api/v1/payouts/bank-accounts,Endpoint,POST /api/v1/payouts/bank-accounts,VERIFIED
+ctrl:createBankAccount,Controller,createBankAccount,VERIFIED
+ep:PATCH:/api/v1/payouts/bank-accounts/:id,Endpoint,PATCH /api/v1/payouts/bank-accounts/:id,VERIFIED
+ctrl:updateBankAccount,Controller,updateBankAccount,VERIFIED
+ep:GET:/api/v1/payouts,Endpoint,GET /api/v1/payouts,VERIFIED
+ep:POST:/api/v1/payouts,Endpoint,POST /api/v1/payouts,VERIFIED
+ep:GET:/api/v1/payouts/:id/history,Endpoint,GET /api/v1/payouts/:id/history,VERIFIED
+ep:POST:/api/v1/payouts/:id/approve,Endpoint,POST /api/v1/payouts/:id/approve,VERIFIED
+ep:POST:/api/v1/payouts/:id/reject,Endpoint,POST /api/v1/payouts/:id/reject,VERIFIED
+ep:POST:/api/v1/payouts/:id/retry,Endpoint,POST /api/v1/payouts/:id/retry,VERIFIED
+ep:GET:/api/v1/payouts/:id,Endpoint,GET /api/v1/payouts/:id,VERIFIED
+ep:GET:/api/v1/permissions,Endpoint,GET /api/v1/permissions,VERIFIED
+ep:GET:/api/v1/pricing,Endpoint,GET /api/v1/pricing,VERIFIED
+ep:POST:/api/v1/pricing,Endpoint,POST /api/v1/pricing,VERIFIED
+ep:GET:/api/v1/pricing/:id,Endpoint,GET /api/v1/pricing/:id,VERIFIED
+ep:GET:/api/v1/public/qr-payments/templates,Endpoint,GET /api/v1/public/qr-payments/templates,VERIFIED
+ctrl:templates,Controller,templates,VERIFIED
+ep:GET:/api/v1/public/qr-payments/categories,Endpoint,GET /api/v1/public/qr-payments/categories,VERIFIED
+ctrl:categories,Controller,categories,VERIFIED
+ep:POST:/api/v1/public/qr-payments/bulk,Endpoint,POST /api/v1/public/qr-payments/bulk,VERIFIED
+ctrl:bulkCreate,Controller,bulkCreate,VERIFIED
+ep:GET:/api/v1/public/qr-payments/statistics,Endpoint,GET /api/v1/public/qr-payments/statistics,VERIFIED
+ep:GET:/api/v1/public/qr-payments,Endpoint,GET /api/v1/public/qr-payments,VERIFIED
+ep:POST:/api/v1/public/qr-payments,Endpoint,POST /api/v1/public/qr-payments,VERIFIED
+ep:GET:/api/v1/public/qr-payments/:id/download/svg,Endpoint,GET /api/v1/public/qr-payments/:id/download/svg,VERIFIED
+ctrl:downloadSvg,Controller,downloadSvg,VERIFIED
+ep:GET:/api/v1/public/qr-payments/:id/download,Endpoint,GET /api/v1/public/qr-payments/:id/download,VERIFIED
+ep:GET:/api/v1/public/qr-payments/:id/scan-history,Endpoint,GET /api/v1/public/qr-payments/:id/scan-history,VERIFIED
+ctrl:scanHistory,Controller,scanHistory,VERIFIED
+ep:POST:/api/v1/public/qr-payments/:id/clone,Endpoint,POST /api/v1/public/qr-payments/:id/clone,VERIFIED
+ep:POST:/api/v1/public/qr-payments/:id/archive,Endpoint,POST /api/v1/public/qr-payments/:id/archive,VERIFIED
+ep:POST:/api/v1/public/qr-payments/:id/enable,Endpoint,POST /api/v1/public/qr-payments/:id/enable,VERIFIED
+ep:POST:/api/v1/public/qr-payments/:id/disable,Endpoint,POST /api/v1/public/qr-payments/:id/disable,VERIFIED
+ep:POST:/api/v1/public/qr-payments/:id/regenerate,Endpoint,POST /api/v1/public/qr-payments/:id/regenerate,VERIFIED
+ctrl:regenerate,Controller,regenerate,VERIFIED
+ep:GET:/api/v1/public/qr-payments/:id,Endpoint,GET /api/v1/public/qr-payments/:id,VERIFIED
+ep:PUT:/api/v1/public/qr-payments/:id,Endpoint,PUT /api/v1/public/qr-payments/:id,VERIFIED
+ep:GET:/api/v1/reconciliation/dashboard,Endpoint,GET /api/v1/reconciliation/dashboard,VERIFIED
+ep:GET:/api/v1/reconciliation/imports,Endpoint,GET /api/v1/reconciliation/imports,VERIFIED
+ctrl:listImports,Controller,listImports,VERIFIED
+ep:POST:/api/v1/reconciliation/imports,Endpoint,POST /api/v1/reconciliation/imports,VERIFIED
+ctrl:createImport,Controller,createImport,VERIFIED
+ep:GET:/api/v1/reconciliation/imports/:id,Endpoint,GET /api/v1/reconciliation/imports/:id,VERIFIED
+ctrl:getImport,Controller,getImport,VERIFIED
+ep:PUT:/api/v1/reconciliation/imports/:id,Endpoint,PUT /api/v1/reconciliation/imports/:id,VERIFIED
+ctrl:updateImport,Controller,updateImport,VERIFIED
+ep:DELETE:/api/v1/reconciliation/imports/:id,Endpoint,DELETE /api/v1/reconciliation/imports/:id,VERIFIED
+ctrl:deleteImport,Controller,deleteImport,VERIFIED
+ep:POST:/api/v1/reconciliation/imports/:importId/records,Endpoint,POST /api/v1/reconciliation/imports/:importId/records,VERIFIED
+ctrl:createRecord,Controller,createRecord,VERIFIED
+ep:GET:/api/v1/reconciliation/records,Endpoint,GET /api/v1/reconciliation/records,VERIFIED
+ctrl:listRecords,Controller,listRecords,VERIFIED
+ep:GET:/api/v1/reconciliation/records/:id,Endpoint,GET /api/v1/reconciliation/records/:id,VERIFIED
+ctrl:getRecord,Controller,getRecord,VERIFIED
+ep:POST:/api/v1/reconciliation/records/:id/match,Endpoint,POST /api/v1/reconciliation/records/:id/match,VERIFIED
+ctrl:matchRecord,Controller,matchRecord,VERIFIED
+ep:GET:/api/v1/refunds/statistics,Endpoint,GET /api/v1/refunds/statistics,VERIFIED
+ep:GET:/api/v1/refunds,Endpoint,GET /api/v1/refunds,VERIFIED
+ep:POST:/api/v1/refunds,Endpoint,POST /api/v1/refunds,VERIFIED
+ep:GET:/api/v1/refunds/:id/history,Endpoint,GET /api/v1/refunds/:id/history,VERIFIED
+ep:GET:/api/v1/refunds/:id,Endpoint,GET /api/v1/refunds/:id,VERIFIED
+ep:POST:/api/v1/refunds/:id/approve,Endpoint,POST /api/v1/refunds/:id/approve,VERIFIED
+ep:POST:/api/v1/refunds/:id/reject,Endpoint,POST /api/v1/refunds/:id/reject,VERIFIED
+ep:GET:/api/v1/analytics/overview,Endpoint,GET /api/v1/analytics/overview,VERIFIED
+ctrl:overview,Controller,overview,VERIFIED
+ep:GET:/api/v1/analytics/revenue,Endpoint,GET /api/v1/analytics/revenue,VERIFIED
+ctrl:revenue,Controller,revenue,VERIFIED
+ep:GET:/api/v1/analytics/transactions,Endpoint,GET /api/v1/analytics/transactions,VERIFIED
+ep:GET:/api/v1/analytics/settlements,Endpoint,GET /api/v1/analytics/settlements,VERIFIED
+ep:GET:/api/v1/analytics/merchants,Endpoint,GET /api/v1/analytics/merchants,VERIFIED
+ep:GET:/api/v1/analytics/customers,Endpoint,GET /api/v1/analytics/customers,VERIFIED
+ctrl:customers,Controller,customers,VERIFIED
+ep:GET:/api/v1/analytics/refunds,Endpoint,GET /api/v1/analytics/refunds,VERIFIED
+ctrl:refunds,Controller,refunds,VERIFIED
+ep:GET:/api/v1/analytics/chargebacks,Endpoint,GET /api/v1/analytics/chargebacks,VERIFIED
+ctrl:chargebacks,Controller,chargebacks,VERIFIED
+ep:GET:/api/v1/analytics/payouts,Endpoint,GET /api/v1/analytics/payouts,VERIFIED
+ctrl:payouts,Controller,payouts,VERIFIED
+ep:GET:/api/v1/analytics/payment-links,Endpoint,GET /api/v1/analytics/payment-links,VERIFIED
+ctrl:paymentLinks,Controller,paymentLinks,VERIFIED
+ep:GET:/api/v1/analytics/invoices,Endpoint,GET /api/v1/analytics/invoices,VERIFIED
+ctrl:invoices,Controller,invoices,VERIFIED
+ep:GET:/api/v1/analytics/qr-payments,Endpoint,GET /api/v1/analytics/qr-payments,VERIFIED
+ctrl:qrPayments,Controller,qrPayments,VERIFIED
+ep:GET:/api/v1/analytics/subscriptions,Endpoint,GET /api/v1/analytics/subscriptions,VERIFIED
+ctrl:subscriptions,Controller,subscriptions,VERIFIED
+ep:GET:/api/v1/analytics/support,Endpoint,GET /api/v1/analytics/support,VERIFIED
+ctrl:support,Controller,support,VERIFIED
+ep:GET:/api/v1/analytics/operations,Endpoint,GET /api/v1/analytics/operations,VERIFIED
+ctrl:operations,Controller,operations,VERIFIED
+ep:GET:/api/v1/analytics/payment-methods,Endpoint,GET /api/v1/analytics/payment-methods,VERIFIED
+ep:GET:/api/v1/analytics/regional,Endpoint,GET /api/v1/analytics/regional,VERIFIED
+ctrl:regional,Controller,regional,VERIFIED
+ep:GET:/api/v1/analytics/export,Endpoint,GET /api/v1/analytics/export,VERIFIED
+ep:GET:/api/v1/reports/center/catalog,Endpoint,GET /api/v1/reports/center/catalog,VERIFIED
+ctrl:catalog,Controller,catalog,VERIFIED
+ep:GET:/api/v1/reports/center/saved-filters,Endpoint,GET /api/v1/reports/center/saved-filters,VERIFIED
+ctrl:savedFilters,Controller,savedFilters,VERIFIED
+ep:POST:/api/v1/reports/center/saved-filters,Endpoint,POST /api/v1/reports/center/saved-filters,VERIFIED
+ctrl:saveFilter,Controller,saveFilter,VERIFIED
+ep:DELETE:/api/v1/reports/center/saved-filters/:id,Endpoint,DELETE /api/v1/reports/center/saved-filters/:id,VERIFIED
+ctrl:deleteFilter,Controller,deleteFilter,VERIFIED
+ep:POST:/api/v1/reports/center/generate,Endpoint,POST /api/v1/reports/center/generate,VERIFIED
+ctrl:generate,Controller,generate,VERIFIED
+ep:POST:/api/v1/reports/center/export,Endpoint,POST /api/v1/reports/center/export,VERIFIED
+ep:GET:/api/v1/reports/center/export-history,Endpoint,GET /api/v1/reports/center/export-history,VERIFIED
+ctrl:exportHistory,Controller,exportHistory,VERIFIED
+ep:GET:/api/v1/reports/templates,Endpoint,GET /api/v1/reports/templates,VERIFIED
+ep:GET:/api/v1/reports/categories,Endpoint,GET /api/v1/reports/categories,VERIFIED
+ep:GET:/api/v1/reports/history,Endpoint,GET /api/v1/reports/history,VERIFIED
+ep:GET:/api/v1/reports/scheduled,Endpoint,GET /api/v1/reports/scheduled,VERIFIED
+ctrl:scheduled,Controller,scheduled,VERIFIED
+ep:POST:/api/v1/reports/scheduled,Endpoint,POST /api/v1/reports/scheduled,VERIFIED
+ctrl:createScheduled,Controller,createScheduled,VERIFIED
+ep:PUT:/api/v1/reports/scheduled/:id,Endpoint,PUT /api/v1/reports/scheduled/:id,VERIFIED
+ctrl:updateScheduled,Controller,updateScheduled,VERIFIED
+ep:DELETE:/api/v1/reports/scheduled/:id,Endpoint,DELETE /api/v1/reports/scheduled/:id,VERIFIED
+ctrl:deleteScheduled,Controller,deleteScheduled,VERIFIED
+ep:POST:/api/v1/reports/run,Endpoint,POST /api/v1/reports/run,VERIFIED
+ctrl:run,Controller,run,VERIFIED
+ep:POST:/api/v1/reports/export,Endpoint,POST /api/v1/reports/export,VERIFIED
+ep:GET:/api/v1/reports,Endpoint,GET /api/v1/reports,VERIFIED
+ep:POST:/api/v1/reports,Endpoint,POST /api/v1/reports,VERIFIED
+ep:GET:/api/v1/reports/:id,Endpoint,GET /api/v1/reports/:id,VERIFIED
+ep:PUT:/api/v1/reports/:id,Endpoint,PUT /api/v1/reports/:id,VERIFIED
+ep:DELETE:/api/v1/reports/:id,Endpoint,DELETE /api/v1/reports/:id,VERIFIED
+ctrl:delete,Controller,delete,VERIFIED
+ep:GET:/api/v1/risk-rules,Endpoint,GET /api/v1/risk-rules,VERIFIED
+ep:POST:/api/v1/risk-rules,Endpoint,POST /api/v1/risk-rules,VERIFIED
+ep:GET:/api/v1/risk-rules/:id,Endpoint,GET /api/v1/risk-rules/:id,VERIFIED
+ep:PUT:/api/v1/risk-rules/:id,Endpoint,PUT /api/v1/risk-rules/:id,VERIFIED
+ep:POST:/api/v1/risk-rules/:id/evaluate,Endpoint,POST /api/v1/risk-rules/:id/evaluate,VERIFIED
+ctrl:evaluate,Controller,evaluate,VERIFIED
+ep:GET:/api/v1/roles,Endpoint,GET /api/v1/roles,VERIFIED
+ep:POST:/api/v1/roles,Endpoint,POST /api/v1/roles,VERIFIED
+ep:GET:/api/v1/roles/:id,Endpoint,GET /api/v1/roles/:id,VERIFIED
+ep:PUT:/api/v1/roles/:id,Endpoint,PUT /api/v1/roles/:id,VERIFIED
+ep:DELETE:/api/v1/roles/:id,Endpoint,DELETE /api/v1/roles/:id,VERIFIED
+ep:PUT:/api/v1/roles/:id/permissions,Endpoint,PUT /api/v1/roles/:id/permissions,VERIFIED
+ctrl:assignPermissions,Controller,assignPermissions,VERIFIED
+ep:GET:/api/v1/sandbox/dashboard,Endpoint,GET /api/v1/sandbox/dashboard,VERIFIED
+ep:GET:/api/v1/sandbox/accounts,Endpoint,GET /api/v1/sandbox/accounts,VERIFIED
+ep:POST:/api/v1/sandbox/accounts,Endpoint,POST /api/v1/sandbox/accounts,VERIFIED
+ctrl:createAccount,Controller,createAccount,VERIFIED
+ep:GET:/api/v1/sandbox/accounts/:id,Endpoint,GET /api/v1/sandbox/accounts/:id,VERIFIED
+ctrl:getAccount,Controller,getAccount,VERIFIED
+ep:PUT:/api/v1/sandbox/accounts/:id,Endpoint,PUT /api/v1/sandbox/accounts/:id,VERIFIED
+ctrl:updateAccount,Controller,updateAccount,VERIFIED
+ep:DELETE:/api/v1/sandbox/accounts/:id,Endpoint,DELETE /api/v1/sandbox/accounts/:id,VERIFIED
+ctrl:deleteAccount,Controller,deleteAccount,VERIFIED
+ep:GET:/api/v1/sandbox/test-cards,Endpoint,GET /api/v1/sandbox/test-cards,VERIFIED
+ctrl:listTestCards,Controller,listTestCards,VERIFIED
+ep:GET:/api/v1/sandbox/simulations,Endpoint,GET /api/v1/sandbox/simulations,VERIFIED
+ctrl:listSimulations,Controller,listSimulations,VERIFIED
+ep:POST:/api/v1/sandbox/simulations,Endpoint,POST /api/v1/sandbox/simulations,VERIFIED
+ctrl:createSimulation,Controller,createSimulation,VERIFIED
+ep:GET:/api/v1/sandbox/simulations/:id,Endpoint,GET /api/v1/sandbox/simulations/:id,VERIFIED
+ctrl:getSimulation,Controller,getSimulation,VERIFIED
+ep:PUT:/api/v1/sandbox/simulations/:id,Endpoint,PUT /api/v1/sandbox/simulations/:id,VERIFIED
+ctrl:updateSimulation,Controller,updateSimulation,VERIFIED
+ep:DELETE:/api/v1/sandbox/simulations/:id,Endpoint,DELETE /api/v1/sandbox/simulations/:id,VERIFIED
+ctrl:deleteSimulation,Controller,deleteSimulation,VERIFIED
+ep:GET:/api/v1/search,Endpoint,GET /api/v1/search,VERIFIED
+ep:GET:/api/v1/settings/public/branding,Endpoint,GET /api/v1/settings/public/branding,VERIFIED
+ctrl:getPublicBranding,Controller,getPublicBranding,VERIFIED
+ep:GET:/api/v1/settings/public/feature-flags,Endpoint,GET /api/v1/settings/public/feature-flags,VERIFIED
+ctrl:getPublicFeatureFlags,Controller,getPublicFeatureFlags,VERIFIED
+ep:GET:/api/v1/settings/overview,Endpoint,GET /api/v1/settings/overview,VERIFIED
+ep:GET:/api/v1/settings/organization,Endpoint,GET /api/v1/settings/organization,VERIFIED
+ctrl:getOrganization,Controller,getOrganization,VERIFIED
+ep:PUT:/api/v1/settings/organization,Endpoint,PUT /api/v1/settings/organization,VERIFIED
+ctrl:updateOrganization,Controller,updateOrganization,VERIFIED
+ep:GET:/api/v1/settings/branding,Endpoint,GET /api/v1/settings/branding,VERIFIED
+ep:PUT:/api/v1/settings/branding,Endpoint,PUT /api/v1/settings/branding,VERIFIED
+ep:GET:/api/v1/settings/security,Endpoint,GET /api/v1/settings/security,VERIFIED
+ctrl:getSecurity,Controller,getSecurity,VERIFIED
+ep:PUT:/api/v1/settings/security,Endpoint,PUT /api/v1/settings/security,VERIFIED
+ctrl:updateSecurity,Controller,updateSecurity,VERIFIED
+ep:GET:/api/v1/settings/password-policy,Endpoint,GET /api/v1/settings/password-policy,VERIFIED
+ctrl:getPasswordPolicy,Controller,getPasswordPolicy,VERIFIED
+ep:PUT:/api/v1/settings/password-policy,Endpoint,PUT /api/v1/settings/password-policy,VERIFIED
+ctrl:updatePasswordPolicy,Controller,updatePasswordPolicy,VERIFIED
+ep:GET:/api/v1/settings/session,Endpoint,GET /api/v1/settings/session,VERIFIED
+ep:PUT:/api/v1/settings/session,Endpoint,PUT /api/v1/settings/session,VERIFIED
+ctrl:updateSessionSettings,Controller,updateSessionSettings,VERIFIED
+ep:GET:/api/v1/settings/notifications/me,Endpoint,GET /api/v1/settings/notifications/me,VERIFIED
+ctrl:getUserNotifications,Controller,getUserNotifications,VERIFIED
+ep:PUT:/api/v1/settings/notifications/me,Endpoint,PUT /api/v1/settings/notifications/me,VERIFIED
+ctrl:updateUserNotifications,Controller,updateUserNotifications,VERIFIED
+ep:GET:/api/v1/settings/notifications/defaults,Endpoint,GET /api/v1/settings/notifications/defaults,VERIFIED
+ctrl:getDefaultNotifications,Controller,getDefaultNotifications,VERIFIED
+ep:PUT:/api/v1/settings/notifications/defaults,Endpoint,PUT /api/v1/settings/notifications/defaults,VERIFIED
+ctrl:updateDefaultNotifications,Controller,updateDefaultNotifications,VERIFIED
+ep:GET:/api/v1/settings/configuration,Endpoint,GET /api/v1/settings/configuration,VERIFIED
+ctrl:listPlatformConfig,Controller,listPlatformConfig,VERIFIED
+ep:PUT:/api/v1/settings/configuration,Endpoint,PUT /api/v1/settings/configuration,VERIFIED
+ctrl:updatePlatformConfig,Controller,updatePlatformConfig,VERIFIED
+ep:GET:/api/v1/settings/feature-flags,Endpoint,GET /api/v1/settings/feature-flags,VERIFIED
+ctrl:listFeatureFlags,Controller,listFeatureFlags,VERIFIED
+ep:POST:/api/v1/settings/feature-flags,Endpoint,POST /api/v1/settings/feature-flags,VERIFIED
+ctrl:createFeatureFlag,Controller,createFeatureFlag,VERIFIED
+ep:GET:/api/v1/settings/feature-flags/:id,Endpoint,GET /api/v1/settings/feature-flags/:id,VERIFIED
+ctrl:getFeatureFlag,Controller,getFeatureFlag,VERIFIED
+ep:PUT:/api/v1/settings/feature-flags/:id,Endpoint,PUT /api/v1/settings/feature-flags/:id,VERIFIED
+ctrl:updateFeatureFlag,Controller,updateFeatureFlag,VERIFIED
+ep:DELETE:/api/v1/settings/feature-flags/:id,Endpoint,DELETE /api/v1/settings/feature-flags/:id,VERIFIED
+ctrl:deleteFeatureFlag,Controller,deleteFeatureFlag,VERIFIED
+ep:GET:/api/v1/settings/api,Endpoint,GET /api/v1/settings/api,VERIFIED
+ctrl:getApiSettings,Controller,getApiSettings,VERIFIED
+ep:PUT:/api/v1/settings/api,Endpoint,PUT /api/v1/settings/api,VERIFIED
+ctrl:updateApiSettings,Controller,updateApiSettings,VERIFIED
+ep:GET:/api/v1/settings/smtp,Endpoint,GET /api/v1/settings/smtp,VERIFIED
+ctrl:getSmtpSettings,Controller,getSmtpSettings,VERIFIED
+ep:PUT:/api/v1/settings/smtp,Endpoint,PUT /api/v1/settings/smtp,VERIFIED
+ctrl:updateSmtpSettings,Controller,updateSmtpSettings,VERIFIED
+ep:GET:/api/v1/settings/storage,Endpoint,GET /api/v1/settings/storage,VERIFIED
+ctrl:getStorageSettings,Controller,getStorageSettings,VERIFIED
+ep:PUT:/api/v1/settings/storage,Endpoint,PUT /api/v1/settings/storage,VERIFIED
+ctrl:updateStorageSettings,Controller,updateStorageSettings,VERIFIED
+ep:GET:/api/v1/settings/rate-limits,Endpoint,GET /api/v1/settings/rate-limits,VERIFIED
+ctrl:listRateLimits,Controller,listRateLimits,VERIFIED
+ep:PUT:/api/v1/settings/rate-limits,Endpoint,PUT /api/v1/settings/rate-limits,VERIFIED
+ctrl:upsertRateLimit,Controller,upsertRateLimit,VERIFIED
+ep:PUT:/api/v1/settings/security/geo-login,Endpoint,PUT /api/v1/settings/security/geo-login,VERIFIED
+ctrl:updateGeoLogin,Controller,updateGeoLogin,VERIFIED
+ep:GET:/api/v1/settings/security/api-ip-restrictions,Endpoint,GET /api/v1/settings/security/api-ip-restrictions,VERIFIED
+ctrl:getApiIpRestrictions,Controller,getApiIpRestrictions,VERIFIED
+ep:PUT:/api/v1/settings/security/api-ip-restrictions,Endpoint,PUT /api/v1/settings/security/api-ip-restrictions,VERIFIED
+ctrl:updateApiIpRestrictions,Controller,updateApiIpRestrictions,VERIFIED
+ep:GET:/api/v1/settlements/calendar,Endpoint,GET /api/v1/settlements/calendar,VERIFIED
+ctrl:calendar,Controller,calendar,VERIFIED
+ep:GET:/api/v1/settlements/reserves,Endpoint,GET /api/v1/settlements/reserves,VERIFIED
+ctrl:listReserves,Controller,listReserves,VERIFIED
+ep:POST:/api/v1/settlements/merchants/:merchantId/reserves,Endpoint,POST /api/v1/settlements/merchants/:merchantId/reserves,VERIFIED
+ctrl:createReserve,Controller,createReserve,VERIFIED
+ep:GET:/api/v1/settlements/search,Endpoint,GET /api/v1/settlements/search,VERIFIED
+ep:GET:/api/v1/settlements/statistics,Endpoint,GET /api/v1/settlements/statistics,VERIFIED
+ep:GET:/api/v1/settlements/export,Endpoint,GET /api/v1/settlements/export,VERIFIED
+ep:GET:/api/v1/settlements/batches,Endpoint,GET /api/v1/settlements/batches,VERIFIED
+ctrl:batches,Controller,batches,VERIFIED
+ep:POST:/api/v1/settlements/batches,Endpoint,POST /api/v1/settlements/batches,VERIFIED
+ctrl:createBatch,Controller,createBatch,VERIFIED
+ep:GET:/api/v1/settlements/batches/:id,Endpoint,GET /api/v1/settlements/batches/:id,VERIFIED
+ctrl:batchById,Controller,batchById,VERIFIED
+ep:GET:/api/v1/settlements,Endpoint,GET /api/v1/settlements,VERIFIED
+ep:POST:/api/v1/settlements,Endpoint,POST /api/v1/settlements,VERIFIED
+ep:GET:/api/v1/settlements/:id,Endpoint,GET /api/v1/settlements/:id,VERIFIED
+ep:PATCH:/api/v1/settlements/:id/status,Endpoint,PATCH /api/v1/settlements/:id/status,VERIFIED
+ep:GET:/api/v1/settlements/:id/transactions,Endpoint,GET /api/v1/settlements/:id/transactions,VERIFIED
+ep:POST:/api/v1/settlements/:id/hold,Endpoint,POST /api/v1/settlements/:id/hold,VERIFIED
+ctrl:hold,Controller,hold,VERIFIED
+ep:POST:/api/v1/settlements/:id/release,Endpoint,POST /api/v1/settlements/:id/release,VERIFIED
+ep:POST:/api/v1/settlements/:id/retry,Endpoint,POST /api/v1/settlements/:id/retry,VERIFIED
+ep:POST:/api/v1/settlements/:id/reversal,Endpoint,POST /api/v1/settlements/:id/reversal,VERIFIED
+ctrl:reversal,Controller,reversal,VERIFIED
+ep:GET:/api/v1/smart-collect/dashboard,Endpoint,GET /api/v1/smart-collect/dashboard,VERIFIED
+ep:GET:/api/v1/smart-collect/virtual-accounts,Endpoint,GET /api/v1/smart-collect/virtual-accounts,VERIFIED
+ctrl:listVirtualAccounts,Controller,listVirtualAccounts,VERIFIED
+ep:POST:/api/v1/smart-collect/virtual-accounts,Endpoint,POST /api/v1/smart-collect/virtual-accounts,VERIFIED
+ctrl:createVirtualAccount,Controller,createVirtualAccount,VERIFIED
+ep:GET:/api/v1/smart-collect/virtual-accounts/:id,Endpoint,GET /api/v1/smart-collect/virtual-accounts/:id,VERIFIED
+ctrl:getVirtualAccount,Controller,getVirtualAccount,VERIFIED
+ep:GET:/api/v1/smart-collect/collections,Endpoint,GET /api/v1/smart-collect/collections,VERIFIED
+ctrl:listCollections,Controller,listCollections,VERIFIED
+ep:GET:/api/v1/smart-collect/collections/:id,Endpoint,GET /api/v1/smart-collect/collections/:id,VERIFIED
+ctrl:getCollection,Controller,getCollection,VERIFIED
+ep:POST:/api/v1/smart-collect/collections/:id/match,Endpoint,POST /api/v1/smart-collect/collections/:id/match,VERIFIED
+ctrl:matchCollection,Controller,matchCollection,VERIFIED
+ep:GET:/api/v1/subscriptions/statistics,Endpoint,GET /api/v1/subscriptions/statistics,VERIFIED
+ep:GET:/api/v1/subscriptions/analytics,Endpoint,GET /api/v1/subscriptions/analytics,VERIFIED
+ep:GET:/api/v1/subscriptions/dunning,Endpoint,GET /api/v1/subscriptions/dunning,VERIFIED
+ctrl:listDunning,Controller,listDunning,VERIFIED
+ep:GET:/api/v1/subscriptions/mandates,Endpoint,GET /api/v1/subscriptions/mandates,VERIFIED
+ctrl:listMandates,Controller,listMandates,VERIFIED
+ep:GET:/api/v1/subscriptions/plans,Endpoint,GET /api/v1/subscriptions/plans,VERIFIED
+ctrl:listPlans,Controller,listPlans,VERIFIED
+ep:POST:/api/v1/subscriptions/plans,Endpoint,POST /api/v1/subscriptions/plans,VERIFIED
+ctrl:createPlan,Controller,createPlan,VERIFIED
+ep:GET:/api/v1/subscriptions,Endpoint,GET /api/v1/subscriptions,VERIFIED
+ep:POST:/api/v1/subscriptions,Endpoint,POST /api/v1/subscriptions,VERIFIED
+ep:POST:/api/v1/subscriptions/:id/pause,Endpoint,POST /api/v1/subscriptions/:id/pause,VERIFIED
+ctrl:pause,Controller,pause,VERIFIED
+ep:POST:/api/v1/subscriptions/:id/resume,Endpoint,POST /api/v1/subscriptions/:id/resume,VERIFIED
+ctrl:resume,Controller,resume,VERIFIED
+ep:POST:/api/v1/subscriptions/:id/upgrade,Endpoint,POST /api/v1/subscriptions/:id/upgrade,VERIFIED
+ctrl:upgrade,Controller,upgrade,VERIFIED
+ep:POST:/api/v1/subscriptions/:id/downgrade,Endpoint,POST /api/v1/subscriptions/:id/downgrade,VERIFIED
+ctrl:downgrade,Controller,downgrade,VERIFIED
+ep:POST:/api/v1/subscriptions/:id/cancel,Endpoint,POST /api/v1/subscriptions/:id/cancel,VERIFIED
+ep:POST:/api/v1/subscriptions/:id/renew,Endpoint,POST /api/v1/subscriptions/:id/renew,VERIFIED
+ctrl:renew,Controller,renew,VERIFIED
+ep:POST:/api/v1/subscriptions/:id/fail,Endpoint,POST /api/v1/subscriptions/:id/fail,VERIFIED
+ctrl:markFailed,Controller,markFailed,VERIFIED
+ep:GET:/api/v1/subscriptions/:id,Endpoint,GET /api/v1/subscriptions/:id,VERIFIED
+ep:GET:/api/v1/support/statistics,Endpoint,GET /api/v1/support/statistics,VERIFIED
+ep:GET:/api/v1/support,Endpoint,GET /api/v1/support,VERIFIED
+ep:POST:/api/v1/support,Endpoint,POST /api/v1/support,VERIFIED
+ep:GET:/api/v1/support/:id,Endpoint,GET /api/v1/support/:id,VERIFIED
+ep:PUT:/api/v1/support/:id,Endpoint,PUT /api/v1/support/:id,VERIFIED
+ep:POST:/api/v1/support/:id/assign,Endpoint,POST /api/v1/support/:id/assign,VERIFIED
+ctrl:assign,Controller,assign,VERIFIED
+ep:POST:/api/v1/support/:id/reassign,Endpoint,POST /api/v1/support/:id/reassign,VERIFIED
+ep:POST:/api/v1/support/:id/escalate,Endpoint,POST /api/v1/support/:id/escalate,VERIFIED
+ctrl:escalate,Controller,escalate,VERIFIED
+ep:POST:/api/v1/support/:id/close,Endpoint,POST /api/v1/support/:id/close,VERIFIED
+ctrl:close,Controller,close,VERIFIED
+ep:POST:/api/v1/support/:id/reopen,Endpoint,POST /api/v1/support/:id/reopen,VERIFIED
+ctrl:reopen,Controller,reopen,VERIFIED
+ep:POST:/api/v1/support/:id/notes,Endpoint,POST /api/v1/support/:id/notes,VERIFIED
+ctrl:addNote,Controller,addNote,VERIFIED
+ep:POST:/api/v1/support/:id/attachments,Endpoint,POST /api/v1/support/:id/attachments,VERIFIED
+ctrl:addAttachment,Controller,addAttachment,VERIFIED
+ep:GET:/api/v1/system/admin/status,Endpoint,GET /api/v1/system/admin/status,VERIFIED
+ctrl:adminStatus,Controller,adminStatus,VERIFIED
+ep:GET:/api/v1/system/health,Endpoint,GET /api/v1/system/health,VERIFIED
+ep:GET:/api/v1/system/liveness,Endpoint,GET /api/v1/system/liveness,VERIFIED
+ctrl:liveness,Controller,liveness,VERIFIED
+ep:GET:/api/v1/system/readiness,Endpoint,GET /api/v1/system/readiness,VERIFIED
+ctrl:readiness,Controller,readiness,VERIFIED
+ep:GET:/api/v1/system/metrics,Endpoint,GET /api/v1/system/metrics,VERIFIED
+ctrl:metrics,Controller,metrics,VERIFIED
+ep:GET:/api/v1/system/version,Endpoint,GET /api/v1/system/version,VERIFIED
+ctrl:version,Controller,version,VERIFIED
+ep:GET:/api/v1/system/cache-config,Endpoint,GET /api/v1/system/cache-config,VERIFIED
+ctrl:listCacheConfig,Controller,listCacheConfig,VERIFIED
+ep:PUT:/api/v1/system/cache-config/:id,Endpoint,PUT /api/v1/system/cache-config/:id,VERIFIED
+ctrl:updateCacheConfig,Controller,updateCacheConfig,VERIFIED
+ep:GET:/api/v1/system/backup-config,Endpoint,GET /api/v1/system/backup-config,VERIFIED
+ctrl:listBackupConfig,Controller,listBackupConfig,VERIFIED
+ep:PUT:/api/v1/system/backup-config/:id,Endpoint,PUT /api/v1/system/backup-config/:id,VERIFIED
+ctrl:updateBackupConfig,Controller,updateBackupConfig,VERIFIED
+ep:GET:/api/v1/system/jobs/history,Endpoint,GET /api/v1/system/jobs/history,VERIFIED
+ctrl:jobHistory,Controller,jobHistory,VERIFIED
+ep:GET:/api/v1/system/performance,Endpoint,GET /api/v1/system/performance,VERIFIED
+ctrl:performanceMetrics,Controller,performanceMetrics,VERIFIED
+ep:GET:/api/v1/transactions/search,Endpoint,GET /api/v1/transactions/search,VERIFIED
+ep:GET:/api/v1/transactions/statistics,Endpoint,GET /api/v1/transactions/statistics,VERIFIED
+ep:GET:/api/v1/transactions/export,Endpoint,GET /api/v1/transactions/export,VERIFIED
+ep:GET:/api/v1/transactions/disputes,Endpoint,GET /api/v1/transactions/disputes,VERIFIED
+ctrl:disputes,Controller,disputes,VERIFIED
+ep:POST:/api/v1/transactions/disputes,Endpoint,POST /api/v1/transactions/disputes,VERIFIED
+ctrl:createDispute,Controller,createDispute,VERIFIED
+ep:GET:/api/v1/transactions,Endpoint,GET /api/v1/transactions,VERIFIED
+ep:POST:/api/v1/transactions,Endpoint,POST /api/v1/transactions,VERIFIED
+ep:GET:/api/v1/transactions/:id,Endpoint,GET /api/v1/transactions/:id,VERIFIED
+ep:PATCH:/api/v1/transactions/:id/status,Endpoint,PATCH /api/v1/transactions/:id/status,VERIFIED
+ep:POST:/api/v1/transactions/:id/refund,Endpoint,POST /api/v1/transactions/:id/refund,VERIFIED
+ep:GET:/api/v1/users,Endpoint,GET /api/v1/users,VERIFIED
+ep:POST:/api/v1/users,Endpoint,POST /api/v1/users,VERIFIED
+ep:GET:/api/v1/users/:id,Endpoint,GET /api/v1/users/:id,VERIFIED
+ep:PUT:/api/v1/users/:id,Endpoint,PUT /api/v1/users/:id,VERIFIED
+ep:PATCH:/api/v1/users/:id/status,Endpoint,PATCH /api/v1/users/:id/status,VERIFIED
+ep:DELETE:/api/v1/users/:id,Endpoint,DELETE /api/v1/users/:id,VERIFIED
+ep:PUT:/api/v1/users/:id/roles,Endpoint,PUT /api/v1/users/:id/roles,VERIFIED
+ctrl:assignRoles,Controller,assignRoles,VERIFIED
+ep:GET:/api/v1/webhooks/dashboard,Endpoint,GET /api/v1/webhooks/dashboard,VERIFIED
+ep:GET:/api/v1/webhooks/endpoints,Endpoint,GET /api/v1/webhooks/endpoints,VERIFIED
+ctrl:listWebhooks,Controller,listWebhooks,VERIFIED
+ep:POST:/api/v1/webhooks/endpoints,Endpoint,POST /api/v1/webhooks/endpoints,VERIFIED
+ctrl:createWebhook,Controller,createWebhook,VERIFIED
+ep:GET:/api/v1/webhooks/endpoints/:id,Endpoint,GET /api/v1/webhooks/endpoints/:id,VERIFIED
+ctrl:getWebhook,Controller,getWebhook,VERIFIED
+ep:PUT:/api/v1/webhooks/endpoints/:id,Endpoint,PUT /api/v1/webhooks/endpoints/:id,VERIFIED
+ctrl:updateWebhook,Controller,updateWebhook,VERIFIED
+ep:DELETE:/api/v1/webhooks/endpoints/:id,Endpoint,DELETE /api/v1/webhooks/endpoints/:id,VERIFIED
+ctrl:deleteWebhook,Controller,deleteWebhook,VERIFIED
+ep:POST:/api/v1/webhooks/endpoints/:id/subscriptions,Endpoint,POST /api/v1/webhooks/endpoints/:id/subscriptions,VERIFIED
+ctrl:createSubscription,Controller,createSubscription,VERIFIED
+ep:PUT:/api/v1/webhooks/endpoints/:id/subscriptions/:subId,Endpoint,PUT /api/v1/webhooks/endpoints/:id/subscriptions/:subId,VERIFIED
+ctrl:updateSubscription,Controller,updateSubscription,VERIFIED
+ep:DELETE:/api/v1/webhooks/endpoints/:id/subscriptions/:subId,Endpoint,DELETE /api/v1/webhooks/endpoints/:id/subscriptions/:subId,VERIFIED
+ctrl:deleteSubscription,Controller,deleteSubscription,VERIFIED
+ep:GET:/api/v1/webhooks/deliveries,Endpoint,GET /api/v1/webhooks/deliveries,VERIFIED
+ctrl:listDeliveries,Controller,listDeliveries,VERIFIED
+ep:GET:/api/v1/webhooks/deliveries/:id,Endpoint,GET /api/v1/webhooks/deliveries/:id,VERIFIED
+ctrl:getDelivery,Controller,getDelivery,VERIFIED
+ep:POST:/api/v1/webhooks/deliveries/:id/retry,Endpoint,POST /api/v1/webhooks/deliveries/:id/retry,VERIFIED
+ctrl:retryDelivery,Controller,retryDelivery,VERIFIED
+tbl:acceptance_analytics_daily,Table,acceptance_analytics_daily,VERIFIED
+tbl:qr_codes,Table,qr_codes,VERIFIED
+tbl:payment_links,Table,payment_links,VERIFIED
+tbl:merchants,Table,merchants,VERIFIED
+tbl:collections,Table,collections,VERIFIED
+tbl:customer_merchants,Table,customer_merchants,VERIFIED
+tbl:checkout_sessions,Table,checkout_sessions,VERIFIED
+tbl:ledger_accounts,Table,ledger_accounts,VERIFIED
+tbl:ledger_entries,Table,ledger_entries,VERIFIED
+tbl:audit_logs,Table,audit_logs,VERIFIED
+tbl:users,Table,users,VERIFIED
+tbl:audit_actions,Table,audit_actions,VERIFIED
+tbl:notifications,Table,notifications,VERIFIED
+tbl:activity_events,Table,activity_events,VERIFIED
+tbl:onboarding_workflow_stage_history,Table,onboarding_workflow_stage_history,VERIFIED
+tbl:merchant_onboarding_applications,Table,merchant_onboarding_applications,VERIFIED
+tbl:onboarding_workflow_stage_definitions,Table,onboarding_workflow_stage_definitions,VERIFIED
+tbl:payment_devices,Table,payment_devices,VERIFIED
+tbl:settlements,Table,settlements,VERIFIED
+tbl:risk_rule_evaluations,Table,risk_rule_evaluations,VERIFIED
+tbl:ai_insights_daily,Table,ai_insights_daily,VERIFIED
+tbl:transactions,Table,transactions,VERIFIED
+tbl:audit_metadata,Table,audit_metadata,VERIFIED
+tbl:audit_categories,Table,audit_categories,VERIFIED
+tbl:api_logs,Table,api_logs,VERIFIED
+tbl:webhook_logs,Table,webhook_logs,VERIFIED
+tbl:auth_audit_logs,Table,auth_audit_logs,VERIFIED
+tbl:auth_challenges,Table,auth_challenges,VERIFIED
+tbl:login_attempts,Table,login_attempts,VERIFIED
+tbl:otp_verifications,Table,otp_verifications,VERIFIED
+tbl:password_history,Table,password_history,VERIFIED
+tbl:password_reset_tokens,Table,password_reset_tokens,VERIFIED
+tbl:refresh_tokens,Table,refresh_tokens,VERIFIED
+tbl:user_sessions,Table,user_sessions,VERIFIED
+tbl:trusted_devices,Table,trusted_devices,VERIFIED
+tbl:transaction_disputes,Table,transaction_disputes,VERIFIED
+tbl:customers,Table,customers,VERIFIED
+tbl:dispute_status_history,Table,dispute_status_history,VERIFIED
+tbl:dispute_evidence,Table,dispute_evidence,VERIFIED
+tbl:transaction_events,Table,transaction_events,VERIFIED
+tbl:payment_intents,Table,payment_intents,VERIFIED
+tbl:checkout_session_events,Table,checkout_session_events,VERIFIED
+tbl:merchant_checkout_branding,Table,merchant_checkout_branding,VERIFIED
+tbl:checkout_themes,Table,checkout_themes,VERIFIED
+tbl:checkout_analytics_daily,Table,checkout_analytics_daily,VERIFIED
+tbl:organizations,Table,organizations,VERIFIED
+tbl:regions,Table,regions,VERIFIED
+tbl:customer_addresses,Table,customer_addresses,VERIFIED
+tbl:transaction_statuses,Table,transaction_statuses,VERIFIED
+tbl:customer_preferences,Table,customer_preferences,VERIFIED
+tbl:customer_payment_methods,Table,customer_payment_methods,VERIFIED
+tbl:dashboard_kpi_snapshots,Table,dashboard_kpi_snapshots,VERIFIED
+tbl:revenue_time_series,Table,revenue_time_series,VERIFIED
+tbl:payment_method_distribution,Table,payment_method_distribution,VERIFIED
+tbl:payment_method_types,Table,payment_method_types,VERIFIED
+tbl:regional_distribution,Table,regional_distribution,VERIFIED
+tbl:activity_event_types,Table,activity_event_types,VERIFIED
+tbl:fraud_alerts,Table,fraud_alerts,VERIFIED
+tbl:fraud_alert_severities,Table,fraud_alert_severities,VERIFIED
+tbl:user_dashboard_preferences,Table,user_dashboard_preferences,VERIFIED
+tbl:dashboard_export_jobs,Table,dashboard_export_jobs,VERIFIED
+tbl:dashboard_export_formats,Table,dashboard_export_formats,VERIFIED
+tbl:fraud_cases,Table,fraud_cases,VERIFIED
+tbl:risk_rules,Table,risk_rules,VERIFIED
+tbl:developer_profiles,Table,developer_profiles,VERIFIED
+tbl:oauth_applications,Table,oauth_applications,VERIFIED
+tbl:api_usage_logs,Table,api_usage_logs,VERIFIED
+tbl:organization_api_keys,Table,organization_api_keys,VERIFIED
+tbl:device_sync_logs,Table,device_sync_logs,VERIFIED
+tbl:terminal_inventory,Table,terminal_inventory,VERIFIED
+tbl:invoices,Table,invoices,VERIFIED
+tbl:invoice_line_items,Table,invoice_line_items,VERIFIED
+tbl:invoice_payments,Table,invoice_payments,VERIFIED
+tbl:invoice_templates,Table,invoice_templates,VERIFIED
+tbl:credit_notes,Table,credit_notes,VERIFIED
+tbl:debit_notes,Table,debit_notes,VERIFIED
+tbl:merchant_contacts,Table,merchant_contacts,VERIFIED
+tbl:merchant_addresses,Table,merchant_addresses,VERIFIED
+tbl:merchant_documents,Table,merchant_documents,VERIFIED
+tbl:merchant_api_credentials,Table,merchant_api_credentials,VERIFIED
+tbl:merchant_tags,Table,merchant_tags,VERIFIED
+tbl:merchant_tag_assignments,Table,merchant_tag_assignments,VERIFIED
+tbl:merchant_notes,Table,merchant_notes,VERIFIED
+tbl:merchant_onboarding_business,Table,merchant_onboarding_business,VERIFIED
+tbl:merchant_onboarding_addresses,Table,merchant_onboarding_addresses,VERIFIED
+tbl:merchant_onboarding_kyc_documents,Table,merchant_onboarding_kyc_documents,VERIFIED
+tbl:merchant_onboarding_bank_details,Table,merchant_onboarding_bank_details,VERIFIED
+tbl:merchant_onboarding_settlement_config,Table,merchant_onboarding_settlement_config,VERIFIED
+tbl:merchant_onboarding_payment_config,Table,merchant_onboarding_payment_config,VERIFIED
+tbl:merchant_onboarding_timeline_events,Table,merchant_onboarding_timeline_events,VERIFIED
+tbl:merchant_bank_accounts,Table,merchant_bank_accounts,VERIFIED
+tbl:merchant_settlement_accounts,Table,merchant_settlement_accounts,VERIFIED
+tbl:merchant_payment_methods,Table,merchant_payment_methods,VERIFIED
+tbl:merchant_users,Table,merchant_users,VERIFIED
+tbl:merchant_roles,Table,merchant_roles,VERIFIED
+tbl:merchant_user_outlets,Table,merchant_user_outlets,VERIFIED
+tbl:roles,Table,roles,VERIFIED
+tbl:user_roles,Table,user_roles,VERIFIED
+tbl:organization_members,Table,organization_members,VERIFIED
+tbl:organization_roles,Table,organization_roles,VERIFIED
+tbl:merchant_outlets,Table,merchant_outlets,VERIFIED
+tbl:notification_deliveries,Table,notification_deliveries,VERIFIED
+tbl:notification_preferences,Table,notification_preferences,VERIFIED
+tbl:notification_templates,Table,notification_templates,VERIFIED
+tbl:notification_channels,Table,notification_channels,VERIFIED
+tbl:notification_events,Table,notification_events,VERIFIED
+tbl:notification_groups,Table,notification_groups,VERIFIED
+tbl:communication_campaigns,Table,communication_campaigns,VERIFIED
+tbl:onboarding_risk_reviews,Table,onboarding_risk_reviews,VERIFIED
+tbl:onboarding_kyc_verification_events,Table,onboarding_kyc_verification_events,VERIFIED
+tbl:merchant_tax_profiles,Table,merchant_tax_profiles,VERIFIED
+tbl:onboarding_workflow_instances,Table,onboarding_workflow_instances,VERIFIED
+tbl:support_tickets,Table,support_tickets,VERIFIED
+tbl:system_alerts,Table,system_alerts,VERIFIED
+tbl:operations_incidents,Table,operations_incidents,VERIFIED
+tbl:retry_queue,Table,retry_queue,VERIFIED
+tbl:background_jobs,Table,background_jobs,VERIFIED
+tbl:payouts,Table,payouts,VERIFIED
+tbl:webhook_delivery_queue,Table,webhook_delivery_queue,VERIFIED
+tbl:platform_configurations,Table,platform_configurations,VERIFIED
+tbl:config_value,Table,config_value,VERIFIED
+tbl:organization_branding,Table,organization_branding,VERIFIED
+tbl:organization_billing,Table,organization_billing,VERIFIED
+tbl:organization_addresses,Table,organization_addresses,VERIFIED
+tbl:organization_contacts,Table,organization_contacts,VERIFIED
+tbl:organization_domains,Table,organization_domains,VERIFIED
+tbl:organization_preferences,Table,organization_preferences,VERIFIED
+tbl:merchant_payment_method_config,Table,merchant_payment_method_config,VERIFIED
+tbl:transaction_limit_rules,Table,transaction_limit_rules,VERIFIED
+tbl:payment_link_transactions,Table,payment_link_transactions,VERIFIED
+tbl:payment_link_visits,Table,payment_link_visits,VERIFIED
+tbl:payment_link_events,Table,payment_link_events,VERIFIED
+tbl:payment_orders,Table,payment_orders,VERIFIED
+tbl:payment_sessions,Table,payment_sessions,VERIFIED
+tbl:payment_timeline_events,Table,payment_timeline_events,VERIFIED
+tbl:payment_idempotency_keys,Table,payment_idempotency_keys,VERIFIED
+tbl:payment_webhook_deliveries,Table,payment_webhook_deliveries,VERIFIED
+tbl:merchant_webhooks,Table,merchant_webhooks,VERIFIED
+tbl:payout_status_history,Table,payout_status_history,VERIFIED
+tbl:permissions,Table,permissions,VERIFIED
+tbl:pricing_plans,Table,pricing_plans,VERIFIED
+tbl:pricing_fee_rules,Table,pricing_fee_rules,VERIFIED
+tbl:qr_transactions,Table,qr_transactions,VERIFIED
+tbl:qr_scan_history,Table,qr_scan_history,VERIFIED
+tbl:qr_templates,Table,qr_templates,VERIFIED
+tbl:qr_categories,Table,qr_categories,VERIFIED
+tbl:reconciliation_imports,Table,reconciliation_imports,VERIFIED
+tbl:reconciliation_records,Table,reconciliation_records,VERIFIED
+tbl:transaction_refunds,Table,transaction_refunds,VERIFIED
+tbl:refund_status_history,Table,refund_status_history,VERIFIED
+tbl:report_center_catalog,Table,report_center_catalog,VERIFIED
+tbl:report_saved_filters,Table,report_saved_filters,VERIFIED
+tbl:report_exports,Table,report_exports,VERIFIED
+tbl:report_categories,Table,report_categories,VERIFIED
+tbl:report_templates,Table,report_templates,VERIFIED
+tbl:reports,Table,reports,VERIFIED
+tbl:report_execution_logs,Table,report_execution_logs,VERIFIED
+tbl:scheduled_reports,Table,scheduled_reports,VERIFIED
+tbl:analytics_snapshots,Table,analytics_snapshots,VERIFIED
+tbl:subscriptions,Table,subscriptions,VERIFIED
+tbl:subscription_plans,Table,subscription_plans,VERIFIED
+tbl:role_permissions,Table,role_permissions,VERIFIED
+tbl:sandbox_accounts,Table,sandbox_accounts,VERIFIED
+tbl:sandbox_simulations,Table,sandbox_simulations,VERIFIED
+tbl:sandbox_test_cards,Table,sandbox_test_cards,VERIFIED
+tbl:platform_config,Table,platform_config,VERIFIED
+tbl:organization_settings,Table,organization_settings,VERIFIED
+tbl:branding_settings,Table,branding_settings,VERIFIED
+tbl:security_settings,Table,security_settings,VERIFIED
+tbl:password_policy,Table,password_policy,VERIFIED
+tbl:session_settings,Table,session_settings,VERIFIED
+tbl:api_settings,Table,api_settings,VERIFIED
+tbl:smtp_settings,Table,smtp_settings,VERIFIED
+tbl:storage_settings,Table,storage_settings,VERIFIED
+tbl:feature_flags,Table,feature_flags,VERIFIED
+tbl:api_rate_limits,Table,api_rate_limits,VERIFIED
+tbl:settlement_calendar,Table,settlement_calendar,VERIFIED
+tbl:settlement_holds,Table,settlement_holds,VERIFIED
+tbl:settlement_reserves,Table,settlement_reserves,VERIFIED
+tbl:settlement_transactions,Table,settlement_transactions,NOT VERIFIED
+tbl:settlement_status_history,Table,settlement_status_history,VERIFIED
+tbl:settlement_reversals,Table,settlement_reversals,VERIFIED
+tbl:settlement_fees,Table,settlement_fees,VERIFIED
+tbl:settlement_bank_transfers,Table,settlement_bank_transfers,VERIFIED
+tbl:settlement_notes,Table,settlement_notes,VERIFIED
+tbl:settlement_adjustments,Table,settlement_adjustments,VERIFIED
+tbl:settlement_batches,Table,settlement_batches,VERIFIED
+tbl:settlement_exports,Table,settlement_exports,VERIFIED
+tbl:virtual_accounts,Table,virtual_accounts,VERIFIED
+tbl:collection_events,Table,collection_events,VERIFIED
+tbl:subscription_invoices,Table,subscription_invoices,VERIFIED
+tbl:subscription_dunning_events,Table,subscription_dunning_events,VERIFIED
+tbl:subscription_mandates,Table,subscription_mandates,VERIFIED
+tbl:support_ticket_notes,Table,support_ticket_notes,VERIFIED
+tbl:support_ticket_attachments,Table,support_ticket_attachments,VERIFIED
+tbl:support_ticket_activities,Table,support_ticket_activities,VERIFIED
+tbl:cache_configurations,Table,cache_configurations,VERIFIED
+tbl:backup_configurations,Table,backup_configurations,VERIFIED
+tbl:transaction_status_history,Table,transaction_status_history,VERIFIED
+tbl:transaction_fees,Table,transaction_fees,VERIFIED
+tbl:transaction_notes,Table,transaction_notes,VERIFIED
+tbl:transaction_attachments,Table,transaction_attachments,VERIFIED
+tbl:transaction_exports,Table,transaction_exports,VERIFIED
+tbl:user_activity_logs,Table,user_activity_logs,VERIFIED
+tbl:login_history,Table,login_history,VERIFIED
+tbl:webhook_event_subscriptions,Table,webhook_event_subscriptions,VERIFIED
+tbl:webhook_replay_history,Table,webhook_replay_history,VERIFIED
+tbl:merchant_role_permissions,Table,merchant_role_permissions,VERIFIED
+tbl:export_file_registry,Table,export_file_registry,VERIFIED
